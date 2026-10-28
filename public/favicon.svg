@@ -1,17 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Tech Stack Studio">
-  <defs>
-    <linearGradient id="tss-bg" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#172033" />
-      <stop offset="1" stop-color="#090B10" />
-    </linearGradient>
-    <linearGradient id="tss-accent" x1="12" y1="13" x2="52" y2="50" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#BAE6FD" />
-      <stop offset="0.55" stop-color="#38BDF8" />
-      <stop offset="1" stop-color="#0EA5E9" />
-    </linearGradient>
-  </defs>
-  <rect x="1" y="1" width="62" height="62" rx="16" fill="url(#tss-bg)" stroke="#2A3850" />
-  <path d="M32 13 52 23.5 32 34 12 23.5Z" fill="url(#tss-accent)" />
-  <path d="m12 31.5 20 10.5 20-10.5" fill="none" stroke="#38BDF8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.78" />
-  <path d="m12 40 20 10.5L52 40" fill="none" stroke="#7DD3FC" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">Tech Stack Studio</title><desc id="desc">Three stacked, interlocking layers in cyan and electric violet.</desc>
+<defs><linearGradient id="g" x1="18" y1="14" x2="108" y2="112" gradientUnits="userSpaceOnUse"><stop stop-color="#67E8F9"/><stop offset=".48" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/></linearGradient></defs>
+<g fill="none" stroke="url(#g)" stroke-width="8" stroke-linejoin="round"><path d="M64 16 108 39 64 62 20 39Z"/><path d="m20 57 44 23 44-23"/><path d="m20 75 44 23 44-23"/></g>
+<path d="m64 98 44-23v17l-44 23-44-23V75Z" fill="#111827" stroke="url(#g)" stroke-width="4" stroke-linejoin="round"/>
 </svg>

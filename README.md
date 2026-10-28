@@ -1,14 +1,19 @@
 <div align="center">
 
 <a href="https://thanhnguyxnorg.github.io/Techstack-Studio/">
-  <img src="docs/assets/logo.svg" width="88" alt="Tech Stack Studio logo" />
+  <img src="docs/assets/logo.svg" width="96" alt="Tech Stack Studio — stacked layers mark" />
 </a>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/wordmark.svg" />
+  <img src="docs/assets/wordmark.svg" width="320" alt="Tech Stack Studio" />
+</picture>
 
 # Tech Stack Studio
 
 **Compose animated technology stacks. Export them anywhere.**
 
-554 verified logos · 18 motion families · README Markdown, standalone HTML, and one self-contained animated SVG.
+Build polished animated technology stacks from 554+ logos. Customize motion live, then export README Markdown, standalone HTML, or self-contained SVG.
 
 [![Live Studio](https://img.shields.io/badge/Open_Live_Studio-38BDF8?style=for-the-badge&logo=googlechrome&logoColor=090B10)](https://thanhnguyxnorg.github.io/Techstack-Studio/)
 [![Documentation](https://img.shields.io/badge/Read_the_docs-161F30?style=for-the-badge&logo=readthedocs&logoColor=white)](docs/ARCHITECTURE.md)
