@@ -1,0 +1,117 @@
+name: Auto Merge (ThanhnguyxnAgent)
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_run:
+    workflows: ['CI']
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to evaluate'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge:
+    name: Evaluate & Auto-Merge
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'ThanhNguyxnOrg'
+    steps:
+      - name: Generate Token for ThanhnguyxnAgent
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Determine PR Numbers
+        id: prs
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.pr_number }}" ]; then
+            echo "pr_list=${{ github.event.inputs.pr_number }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "pull_request_target" ]; then
+            echo "pr_list=${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "workflow_run" ]; then
+            PR_NUM="${{ github.event.workflow_run.pull_requests[0].number }}"
+            if [ -n "$PR_NUM" ]; then
+              echo "pr_list=$PR_NUM" >> "$GITHUB_OUTPUT"
+            else
+              OPEN_PRS=$(gh pr list --author "app/dependabot" --json number --jq '.[].number' | tr '\n' ' ')
+              echo "pr_list=$OPEN_PRS" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Evaluate and Auto-Merge
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR_LIST: ${{ steps.prs.outputs.pr_list }}
+          CI_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+        run: |
+          for PR in $PR_LIST; do
+            [ -z "$PR" ] && continue
+            echo "=========================================="
+            echo "Evaluating PR #$PR as ThanhnguyxnAgent"
+            echo "=========================================="
+
+            PR_DATA=$(gh pr view "$PR" --json isDraft,mergeable,files,author,title,statusCheckRollup)
+            IS_DRAFT=$(echo "$PR_DATA" | jq -r '.isDraft')
+            MERGEABLE=$(echo "$PR_DATA" | jq -r '.mergeable')
+            AUTHOR=$(echo "$PR_DATA" | jq -r '.author.login')
+            TITLE=$(echo "$PR_DATA" | jq -r '.title')
+
+            if [ "$IS_DRAFT" = "true" ]; then
+              echo "PR #$PR is a draft. Skipping."
+              continue
+            fi
+
+            # Check if touches critical catalog generator scripts
+            TOUCHES_GENERATORS=$(echo "$PR_DATA" | jq -r '[.files[].path | select(startswith("scripts/buildCatalogManifest") or startswith("scripts/generateStandaloneSvgLibrary"))] | length')
+
+            # Check if CI failed
+            FAILING_CHECKS=$(echo "$PR_DATA" | jq -r '[.statusCheckRollup[]? | select(.conclusion == "FAILURE" or .conclusion == "TIMED_OUT")] | length')
+
+            NEEDS_HUMAN=false
+            REASON=""
+
+            if [ "$MERGEABLE" = "CONFLICTING" ]; then
+              NEEDS_HUMAN=true
+              REASON="PR has merge conflicts."
+            elif [ "$FAILING_CHECKS" -gt 0 ] || [ "$CI_CONCLUSION" = "failure" ]; then
+              NEEDS_HUMAN=true
+              REASON="CI checks failed on this PR."
+            elif [ "$TOUCHES_GENERATORS" -gt 0 ]; then
+              NEEDS_HUMAN=true
+              REASON="Changes touch core catalog/SVG generator scripts."
+            fi
+
+            if [ "$NEEDS_HUMAN" = "true" ]; then
+              echo "⚠️ PR #$PR requires manual review: $REASON"
+              gh pr edit "$PR" --add-assignee RealThanhNguyxn || true
+              
+              gh label create "needs-manual-review" --color "D93F0B" --description "Requires manual human review" --force || true
+              gh pr edit "$PR" --add-label "needs-manual-review" || true
+
+              ALREADY_COMMENTED=$(gh pr view "$PR" --json comments --jq '[.comments[].body | select(contains("Auto-merge skipped by ThanhnguyxnAgent"))] | length')
+              if [ "$ALREADY_COMMENTED" -eq 0 ]; then
+                COMMENT="⚠️ **Auto-merge skipped by ThanhnguyxnAgent**\n\n$REASON\n\nAssigned @RealThanhNguyxn for manual review."
+                gh pr comment "$PR" --body "$(echo -e "$COMMENT")" || true
+              fi
+            else
+              echo "✅ PR #$PR is safe. Approving and enabling auto-merge..."
+              gh pr review "$PR" --approve -b "🤖 Auto-approved by ThanhnguyxnAgent." || true
+              
+              gh pr merge "$PR" --auto --squash --delete-branch || gh pr merge "$PR" --squash --delete-branch || true
+              echo "Done processing PR #$PR"
+            fi
+          done
