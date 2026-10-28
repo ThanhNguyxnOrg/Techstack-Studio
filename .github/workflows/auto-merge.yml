@@ -42,14 +42,11 @@ jobs:
             echo "pr_list=${{ github.event.inputs.pr_number }}" >> "$GITHUB_OUTPUT"
           elif [ "${{ github.event_name }}" = "pull_request_target" ]; then
             echo "pr_list=${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "workflow_run" ]; then
-            PR_NUM="${{ github.event.workflow_run.pull_requests[0].number }}"
-            if [ -n "$PR_NUM" ]; then
-              echo "pr_list=$PR_NUM" >> "$GITHUB_OUTPUT"
-            else
-              OPEN_PRS=$(gh pr list --author "app/dependabot" --json number --jq '.[].number' | tr '\n' ' ')
-              echo "pr_list=$OPEN_PRS" >> "$GITHUB_OUTPUT"
-            fi
+          elif [ "${{ github.event_name }}" = "workflow_run" ] && [ -n "${{ github.event.workflow_run.pull_requests[0].number }}" ]; then
+            echo "pr_list=${{ github.event.workflow_run.pull_requests[0].number }}" >> "$GITHUB_OUTPUT"
+          else
+            OPEN_PRS=$(gh pr list --json number --jq '.[].number' | tr '\n' ' ')
+            echo "pr_list=$OPEN_PRS" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Evaluate and Auto-Merge
