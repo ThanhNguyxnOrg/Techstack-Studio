@@ -3,7 +3,6 @@ import {
   CheckCircle2,
   Code2,
   ExternalLink,
-  Layers,
   RotateCcw,
   Sliders,
   Trash2,
@@ -31,8 +30,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
         {/* Zone 1: Brand Lockup */}
         <div className="flex items-center gap-3 shrink-0">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-b from-[#161F30] to-[#0F1420] border border-[#263248] flex items-center justify-center shrink-0 shadow-xs">
-            <Layers className="w-4 h-4 text-[#38BDF8]" />
+          <div className="w-9 h-9 flex items-center justify-center shrink-0">
+            <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" aria-hidden="true" className="w-9 h-9 object-contain" />
           </div>
           <div className="flex items-baseline gap-2.5">
             <h1 className="text-base sm:text-lg font-bold tracking-tight text-[#F1F5F9] whitespace-nowrap">
