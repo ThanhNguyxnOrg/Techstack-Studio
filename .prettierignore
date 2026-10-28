@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+coverage/
+package-lock.json
+public/icons/
+public/*.png
+public/*.ico
+src/data/generatedCatalog.json
+src/data/standaloneSvgParts.json
+docs/animation/animation-manifest.json
+docs/assets/*.svg
+docs/assets/*.png

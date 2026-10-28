@@ -1,0 +1,81 @@
+name: Bug report
+description: Report a broken logo, export, preview, or site behavior.
+title: 'bug: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Tech Stack Studio. Please search existing issues
+        first, and do not report security vulnerabilities here — use the
+        [security policy](https://github.com/ThanhNguyxnOrg/Techstack-Studio/blob/main/SECURITY.md).
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected instead.
+      placeholder: The exported SVG cuts off the Kubernetes logo when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact technologies and settings if they matter.
+      placeholder: |
+        1. Open the live site
+        2. Select Docker and Kubernetes
+        3. Switch to Animated SVG
+        4. Click Copy code
+    validations:
+      required: true
+
+  - type: input
+    id: tech
+    attributes:
+      label: Affected technology or page
+      description: Catalog ID or name if the issue is logo-specific.
+      placeholder: e.g. kubernetes, export section, README preview
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Catalog or search
+        - Live preview
+        - Animated SVG export
+        - README Markdown export
+        - HTML export
+        - Documentation
+        - Build or deployment
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      placeholder: Chrome 142 on Windows 11
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, recordings, or console output
+      description: Drag files here, or paste relevant errors. Remove private data first.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true

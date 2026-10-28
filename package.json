@@ -1,0 +1,66 @@
+{
+  "name": "techstack-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Compose, customize, and export animated SVG technology stacks for GitHub READMEs, portfolios, and websites.",
+  "type": "module",
+  "homepage": "https://thanhnguyxnorg.github.io/Techstack-Studio/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThanhNguyxnOrg/Techstack-Studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThanhNguyxnOrg/Techstack-Studio/issues"
+  },
+  "author": "ThanhNguyxnOrg",
+  "license": "MIT",
+  "keywords": [
+    "animated-svg",
+    "github-readme",
+    "readme",
+    "tech-stack",
+    "tech-stack-generator",
+    "svg",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss"
+  ],
+  "engines": {
+    "node": ">=22.12.0",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "npm run typecheck",
+    "test": "tsx --test src/utils/studioLogic.test.ts src/utils/catalogIntegrity.test.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run format:check && npm run typecheck && npm test && npm run build",
+    "generate:catalog": "node scripts/buildCatalogManifest.mjs",
+    "generate:icons": "node scripts/generateStandaloneSvgLibrary.mjs",
+    "generate": "npm run generate:catalog && npm run generate:icons"
+  },
+  "dependencies": {
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "prettier": "^3.6.2",
+    "simple-icons": "^16.36.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}

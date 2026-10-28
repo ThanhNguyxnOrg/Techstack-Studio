@@ -1,0 +1,58 @@
+name: Feature request
+description: Suggest a new technology, export option, or workflow improvement.
+title: 'feat: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Big changes are easier to agree on before implementation. Please describe
+        the problem first, then the solution you have in mind.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Who is this for, and what is painful today?
+      placeholder: I want to embed the stack in a Notion page, but the current export...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior you would like. Mockups are welcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Existing workarounds or other approaches you tried.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Catalog or new technology
+        - Live preview or customization
+        - Export format
+        - Accessibility
+        - Documentation
+        - Tooling or CI
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and discussions for this idea.
+          required: true
+        - label: I can help test or implement this if the approach is agreed on.
+          required: false

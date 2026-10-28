@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Tech Stack Studio">
+  <defs>
+    <linearGradient id="tss-bg" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#172033" />
+      <stop offset="1" stop-color="#090B10" />
+    </linearGradient>
+    <linearGradient id="tss-accent" x1="12" y1="13" x2="52" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BAE6FD" />
+      <stop offset="0.55" stop-color="#38BDF8" />
+      <stop offset="1" stop-color="#0EA5E9" />
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="16" fill="url(#tss-bg)" stroke="#2A3850" />
+  <path d="M32 13 52 23.5 32 34 12 23.5Z" fill="url(#tss-accent)" />
+  <path d="m12 31.5 20 10.5 20-10.5" fill="none" stroke="#38BDF8" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.78" />
+  <path d="m12 40 20 10.5L52 40" fill="none" stroke="#7DD3FC" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4" />
+</svg>

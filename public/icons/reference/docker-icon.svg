@@ -1,0 +1,48 @@
+<svg viewBox="-56 -40 624 592" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Docker">
+  <defs>
+    <style>
+      @keyframes second-floor-ani {
+        0%, 10% { transform: translateX(-45px); }
+        35%, 65% { transform: translateX(0px); }
+        90%, 100% { transform: translateX(-45px); }
+      }
+      @keyframes third-floor-ani {
+        0%, 10% { transform: translateX(-110px); }
+        42%, 65% { transform: translateX(0px); }
+        90%, 100% { transform: translateX(-110px); }
+      }
+      @keyframes whale-ani {
+        0%, 100% { transform: rotate(-8deg); }
+        40%, 60% { transform: rotate(6deg); }
+      }
+      #docker-icon {
+        animation: whale-ani 4.2s ease-in-out infinite;
+        transform-origin: 256px 280px;
+      }
+      .docker { fill: #099CEC; }
+      .second-floor { animation: second-floor-ani 4.2s ease-in-out infinite; }
+      .third-floor { animation: third-floor-ani 4.2s ease-in-out infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        #docker-icon, .second-floor, .third-floor { animation: none !important; transform: none !important; }
+      }
+    </style>
+  </defs>
+  <g id="docker-icon">
+    <g class="third-floor">
+      <rect class="docker" height="43.625" width="47.506" x="229.999" y="94.975" rx="4"/>
+    </g>
+    <g class="second-floor">
+      <rect class="docker" height="43.193" width="47.505" x="117.738" y="147.225" rx="4"/>
+      <rect class="docker" height="43.193" width="47.506" x="173.869" y="147.225" rx="4"/>
+      <rect class="docker" height="43.193" width="47.506" x="229.999" y="147.225" rx="4"/>
+    </g>
+    <g>
+      <rect class="docker" height="42.691" width="47.506" x="61.68" y="199.043" rx="4"/>
+      <rect class="docker" height="42.691" width="47.505" x="117.738" y="199.043" rx="4"/>
+      <rect class="docker" height="42.691" width="47.506" x="173.869" y="199.043" rx="4"/>
+      <rect class="docker" height="42.69" width="47.506" x="229.999" y="199.115" rx="4"/>
+      <rect class="docker" height="42.691" width="47.507" x="286.2" y="199.043" rx="4"/>
+    </g>
+    <path class="docker" d="M476.441,219.095c-10.35-6.972-34.21-9.487-52.537-6.036 c-2.371-17.249-12.003-32.27-29.538-45.782l-10.062-6.685l-6.685,10.062c-13.225,19.98-16.817,52.896-2.658,74.602 c-6.252,3.377-18.545,7.978-34.786,7.689H27.757c-6.252,36.511,4.169,83.945,31.624,116.501 c26.663,31.551,66.623,47.579,118.872,47.579c113.124,0,196.851-52.104,236.021-146.76c15.381,0.288,48.584,0.073,65.618-32.483 c1.078-1.797,4.743-9.488,6.107-12.291L476.441,219.095z"/>
+  </g>
+</svg>

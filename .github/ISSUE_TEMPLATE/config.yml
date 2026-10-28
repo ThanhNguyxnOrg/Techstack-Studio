@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live demo
+    url: https://thanhnguyxnorg.github.io/Techstack-Studio/
+    about: Try the studio before filing an issue.
+  - name: Questions and ideas
+    url: https://github.com/ThanhNguyxnOrg/Techstack-Studio/discussions
+    about: Ask for help or discuss an idea with the community.
+  - name: Security vulnerability
+    url: https://github.com/ThanhNguyxnOrg/Techstack-Studio/security/advisories/new
+    about: Report security issues privately, not as a public issue.
