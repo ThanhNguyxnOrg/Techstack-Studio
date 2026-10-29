@@ -1,6 +1,7 @@
 # SVG logo fidelity and motion audit
 
-**Updated:** 2026-10-29  
+**Updated:** 2026-10-29
+
 **Scope:** static TypeScript source, TypeScript animated SVG, the SVG generator's special-case animation branches, and the export fallback. This is a code-level audit, not a claimed screenshot-by-screenshot visual approval of all 554 icons.
 
 ## Immediate disposition
@@ -12,10 +13,8 @@
 
 ## Confirmed / high-priority findings
 
-| Technology | Finding | Current action |
-|---|---|---|
-| TypeScript | The previous animation used custom rounded stroke paths (`M 88 118`, `M 164 124`) instead of the official filled TS mark. | Replaced the animated asset with the exact official static mark; motion deferred. |
-| OpenAI | The generator adds a separate pulsing center circle on top of the canonical OpenAI path and rotates the entire mark. The extra circle is not part of the source silhouette and needs a brand-fidelity review. | Not changed in this pass; recorded for the later motion pass. |
+- **TypeScript:** the previous animation used custom rounded stroke paths (`M 88 118`, `M 164 124`) instead of the official filled TS mark. The animated asset now uses the exact official static mark; motion is deferred.
+- **OpenAI:** the generator adds a separate pulsing center circle on top of the canonical OpenAI path and rotates the entire mark. The extra circle is not part of the source silhouette and needs a brand-fidelity review. It is recorded for the later motion pass and is not changed here.
 
 ## High-risk cases for visual comparison
 

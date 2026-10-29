@@ -113,13 +113,26 @@ test('TypeScript source and animated SVGs preserve the official Microsoft mark w
     showPlate: false,
   });
 
-  assert.ok(staticSvg.includes('m316.939 407.424'), 'Expected official Microsoft TypeScript glyph geometry');
+  assert.ok(
+    staticSvg.includes('m316.939 407.424'),
+    'Expected official Microsoft TypeScript glyph geometry'
+  );
   assert.ok(staticSvg.includes('fill="#3178c6"'), 'Expected official TypeScript brand blue');
-  assert.equal(animatedSvg, staticSvg, 'Motion is deferred; animated and static TypeScript SVGs must match');
+  assert.equal(
+    animatedSvg,
+    staticSvg,
+    'Motion is deferred; animated and static TypeScript SVGs must match'
+  );
   assert.ok(!animatedSvg.includes('M 88 118'), 'Should not use the hand-drawn rounded T path');
   assert.ok(!animatedSvg.includes('M 164 124'), 'Should not use the hand-drawn rounded S path');
-  assert.ok(!animatedSvg.includes('@keyframes'), 'TypeScript motion should remain disabled until redesigned');
-  assert.ok(!animatedSvg.includes('#131822'), 'Expected no inner plate rect when showPlate is false');
+  assert.ok(
+    !animatedSvg.includes('@keyframes'),
+    'TypeScript motion should remain disabled until redesigned'
+  );
+  assert.ok(
+    !animatedSvg.includes('#131822'),
+    'Expected no inner plate rect when showPlate is false'
+  );
 });
 
 test('selection and duplicate prevention work accurately', () => {

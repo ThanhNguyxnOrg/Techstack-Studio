@@ -105,8 +105,14 @@ test('every catalog item exposes complete, self-contained source and animated SV
         source,
         'TypeScript motion is intentionally deferred; its animated asset must exactly match the official static mark'
       );
-      assert.ok(animated.includes('m316.939 407.424'), 'TypeScript must use official Microsoft path geometry');
-      assert.ok(!animated.includes('@keyframes '), 'TypeScript motion should stay disabled until redesigned');
+      assert.ok(
+        animated.includes('m316.939 407.424'),
+        'TypeScript must use official Microsoft path geometry'
+      );
+      assert.ok(
+        !animated.includes('@keyframes '),
+        'TypeScript motion should stay disabled until redesigned'
+      );
     } else {
       assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
       assert.ok(
