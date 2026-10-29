@@ -153,7 +153,7 @@ export const TechIcon: React.FC<TechIconProps> = ({
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox={item.svgViewBox || '0 0 24 24'}
+        viewBox={fetchedSvg?.viewBox || item.svgViewBox || '0 0 24 24'}
         role="img"
         aria-label={item.name}
         className="w-full h-full overflow-visible block"

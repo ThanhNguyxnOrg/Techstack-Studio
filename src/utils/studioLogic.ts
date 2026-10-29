@@ -563,12 +563,22 @@ export function generateAnimatedSingleIconSvg(
 
   const defsBlock = parts.defs ? `<defs>${parts.defs}</defs>` : '';
   const styleBlock = parts.style ? `<style>${parts.style}</style>` : '';
+  const viewBox = item.svgViewBox || '0 0 24 24';
+  const vbParts = viewBox.split(/\s+/).map(Number);
+  const vbWidth = Number.isFinite(vbParts[2]) && vbParts[2] > 0 ? vbParts[2] : 24;
+  const vbHeight = Number.isFinite(vbParts[3]) && vbParts[3] > 0 ? vbParts[3] : vbWidth;
 
   if (!showPlate) {
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" role="img" aria-label="${escapeHtml(item.name)}">${defsBlock}${styleBlock}<g transform="translate(1.2, 1.2) scale(0.9)">${parts.body}</g></svg>`;
+    const pad = vbWidth * 0.05;
+    const scale = 0.9;
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}" role="img" aria-label="${escapeHtml(item.name)}">${defsBlock}${styleBlock}<g transform="translate(${pad.toFixed(2)}, ${pad.toFixed(2)}) scale(${scale})">${parts.body}</g></svg>`;
   }
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" role="img" aria-label="${escapeHtml(item.name)}">${defsBlock}${styleBlock}<rect x="0.5" y="0.5" width="23" height="23" rx="4.5" fill="#131822" stroke="#242E3E" stroke-width="0.8"/><g transform="translate(3, 3) scale(0.75)">${parts.body}</g></svg>`;
+  const platePad = vbWidth * 0.125;
+  const plateScale = 0.75;
+  const rx = (vbWidth * 0.1875).toFixed(1);
+  const strokeW = (vbWidth / 30).toFixed(1);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="${viewBox}" role="img" aria-label="${escapeHtml(item.name)}">${defsBlock}${styleBlock}<rect x="${(vbWidth * 0.02).toFixed(1)}" y="${(vbHeight * 0.02).toFixed(1)}" width="${(vbWidth * 0.96).toFixed(1)}" height="${(vbHeight * 0.96).toFixed(1)}" rx="${rx}" fill="#131822" stroke="#242E3E" stroke-width="${strokeW}"/><g transform="translate(${platePad.toFixed(2)}, ${platePad.toFixed(2)}) scale(${plateScale})">${parts.body}</g></svg>`;
 }
 
 /**
@@ -933,7 +943,9 @@ export function generateStandaloneSvg(
 
     const innerPad = Number((boxSize * (settings.showInnerPlate ? 0.14 : 0.06)).toFixed(2));
     const innerSize = boxSize - innerPad * 2;
-    const iconScale = (innerSize / 24).toFixed(4);
+    const vbParts = (item.svgViewBox || '0 0 24 24').split(/\s+/).map(Number);
+    const baseViewBoxWidth = Number.isFinite(vbParts[2]) && vbParts[2] > 0 ? vbParts[2] : 24;
+    const iconScale = (innerSize / baseViewBoxWidth).toFixed(4);
     const iconOffsetX = (boxX + innerPad).toFixed(2);
     const iconOffsetY = (boxY + innerPad).toFixed(2);
 

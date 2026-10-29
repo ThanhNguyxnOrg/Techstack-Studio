@@ -1,6 +1,7 @@
 import { TechItem } from '../types/stack';
 
 export interface ParsedStandaloneSvg {
+  viewBox?: string;
   defs: string;
   style: string;
   body: string;
@@ -37,6 +38,8 @@ export function parseStandaloneSvgString(svgMarkup: string): ParsedStandaloneSvg
 
   let defs = '';
   let style = '';
+  const vbMatch = trimmed.match(/viewBox="([^"]+)"/i);
+  const viewBox = vbMatch ? vbMatch[1] : undefined;
   let body = trimmed.replace(/^<svg[^>]*>/i, '').replace(/<\/svg>\s*$/i, '');
 
   body = body.replace(/<defs>([\s\S]*?)<\/defs>/gi, (_, content: string) => {
@@ -50,6 +53,7 @@ export function parseStandaloneSvgString(svgMarkup: string): ParsedStandaloneSvg
   });
 
   return {
+    viewBox,
     defs: defs.trim(),
     style: style.trim(),
     body: body.trim(),

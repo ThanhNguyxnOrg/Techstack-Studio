@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T03:38:17.497Z",
+  "generatedAt": "2026-10-29T05:59:03.691Z",
   "totalCatalogEntries": 554,
   "sourceSvgFilesCreated": 554,
   "animatedSvgFilesCreated": 554,
@@ -194,8 +194,8 @@
       "tier": "A",
       "sourceAssetPath": "/icons/source/cpp.svg",
       "animatedSvgPath": "/icons/animated/cpp.svg",
-      "animationConcept": "Upstream C++ choreography: C arc anchors the blue hexagon while the two + operators spin and translate out from the C center",
-      "animationTechnique": "Dual-operator rotational translation keyframes (plus-1, plus-2) + C-arc trace",
+      "animationConcept": "8s isometric hexagon assembly: stroke outline trace, 3-facet 3D reveal, C-arc wipe reveal, bouncing ++ operators, and diagonal specular sheen",
+      "animationTechnique": "Multi-stage synchronized keyframe choreography with 128x128 geometric precision",
       "fileExists": true,
       "xmlValid": true,
       "hasEmbeddedKeyframes": true,

@@ -322,7 +322,7 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#283593" d="${HEX_SHELL_PATH}"/><path fill="#5C6BC0" d="M12 0.22 L2.26 5.31 C1.75 5.6 1.34 6.32 1.34 6.91 V17.09 L12 12 Z"/><path fill="#FFFFFF" d="${C_RING_PATH}"/></svg>`;
   }
   if (item.id === 'cpp') {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#004482" d="${HEX_SHELL_PATH}"/><path fill="#00599C" d="M12 0.22 L2.26 5.31 C1.75 5.6 1.34 6.32 1.34 6.91 V17.09 L12 12 Z"/><path fill="#FFFFFF" d="M11.2 18.8c-3.75 0-6.8-3.05-6.8-6.8s3.05-6.8 6.8-6.8c2.3 0 4.35 1.15 5.6 2.95l-2.75 1.6c-.65-.95-1.7-1.55-2.85-1.55-1.95 0-3.55 1.6-3.55 3.8s1.6 3.8 3.55 3.8c1.15 0 2.2-.6 2.85-1.55l2.75 1.6c-1.25 1.8-3.3 2.95-5.6 2.95z"/><g fill="#FFFFFF"><path d="M16.1 10.6h1.1v1.1h1.1v1.1h-1.1v1.1h-1.1v-1.1h-1.1v-1.1h1.1v-1.1z"/><path d="M19.8 10.6h1.1v1.1h1.1v1.1h-1.1v1.1h-1.1v-1.1h-1.1v-1.1h1.1v-1.1z"/></g></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><path fill="#659ad2" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path fill="#00599c" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path fill="#004482" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/><path fill="#fff" d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91z"/><path fill="#fff" d="M92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88z"/><path fill="#fff" d="M108.646 57.57v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z"/></svg>`;
   }
   if (item.id === 'csharp') {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#512BD4" d="${HEX_SHELL_PATH}"/><path fill="#6D28D9" d="M12 0.22 L2.26 5.31 C1.75 5.6 1.34 6.32 1.34 6.91 V17.09 L12 12 Z"/><path fill="#FFFFFF" d="M10.5 18.6c-3.65 0-6.6-2.95-6.6-6.6s2.95-6.6 6.6-6.6c2.2 0 4.15 1.1 5.35 2.8l-2.65 1.55c-.6-.9-1.6-1.45-2.7-1.45-1.85 0-3.35 1.5-3.35 3.7s1.5 3.7 3.35 3.7c1.1 0 2.1-.55 2.7-1.45l2.65 1.55c-1.2 1.7-3.15 2.8-5.35 2.8z"/><g fill="#FFFFFF"><rect x="15.2" y="10.2" width="5.2" height="1"/><rect x="15.2" y="12.6" width="5.2" height="1"/><rect x="16.4" y="9.1" width="1" height="5.6"/><rect x="18.4" y="9.1" width="1" height="5.6"/></g></svg>`;
@@ -344,9 +344,10 @@ function buildAnimatedSvg(item) {
   const secondary = item.motionRecipe?.secondaryColor || '#F8FAFC';
   const dur = '3.6s';
 
-  const wrapSvg = (defs, style, reducedMotionCss, body, concept, technique) => {
+  const wrapSvg = (defs, style, reducedMotionCss, body, concept, technique, customViewBox) => {
     const fullStyle = `${style}@media (prefers-reduced-motion: reduce){${reducedMotionCss}}`;
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}<style>${fullStyle}</style>${body}</svg>`;
+    const vb = customViewBox || item.svgViewBox || '0 0 24 24';
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}<style>${fullStyle}</style>${body}</svg>`;
     return { svg, concept, technique };
   };
 
@@ -443,18 +444,24 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // 6. C++ (Upstream cpp-icon.svg choreography: C arc + two + signs spinning 720deg out from center)
+  // 6. C++ (8s isometric choreography: line outline trace -> 3 facet assembly -> C arc wipe -> bouncing ++ operators -> specular sheen)
   if (item.id === 'cpp') {
-    const kP1 = `tss_${uid}_p1`,
-      kP2 = `tss_${uid}_p2`,
-      kC = `tss_${uid}_c`;
+    const defs = `<linearGradient id="tss_${uid}_g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="tss_${uid}_hex"><path d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/></clipPath><mask id="tss_${uid}_cmask" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128"><path class="tss_${uid}_wipe" pathLength="1" d="M88.04 49.68A28.4 28.4 0 1 0 88.04 78.08"/></mask>`;
+
+    const style = `.tss_${uid}_float{animation:tss_${uid}_float 4s ease-in-out infinite}@keyframes tss_${uid}_float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}.tss_${uid}_all{animation:tss_${uid}_all 8s linear infinite}@keyframes tss_${uid}_all{0%,94%{opacity:1}98%,100%{opacity:0}}.tss_${uid}_line{fill:none;stroke:#659ad2;stroke-width:1.4;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:tss_${uid}_line 8s ease-in-out infinite}@keyframes tss_${uid}_line{0%{stroke-dashoffset:1;opacity:1}20%{stroke-dashoffset:0;opacity:1}32%{stroke-dashoffset:0;opacity:1}38%,100%{stroke-dashoffset:0;opacity:0}}.tss_${uid}_facet{transform-origin:64px 64px}.tss_${uid}_tl{animation:tss_${uid}_facet_tl 8s ease-out infinite}.tss_${uid}_r{animation:tss_${uid}_facet_r 8s ease-out infinite}.tss_${uid}_b{animation:tss_${uid}_facet_b 8s ease-out infinite}@keyframes tss_${uid}_facet_tl{0%,15%{opacity:0;transform:scale(.94)}26%,100%{opacity:1;transform:scale(1)}}@keyframes tss_${uid}_facet_r{0%,19%{opacity:0;transform:scale(.94)}30%,100%{opacity:1;transform:scale(1)}}@keyframes tss_${uid}_facet_b{0%,23%{opacity:0;transform:scale(.94)}34%,100%{opacity:1;transform:scale(1)}}.tss_${uid}_wipe{fill:none;stroke:#fff;stroke-width:44;stroke-dasharray:1;stroke-dashoffset:0;animation:tss_${uid}_wipe 8s cubic-bezier(.65,0,.35,1) infinite}@keyframes tss_${uid}_wipe{0%,28%{stroke-dashoffset:1}46%,96%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}.tss_${uid}_plus{transform-box:fill-box;transform-origin:center}.tss_${uid}_p1{animation:tss_${uid}_p1 8s cubic-bezier(.34,1.4,.64,1) infinite}.tss_${uid}_p2{animation:tss_${uid}_p2 8s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_${uid}_p1{0%,46%{transform:scale(0)}52%{transform:scale(1)}62%{transform:scale(1)}65%{transform:scale(1.3)}68%{transform:scale(1)}78%{transform:scale(1)}81%{transform:scale(1.3)}84%,100%{transform:scale(1)}}@keyframes tss_${uid}_p2{0%,49%{transform:scale(0)}55%{transform:scale(1)}68%{transform:scale(1)}71%{transform:scale(1.3)}74%{transform:scale(1)}84%{transform:scale(1)}87%{transform:scale(1.3)}90%,100%{transform:scale(1)}}.tss_${uid}_sheen{fill:url(#tss_${uid}_g);opacity:0;animation:tss_${uid}_sheen 8s ease-in-out infinite}@keyframes tss_${uid}_sheen{0%,56%{opacity:0;transform:translateX(0)}59%{opacity:1}72%{opacity:0;transform:translateX(175px)}100%{opacity:0;transform:translateX(175px)}}`;
+
+    const reducedMotionCss = `.tss_${uid}_float,.tss_${uid}_all,.tss_${uid}_line,.tss_${uid}_facet,.tss_${uid}_tl,.tss_${uid}_r,.tss_${uid}_b,.tss_${uid}_wipe,.tss_${uid}_plus,.tss_${uid}_p1,.tss_${uid}_p2,.tss_${uid}_sheen{animation:none!important;transform:none!important;opacity:1!important}.tss_${uid}_line{opacity:0!important}.tss_${uid}_sheen{opacity:0!important}`;
+
+    const body = `<g class="tss_${uid}_float"><g class="tss_${uid}_all"><path class="tss_${uid}_facet tss_${uid}_tl" fill="#659ad2" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path class="tss_${uid}_facet tss_${uid}_r" fill="#00599c" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path class="tss_${uid}_facet tss_${uid}_b" fill="#004482" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/><g class="tss_${uid}_outline"><path class="tss_${uid}_line" pathLength="1" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path class="tss_${uid}_line" pathLength="1" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path class="tss_${uid}_line" pathLength="1" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/></g><path fill="#fff" mask="url(#tss_${uid}_cmask)" d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91z"/><path class="tss_${uid}_plus tss_${uid}_p1" fill="#fff" d="M92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88z"/><path class="tss_${uid}_plus tss_${uid}_p2" fill="#fff" d="M108.646 57.57v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z"/><g clip-path="url(#tss_${uid}_hex)"><g transform="skewX(-20)"><rect class="tss_${uid}_sheen" x="0" y="-10" width="22" height="150"/></g></g></g></g>`;
+
     return wrapSvg(
-      '',
-      `@keyframes ${kP1}{0%,12%{transform:translate(-5.8px,0) rotate(0deg) scale(0.4);opacity:0}38%,82%{transform:translate(0,0) rotate(360deg) scale(1);opacity:1}95%,100%{transform:translate(0,0) scale(0.4);opacity:0}}@keyframes ${kP2}{0%,18%{transform:translate(-9.5px,0) rotate(0deg) scale(0.4);opacity:0}44%,82%{transform:translate(0,0) rotate(360deg) scale(1);opacity:1}95%,100%{transform:translate(0,0) scale(0.4);opacity:0}}@keyframes ${kC}{0%,100%{stroke-dashoffset:60}35%,82%{stroke-dashoffset:0}}.${kP1}{transform-origin:16.6px 12px;animation:${kP1} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kP2}{transform-origin:20.3px 12px;animation:${kP2} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kC}{stroke-dasharray:60;animation:${kC} ${dur} ease-in-out infinite}`,
-      `.${kP1},.${kP2},.${kC}{animation:none!important;transform:none!important;opacity:1!important;stroke-dashoffset:0!important}`,
-      `<path fill="#004482" d="${HEX_SHELL_PATH}"/><path fill="#00599C" d="M12 0.22 L2.26 5.31 C1.75 5.6 1.34 6.32 1.34 6.91 V17.09 L12 12 Z"/><path class="${kC}" pathLength="60" fill="#FFFFFF" stroke="#7DD3FC" stroke-width="0.45" d="M10.8 18.6c-3.65 0-6.6-2.95-6.6-6.6s2.95-6.6 6.6-6.6c2.2 0 4.15 1.1 5.35 2.8l-2.65 1.55c-.6-.9-1.6-1.45-2.7-1.45-1.85 0-3.35 1.5-3.35 3.7s1.5 3.7 3.35 3.7c1.1 0 2.1-.55 2.7-1.45l2.65 1.55c-1.2 1.7-3.15 2.8-5.35 2.8z"/><g class="${kP1}" fill="#FFFFFF"><rect x="15.1" y="11.4" width="3" height="1.2" rx="0.2"/><rect x="16.0" y="10.5" width="1.2" height="3" rx="0.2"/></g><g class="${kP2}" fill="#FFFFFF"><rect x="18.8" y="11.4" width="3" height="1.2" rx="0.2"/><rect x="19.7" y="10.5" width="1.2" height="3" rx="0.2"/></g>`,
-      'Upstream C++ choreography: C arc anchors the blue hexagon while the two + operators spin and translate out from the C center',
-      'Dual-operator rotational translation keyframes (plus-1, plus-2) + C-arc trace'
+      defs,
+      style,
+      reducedMotionCss,
+      body,
+      '8s isometric hexagon assembly: stroke outline trace, 3-facet 3D reveal, C-arc wipe reveal, bouncing ++ operators, and diagonal specular sheen',
+      'Multi-stage synchronized keyframe choreography with 128x128 geometric precision',
+      '0 0 128 128'
     );
   }
 
@@ -1222,7 +1229,8 @@ for (const item of catalog) {
   const hasOpenCloseSvg = animSvg.startsWith('<svg ') && animSvg.endsWith('</svg>');
   const hasKeyframes = animSvg.includes('@keyframes ');
   const hasReducedMotion = animSvg.includes('prefers-reduced-motion: reduce');
-  const hasViewBox = animSvg.includes('viewBox="0 0 24 24"');
+  const hasViewBox =
+    animSvg.includes('viewBox="0 0 24 24"') || animSvg.includes('viewBox="0 0 128 128"');
   const isValid = hasOpenCloseSvg && hasKeyframes && hasReducedMotion && hasViewBox;
   if (isValid) xmlValidCount++;
 
