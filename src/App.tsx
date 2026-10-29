@@ -129,7 +129,7 @@ export default function App() {
 
       <main
         id="studio-workspace"
-        className="flex-1 max-w-[1920px] w-full mx-auto px-3 sm:px-4 2xl:px-6 py-3 sm:py-4 xl:h-[calc(100svh-4rem)] xl:flex-none xl:overflow-hidden"
+        className="flex-1 max-w-[1920px] w-full mx-auto px-3 sm:px-4 2xl:px-6 py-3 sm:py-4 xl:flex-1 xl:min-h-0 xl:overflow-hidden"
       >
         <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-4 items-start xl:h-full xl:min-h-0">
           {/* Keep the catalog visible on desktop; on smaller screens each step gets a focused view. */}
