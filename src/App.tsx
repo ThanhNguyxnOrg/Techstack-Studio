@@ -134,7 +134,11 @@ export default function App() {
         <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-4 items-start xl:h-full xl:min-h-0">
           {/* Keep the catalog visible on desktop; on smaller screens each step gets a focused view. */}
           <div
-            className={activeStage === 'select' ? 'block min-w-0 xl:h-full xl:min-h-0' : 'hidden xl:block min-w-0 xl:h-full xl:min-h-0'}
+            className={
+              activeStage === 'select'
+                ? 'block min-w-0 xl:h-full xl:min-h-0'
+                : 'hidden xl:block min-w-0 xl:h-full xl:min-h-0'
+            }
           >
             <CatalogPanel
               selectedIds={selectedIds}
@@ -146,7 +150,11 @@ export default function App() {
 
           {/* Workflow tabs switch this panel instead of scrolling the whole page. */}
           <div
-            className={activeStage === 'select' ? 'hidden xl:flex min-w-0 flex-col gap-4 xl:h-full xl:min-h-0 xl:overflow-y-auto xl:overscroll-contain xl:pr-1' : 'flex min-w-0 flex-col gap-4 xl:h-full xl:min-h-0 xl:overflow-y-auto xl:overscroll-contain xl:pr-1'}
+            className={
+              activeStage === 'select'
+                ? 'hidden xl:flex min-w-0 flex-col gap-4 xl:h-full xl:min-h-0 xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
+                : 'flex min-w-0 flex-col gap-4 xl:h-full xl:min-h-0 xl:overflow-y-auto xl:overscroll-contain xl:pr-1'
+            }
           >
             {activeStage !== 'generate' && (
               <PreviewAndControls
