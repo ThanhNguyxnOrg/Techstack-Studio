@@ -14,17 +14,17 @@
       "tier": "A",
       "sourceAssetPath": "/icons/source/typescript.svg",
       "animatedSvgPath": "/icons/animated/typescript.svg",
-      "animationConcept": "Motion deferred; canonical TypeScript logo is intentionally static pending redesign",
-      "animationTechnique": "No motion: reuses the exact source SVG to preserve official geometry",
+      "animationConcept": "Restored existing official-mark sheen animation from commit a93f69c; visual review pending",
+      "animationTechnique": "Low-opacity diagonal sheen clipped to the official TypeScript badge",
       "fileExists": true,
       "xmlValid": true,
-      "hasEmbeddedKeyframes": false,
+      "hasEmbeddedKeyframes": true,
       "hasReducedMotionSupport": true,
       "runtimeIntegrated": true,
       "exportVerified": false,
-      "status": "motion_deferred",
-      "knownIssues": "Motion redesign deferred by request; official static logo is used to avoid shape mismatch.",
-      "motionDeferred": true
+      "status": "needs_visual_review",
+      "knownIssues": "Restored at user request from commit a93f69c; final motion visual review is pending.",
+      "visualReviewPending": true
     },
     {
       "id": "python",

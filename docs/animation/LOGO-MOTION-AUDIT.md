@@ -7,13 +7,13 @@
 ## Immediate disposition
 
 - **TypeScript static logo:** uses the official Microsoft TypeScript SVG geometry and brand blue `#3178C6`.
-- **TypeScript animated asset:** now exactly matches its static source asset. Motion is intentionally disabled until a proper animation is designed and visually reviewed. This prevents the previous hand-drawn rounded `T/S` paths from appearing as a different logo in previews or exports.
-- **Generator and export fallback:** preserve the canonical TypeScript geometry, so regenerating the SVG library or exporting one TypeScript logo does not restore the old custom glyph.
+- **TypeScript animated asset:** restored from commit `a93f69c42d0a1a72ceb9cabd9ad6350d54961c03`. It uses the official Microsoft TS geometry with the existing low-opacity sheen. The user will review/redesign motion later; this is not marked visually approved.
+- **Generator and export fallback:** use the same official TS geometry and existing sheen effect, so generation and single-icon export do not fall back to the old hand-drawn glyph.
 - **No UI, package, or deployment workflow changes** are included in this audit.
 
 ## Confirmed / high-priority findings
 
-- **TypeScript:** the previous animation used custom rounded stroke paths (`M 88 118`, `M 164 124`) instead of the official filled TS mark. The animated asset now uses the exact official static mark; motion is deferred.
+- **TypeScript:** the prior animated logo used custom rounded stroke paths (`M 88 118`, `M 164 124`) instead of the filled official TS mark. The animated SVG is restored to commit `a93f69c42d0a1a72ceb9cabd9ad6350d54961c03`; its effect is pending the user's visual review.
 - **OpenAI:** the generator adds a separate pulsing center circle on top of the canonical OpenAI path and rotates the entire mark. The extra circle is not part of the source silhouette and needs a brand-fidelity review. It is recorded for the later motion pass and is not changed here.
 
 ## High-risk cases for visual comparison
@@ -50,3 +50,10 @@ Other special branches reuse the canonical path but may add overlays, particles,
 4. Test browser rendering and standalone SVG export before marking an icon as visually approved.
 
 The repository was inspected through source and generator code in this pass; a full live-browser contact sheet and screenshot review for all 554 icons was not available. Therefore, the non-TypeScript entries are **not** certified visually correct by this note. The list above is a prioritized review queue, not a list of confirmed failures.
+
+## Static-logo integrity pass
+
+- The suite covers all **554** static source files and verifies that asset filenames match catalog IDs.
+- For source SVGs generated directly from catalog data, the test requires the exact canonical `item.svgPath` and brand-safe fill to appear in the static asset.
+- The source generator has a small allowlist of brand-specific variants (Google Cloud, Python, TypeScript, JavaScript, AWS, Spring Boot, C, C++, C#). These are checked for expected brand colors/official-mark signatures rather than forcing multicolor badges into a single-path template.
+- This is a reproducible data/path integrity check, not a claim that every logo received an independent screenshot-based comparison against the brand's latest website. It establishes that generic assets follow catalog source data and intentional overrides retain their expected identifying marks.

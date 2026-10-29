@@ -22,6 +22,49 @@ function readSvg(directory: string, id: string): string {
   return fs.readFileSync(path.join(directory, `${id}.svg`), 'utf8');
 }
 
+const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
+  "googlecloud": [
+    "#EA4335",
+    "#4285F4",
+    "#34A853",
+    "#FBBC05"
+  ],
+  "python": [
+    "#387EB8",
+    "#FFE052"
+  ],
+  "typescript": [
+    "#3178c6",
+    "m316.939 407.424"
+  ],
+  "javascript": [
+    "#F7DF1E",
+    "#111622"
+  ],
+  "amazonaws": [
+    "#F3F1EC",
+    "#FF9900"
+  ],
+  "springboot": [
+    "#6DB33F",
+    "#FFFFFF"
+  ],
+  "c": [
+    "#283593",
+    "#5C6BC0",
+    "#FFFFFF"
+  ],
+  "cpp": [
+    "#659ad2",
+    "#00599c",
+    "#004482"
+  ],
+  "csharp": [
+    "#512BD4",
+    "#6D28D9"
+  ]
+};
+
 function assertSafeSvg(markup: string, id: string): void {
   assert.ok(markup.startsWith('<svg '), `${id}: SVG must start with an <svg> element`);
   assert.ok(markup.trimEnd().endsWith('</svg>'), `${id}: SVG must close`);
@@ -99,27 +142,38 @@ test('every catalog item exposes complete, self-contained source and animated SV
 
     assert.ok(source.includes('role="img"'), `${item.id}: source SVG needs an image role`);
 
-    if (item.id === 'typescript') {
-      assert.equal(
-        animated,
-        source,
-        'TypeScript motion is intentionally deferred; its animated asset must exactly match the official static mark'
-      );
-      assert.ok(
-        animated.includes('m316.939 407.424'),
-        'TypeScript must use official Microsoft path geometry'
-      );
-      assert.ok(
-        !animated.includes('@keyframes '),
-        'TypeScript motion should stay disabled until redesigned'
-      );
+    const customSignatures = CUSTOM_SOURCE_LOGO_SIGNATURES[item.id];
+    if (customSignatures) {
+      for (const signature of customSignatures) {
+        assert.ok(
+          source.includes(signature),
+          `${item.id}: source logo is missing expected brand signature ${signature}`
+        );
+      }
     } else {
-      assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
+      const canonicalGlyph = `<path fill="${item.darkSafeColor}" fill-rule="evenodd" d="${item.svgPath}"/>`;
       assert.ok(
-        animated.includes('prefers-reduced-motion: reduce'),
-        `${item.id}: animated SVG needs reduced-motion support`
+        source.includes(canonicalGlyph),
+        `${item.id}: static SVG must preserve the canonical catalog glyph path`
       );
     }
+
+    if (item.id === 'typescript') {
+      assert.ok(
+        animated.includes('m316.939 407.424'),
+        'TypeScript animation must preserve the official Microsoft geometry'
+      );
+      assert.ok(
+        animated.includes('@keyframes tss_typescript_shine'),
+        'TypeScript motion asset must match the restored a93 effect'
+      );
+      assert.ok(animated.includes('translateX(-30px)'), 'TypeScript motion must keep the restored distance');
+    }
+    assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
+    assert.ok(
+      /prefers-reduced-motion\\s*:\\s*reduce/.test(animated),
+      `${item.id}: animated SVG needs reduced-motion support`
+    );
     assert.ok(parts[item.id].body.length > 0, `${item.id}: animated body is empty`);
     assert.ok(parts[item.id].staticBody.length > 0, `${item.id}: static body is empty`);
   }

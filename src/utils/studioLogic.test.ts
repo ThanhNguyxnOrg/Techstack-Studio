@@ -94,7 +94,7 @@ test('all 10 representative benchmark icons resolve with 4-color GCP clipPath ch
   );
 });
 
-test('TypeScript source and animated SVGs preserve the official Microsoft mark while motion is deferred', () => {
+test('TypeScript static and animated SVGs preserve the official Microsoft logo geometry', () => {
   const ts = TECH_BY_ID['typescript'];
   assert.ok(ts, 'Expected typescript in catalog');
 
@@ -118,21 +118,20 @@ test('TypeScript source and animated SVGs preserve the official Microsoft mark w
     'Expected official Microsoft TypeScript glyph geometry'
   );
   assert.ok(staticSvg.includes('fill="#3178c6"'), 'Expected official TypeScript brand blue');
-  assert.equal(
-    animatedSvg,
-    staticSvg,
-    'Motion is deferred; animated and static TypeScript SVGs must match'
-  );
-  assert.ok(!animatedSvg.includes('M 88 118'), 'Should not use the hand-drawn rounded T path');
-  assert.ok(!animatedSvg.includes('M 164 124'), 'Should not use the hand-drawn rounded S path');
+  assert.ok(!staticSvg.includes('@keyframes'), 'Static TypeScript logo must remain still');
+  assert.ok(animatedSvg.includes('m316.939 407.424'), 'Animated logo must preserve the official glyph');
   assert.ok(
-    !animatedSvg.includes('@keyframes'),
-    'TypeScript motion should remain disabled until redesigned'
+    animatedSvg.includes('@keyframes tss_typescript_shine'),
+    'Expected the restored official-mark sheen'
   );
+  assert.ok(animatedSvg.includes('translateX(-30px)'), 'Expected the a93 sheen travel distance');
   assert.ok(
-    !animatedSvg.includes('#131822'),
-    'Expected no inner plate rect when showPlate is false'
+    /prefers-reduced-motion\\s*:\\s*reduce/.test(animatedSvg),
+    'Expected reduced-motion support'
   );
+  assert.ok(!animatedSvg.includes('M 88 118'), 'Should not use the old rounded custom T path');
+  assert.ok(!animatedSvg.includes('M 164 124'), 'Should not use the old rounded custom S path');
+  assert.ok(!animatedSvg.includes('#131822'), 'Expected no inner plate rect when showPlate is false');
 });
 
 test('selection and duplicate prevention work accurately', () => {

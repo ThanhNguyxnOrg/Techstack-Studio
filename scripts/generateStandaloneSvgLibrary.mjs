@@ -507,17 +507,29 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // 8. TYPESCRIPT — motion intentionally deferred; reuse the exact canonical static SVG.
+  // 8. TYPESCRIPT — restore the existing official-mark sheen from a93f69c; visual review is pending.
   if (item.id === 'typescript') {
+    const kSheen = `tss_${uid}_shine`;
+    const cSheen = `tss_${uid}_clip`;
+    const gSheen = `tss_${uid}_sheen`;
+    const defs =
+      `<clipPath id="${cSheen}"><rect width="24" height="24" rx="2.34375"/></clipPath>` +
+      `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".32"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
+    const style =
+      `@keyframes ${kSheen}{0%,20%{transform:translateX(-30px);opacity:0}32%{opacity:.8}68%,100%{transform:translateX(30px);opacity:0}}.${kSheen}{animation:${kSheen} 4.8s cubic-bezier(.22,1,.36,1) infinite}`;
+    const reduced = `.${kSheen}{animation:none!important;opacity:0!important}`;
     const sourceSvg = buildSourceSvg(item);
-    const body = sourceSvg.replace(/^<svg[^>]*>/i, '').replace(/<\/svg>\s*$/i, '');
+    const sourceBody = sourceSvg.replace(/^<svg[^>]*>/i, '').replace(/<\\/svg>\\s*$/i, '');
+    const body =
+      sourceBody +
+      `<g clip-path="url(#${cSheen})"><rect class="${kSheen}" x="-5" y="0" width="34" height="24" fill="url(#${gSheen})" transform="skewX(-20)"/></g>`;
     return wrapSvg(
-      '',
-      '',
-      '',
+      defs,
+      style,
+      reduced,
       body,
-      'Motion intentionally deferred; official TypeScript mark is retained unchanged',
-      'Reuses the canonical source SVG verbatim until a motion design passes visual QA',
+      'Restored from the existing TypeScript motion SVG at commit a93f69c; official Microsoft mark preserved',
+      'Low-opacity diagonal sheen sweep over the official TS mark; pending visual review',
       '0 0 24 24'
     );
   }
@@ -1570,12 +1582,8 @@ for (const item of catalog) {
     animSvg.includes('viewBox="0 0 24 24"') ||
     animSvg.includes('viewBox="0 0 128 128"') ||
     animSvg.includes('viewBox="0 0 200 200"');
-  const motionDeferred = item.id === 'typescript';
-  const isValid =
-    hasOpenCloseSvg &&
-    (hasKeyframes || motionDeferred) &&
-    (hasReducedMotion || motionDeferred) &&
-    hasViewBox;
+  const visualReviewPending = item.id === 'typescript';
+  const isValid = hasOpenCloseSvg && hasKeyframes && hasReducedMotion && hasViewBox;
   if (isValid) xmlValidCount++;
 
   manifestEntries.push({
@@ -1587,22 +1595,22 @@ for (const item of catalog) {
     tier: item.tier,
     sourceAssetPath: `/icons/source/${item.id}.svg`,
     animatedSvgPath: `/icons/animated/${item.id}.svg`,
-    animationConcept: motionDeferred
-      ? 'Motion deferred; canonical TypeScript logo is intentionally static pending redesign'
+    animationConcept: visualReviewPending
+      ? 'Restored existing TypeScript official-mark sheen animation; visual review pending'
       : concept,
-    animationTechnique: motionDeferred
-      ? 'No motion: reuses the exact source SVG to preserve official geometry'
+    animationTechnique: visualReviewPending
+      ? 'Low-opacity diagonal sheen clipped to the official TypeScript badge'
       : technique,
     fileExists: fs.existsSync(animFile) && fs.existsSync(srcFile),
     xmlValid: isValid,
-    motionDeferred,
+    visualReviewPending,
     hasEmbeddedKeyframes: hasKeyframes,
-    hasReducedMotionSupport: hasReducedMotion || motionDeferred,
+    hasReducedMotionSupport: hasReducedMotion,
     runtimeIntegrated: true,
-    exportVerified: motionDeferred ? false : true,
-    status: motionDeferred ? 'motion_deferred' : isValid ? 'visual_qa_passed' : 'blocked',
-    knownIssues: motionDeferred
-      ? 'Motion redesign deferred by request; official static logo is used to avoid shape mismatch.'
+    exportVerified: visualReviewPending ? false : true,
+    status: visualReviewPending ? 'needs_visual_review' : isValid ? 'visual_qa_passed' : 'blocked',
+    knownIssues: visualReviewPending
+      ? 'Restored at user request from commit a93f69c; final motion visual review is pending.'
       : isValid
         ? null
         : 'SVG validation check failed',
