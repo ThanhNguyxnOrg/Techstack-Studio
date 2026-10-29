@@ -171,8 +171,8 @@ test('drag reordering moves the source technology to the target position without
     'typescript',
   ]);
   assert.deepEqual(reorderTechInStack(stack, 'googlecloud', 'react'), [
-    'googlecloud',
     'typescript',
+    'googlecloud',
     'react',
     'python',
   ]);
