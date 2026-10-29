@@ -146,7 +146,7 @@ test('every catalog item exposes complete, self-contained source and animated SV
       `${item.id}: animated SVG needs keyframes`
     );
     assert.ok(
-      /prefers-reduced-motion\\s*:\\s*reduce/.test(animated),
+      /prefers-reduced-motion\s*:\s*reduce/.test(animated),
       `${item.id}: animated SVG needs reduced-motion support`
     );
     assert.ok(parts[item.id].body.length > 0, `${item.id}: animated body is empty`);

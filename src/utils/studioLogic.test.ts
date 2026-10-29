@@ -132,7 +132,7 @@ test('TypeScript static and animated SVGs preserve the official Microsoft logo g
     'Expected the a93 sheen travel distance'
   );
   assert.ok(
-    /prefers-reduced-motion\\s*:\\s*reduce/.test(animatedSvg),
+    /prefers-reduced-motion\s*:\s*reduce/.test(animatedSvg),
     'Expected reduced-motion support'
   );
   assert.ok(
