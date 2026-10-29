@@ -98,11 +98,22 @@ test('every catalog item exposes complete, self-contained source and animated SV
     assertSafeSvg(animated, item.id);
 
     assert.ok(source.includes('role="img"'), `${item.id}: source SVG needs an image role`);
-    assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
-    assert.ok(
-      animated.includes('prefers-reduced-motion: reduce'),
-      `${item.id}: animated SVG needs reduced-motion support`
-    );
+
+    if (item.id === 'typescript') {
+      assert.equal(
+        animated,
+        source,
+        'TypeScript motion is intentionally deferred; its animated asset must exactly match the official static mark'
+      );
+      assert.ok(animated.includes('m316.939 407.424'), 'TypeScript must use official Microsoft path geometry');
+      assert.ok(!animated.includes('@keyframes '), 'TypeScript motion should stay disabled until redesigned');
+    } else {
+      assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
+      assert.ok(
+        animated.includes('prefers-reduced-motion: reduce'),
+        `${item.id}: animated SVG needs reduced-motion support`
+      );
+    }
     assert.ok(parts[item.id].body.length > 0, `${item.id}: animated body is empty`);
     assert.ok(parts[item.id].staticBody.length > 0, `${item.id}: static body is empty`);
   }

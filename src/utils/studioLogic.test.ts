@@ -94,21 +94,32 @@ test('all 10 representative benchmark icons resolve with 4-color GCP clipPath ch
   );
 });
 
-test('TypeScript and JavaScript standalone SVGs use direct T, J, and S vector paths over solid brand squares without horizontal bleed lines', () => {
+test('TypeScript source and animated SVGs preserve the official Microsoft mark while motion is deferred', () => {
   const ts = TECH_BY_ID['typescript'];
   assert.ok(ts, 'Expected typescript in catalog');
 
-  const tsSvg = generateAnimatedSingleIconSvg(ts, {
+  const staticSvg = generateAnimatedSingleIconSvg(ts, {
+    size: 48,
+    theme: 'dark',
+    animate: false,
+    speedMultiplier: 1,
+    showPlate: false,
+  });
+  const animatedSvg = generateAnimatedSingleIconSvg(ts, {
     size: 48,
     theme: 'dark',
     animate: true,
     speedMultiplier: 1,
     showPlate: false,
   });
-  assert.ok(tsSvg.includes('M 88 118'), 'Expected TypeScript SVG to include standalone T path');
-  assert.ok(tsSvg.includes('M 164 124'), 'Expected TypeScript SVG to include standalone S path');
-  assert.ok(!tsSvg.includes('<mask'), 'Expected no mask rectangle bleed on TypeScript SVG');
-  assert.ok(!tsSvg.includes('#131822'), 'Expected no inner plate rect when showPlate is false');
+
+  assert.ok(staticSvg.includes('m316.939 407.424'), 'Expected official Microsoft TypeScript glyph geometry');
+  assert.ok(staticSvg.includes('fill="#3178c6"'), 'Expected official TypeScript brand blue');
+  assert.equal(animatedSvg, staticSvg, 'Motion is deferred; animated and static TypeScript SVGs must match');
+  assert.ok(!animatedSvg.includes('M 88 118'), 'Should not use the hand-drawn rounded T path');
+  assert.ok(!animatedSvg.includes('M 164 124'), 'Should not use the hand-drawn rounded S path');
+  assert.ok(!animatedSvg.includes('@keyframes'), 'TypeScript motion should remain disabled until redesigned');
+  assert.ok(!animatedSvg.includes('#131822'), 'Expected no inner plate rect when showPlate is false');
 });
 
 test('selection and duplicate prevention work accurately', () => {

@@ -14,16 +14,17 @@
       "tier": "A",
       "sourceAssetPath": "/icons/source/typescript.svg",
       "animatedSvgPath": "/icons/animated/typescript.svg",
-      "animationConcept": "6s progressive outline trace, fill expansion, T & S letter stroke drawing, and specular shine sweep across the TypeScript badge",
-      "animationTechnique": "Multi-stage synchronized keyframe choreography with 200x200 geometric precision",
+      "animationConcept": "Motion deferred; canonical TypeScript logo is intentionally static pending redesign",
+      "animationTechnique": "No motion: reuses the exact source SVG to preserve official geometry",
       "fileExists": true,
       "xmlValid": true,
-      "hasEmbeddedKeyframes": true,
+      "hasEmbeddedKeyframes": false,
       "hasReducedMotionSupport": true,
       "runtimeIntegrated": true,
-      "exportVerified": true,
-      "status": "visual_qa_passed",
-      "knownIssues": null
+      "exportVerified": false,
+      "status": "motion_deferred",
+      "knownIssues": "Motion redesign deferred by request; official static logo is used to avoid shape mismatch.",
+      "motionDeferred": true
     },
     {
       "id": "python",
