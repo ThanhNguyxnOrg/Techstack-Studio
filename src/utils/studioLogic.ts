@@ -541,8 +541,7 @@ export function buildInternalSvgAnimationMarkup(
     const defs =
       `<clipPath id="${cSheen}"><rect width="24" height="24" rx="2.34375"/></clipPath>` +
       `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".32"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
-    const style =
-      `@keyframes ${kSheen}{0%,20%{transform:translateX(-30px);opacity:0}32%{opacity:.8}68%,100%{transform:translateX(30px);opacity:0}}.${kSheen}{animation:${kSheen} ${(4.8 / speed).toFixed(2)}s cubic-bezier(.22,1,.36,1) infinite}@media(prefers-reduced-motion:reduce){.${kSheen}{animation:none!important;opacity:0!important}}`;
+    const style = `@keyframes ${kSheen}{0%,20%{transform:translateX(-30px);opacity:0}32%{opacity:.8}68%,100%{transform:translateX(30px);opacity:0}}.${kSheen}{animation:${kSheen} ${(4.8 / speed).toFixed(2)}s cubic-bezier(.22,1,.36,1) infinite}@media(prefers-reduced-motion:reduce){.${kSheen}{animation:none!important;opacity:0!important}}`;
     const body =
       officialMark +
       `<g clip-path="url(#${cSheen})"><rect class="${kSheen}" x="-5" y="0" width="34" height="24" fill="url(#${gSheen})" transform="skewX(-20)"/></g>`;

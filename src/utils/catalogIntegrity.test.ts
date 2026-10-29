@@ -141,10 +141,7 @@ test('every catalog item exposes complete, self-contained source and animated SV
         'TypeScript motion must keep the restored distance'
       );
     }
-    assert.ok(
-      animated.includes('@keyframes '),
-      `${item.id}: animated SVG needs keyframes`
-    );
+    assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
     assert.ok(
       /prefers-reduced-motion\s*:\s*reduce/.test(animated),
       `${item.id}: animated SVG needs reduced-motion support`

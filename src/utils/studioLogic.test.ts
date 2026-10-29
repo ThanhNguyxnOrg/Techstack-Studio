@@ -127,22 +127,13 @@ test('TypeScript static and animated SVGs preserve the official Microsoft logo g
     animatedSvg.includes('@keyframes tss_typescript_shine'),
     'Expected the restored official-mark sheen'
   );
-  assert.ok(
-    animatedSvg.includes('translateX(-30px)'),
-    'Expected the a93 sheen travel distance'
-  );
+  assert.ok(animatedSvg.includes('translateX(-30px)'), 'Expected the a93 sheen travel distance');
   assert.ok(
     /prefers-reduced-motion\s*:\s*reduce/.test(animatedSvg),
     'Expected reduced-motion support'
   );
-  assert.ok(
-    !animatedSvg.includes('M 88 118'),
-    'Should not use the old rounded custom T path'
-  );
-  assert.ok(
-    !animatedSvg.includes('M 164 124'),
-    'Should not use the old rounded custom S path'
-  );
+  assert.ok(!animatedSvg.includes('M 88 118'), 'Should not use the old rounded custom T path');
+  assert.ok(!animatedSvg.includes('M 164 124'), 'Should not use the old rounded custom S path');
   assert.ok(
     !animatedSvg.includes('#131822'),
     'Expected no inner plate rect when showPlate is false'
