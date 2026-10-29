@@ -35,6 +35,7 @@ interface PreviewAndControlsProps {
   settings: CustomizationSettings;
   onUpdateSettings: (partial: Partial<CustomizationSettings>) => void;
   onApplyPreset: (presetId: string) => void;
+  showCustomization?: boolean;
   childrenAfterPreview?: React.ReactNode;
 }
 
@@ -103,6 +104,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
   settings,
   onUpdateSettings,
   onApplyPreset,
+  showCustomization = true,
   childrenAfterPreview,
 }) => {
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -250,7 +252,13 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
               id="live-preview-heading"
               className="text-sm font-bold text-[#F1F5F9] whitespace-nowrap"
             >
-              <span className="text-[#64748B]">2.</span> Preview &amp; customize
+              {showCustomization ? (
+                <>
+                  <span className="text-[#64748B]">2.</span> Preview &amp; customize
+                </>
+              ) : (
+                'Live preview'
+              )}
             </h2>
             <span className="px-2 py-0.5 rounded-md bg-[#141923] border border-[#1E2636] text-[11px] font-medium text-[#94A3B8] tabular-nums whitespace-nowrap">
               {items.length} {items.length === 1 ? 'logo' : 'logos'}
@@ -417,8 +425,9 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
         </div>
 
         {/* One editing surface for every style control */}
-        <div
-          aria-labelledby="customization-controls-heading"
+        {showCustomization && (
+          <div
+            aria-labelledby="customization-controls-heading"
           className="border-t border-[#1E2636] bg-[#0C1017]"
         >
           <div className="px-4 sm:px-5 py-4 space-y-3.5">
@@ -698,7 +707,8 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
               </div>
             </details>
           </div>
-        </div>
+          </div>
+        )}
 
         {/* Selected stack tray */}
         {childrenAfterPreview}

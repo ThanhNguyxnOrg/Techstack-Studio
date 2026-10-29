@@ -69,10 +69,10 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
     <section
       id="catalog-section"
       aria-labelledby="catalog-heading"
-      className="scroll-mt-20 bg-[#0F131B] border border-[#1E2636] rounded-2xl flex flex-col overflow-hidden shadow-sm"
+      className="scroll-mt-20 bg-[#0F131B] border border-[#1E2636] rounded-2xl flex flex-col overflow-hidden shadow-sm xl:h-full xl:min-h-0"
     >
       {/* Header & Controls */}
-      <div className="p-4 sm:p-5 border-b border-[#1E2636] flex flex-col gap-3.5 bg-[#0C1017]">
+      <div className="p-3 sm:p-4 border-b border-[#1E2636] flex flex-col gap-3 bg-[#0C1017] shrink-0">
         <div className="flex items-center justify-between gap-2">
           <div>
             <h2 id="catalog-heading" className="text-base font-bold tracking-tight text-[#F1F5F9]">
@@ -217,7 +217,7 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
       </div>
 
       {/* Catalog Grid */}
-      <div className="p-4 sm:p-5 overflow-y-auto max-h-[720px]">
+      <div className="p-3 sm:p-4 overflow-y-auto max-h-[720px] xl:flex-1 xl:min-h-0 xl:max-h-none xl:overscroll-contain">
         {displayedItems.length === 0 ? (
           <div className="py-12 text-center border border-dashed border-[#1E2636] rounded-xl bg-[#090B10]/50">
             <p className="text-sm text-[#94A3B8]">
@@ -263,10 +263,10 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
                       />
 
                       <div className="min-w-0">
-                        <div className="text-xs font-semibold text-[#F1F5F9] truncate">
+                        <div className="text-sm font-semibold text-[#F1F5F9] truncate">
                           {item.name}
                         </div>
-                        <p className="text-[11px] text-[#64748B] group-hover:text-[#94A3B8] truncate mt-0.5 transition-colors">
+                        <p className="text-xs text-[#64748B] group-hover:text-[#94A3B8] truncate mt-0.5 transition-colors">
                           {item.subcategory || item.category}
                         </p>
                       </div>

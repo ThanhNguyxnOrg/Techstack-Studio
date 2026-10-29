@@ -20,9 +20,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <header className="sticky top-0 z-30 border-b border-[#1E2636] bg-[#090B10]/90 backdrop-blur-md">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
+      <div className="max-w-[1920px] mx-auto w-full px-3 sm:px-5 py-2 flex flex-wrap items-center justify-between gap-2 xl:h-16 xl:flex-nowrap xl:py-0">
         {/* Zone 1: Brand Lockup */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="order-1 flex items-center gap-3 shrink-0">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-b from-[#161F30] to-[#0F1420] border border-[#263248] flex items-center justify-center shrink-0 shadow-xs">
             <img
               src={`${import.meta.env.BASE_URL}favicon.svg`}
@@ -44,23 +44,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Zone 2: 3-Step Segmented Navigation */}
         <nav
-          aria-label="Steps"
-          className="hidden md:flex items-center gap-1 bg-[#0F131B] p-1 rounded-xl border border-[#1E2636] shrink-0"
+          aria-label="Workflow steps"
+          className="order-3 grid w-full grid-cols-3 items-center gap-1 bg-[#0F131B] p-1 rounded-xl border border-[#1E2636] xl:order-2 xl:flex xl:w-auto xl:shrink-0"
         >
           <button
             type="button"
-            onClick={() => {
-              onSelectStage('select');
-              document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer ${
+            onClick={() => onSelectStage('select')}
+            aria-pressed={activeStage === 'select'}
+            aria-label="Build stack and choose technologies"
+            title="Build stack and choose technologies"
+            className={`inline-flex w-full items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer ${
               activeStage === 'select'
                 ? 'bg-[#38BDF8] text-[#090B10] font-semibold shadow-xs'
                 : 'text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#161C28]'
             }`}
           >
             <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-            <span>Choose technologies</span>
+            <span>Build</span>
             <span
               className={`px-1.5 py-0.2 rounded text-[11px] tabular-nums ${
                 activeStage === 'select'
@@ -74,39 +74,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <button
             type="button"
-            onClick={() => {
-              onSelectStage('customize');
-              document.getElementById('customize-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer ${
+            onClick={() => onSelectStage('customize')}
+            aria-pressed={activeStage === 'customize'}
+            aria-label="Preview and customize the stack"
+            title="Preview and customize the stack"
+            className={`inline-flex w-full items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer ${
               activeStage === 'customize'
                 ? 'bg-[#38BDF8] text-[#090B10] font-semibold shadow-xs'
                 : 'text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#161C28]'
             }`}
           >
             <Sliders className="w-3.5 h-3.5 shrink-0" />
-            <span>Preview &amp; Customize</span>
+            <span>Customize</span>
           </button>
 
           <button
             type="button"
-            onClick={() => {
-              onSelectStage('generate');
-              document.getElementById('export-section')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer ${
+            onClick={() => onSelectStage('generate')}
+            aria-pressed={activeStage === 'generate'}
+            aria-label="Export generated stack code"
+            title="Export generated stack code"
+            className={`inline-flex w-full items-center justify-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap shrink-0 transition-all cursor-pointer ${
               activeStage === 'generate'
                 ? 'bg-[#38BDF8] text-[#090B10] font-semibold shadow-xs'
                 : 'text-[#94A3B8] hover:text-[#F1F5F9] hover:bg-[#161C28]'
             }`}
           >
             <Code2 className="w-3.5 h-3.5 shrink-0" />
-            <span>Export Code</span>
+            <span>Export</span>
           </button>
         </nav>
 
         {/* Zone 3: Single-line Utility Actions */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="order-2 flex items-center gap-1 sm:gap-2 shrink-0 xl:order-3">
           <a
             href={GITHUB_REPO_URL}
             target="_blank"
@@ -124,7 +124,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#CBD5E1] hover:text-[#F1F5F9] bg-[#0F131B] hover:bg-[#161C28] border border-[#1E2636] hover:border-[#2C374D] whitespace-nowrap shrink-0 transition-colors cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5 text-[#38BDF8]" />
-            <span>Reset</span>
+            <span className="hidden sm:inline">Reset</span>
           </button>
           <button
             type="button"
@@ -134,7 +134,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#94A3B8] hover:text-[#F87171] bg-[#0F131B] hover:bg-[#1B1318] border border-[#1E2636] hover:border-[#F87171]/40 disabled:opacity-40 disabled:pointer-events-none whitespace-nowrap shrink-0 transition-colors cursor-pointer"
           >
             <Trash2 className="w-3.5 h-3.5" />
-            <span>Clear</span>
+            <span className="hidden sm:inline">Clear</span>
           </button>
         </div>
       </div>

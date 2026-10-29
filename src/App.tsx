@@ -114,7 +114,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090B10] text-[#F1F5F9] flex flex-col selection:bg-[#38BDF8] selection:text-[#090B10]">
+    <div className="min-h-screen bg-[#090B10] text-[#F1F5F9] flex flex-col selection:bg-[#38BDF8] selection:text-[#090B10] xl:h-svh xl:min-h-0 xl:overflow-hidden">
       <div role="status" aria-live="polite" className="sr-only">
         {statusMessage}
       </div>
@@ -129,11 +129,13 @@ export default function App() {
 
       <main
         id="studio-workspace"
-        className="flex-1 max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6"
+        className="flex-1 max-w-[1920px] w-full mx-auto px-3 sm:px-4 2xl:px-6 py-3 sm:py-4 xl:h-[calc(100svh-4rem)] xl:flex-none xl:overflow-hidden"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          {/* Left Column: Technology Catalog */}
-          <div className="lg:col-span-6">
+        <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-4 items-start xl:h-full xl:min-h-0">
+          {/* Keep the catalog visible on desktop; on smaller screens each step gets a focused view. */}
+          <div
+            className={activeStage === 'select' ? 'block min-w-0 xl:h-full xl:min-h-0' : 'hidden xl:block min-w-0 xl:h-full xl:min-h-0'}
+          >
             <CatalogPanel
               selectedIds={selectedIds}
               animateSvgLogos={settings.animateSvgLogos}
@@ -142,30 +144,39 @@ export default function App() {
             />
           </div>
 
-          {/* Right Column: Live Preview + Customize Dock + Stack Tray + Export */}
-          <div className="lg:col-span-6 space-y-5">
-            <PreviewAndControls
-              items={selectedItems}
-              settings={settings}
-              onUpdateSettings={handleUpdateSettings}
-              onApplyPreset={handleApplyPreset}
-              childrenAfterPreview={
-                <SelectedStackBar
-                  selectedItems={selectedItems}
-                  onMoveTech={handleMoveTech}
-                  onRemoveTech={handleRemoveTech}
-                  onClearStack={handleClearStack}
-                  onRestoreStarterStack={handleRestoreStarterStack}
-                />
-              }
-            />
+          {/* Workflow tabs switch this panel instead of scrolling the whole page. */}
+          <div
+            className={activeStage === 'select' ? 'hidden xl:flex min-w-0 flex-col gap-4 xl:h-full xl:min-h-0 xl:overflow-y-auto xl:overscroll-contain xl:pr-1' : 'flex min-w-0 flex-col gap-4 xl:h-full xl:min-h-0 xl:overflow-y-auto xl:overscroll-contain xl:pr-1'}
+          >
+            {activeStage !== 'generate' && (
+              <PreviewAndControls
+                items={selectedItems}
+                settings={settings}
+                onUpdateSettings={handleUpdateSettings}
+                onApplyPreset={handleApplyPreset}
+                showCustomization={activeStage === 'customize'}
+                childrenAfterPreview={
+                  activeStage === 'select' ? (
+                    <SelectedStackBar
+                      selectedItems={selectedItems}
+                      onMoveTech={handleMoveTech}
+                      onRemoveTech={handleRemoveTech}
+                      onClearStack={handleClearStack}
+                      onRestoreStarterStack={handleRestoreStarterStack}
+                    />
+                  ) : undefined
+                }
+              />
+            )}
 
-            <ExportStudio selectedItems={selectedItems} settings={settings} />
+            {activeStage === 'generate' && (
+              <ExportStudio selectedItems={selectedItems} settings={settings} />
+            )}
           </div>
         </div>
       </main>
 
-      <footer className="border-t border-[#1E2636] bg-[#07090E] py-4 px-4 sm:px-6 lg:px-8 mt-8">
+      <footer className="border-t border-[#1E2636] bg-[#07090E] py-4 px-4 sm:px-6 lg:px-8 mt-8 xl:hidden">
         <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#64748B]">
           <div className="flex items-center gap-3">
             <span className="font-medium text-[#94A3B8]">Tech Stack Studio</span>
