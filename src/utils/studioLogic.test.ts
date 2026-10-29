@@ -14,6 +14,7 @@ import {
   removeTechFromStack,
   toggleTechInStack,
   moveTechInStack,
+  reorderTechInStack,
   filterCatalog,
   sortCatalogItems,
   validateCatalogManifest,
@@ -158,6 +159,31 @@ test('ordering transitions move items left, right, first, and last safely', () =
     'docker',
     'cpp',
   ]);
+});
+
+test('drag reordering moves the source technology to the target position without losing or duplicating IDs', () => {
+  const stack = ['typescript', 'react', 'python', 'googlecloud'];
+
+  assert.deepEqual(reorderTechInStack(stack, 'typescript', 'googlecloud'), [
+    'react',
+    'python',
+    'googlecloud',
+    'typescript',
+  ]);
+  assert.deepEqual(reorderTechInStack(stack, 'googlecloud', 'react'), [
+    'googlecloud',
+    'typescript',
+    'react',
+    'python',
+  ]);
+  assert.deepEqual(reorderTechInStack(stack, 'react', 'react'), stack);
+  assert.deepEqual(reorderTechInStack(stack, 'unknown', 'react'), stack);
+  assert.deepEqual(reorderTechInStack(stack, 'react', 'unknown'), stack);
+});
+
+test('Google Cloud uses a concise display name while retaining canonical GCP lookup', () => {
+  assert.equal(TECH_BY_ID['googlecloud']?.name, 'Google Cloud');
+  assert.equal(TECH_BY_ID.gcp?.id, 'googlecloud');
 });
 
 test('catalog search matches canonical names, subcategories, and community aliases (k8s, pg, ts, gha, rpi)', () => {
