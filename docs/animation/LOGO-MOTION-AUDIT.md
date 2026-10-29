@@ -18,7 +18,7 @@
 
 ## High-risk cases for visual comparison
 
-The generator has **57 custom animation branches**. **20 branches** build or reconstruct the main silhouette rather than reusing `item.svgPath` directly. These are not all proven wrong, but they carry higher fidelity risk and should be compared with their matching `public/icons/source/{id}.svg` at the start, midpoint, end frame, and reduced-motion state:
+The generator has **57 custom animation branches**. **19 branches** build or reconstruct the main silhouette rather than reusing `item.svgPath` directly. These are not all proven wrong, but they carry higher fidelity risk and should be compared with their matching `public/icons/source/{id}.svg` at the start, midpoint, end frame, and reduced-motion state:
 
 - Docker
 - Google Cloud
