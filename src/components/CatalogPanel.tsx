@@ -76,7 +76,7 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
         <div className="flex items-center justify-between gap-2">
           <div>
             <h2 id="catalog-heading" className="text-base font-bold tracking-tight text-[#F1F5F9]">
-              1. Choose technologies
+              Choose technologies
             </h2>
             <p className="text-xs text-[#94A3B8] mt-0.5">
               Select logos to add them to your live animated stack.

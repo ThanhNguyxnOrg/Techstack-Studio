@@ -102,7 +102,7 @@ export const ExportStudio: React.FC<ExportStudioProps> = ({ selectedItems, setti
       <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#1E2636]">
         <div>
           <h2 id="export-heading" className="text-base font-bold text-[#F1F5F9]">
-            3. Export
+            Export
           </h2>
           <p className="text-xs text-[#94A3B8] mt-0.5">{activeFormatMeta.summary}</p>
         </div>

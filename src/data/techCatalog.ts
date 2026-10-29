@@ -9,6 +9,7 @@ import generatedCatalogJson from './generatedCatalog.json';
  */
 export const TECH_CATALOG: TechItem[] = (generatedCatalogJson as TechItem[]).map((item) => ({
   ...item,
+  name: item.id === 'googlecloud' ? 'Google Cloud' : item.name,
   sourceSvgPath: item.sourceSvgPath || `/icons/source/${item.id}.svg`,
   animatedSvgPath: item.animatedSvgPath || `/icons/animated/${item.id}.svg`,
 }));

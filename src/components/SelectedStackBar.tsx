@@ -1,11 +1,12 @@
 import React from 'react';
-import { ChevronLeft, ChevronRight, ChevronsLeft, RotateCcw, Trash2, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ChevronsLeft, GripVertical, RotateCcw, Trash2, X } from 'lucide-react';
 import { TechItem } from '../types/stack';
 import { TechIcon } from './TechIcon';
 
 interface SelectedStackBarProps {
   selectedItems: TechItem[];
   onMoveTech: (techId: string, direction: 'left' | 'right' | 'first' | 'last') => void;
+  onReorderTech: (sourceId: string, targetId: string) => void;
   onRemoveTech: (techId: string) => void;
   onClearStack: () => void;
   onRestoreStarterStack: () => void;
@@ -14,6 +15,7 @@ interface SelectedStackBarProps {
 export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
   selectedItems,
   onMoveTech,
+  onReorderTech,
   onRemoveTech,
   onClearStack,
   onRestoreStarterStack,
@@ -29,13 +31,13 @@ export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
             id="selected-stack-heading"
             className="text-xs font-semibold uppercase tracking-wider text-[#94A3B8] whitespace-nowrap"
           >
-            Selected logos
+            Your stack
           </h2>
           <span className="px-1.5 py-0.5 rounded-md bg-[#38BDF8]/15 text-[#38BDF8] text-[11px] font-semibold tabular-nums shrink-0">
             {selectedItems.length}
           </span>
-          <span className="text-[11px] text-[#64748B] hidden xl:inline truncate">
-            — Reorder or remove
+          <span className="text-[11px] text-[#64748B] hidden sm:inline truncate">
+            Drag to reorder · Remove when needed
           </span>
         </div>
 
@@ -81,8 +83,23 @@ export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
             return (
               <li
                 key={item.id}
-                className="group inline-flex items-center gap-1.5 pl-1.5 pr-1 py-1 rounded-lg bg-[#090B10] border border-[#1E2636] hover:border-[#2E3A52] transition-colors"
+                draggable
+                onDragStart={(event) => {
+                  event.dataTransfer.effectAllowed = 'move';
+                  event.dataTransfer.setData('text/plain', item.id);
+                }}
+                onDragOver={(event) => {
+                  event.preventDefault();
+                  event.dataTransfer.dropEffect = 'move';
+                }}
+                onDrop={(event) => {
+                  event.preventDefault();
+                  const sourceId = event.dataTransfer.getData('text/plain');
+                  if (sourceId && sourceId !== item.id) onReorderTech(sourceId, item.id);
+                }}
+                className="group inline-flex items-center gap-1.5 pl-1.5 pr-1 py-1 rounded-lg bg-[#090B10] border border-[#1E2636] hover:border-[#38BDF8]/70 hover:bg-[#111827] transition-colors cursor-grab active:cursor-grabbing"
               >
+                <GripVertical className="w-3.5 h-3.5 text-[#64748B] shrink-0" aria-hidden="true" />
                 <TechIcon item={item} size={18} theme="dark" animate={false} />
                 <span className="text-[11px] font-medium text-[#E2E8F0] whitespace-nowrap">
                   {item.name}

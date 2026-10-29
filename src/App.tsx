@@ -16,6 +16,7 @@ import { CustomizationSettings, StudioStage } from './types/stack';
 import {
   STORAGE_KEY,
   moveTechInStack,
+  reorderTechInStack,
   parsePersistedState,
   removeTechFromStack,
   resolveSelectedItems,
@@ -75,6 +76,10 @@ export default function App() {
       }
       return next;
     });
+  };
+
+  const handleReorderTech = (sourceId: string, targetId: string) => {
+    setSelectedIds((prev) => reorderTechInStack(prev, sourceId, targetId));
   };
 
   const handleRemoveTech = (techId: string) => {
@@ -168,6 +173,7 @@ export default function App() {
                     <SelectedStackBar
                       selectedItems={selectedItems}
                       onMoveTech={handleMoveTech}
+                      onReorderTech={handleReorderTech}
                       onRemoveTech={handleRemoveTech}
                       onClearStack={handleClearStack}
                       onRestoreStarterStack={handleRestoreStarterStack}

@@ -207,6 +207,28 @@ export function moveTechInStack(
 }
 
 /**
+ * Reorders a selected technology to the drop target's position.
+ * IDs stay canonical and unknown IDs are ignored.
+ */
+export function reorderTechInStack(
+  stack: readonly string[],
+  sourceId: string,
+  targetId: string
+): string[] {
+  const sourceCanonical = resolveCanonicalId(sourceId) ?? sourceId;
+  const targetCanonical = resolveCanonicalId(targetId) ?? targetId;
+  const sourceIndex = stack.findIndex((id) => (resolveCanonicalId(id) ?? id) === sourceCanonical);
+  const targetIndex = stack.findIndex((id) => (resolveCanonicalId(id) ?? id) === targetCanonical);
+
+  if (sourceIndex < 0 || targetIndex < 0 || sourceIndex === targetIndex) return [...stack];
+
+  const next = [...stack];
+  const [source] = next.splice(sourceIndex, 1);
+  next.splice(targetIndex, 0, source);
+  return next;
+}
+
+/**
  * Filters the technology catalog by search query, category, and optional subcategory.
  * Matches canonical names, IDs, roles, categories, subcategories, and community aliases.
  */

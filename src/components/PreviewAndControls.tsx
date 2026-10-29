@@ -254,7 +254,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
             >
               {showCustomization ? (
                 <>
-                  <span className="text-[#64748B]">2.</span> Preview &amp; customize
+                  Preview &amp; customize
                 </>
               ) : (
                 'Live preview'
