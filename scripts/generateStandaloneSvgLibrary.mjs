@@ -519,7 +519,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kSheen}{0%,20%{transform:translateX(-30px);opacity:0}32%{opacity:.8}68%,100%{transform:translateX(30px);opacity:0}}.${kSheen}{animation:${kSheen} 4.8s cubic-bezier(.22,1,.36,1) infinite}`;
     const reduced = `.${kSheen}{animation:none!important;opacity:0!important}`;
     const sourceSvg = buildSourceSvg(item);
-    const sourceBody = sourceSvg.replace(/^<svg[^>]*>/i, '').replace(/<\\/svg>\\s*$/i, '');
+    const sourceBody = sourceSvg.replace(/^<svg[^>]*>/i, '').replace(/<\/svg>\s*$/i, '');
     const body =
       sourceBody +
       `<g clip-path="url(#${cSheen})"><rect class="${kSheen}" x="-5" y="0" width="34" height="24" fill="url(#${gSheen})" transform="skewX(-20)"/></g>`;

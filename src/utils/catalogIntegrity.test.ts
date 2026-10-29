@@ -23,46 +23,15 @@ function readSvg(directory: string, id: string): string {
 }
 
 const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
-  "googlecloud": [
-    "#EA4335",
-    "#4285F4",
-    "#34A853",
-    "#FBBC05"
-  ],
-  "python": [
-    "#387EB8",
-    "#FFE052"
-  ],
-  "typescript": [
-    "#3178c6",
-    "m316.939 407.424"
-  ],
-  "javascript": [
-    "#F7DF1E",
-    "#111622"
-  ],
-  "amazonaws": [
-    "#F3F1EC",
-    "#FF9900"
-  ],
-  "springboot": [
-    "#6DB33F",
-    "#FFFFFF"
-  ],
-  "c": [
-    "#283593",
-    "#5C6BC0",
-    "#FFFFFF"
-  ],
-  "cpp": [
-    "#659ad2",
-    "#00599c",
-    "#004482"
-  ],
-  "csharp": [
-    "#512BD4",
-    "#6D28D9"
-  ]
+  googlecloud: ['#EA4335', '#4285F4', '#34A853', '#FBBC05'],
+  python: ['#387EB8', '#FFE052'],
+  typescript: ['#3178c6', 'm316.939 407.424'],
+  javascript: ['#F7DF1E', '#111622'],
+  amazonaws: ['#F3F1EC', '#FF9900'],
+  springboot: ['#6DB33F', '#FFFFFF'],
+  c: ['#283593', '#5C6BC0', '#FFFFFF'],
+  cpp: ['#659ad2', '#00599c', '#004482'],
+  csharp: ['#512BD4', '#6D28D9'],
 };
 
 function assertSafeSvg(markup: string, id: string): void {
@@ -167,9 +136,15 @@ test('every catalog item exposes complete, self-contained source and animated SV
         animated.includes('@keyframes tss_typescript_shine'),
         'TypeScript motion asset must match the restored a93 effect'
       );
-      assert.ok(animated.includes('translateX(-30px)'), 'TypeScript motion must keep the restored distance');
+      assert.ok(
+        animated.includes('translateX(-30px)'),
+        'TypeScript motion must keep the restored distance'
+      );
     }
-    assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
+    assert.ok(
+      animated.includes('@keyframes '),
+      `${item.id}: animated SVG needs keyframes`
+    );
     assert.ok(
       /prefers-reduced-motion\\s*:\\s*reduce/.test(animated),
       `${item.id}: animated SVG needs reduced-motion support`
