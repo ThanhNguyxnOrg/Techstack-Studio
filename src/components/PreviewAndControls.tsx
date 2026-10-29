@@ -294,7 +294,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
             </div>
           </div>
 
-          <div className="flex items-center gap-1.5 shrink-0">
+          <div className="flex items-center gap-1.5 shrink-0 ml-auto">
             <button
               type="button"
               onClick={() => onUpdateSettings({ animateSvgLogos: !settings.animateSvgLogos })}

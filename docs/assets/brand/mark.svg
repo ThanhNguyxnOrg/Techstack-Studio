@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" role="img" aria-label="Tech Stack Studio layered stack mark">
+  <defs>
+    <linearGradient id="bottomFace" x1="0" y1="70.018" x2="0" y2="117.982" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#67E8F9"/><stop offset=".52" stop-color="#22D3EE"/><stop offset="1" stop-color="#0891B2"/></linearGradient>
+    <linearGradient id="bottomWall" x1="0" y1="79.018" x2="0" y2="126.982" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0E7490"/><stop offset="1" stop-color="#155E75"/></linearGradient>
+    <linearGradient id="midFace" x1="0" y1="38.018" x2="0" y2="85.982" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7DD3FC"/><stop offset=".52" stop-color="#3B82F6"/><stop offset="1" stop-color="#1D4ED8"/></linearGradient>
+    <linearGradient id="midWall" x1="0" y1="47.018" x2="0" y2="94.982" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1D4ED8"/><stop offset="1" stop-color="#172554"/></linearGradient>
+    <linearGradient id="topFace" x1="0" y1="6.018" x2="0" y2="53.982" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#C4B5FD"/><stop offset=".52" stop-color="#9333EA"/><stop offset="1" stop-color="#6D28D9"/></linearGradient>
+    <linearGradient id="topWall" x1="0" y1="15.018" x2="0" y2="62.982" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6D28D9"/><stop offset="1" stop-color="#3B0764"/></linearGradient>
+  </defs>
+  <g id="bottom">
+    <g transform="translate(64 103) scale(1 0.571) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="url(#bottomWall)"/></g>
+    <g transform="translate(64 94) scale(1 0.571) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="url(#bottomFace)" stroke="#CFFAFE" stroke-opacity=".45" stroke-width=".8"/></g>
+  </g>
+  <g id="mid">
+    <g transform="translate(64 71) scale(1 0.571) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="url(#midWall)"/></g>
+    <g transform="translate(64 62) scale(1 0.571) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="url(#midFace)" stroke="#DBEAFE" stroke-opacity=".45" stroke-width=".8"/></g>
+  </g>
+  <g id="top">
+    <g transform="translate(64 39) scale(1 0.571) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="url(#topWall)"/></g>
+    <g transform="translate(64 30) scale(1 0.571) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="url(#topFace)" stroke="#EDE9FE" stroke-opacity=".45" stroke-width=".8"/></g>
+  </g>
+</svg>

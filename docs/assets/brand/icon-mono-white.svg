@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" role="img" aria-label="Tech Stack Studio app icon">
+  <defs>
+    <linearGradient id="iconBg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111B31"/>
+      <stop offset=".55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#070B12"/>
+    </linearGradient>
+    <filter id="blur160" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="160"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" fill="#0B1220"/>
+  
+  <g transform="translate(64 64) scale(6.7)">
+
+  <g transform="translate(64 30) scale(1 0.44) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="#F8FAFC"/></g>
+  <g transform="translate(64 63) scale(1 0.44) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="#F8FAFC"/></g>
+  <g transform="translate(64 96) scale(1 0.44) rotate(45)"><path d="M-19.6985 -29.6985L19.6985 -29.6985A10 10 0 0 1 29.6985 -19.6985L29.6985 19.6985A10 10 0 0 1 19.6985 29.6985L-19.6985 29.6985A10 10 0 0 1 -29.6985 19.6985L-29.6985 -19.6985A10 10 0 0 1 -19.6985 -29.6985Z" fill="#F8FAFC"/></g>
+
+  </g>
+</svg>

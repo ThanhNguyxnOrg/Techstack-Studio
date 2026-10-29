@@ -76,6 +76,32 @@ standalone SVG** that you own and can commit next to your code.
 
 <img src="docs/assets/export.png" width="760" alt="Export panel with animated SVG preview and generated code" />
 
+## Brand assets
+
+The brand kit lives in [`docs/assets/brand`](docs/assets/brand). Every raster icon
+and social card is rendered from the SVG sources, so the mark and wordmark stay
+sharp at any size.
+
+- **Primary mark** — [`mark.svg`](docs/assets/brand/mark.svg) (full color),
+  [`mark-mono-black.svg`](docs/assets/brand/mark-mono-black.svg),
+  [`mark-mono-white.svg`](docs/assets/brand/mark-mono-white.svg) · 128×128 vector
+- **Brand lockup** — [`logo-lockup.svg`](docs/assets/brand/logo-lockup.svg) (mark +
+  outlined Inter wordmark)
+- **App icon** — [`app-icon.svg`](docs/assets/brand/app-icon.svg) →
+  [`app-icon-1024.png`](docs/assets/brand/app-icon-1024.png)
+- **Icon variants** — [full color dark](docs/assets/brand/icon-full-color-dark.svg),
+  [full color light](docs/assets/brand/icon-full-color-light.svg),
+  [mono black](docs/assets/brand/icon-mono-black.svg),
+  [mono white](docs/assets/brand/icon-mono-white.svg) · 1024×1024 SVG + PNG
+- **Social card** — [`github-social.png`](docs/assets/brand/github-social.png) ·
+  1280×640
+- **Open Graph card** — [`og-image.png`](docs/assets/brand/og-image.png) · 1200×630
+- **Favicons & PWA icons** — `favicon.svg`, `favicon.ico` (16/32/48/64),
+  `apple-touch-icon.png` (180), `icon-192.png`, `icon-512.png` in [`public/`](public)
+
+The primary palette is `#6366F1` (indigo), `#8B5CF6` (violet), `#06B6D4` (cyan),
+on a `#0B1220` canvas. The mark keeps the layered purple → blue → teal stack.
+
 ## Quick start
 
 **Requirements:** Node.js 22.12+ and npm 10+.
