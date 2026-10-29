@@ -1,0 +1,27 @@
+name: TypeScript logo regression (temporary)
+
+on:
+  push:
+    branches:
+      - fix/typescript-official-logo-motion
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Run regression and existing tests
+        run: npm test
+      - name: Type-check
+        run: npm run typecheck
+      - name: Production build
+        run: npm run build
