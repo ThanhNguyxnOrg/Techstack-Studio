@@ -252,13 +252,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
               id="live-preview-heading"
               className="text-sm font-bold text-[#F1F5F9] whitespace-nowrap"
             >
-              {showCustomization ? (
-                <>
-                  Preview &amp; customize
-                </>
-              ) : (
-                'Live preview'
-              )}
+{showCustomization ? 'Preview & customize' : 'Live preview'}
             </h2>
             <span className="px-2 py-0.5 rounded-md bg-[#141923] border border-[#1E2636] text-[11px] font-medium text-[#94A3B8] tabular-nums whitespace-nowrap">
               {items.length} {items.length === 1 ? 'logo' : 'logos'}

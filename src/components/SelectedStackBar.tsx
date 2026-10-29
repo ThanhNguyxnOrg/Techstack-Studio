@@ -1,5 +1,13 @@
 import React from 'react';
-import { ChevronLeft, ChevronRight, ChevronsLeft, GripVertical, RotateCcw, Trash2, X } from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  GripVertical,
+  RotateCcw,
+  Trash2,
+  X,
+} from 'lucide-react';
 import { TechItem } from '../types/stack';
 import { TechIcon } from './TechIcon';
 
