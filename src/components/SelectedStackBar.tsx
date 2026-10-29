@@ -72,7 +72,7 @@ export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
       ) : (
         <ul
           aria-label="Selected technologies"
-          className="flex flex-wrap gap-1.5 max-h-[116px] overflow-y-auto pr-1"
+          className="flex flex-wrap gap-1.5 max-h-[140px] overflow-y-auto pr-1"
         >
           {selectedItems.map((item, idx) => {
             const isFirst = idx === 0;

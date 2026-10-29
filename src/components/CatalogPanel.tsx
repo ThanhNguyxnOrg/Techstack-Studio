@@ -69,7 +69,7 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
     <section
       id="catalog-section"
       aria-labelledby="catalog-heading"
-      className="bg-[#0F131B] border border-[#1E2636] rounded-2xl flex flex-col overflow-hidden shadow-sm"
+      className="scroll-mt-20 bg-[#0F131B] border border-[#1E2636] rounded-2xl flex flex-col overflow-hidden shadow-sm"
     >
       {/* Header & Controls */}
       <div className="p-4 sm:p-5 border-b border-[#1E2636] flex flex-col gap-3.5 bg-[#0C1017]">

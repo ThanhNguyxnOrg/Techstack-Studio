@@ -142,8 +142,8 @@ export default function App() {
             />
           </div>
 
-          {/* Right Column: Sticky Live Preview + Active Stack Tray + Customize + Export */}
-          <div className="lg:col-span-6 lg:sticky lg:top-20 space-y-5">
+          {/* Right Column: Live Preview + Customize Dock + Stack Tray + Export */}
+          <div className="lg:col-span-6 space-y-5">
             <PreviewAndControls
               items={selectedItems}
               settings={settings}

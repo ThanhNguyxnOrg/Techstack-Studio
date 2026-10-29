@@ -96,7 +96,7 @@ export const ExportStudio: React.FC<ExportStudioProps> = ({ selectedItems, setti
     <section
       id="export-section"
       aria-labelledby="export-heading"
-      className="rounded-2xl bg-[#0F131B] border border-[#1E2636] p-4 sm:p-5 space-y-4 shadow-sm"
+      className="scroll-mt-20 rounded-2xl bg-[#0F131B] border border-[#1E2636] p-4 sm:p-5 space-y-4 shadow-sm"
     >
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#1E2636]">
