@@ -15,6 +15,11 @@ a mark and would like its artwork corrected, updated, or removed, please
 or contact [@RealThanhNguyxn](https://github.com/RealThanhNguyxn). We will respond
 promptly and honor reasonable removal requests.
 
+The C++ mark in `public/icons/source/cpp.svg` and its animated counterpart use the
+official logo geometry as published in the [devicon](https://github.com/devicons/devicon)
+set (MIT licensed). The geometry is embedded in `scripts/generateStandaloneSvgLibrary.mjs`
+as `CPP_D_*` constants; the animation around it is original work.
+
 ## Code and original artwork
 
 The application code, build scripts, tests, documentation, and the animation

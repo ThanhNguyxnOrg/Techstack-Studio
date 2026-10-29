@@ -285,6 +285,34 @@ const HEX_SHELL_PATH =
 const C_RING_PATH =
   'M12 19.11c-3.92 0-7.105-3.19-7.105-7.11S8.08 4.89 12 4.89c2.533 0 4.88 1.356 6.148 3.553l-3.076 1.78c-.634-1.1-1.805-1.778-3.072-1.778-1.96 0-3.552 1.595-3.552 3.555s1.592 3.555 3.552 3.555c1.267 0 2.438-.678 3.072-1.778l3.076 1.78C16.88 17.754 14.533 19.11 12 19.11z';
 
+// Official C++ logo geometry (128x128 space) from the devicon set (MIT); scaled by .1875 into the 24x24 viewBox.
+const CPP_D_R =
+  'M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0';
+const CPP_D_B =
+  'm68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0';
+const CPP_D_TL =
+  'M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0';
+const CPP_D_C =
+  'M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91z';
+const CPP_D_P1 =
+  'M92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88z';
+const CPP_D_P2 =
+  'M108.646 57.57v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z';
+const CPP_D_WHITE =
+  'M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91zM92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88zm15.766 0v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z';
+
+// Subpaths of the Node-RED and R marks (absolute coordinates) used to animate parts of the logo independently.
+const NR_TOP_D =
+  'M13.276 5.41C12.907 5.41 12.589 5.678 12.589 6.047000000000001V7.989000000000001C12.589 8.357000000000001 12.907 8.625 13.276 8.625H21.168A0.614 0.614 0 0 0 21.803 7.989V6.047A0.614 0.614 0 0 0 21.168 5.411Z';
+const NR_LEFT_D =
+  'M0 10.448V13.715H2.858A0.696 0.696 0 0 0 3.536 13.025V11.083C3.536 10.715 3.226 10.448 2.858 10.448Z';
+const NR_BOTTOM_D =
+  'M21.058 15A0.644 0.644 0 0 0 20.411 15.66V17.602C20.411 17.97 20.689 18.214 21.058 18.214H24V15Z';
+const R_RING_D =
+  'M12 2.746C5.373 2.746 0 6.345000000000001 0 10.783000000000001 0 14.680000000000001 4.144 17.927 9.64 18.663V16.26C6.716000000000001 15.345000000000002 4.715000000000001 13.505000000000003 4.715000000000001 11.383000000000003 4.715000000000001 8.348000000000003 8.799 5.889000000000003 13.835 5.889000000000003 18.873 5.889000000000003 22.592 7.572000000000003 22.592 11.383000000000003 22.592 13.359000000000002 21.593 14.762000000000002 19.93 15.655000000000003 20.02 15.721000000000004 20.104 15.783000000000003 20.188 15.871000000000002 20.357 16.020000000000003 20.438 16.234 20.56 16.415000000000003 22.688 14.965000000000003 24 12.978000000000003 24 10.784000000000002 24 6.344000000000002 18.627 2.746000000000002 12 2.746000000000002Z';
+const R_BODY_D =
+  'M9.889 7.736000000000001V21.252000000000002L13.982 21.250000000000004 13.979999999999999 15.959000000000003H15.079999999999998C15.304999999999998 15.959000000000003 15.400999999999998 16.025000000000002 15.628999999999998 16.209000000000003 15.900999999999998 16.429000000000002 16.343999999999998 17.191000000000003 16.343999999999998 17.191000000000003L18.508 21.254 23.134999999999998 21.252000000000002 20.270999999999997 16.426000000000002S20.185 16.233 20.005999999999997 16.043000000000003A2.22 2.22 0 0 0 19.423999999999996 15.627000000000002C19.001999999999995 15.413000000000002 18.274999999999995 15.193000000000003 18.274999999999995 15.193000000000003S21.852999999999994 14.929000000000004 21.852999999999994 11.367000000000003C21.852999999999994 7.805000000000003 18.108999999999995 7.737000000000003 18.108999999999995 7.737000000000003ZM14.015999999999998 10.666L16.494 10.668000000000001S17.643 10.606000000000002 17.643 11.795000000000002C17.643 12.96 16.494 12.965000000000002 16.494 12.965000000000002H14.016ZM15.769999999999998 16.785C15.275999999999998 16.834 14.757999999999997 16.864 14.229999999999997 16.873V18.68A16.622 16.622 0 0 0 16.599999999999998 18.207L16.128999999999998 17.316000000000003S16.020999999999997 17.133000000000003 15.880999999999998 16.922000000000004C15.841999999999999 16.868000000000006 15.800999999999998 16.824000000000005 15.769999999999998 16.785000000000004Z';
+
 /**
  * Generates the preserved static source SVG for `public/icons/source/{id}.svg`
  */
@@ -1023,6 +1051,318 @@ function buildAnimatedSvg(item) {
       `<g class="${kFace}"><path fill="#FFD21E" stroke="#FEF08A" stroke-width="0.45" d="${d}"/></g>`,
       'Hugging Face #FFD21E smiling mascot with cheerful hand-wave rock and warm highlight',
       'Harmonic mascot rock around (12, 14) with golden contour highlight'
+    );
+  }
+
+  // RUST (the gear keeps its shape; a rust-orange heat beam sweeps once around the cog, clipped to the mark)
+  if (item.id === 'rust') {
+    const kBeam = `tss_${uid}_bm`,
+      idClip = `tss_${uid}_cl`,
+      idGrad = `tss_${uid}_gb`;
+    return wrapSvg(
+      `<clipPath id="${idClip}"><path clip-rule="evenodd" d="${d}"/></clipPath>` +
+        `<linearGradient id="${idGrad}" gradientUnits="userSpaceOnUse" x1="5" y1="0" x2="19" y2="0"><stop offset="0" stop-color="#F74C00" stop-opacity="0"/><stop offset=".7" stop-color="#F74C00" stop-opacity=".55"/><stop offset="1" stop-color="#F74C00" stop-opacity=".95"/></linearGradient>`,
+      `@keyframes ${kBeam}{0%,8%{transform:rotate(0deg);opacity:0}16%{opacity:1}72%{opacity:1}80%,100%{transform:rotate(360deg);opacity:0}}` +
+        `.${kBeam}{transform-origin:12px 12px;opacity:0;animation:${kBeam} ${dur} cubic-bezier(.45,0,.25,1) infinite}`,
+      `.${kBeam}{animation:none!important}`,
+      `<path fill="${primary}" fill-rule="evenodd" d="${d}"/><g clip-path="url(#${idClip})"><path class="${kBeam}" fill="url(#${idGrad})" d="M12 12L5.2-2.5H18.8Z"/></g>`,
+      'Rust cog stays solid while a rust-orange heat beam sweeps once around it, lighting the teeth and the R as it passes',
+      'Rotating gradient wedge (transform rotate 0-360deg) clipped to the logo silhouette'
+    );
+  }
+
+  // GO (letters dash in and settle; the three speed lines stretch out behind them one by one, then flutter)
+  if (item.id === 'go') {
+    const kLet = `tss_${uid}_lt`,
+      kA = `tss_${uid}_la`,
+      kB = `tss_${uid}_lb`,
+      kC = `tss_${uid}_lc`,
+      cLet = `tss_${uid}_xl`,
+      cA = `tss_${uid}_xa`,
+      cB = `tss_${uid}_xb`,
+      cC = `tss_${uid}_xc`;
+    const line = (k, from, to) =>
+      `@keyframes ${k}{0%,${from}%{transform:scaleX(0);opacity:0}${from + 14}%{transform:scaleX(1);opacity:1}${to}%{transform:scaleX(1)}${to + 4}%{transform:scaleX(1.15)}${to + 10}%{transform:scaleX(1)}90%{opacity:1}96%,100%{transform:scaleX(1);opacity:0}}`;
+    return wrapSvg(
+      `<clipPath id="${cLet}"><path d="M6.9-2H28V26H6.3V10.5H6.9Z"/></clipPath>` +
+        `<clipPath id="${cA}"><rect x="-2" y="-2" width="8.9" height="12.5"/></clipPath>` +
+        `<clipPath id="${cB}"><rect x="-2" y="10.5" width="8.3" height="1.25"/></clipPath>` +
+        `<clipPath id="${cC}"><rect x="-2" y="11.75" width="8.3" height="14"/></clipPath>`,
+      `@keyframes ${kLet}{0%,4%{transform:translateX(-4px);opacity:0}20%,90%{transform:translateX(0);opacity:1}96%,100%{transform:translateX(0);opacity:0}}` +
+        line(kA, 12, 52) +
+        line(kB, 16, 56) +
+        line(kC, 20, 60) +
+        `.${kLet}{animation:${kLet} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kA},.${kB},.${kC}{transform-origin:6.2px 12px;animation-duration:${dur};animation-timing-function:cubic-bezier(.22,1,.36,1);animation-iteration-count:infinite}` +
+        `.${kA}{animation-name:${kA}}.${kB}{animation-name:${kB}}.${kC}{animation-name:${kC}}`,
+      `.${kLet},.${kA},.${kB},.${kC}{animation:none!important}`,
+      `<g class="${kLet}"><g clip-path="url(#${cLet})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g class="${kA}"><g clip-path="url(#${cA})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g class="${kB}"><g clip-path="url(#${cB})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g class="${kC}"><g clip-path="url(#${cC})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'Go letters dash in and settle while the three speed lines stretch out behind them one after another, then flutter',
+      'Clip-split layers (letters + 3 line strips): translateX dash-in and right-anchored scaleX stretch with staggered timing'
+    );
+  }
+
+  // REDIS (ping and pong: the mark gives two small bumps and a light ripple spreads outward from the counter of the R, clipped to the mark)
+  if (item.id === 'redis') {
+    const kBump = `tss_${uid}_bp`,
+      kR1 = `tss_${uid}_r1`,
+      kR2 = `tss_${uid}_r2`,
+      idClip = `tss_${uid}_cl`,
+      idGrad = `tss_${uid}_rg`;
+    return wrapSvg(
+      `<clipPath id="${idClip}"><path clip-rule="evenodd" d="${d}"/></clipPath>` +
+        `<radialGradient id="${idGrad}"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".72" stop-color="#fff" stop-opacity="0"/><stop offset=".9" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>`,
+      `@keyframes ${kBump}{0%,6%{transform:scale(1)}10%{transform:scale(1.045)}16%,30%{transform:scale(1)}34%{transform:scale(1.045)}40%,100%{transform:scale(1)}}` +
+        `@keyframes ${kR1}{0%,6%{transform:scale(.4);opacity:0}9%{opacity:1}30%,100%{transform:scale(15);opacity:0}}` +
+        `@keyframes ${kR2}{0%,30%{transform:scale(.4);opacity:0}33%{opacity:1}54%,100%{transform:scale(15);opacity:0}}` +
+        `.${kBump}{transform-origin:12px 12px;animation:${kBump} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
+        `.${kR1},.${kR2}{transform-box:fill-box;transform-origin:center;opacity:0}` +
+        `.${kR1}{animation:${kR1} ${dur} cubic-bezier(.2,.6,.3,1) infinite}.${kR2}{animation:${kR2} ${dur} cubic-bezier(.2,.6,.3,1) infinite}`,
+      `.${kBump},.${kR1},.${kR2}{animation:none!important}`,
+      `<g class="${kBump}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/><g clip-path="url(#${idClip})"><circle class="${kR1}" cx="14.3" cy="8.7" r="1" fill="url(#${idGrad})"/><circle class="${kR2}" cx="14.3" cy="8.7" r="1" fill="url(#${idGrad})"/></g></g>`,
+      'Redis ping and pong: two small bumps, each sending a light ripple outward from the counter of the R across the mark',
+      'Overshoot scale bump + radial-gradient ripple discs scaled 0.4 to 15 and clipped to the logo silhouette'
+    );
+  }
+
+  // LINUX (Tux waddles: four alternating tilts around the feet with a small hop on each step, then rests)
+  if (item.id === 'linux') {
+    const kWaddle = `tss_${uid}_wd`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kWaddle}{0%,8%{transform:rotate(0deg) translateY(0)}14%{transform:rotate(-4deg) translateY(-.35px)}22%{transform:rotate(0deg) translateY(0)}30%{transform:rotate(4deg) translateY(-.35px)}38%{transform:rotate(0deg) translateY(0)}46%{transform:rotate(-4deg) translateY(-.35px)}54%{transform:rotate(0deg) translateY(0)}62%{transform:rotate(4deg) translateY(-.35px)}70%,100%{transform:rotate(0deg) translateY(0)}}` +
+        `.${kWaddle}{transform-origin:12px 22.2px;animation:${kWaddle} ${dur} ease-in-out infinite}`,
+      `.${kWaddle}{animation:none!important}`,
+      `<path class="${kWaddle}" fill="${primary}" fill-rule="evenodd" d="${d}"/>`,
+      'Tux waddles in place: four alternating tilts around the feet, each with a small hop, then a rest',
+      'transform rotate + translateY keyframes with the pivot at the feet'
+    );
+  }
+
+  // ARDUINO (LED blink: plus and minus take turns dimming; a pulse of current runs around the infinity loop)
+  if (item.id === 'arduino') {
+    const kMinus = `tss_${uid}_mn`,
+      kPlus = `tss_${uid}_pl`,
+      kPulse = `tss_${uid}_pu`,
+      cBody = `tss_${uid}_cb`,
+      cMinus = `tss_${uid}_cm`,
+      cPlus = `tss_${uid}_cp`,
+      cLogo = `tss_${uid}_cl`;
+    const LOOP =
+      'M12 12C10.4 9.6 8.6 7.2 6.2 7.2C3.3 7.2 1 9.3 1 12C1 14.7 3.3 16.8 6.2 16.8C8.6 16.8 10.4 14.4 12 12C13.6 9.6 15.4 7.2 17.8 7.2C20.7 7.2 23 9.3 23 12C23 14.7 20.7 16.8 17.8 16.8C15.4 16.8 13.6 14.4 12 12Z';
+    return wrapSvg(
+      `<clipPath id="${cBody}"><path clip-rule="evenodd" d="M-1-1H25V25H-1ZM4 11.1H8.1V12.8H4ZM15.9 9.9H20V14H15.9Z"/></clipPath>` +
+        `<clipPath id="${cMinus}"><rect x="4" y="11.1" width="4.1" height="1.7"/></clipPath>` +
+        `<clipPath id="${cPlus}"><rect x="15.9" y="9.9" width="4.1" height="4.1"/></clipPath>` +
+        `<clipPath id="${cLogo}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
+      `@keyframes ${kPlus}{0%,10%{opacity:1}13%,19%{opacity:.18}22%,46%{opacity:1}49%,55%{opacity:.18}58%,100%{opacity:1}}` +
+        `@keyframes ${kMinus}{0%,22%{opacity:1}25%,31%{opacity:.18}34%,58%{opacity:1}61%,67%{opacity:.18}70%,100%{opacity:1}}` +
+        `@keyframes ${kPulse}{0%,6%{stroke-dashoffset:10;opacity:0}10%{opacity:1}64%{opacity:1}70%,100%{stroke-dashoffset:-100;opacity:0}}` +
+        `.${kPlus}{animation:${kPlus} ${dur} ease-in-out infinite}.${kMinus}{animation:${kMinus} ${dur} ease-in-out infinite}` +
+        `.${kPulse}{fill:none;stroke:#E6FFFA;stroke-opacity:.72;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:9 100;stroke-dashoffset:10;opacity:0;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kPlus},.${kMinus},.${kPulse}{animation:none!important}`,
+      `<g clip-path="url(#${cBody})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<g class="${kMinus}"><g clip-path="url(#${cMinus})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g class="${kPlus}"><g clip-path="url(#${cPlus})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g clip-path="url(#${cLogo})"><path class="${kPulse}" pathLength="100" d="${LOOP}"/></g>`,
+      'Arduino Blink: the plus and minus take turns dimming like an LED while a pulse of current runs around the infinity loop',
+      'Clip-split plus/minus opacity blink + pathLength dash pulse along the loop centerline clipped to the logo'
+    );
+  }
+
+  // ESPRESSIF (a signal spreads out from the chip dot and reveals the arcs by distance, then two light waves radiate)
+  if (item.id === 'espressif') {
+    const kAll = `tss_${uid}_al`,
+      kRev = `tss_${uid}_rv`,
+      kW1 = `tss_${uid}_w1`,
+      kW2 = `tss_${uid}_w2`,
+      mRev = `tss_${uid}_mr`,
+      gRev = `tss_${uid}_gv`,
+      gWave = `tss_${uid}_gw`,
+      cLogo = `tss_${uid}_cl`;
+    return wrapSvg(
+      `<radialGradient id="${gRev}"><stop offset="0" stop-color="#fff"/><stop offset=".78" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>` +
+        `<mask id="${mRev}" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><circle class="${kRev}" cx="6.2" cy="17.8" r="1" fill="url(#${gRev})"/></mask>` +
+        `<radialGradient id="${gWave}"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".8" stop-color="#fff" stop-opacity="0"/><stop offset=".93" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>` +
+        `<clipPath id="${cLogo}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
+      `@keyframes ${kAll}{0%,90%{opacity:1}96%,100%{opacity:0}}` +
+        `@keyframes ${kRev}{0%{transform:scale(.2)}36%,100%{transform:scale(30)}}` +
+        `@keyframes ${kW1}{0%,44%{transform:scale(.3);opacity:0}47%{opacity:1}68%,100%{transform:scale(14);opacity:0}}` +
+        `@keyframes ${kW2}{0%,56%{transform:scale(.3);opacity:0}59%{opacity:1}80%,100%{transform:scale(14);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRev}{transform-box:fill-box;transform-origin:center;transform:scale(30);animation:${kRev} ${dur} cubic-bezier(.3,.6,.3,1) infinite}` +
+        `.${kW1},.${kW2}{transform-box:fill-box;transform-origin:center;opacity:0}` +
+        `.${kW1}{animation:${kW1} ${dur} cubic-bezier(.2,.6,.3,1) infinite}.${kW2}{animation:${kW2} ${dur} cubic-bezier(.2,.6,.3,1) infinite}`,
+      `.${kAll},.${kRev},.${kW1},.${kW2}{animation:none!important}`,
+      `<g class="${kAll}"><g mask="url(#${mRev})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<g clip-path="url(#${cLogo})"><circle class="${kW1}" cx="6.2" cy="17.8" r="1" fill="url(#${gWave})"/><circle class="${kW2}" cx="6.2" cy="17.8" r="1" fill="url(#${gWave})"/></g></g>`,
+      'Espressif signal: the mark spreads outward from the chip dot so the arcs appear by distance, then two light waves radiate across it',
+      'Soft radial mask reveal scaled from the dot + two radial-gradient wave discs clipped to the logo'
+    );
+  }
+
+  // MQTT (publish then subscribe: the four radio bands light up one after another outward, then travel back inward)
+  if (item.id === 'mqtt') {
+    const ring = (R, r) =>
+      `M${R} 24A${R} ${R} 0 1 0 ${-R} 24A${R} ${R} 0 1 0 ${R} 24Z` +
+      (r ? `M${r} 24A${r} ${r} 0 1 0 ${-r} 24A${r} ${r} 0 1 0 ${r} 24Z` : '');
+    const kA = `tss_${uid}_ba`,
+      kB = `tss_${uid}_bb`,
+      kC = `tss_${uid}_bc`,
+      kD = `tss_${uid}_bd`;
+    const pulse = (k, a, b) =>
+      `@keyframes ${k}{0%,${a}%{opacity:1}${a + 4}%{opacity:.22}${a + 10}%,${b}%{opacity:1}${b + 4}%{opacity:.22}${b + 10}%,100%{opacity:1}}.${k}{animation:${k} ${dur} ease-in-out infinite}`;
+    const layer = (k, c) =>
+      `<g class="${k}"><g clip-path="url(#${c})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`;
+    return wrapSvg(
+      `<clipPath id="${kA}c"><path clip-rule="evenodd" d="${ring(12.3, 0)}"/></clipPath>` +
+        `<clipPath id="${kB}c"><path clip-rule="evenodd" d="${ring(19.9, 12.3)}"/></clipPath>` +
+        `<clipPath id="${kC}c"><path clip-rule="evenodd" d="${ring(27.5, 19.9)}"/></clipPath>` +
+        `<clipPath id="${kD}c"><path clip-rule="evenodd" d="${ring(48, 27.5)}"/></clipPath>`,
+      pulse(kA, 8, 78) + pulse(kB, 14, 70) + pulse(kC, 20, 62) + pulse(kD, 26, 54),
+      `.${kA},.${kB},.${kC},.${kD}{animation:none!important}`,
+      layer(kA, `${kA}c`) + layer(kB, `${kB}c`) + layer(kC, `${kC}c`) + layer(kD, `${kD}c`),
+      'MQTT publish and subscribe: the four radio bands light up one after another outward from the corner, then travel back inward',
+      'Annulus clip-split bands with staggered opacity pulses, outward pass then inward pass'
+    );
+  }
+
+  // NODE-RED (a message packet runs along each wire; the nodes light up when it arrives)
+  if (item.id === 'nodered') {
+    const kUp = `tss_${uid}_up`,
+      kLo = `tss_${uid}_lo`,
+      kN1 = `tss_${uid}_n1`,
+      kN2 = `tss_${uid}_n2`,
+      kN3 = `tss_${uid}_n3`;
+    const travel = (k, a, b) =>
+      `@keyframes ${k}{0%,${a}%{stroke-dashoffset:8;opacity:0}${a + 2}%{opacity:1}${b - 2}%{opacity:1}${b}%,100%{stroke-dashoffset:-100;opacity:0}}`;
+    const flash = (k, a) =>
+      `@keyframes ${k}{0%,${a}%{opacity:0}${a + 5}%{opacity:.85}${a + 16}%,100%{opacity:0}}.${k}{opacity:0;animation:${k} ${dur} ease-out infinite}`;
+    return wrapSvg(
+      '',
+      travel(kUp, 12, 40) +
+        travel(kLo, 18, 52) +
+        `.${kUp},.${kLo}{fill:none;stroke:#FFF1F1;stroke-width:.9;stroke-linecap:round;stroke-dasharray:8 100;stroke-dashoffset:8;opacity:0}` +
+        `.${kUp}{animation:${kUp} ${dur} ease-in-out infinite}.${kLo}{animation:${kLo} ${dur} ease-in-out infinite}` +
+        flash(kN1, 4) +
+        flash(kN2, 38) +
+        flash(kN3, 50),
+      `.${kUp},.${kLo},.${kN1},.${kN2},.${kN3}{animation:none!important}`,
+      `<path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kN1}" fill="#FFF1F1" d="${NR_LEFT_D}"/><path class="${kN2}" fill="#FFF1F1" d="${NR_TOP_D}"/><path class="${kN3}" fill="#FFF1F1" d="${NR_BOTTOM_D}"/>` +
+        `<path class="${kUp}" pathLength="100" d="M4.9 11.95C6.2 11.9 7.3 10.2 8.1 9.1C8.9 8 9.8 6.6 11.7 6.6"/>` +
+        `<path class="${kLo}" pathLength="100" d="M4.9 11.95H7C10.5 11.95 12 16 16.5 16.1L19 16.5"/>`,
+      'Node-RED flow: a message packet runs along each wire and the receiving nodes light up as it arrives',
+      'pathLength dash packets along the two wires + node interior flashes timed to the arrival'
+    );
+  }
+
+  // PLATFORMIO (the alien comes alive: antennae wiggle in turn while the pupils look left, then right)
+  if (item.id === 'platformio') {
+    const kAL = `tss_${uid}_al`,
+      kAR = `tss_${uid}_ar`,
+      kPu = `tss_${uid}_pu`,
+      cBody = `tss_${uid}_cb`,
+      cAL = `tss_${uid}_ca`,
+      cAR = `tss_${uid}_cr`,
+      cPL = `tss_${uid}_pl`,
+      cPR = `tss_${uid}_pr`;
+    const circle = (cx, cy, r) =>
+      `M${cx + r} ${cy}A${r} ${r} 0 1 0 ${cx - r} ${cy}A${r} ${r} 0 1 0 ${cx + r} ${cy}Z`;
+    const layer = (cls, clip) =>
+      `<g class="${cls}"><g clip-path="url(#${clip})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`;
+    return wrapSvg(
+      `<clipPath id="${cBody}"><path clip-rule="evenodd" d="M-1-1H25V25H-1ZM5.5 -1H10V4H5.5ZM14 -1H18.5V4H14Z${circle(7.26, 13.52, 1.6)}${circle(16.96, 13.52, 1.6)}"/></clipPath>` +
+        `<clipPath id="${cAL}"><rect x="5.5" y="-1" width="4.5" height="5"/></clipPath>` +
+        `<clipPath id="${cAR}"><rect x="14" y="-1" width="4.5" height="5"/></clipPath>` +
+        `<clipPath id="${cPL}"><path d="${circle(7.26, 13.52, 1.6)}"/></clipPath>` +
+        `<clipPath id="${cPR}"><path d="${circle(16.96, 13.52, 1.6)}"/></clipPath>`,
+      `@keyframes ${kAL}{0%,14%{transform:rotate(0deg)}22%{transform:rotate(-13deg)}34%{transform:rotate(11deg)}46%{transform:rotate(-8deg)}58%{transform:rotate(5deg)}68%,100%{transform:rotate(0deg)}}` +
+        `@keyframes ${kAR}{0%,14%{transform:rotate(0deg)}22%{transform:rotate(13deg)}34%{transform:rotate(-11deg)}46%{transform:rotate(8deg)}58%{transform:rotate(-5deg)}68%,100%{transform:rotate(0deg)}}` +
+        `@keyframes ${kPu}{0%,10%{transform:translateX(0)}22%,34%{transform:translateX(-.8px)}46%,58%{transform:translateX(.8px)}70%,100%{transform:translateX(0)}}` +
+        `.${kAL}{transform-origin:8.5px 4px;animation:${kAL} ${dur} ease-in-out infinite}` +
+        `.${kAR}{transform-origin:15.5px 4px;animation:${kAR} ${dur} ease-in-out infinite}` +
+        `.${kPu}{animation:${kPu} ${dur} ease-in-out infinite}`,
+      `.${kAL},.${kAR},.${kPu}{animation:none!important}`,
+      `<g clip-path="url(#${cBody})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        layer(kAL, cAL) +
+        layer(kAR, cAR) +
+        `<g class="${kPu}">${layer('', cPL)}${layer('', cPR)}</g>`,
+      'PlatformIO alien comes alive: the antennae wiggle in turn while the pupils glance left and then right',
+      'Clip-split layers: antenna rotate about their bases + synchronized pupil translateX'
+    );
+  }
+
+  // R (a comet orbits the ring once, clipped to the ring only; the R flashes when the lap completes, like a finished run)
+  if (item.id === 'r') {
+    const kComet = `tss_${uid}_co`,
+      kGlow = `tss_${uid}_gl`,
+      kFlash = `tss_${uid}_fl`,
+      cRing = `tss_${uid}_cr`;
+    const ORBIT = 'M2.4 11.3A9.6 6.9 0 0 1 21.6 11.3A9.6 6.9 0 0 1 2.4 11.3Z';
+    return wrapSvg(
+      `<clipPath id="${cRing}"><path clip-rule="evenodd" d="${R_RING_D}"/></clipPath>`,
+      `@keyframes ${kComet}{0%,10%{stroke-dashoffset:10;opacity:0}14%{opacity:1}72%{opacity:1}80%,100%{stroke-dashoffset:-100;opacity:0}}` +
+        `@keyframes ${kGlow}{0%,10%{stroke-dashoffset:22;opacity:0}14%{opacity:.4}72%{opacity:.4}80%,100%{stroke-dashoffset:-100;opacity:0}}` +
+        `@keyframes ${kFlash}{0%,78%{opacity:0}84%{opacity:.7}96%,100%{opacity:0}}` +
+        `.${kComet},.${kGlow}{fill:none;stroke-linecap:round;opacity:0}` +
+        `.${kComet}{stroke:#EAF4FF;stroke-width:2;stroke-dasharray:10 100;stroke-dashoffset:10;animation:${kComet} ${dur} cubic-bezier(.45,0,.3,1) infinite}` +
+        `.${kGlow}{stroke:#BFE0FF;stroke-width:3.8;stroke-dasharray:22 100;stroke-dashoffset:22;animation:${kGlow} ${dur} cubic-bezier(.45,0,.3,1) infinite}` +
+        `.${kFlash}{opacity:0;animation:${kFlash} ${dur} ease-out infinite}`,
+      `.${kComet},.${kGlow},.${kFlash}{animation:none!important}`,
+      `<path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<g clip-path="url(#${cRing})"><path class="${kGlow}" pathLength="100" d="${ORBIT}"/><path class="${kComet}" pathLength="100" d="${ORBIT}"/></g>` +
+        `<path class="${kFlash}" fill="#DCEBFF" fill-rule="evenodd" d="${R_BODY_D}"/>`,
+      'R language: a comet orbits the ring once without touching the letter, then the R flashes like a finished run',
+      'Ring-only clip + pathLength comet dashes on the ellipse centerline + letter flash on completion'
+    );
+  }
+
+  // MONGODB (the leaf grows from its stem, sways in a breeze, and a soft light climbs along it)
+  if (item.id === 'mongodb') {
+    const kLeaf = `tss_${uid}_lf`,
+      kSheen = `tss_${uid}_sh`,
+      cLogo = `tss_${uid}_cl`,
+      gSheen = `tss_${uid}_gs`;
+    return wrapSvg(
+      `<clipPath id="${cLogo}"><path clip-rule="evenodd" d="${d}"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kLeaf}{0%,2%{transform:scale(.15) rotate(0deg);opacity:0}16%{opacity:1}24%{transform:scale(1.05) rotate(0deg)}30%{transform:scale(1) rotate(0deg)}38%{transform:scale(1) rotate(-2.6deg)}50%{transform:scale(1) rotate(2.2deg)}62%{transform:scale(1) rotate(-1.6deg)}72%{transform:scale(1) rotate(0deg)}90%{opacity:1}96%,100%{transform:scale(1) rotate(0deg);opacity:0}}` +
+        `@keyframes ${kSheen}{0%,32%{opacity:0;transform:translateY(28px)}38%{opacity:1}58%,100%{opacity:0;transform:translateY(-6px)}}` +
+        `.${kLeaf}{transform-origin:12px 23.2px;animation:${kLeaf} ${dur} cubic-bezier(.34,1.3,.64,1) infinite}` +
+        `.${kSheen}{fill:url(#${gSheen});opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kLeaf},.${kSheen}{animation:none!important}`,
+      `<g class="${kLeaf}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/><g clip-path="url(#${cLogo})"><rect class="${kSheen}" x="0" y="0" width="24" height="6"/></g></g>`,
+      'MongoDB leaf: it grows from the stem with a soft overshoot, sways in a breeze, and a light climbs along the leaf',
+      'Scale-in from the stem with overshoot + rotate sway about the stem + clipped vertical sheen sweep'
+    );
+  }
+
+  // HTML5 (the page renders from top to bottom: a scan line sweeps down and the shield brightens behind it)
+  if (item.id === 'html5') {
+    const kAll = `tss_${uid}_al`,
+      kRev = `tss_${uid}_rv`,
+      kScan = `tss_${uid}_sc`,
+      mRev = `tss_${uid}_mr`,
+      cLogo = `tss_${uid}_cl`;
+    return wrapSvg(
+      `<mask id="${mRev}" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect class="${kRev}" x="-1" y="-1" width="26" height="26" fill="#fff"/></mask>` +
+        `<clipPath id="${cLogo}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
+      `@keyframes ${kAll}{0%,90%{opacity:1}96%,100%{opacity:0}}` +
+        `@keyframes ${kRev}{0%,8%{transform:scaleY(0)}52%,100%{transform:scaleY(1)}}` +
+        `@keyframes ${kScan}{0%,8%{transform:translateY(-1px);opacity:0}10%{opacity:1}50%{opacity:1}54%,100%{transform:translateY(25px);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRev}{transform-origin:12px -1px;animation:${kRev} ${dur} cubic-bezier(.5,0,.5,1) infinite}` +
+        `.${kScan}{opacity:0;animation:${kScan} ${dur} cubic-bezier(.5,0,.5,1) infinite}`,
+      `.${kAll},.${kRev},.${kScan}{animation:none!important}.${kScan}{opacity:0!important}`,
+      `<g class="${kAll}"><path fill="${primary}" fill-opacity=".32" fill-rule="evenodd" d="${d}"/>` +
+        `<g mask="url(#${mRev})"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<g clip-path="url(#${cLogo})"><rect class="${kScan}" x="-1" y="-.6" width="26" height="1.2" fill="#FFF3E0"/></g></g>`,
+      'HTML5 renders like a page loading: a scan line sweeps down the shield and the mark brightens behind it',
+      'Animated mask scaleY reveal from the top + synchronized scan-line translateY clipped to the logo'
     );
   }
 

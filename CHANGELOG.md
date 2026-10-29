@@ -6,6 +6,28 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- C++: the static source now uses the official logo geometry, and the animated
+  version was rebuilt around it (line-art assembly, facets lock in, the C sweeps
+  around, the two `+` signs pop and tick like an increment, light sheen).
+- TypeScript: new choreography on the official badge (rim trace, badge fill, T and S
+  draw as outlines then fill, light sheen).
+- Rust, Go, Redis and Linux moved from a generic motion family to hand-tuned
+  choreography: a rust-orange heat beam sweeping around the cog (Rust), letters
+  dashing in with three speed lines stretching behind them (Go), a ping/pong ripple
+  from the counter of the R (Redis), and a waddle around the feet (Linux).
+- Arduino, Espressif, MQTT, Node-RED, PlatformIO, R, MongoDB and HTML5 also moved to
+  hand-tuned choreography: LED-style blink plus a current pulse around the loop
+  (Arduino), a signal spreading from the chip dot (Espressif), publish/subscribe
+  bands lighting outward then inward (MQTT), packets running along wires and lighting
+  the nodes (Node-RED), antennae wiggling while the pupils look around (PlatformIO),
+  a comet orbiting the ring with a flash on the R (R), a leaf growing and swaying
+  (MongoDB), and a scan line rendering the shield (HTML5).
+- The 12 newly hand-tuned animations use the 3.6 s loop, scoped ids, and the
+  `prefers-reduced-motion` fallback. C++ and TypeScript retain their dedicated 8 s
+  and 6 s choreography.
+
 ## [1.0.0] - 2026-10-28
 
 ### Added
