@@ -300,10 +300,7 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#387EB8" d="M11.9 2C6.8 2 7.1 4.2 7.1 4.2v2.3h4.9v.7H5.2S2 6.8 2 11.9c0 5.1 2.8 4.9 2.8 4.9h1.7v-2.4s-.1-2.8 2.8-2.8h4.8s2.7 0 2.7-2.6V4.6S17.2 2 11.9 2zm-2.7 1.5c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z"/><path fill="#FFE052" d="M12.1 22c5.1 0 4.8-2.2 4.8-2.2v-2.3H12v-.7h6.8S22 17.2 22 12.1c0-5.1-2.8-4.9-2.8-4.9h-1.7v2.4s.1 2.8-2.8 2.8H9.9s-2.7 0-2.7 2.6v4.4S6.8 22 12.1 22zm2.7-1.5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z"/></svg>`;
   }
   if (item.id === 'typescript') {
-    const TS_T_PATH = 'M3.375 9.938h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z';
-    const TS_S_PATH =
-      'M18.488 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201z';
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><rect x="0" y="0" width="24" height="24" rx="1.5" fill="#3178C6"/><path fill="#FFFFFF" d="${TS_T_PATH}"/><path fill="#FFFFFF" d="${TS_S_PATH}"/></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="${label}"><rect x="20" y="20" width="160" height="160" rx="14" fill="#3178C6"/><path fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" d="M 88 118 H 128 M 108 118 V 166"/><path fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 0)" d="M 164 124 C 158 118 144 116 140 124 C 136 134 148 138 154 142 C 162 148 160 162 150 164 C 144 166 136 164 132 158"/></svg>`;
   }
   if (item.id === 'javascript') {
     const JS_J_PATH =
@@ -479,21 +476,24 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // 8. TYPESCRIPT (100% Solid #3178C6 Official Badge + Direct T & S Vector Paths + Staggered Contour Trace — zero mask/rectangle artifacts!)
+  // 8. TYPESCRIPT (6s progressive outline trace, fill expansion, T & S letter stroke drawing, and specular shine sweep across the TypeScript badge)
   if (item.id === 'typescript') {
-    const kT = `tss_${uid}_kt`,
-      kS = `tss_${uid}_ks`,
-      kRim = `tss_${uid}_rm`;
-    const TS_T_PATH = 'M3.375 9.938h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z';
-    const TS_S_PATH =
-      'M18.488 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201z';
+    const defs = `<linearGradient id="tss_${uid}_g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="tss_${uid}_clip"><rect x="20" y="20" width="160" height="160" rx="14"/></clipPath>`;
+
+    const style = `.tss_${uid}_float{animation:tss_${uid}_float 3s ease-in-out infinite;transform-origin:100px 100px}@keyframes tss_${uid}_float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}.tss_${uid}_outline{fill:none;stroke:#3178C6;stroke-width:4;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:tss_${uid}_outline 6s ease-in-out infinite}@keyframes tss_${uid}_outline{0%{stroke-dashoffset:1;opacity:1}22%{stroke-dashoffset:0;opacity:1}85%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.tss_${uid}_fill{fill:#3178C6;opacity:0;transform-origin:100px 100px;animation:tss_${uid}_fill 6s ease-out infinite}@keyframes tss_${uid}_fill{0%,18%{opacity:0;transform:scale(0.92)}34%{opacity:1;transform:scale(1)}85%{opacity:1;transform:scale(1)}95%,100%{opacity:0;transform:scale(1)}}.tss_${uid}_letter{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}.tss_${uid}_t{animation:tss_${uid}_draw 6s ease-in-out infinite}.tss_${uid}_s{animation:tss_${uid}_draw 6s ease-in-out infinite;animation-delay:0.35s}@keyframes tss_${uid}_draw{0%,34%{stroke-dashoffset:1;opacity:1}52%{stroke-dashoffset:0;opacity:1}85%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.tss_${uid}_shine{fill:url(#tss_${uid}_g);opacity:0;animation:tss_${uid}_shine 6s ease-in-out infinite}@keyframes tss_${uid}_shine{0%,56%{transform:translateX(-120px);opacity:0}62%{opacity:1}76%{transform:translateX(120px);opacity:0}100%{transform:translateX(120px);opacity:0}}`;
+
+    const reducedMotionCss = `.tss_${uid}_float,.tss_${uid}_outline,.tss_${uid}_fill,.tss_${uid}_letter,.tss_${uid}_t,.tss_${uid}_s,.tss_${uid}_shine{animation:none!important;transform:none!important;opacity:1!important}.tss_${uid}_outline,.tss_${uid}_letter{stroke-dashoffset:0!important}.tss_${uid}_fill{opacity:1!important}.tss_${uid}_shine{opacity:0!important}`;
+
+    const body = `<g class="tss_${uid}_float"><rect class="tss_${uid}_fill" x="20" y="20" width="160" height="160" rx="14"/><rect class="tss_${uid}_outline" x="20" y="20" width="160" height="160" rx="14" pathLength="1"/><path class="tss_${uid}_letter tss_${uid}_t" pathLength="1" d="M 88 118 H 128 M 108 118 V 166"/><path class="tss_${uid}_letter tss_${uid}_s" pathLength="1" transform="translate(4 0)" d="M 164 124 C 158 118 144 116 140 124 C 136 134 148 138 154 142 C 162 148 160 162 150 164 C 144 166 136 164 132 158"/><g clip-path="url(#tss_${uid}_clip)"><rect class="tss_${uid}_shine" x="70" y="10" width="60" height="180" transform="skewX(-20)"/></g></g>`;
+
     return wrapSvg(
-      '',
-      `@keyframes ${kT}{0%{stroke-dashoffset:60;transform:translateY(0.8px)}28%,85%{stroke-dashoffset:0;transform:translateY(0)}100%{stroke-dashoffset:-60;transform:translateY(0.8px)}}@keyframes ${kS}{0%,10%{stroke-dashoffset:70;transform:translateY(0.8px)}36%,85%{stroke-dashoffset:0;transform:translateY(0)}100%{stroke-dashoffset:-70;transform:translateY(0.8px)}}@keyframes ${kRim}{0%{stroke-dashoffset:88}40%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-88}}.${kT}{stroke-dasharray:60;transform-origin:8px 15.8px;animation:${kT} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kS}{stroke-dasharray:70;transform-origin:17.8px 15.8px;animation:${kS} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kRim}{stroke-dasharray:88;animation:${kRim} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}`,
-      `.${kT},.${kS},.${kRim}{animation:none!important;transform:none!important;stroke-dashoffset:0!important}`,
-      `<rect x="0" y="0" width="24" height="24" rx="1.5" fill="#3178C6"/><path class="${kT}" pathLength="60" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="0.45" stroke-linejoin="round" d="${TS_T_PATH}"/><path class="${kS}" pathLength="70" fill="#FFFFFF" stroke="#E0F2FE" stroke-width="0.45" stroke-linejoin="round" d="${TS_S_PATH}"/><rect class="${kRim}" pathLength="88" x="0.4" y="0.4" width="23.2" height="23.2" rx="1.5" fill="none" stroke="#93C5FD" stroke-width="0.65"/>`,
-      'Solid #3178C6 TypeScript badge with standalone pure-white T and S vector paths and perimeter trace',
-      'Direct T and S subpath decomposition + staggered contour trace over solid #3178C6 badge'
+      defs,
+      style,
+      reducedMotionCss,
+      body,
+      '6s progressive outline trace, fill expansion, T & S letter stroke drawing, and specular shine sweep across the TypeScript badge',
+      'Multi-stage synchronized keyframe choreography with 200x200 geometric precision',
+      '0 0 200 200'
     );
   }
 
@@ -1230,7 +1230,9 @@ for (const item of catalog) {
   const hasKeyframes = animSvg.includes('@keyframes ');
   const hasReducedMotion = animSvg.includes('prefers-reduced-motion: reduce');
   const hasViewBox =
-    animSvg.includes('viewBox="0 0 24 24"') || animSvg.includes('viewBox="0 0 128 128"');
+    animSvg.includes('viewBox="0 0 24 24"') ||
+    animSvg.includes('viewBox="0 0 128 128"') ||
+    animSvg.includes('viewBox="0 0 200 200"');
   const isValid = hasOpenCloseSvg && hasKeyframes && hasReducedMotion && hasViewBox;
   if (isValid) xmlValidCount++;
 

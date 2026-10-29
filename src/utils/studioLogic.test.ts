@@ -104,8 +104,8 @@ test('TypeScript and JavaScript standalone SVGs use direct T, J, and S vector pa
     speedMultiplier: 1,
     showPlate: false,
   });
-  assert.ok(tsSvg.includes('M3.375 9.938'), 'Expected TypeScript SVG to include standalone T path');
-  assert.ok(tsSvg.includes('M18.488 9.75'), 'Expected TypeScript SVG to include standalone S path');
+  assert.ok(tsSvg.includes('M 88 118'), 'Expected TypeScript SVG to include standalone T path');
+  assert.ok(tsSvg.includes('M 164 124'), 'Expected TypeScript SVG to include standalone S path');
   assert.ok(!tsSvg.includes('<mask'), 'Expected no mask rectangle bleed on TypeScript SVG');
   assert.ok(!tsSvg.includes('#131822'), 'Expected no inner plate rect when showPlate is false');
 });

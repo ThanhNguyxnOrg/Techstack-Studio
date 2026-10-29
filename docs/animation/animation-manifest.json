@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T05:59:03.691Z",
+  "generatedAt": "2026-10-29T06:02:34.394Z",
   "totalCatalogEntries": 554,
   "sourceSvgFilesCreated": 554,
   "animatedSvgFilesCreated": 554,
@@ -14,8 +14,8 @@
       "tier": "A",
       "sourceAssetPath": "/icons/source/typescript.svg",
       "animatedSvgPath": "/icons/animated/typescript.svg",
-      "animationConcept": "Solid #3178C6 TypeScript badge with standalone pure-white T and S vector paths and perimeter trace",
-      "animationTechnique": "Direct T and S subpath decomposition + staggered contour trace over solid #3178C6 badge",
+      "animationConcept": "6s progressive outline trace, fill expansion, T & S letter stroke drawing, and specular shine sweep across the TypeScript badge",
+      "animationTechnique": "Multi-stage synchronized keyframe choreography with 200x200 geometric precision",
       "fileExists": true,
       "xmlValid": true,
       "hasEmbeddedKeyframes": true,
