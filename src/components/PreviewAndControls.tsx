@@ -445,7 +445,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                   Changes apply instantly
                 </span>
               </div>
-  
+
               {/* Presets */}
               <div className="flex flex-wrap items-center gap-1.5">
                 <span className="text-[11px] font-medium text-[#64748B] mr-0.5">Presets</span>
@@ -470,7 +470,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                   );
                 })}
               </div>
-  
+
               {/* Frame + alignment */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
@@ -493,7 +493,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                     ))}
                   </div>
                 </div>
-  
+
                 <div>
                   <span className="block text-[11px] font-medium text-[#64748B] mb-1.5">
                     Alignment
@@ -518,7 +518,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                   </div>
                 </div>
               </div>
-  
+
               {/* Display toggles */}
               <div className="flex flex-wrap items-center gap-1.5">
                 <span className="text-[11px] font-medium text-[#64748B] mr-0.5">Show</span>
@@ -546,7 +546,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                   );
                 })}
               </div>
-  
+
               {/* Stack title fields, only when the title is visible */}
               {settings.showHeader && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -584,7 +584,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                   </div>
                 </div>
               )}
-  
+
               {/* Sliders */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-5 gap-y-3 rounded-xl bg-[#090B10] border border-[#1E2636] px-3 py-2.5">
                 <div>
@@ -606,7 +606,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                     className="w-full cursor-pointer"
                   />
                 </div>
-  
+
                 <div>
                   <div className="flex items-center justify-between text-[11px] mb-1.5">
                     <label htmlFor="spacing-range" className="font-medium text-[#94A3B8]">
@@ -626,7 +626,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                     className="w-full cursor-pointer"
                   />
                 </div>
-  
+
                 <div>
                   <div className="flex items-center justify-between text-[11px] mb-1.5">
                     <label htmlFor="per-row-range" className="font-medium text-[#94A3B8]">
@@ -650,7 +650,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                   />
                 </div>
               </div>
-  
+
               {/* Advanced embed host */}
               <details className="group rounded-lg bg-[#090B10] border border-[#1E2636] px-3 py-2">
                 <summary className="flex items-center justify-between gap-2 text-[11px] font-medium text-[#94A3B8] hover:text-[#F1F5F9] cursor-pointer list-none">
@@ -660,7 +660,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                     aria-hidden="true"
                   />
                 </summary>
-  
+
                 <div className="mt-2.5 pt-2.5 border-t border-[#1E2636] space-y-2.5">
                   <div className="flex flex-wrap items-center gap-1.5">
                     <span className="text-[11px] text-[#64748B]">Quick presets:</span>
@@ -687,7 +687,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
                       GitHub Raw
                     </button>
                   </div>
-  
+
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                     <label
                       htmlFor="asset-base-url-input"
