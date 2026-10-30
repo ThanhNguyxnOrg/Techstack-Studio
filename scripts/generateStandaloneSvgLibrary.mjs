@@ -285,7 +285,7 @@ const HEX_SHELL_PATH =
 const C_RING_PATH =
   'M12 19.11c-3.92 0-7.105-3.19-7.105-7.11S8.08 4.89 12 4.89c2.533 0 4.88 1.356 6.148 3.553l-3.076 1.78c-.634-1.1-1.805-1.778-3.072-1.778-1.96 0-3.552 1.595-3.552 3.555s1.592 3.555 3.552 3.555c1.267 0 2.438-.678 3.072-1.778l3.076 1.78C16.88 17.754 14.533 19.11 12 19.11z';
 
-// Official C++ logo geometry (128x128 space) from the devicon set (MIT); scaled by .1875 into the 24x24 viewBox.
+// Official C++ logo geometry (128x128 space) from the devicon set (MIT); scaled by .18784 and nudged .083 right so its bounding box matches the Simple Icons C++ mark in the 24x24 viewBox.
 const CPP_D_R =
   'M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0';
 const CPP_D_B =
@@ -328,7 +328,7 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#387EB8" d="M11.9 2C6.8 2 7.1 4.2 7.1 4.2v2.3h4.9v.7H5.2S2 6.8 2 11.9c0 5.1 2.8 4.9 2.8 4.9h1.7v-2.4s-.1-2.8 2.8-2.8h4.8s2.7 0 2.7-2.6V4.6S17.2 2 11.9 2zm-2.7 1.5c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z"/><path fill="#FFE052" d="M12.1 22c5.1 0 4.8-2.2 4.8-2.2v-2.3H12v-.7h6.8S22 17.2 22 12.1c0-5.1-2.8-4.9-2.8-4.9h-1.7v2.4s.1 2.8-2.8 2.8H9.9s-2.7 0-2.7 2.6v4.4S6.8 22 12.1 22zm2.7-1.5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z"/></svg>`;
   }
   if (item.id === 'typescript') {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><g transform="scale(0.046875)"><rect fill="#3178c6" width="512" height="512" rx="50"/><path clip-rule="evenodd" fill="#fff" fill-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z"/></g></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><rect x="0" y="0" width="24" height="24" rx="1.125" fill="#3178C6"/><path fill="#FFFFFF" d="${TS_T_PATH}"/><path fill="#FFFFFF" d="${TS_S_PATH}"/></svg>`;
   }
   if (item.id === 'javascript') {
     const JS_J_PATH =
@@ -347,7 +347,7 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#283593" d="${HEX_SHELL_PATH}"/><path fill="#5C6BC0" d="M12 0.22 L2.26 5.31 C1.75 5.6 1.34 6.32 1.34 6.91 V17.09 L12 12 Z"/><path fill="#FFFFFF" d="${C_RING_PATH}"/></svg>`;
   }
   if (item.id === 'cpp') {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><path fill="#659ad2" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path fill="#00599c" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path fill="#004482" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/><path fill="#fff" d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91z"/><path fill="#fff" d="M92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88z"/><path fill="#fff" d="M108.646 57.57v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z"/></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><g transform="translate(.083 0) scale(.18784)"><path fill="#659AD2" d="${CPP_D_TL}"/><path fill="#00599C" d="${CPP_D_R}"/><path fill="#004482" d="${CPP_D_B}"/><path fill="#FFFFFF" d="${CPP_D_WHITE}"/></g></svg>`;
   }
   if (item.id === 'csharp') {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#512BD4" d="${HEX_SHELL_PATH}"/><path fill="#6D28D9" d="M12 0.22 L2.26 5.31 C1.75 5.6 1.34 6.32 1.34 6.91 V17.09 L12 12 Z"/><path fill="#FFFFFF" d="M10.5 18.6c-3.65 0-6.6-2.95-6.6-6.6s2.95-6.6 6.6-6.6c2.2 0 4.15 1.1 5.35 2.8l-2.65 1.55c-.6-.9-1.6-1.45-2.7-1.45-1.85 0-3.35 1.5-3.35 3.7s1.5 3.7 3.35 3.7c1.1 0 2.1-.55 2.7-1.45l2.65 1.55c-1.2 1.7-3.15 2.8-5.35 2.8z"/><g fill="#FFFFFF"><rect x="15.2" y="10.2" width="5.2" height="1"/><rect x="15.2" y="12.6" width="5.2" height="1"/><rect x="16.4" y="9.1" width="1" height="5.6"/><rect x="18.4" y="9.1" width="1" height="5.6"/></g></svg>`;
@@ -472,24 +472,53 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // 6. C++ (8s isometric choreography: line outline trace -> 3 facet assembly -> C arc wipe -> bouncing ++ operators -> specular sheen)
+  // 6. C++ (official hexagon geometry: line-art assembly -> facets lock in -> C sweeps around -> ++ pop, then tick like an increment -> light sheen)
   if (item.id === 'cpp') {
-    const defs = `<linearGradient id="tss_${uid}_g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="tss_${uid}_hex"><path d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/></clipPath><mask id="tss_${uid}_cmask" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128"><path class="tss_${uid}_wipe" pathLength="1" d="M88.04 49.68A28.4 28.4 0 1 0 88.04 78.08"/></mask>`;
-
-    const style = `.tss_${uid}_float{animation:tss_${uid}_float 4s ease-in-out infinite}@keyframes tss_${uid}_float{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}.tss_${uid}_all{animation:tss_${uid}_all 8s linear infinite}@keyframes tss_${uid}_all{0%,94%{opacity:1}98%,100%{opacity:0}}.tss_${uid}_line{fill:none;stroke:#659ad2;stroke-width:1.4;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:tss_${uid}_line 8s ease-in-out infinite}@keyframes tss_${uid}_line{0%{stroke-dashoffset:1;opacity:1}20%{stroke-dashoffset:0;opacity:1}32%{stroke-dashoffset:0;opacity:1}38%,100%{stroke-dashoffset:0;opacity:0}}.tss_${uid}_facet{transform-origin:64px 64px}.tss_${uid}_tl{animation:tss_${uid}_facet_tl 8s ease-out infinite}.tss_${uid}_r{animation:tss_${uid}_facet_r 8s ease-out infinite}.tss_${uid}_b{animation:tss_${uid}_facet_b 8s ease-out infinite}@keyframes tss_${uid}_facet_tl{0%,15%{opacity:0;transform:scale(.94)}26%,100%{opacity:1;transform:scale(1)}}@keyframes tss_${uid}_facet_r{0%,19%{opacity:0;transform:scale(.94)}30%,100%{opacity:1;transform:scale(1)}}@keyframes tss_${uid}_facet_b{0%,23%{opacity:0;transform:scale(.94)}34%,100%{opacity:1;transform:scale(1)}}.tss_${uid}_wipe{fill:none;stroke:#fff;stroke-width:44;stroke-dasharray:1;stroke-dashoffset:0;animation:tss_${uid}_wipe 8s cubic-bezier(.65,0,.35,1) infinite}@keyframes tss_${uid}_wipe{0%,28%{stroke-dashoffset:1}46%,96%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}.tss_${uid}_plus{transform-box:fill-box;transform-origin:center}.tss_${uid}_p1{animation:tss_${uid}_p1 8s cubic-bezier(.34,1.4,.64,1) infinite}.tss_${uid}_p2{animation:tss_${uid}_p2 8s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_${uid}_p1{0%,46%{transform:scale(0)}52%{transform:scale(1)}62%{transform:scale(1)}65%{transform:scale(1.3)}68%{transform:scale(1)}78%{transform:scale(1)}81%{transform:scale(1.3)}84%,100%{transform:scale(1)}}@keyframes tss_${uid}_p2{0%,49%{transform:scale(0)}55%{transform:scale(1)}68%{transform:scale(1)}71%{transform:scale(1.3)}74%{transform:scale(1)}84%{transform:scale(1)}87%{transform:scale(1.3)}90%,100%{transform:scale(1)}}.tss_${uid}_sheen{fill:url(#tss_${uid}_g);opacity:0;animation:tss_${uid}_sheen 8s ease-in-out infinite}@keyframes tss_${uid}_sheen{0%,56%{opacity:0;transform:translateX(0)}59%{opacity:1}72%{opacity:0;transform:translateX(175px)}100%{opacity:0;transform:translateX(175px)}}`;
-
-    const reducedMotionCss = `.tss_${uid}_float,.tss_${uid}_all,.tss_${uid}_line,.tss_${uid}_facet,.tss_${uid}_tl,.tss_${uid}_r,.tss_${uid}_b,.tss_${uid}_wipe,.tss_${uid}_plus,.tss_${uid}_p1,.tss_${uid}_p2,.tss_${uid}_sheen{animation:none!important;transform:none!important;opacity:1!important}.tss_${uid}_line{opacity:0!important}.tss_${uid}_sheen{opacity:0!important}`;
-
-    const body = `<g class="tss_${uid}_float"><g class="tss_${uid}_all"><path class="tss_${uid}_facet tss_${uid}_tl" fill="#659ad2" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path class="tss_${uid}_facet tss_${uid}_r" fill="#00599c" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path class="tss_${uid}_facet tss_${uid}_b" fill="#004482" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/><g class="tss_${uid}_outline"><path class="tss_${uid}_line" pathLength="1" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"/><path class="tss_${uid}_line" pathLength="1" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"/><path class="tss_${uid}_line" pathLength="1" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"/></g><path fill="#fff" mask="url(#tss_${uid}_cmask)" d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91z"/><path class="tss_${uid}_plus tss_${uid}_p1" fill="#fff" d="M92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88z"/><path class="tss_${uid}_plus tss_${uid}_p2" fill="#fff" d="M108.646 57.57v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z"/><g clip-path="url(#tss_${uid}_hex)"><g transform="skewX(-20)"><rect class="tss_${uid}_sheen" x="0" y="-10" width="22" height="150"/></g></g></g></g>`;
-
+    const kAll = `tss_${uid}_al`,
+      kLine = `tss_${uid}_ln`,
+      kTl = `tss_${uid}_tl`,
+      kRf = `tss_${uid}_rf`,
+      kBf = `tss_${uid}_bf`,
+      kWipe = `tss_${uid}_wp`,
+      kP1 = `tss_${uid}_p1`,
+      kP2 = `tss_${uid}_p2`,
+      kSheen = `tss_${uid}_sh`,
+      idHex = `tss_${uid}_hex`,
+      idCMask = `tss_${uid}_cm`,
+      idGrad = `tss_${uid}_gr`;
+    const css =
+      `@keyframes ${kAll}{0%,90%{opacity:1}96%,100%{opacity:0}}` +
+      `@keyframes ${kLine}{0%{stroke-dashoffset:1;opacity:1}18%{stroke-dashoffset:0;opacity:1}30%{stroke-dashoffset:0;opacity:1}38%,100%{stroke-dashoffset:0;opacity:0}}` +
+      `@keyframes ${kTl}{0%,8%{opacity:0;transform:scale(.94)}20%,100%{opacity:1;transform:scale(1)}}` +
+      `@keyframes ${kRf}{0%,11%{opacity:0;transform:scale(.94)}23%,100%{opacity:1;transform:scale(1)}}` +
+      `@keyframes ${kBf}{0%,14%{opacity:0;transform:scale(.94)}26%,100%{opacity:1;transform:scale(1)}}` +
+      `@keyframes ${kWipe}{0%,20%{stroke-dashoffset:1}42%,100%{stroke-dashoffset:0}}` +
+      `@keyframes ${kP1}{0%,40%{transform:scale(0)}48%{transform:scale(1)}60%{transform:scale(1)}63%{transform:scale(1.3)}67%,100%{transform:scale(1)}}` +
+      `@keyframes ${kP2}{0%,43%{transform:scale(0)}51%{transform:scale(1)}64%{transform:scale(1)}67%{transform:scale(1.3)}71%,100%{transform:scale(1)}}` +
+      `@keyframes ${kSheen}{0%,52%{opacity:0;transform:translateX(0)}56%{opacity:1}72%,100%{opacity:0;transform:translateX(175px)}}` +
+      `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+      `.${kLine}{fill:none;stroke:#659AD2;stroke-width:2.6;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:${kLine} ${dur} ease-in-out infinite}` +
+      `.${kTl},.${kRf},.${kBf}{transform-origin:64px 64px}` +
+      `.${kTl}{animation:${kTl} ${dur} ease-out infinite}.${kRf}{animation:${kRf} ${dur} ease-out infinite}.${kBf}{animation:${kBf} ${dur} ease-out infinite}` +
+      `.${kWipe}{fill:none;stroke:#fff;stroke-width:44;stroke-dasharray:1;stroke-dashoffset:0;animation:${kWipe} ${dur} cubic-bezier(.65,0,.35,1) infinite}` +
+      `.${kP1},.${kP2}{transform-box:fill-box;transform-origin:center}` +
+      `.${kP1}{animation:${kP1} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}.${kP2}{animation:${kP2} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
+      `.${kSheen}{fill:url(#${idGrad});opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}`;
     return wrapSvg(
-      defs,
-      style,
-      reducedMotionCss,
-      body,
-      '8s isometric hexagon assembly: stroke outline trace, 3-facet 3D reveal, C-arc wipe reveal, bouncing ++ operators, and diagonal specular sheen',
-      'Multi-stage synchronized keyframe choreography with 128x128 geometric precision',
-      '0 0 128 128'
+      `<linearGradient id="${idGrad}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>` +
+        `<clipPath id="${idHex}"><path d="${CPP_D_TL}"/><path d="${CPP_D_R}"/><path d="${CPP_D_B}"/></clipPath>` +
+        `<mask id="${idCMask}" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128"><path class="${kWipe}" pathLength="1" d="M89.78 53.24A28.4 28.4 0 1 0 89.78 74.52"/></mask>`,
+      css,
+      `.${kAll},.${kLine},.${kTl},.${kRf},.${kBf},.${kWipe},.${kP1},.${kP2},.${kSheen}{animation:none!important}`,
+      `<g transform="translate(.083 0) scale(.18784)"><g class="${kAll}">` +
+        `<path class="${kTl}" fill="#659AD2" d="${CPP_D_TL}"/><path class="${kRf}" fill="#00599C" d="${CPP_D_R}"/><path class="${kBf}" fill="#004482" d="${CPP_D_B}"/>` +
+        `<path class="${kLine}" pathLength="1" d="${CPP_D_TL}"/><path class="${kLine}" pathLength="1" d="${CPP_D_R}"/><path class="${kLine}" pathLength="1" d="${CPP_D_B}"/>` +
+        `<path fill="#fff" mask="url(#${idCMask})" d="${CPP_D_C}"/>` +
+        `<path class="${kP1}" fill="#fff" d="${CPP_D_P1}"/><path class="${kP2}" fill="#fff" d="${CPP_D_P2}"/>` +
+        `<g clip-path="url(#${idHex})"><g transform="skewX(-20)"><rect class="${kSheen}" x="0" y="-10" width="22" height="150"/></g></g>` +
+        `</g></g>`,
+      'Official C++ hexagon: facets draw as line-art and lock in, the C sweeps around, then the two + operators pop and tick one after the other like an increment',
+      'Per-facet pathLength trace + masked C-arc stroke wipe + overshoot scale pops on each + + skewed clipped sheen sweep'
     );
   }
 
@@ -507,29 +536,43 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // 8. TYPESCRIPT — restore the existing official-mark sheen from a93f69c; visual review is pending.
+  // 8. TYPESCRIPT (official badge + glyphs: rim traces -> badge fills in -> T and S draw as outlines then fill -> light sheen)
   if (item.id === 'typescript') {
-    const kSheen = `tss_${uid}_shine`;
-    const cSheen = `tss_${uid}_clip`;
-    const gSheen = `tss_${uid}_sheen`;
-    const defs =
-      `<clipPath id="${cSheen}"><rect width="24" height="24" rx="2.34375"/></clipPath>` +
-      `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".32"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
-    const style = `@keyframes ${kSheen}{0%,20%{transform:translateX(-30px);opacity:0}32%{opacity:.8}68%,100%{transform:translateX(30px);opacity:0}}.${kSheen}{animation:${kSheen} 4.8s cubic-bezier(.22,1,.36,1) infinite}`;
-    const reduced = `.${kSheen}{animation:none!important;opacity:0!important}`;
-    const sourceSvg = buildSourceSvg(item);
-    const sourceBody = sourceSvg.replace(/^<svg[^>]*>/i, '').replace(/<\/svg>\s*$/i, '');
-    const body =
-      sourceBody +
-      `<g clip-path="url(#${cSheen})"><rect class="${kSheen}" x="-5" y="0" width="34" height="24" fill="url(#${gSheen})" transform="skewX(-20)"/></g>`;
+    const kAll = `tss_${uid}_al`,
+      kRim = `tss_${uid}_rm`,
+      kBadge = `tss_${uid}_bd`,
+      kT = `tss_${uid}_kt`,
+      kS = `tss_${uid}_ks`,
+      kSheen = `tss_${uid}_sh`,
+      idClip = `tss_${uid}_cp`,
+      idGrad = `tss_${uid}_gr`;
+    const TS_T_PATH = 'M3.375 9.938h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z';
+    const TS_S_PATH =
+      'M18.488 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201z';
+    const css =
+      `@keyframes ${kAll}{0%,90%{opacity:1}96%,100%{opacity:0}}` +
+      `@keyframes ${kRim}{0%{stroke-dashoffset:1;opacity:1}16%{stroke-dashoffset:0;opacity:1}28%{stroke-dashoffset:0;opacity:1}36%,100%{stroke-dashoffset:0;opacity:0}}` +
+      `@keyframes ${kBadge}{0%,10%{opacity:0;transform:scale(.94)}24%,100%{opacity:1;transform:scale(1)}}` +
+      `@keyframes ${kT}{0%,22%{stroke-dashoffset:1;fill-opacity:0;stroke-opacity:1}40%{stroke-dashoffset:0;fill-opacity:0;stroke-opacity:1}52%{stroke-dashoffset:0;fill-opacity:1;stroke-opacity:1}58%,100%{stroke-dashoffset:0;fill-opacity:1;stroke-opacity:0}}` +
+      `@keyframes ${kS}{0%,26%{stroke-dashoffset:1;fill-opacity:0;stroke-opacity:1}44%{stroke-dashoffset:0;fill-opacity:0;stroke-opacity:1}56%{stroke-dashoffset:0;fill-opacity:1;stroke-opacity:1}62%,100%{stroke-dashoffset:0;fill-opacity:1;stroke-opacity:0}}` +
+      `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(0)}60%{opacity:1}76%,100%{opacity:0;transform:translateX(38px)}}` +
+      `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+      `.${kRim}{fill:none;stroke:#93C5FD;stroke-width:.55;stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:${kRim} ${dur} ease-in-out infinite}` +
+      `.${kBadge}{transform-origin:12px 12px;animation:${kBadge} ${dur} ease-out infinite}` +
+      `.${kT},.${kS}{stroke:#fff;stroke-opacity:0;stroke-width:.45;stroke-linejoin:round;stroke-dasharray:1}` +
+      `.${kT}{animation:${kT} ${dur} cubic-bezier(.22,1,.36,1) infinite}.${kS}{animation:${kS} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+      `.${kSheen}{fill:url(#${idGrad});opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}`;
     return wrapSvg(
-      defs,
-      style,
-      reduced,
-      body,
-      'Restored from the existing TypeScript motion SVG at commit a93f69c; official Microsoft mark preserved',
-      'Low-opacity diagonal sheen sweep over the official TS mark; pending visual review',
-      '0 0 24 24'
+      `<linearGradient id="${idGrad}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>` +
+        `<clipPath id="${idClip}"><rect width="24" height="24" rx="1.125"/></clipPath>`,
+      css,
+      `.${kAll},.${kRim},.${kBadge},.${kT},.${kS},.${kSheen}{animation:none!important}`,
+      `<g class="${kAll}"><rect class="${kBadge}" x="0" y="0" width="24" height="24" rx="1.125" fill="#3178C6"/>` +
+        `<rect class="${kRim}" pathLength="1" x=".3" y=".3" width="23.4" height="23.4" rx=".83"/>` +
+        `<path class="${kT}" pathLength="1" fill="#FFFFFF" d="${TS_T_PATH}"/><path class="${kS}" pathLength="1" fill="#FFFFFF" d="${TS_S_PATH}"/>` +
+        `<g clip-path="url(#${idClip})"><g transform="skewX(-20)"><rect class="${kSheen}" x="-6" y="-2" width="5" height="28"/></g></g></g>`,
+      'Official #3178C6 TypeScript badge: the rim traces, the badge fills in, T and S draw as outlines and then fill, and a light sheen crosses the badge',
+      'Rim pathLength trace + badge scale-in + staggered T/S outline-to-fill (stroke-dashoffset + fill-opacity) + skewed clipped sheen'
     );
   }
 
