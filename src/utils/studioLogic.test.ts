@@ -126,7 +126,7 @@ test('TypeScript preview and export use the patched official badge geometry and 
     animatedSvg.includes('@keyframes tss_typescript_al'),
     'Expected the patched badge and glyph choreography'
   );
-  assert.ok(animatedSvg.includes('translateX(175px)'), 'Expected the patched clipped sheen sweep');
+  assert.ok(animatedSvg.includes('translateX(38px)'), 'Expected the patched clipped sheen sweep');
   assert.ok(
     /prefers-reduced-motion\s*:\s*reduce/.test(animatedSvg),
     'Expected reduced-motion support'
