@@ -1638,10 +1638,10 @@ for (const item of catalog) {
     sourceAssetPath: `/icons/source/${item.id}.svg`,
     animatedSvgPath: `/icons/animated/${item.id}.svg`,
     animationConcept: visualReviewPending
-      ? 'Restored existing TypeScript official-mark sheen animation; visual review pending'
+      ? 'Official #3178C6 TypeScript badge: the rim traces, the badge fills in, T and S draw as outlines and then fill, and a light sheen crosses the badge'
       : concept,
     animationTechnique: visualReviewPending
-      ? 'Low-opacity diagonal sheen clipped to the official TypeScript badge'
+      ? 'Rim pathLength trace + badge scale-in + staggered T/S outline-to-fill (stroke-dashoffset + fill-opacity) + skewed clipped sheen'
       : technique,
     fileExists: fs.existsSync(animFile) && fs.existsSync(srcFile),
     xmlValid: isValid,
@@ -1652,7 +1652,7 @@ for (const item of catalog) {
     exportVerified: visualReviewPending ? false : true,
     status: visualReviewPending ? 'needs_visual_review' : isValid ? 'visual_qa_passed' : 'blocked',
     knownIssues: visualReviewPending
-      ? 'Restored at user request from commit a93f69c; final motion visual review is pending.'
+      ? 'Updated to the official badge choreography from the supplied patch; final motion visual review is pending.'
       : isValid
         ? null
         : 'SVG validation check failed',
