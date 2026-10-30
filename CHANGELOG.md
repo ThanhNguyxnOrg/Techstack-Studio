@@ -11,7 +11,7 @@ All notable changes to this project are documented here. The format follows
 - C++: the static source now uses the official logo geometry, and the animated
   version was rebuilt around it (line-art assembly, facets lock in, the C sweeps
   around, the two `+` signs pop and tick like an increment, light sheen).
-- TypeScript: new choreography on the official badge (rim trace, badge fill, T and S
+- TypeScript: the static badge now uses the official corner radius (1.125), and the animation ends on the exact official glyphs. New choreography on the official badge (rim trace, badge fill, T and S
   draw as outlines then fill, light sheen).
 - Rust, Go, Redis and Linux moved from a generic motion family to hand-tuned
   choreography: a rust-orange heat beam sweeping around the cog (Rust), letters
@@ -24,9 +24,8 @@ All notable changes to this project are documented here. The format follows
   the nodes (Node-RED), antennae wiggling while the pupils look around (PlatformIO),
   a comet orbiting the ring with a flash on the R (R), a leaf growing and swaying
   (MongoDB), and a scan line rendering the shield (HTML5).
-- The 12 newly hand-tuned animations use the 3.6 s loop, scoped ids, and the
-  `prefers-reduced-motion` fallback. C++ and TypeScript retain their dedicated 8 s
-  and 6 s choreography.
+- All animated SVGs listed here keep the 3.6 s loop, scoped ids, and the
+  `prefers-reduced-motion` fallback.
 
 ## [1.0.0] - 2026-10-28
 
