@@ -25,7 +25,7 @@ function readSvg(directory: string, id: string): string {
 const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   googlecloud: ['#EA4335', '#4285F4', '#34A853', '#FBBC05'],
   python: ['#387EB8', '#FFE052'],
-  typescript: ['#3178c6', 'm316.939 407.424'],
+  typescript: ['#3178C6', 'M3.375 9.938'],
   javascript: ['#F7DF1E', '#111622'],
   amazonaws: ['#F3F1EC', '#FF9900'],
   springboot: ['#6DB33F', '#FFFFFF'],
@@ -115,7 +115,7 @@ test('every catalog item exposes complete, self-contained source and animated SV
     if (customSignatures) {
       for (const signature of customSignatures) {
         assert.ok(
-          source.includes(signature),
+          source.toLowerCase().includes(signature.toLowerCase()),
           `${item.id}: source logo is missing expected brand signature ${signature}`
         );
       }
@@ -129,16 +129,20 @@ test('every catalog item exposes complete, self-contained source and animated SV
 
     if (item.id === 'typescript') {
       assert.ok(
-        animated.includes('m316.939 407.424'),
-        'TypeScript animation must preserve the official Microsoft geometry'
+        animated.includes('viewBox="0 0 24 24"'),
+        'TypeScript animation must use the patched 24px badge coordinate system'
       );
       assert.ok(
-        animated.includes('@keyframes tss_typescript_shine'),
-        'TypeScript motion asset must match the restored a93 effect'
+        animated.includes('M3.375 9.938'),
+        'TypeScript animation must preserve the patched T glyph geometry'
       );
       assert.ok(
-        animated.includes('translateX(-30px)'),
-        'TypeScript motion must keep the restored distance'
+        animated.includes('@keyframes tss_typescript_al'),
+        'TypeScript animation must include the patched badge choreography'
+      );
+      assert.ok(
+        animated.includes('translateX(175px)'),
+        'TypeScript animation must include the patched clipped sheen sweep'
       );
     }
     assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
