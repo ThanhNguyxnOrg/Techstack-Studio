@@ -521,7 +521,8 @@ function buildAnimatedSvg(item) {
         `<g clip-path="url(#${idHex})"><g transform="skewX(-20)"><rect class="${kSheen}" x="0" y="-10" width="22" height="150"/></g></g>` +
         `</g></g>`,
       'Official C++ hexagon: facets draw as line-art and lock in, the C sweeps around, then the two + operators pop and tick one after the other like an increment',
-      'Per-facet pathLength trace + masked C-arc stroke wipe + overshoot scale pops on each + + skewed clipped sheen sweep'
+      'Per-facet pathLength trace + masked C-arc stroke wipe + overshoot scale pops on each + + skewed clipped sheen sweep',
+      '0 0 24 24'
     );
   }
 
@@ -575,7 +576,8 @@ function buildAnimatedSvg(item) {
         `<path class="${kT}" pathLength="1" fill="#FFFFFF" d="${TS_T_PATH}"/><path class="${kS}" pathLength="1" fill="#FFFFFF" d="${TS_S_PATH}"/>` +
         `<g clip-path="url(#${idClip})"><g transform="skewX(-20)"><rect class="${kSheen}" x="-6" y="-2" width="5" height="28"/></g></g></g>`,
       'Official #3178C6 TypeScript badge: the rim traces, the badge fills in, T and S draw as outlines and then fill, and a light sheen crosses the badge',
-      'Rim pathLength trace + badge scale-in + staggered T/S outline-to-fill (stroke-dashoffset + fill-opacity) + skewed clipped sheen'
+      'Rim pathLength trace + badge scale-in + staggered T/S outline-to-fill (stroke-dashoffset + fill-opacity) + skewed clipped sheen',
+      '0 0 24 24'
     );
   }
 
