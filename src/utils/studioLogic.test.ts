@@ -94,7 +94,7 @@ test('all 10 representative benchmark icons resolve with 4-color GCP clipPath ch
   );
 });
 
-test('TypeScript static and animated SVGs preserve the official Microsoft logo geometry', () => {
+test('TypeScript preview and export use the patched official badge geometry and choreography', () => {
   const ts = TECH_BY_ID['typescript'];
   assert.ok(ts, 'Expected typescript in catalog');
 
@@ -113,21 +113,20 @@ test('TypeScript static and animated SVGs preserve the official Microsoft logo g
     showPlate: false,
   });
 
-  assert.ok(
-    staticSvg.includes('m316.939 407.424'),
-    'Expected official Microsoft TypeScript glyph geometry'
-  );
-  assert.ok(staticSvg.includes('fill="#3178c6"'), 'Expected official TypeScript brand blue');
+  assert.ok(staticSvg.includes('viewBox="0 0 24 24"'), 'Expected normalized TypeScript viewBox');
+  assert.ok(staticSvg.includes('M3.375 9.938'), 'Expected the patched official T glyph geometry');
+  assert.ok(staticSvg.includes('fill="#3178C6"'), 'Expected official TypeScript brand blue');
+  assert.ok(staticSvg.includes('rx="1.125"'), 'Expected the official badge corner radius');
   assert.ok(!staticSvg.includes('@keyframes'), 'Static TypeScript logo must remain still');
   assert.ok(
-    animatedSvg.includes('m316.939 407.424'),
-    'Animated logo must preserve the official glyph'
+    animatedSvg.includes('M3.375 9.938'),
+    'Animated logo must preserve the patched official glyph'
   );
   assert.ok(
-    animatedSvg.includes('@keyframes tss_typescript_shine'),
-    'Expected the restored official-mark sheen'
+    animatedSvg.includes('@keyframes tss_typescript_al'),
+    'Expected the patched badge and glyph choreography'
   );
-  assert.ok(animatedSvg.includes('translateX(-30px)'), 'Expected the a93 sheen travel distance');
+  assert.ok(animatedSvg.includes('translateX(175px)'), 'Expected the patched clipped sheen sweep');
   assert.ok(
     /prefers-reduced-motion\s*:\s*reduce/.test(animatedSvg),
     'Expected reduced-motion support'
