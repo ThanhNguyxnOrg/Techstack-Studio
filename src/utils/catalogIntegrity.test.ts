@@ -141,7 +141,7 @@ test('every catalog item exposes complete, self-contained source and animated SV
         'TypeScript animation must include the patched badge choreography'
       );
       assert.ok(
-        animated.includes('translateX(175px)'),
+        animated.includes('translateX(38px)'),
         'TypeScript animation must include the patched clipped sheen sweep'
       );
     }
