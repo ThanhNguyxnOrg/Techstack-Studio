@@ -1,4 +1,4 @@
-name: Regenerate patched SVG assets (retry after generator fix)
+name: Regenerate patched SVG assets (normalized viewBox)
 
 on:
   push:
