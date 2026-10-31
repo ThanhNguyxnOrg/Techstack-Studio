@@ -328,6 +328,8 @@ fixes, documentation, and bug reports.
 - Report vulnerabilities privately via [SECURITY.md](SECURITY.md).
 - Browse [good first issues](https://github.com/ThanhNguyxnOrg/Techstack-Studio/labels/good%20first%20issue)
   or open a [feature request](https://github.com/ThanhNguyxnOrg/Techstack-Studio/issues/new/choose).
+- Ask questions and share builds in
+  [Discussions](https://github.com/ThanhNguyxnOrg/Techstack-Studio/discussions).
 
 If you add a logo, include its source and usage terms in the pull request so the
 attribution can be reviewed.
