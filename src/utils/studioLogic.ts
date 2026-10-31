@@ -520,6 +520,7 @@ export function serializePersistedState(state: PersistedStudioState): string {
  */
 function getIconViewBox(item: TechItem): string {
   if (item.id === 'playwright') return '0 0 128 128';
+  if (item.id === 'googledataflow') return '0 0 32 32';
   return item.id === 'cpp' || item.id === 'typescript'
     ? '0 0 24 24'
     : item.svgViewBox || '0 0 24 24';

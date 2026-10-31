@@ -167,6 +167,26 @@ test('Playwright banner uses its 128-unit artwork viewBox, not the historical 24
   assert.ok(staticSvg.includes('#2EAD33'), 'Expected the green theatre mask');
 });
 
+test('Google Dataflow banner uses its 32-unit official artwork viewBox, not the historical 24', () => {
+  const df = TECH_BY_ID['googledataflow'];
+  assert.ok(df, 'Expected googledataflow in catalog');
+
+  const staticSvg = generateAnimatedSingleIconSvg(df, {
+    size: 48,
+    theme: 'dark',
+    animate: false,
+    speedMultiplier: 1,
+    showPlate: false,
+  });
+  assert.ok(
+    staticSvg.includes('viewBox="0 0 32 32"'),
+    'Expected 32-unit viewBox so the official Dataflow diagram is not clipped'
+  );
+  assert.ok(staticSvg.includes('#4285F4'), 'Expected the Dataflow primary blue');
+  assert.ok(staticSvg.includes('#669df6'), 'Expected the Dataflow mid blue');
+  assert.ok(staticSvg.includes('#aecbfa'), 'Expected the Dataflow light blue');
+});
+
 test('normalized C++ artwork scales to the icon box in SVG banners', () => {
   const cpp = TECH_BY_ID['cpp'];
   assert.ok(cpp, 'Expected cpp in catalog');

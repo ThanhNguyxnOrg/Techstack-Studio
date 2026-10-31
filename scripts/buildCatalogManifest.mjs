@@ -98,10 +98,10 @@ const VERIFIED_FALLBACK_ICONS = {
     path: 'M3 5l5.5 14h3L17 5h-3l-4 10.5L6 5H3zm14 4l2.5 5L22 9h-2l-1 2.2L18 9h-1zm0 7h5v2h-5v-2z',
   },
   googledataflow: {
-    title: 'Vertex AI / Kubeflow',
+    title: 'Google Dataflow',
     hex: '4285F4',
-    source: 'https://cloud.google.com/vertex-ai',
-    path: 'M12 2.5L3.5 7.4v9.2L12 21.5l8.5-4.9V7.4L12 2.5zm0 2.8l5.8 3.3-5.8 8.6-5.8-8.6L12 5.3zm-6 5.6l4.4 6.5-4.4-2.5v-4zm12 0v4l-4.4 2.5 4.4-6.5z',
+    source: 'https://cloud.google.com/dataflow',
+    path: 'M18.39 6.71L18.03 5.46L16.14 5.38L13.86 6.66L15.89 8.65L15.86 10.96L17.21 10.98L17.24 8.67L22.9 12.09L22.88 13.51L25.24 13.54L25.24 10.81L18.39 6.71ZM16.14 5.38L16.14 5.38L16.14 5.38L14.24 5.83L13.86 6.66L6.83 10.56L6.8 13.3L9.18 13.33L9.19 11.9L14.95 8.64L14.92 10.95L16.07 10.96L16.14 5.38ZM16.14 5.38L16.14 5.38L16.14 5.38L11.59 2.67L9.27 3.93L13.86 6.66L16.14 5.38L16.14 5.38ZM22.79 20.09L17.05 23.35L17.08 21.05L14.79 21.02L14.76 23.32L15.86 26.62L17.75 26.47L18.14 25.34L25.16 21.43L25.2 18.64L22.81 18.61L22.79 20.09ZM15.86 26.62L15.86 26.62L15.86 26.62L11.23 29.21L11.17 29.21L8.95 27.89L13.61 25.28L15.86 26.62L15.86 26.62ZM18.39 6.71L23.04 4.11L20.82 2.79L20.76 2.79L16.14 5.38L18.39 6.71ZM18.14 25.34L22.73 28.07L20.48 29.33L20.41 29.33L15.86 26.62L15.86 26.62L15.86 26.62L15.86 26.62L18.14 25.34ZM15.86 26.62L13.61 25.28L6.76 21.19L6.76 18.52L9.11 18.52L9.09 19.91L14.76 23.33L14.79 21.02L15.93 21.04L15.86 26.62ZM22.64 16.05a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0M6.32 15.83a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0M14.57 13.32a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0M14.440000000000001 18.67a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0',
   },
   neon: {
     title: 'Neon (Serverless Postgres)',
@@ -4440,11 +4440,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'googledataflow',
-      'Vertex AI / Kubeflow',
-      'googlecloud',
-      'MLOps & Experiment Tracking',
-      'Managed Machine Learning & Generative AI Platform',
-      ['vertex-ai'],
+      'Google Dataflow',
+      'googledataflow',
+      'Data Engineering & Pipelines',
+      'Unified Stream & Batch Data Processing',
+      ['dataflow'],
       'beacon-ripple-rings',
     ],
     [
