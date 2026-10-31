@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T14:58:53.794Z",
+  "generatedAt": "2026-10-31T15:04:36.702Z",
   "totalCatalogEntries": 553,
   "sourceSvgFilesCreated": 553,
   "animatedSvgFilesCreated": 553,
@@ -1274,8 +1274,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/webgpu.svg",
       "animatedSvgPath": "/icons/animated/webgpu.svg",
-      "animationConcept": "Progressive 3-subpath contour draw followed by an internal clipped #85B0CF prism sheen across WebGPU",
-      "animationTechnique": "Staggered subpath stroke-dashoffset trace + self-clipped specular prism sweep",
+      "animationConcept": "W assembles triangle by triangle in path order, then a long static hold; final and reduced-motion frames are exactly the static W",
+      "animationTechnique": "Per-triangle CSS translateY + opacity (transform-box: fill-box, centre origin); Material-style ease-out for each entrance",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,

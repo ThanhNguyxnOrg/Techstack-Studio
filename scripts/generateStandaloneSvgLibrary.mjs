@@ -370,6 +370,14 @@ function buildSourceSvg(item) {
     // so it must not be used for this id.
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="${label}"><polygon fill="#669df6" points="18.39 6.71 18.03 5.46 16.14 5.38 13.86 6.66 15.89 8.65 15.86 10.96 17.21 10.98 17.24 8.67 22.9 12.09 22.88 13.51 25.24 13.54 25.24 10.81 18.39 6.71"/><polygon fill="#aecbfa" points="16.14 5.38 16.14 5.38 16.14 5.38 14.24 5.83 13.86 6.66 6.83 10.56 6.8 13.3 9.18 13.33 9.19 11.9 14.95 8.64 14.92 10.95 16.07 10.96 16.14 5.38"/><polygon fill="#669df6" points="16.14 5.38 16.14 5.38 16.14 5.38 11.59 2.67 9.27 3.93 13.86 6.66 16.14 5.38 16.14 5.38"/><polygon fill="#669df6" points="22.79 20.09 17.05 23.35 17.08 21.05 14.79 21.02 14.76 23.32 15.86 26.62 17.75 26.47 18.14 25.34 25.16 21.43 25.2 18.64 22.81 18.61 22.79 20.09"/><polygon fill="#669df6" points="15.86 26.62 15.86 26.62 15.86 26.62 11.23 29.21 11.17 29.21 8.95 27.89 13.61 25.28 15.86 26.62 15.86 26.62"/><polygon fill="#4285F4" points="18.39 6.71 23.04 4.11 20.82 2.79 20.76 2.79 16.14 5.38 18.39 6.71"/><polygon fill="#4285F4" points="18.14 25.34 22.73 28.07 20.48 29.33 20.41 29.33 15.86 26.62 15.86 26.62 15.86 26.62 15.86 26.62 18.14 25.34"/><polygon fill="#aecbfa" points="15.86 26.62 13.61 25.28 6.76 21.19 6.76 18.52 9.11 18.52 9.09 19.91 14.76 23.33 14.79 21.02 15.93 21.04 15.86 26.62"/><circle fill="#aecbfa" cx="24.16" cy="16.05" r="1.52"/><circle fill="#aecbfa" cx="7.84" cy="15.83" r="1.52"/><circle fill="#aecbfa" cx="16.09" cy="13.32" r="1.52"/><circle fill="#aecbfa" cx="15.96" cy="18.67" r="1.52"/></svg>`;
   }
+  if (item.id === 'webgpu') {
+    // WebGPU W-triangles, split from the single catalog path into its 5
+    // triangle subpaths (verified: split render is visually identical to
+    // the single-path render; only shared-edge antialiasing differs).
+    // Splitting is what lets the animated version assemble the W triangle
+    // by triangle instead of hiding it behind a generic sheen clip.
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#005A9C" d="M0 4.784L8.652 19.216L17.304 4.784Z"/><path fill="#005A9C" d="M22.032 4.929L20.07 8.202L24 8.202L22.032 4.93Z"/><path fill="#005A9C" d="M17.572 4.929L13.38 11.922L21.764 11.922Z"/><path fill="#005A9C" d="M20.07 8.504L22.032 11.777L24 8.504Z"/><path fill="#005A9C" d="M13.38 12.224L17.572 19.216L21.764 12.224Z"/></svg>`;
+  }
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
 }
 
@@ -458,6 +466,26 @@ function buildAnimatedSvg(item) {
       'Node-by-node flow around the pipeline loop: left, top-centre, right, bottom-centre nodes swell and light in turn, bars static, then a long static hold; final and reduced-motion frames are exactly the static official Dataflow icon',
       "Per-node CSS scale + fill on the icon's own circles only (transform-box: fill-box, centre origin); Material-style ease-out for each pulse, no whole-mark transform",
       '0 0 32 32'
+    );
+  }
+
+  // WEBGPU — W assembles triangle by triangle (6s, replaces the generic
+  // shimmer-prism-sweep template, whose clipped sheen and trace strokes
+  // had nothing to do with WebGPU and hid the W behind a clip). The 5
+  // triangles of the W appear in path order, each rising 3px and fading
+  // in, then the whole W holds exactly static for the second half of the
+  // loop — the same hold pattern as the Dataflow v2 the user preferred.
+  // No clipPath, no sheen rect, no trace strokes, no foreign shapes:
+  // only the W's own triangles. Reduced-motion is exactly the static W.
+  if (item.id === 'webgpu') {
+    return wrapSvg(
+      '',
+      `.tss_webgpu_w0{transform-box:fill-box;transform-origin:center;animation:tss_webgpu_w0 6s cubic-bezier(0.22,1,0.36,1) infinite}.tss_webgpu_w1{transform-box:fill-box;transform-origin:center;animation:tss_webgpu_w1 6s cubic-bezier(0.22,1,0.36,1) infinite}.tss_webgpu_w2{transform-box:fill-box;transform-origin:center;animation:tss_webgpu_w2 6s cubic-bezier(0.22,1,0.36,1) infinite}.tss_webgpu_w3{transform-box:fill-box;transform-origin:center;animation:tss_webgpu_w3 6s cubic-bezier(0.22,1,0.36,1) infinite}.tss_webgpu_w4{transform-box:fill-box;transform-origin:center;animation:tss_webgpu_w4 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_webgpu_w0{0%,0%{transform:translateY(3px);opacity:0}8%{transform:translateY(0);opacity:1}50%,100%{transform:translateY(0);opacity:1}}@keyframes tss_webgpu_w1{0%,10%{transform:translateY(3px);opacity:0}18%{transform:translateY(0);opacity:1}50%,100%{transform:translateY(0);opacity:1}}@keyframes tss_webgpu_w2{0%,20%{transform:translateY(3px);opacity:0}28%{transform:translateY(0);opacity:1}50%,100%{transform:translateY(0);opacity:1}}@keyframes tss_webgpu_w3{0%,30%{transform:translateY(3px);opacity:0}38%{transform:translateY(0);opacity:1}50%,100%{transform:translateY(0);opacity:1}}@keyframes tss_webgpu_w4{0%,40%{transform:translateY(3px);opacity:0}48%{transform:translateY(0);opacity:1}50%,100%{transform:translateY(0);opacity:1}}`,
+      `.tss_webgpu_w0{animation:none!important;transform:none!important;opacity:1!important}.tss_webgpu_w1{animation:none!important;transform:none!important;opacity:1!important}.tss_webgpu_w2{animation:none!important;transform:none!important;opacity:1!important}.tss_webgpu_w3{animation:none!important;transform:none!important;opacity:1!important}.tss_webgpu_w4{animation:none!important;transform:none!important;opacity:1!important}`,
+      `<path class="tss_webgpu_w0" fill="#005A9C" d="M0 4.784L8.652 19.216L17.304 4.784Z"/><path class="tss_webgpu_w1" fill="#005A9C" d="M22.032 4.929L20.07 8.202L24 8.202L22.032 4.93Z"/><path class="tss_webgpu_w2" fill="#005A9C" d="M17.572 4.929L13.38 11.922L21.764 11.922Z"/><path class="tss_webgpu_w3" fill="#005A9C" d="M20.07 8.504L22.032 11.777L24 8.504Z"/><path class="tss_webgpu_w4" fill="#005A9C" d="M13.38 12.224L17.572 19.216L21.764 12.224Z"/>`,
+      'W assembles triangle by triangle in path order, then a long static hold; final and reduced-motion frames are exactly the static W',
+      'Per-triangle CSS translateY + opacity (transform-box: fill-box, centre origin); Material-style ease-out for each entrance',
+      '0 0 24 24'
     );
   }
 
