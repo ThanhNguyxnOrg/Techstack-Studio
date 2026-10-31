@@ -32,6 +32,7 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   c: ['#283593', '#5C6BC0', '#FFFFFF'],
   cpp: ['#659ad2', '#00599c', '#004482'],
   csharp: ['#512BD4', '#6D28D9'],
+  playwright: ['#E2574C', '#2EAD33'],
 };
 
 function assertSafeSvg(markup: string, id: string): void {

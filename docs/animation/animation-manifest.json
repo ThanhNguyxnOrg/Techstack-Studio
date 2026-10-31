@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T06:07:35.571Z",
+  "generatedAt": "2026-10-31T13:29:31.499Z",
   "totalCatalogEntries": 554,
   "sourceSvgFilesCreated": 554,
   "animatedSvgFilesCreated": 554,
@@ -1673,8 +1673,8 @@
       "tier": "A",
       "sourceAssetPath": "/icons/source/playwright.svg",
       "animatedSvgPath": "/icons/animated/playwright.svg",
-      "animationConcept": "Progressive 4-subpath contour draw followed by an internal clipped #9BD89D prism sheen across Playwright",
-      "animationTechnique": "Staggered subpath stroke-dashoffset trace + self-clipped specular prism sweep",
+      "animationConcept": "Bespoke 8s theatre choreography: red mask enters from the left and green mask from the right, the masks glance toward each other, then bow together; final and reduced-motion frames are exactly the two-mask static logo",
+      "animationTechnique": "Per-mask CSS transforms (transform-box: view-box, mask-centred origins) + shared bow group; no foreign shapes, no colour change",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
