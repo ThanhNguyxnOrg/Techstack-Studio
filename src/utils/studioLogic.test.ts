@@ -137,6 +137,29 @@ test('TypeScript preview and export use the patched official badge geometry and 
     !animatedSvg.includes('#131822'),
     'Expected no inner plate rect when showPlate is false'
   );
+
+  const bannerSvg = generateStandaloneSvg([ts], {
+    ...DEFAULT_CUSTOMIZATION_SETTINGS,
+    animateSvgLogos: false,
+  });
+  assert.ok(
+    bannerSvg.includes('scale(1.7600)'),
+    'Standalone SVG banner must scale the normalized 24-unit TypeScript badge to the icon box'
+  );
+});
+
+test('normalized C++ artwork scales to the icon box in SVG banners', () => {
+  const cpp = TECH_BY_ID['cpp'];
+  assert.ok(cpp, 'Expected cpp in catalog');
+
+  const bannerSvg = generateStandaloneSvg([cpp], {
+    ...DEFAULT_CUSTOMIZATION_SETTINGS,
+    animateSvgLogos: false,
+  });
+  assert.ok(
+    bannerSvg.includes('scale(1.7600)'),
+    'Standalone SVG banner must scale the normalized 24-unit C++ badge to the icon box'
+  );
 });
 
 test('selection and duplicate prevention work accurately', () => {

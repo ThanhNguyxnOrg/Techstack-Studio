@@ -511,6 +511,17 @@ export function serializePersistedState(state: PersistedStudioState): string {
 }
 
 /**
+ * Returns the viewBox used to scale an icon in generated SVG output.
+ * C++ and TypeScript ship normalized 24-unit artwork even though the catalog
+ * retains their historical viewBox for source-asset compatibility.
+ */
+function getIconViewBox(item: TechItem): string {
+  return item.id === 'cpp' || item.id === 'typescript'
+    ? '0 0 24 24'
+    : item.svgViewBox || '0 0 24 24';
+}
+
+/**
  * Returns the canonical SVG `<defs>`, `<style>`, and inner body markup for a technology item,
  * sourced directly from its standalone `public/icons/animated/{id}.svg` and `public/icons/source/{id}.svg` files.
  */
@@ -585,8 +596,7 @@ export function generateAnimatedSingleIconSvg(
 
   const defsBlock = parts.defs ? `<defs>${parts.defs}</defs>` : '';
   const styleBlock = parts.style ? `<style>${parts.style}</style>` : '';
-  const viewBox =
-    item.id === 'cpp' || item.id === 'typescript' ? '0 0 24 24' : item.svgViewBox || '0 0 24 24';
+  const viewBox = getIconViewBox(item);
   const vbParts = viewBox.split(/\s+/).map(Number);
   const vbWidth = Number.isFinite(vbParts[2]) && vbParts[2] > 0 ? vbParts[2] : 24;
   const vbHeight = Number.isFinite(vbParts[3]) && vbParts[3] > 0 ? vbParts[3] : vbWidth;
@@ -966,7 +976,7 @@ export function generateStandaloneSvg(
 
     const innerPad = Number((boxSize * (settings.showInnerPlate ? 0.14 : 0.06)).toFixed(2));
     const innerSize = boxSize - innerPad * 2;
-    const vbParts = (item.svgViewBox || '0 0 24 24').split(/\s+/).map(Number);
+    const vbParts = getIconViewBox(item).split(/\s+/).map(Number);
     const baseViewBoxWidth = Number.isFinite(vbParts[2]) && vbParts[2] > 0 ? vbParts[2] : 24;
     const iconScale = (innerSize / baseViewBoxWidth).toFixed(4);
     const iconOffsetX = (boxX + innerPad).toFixed(2);
