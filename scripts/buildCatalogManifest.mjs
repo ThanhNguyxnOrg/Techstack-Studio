@@ -5212,12 +5212,12 @@ const EXTRA_COMMUNITY_SLUGS = {
       'pixel-grid-cascade',
     ],
     [
-      'conda',
-      'Conda / Mamba',
+      'condaforge',
+      'Conda-Forge',
       'condaforge',
       'Package & Build Managers',
-      'Cross-Platform Language-Agnostic Binary Package Manager',
-      ['mamba', 'micromamba'],
+      'Community-led Recipes, Infrastructure & Distributions for Conda',
+      [],
       'orbital-spin',
     ],
     [

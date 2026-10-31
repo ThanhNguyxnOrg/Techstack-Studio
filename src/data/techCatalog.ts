@@ -28,6 +28,7 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   gitlabci: 'gitlab',
   hlsl: 'webgpu',
   sql: 'azuresqldatabase',
+  conda: 'condaforge',
   gcp: 'googlecloud',
 };
 

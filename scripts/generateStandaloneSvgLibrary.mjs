@@ -517,6 +517,26 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // CONDAFORGE — heat glow (6s, user-picked direction C, replaces the
+  // forge-strike branch). Forging is heating metal until it glows and
+  // letting it cool: only the anvil's own fill changes, light grey to
+  // hot orange and back to exactly the static colour, then a static
+  // hold for the second half. No transform, no added shapes, no
+  // spinning rings — the colour shift stays visible even at 48px
+  // because it covers the whole mark. Reduced-motion is exactly the
+  // static anvil.
+  if (item.id === 'condaforge') {
+    return wrapSvg(
+      '',
+      `.tss_condaforge_heat{animation:tss_condaforge_heat 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_condaforge_heat{0%{fill:#F3F1EC}30%{fill:#FF7A29}50%,100%{fill:#F3F1EC}}`,
+      `.tss_condaforge_heat{animation:none!important;fill:#F3F1EC!important}`,
+      `<path class="tss_condaforge_heat" fill="#F3F1EC" fill-rule="evenodd" d="${item.svgPath}"/>`,
+      'Anvil heated to orange and cooled back to its static colour, then a long static hold; final and reduced-motion frames are exactly the static anvil',
+      'Fill-colour keyframes on the catalog path itself (light grey to hot orange to light grey); Material-style ease-out',
+      '0 0 24 24'
+    );
+  }
+
   // META — one-line draw (6s, user-picked direction A, replaces the
   // endless-flow version). Infinity is one line drawn without lifting
   // the pen: the stroke traces the logo's own path in the first 35%,
