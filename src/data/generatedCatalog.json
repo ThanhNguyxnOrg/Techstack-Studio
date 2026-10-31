@@ -2849,7 +2849,7 @@
     "docsUrl": "https://github.com/devicons/devicon/tree/master/icons/playwright",
     "monogram": "PLA",
     "svgPath": "M12 2C6.5 2 3 5.5 3 10.5c0 5.5 4.2 9.8 9 11.5 4.8-1.7 9-6 9-11.5C21 5.5 17.5 2 12 2zm-3.5 6.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm7 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-3.5 8.5c-2.8 0-5-1.8-5.5-4h11c-.5 2.2-2.7 4-5.5 4z",
-    "svgViewBox": "0 0 24 24",
+    "svgViewBox": "0 0 128 128",
     "tier": "A",
     "categoryRank": 15,
     "evidenceSource": "Stack Overflow Developer Survey 2026",
@@ -12069,42 +12069,6 @@
       "direction": "normal",
       "secondaryColor": "#F7C0AA",
       "rationale": "Continuous harmonic rotation of orbital rings around a stationary geometric nucleus."
-    }
-  },
-  {
-    "id": "gitlabci",
-    "name": "GitLab CI/CD",
-    "aliases": [
-      "gitlabci",
-      "gitlab",
-      "gitlab-runner"
-    ],
-    "category": "Cloud and DevOps",
-    "subcategory": "CI/CD & GitOps",
-    "role": "Integrated DevSecOps CI/CD Pipelines & Container Registry",
-    "brandColor": "#FC6D26",
-    "darkSafeColor": "#FC6D26",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlabci/gitlabci-original.svg",
-    "sourceSvgPath": "/icons/source/gitlabci.svg",
-    "animatedSvgPath": "/icons/animated/gitlabci.svg",
-    "docsUrl": "https://docs.gitlab.com/ee/ci/",
-    "monogram": "GIT",
-    "svgPath": "M12 2a10 10 0 1 0 10 10h-2.2A7.8 7.8 0 1 1 12 4.2V2zm5.5 2.5L22 9l-4.5 4.5v-3.2H12V7.7h5.5V4.5zM8.5 9.5L11 16l2.5-6.5h2L12 18.5 8.5 9.5z",
-    "svgViewBox": "0 0 24 24",
-    "tier": "B",
-    "categoryRank": 16,
-    "evidenceSource": "Stack Overflow Developer Survey 2026",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "segmented-assembly",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#FEB997",
-      "rationale": "Multi-part geometric slices translate inward and lock into the unified logo."
     }
   },
   {
