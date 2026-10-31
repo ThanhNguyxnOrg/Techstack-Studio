@@ -4010,8 +4010,8 @@ const EXTRA_COMMUNITY_SLUGS = {
       'orbital-spin',
     ],
     [
-      'hlsl',
-      'WebGPU / WGSL',
+      'webgpu',
+      'WebGPU',
       'webgpu',
       'Graphics & Shaders',
       'Next-Generation Web Graphics & Compute Shader API',

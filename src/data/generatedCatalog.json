@@ -2146,10 +2146,9 @@
     }
   },
   {
-    "id": "hlsl",
-    "name": "WebGPU / WGSL",
+    "id": "webgpu",
+    "name": "WebGPU",
     "aliases": [
-      "hlsl",
       "webgpu",
       "wgsl"
     ],
@@ -2159,8 +2158,8 @@
     "brandColor": "#005A9C",
     "darkSafeColor": "#005A9C",
     "iconUrl": "https://cdn.simpleicons.org/webgpu/005A9C",
-    "sourceSvgPath": "/icons/source/hlsl.svg",
-    "animatedSvgPath": "/icons/animated/hlsl.svg",
+    "sourceSvgPath": "/icons/source/webgpu.svg",
+    "animatedSvgPath": "/icons/animated/webgpu.svg",
     "docsUrl": "https://www.w3.org/2023/02/webgpu-logos.html",
     "monogram": "WEB",
     "svgPath": "m0 4.784 8.652 14.432 8.652-14.432zm22.032.145L20.07 8.202H24L22.032 4.93zm-4.46 0-4.192 6.993h8.384zm2.498 3.575 1.962 3.273L24 8.504zm-6.69 3.72 4.192 6.992 4.192-6.992z",
