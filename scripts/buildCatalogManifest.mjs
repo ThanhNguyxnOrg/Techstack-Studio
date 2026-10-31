@@ -4431,11 +4431,11 @@ const EXTRA_COMMUNITY_SLUGS = {
   'AI and machine learning': [
     [
       'meta',
-      'Llama (Meta AI)',
+      'Meta',
       'meta',
       'LLM & Foundation Models',
-      'Open-Weights Llama Frontier Language Models',
-      ['llama3', 'llama4', 'torchtune'],
+      'Parent Company of Llama and React',
+      ['meta platforms'],
       'dual-snake-interlock',
     ],
     [
