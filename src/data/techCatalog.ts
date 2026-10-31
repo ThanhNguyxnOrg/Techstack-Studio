@@ -27,6 +27,7 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   aws: 'amazonaws',
   gitlabci: 'gitlab',
   hlsl: 'webgpu',
+  sql: 'azuresqldatabase',
   gcp: 'googlecloud',
 };
 

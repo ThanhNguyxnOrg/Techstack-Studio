@@ -35,6 +35,7 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   playwright: ['#E2574C', '#2EAD33'],
   googledataflow: ['#4285F4', '#669df6', '#aecbfa'],
   webgpu: ['#005A9C', 'M0 4.784'],
+  azuresqldatabase: ['#0078d4', 'M14.49,7.15'],
 };
 
 function assertSafeSvg(markup: string, id: string): void {

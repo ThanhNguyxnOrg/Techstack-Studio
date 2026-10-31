@@ -181,10 +181,10 @@ const VERIFIED_FALLBACK_ICONS = {
     source: 'https://github.com/qkrdmstlr3/techstack-generator/blob/master/static/restapi-icon.svg',
     path: 'M4 6h16v3H4V6zm0 5h10v3H4v-3zm0 5h16v3H4v-3zm13-5h3v3h-3v-3z',
   },
-  sql: {
-    title: 'SQL',
-    hex: '38BDF8',
-    source: 'https://github.com/devicons/devicon/tree/master/icons/azuresqldatabase',
+  azuresqldatabase: {
+    title: 'Azure SQL Database',
+    hex: '0078D4',
+    source: 'https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview',
     path: 'M12 3C7.03 3 3 4.79 3 7v10c0 2.21 4.03 4 9 4s9-1.79 9-4V7c0-2.21-4.03-4-9-4zm0 2c3.87 0 7 1.12 7 2s-3.13 2-7 2-7-1.12-7-2 3.13-2 7-2zm7 12c0 .88-3.13 2-7 2s-7-1.12-7-2v-2.23c1.61.78 4.18 1.23 7 1.23s5.39-.45 7-1.23V17zm0-5c0 .88-3.13 2-7 2s-7-1.12-7-2V9.77C6.61 10.55 9.18 11 12 11s5.39-.45 7-1.23V12z',
   },
   freertos: {
@@ -426,15 +426,6 @@ const CATEGORY_SEEDS = {
       'Ubiquitous Web Platform Language',
       ['js', 'ecmascript', 'es6'],
       'liquid-wave-fill',
-    ],
-    [
-      'sql',
-      'SQL',
-      'sql',
-      'Query & Data',
-      'Structured Relational Query Language',
-      ['Structured Query Language', 'ansi sql'],
-      'container-stack-slide',
     ],
     [
       'html5',
@@ -2724,6 +2715,15 @@ const CATEGORY_SEEDS = {
       'Database Schema Change Management & CI/CD Automation',
       ['liquibase-db'],
       'liquid-wave-fill',
+    ],
+    [
+      'azuresqldatabase',
+      'Azure SQL Database',
+      'azuresqldatabase',
+      'Relational SQL',
+      'Fully Managed Cloud Relational Database Service',
+      ['azure sql'],
+      'container-stack-slide',
     ],
   ],
 
@@ -5427,7 +5427,7 @@ const TIER_A_IDS = new Set([
   'typescript',
   'python',
   'javascript',
-  'sql',
+  'azuresqldatabase',
   'html5',
   'css3',
   'gnubash',
