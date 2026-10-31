@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T13:39:02.490Z",
+  "generatedAt": "2026-10-31T13:48:00.974Z",
   "totalCatalogEntries": 553,
   "sourceSvgFilesCreated": 553,
   "animatedSvgFilesCreated": 553,
@@ -9905,8 +9905,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/gitlab.svg",
       "animatedSvgPath": "/icons/animated/gitlab.svg",
-      "animationConcept": "Tanuki halves slide in from the sides and lock into the full mark, then a gentle DevOps-loop sway; final and reduced-motion frames are exactly the static tanuki",
-      "animationTechnique": "Symmetric <clipPath> halves assembly + whole-mark loop sway; no foreign shapes, no colour change",
+      "animationConcept": "Single whole-tanuki arc: anticipation dip, one curved DevOps-loop swing left-to-right, overshoot settle, then a long static hold; final and reduced-motion frames are exactly the static tanuki",
+      "animationTechnique": "Whole-mark transform only (no clipPath, no opacity, no secondary elements); Pajamas ease-out-cubic + Material standard ease-in-out",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,

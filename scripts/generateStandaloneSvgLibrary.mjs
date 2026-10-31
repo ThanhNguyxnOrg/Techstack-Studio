@@ -406,21 +406,26 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // GITLAB — Tanuki halves lock into place, then a gentle DevOps-loop sway.
+  // GITLAB v4 — One whole-tanuki arc + settle (replaces the v1 halves).
   // The existing gitlab entry already carries the correct tanuki silhouette
   // (single-orange, an allowed Pajamas single-colour exception); the invented
   // gitlabci mark is removed from the catalog, so this is the one GitLab.
-  // Two clipped copies of the same path slide in from the sides and lock,
-  // then the whole mark sways like the DevOps loop. Final and reduced-motion
-  // frames are exactly the static tanuki: no foreign shapes, no colour change.
+  // One purpose only: a single curved DevOps-loop swing. Anticipation dip,
+  // arc left-to-right, overshoot settle, then a long static hold (motion in
+  // the first half of the 6s loop, static in the second half). Whole-mark
+  // transform only: no clipPath, no opacity fade, no secondary elements, so
+  // there is no seam to glitch. Easing is named, never the CSS default:
+  // Pajamas ease-out-cubic for the settle, Material standard ease-in-out
+  // for the arc travel. Final and reduced-motion frames are exactly the
+  // static tanuki: no foreign shapes, no colour change.
   if (item.id === 'gitlab') {
     return wrapSvg(
-      `<clipPath id="tss_gitlab_cl"><rect x="0" y="0" width="12" height="24"/></clipPath><clipPath id="tss_gitlab_cr"><rect x="12" y="0" width="12" height="24"/></clipPath>`,
-      `.tss_gitlab_l,.tss_gitlab_r,.tss_gitlab_w{transform-box:view-box}.tss_gitlab_l{transform-origin:6px 12px;animation:tss_gitlab_l 6s ease-in-out infinite}.tss_gitlab_r{transform-origin:18px 12px;animation:tss_gitlab_r 6s ease-in-out infinite}.tss_gitlab_w{transform-origin:12px 12px;animation:tss_gitlab_w 6s ease-in-out infinite}@keyframes tss_gitlab_l{0%{transform:translateX(-5px);opacity:0}18%,100%{transform:translateX(0);opacity:1}}@keyframes tss_gitlab_r{0%{transform:translateX(5px);opacity:0}18%,100%{transform:translateX(0);opacity:1}}@keyframes tss_gitlab_w{0%,35%{transform:rotate(0deg)}50%{transform:rotate(-3deg)}65%{transform:rotate(3deg)}80%,100%{transform:rotate(0deg)}}`,
-      `.tss_gitlab_l,.tss_gitlab_r,.tss_gitlab_w{animation:none!important;transform:none!important;opacity:1!important}`,
-      `<g class="tss_gitlab_w"><g clip-path="url(#tss_gitlab_cl)"><path class="tss_gitlab_l" fill="#FC6D26" fill-rule="evenodd" d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></g><g clip-path="url(#tss_gitlab_cr)"><path class="tss_gitlab_r" fill="#FC6D26" fill-rule="evenodd" d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></g></g>`,
-      'Tanuki halves slide in from the sides and lock into the full mark, then a gentle DevOps-loop sway; final and reduced-motion frames are exactly the static tanuki',
-      'Symmetric <clipPath> halves assembly + whole-mark loop sway; no foreign shapes, no colour change'
+      '',
+      `.tss_gitlab_w{transform-box:view-box;transform-origin:12px 12px;animation:tss_gitlab_w 6s cubic-bezier(0.4,0,0.2,1) infinite}@keyframes tss_gitlab_w{0%{transform:translate(0,0) rotate(0deg) scale(1,1);animation-timing-function:cubic-bezier(0.4,0,0.2,1)}8%{transform:translate(0,1px) rotate(0deg) scale(0.96,0.96);animation-timing-function:cubic-bezier(0.22,0.61,0.36,1)}20%{transform:translate(-3px,-3px) rotate(-6deg) scale(1,1);animation-timing-function:cubic-bezier(0.4,0,0.2,1)}32%{transform:translate(3px,-3px) rotate(6deg) scale(1,1);animation-timing-function:cubic-bezier(0.22,0.61,0.36,1)}44%{transform:translate(0,0) rotate(-2deg) scale(1.03,0.97)}50%,100%{transform:translate(0,0) rotate(0deg) scale(1,1)}}`,
+      `.tss_gitlab_w{animation:none!important;transform:none!important}`,
+      `<g class="tss_gitlab_w"><path fill="#FC6D26" fill-rule="evenodd" d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.4619-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></g>`,
+      'Single whole-tanuki arc: anticipation dip, one curved DevOps-loop swing left-to-right, overshoot settle, then a long static hold; final and reduced-motion frames are exactly the static tanuki',
+      'Whole-mark transform only (no clipPath, no opacity, no secondary elements); Pajamas ease-out-cubic + Material standard ease-in-out'
     );
   }
 
