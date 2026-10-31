@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T13:48:00.974Z",
+  "generatedAt": "2026-10-31T14:00:36.212Z",
   "totalCatalogEntries": 553,
   "sourceSvgFilesCreated": 553,
   "animatedSvgFilesCreated": 553,
@@ -1266,15 +1266,15 @@
       "knownIssues": null
     },
     {
-      "id": "hlsl",
-      "name": "WebGPU / WGSL",
-      "slug": "hlsl",
+      "id": "webgpu",
+      "name": "WebGPU",
+      "slug": "webgpu",
       "category": "Programming languages",
       "subcategory": "Graphics & Shaders",
       "tier": "C",
-      "sourceAssetPath": "/icons/source/hlsl.svg",
-      "animatedSvgPath": "/icons/animated/hlsl.svg",
-      "animationConcept": "Progressive 3-subpath contour draw followed by an internal clipped #85B0CF prism sheen across WebGPU / WGSL",
+      "sourceAssetPath": "/icons/source/webgpu.svg",
+      "animatedSvgPath": "/icons/animated/webgpu.svg",
+      "animationConcept": "Progressive 3-subpath contour draw followed by an internal clipped #85B0CF prism sheen across WebGPU",
       "animationTechnique": "Staggered subpath stroke-dashoffset trace + self-clipped specular prism sweep",
       "fileExists": true,
       "xmlValid": true,
