@@ -51,7 +51,7 @@ function assertSafeSvg(markup: string, id: string): void {
 }
 
 test('catalog and generated asset coverage stay in lockstep', () => {
-  assert.equal(TECH_CATALOG.length, 554, 'Expected exactly 554 catalog entries');
+  assert.equal(TECH_CATALOG.length, 553, 'Expected exactly 553 catalog entries');
   assert.equal(TECH_CATEGORIES.length, 8, 'Expected exactly 8 categories');
   assert.equal(ALL_SVG_MOTION_FAMILIES.length, 18, 'Expected exactly 18 motion families');
 

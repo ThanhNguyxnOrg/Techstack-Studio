@@ -115,12 +115,6 @@ const VERIFIED_FALLBACK_ICONS = {
     source: 'https://buildroot.org/',
     path: 'M12 2L4 6.5v7c0 4.5 3.4 8.2 8 9.5 4.6-1.3 8-5 8-9.5v-7L12 2zm0 2.5l5.5 3.1v5.9c0 3.2-2.3 5.9-5.5 7-3.2-1.1-5.5-3.8-5.5-7V7.6L12 4.5zm-2.5 4v7h3.5a2 2 0 0 0 0-4h-.5v-1h.5a1.5 1.5 0 0 0 0-3H9.5z',
   },
-  gitlabci: {
-    title: 'GitLab CI/CD',
-    hex: 'FC6D26',
-    source: 'https://docs.gitlab.com/ee/ci/',
-    path: 'M12 2a10 10 0 1 0 10 10h-2.2A7.8 7.8 0 1 1 12 4.2V2zm5.5 2.5L22 9l-4.5 4.5v-3.2H12V7.7h5.5V4.5zM8.5 9.5L11 16l2.5-6.5h2L12 18.5 8.5 9.5z',
-  },
   px4: {
     title: 'PX4 Autopilot',
     hex: '38BDF8',
@@ -2868,15 +2862,6 @@ const CATEGORY_SEEDS = {
       'Declarative GitOps Continuous Delivery for Kubernetes',
       ['argo', 'gitops'],
       'orbital-spin',
-    ],
-    [
-      'gitlabci',
-      'GitLab CI/CD',
-      'gitlab',
-      'CI/CD & GitOps',
-      'Integrated DevSecOps CI/CD Pipelines & Container Registry',
-      ['gitlab-runner'],
-      'segmented-assembly',
     ],
     [
       'jenkins',

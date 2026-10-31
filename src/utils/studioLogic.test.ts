@@ -148,6 +148,25 @@ test('TypeScript preview and export use the patched official badge geometry and 
   );
 });
 
+test('Playwright banner uses its 128-unit artwork viewBox, not the historical 24', () => {
+  const pw = TECH_BY_ID['playwright'];
+  assert.ok(pw, 'Expected playwright in catalog');
+
+  const staticSvg = generateAnimatedSingleIconSvg(pw, {
+    size: 48,
+    theme: 'dark',
+    animate: false,
+    speedMultiplier: 1,
+    showPlate: false,
+  });
+  assert.ok(
+    staticSvg.includes('viewBox="0 0 128 128"'),
+    'Expected 128-unit viewBox so the two masks are not clipped'
+  );
+  assert.ok(staticSvg.includes('#E2574C'), 'Expected the red theatre mask');
+  assert.ok(staticSvg.includes('#2EAD33'), 'Expected the green theatre mask');
+});
+
 test('normalized C++ artwork scales to the icon box in SVG banners', () => {
   const cpp = TECH_BY_ID['cpp'];
   assert.ok(cpp, 'Expected cpp in catalog');

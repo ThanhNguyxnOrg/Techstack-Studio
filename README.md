@@ -8,7 +8,7 @@
 
 **Compose animated technology stacks. Export them anywhere.**
 
-554 verified logos · 18 motion families · README Markdown, standalone HTML, and one self-contained animated SVG.
+553 verified logos · 18 motion families · README Markdown, standalone HTML, and one self-contained animated SVG.
 
 [![Live Studio](https://img.shields.io/badge/Open_Live_Studio-38BDF8?style=for-the-badge&logo=googlechrome&logoColor=090B10)](https://thanhnguyxnorg.github.io/Techstack-Studio/)
 [![Documentation](https://img.shields.io/badge/Read_the_docs-161F30?style=for-the-badge&logo=readthedocs&logoColor=white)](docs/ARCHITECTURE.md)
@@ -26,7 +26,7 @@
 [![Node.js 22](https://img.shields.io/badge/Node.js-22+-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)](.nvmrc)
 [![Prettier](https://img.shields.io/badge/code_style-Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=090B10)](.prettierrc.json)
 
-[![Logos](https://img.shields.io/badge/logos-554-38BDF8?style=flat-square&logo=svg&logoColor=white)](#catalog)
+[![Logos](https://img.shields.io/badge/logos-553-38BDF8?style=flat-square&logo=svg&logoColor=white)](#catalog)
 [![Motion families](https://img.shields.io/badge/motion_families-18-A78BFA?style=flat-square&logo=css3&logoColor=white)](#motion)
 [![Exports](https://img.shields.io/badge/exports-Markdown_HTML_SVG-0EA5E9?style=flat-square&logo=markdown&logoColor=white)](#exports)
 [![GitHub stars](https://img.shields.io/github/stars/ThanhNguyxnOrg/Techstack-Studio?style=flat-square&logo=github&label=stars&color=FBBF24)](https://github.com/ThanhNguyxnOrg/Techstack-Studio/stargazers)
@@ -51,7 +51,7 @@ Most "tech stack" README banners are static images, a pile of shields, or a
 third-party service that can disappear. Tech Stack Studio generates a **real,
 standalone SVG** that you own and can commit next to your code.
 
-- **554 verified logos** across 8 engineering domains, each with a static source
+- **553 verified logos** across 8 engineering domains, each with a static source
   file and an animated standalone file.
 - **18 motion families** with brand-aware colors, hand-tuned choreography for
   recognizable marks, and a reduced-motion fallback in every asset.
@@ -143,10 +143,10 @@ Everything is bundled: no icon CDN is called at runtime.
 | Backend               |      71 | Node.js, FastAPI, Spring Boot, Django, GraphQL       |
 | AI & machine learning |      49 | PyTorch, Hugging Face, LangChain, TensorFlow, Ollama |
 | Databases             |      48 | PostgreSQL, Redis, MongoDB, DuckDB, Apache Doris     |
-| Cloud & DevOps        |      87 | Docker, Kubernetes, Terraform, AWS, GCP, Grafana     |
+| Cloud & DevOps        |      86 | Docker, Kubernetes, Terraform, AWS, GCP, Grafana     |
 | Embedded development  |      48 | Arduino, Raspberry Pi, ESP32, STM32, MQTT            |
 | Developer tools       |      94 | Git, GitHub, Neovim, Cursor, Figma, Postman          |
-| **Total**             | **554** | **8 categories, 50 Tier A entries**                  |
+| **Total**             | **553** | **8 categories, 50 Tier A entries**                  |
 
 <a id="motion"></a>
 
@@ -235,8 +235,8 @@ The file is fully self-contained and can be committed to the repository. It uses
 │  ├─ ASSET_PIPELINE.md
 │  └─ DEPLOYMENT.md
 ├─ public/
-│  ├─ icons/animated/            # 554 standalone animated SVGs
-│  ├─ icons/source/              # 554 static source SVGs
+│  ├─ icons/animated/            # 553 standalone animated SVGs
+│  ├─ icons/source/              # 553 static source SVGs
 │  ├─ icons/reference/           # 29 upstream reference SVGs
 │  └─ favicon, manifest, OG image, robots, sitemap
 ├─ scripts/
@@ -276,13 +276,13 @@ The file is fully self-contained and can be committed to the repository. It uses
 CATEGORY_SEEDS
       │
       ▼
-buildCatalogManifest.mjs ──► src/data/generatedCatalog.json  (554 entries)
+buildCatalogManifest.mjs ──► src/data/generatedCatalog.json  (553 entries)
       │
       ▼
 generateStandaloneSvgLibrary.mjs
-      ├─► public/icons/source/{id}.svg       (554)
-      ├─► public/icons/animated/{id}.svg     (554)
-      ├─► src/data/standaloneSvgParts.json   (554)
+      ├─► public/icons/source/{id}.svg       (553)
+      ├─► public/icons/animated/{id}.svg     (553)
+      ├─► src/data/standaloneSvgParts.json   (553)
       └─► docs/animation/animation-manifest.json
 ```
 
@@ -314,7 +314,7 @@ npm run verify
 
 This runs Prettier, strict TypeScript, both test suites, and a production build.
 CI runs the same steps on Node 22 for every push and pull request. The catalog
-suite checks 554 entries, 8 categories, 18 motion families, exact SVG/parts parity,
+suite checks 553 entries, 8 categories, 18 motion families, exact SVG/parts parity,
 and rejects scripts, event handlers, raster embeds, `javascript:` URLs, and
 external runtime references in generated assets.
 

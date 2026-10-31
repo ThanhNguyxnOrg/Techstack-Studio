@@ -514,8 +514,12 @@ export function serializePersistedState(state: PersistedStudioState): string {
  * Returns the viewBox used to scale an icon in generated SVG output.
  * C++ and TypeScript ship normalized 24-unit artwork even though the catalog
  * retains their historical viewBox for source-asset compatibility.
+ * Playwright is the opposite case: its artwork ships at 128 units, so the
+ * banner export must use 128, not the catalog's historical 24, or the two
+ * theatre masks get clipped to the top-left corner.
  */
 function getIconViewBox(item: TechItem): string {
+  if (item.id === 'playwright') return '0 0 128 128';
   return item.id === 'cpp' || item.id === 'typescript'
     ? '0 0 24 24'
     : item.svgViewBox || '0 0 24 24';
