@@ -425,6 +425,19 @@ function buildSourceSvg(item) {
     // is available for the catalog.
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><defs><linearGradient id="tss_freertos_g" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#1B660F" offset="0%"/><stop stop-color="#6CAE3E" offset="100%"/></linearGradient></defs><g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path fill="#FFFFFF" fill-rule="evenodd" d="${d}"/></g></svg>`;
   }
+  if (item.id === 'matter') {
+    // Matter connectivity standard, verbatim official mark (three
+    // inward arc-tipped arrows) via the Wikimedia Commons vector of
+    // the official logo: CSA's own site file is only a PNG wrapper,
+    // so no CSA-direct vector exists. Symbol only, no 'matter'
+    // wordmark — the letters are illegible at the 48px card size
+    // (same reasoning as the Azure SQL blob-over-cylinder choice).
+    // Native symbol box 74.3x72.6 scaled into the 128 box (the
+    // animated template only accepts 24/18/32/128/200 viewBoxes).
+    // White fill = darkSafeColor, matching the app's dark cards.
+    // This replaces the invented cyan 4-point star.
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(0,1.46) scale(1.7228)"><path fill="#FFFFFF" fill-rule="evenodd" d="${d}"/></g></svg>`;
+  }
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${item.svgViewBox || '0 0 24 24'}" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
 }
 
@@ -771,6 +784,33 @@ function buildAnimatedSvg(item) {
       `<g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path class="tss_freertos_fill" fill="#FFFFFF" fill-rule="evenodd" d="${d}"/><path class="tss_freertos_g1" d="M18,61 L62,61 L62,20 L18,20 L18,61 Z "/><path class="tss_freertos_g2" d="M68,23 L68,21 L64,21 L64,19 C64,18.448 63.552,18 63,18 L17,18 C16.447,18 16,18.448 16,19 L16,21 L12,21 L12,23 L16,23 L16,27 L12,27 L12,29 L16,29 L16,33 L12,33 L12,35 L16,35 L16,39 L12,39 L12,41 L16,41 L16,45 L12,45 L12,47 L16,47 L16,51 L12,51 L12,53 L16,53 L16,57 L12,57 L12,59 L16,59 L16,62 C16,62.553 16.447,63 17,63 L63,63 C63.552,63 64,62.553 64,62 L64,59 L68,59 L68,57 L64,57 L64,53 L68,53 L68,51 L64,51 L64,47 L68,47 L68,45 L64,45 L64,41 L68,41 L68,39 L64,39 L64,35 L68,35 L68,33 L64,33 L64,29 L68,29 L68,27 L64,27 L64,23 L68,23 Z"/><path class="tss_freertos_g3" d="M27.775,44.486 C28.254,45.738 28.91,46.907 29.735,47.932 C29.807,48.033 29.891,48.133 29.967,48.222 C31.314,49.842 33.059,51.11 35,51.903 L35,57 L37,57 L37,52.555 C37.652,52.711 38.318,52.819 39,52.87 L39,57 L41,57 L41,52.87 C41.682,52.819 42.348,52.711 43,52.556 L43,57 L45,57 L45,51.903 C48.307,50.537 50.943,47.806 52.215,44.487 C54.624,44.401 56.559,42.429 56.559,40 C56.559,37.617 54.692,35.68 52.345,35.527 C51.047,31.802 48.172,28.893 44.473,27.546 C44.328,25.195 42.387,23.32 40,23.32 C37.612,23.32 35.672,25.195 35.525,27.547 C31.829,28.895 28.953,31.807 27.656,35.527 C25.308,35.678 23.44,37.616 23.44,40 C23.44,42.425 25.371,44.395 27.775,44.486 L27.775,44.486 Z "/><path class="tss_freertos_g4" d="M40,25.32 C41.38,25.32 42.502,26.443 42.502,27.823 C42.502,29.203 41.38,30.325 40,30.325 C38.62,30.325 37.498,29.203 37.498,27.823 C37.498,26.443 38.62,25.32 40,25.32 L40,25.32 Z M27.943,37.498 C29.323,37.498 30.445,38.621 30.445,40 C30.445,41.38 29.323,42.503 27.943,42.503 C26.563,42.503 25.44,41.38 25.44,40 C25.44,38.621 26.563,37.498 27.943,37.498 L27.943,37.498 Z M54.559,40 C54.559,41.38 53.436,42.503 52.056,42.503 C50.676,42.503 49.554,41.38 49.554,40 C49.554,38.621 50.676,37.498 52.056,37.498 C53.436,37.498 54.559,38.621 54.559,40 L54.559,40 Z "/><path class="tss_freertos_g5" d="M35.847,29.558 C36.402,30.881 37.574,31.878 39,32.205 L39,50.868 C38.322,50.807 37.651,50.68 37,50.495 L37,40 C37,39.448 36.552,39 36,39 L32.324,39 C31.998,37.571 30.996,36.397 29.667,35.844 C30.773,32.975 33,30.709 35.847,29.558 L35.847,29.558 Z M50.334,35.844 C49.005,36.397 48.002,37.571 47.675,39 L44,39 C43.447,39 43,39.448 43,40 L43,50.496 C42.35,50.681 41.679,50.807 41,50.868 L41,32.205 C42.425,31.878 43.598,30.88 44.153,29.556 C47.001,30.706 49.226,32.971 50.334,35.844 L50.334,35.844 Z M45,49.7 L45,41 L47.675,41 C47.993,42.39 48.951,43.533 50.224,44.104 C49.213,46.507 47.343,48.51 45,49.7 L45,49.7 Z M31.496,46.932 C31.448,46.875 31.399,46.82 31.326,46.721 C30.681,45.918 30.159,45.043 29.765,44.109 C31.045,43.54 32.005,42.393 32.324,41 L35,41 L35,49.697 C33.662,49.023 32.461,48.092 31.496,46.932 L31.496,46.932 Z "/></g>`,
       'FreeRTOS chip draws itself in 5 sequential groups (frame, pins, arc, nodes, traces), then holds solid and loops seamlessly; final and reduced-motion frames are exactly the static glyph',
       'Sequential staggered stroke draw on grouped subpaths + verbatim single-path fill layer; Material-style ease-out',
+      '0 0 128 128'
+    );
+  }
+
+  // MATTER — breathing loop (8s, user-approved demo B2). The first
+  // assemble-once version finished in 1.5s and then sat static for
+  // 4.5s, which read as play-once-then-sit with a snap restart (the
+  // user's "chưa có tính lặp lại và hơi nhanh" report). This version
+  // breathes continuously: the three arrows slide together and apart
+  // on an 8s symmetric ease-in-out cycle, phase-staggered across the
+  // loop (top, bottom-left, bottom-right) so the wave runs without
+  // pause. The mark stays 100% visible throughout — no fade, no
+  // empty frames — and first frame = last frame = exact static mark,
+  // so the loop restarts seamlessly. Splitting is safe: the three
+  // arrows are disjoint closed loops (verified M...Z each,
+  // non-overlapping bboxes), so no evenodd hole can break. No
+  // clipPath, no foreign shapes. Reduced-motion is exactly the
+  // static mark. Catalog motionRecipe.family stays
+  // segmented-assembly per the no-new-family-names convention.
+  if (item.id === 'matter') {
+    return wrapSvg(
+      '',
+      `.tss_matter_breathe{animation:tss_matter_breathe 8s ease-in-out infinite}@keyframes tss_matter_breathe{0%,100%{transform:translate(0,0)}50%{transform:translate(var(--tx),var(--ty))}}`,
+      `.tss_matter_breathe{animation:none!important;transform:none!important}`,
+      `<g transform="translate(0,1.46) scale(1.7228)"><path class="tss_matter_breathe" style="--tx:0px;--ty:-6px;animation-delay:0s" fill="#FFFFFF" d="M37.161,0.000L32.858,2.484L32.858,23.622C28.812,22.891 25.122,21.146 22.054,18.661L14.216,23.183C20.111,29.013 28.216,32.612 37.162,32.612S54.213,29.013 60.108,23.183L52.273,18.661A23.920,23.920 0 0,1 41.466,23.622L41.466,2.484Z"/><path class="tss_matter_breathe" style="--tx:-4px;--ty:4px;animation-delay:-2.67s" fill="#FFFFFF" d="M8.607,32.905L8.607,41.950A23.910,23.910 0 0,1 18.306,48.829L0.000,59.398L0.000,64.365L4.303,66.852L22.609,56.283C23.999,60.151 24.335,64.221 23.717,68.119L31.549,72.645C33.650,64.625 32.716,55.804 28.243,48.058A32.520,32.520 0 0,0 8.607,32.905Z"/><path class="tss_matter_breathe" style="--tx:4px;--ty:4px;animation-delay:-5.33s" fill="#FFFFFF" d="M65.715,32.905C57.719,35.095 50.551,40.311 46.079,48.057S40.672,64.625 42.773,72.644L50.608,68.118A23.900,23.900 0 0,1 51.713,56.282L70.022,66.851L74.325,64.364L74.325,59.397L56.016,48.829A23.920,23.920 0 0,1 65.715,41.950Z"/></g>`,
+      'Matter mark breathes: the three arrows slide together and apart in a continuous 8s loop, phase-staggered; first, last and reduced-motion frames are exactly the static mark',
+      'Phase-staggered translate loop on the three arrow loops (CSS vars for direction); symmetric ease-in-out',
       '0 0 128 128'
     );
   }

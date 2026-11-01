@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T06:18:49.613Z",
+  "generatedAt": "2026-11-01T07:50:04.592Z",
   "totalCatalogEntries": 552,
   "sourceSvgFilesCreated": 552,
   "animatedSvgFilesCreated": 552,
@@ -9191,8 +9191,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/matter.svg",
       "animatedSvgPath": "/icons/animated/matter.svg",
-      "animationConcept": "Bipartite structural assembly along Matter's vertical axis at (12, 11) with 2-part contour trace",
-      "animationTechnique": "Centroid-split <clipPath> halves sliding into lock + staggered subpath contour draw",
+      "animationConcept": "Matter mark breathes: the three arrows slide together and apart in a continuous 8s loop, phase-staggered; first, last and reduced-motion frames are exactly the static mark",
+      "animationTechnique": "Phase-staggered translate loop on the three arrow loops (CSS vars for direction); symmetric ease-in-out",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
