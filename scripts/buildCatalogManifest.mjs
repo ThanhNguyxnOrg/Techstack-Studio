@@ -33,9 +33,11 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   vcpkg: {
     title: 'vcpkg',
-    hex: '2563EB',
-    source: 'https://vcpkg.io/',
-    path: 'M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.3l6.8 3.8-3.1 1.8-6.8-3.8L12 4.3zM5 8.8l6 3.4v7.3l-6-3.4V8.8zm8 10.7v-7.3l6-3.4v7.3l-6 3.4zm2.2-5.8l1.6-.9v1.8l-1.6.9v-1.8z',
+    hex: 'FC950B',
+    source: 'https://raw.githubusercontent.com/vcpkg/vcpkg.github.io/main/assets/mark/mark.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official mark; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   echo: {
     title: 'Echo',
@@ -5160,7 +5162,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     [
       'vcpkg',
       'vcpkg',
-      'cplusplus',
+      'vcpkg',
       'Package & Build Managers',
       'C/C++ Library Manager for Windows, Linux, and macOS',
       ['vcpkg-json'],

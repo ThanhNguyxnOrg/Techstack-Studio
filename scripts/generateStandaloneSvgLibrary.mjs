@@ -457,6 +457,17 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(0,6.4837) scale(0.4183)"><image href="${CARGO_PNG_DATA_URI}" width="306" height="275"/></g></svg>`;
   }
 
+  if (item.id === 'vcpkg') {
+    // Official vcpkg mark, verbatim (vcpkg/vcpkg.github.io
+    // assets/mark/mark.svg): four gradient swooshes (#FC950B -> #F9C438)
+    // forming the cycle. Path data scaled x8 from the native 16 box
+    // into the 128 box; gradient vectors scaled x8 likewise so the
+    // userSpaceOnUse ramps land exactly as in the original. This
+    // replaces the invented blue hexagon-cube fallback (whose Devicon
+    // URL 404s). No clipPath, no foreign shapes.
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><defs><linearGradient id="tss_vcpkg_g0" x1="2.595" y1="62.941" x2="111.016" y2="-3.631" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="0.592076" stop-color="#F9C438"/></linearGradient><linearGradient id="tss_vcpkg_g1" x1="45.142" y1="32.699" x2="2.621" y2="82.919" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="1" stop-color="#F9C438"/></linearGradient><linearGradient id="tss_vcpkg_g2" x1="138.306" y1="79.548" x2="16.770" y2="117.889" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="0.612893" stop-color="#F9C438"/></linearGradient><linearGradient id="tss_vcpkg_g3" x1="112.998" y1="107.652" x2="101.581" y2="16.856" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="1" stop-color="#F9C438"/></linearGradient></defs><path fill="url(#tss_vcpkg_g0)" d="M58.18296 40.42368C31.58112 31.0004 12.56144 43.0024 1.54161 56.81896C1.12394 57.32832 0.32075 57.00992 0.41713 56.34144C1.05969 52.68032 2.5697 45.51736 5.52546 38.95928C17.54128 12.31304 49.5084 -0.64394 68.52808 0.0246C87.548 0.69314 110.3264 13.1408 102.4232 30.71392C95.4512 46.2496 86.0056 50.29264 58.18296 40.42368Z"/><path fill="url(#tss_vcpkg_g1)" d="M38.23552 39.98496C38.23552 39.63472 37.97848 39.3164 37.59296 39.3164C28.75784 39.53928 9.96312 45.39696 0.22836 63.09744C0.19623 63.16112 0.1641 63.2248 0.1641 63.32032C-2.85591 84.4912 36.78976 98.3072 38.23552 39.98496Z"/><path fill="url(#tss_vcpkg_g2)" d="M69.92904 87.576C96.5312 96.9992 115.5504 84.9976 126.5704 71.18096C126.988 70.6716 127.7912 70.98992 127.6944 71.65848C127.052 75.3196 125.5424 82.4824 122.5864 89.0408C110.6024 115.6872 78.63568 128.644 59.616 127.9752C40.59632 127.3064 17.81776 114.8592 25.7212 97.2856C32.6608 81.7824 42.13848 77.73904 69.92904 87.576Z"/><path fill="url(#tss_vcpkg_g3)" d="M89.7 88.56C89.7 88.9104 89.9576 89.2288 90.3424 89.2288C99.1776 89.0064 118.0368 82.8616 127.772 65.12952C127.804 65.06584 127.836 65.00216 127.836 64.90664C130.856 43.76792 91.1456 30.23792 89.7 88.56Z"/></svg>`;
+  }
+
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${item.svgViewBox || '0 0 24 24'}" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
 }
 
@@ -852,6 +863,24 @@ function buildAnimatedSvg(item) {
       '<g transform="translate(0,6.4837) scale(0.4183)"><use href="#tss_cargo_img"/><g clip-path="url(#tss_cargo_clip_stack)"><polygon class="tss_cargo_shine" points="-60,-10 190,-10 150,285 -100,285" fill="url(#tss_cargo_shine_g)"/></g><g clip-path="url(#tss_cargo_clip_pallet)"><polygon class="tss_cargo_shine" points="-60,-10 190,-10 150,285 -100,285" fill="url(#tss_cargo_shine_g)"/></g></g>',
       'Light sweep over golden crates: a soft band of light passes across the real logo once per loop, then holds static; the mark itself never moves or vanishes',
       'Real PNG + silhouette clips (stack + pallet regions) + gradient light band sweeping once per 10s loop; no redrawn shapes, no moving pieces',
+      '0 0 128 128'
+    );
+  }
+
+  // VCPKG — cycle assembly (8s): the four gradient swooshes fly in
+  // one by one clockwise around the cycle (top, right, bottom, left),
+  // then the exact static mark holds for the second half. No clipPath,
+  // no foreign shapes; reduced-motion is exactly the static mark.
+  // Catalog motionRecipe.family stays segmented-assembly per the
+  // no-new-family-names convention.
+  if (item.id === 'vcpkg') {
+    return wrapSvg(
+      `<linearGradient id="tss_vcpkg_g0" x1="2.595" y1="62.941" x2="111.016" y2="-3.631" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="0.592076" stop-color="#F9C438"/></linearGradient><linearGradient id="tss_vcpkg_g1" x1="45.142" y1="32.699" x2="2.621" y2="82.919" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="1" stop-color="#F9C438"/></linearGradient><linearGradient id="tss_vcpkg_g2" x1="138.306" y1="79.548" x2="16.770" y2="117.889" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="0.612893" stop-color="#F9C438"/></linearGradient><linearGradient id="tss_vcpkg_g3" x1="112.998" y1="107.652" x2="101.581" y2="16.856" gradientUnits="userSpaceOnUse"><stop stop-color="#FC950B"/><stop offset="1" stop-color="#F9C438"/></linearGradient>`,
+      `@keyframes tss_vcpkg_in_top{0%{opacity:0;transform:translate(0,-10px)}8%,100%{opacity:1;transform:translate(0,0)}}@keyframes tss_vcpkg_in_right{0%,12%{opacity:0;transform:translate(10px,0)}20%,100%{opacity:1;transform:translate(0,0)}}@keyframes tss_vcpkg_in_bottom{0%,24%{opacity:0;transform:translate(0,10px)}32%,100%{opacity:1;transform:translate(0,0)}}@keyframes tss_vcpkg_in_left{0%,36%{opacity:0;transform:translate(-10px,0)}44%,100%{opacity:1;transform:translate(0,0)}}.tss_vcpkg_in_top{animation:tss_vcpkg_in_top 8s ease-out infinite}.tss_vcpkg_in_right{animation:tss_vcpkg_in_right 8s ease-out infinite}.tss_vcpkg_in_bottom{animation:tss_vcpkg_in_bottom 8s ease-out infinite}.tss_vcpkg_in_left{animation:tss_vcpkg_in_left 8s ease-out infinite}`,
+      `.tss_vcpkg_in_top,.tss_vcpkg_in_right,.tss_vcpkg_in_bottom,.tss_vcpkg_in_left{animation:none!important;opacity:1!important;transform:none!important}`,
+      `<path class="tss_vcpkg_in_top" fill="url(#tss_vcpkg_g0)" d="M58.18296 40.42368C31.58112 31.0004 12.56144 43.0024 1.54161 56.81896C1.12394 57.32832 0.32075 57.00992 0.41713 56.34144C1.05969 52.68032 2.5697 45.51736 5.52546 38.95928C17.54128 12.31304 49.5084 -0.64394 68.52808 0.0246C87.548 0.69314 110.3264 13.1408 102.4232 30.71392C95.4512 46.2496 86.0056 50.29264 58.18296 40.42368Z"/><path class="tss_vcpkg_in_left" fill="url(#tss_vcpkg_g1)" d="M38.23552 39.98496C38.23552 39.63472 37.97848 39.3164 37.59296 39.3164C28.75784 39.53928 9.96312 45.39696 0.22836 63.09744C0.19623 63.16112 0.1641 63.2248 0.1641 63.32032C-2.85591 84.4912 36.78976 98.3072 38.23552 39.98496Z"/><path class="tss_vcpkg_in_bottom" fill="url(#tss_vcpkg_g2)" d="M69.92904 87.576C96.5312 96.9992 115.5504 84.9976 126.5704 71.18096C126.988 70.6716 127.7912 70.98992 127.6944 71.65848C127.052 75.3196 125.5424 82.4824 122.5864 89.0408C110.6024 115.6872 78.63568 128.644 59.616 127.9752C40.59632 127.3064 17.81776 114.8592 25.7212 97.2856C32.6608 81.7824 42.13848 77.73904 69.92904 87.576Z"/><path class="tss_vcpkg_in_right" fill="url(#tss_vcpkg_g3)" d="M89.7 88.56C89.7 88.9104 89.9576 89.2288 90.3424 89.2288C99.1776 89.0064 118.0368 82.8616 127.772 65.12952C127.804 65.06584 127.836 65.00216 127.836 64.90664C130.856 43.76792 91.1456 30.23792 89.7 88.56Z"/>`,
+      'Cycle assembly: the four gradient swooshes fly in clockwise around the cycle, then the exact static mark holds',
+      'Four staggered translate+fade entrances (top, right, bottom, left) baked into 8s keyframe windows; static second half',
       '0 0 128 128'
     );
   }

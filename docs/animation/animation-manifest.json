@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T10:04:46.279Z",
+  "generatedAt": "2026-11-01T10:20:03.159Z",
   "totalCatalogEntries": 546,
   "sourceSvgFilesCreated": 546,
   "animatedSvgFilesCreated": 546,
@@ -11123,8 +11123,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/vcpkg.svg",
       "animatedSvgPath": "/icons/animated/vcpkg.svg",
-      "animationConcept": "Bipartite structural assembly along vcpkg's vertical axis at (12, 12) with 3-part contour trace",
-      "animationTechnique": "Centroid-split <clipPath> halves sliding into lock + staggered subpath contour draw",
+      "animationConcept": "Cycle assembly: the four gradient swooshes fly in clockwise around the cycle, then the exact static mark holds",
+      "animationTechnique": "Four staggered translate+fade entrances (top, right, bottom, left) baked into 8s keyframe windows; static second half",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
