@@ -49,12 +49,6 @@ const VERIFIED_FALLBACK_ICONS = {
     source: 'https://tinygo.org/',
     path: 'M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm-4 3h2v2H3V8zm0 6h2v2H3v-2zm16-6h2v2h-2V8zm0 6h2v2h-2v-2zM9 9v2h2v4h2v-4h2V9H9z',
   },
-  axum: {
-    title: 'Axum / Tokio',
-    hex: 'F97316',
-    source: 'https://tokio.rs/',
-    path: 'M12 2L2.5 7.5v9L12 22l9.5-5.5v-9L12 2zm0 2.6l7.1 4.1L12 12.8 4.9 8.7 12 4.6zm-7.3 6l6.3 3.6v5.2l-6.3-3.6v-5.2zm8.3 8.8v-5.2l6.3-3.6v5.2l-6.3 3.6z',
-  },
   embassy: {
     title: 'Embassy (Rust Embedded)',
     hex: 'F59E0B',
@@ -4278,12 +4272,12 @@ const EXTRA_COMMUNITY_SLUGS = {
       'flame-core-flicker',
     ],
     [
-      'axum',
-      'Axum / Tokio',
-      'rust',
+      'tokio',
+      'Tokio',
+      'tokio',
       'Runtimes & Servers',
-      'Ergonomic Modular Async Rust Web & Runtime Stack',
-      ['tokio', 'tower'],
+      'Asynchronous Rust Runtime',
+      [],
       'orbital-spin',
     ],
     [
