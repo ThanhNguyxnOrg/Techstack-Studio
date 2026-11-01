@@ -356,6 +356,18 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#512BD4" d="${HEX_SHELL_PATH}"/><path fill="#6D28D9" d="M12 0.22 L2.26 5.31 C1.75 5.6 1.34 6.32 1.34 6.91 V17.09 L12 12 Z"/><path fill="#FFFFFF" d="M10.5 18.6c-3.65 0-6.6-2.95-6.6-6.6s2.95-6.6 6.6-6.6c2.2 0 4.15 1.1 5.35 2.8l-2.65 1.55c-.6-.9-1.6-1.45-2.7-1.45-1.85 0-3.35 1.5-3.35 3.7s1.5 3.7 3.35 3.7c1.1 0 2.1-.55 2.7-1.45l2.65 1.55c-1.2 1.7-3.15 2.8-5.35 2.8z"/><g fill="#FFFFFF"><rect x="15.2" y="10.2" width="5.2" height="1"/><rect x="15.2" y="12.6" width="5.2" height="1"/><rect x="16.4" y="9.1" width="1" height="5.6"/><rect x="18.4" y="9.1" width="1" height="5.6"/></g></svg>`;
   }
 
+  if (item.id === 'echo') {
+    // Official Echo site wordmark, verbatim from echo.labstack.com
+    // (logo-dark.svg): three cyan parallelograms plus the "echo"
+    // letter paths, white letters for the app's dark cards. The
+    // 111x36.7 artwork is scaled into the 128-unit box (same
+    // treatment Devicon gives the Fiber wordmark) so it passes the
+    // generator's viewBox validation. Catalog svgPath holds the
+    // same shapes concatenated as a single-colour fallback; this
+    // branch is the true multi-colour mark.
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(4,44.16) scale(1.0811)"><g transform="translate(-16,-15.7)"><polygon points="16,16 30,24 30,40 16,32" fill="#00AFD1"/><polygon points="32,24 46,32 46,48 32,40" fill="#4AE1FF"/><polygon points="18,34 32,42 32,52 18,44" fill="#00AFD1" opacity="0.55"/></g><g transform="translate(-8,0)" fill="#FFFFFF"><path d="M52.5,22.3c0.3,2,2,3.4,4.8,3.4c1.5,0,3.4-0.5,4.3-1.5l2.5,2.5c-1.7,1.7-4.4,2.6-6.9,2.6c-5.5,0-8.8-3.4-8.8-8.4c0-4.8,3.3-8.3,8.5-8.3c5.3,0,8.7,3.3,8.1,9.8H52.5z M61.2,19.1c-0.3-2-1.9-3.1-4.1-3.1c-2.1,0-3.9,1-4.5,3.1H61.2z"/><path d="M81.7,26.8c-1.8,1.8-3.8,2.5-6.1,2.5c-4.6,0-8.5-2.8-8.5-8.4c0-5.6,3.9-8.4,8.5-8.4c2.3,0,4,0.6,5.8,2.3l-2.5,2.6c-0.9-0.8-2.1-1.2-3.2-1.2C73,16.3,71,18.2,71,21c0,3,2.1,4.6,4.5,4.6c1.3,0,2.5-0.4,3.5-1.3L81.7,26.8z"/><path d="M87.4,6.4v8.8c1.4-1.8,3.2-2.4,5-2.4c4.5,0,6.5,3,6.5,7.7v8.3H95v-8.3c0-2.9-1.5-4.1-3.6-4.1c-2.3,0-3.9,2-3.9,4.3v8.1h-3.9V6.4H87.4z"/><path d="M118.1,21c0,4.5-3.1,8.2-8.3,8.2c-5.2,0-8.3-3.7-8.3-8.2c0-4.5,3.2-8.2,8.3-8.2S118.1,16.5,118.1,21z M105.5,21c0,2.4,1.5,4.6,4.3,4.6c2.9,0,4.3-2.2,4.3-4.6c0-2.4-1.7-4.7-4.3-4.7C107,16.3,105.5,18.6,105.5,21z"/></g></g></svg>`;
+  }
+
   if (item.id === 'playwright') {
     // Devicon playwright-original, verbatim: two theatre masks (red behind, green front),
     // 128-unit viewBox. The catalog's single-path 24-unit fallback is a green smiley,
@@ -607,6 +619,30 @@ function buildAnimatedSvg(item) {
       'Elixir drop draws itself along its own outline, then fills; final and reduced-motion frames are exactly the static drop',
       'One-line stroke draw on the catalog path itself (trace, then fill fade-in); Material-style ease-out',
       '0 0 24 24'
+    );
+  }
+
+  // ECHO — one-line draw (6s, user-approved variant B). The wordmark
+  // has 7 elements (3 cyan device parallelograms + 4 white letters);
+  // each is traced with a stroke in its own colour in order, then
+  // fills, staggered 0.25s, then the whole mark holds exactly static
+  // for the second half. The official logo's inner translate groups
+  // (device (-16,-15.7), letters (-8,0)) are preserved — dropping
+  // them shifts the wordmark right and clips the O past the 128 box
+  // (caught from the user's "O mất nét" report on the demo). No
+  // clipPath, no foreign shapes. Reduced-motion is exactly the
+  // static wordmark. Catalog motionRecipe.family stays
+  // data-stream-flow per the no-new-family-names convention for
+  // bespoke branches.
+  if (item.id === 'echo') {
+    return wrapSvg(
+      '',
+      `.tss_echo_draw{fill-opacity:0;stroke-dashoffset:100;animation:tss_echo_draw 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_echo_draw{0%{stroke-dashoffset:100;fill-opacity:0;stroke-opacity:1}8.3%{stroke-dashoffset:0;fill-opacity:0}16.6%,100%{stroke-dashoffset:0;fill-opacity:1;stroke-opacity:0}}`,
+      `.tss_echo_draw{animation:none!important;fill-opacity:1!important;stroke-opacity:0!important}`,
+      `<g transform="translate(4,44.16) scale(1.0811)"><g transform="translate(-16,-15.7)"><path class="tss_echo_draw" style="animation-delay:0.0s" fill="#00AFD1" stroke="#00AFD1" stroke-width="5" pathLength="100" stroke-dasharray="100" d="M16,16L30,24L30,40L16,32Z"/><path class="tss_echo_draw" style="animation-delay:0.25s" fill="#4AE1FF" stroke="#4AE1FF" stroke-width="5" pathLength="100" stroke-dasharray="100" d="M32,24L46,32L46,48L32,40Z"/><path class="tss_echo_draw" style="animation-delay:0.5s" fill="#00AFD1" stroke="#00AFD1" stroke-width="5" pathLength="100" stroke-dasharray="100" d="M18,34L32,42L32,52L18,44Z" opacity="0.55"/></g><g transform="translate(-8,0)"><path class="tss_echo_draw" style="animation-delay:0.75s" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" pathLength="100" stroke-dasharray="100" d="M52.5,22.3c0.3,2,2,3.4,4.8,3.4c1.5,0,3.4-0.5,4.3-1.5l2.5,2.5c-1.7,1.7-4.4,2.6-6.9,2.6c-5.5,0-8.8-3.4-8.8-8.4c0-4.8,3.3-8.3,8.5-8.3c5.3,0,8.7,3.3,8.1,9.8H52.5z M61.2,19.1c-0.3-2-1.9-3.1-4.1-3.1c-2.1,0-3.9,1-4.5,3.1H61.2z"/><path class="tss_echo_draw" style="animation-delay:1.0s" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" pathLength="100" stroke-dasharray="100" d="M81.7,26.8c-1.8,1.8-3.8,2.5-6.1,2.5c-4.6,0-8.5-2.8-8.5-8.4c0-5.6,3.9-8.4,8.5-8.4c2.3,0,4,0.6,5.8,2.3l-2.5,2.6c-0.9-0.8-2.1-1.2-3.2-1.2C73,16.3,71,18.2,71,21c0,3,2.1,4.6,4.5,4.6c1.3,0,2.5-0.4,3.5-1.3L81.7,26.8z"/><path class="tss_echo_draw" style="animation-delay:1.25s" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" pathLength="100" stroke-dasharray="100" d="M87.4,6.4v8.8c1.4-1.8,3.2-2.4,5-2.4c4.5,0,6.5,3,6.5,7.7v8.3H95v-8.3c0-2.9-1.5-4.1-3.6-4.1c-2.3,0-3.9,2-3.9,4.3v8.1h-3.9V6.4H87.4z"/><path class="tss_echo_draw" style="animation-delay:1.5s" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" pathLength="100" stroke-dasharray="100" d="M118.1,21c0,4.5-3.1,8.2-8.3,8.2c-5.2,0-8.3-3.7-8.3-8.2c0-4.5,3.2-8.2,8.3-8.2S118.1,16.5,118.1,21z M105.5,21c0,2.4,1.5,4.6,4.3,4.6c2.9,0,4.3-2.2,4.3-4.6c0-2.4-1.7-4.7-4.3-4.7C107,16.3,105.5,18.6,105.5,21z"/></g></g>`,
+      'Echo wordmark draws itself element by element (device, then e, c, h, o), then a long static hold; final and reduced-motion frames are exactly the static wordmark',
+      'One-line stroke draw on the official wordmark itself (trace, then fill fade-in per element); Material-style ease-out',
+      '0 0 128 128'
     );
   }
 
