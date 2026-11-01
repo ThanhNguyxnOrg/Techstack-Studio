@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T10:34:29.466Z",
+  "generatedAt": "2026-11-01T10:55:04.483Z",
   "totalCatalogEntries": 546,
   "sourceSvgFilesCreated": 546,
   "animatedSvgFilesCreated": 546,
@@ -9233,8 +9233,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/klipper.svg",
       "animatedSvgPath": "/icons/animated/klipper.svg",
-      "animationConcept": "Sequential 1-subpath vector contour drawing (#F193A7) illuminating the #E11D48 Klipper silhouette",
-      "animationTechnique": "Multi-subpath stroke-dasharray/stroke-dashoffset choreography + synchronized fill-opacity reveal",
+      "animationConcept": "Gantry assembly: the slate beams slide in, the red stripe traces down from the top vertex, then the wordmark fades in; exact static hold in the second half",
+      "animationTechnique": "Three staggered translate+fade entrances baked into 8s keyframe windows (beams, stripe, wordmark); static second half",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,

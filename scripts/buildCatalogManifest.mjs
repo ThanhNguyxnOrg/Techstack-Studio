@@ -233,9 +233,11 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   klipper: {
     title: 'Klipper',
-    hex: 'E11D48',
-    source: 'https://www.klipper3d.org/',
-    path: 'M5 3h3v7.5L15.5 3H19l-7.5 8L19 21h-3.5L8 12.5V21H5V3z',
+    hex: 'B12F35',
+    source: 'https://www.klipper3d.org/img/klipper.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official lockup; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   microchip: {
     title: 'Microchip (PIC / AVR)',
@@ -3389,7 +3391,7 @@ const CATEGORY_SEEDS = {
       'klipper',
       'Robotics & Autonomy',
       'High-Precision 3D Printer Firmware Combining Linux & MCUs',
-      ['voron', 'mainsail'],
+      [],
       'circuit-trace-pulse',
     ],
     [
