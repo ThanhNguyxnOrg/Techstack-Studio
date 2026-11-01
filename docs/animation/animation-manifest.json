@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T09:18:36.181Z",
+  "generatedAt": "2026-11-01T09:29:00.889Z",
   "totalCatalogEntries": 552,
   "sourceSvgFilesCreated": 552,
   "animatedSvgFilesCreated": 552,
@@ -10010,8 +10010,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/cargo.svg",
       "animatedSvgPath": "/icons/animated/cargo.svg",
-      "animationConcept": "Stacking game, whole boxes: the pallet stands alone, then each of the 6 real crates drops in as one whole 3D box, bottom-up, until the stack matches the official mark, hold, fade together, and repeat",
-      "animationTechnique": "Real-PNG visible-region pieces via clip-path polygons on one embedded image (one whole box per piece, no rectangular slices) + per-box drop keyframes (accelerating fall, overshoot settle); no redrawn shapes",
+      "animationConcept": "Stack drop-and-settle: the whole stack of real crates drops onto the static pallet as one intact piece, overshoots slightly, settles, holds, then fades for a seamless loop",
+      "animationTechnique": "Real-PNG two-region pieces (whole stack + pallet) via clip-path polygons on one embedded image + single drop-and-settle keyframe; no redrawn shapes, no per-box slices",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
