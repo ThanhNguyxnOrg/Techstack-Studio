@@ -39,7 +39,10 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   echo: ['#00AFD1', '#4AE1FF', 'M52.5,22.3'],
   openvino: ['#FFFFFF', 'M117.045'],
   freertos: ['#6CAE3E', 'M27.943'],
+  cargo: ['data:image/png'],
 };
+
+const RASTER_DATA_URI_ONLY_IDS = new Set(['cargo']);
 
 function assertSafeSvg(markup: string, id: string): void {
   assert.ok(markup.startsWith('<svg '), `${id}: SVG must start with an <svg> element`);
@@ -47,7 +50,16 @@ function assertSafeSvg(markup: string, id: string): void {
   assert.ok(markup.includes('viewBox="'), `${id}: SVG must declare a viewBox`);
   assert.ok(!/<script[\s>]/i.test(markup), `${id}: SVG must not contain scripts`);
   assert.ok(!/<foreignObject[\s>]/i.test(markup), `${id}: SVG must not contain foreignObject`);
-  assert.ok(!/<image[\s>]/i.test(markup), `${id}: SVG must not contain raster images`);
+  // Cargo is the one exception to the no-raster rule: its only official
+  // mark is raster (rust-lang/cargo ships no vector logo), so its SVGs
+  // embed the official PNG as a data URI. External image URLs stay banned
+  // for every entry, cargo included (see the href/src check below).
+  assert.ok(
+    RASTER_DATA_URI_ONLY_IDS.has(id)
+      ? !/<image[^>]*\s(?:href|src)\s*=\s*["'](?!data:)/i.test(markup)
+      : !/<image[\s>]/i.test(markup),
+    `${id}: SVG must not contain raster images`
+  );
   assert.ok(!/\son[a-z]+\s*=/i.test(markup), `${id}: SVG must not contain inline event handlers`);
   assert.ok(!/javascript:/i.test(markup), `${id}: SVG must not contain javascript: URLs`);
   assert.ok(

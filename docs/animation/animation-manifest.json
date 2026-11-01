@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T07:50:04.592Z",
+  "generatedAt": "2026-11-01T08:34:32.716Z",
   "totalCatalogEntries": 552,
   "sourceSvgFilesCreated": 552,
   "animatedSvgFilesCreated": 552,
@@ -10010,8 +10010,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/cargo.svg",
       "animatedSvgPath": "/icons/animated/cargo.svg",
-      "animationConcept": "Sequential 3-subpath vector contour drawing (#F5DB88) illuminating the #EAB308 Cargo silhouette",
-      "animationTechnique": "Multi-subpath stroke-dasharray/stroke-dashoffset choreography + synchronized fill-opacity reveal",
+      "animationConcept": "Stacking game: the pallet stands alone, then the 7 boxes of the real logo drop in bottom-up until the stack is full like the official mark, hold, fade together, and repeat",
+      "animationTechnique": "Real-PNG slices via clip-path polygons on one embedded image + per-box drop keyframes (accelerating fall, overshoot settle); no redrawn shapes",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
