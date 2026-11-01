@@ -834,27 +834,24 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // CARGO — Stack drop-and-settle v3: the pallet stands static and the
-  // WHOLE stack of real crates drops onto it as ONE intact piece (not
-  // per-box slices). v2's per-box stacking read as very glitchy in the
-  // browser: falling pieces clipped at the viewport top and slid over
-  // each other in the wrong order during the fall. v3 avoids both by
-  // moving a single stack piece: fade in 28 native px above home, fall
-  // with acceleration, 3px overshoot, settle, hold, fade out, repeat
-  // (10s loop). Still the real PNG only (the same embedded image, masked
-  // by clip-path polygons in the PNG's native 306x275 space, inside a
-  // group scaled into the 128 box): one clip = all 6 box visible regions
-  // together, one clip = the pallet. First frame = last frame = stack
-  // hidden above home + pallet only, so the loop is seamless;
-  // reduced-motion = full logo static.
+  // CARGO — Light sweep v4: the logo itself NEVER moves. v3's whole-stack
+  // drop read as very ugly, so v4 changes style completely: a soft band
+  // of light sweeps across the golden crates once per 10s loop, then the
+  // exact static logo holds. The band is a gradient polygon clipped to
+  // the logo's own silhouette (the v3 stack + pallet clips, same real PNG
+  // only, no redrawn shapes, no moving pieces, no vanishing). Light on
+  // gold is the natural beautiful motion for golden crates, and it stays
+  // fully legible at 48px. First frame = last frame = exact logo (band
+  // off-frame at both ends, invisible); reduced-motion = full logo static
+  // with the band hidden.
   if (item.id === 'cargo') {
     return wrapSvg(
-      `<image id="tss_cargo_img" href="${CARGO_PNG_DATA_URI}" width="306" height="275"/><clipPath id="tss_cargo_clip_stack"><polygon points="209.5,46 152,26 94.5,46 94.5,85 141.5,68.7 141.5,63 199,43 209.5,46.7"/><polygon points="256.5,123 256.5,63 199,43 141.5,63 141.5,68.7 152,65 209.5,85 209.5,110.7 250.8,125"/><polygon points="37.5,131.5 37.5,191.5 95,211.5 100,209.8 100,169 131.8,158 94.5,145 94.5,111.7"/><polygon points="42.5,149 42.5,209 100,229 157.5,209 157.5,192.6 141.5,187 141.5,161.3 152,165 94.5,145 94.5,130.9"/><polygon points="141.5,187 199,207 256.5,187 256.5,127 209.5,110.7 209.5,145 152,165 141.5,161.3"/><polygon points="94.5,85 152,65 209.5,85 209.5,145 152,165 94.5,145"/></clipPath><clipPath id="tss_cargo_clip_pallet"><polygon points="15,185 15,262 292,262 292,185 256.5,185 256.5,187 199,207 141.5,187 157.5,192.6 157.5,209 100,229 42.5,209 42.5,193.2 37.5,191.5 37.5,185"/></clipPath>`,
-      '@keyframes tss_cargo_stack{0%{opacity:0;transform:translateY(-28px)}4%{opacity:1;transform:translateY(-28px);animation-timing-function:cubic-bezier(.55,0,1,.45)}16%{opacity:1;transform:translateY(3px);animation-timing-function:ease-out}22%{opacity:1;transform:translateY(0)}80%{opacity:1;transform:translateY(0)}88%{opacity:0;transform:translateY(0)}100%{opacity:0;transform:translateY(-28px)}}.tss_cargo_stack{animation:tss_cargo_stack 10s linear infinite}',
-      '.tss_cargo_stack{animation:none!important;opacity:1!important;transform:none!important}',
-      '<g transform="translate(0,6.4837) scale(0.4183)"><use href="#tss_cargo_img" clip-path="url(#tss_cargo_clip_pallet)"/><use href="#tss_cargo_img" clip-path="url(#tss_cargo_clip_stack)" class="tss_cargo_stack"/></g>',
-      'Stack drop-and-settle: the whole stack of real crates drops onto the static pallet as one intact piece, overshoots slightly, settles, holds, then fades for a seamless loop',
-      'Real-PNG two-region pieces (whole stack + pallet) via clip-path polygons on one embedded image + single drop-and-settle keyframe; no redrawn shapes, no per-box slices',
+      `<image id="tss_cargo_img" href="${CARGO_PNG_DATA_URI}" width="306" height="275"/><clipPath id="tss_cargo_clip_stack"><polygon points="209.5,46 152,26 94.5,46 94.5,85 141.5,68.7 141.5,63 199,43 209.5,46.7"/><polygon points="256.5,123 256.5,63 199,43 141.5,63 141.5,68.7 152,65 209.5,85 209.5,110.7 250.8,125"/><polygon points="37.5,131.5 37.5,191.5 95,211.5 100,209.8 100,169 131.8,158 94.5,145 94.5,111.7"/><polygon points="42.5,149 42.5,209 100,229 157.5,209 157.5,192.6 141.5,187 141.5,161.3 152,165 94.5,145 94.5,130.9"/><polygon points="141.5,187 199,207 256.5,187 256.5,127 209.5,110.7 209.5,145 152,165 141.5,161.3"/><polygon points="94.5,85 152,65 209.5,85 209.5,145 152,165 94.5,145"/></clipPath><clipPath id="tss_cargo_clip_pallet"><polygon points="15,185 15,262 292,262 292,185 256.5,185 256.5,187 199,207 141.5,187 157.5,192.6 157.5,209 100,229 42.5,209 42.5,193.2 37.5,191.5 37.5,185"/></clipPath><linearGradient id="tss_cargo_shine_g" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="25%" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="45%" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.55"/><stop offset="75%" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      '@keyframes tss_cargo_shine{0%{transform:translateX(-160px)}35%{transform:translateX(340px)}100%{transform:translateX(340px)}}.tss_cargo_shine{animation:tss_cargo_shine 10s linear infinite}',
+      '.tss_cargo_shine{animation:none!important;opacity:0!important}',
+      '<g transform="translate(0,6.4837) scale(0.4183)"><use href="#tss_cargo_img"/><g clip-path="url(#tss_cargo_clip_stack)"><polygon class="tss_cargo_shine" points="-60,-10 190,-10 150,285 -100,285" fill="url(#tss_cargo_shine_g)"/></g><g clip-path="url(#tss_cargo_clip_pallet)"><polygon class="tss_cargo_shine" points="-60,-10 190,-10 150,285 -100,285" fill="url(#tss_cargo_shine_g)"/></g></g>',
+      'Light sweep over golden crates: a soft band of light passes across the real logo once per loop, then holds static; the mark itself never moves or vanishes',
+      'Real PNG + silhouette clips (stack + pallet regions) + gradient light band sweeping once per 10s loop; no redrawn shapes, no moving pieces',
       '0 0 128 128'
     );
   }

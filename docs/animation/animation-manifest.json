@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T09:29:00.889Z",
+  "generatedAt": "2026-11-01T09:37:55.872Z",
   "totalCatalogEntries": 552,
   "sourceSvgFilesCreated": 552,
   "animatedSvgFilesCreated": 552,
@@ -10010,8 +10010,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/cargo.svg",
       "animatedSvgPath": "/icons/animated/cargo.svg",
-      "animationConcept": "Stack drop-and-settle: the whole stack of real crates drops onto the static pallet as one intact piece, overshoots slightly, settles, holds, then fades for a seamless loop",
-      "animationTechnique": "Real-PNG two-region pieces (whole stack + pallet) via clip-path polygons on one embedded image + single drop-and-settle keyframe; no redrawn shapes, no per-box slices",
+      "animationConcept": "Light sweep over golden crates: a soft band of light passes across the real logo once per loop, then holds static; the mark itself never moves or vanishes",
+      "animationTechnique": "Real PNG + silhouette clips (stack + pallet regions) + gradient light band sweeping once per 10s loop; no redrawn shapes, no moving pieces",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
