@@ -200,9 +200,11 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   infineon: {
     title: 'Infineon',
-    hex: '005DA9',
-    source: 'https://www.infineon.com/',
-    path: 'M12 4C6.48 4 2 7.58 2 12s4.48 8 10 8 10-3.58 10-8-4.48-8-10-8zm0 2.5c4.14 0 7.5 2.46 7.5 5.5S16.14 17.5 12 17.5 4.5 15.04 4.5 12 7.86 6.5 12 6.5zm-1.5 2.5v6h3V9h-3z',
+    hex: '0066B3',
+    source: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Infineon-Logo.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official logo; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   yoctoproject: {
     title: 'Yocto Project',

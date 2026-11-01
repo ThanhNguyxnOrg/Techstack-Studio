@@ -36,6 +36,7 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   googledataflow: ['#4285F4', '#669df6', '#aecbfa'],
   webgpu: ['#005A9C', 'M0 4.784'],
   vcpkg: ['linearGradient', '#FC950B'],
+  infineon: ['#0066B3', '#EC1840'],
   azuresqldatabase: ['#0078d4', 'M14.49,7.15'],
   echo: ['#00AFD1', '#4AE1FF', 'M52.5,22.3'],
   openvino: ['#FFFFFF', 'M117.045'],

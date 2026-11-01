@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T10:20:03.159Z",
+  "generatedAt": "2026-11-01T10:27:34.676Z",
   "totalCatalogEntries": 546,
   "sourceSvgFilesCreated": 546,
   "animatedSvgFilesCreated": 546,
@@ -8855,8 +8855,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/infineon.svg",
       "animatedSvgPath": "/icons/animated/infineon.svg",
-      "animationConcept": "Sequential 3-subpath vector contour drawing (#85B1D6) illuminating the #005DA9 Infineon silhouette",
-      "animationTechnique": "Multi-subpath stroke-dasharray/stroke-dashoffset choreography + synchronized fill-opacity reveal",
+      "animationConcept": "Wordmark assembly: the lowercase letters fade in left to right, then the red arc sweeps in to complete the mark; exact static hold in the second half",
+      "animationTechnique": "Nine staggered opacity+translate entrances baked into 8s keyframe windows (letters, then arc); static second half",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
