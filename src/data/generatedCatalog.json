@@ -1932,113 +1932,6 @@
     }
   },
   {
-    "id": "verilog",
-    "name": "SystemVerilog",
-    "aliases": [
-      "verilog",
-      "sv",
-      "rtl"
-    ],
-    "category": "Programming languages",
-    "subcategory": "Hardware Description",
-    "role": "IEEE Hardware Description & Verification Language",
-    "brandColor": "#2DD4BF",
-    "darkSafeColor": "#2DD4BF",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/verilog/verilog-original.svg",
-    "sourceSvgPath": "/icons/source/verilog.svg",
-    "animatedSvgPath": "/icons/animated/verilog.svg",
-    "docsUrl": "https://ieee.org/",
-    "monogram": "SYS",
-    "svgPath": "M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 0h6v6h-6v-6zM10 7h4v2h-4V7zm0 10h4v2h-4v-2zM7 10v4h2v-4H7zm10 0v4h2v-4h-2z",
-    "svgViewBox": "0 0 24 24",
-    "tier": "C",
-    "categoryRank": 55,
-    "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "circuit-trace-pulse",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#9AEAE0",
-      "rationale": "High-intensity electric signal dash travels along microchip leads and hardware traces."
-    }
-  },
-  {
-    "id": "vhdl",
-    "name": "VHDL",
-    "aliases": [
-      "vhdl",
-      "fpga-vhdl"
-    ],
-    "category": "Programming languages",
-    "subcategory": "Hardware Description",
-    "role": "Very High Speed Integrated Circuit HDL",
-    "brandColor": "#818CF8",
-    "darkSafeColor": "#818CF8",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vhdl/vhdl-original.svg",
-    "sourceSvgPath": "/icons/source/vhdl.svg",
-    "animatedSvgPath": "/icons/animated/vhdl.svg",
-    "docsUrl": "https://ieee.org/",
-    "monogram": "VHD",
-    "svgPath": "M3 5h4l3 9 3-9h4l-5 14H8L3 5zm13 4h5v2h-5V9zm0 4h5v2h-5v-2z",
-    "svgViewBox": "0 0 24 24",
-    "tier": "C",
-    "categoryRank": 56,
-    "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "circuit-trace-pulse",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#C3C8FC",
-      "rationale": "High-intensity electric signal dash travels along microchip leads and hardware traces."
-    }
-  },
-  {
-    "id": "awk",
-    "name": "AWK",
-    "aliases": [
-      "awk",
-      "gnu",
-      "gawk"
-    ],
-    "category": "Programming languages",
-    "subcategory": "Scripting & Text",
-    "role": "Pattern Scanning and Text Processing Language",
-    "brandColor": "#38BDF8",
-    "darkSafeColor": "#38BDF8",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/awk/awk-original.svg",
-    "sourceSvgPath": "/icons/source/awk.svg",
-    "animatedSvgPath": "/icons/animated/awk.svg",
-    "docsUrl": "https://www.gnu.org/software/gawk/",
-    "monogram": "AWK",
-    "svgPath": "M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2.5 11.5h2l.6-1.8h2.3l.6 1.8h2L10.3 8H8.2l-2.7 7.5zm2.9-3.3l.8-2.5.8 2.5H8.4zm6.1 3.3h4v-1.8h-4v1.8z",
-    "svgViewBox": "0 0 24 24",
-    "tier": "C",
-    "categoryRank": 57,
-    "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "data-stream-flow",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#9FDFFC",
-      "rationale": "Multi-lane flowing dash streams traverse the pipeline channels of the logo."
-    }
-  },
-  {
     "id": "reason",
     "name": "ReasonML",
     "aliases": [
@@ -5933,44 +5826,6 @@
       "direction": "normal",
       "secondaryColor": "#F185CE",
       "rationale": "Sequential edge illumination and vertex pulse propagate across the graph geometry."
-    }
-  },
-  {
-    "id": "restapi",
-    "name": "REST API",
-    "aliases": [
-      "restapi",
-      "rest",
-      "restful",
-      "json-api"
-    ],
-    "category": "Backend",
-    "subcategory": "APIs & Protocols",
-    "role": "Representational State Transfer Web Architecture",
-    "brandColor": "#38BDF8",
-    "darkSafeColor": "#38BDF8",
-    "iconUrl": "https://raw.githubusercontent.com/qkrdmstlr3/techstack-generator/master/static/restapi-icon.svg",
-    "sourceSvgPath": "/icons/source/restapi.svg",
-    "animatedSvgPath": "/icons/animated/restapi.svg",
-    "docsUrl": "https://github.com/qkrdmstlr3/techstack-generator/blob/master/static/restapi-icon.svg",
-    "monogram": "RES",
-    "svgPath": "M4 6h16v3H4V6zm0 5h10v3H4v-3zm0 5h16v3H4v-3zm13-5h3v3h-3v-3z",
-    "svgViewBox": "0 0 24 24",
-    "referenceSvgFile": "restapi-icon.svg",
-    "tier": "B",
-    "categoryRank": 11,
-    "evidenceSource": "Stack Overflow Survey 2026 & GitHub Octoverse 2025",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "data-stream-flow",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#9FDFFC",
-      "rationale": "Multi-lane flowing dash streams traverse the pipeline channels of the logo."
     }
   },
   {
@@ -15253,42 +15108,6 @@
     }
   },
   {
-    "id": "buildroot",
-    "name": "Buildroot",
-    "aliases": [
-      "buildroot",
-      "linux",
-      "embedded-linux"
-    ],
-    "category": "Embedded development",
-    "subcategory": "RTOS & Embedded Toolchains",
-    "role": "Simple Efficient Embedded Linux System Generation Tool",
-    "brandColor": "#F59E0B",
-    "darkSafeColor": "#F59E0B",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/buildroot/buildroot-original.svg",
-    "sourceSvgPath": "/icons/source/buildroot.svg",
-    "animatedSvgPath": "/icons/animated/buildroot.svg",
-    "docsUrl": "https://buildroot.org/",
-    "monogram": "BUI",
-    "svgPath": "M12 2L4 6.5v7c0 4.5 3.4 8.2 8 9.5 4.6-1.3 8-5 8-9.5v-7L12 2zm0 2.5l5.5 3.1v5.9c0 3.2-2.3 5.9-5.5 7-3.2-1.1-5.5-3.8-5.5-7V7.6L12 4.5zm-2.5 4v7h3.5a2 2 0 0 0 0-4h-.5v-1h.5a1.5 1.5 0 0 0 0-3H9.5z",
-    "svgViewBox": "0 0 24 24",
-    "tier": "B",
-    "categoryRank": 21,
-    "evidenceSource": "Stack Overflow Developer Survey 2026",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "container-stack-slide",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#FAD08A",
-      "rationale": "Horizontal multi-tier clip bands slide into stacked alignment across the mark."
-    }
-  },
-  {
     "id": "homeassistant",
     "name": "Home Assistant",
     "aliases": [
@@ -16003,44 +15822,6 @@
       "direction": "normal",
       "secondaryColor": "#F2909F",
       "rationale": "Concentric wave rings radiate outward through the cloud/network silhouette."
-    }
-  },
-  {
-    "id": "openocd",
-    "name": "OpenOCD / JTAG",
-    "aliases": [
-      "openocd",
-      "gnu",
-      "swd",
-      "jtag",
-      "gdb-multiarch"
-    ],
-    "category": "Embedded development",
-    "subcategory": "RTOS & Embedded Toolchains",
-    "role": "Open On-Chip Debugger for JTAG/SWD Hardware Debugging & Flashing",
-    "brandColor": "#10B981",
-    "darkSafeColor": "#10B981",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openocd/openocd-original.svg",
-    "sourceSvgPath": "/icons/source/openocd.svg",
-    "animatedSvgPath": "/icons/animated/openocd.svg",
-    "docsUrl": "https://openocd.org/",
-    "monogram": "OPE",
-    "svgPath": "M4 6h6v5H4V6zm10 0h6v5h-6V6zM9 14h6v5H9v-5zM7 11v4.5h2V13h6v2.5h2V11h-2v.5H9V11H7z",
-    "svgViewBox": "0 0 24 24",
-    "tier": "C",
-    "categoryRank": 42,
-    "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "circuit-trace-pulse",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#8CDDC3",
-      "rationale": "High-intensity electric signal dash travels along microchip leads and hardware traces."
     }
   },
   {

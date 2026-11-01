@@ -64,18 +64,6 @@ const VERIFIED_FALLBACK_ICONS = {
     // the embedded raster in the generator branches, never this path).
     path: 'M0 0H0V0Z',
   },
-  awk: {
-    title: 'AWK',
-    hex: '38BDF8',
-    source: 'https://www.gnu.org/software/gawk/',
-    path: 'M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm2.5 11.5h2l.6-1.8h2.3l.6 1.8h2L10.3 8H8.2l-2.7 7.5zm2.9-3.3l.8-2.5.8 2.5H8.4zm6.1 3.3h4v-1.8h-4v1.8z',
-  },
-  openocd: {
-    title: 'OpenOCD / JTAG',
-    hex: '10B981',
-    source: 'https://openocd.org/',
-    path: 'M4 6h6v5H4V6zm10 0h6v5h-6V6zM9 14h6v5H9v-5zM7 11v4.5h2V13h6v2.5h2V11h-2v.5H9V11H7z',
-  },
   reactnative: {
     title: 'React Native',
     hex: '61DAFB',
@@ -99,12 +87,6 @@ const VERIFIED_FALLBACK_ICONS = {
     hex: '00E599',
     source: 'https://neon.tech/',
     path: 'M4 3.5A1.5 1.5 0 0 1 5.5 2h13A1.5 1.5 0 0 1 20 3.5v17a1.5 1.5 0 0 1-2.56 1.06L10 14.12V20.5A1.5 1.5 0 0 1 8.5 22h-3A1.5 1.5 0 0 1 4 20.5v-17zm3 2.5v13h1v-7.5a1.5 1.5 0 0 1 2.56-1.06L17 16.88V6H7z',
-  },
-  buildroot: {
-    title: 'Buildroot',
-    hex: 'F59E0B',
-    source: 'https://buildroot.org/',
-    path: 'M12 2L4 6.5v7c0 4.5 3.4 8.2 8 9.5 4.6-1.3 8-5 8-9.5v-7L12 2zm0 2.5l5.5 3.1v5.9c0 3.2-2.3 5.9-5.5 7-3.2-1.1-5.5-3.8-5.5-7V7.6L12 4.5zm-2.5 4v7h3.5a2 2 0 0 0 0-4h-.5v-1h.5a1.5 1.5 0 0 0 0-3H9.5z',
   },
   px4: {
     title: 'PX4 Autopilot',
@@ -166,12 +148,6 @@ const VERIFIED_FALLBACK_ICONS = {
     source: 'https://github.com/devicons/devicon/tree/master/icons/powershell',
     path: 'M3 4h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm3.5 4.5L11 12l-4.5 3.5 1.2 1.5L14 12 7.7 7 6.5 8.5zm6.5 6.5h5v2h-5v-2z',
   },
-  restapi: {
-    title: 'REST API',
-    hex: '38BDF8',
-    source: 'https://github.com/qkrdmstlr3/techstack-generator/blob/master/static/restapi-icon.svg',
-    path: 'M4 6h16v3H4V6zm0 5h10v3H4v-3zm0 5h16v3H4v-3zm13-5h3v3h-3v-3z',
-  },
   azuresqldatabase: {
     title: 'Azure SQL Database',
     hex: '0078D4',
@@ -183,18 +159,6 @@ const VERIFIED_FALLBACK_ICONS = {
     hex: '6CAE3E',
     source: 'https://icon.icepanel.io/AWS/svg/Internet-of-Things/FreeRTOS.svg',
     path: 'M27.943,37.498 C29.323,37.498 30.445,38.621 30.445,40 C30.445,41.38 29.323,42.503 27.943,42.503 C26.563,42.503 25.44,41.38 25.44,40 C25.44,38.621 26.563,37.498 27.943,37.498 L27.943,37.498 Z M35.847,29.558 C36.402,30.881 37.574,31.878 39,32.205 L39,50.868 C38.322,50.807 37.651,50.68 37,50.495 L37,40 C37,39.448 36.552,39 36,39 L32.324,39 C31.998,37.571 30.996,36.397 29.667,35.844 C30.773,32.975 33,30.709 35.847,29.558 L35.847,29.558 Z M40,25.32 C41.38,25.32 42.502,26.443 42.502,27.823 C42.502,29.203 41.38,30.325 40,30.325 C38.62,30.325 37.498,29.203 37.498,27.823 C37.498,26.443 38.62,25.32 40,25.32 L40,25.32 Z M50.334,35.844 C49.005,36.397 48.002,37.571 47.675,39 L44,39 C43.447,39 43,39.448 43,40 L43,50.496 C42.35,50.681 41.679,50.807 41,50.868 L41,32.205 C42.425,31.878 43.598,30.88 44.153,29.556 C47.001,30.706 49.226,32.971 50.334,35.844 L50.334,35.844 Z M54.559,40 C54.559,41.38 53.436,42.503 52.056,42.503 C50.676,42.503 49.554,41.38 49.554,40 C49.554,38.621 50.676,37.498 52.056,37.498 C53.436,37.498 54.559,38.621 54.559,40 L54.559,40 Z M45,49.7 L45,41 L47.675,41 C47.993,42.39 48.951,43.533 50.224,44.104 C49.213,46.507 47.343,48.51 45,49.7 L45,49.7 Z M31.496,46.932 C31.448,46.875 31.399,46.82 31.326,46.721 C30.681,45.918 30.159,45.043 29.765,44.109 C31.045,43.54 32.005,42.393 32.324,41 L35,41 L35,49.697 C33.662,49.023 32.461,48.092 31.496,46.932 L31.496,46.932 Z M27.775,44.486 C28.254,45.738 28.91,46.907 29.735,47.932 C29.807,48.033 29.891,48.133 29.967,48.222 C31.314,49.842 33.059,51.11 35,51.903 L35,57 L37,57 L37,52.555 C37.652,52.711 38.318,52.819 39,52.87 L39,57 L41,57 L41,52.87 C41.682,52.819 42.348,52.711 43,52.556 L43,57 L45,57 L45,51.903 C48.307,50.537 50.943,47.806 52.215,44.487 C54.624,44.401 56.559,42.429 56.559,40 C56.559,37.617 54.692,35.68 52.345,35.527 C51.047,31.802 48.172,28.893 44.473,27.546 C44.328,25.195 42.387,23.32 40,23.32 C37.612,23.32 35.672,25.195 35.525,27.547 C31.829,28.895 28.953,31.807 27.656,35.527 C25.308,35.678 23.44,37.616 23.44,40 C23.44,42.425 25.371,44.395 27.775,44.486 L27.775,44.486 Z M18,61 L62,61 L62,20 L18,20 L18,61 Z M68,23 L68,21 L64,21 L64,19 C64,18.448 63.552,18 63,18 L17,18 C16.447,18 16,18.448 16,19 L16,21 L12,21 L12,23 L16,23 L16,27 L12,27 L12,29 L16,29 L16,33 L12,33 L12,35 L16,35 L16,39 L12,39 L12,41 L16,41 L16,45 L12,45 L12,47 L16,47 L16,51 L12,51 L12,53 L16,53 L16,57 L12,57 L12,59 L16,59 L16,62 C16,62.553 16.447,63 17,63 L63,63 C63.552,63 64,62.553 64,62 L64,59 L68,59 L68,57 L64,57 L64,53 L68,53 L68,51 L64,51 L64,47 L68,47 L68,45 L64,45 L64,41 L68,41 L68,39 L64,39 L64,35 L68,35 L68,33 L64,33 L64,29 L68,29 L68,27 L64,27 L64,23 L68,23 Z',
-  },
-  verilog: {
-    title: 'SystemVerilog / Verilog',
-    hex: '2DD4BF',
-    source: 'https://ieee.org/',
-    path: 'M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 0h6v6h-6v-6zM10 7h4v2h-4V7zm0 10h4v2h-4v-2zM7 10v4h2v-4H7zm10 0v4h2v-4h-2z',
-  },
-  vhdl: {
-    title: 'VHDL',
-    hex: '818CF8',
-    source: 'https://ieee.org/',
-    path: 'M3 5h4l3 9 3-9h4l-5 14H8L3 5zm13 4h5v2h-5V9zm0 4h5v2h-5v-2z',
   },
   openai: {
     title: 'OpenAI',
@@ -322,7 +286,6 @@ const REFERENCE_SVG_MAP = {
   python: 'python-icon.svg',
   django: 'django-icon.svg',
   graphql: 'graphql-icon.svg',
-  restapi: 'restapi-icon.svg',
   github: 'github-icon.svg',
   docker: 'docker-icon.svg',
   kubernetes: 'kubernetes-icon.svg',
@@ -868,33 +831,6 @@ const CATEGORY_SEEDS = {
       'Modern Programmable Markup-Based Typesetting',
       ['typ'],
       'shimmer-prism-sweep',
-    ],
-    [
-      'verilog',
-      'SystemVerilog',
-      'verilog',
-      'Hardware Description',
-      'IEEE Hardware Description & Verification Language',
-      ['verilog', 'sv', 'rtl'],
-      'circuit-trace-pulse',
-    ],
-    [
-      'vhdl',
-      'VHDL',
-      'vhdl',
-      'Hardware Description',
-      'Very High Speed Integrated Circuit HDL',
-      ['fpga-vhdl'],
-      'circuit-trace-pulse',
-    ],
-    [
-      'awk',
-      'AWK',
-      'gnu',
-      'Scripting & Text',
-      'Pattern Scanning and Text Processing Language',
-      ['gawk'],
-      'data-stream-flow',
     ],
   ],
 
@@ -1621,15 +1557,6 @@ const CATEGORY_SEEDS = {
       'Typed Declarative API Query Language & Runtime',
       ['gql'],
       'node-network-signal',
-    ],
-    [
-      'restapi',
-      'REST API',
-      'restapi',
-      'APIs & Protocols',
-      'Representational State Transfer Web Architecture',
-      ['rest', 'restful', 'json-api'],
-      'data-stream-flow',
     ],
     [
       'nginx',
@@ -3336,15 +3263,6 @@ const CATEGORY_SEEDS = {
       'dual-snake-interlock',
     ],
     [
-      'buildroot',
-      'Buildroot',
-      'linux',
-      'RTOS & Embedded Toolchains',
-      'Simple Efficient Embedded Linux System Generation Tool',
-      ['embedded-linux'],
-      'container-stack-slide',
-    ],
-    [
       'homeassistant',
       'Home Assistant',
       'homeassistant',
@@ -4957,15 +4875,6 @@ const EXTRA_COMMUNITY_SLUGS = {
       'Networking, Wi-Fi/BT Combo Chips & Raspberry Pi VideoCore SoCs',
       ['bcm2711', 'bcm2712'],
       'beacon-ripple-rings',
-    ],
-    [
-      'openocd',
-      'OpenOCD / JTAG',
-      'gnu',
-      'RTOS & Embedded Toolchains',
-      'Open On-Chip Debugger for JTAG/SWD Hardware Debugging & Flashing',
-      ['swd', 'jtag', 'gdb-multiarch'],
-      'circuit-trace-pulse',
     ],
     [
       'tinygo',
