@@ -241,10 +241,12 @@ const VERIFIED_FALLBACK_ICONS = {
     path: 'M0 0H0V0Z',
   },
   microchip: {
-    title: 'Microchip (PIC / AVR)',
-    hex: 'ED1C24',
-    source: 'https://www.microchip.com/',
-    path: 'M6 6h12v12H6V6zm-3 2h2v2H3V8zm0 3h2v2H3v-2zm0 3h2v2H3v-2zm16-6h2v2h-2V8zm0 3h2v2h-2v-2zm0 3h2v2h-2v-2zM8 3h2v2H8V3zm3 0h2v2h-2V3zm3 0h2v2h-2V3zM8 19h2v2H8v-2zm3 0h2v2h-2v-2zm3 0h2v2h-2v-2z',
+    title: 'Microchip',
+    hex: 'ED2724',
+    source: 'https://upload.wikimedia.org/wikipedia/commons/5/54/Microchip_Technology_logo.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official lockup; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   beagleboard: {
     title: 'BeagleBoard',
@@ -4851,7 +4853,7 @@ const EXTRA_COMMUNITY_SLUGS = {
   'Embedded development': [
     [
       'microchip',
-      'Microchip (PIC / AVR)',
+      'Microchip',
       'microchip',
       'Silicon & Architectures',
       'PIC, AVR, SAM Microcontrollers & MPLAB X Ecosystem',
