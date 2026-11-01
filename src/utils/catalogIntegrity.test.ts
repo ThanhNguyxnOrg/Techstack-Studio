@@ -44,9 +44,10 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   openvino: ['#FFFFFF', 'M117.045'],
   freertos: ['#6CAE3E', 'M27.943'],
   cargo: ['data:image/png'],
+  tinygo: ['data:image/png'],
 };
 
-const RASTER_DATA_URI_ONLY_IDS = new Set(['cargo']);
+const RASTER_DATA_URI_ONLY_IDS = new Set(['cargo', 'tinygo']);
 
 function assertSafeSvg(markup: string, id: string): void {
   assert.ok(markup.startsWith('<svg '), `${id}: SVG must start with an <svg> element`);

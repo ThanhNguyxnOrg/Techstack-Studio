@@ -47,9 +47,11 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   tinygo: {
     title: 'TinyGo',
-    hex: '00B4D8',
-    source: 'https://tinygo.org/',
-    path: 'M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm-4 3h2v2H3V8zm0 6h2v2H3v-2zm16-6h2v2h-2V8zm0 6h2v2h-2v-2zM9 9v2h2v4h2v-4h2V9H9z',
+    hex: 'ABC3D6',
+    source: 'https://tinygo.org/images/tinygo-logo.png',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official PNG; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   cargo: {
     title: 'Cargo',
@@ -4884,7 +4886,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     [
       'tinygo',
       'TinyGo',
-      'go',
+      'tinygo',
       'RTOS & Embedded Toolchains',
       'Go Compiler for Microcontrollers, WebAssembly & Command-Line Tools',
       ['tinygo-org'],

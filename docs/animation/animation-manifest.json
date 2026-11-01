@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T11:05:36.660Z",
+  "generatedAt": "2026-11-01T11:12:26.293Z",
   "totalCatalogEntries": 545,
   "sourceSvgFilesCreated": 545,
   "animatedSvgFilesCreated": 545,
@@ -9380,8 +9380,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/tinygo.svg",
       "animatedSvgPath": "/icons/animated/tinygo.svg",
-      "animationConcept": "Sequential 3-subpath vector contour drawing (#85DBEC) illuminating the #00B4D8 TinyGo silhouette",
-      "animationTechnique": "Multi-subpath stroke-dasharray/stroke-dashoffset choreography + synchronized fill-opacity reveal",
+      "animationConcept": "Light sweep over the gopher chip: a soft band of light passes across the real logo once per loop, then holds static; the mark itself never moves or vanishes",
+      "animationTechnique": "Real PNG + alpha mask + gradient light band sweeping once per 8s loop; no redrawn shapes, no moving pieces",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
