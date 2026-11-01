@@ -411,7 +411,11 @@ function buildSourceSvg(item) {
     // tiny and unreadable at the 48px card size.
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" role="img" aria-label="${label}"><defs><linearGradient id="tss_azuresqldatabase_g" x1="9.908" y1="15.943" x2="7.516" y2="2.383" gradientUnits="userSpaceOnUse"><stop offset="0.15" stop-color="#0078d4"/><stop offset="0.8" stop-color="#5ea0ef"/><stop offset="1" stop-color="#83b9f9"/></linearGradient></defs><path d="M14.49,7.15A5.147,5.147,0,0,0,9.24,2.164,5.272,5.272,0,0,0,4.216,5.653,4.869,4.869,0,0,0,0,10.4a4.946,4.946,0,0,0,5.068,4.814H13.82A4.292,4.292,0,0,0,18,11.127,4.105,4.105,0,0,0,14.49,7.15Z" fill="url(#tss_azuresqldatabase_g)"/><path d="M12.9,11.4V8H12v4.13h2.46V11.4ZM5.76,9.73a1.825,1.825,0,0,1-.51-.31.441.441,0,0,1-.12-.32.342.342,0,0,1,.15-.3.683.683,0,0,1,.42-.12,1.62,1.62,0,0,1,1,.29V8.11a2.58,2.58,0,0,0-1-.16,1.641,1.641,0,0,0-1.09.34,1.08,1.08,0,0,0-.42.89c0,.51.32.91,1,1.21a2.907,2.907,0,0,1,.62.36.419.419,0,0,1,.15.32.381.381,0,0,1-.16.31.806.806,0,0,1-.45.11,1.66,1.66,0,0,1-1.09-.42V12a2.173,2.173,0,0,0,1.07.24,1.877,1.877,0,0,0,1.18-.33A1.08,1.08,0,0,0,6.84,11a1.048,1.048,0,0,0-.25-.7A2.425,2.425,0,0,0,5.76,9.73ZM11,11.32A2.191,2.191,0,0,0,11,9a1.808,1.808,0,0,0-.7-.75,2,2,0,0,0-1-.26,2.112,2.112,0,0,0-1.08.27A1.856,1.856,0,0,0,7.49,9a2.465,2.465,0,0,0-.26,1.14,2.256,2.256,0,0,0,.24,1,1.766,1.766,0,0,0,.69.74,2.056,2.056,0,0,0,1,.3l.86,1h1.21L10,12.08A1.79,1.79,0,0,0,11,11.32Zm-1-.25a.941.941,0,0,1-.76.35.916.916,0,0,1-.76-.36,1.523,1.523,0,0,1-.29-1,1.529,1.529,0,0,1,.29-1,1,1,0,0,1,.78-.37.869.869,0,0,1,.75.37,1.619,1.619,0,0,1,.27,1A1.459,1.459,0,0,1,10,11.07Z" fill="#f2f2f2"/></svg>`;
   }
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
+  // Default single-path source: use the catalog viewBox, not a hardcoded
+  // 24 box. Every default-path entry except microsoftsqlserver is 24-unit,
+  // so this changes only that entry (Devicon 128-unit grid), which the
+  // hardcoded box clipped to its top-left 24x24 corner.
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${item.svgViewBox || '0 0 24 24'}" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
 }
 
 /**
@@ -705,6 +709,30 @@ function buildAnimatedSvg(item) {
       `<g transform="translate(0,50.67) scale(1.0667)"><path class="tss_ov_chase0" fill="#FFFFFF" d="M0 9.437C0 4.22775 4.20281 0 9.41206 0C14.6468 0 18.8491 4.22775 18.8491 9.437C18.8491 14.6462 14.6462 18.874 9.41206 18.874C4.20281 18.874 0 14.6462 0 9.437ZM16.106 9.437C16.106 5.71247 13.187 2.64228 9.41206 2.64228C5.66261 2.64228 2.74302 5.71247 2.74302 9.437C2.74302 13.1615 5.6621 16.2063 9.41206 16.2063C13.187 16.2068 16.106 13.1615 16.106 9.437Z"/><path class="tss_ov_chase0" fill="#FFFFFF" d="M12.9117 7.96652C12.6675 8.46617 12.1663 8.81369 11.5633 8.81369C10.7172 8.81369 10.0583 8.12629 10.0583 7.28572C10.0583 6.6782 10.4048 6.15208 10.9151 5.9048C10.4587 5.70738 9.95395 5.59747 9.41817 5.59747C7.302 5.59747 5.65497 7.32999 5.65497 9.4319C5.65497 11.5338 7.30251 13.2516 9.41817 13.2516C11.5481 13.2516 13.1956 11.5333 13.1956 9.4319C13.1951 8.91393 13.0938 8.41936 12.9117 7.96652Z"/><path class="tss_ov_chase1" fill="#FFFFFF" d="M23.0686 17.0748V24.4231H20.4009V6.05237H23.0686V7.81389C23.9997 6.58052 25.5852 5.80051 27.2714 5.80051C30.568 5.80051 33.5375 8.31711 33.5375 12.3434C33.5375 16.3447 30.4673 18.8862 27.2963 18.8862C25.5598 18.8867 23.9748 18.2324 23.0686 17.0748ZM30.8698 12.3184C30.8698 10.0283 29.1332 8.2418 26.8939 8.2418C24.6037 8.2418 22.918 10.0791 22.918 12.3184C22.918 14.5832 24.6042 16.4205 26.8939 16.4205C29.1337 16.4205 30.8698 14.6086 30.8698 12.3184Z"/><path class="tss_ov_chase2" fill="#FFFFFF" d="M34.778 12.3943C34.778 8.69466 37.6217 5.80103 41.3208 5.80103C45.0453 5.80103 47.7884 8.49368 47.7884 12.2182V13.275H37.3704C37.7225 15.2126 39.2326 16.4963 41.4221 16.4963C43.1332 16.4963 44.4419 15.5901 45.0962 14.2316L47.3106 15.465C46.2034 17.5287 44.2149 18.8878 41.4221 18.8878C37.4457 18.8867 34.778 16.043 34.778 12.3943ZM37.496 10.9848H45.0458C44.6434 9.17294 43.2589 8.16651 41.3213 8.16651C39.4585 8.16651 37.9993 9.32406 37.496 10.9848Z"/><path class="tss_ov_chase3" fill="#FFFFFF" d="M49.409 6.05237H52.0767V7.68821C52.9325 6.53066 54.2916 5.80051 55.9524 5.80051C59.1233 5.80051 61.0609 7.86426 61.0609 11.2866V18.6349H58.3428V11.5135C58.3428 9.44973 57.3109 8.14106 55.2975 8.14106C53.4856 8.14106 52.1016 9.5001 52.1016 11.7145V18.6349H49.409V6.05237Z"/><path class="tss_ov_chase4" fill="#FFFFFF" d="M60.3419 0.264099H63.1856L68.1435 14.5832L73.1009 0.264099H75.9447L69.5275 18.6349H66.7595L60.3419 0.264099Z"/><path class="tss_ov_chase5" fill="#FFFFFF" d="M76.9639 0.264099H79.7069V18.6349H76.9639V0.264099Z"/><path class="tss_ov_chase6" fill="#FFFFFF" d="M82.2078 0.264099H85.3034L94.6147 14.1558V0.264099H97.3323V18.6349H94.4382L84.9508 4.51729V18.6349H82.2078V0.264099Z"/><path class="tss_ov_chase7" fill="#FFFFFF" d="M98.9503 9.44972C98.9503 4.24047 103.153 0.0127258 108.362 0.0127258C113.597 0.0127258 117.799 4.24047 117.799 9.44972C117.799 14.659 113.596 18.8867 108.362 18.8867C103.153 18.8867 98.9503 14.659 98.9503 9.44972ZM115.056 9.44972C115.056 5.72519 112.137 2.655 108.362 2.655C104.613 2.655 101.693 5.72519 101.693 9.44972C101.693 13.1743 104.612 16.219 108.362 16.219C112.137 16.219 115.056 13.1743 115.056 9.44972Z"/><path class="tss_ov_chase7" fill="#FFFFFF" d="M111.862 7.97924C111.618 8.4789 111.117 8.82642 110.514 8.82642C109.668 8.82642 109.008 8.13901 109.008 7.29845C109.008 6.69092 109.355 6.16481 109.865 5.91752C109.409 5.7201 108.904 5.6102 108.368 5.6102C106.252 5.6102 104.605 7.34272 104.605 9.44463C104.605 11.5465 106.252 13.2648 108.368 13.2648C110.498 13.2648 112.145 11.5465 112.145 9.44463C112.145 8.92666 112.044 8.43158 111.862 7.97924Z"/><path fill="#FFFFFF" d="M117.045 0.566335H116.582V0.264099H117.898V0.566335H117.435V1.97881H117.044V0.566335H117.045Z"/><path fill="#FFFFFF" d="M118.188 0.26413H118.7L119.101 1.33112L119.496 0.26413H120V1.97884H119.614V0.77498L119.139 1.97884H119.012L118.535 0.77498V1.97884H118.187V0.26413H118.188Z"/></g>`,
       'OpenVINO letters flash brand purple in reading order like inference flowing through the model, then a long static hold; final and reduced-motion frames are exactly the static wordmark',
       'Per-letter purple flash chase across the official wordmark itself (reading order, staggered); Material-style ease-out',
+      '0 0 128 128'
+    );
+  }
+
+  // MICROSOFTSQLSERVER — edge glow (6s, user-picked idea E).
+  // The flat red grid itself stays exactly static from frame 0; only
+  // an overlaid copy of the SAME path (fill none, stroke #FF7A70,
+  // width 2) breathes twice in the first half (stroke-opacity
+  // 0 -> 0.85 -> 0 -> 0.85 -> 0), then stays off for a static second
+  // half. No clipPath (the kept container-stack-slide bands were
+  // rejected because they cut the thin lattice into shearing
+  // strips), no path splitting (the 36 subpaths overlap under
+  // evenodd, so splitting fills the holes), no foreign shapes.
+  // Reduced-motion is exactly the static grid. Catalog
+  // motionRecipe.family stays container-stack-slide per the
+  // no-new-family-names convention for bespoke branches.
+  if (item.id === 'microsoftsqlserver') {
+    return wrapSvg(
+      '',
+      `.tss_microsoftsqlserver_glow{stroke-opacity:0;animation:tss_microsoftsqlserver_glow 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_microsoftsqlserver_glow{0%{stroke-opacity:0}10%{stroke-opacity:0.85}20%{stroke-opacity:0}30%{stroke-opacity:0.85}40%,100%{stroke-opacity:0}}`,
+      `.tss_microsoftsqlserver_glow{animation:none!important;stroke-opacity:0!important}`,
+      `<path fill="${primary}" fill-rule="evenodd" d="${d}"/><path class="tss_microsoftsqlserver_glow" fill="none" stroke="#FF7A70" stroke-width="2" stroke-linejoin="round" d="${d}"/>`,
+      'Flat red grid exactly static; a same-path light edge breathes twice, then a long static hold; final and reduced-motion frames are exactly the static grid',
+      'Overlaid same-path stroke breathing (opacity only, no movement, no clipping)',
       '0 0 128 128'
     );
   }
@@ -1859,9 +1887,16 @@ function buildAnimatedSvg(item) {
       k3 = `tss_${uid}_k3`;
     const y1 = Number((geo.minY + geo.height / 3).toFixed(2));
     const y2 = Number((geo.minY + (geo.height * 2) / 3).toFixed(2));
+    // Clip bands must span the real viewBox, not a hardcoded 24 box:
+    // for 24-unit entries this is byte-identical; for the 128-unit
+    // microsoftsqlserver grid the old math produced a 24-wide sliver
+    // and a negative third-band height.
+    const vbParts = (item.svgViewBox || '0 0 24 24').split(' ');
+    const boxW = Number(vbParts[2]);
+    const boxH = Number(vbParts[3]);
     const ownStrokes = buildOwnSubpathStrokes('0.55');
     return wrapSvg(
-      `<clipPath id="${c1}"><rect x="0" y="0" width="24" height="${y1}"/></clipPath><clipPath id="${c2}"><rect x="0" y="${y1 - 0.15}" width="24" height="${Number((y2 - y1 + 0.3).toFixed(2))}"/></clipPath><clipPath id="${c3}"><rect x="0" y="${y2 - 0.15}" width="24" height="${Number((24 - y2 + 0.15).toFixed(2))}"/></clipPath>`,
+      `<clipPath id="${c1}"><rect x="0" y="0" width="${boxW}" height="${y1}"/></clipPath><clipPath id="${c2}"><rect x="0" y="${y1 - 0.15}" width="${boxW}" height="${Number((y2 - y1 + 0.3).toFixed(2))}"/></clipPath><clipPath id="${c3}"><rect x="0" y="${y2 - 0.15}" width="${boxW}" height="${Number((boxH - y2 + 0.15).toFixed(2))}"/></clipPath>`,
       `@keyframes ${k1}{0%,14%,100%{transform:translateY(-1.8px);opacity:0.35}42%,82%{transform:translateY(0);opacity:1}}@keyframes ${k2}{0%,8%,100%{transform:translateX(-1.8px);opacity:0.45}36%,82%{transform:translateX(0);opacity:1}}@keyframes ${k3}{0%,100%{transform:translateY(1.2px);opacity:0.6}30%,82%{transform:translateY(0);opacity:1}}.${k1}{animation:${k1} ${dur} cubic-bezier(0.34,1.56,0.64,1) infinite}.${k2}{animation:${k2} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${k3}{animation:${k3} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}${ownStrokes.style}`,
       `.${k1},.${k2},.${k3}{animation:none!important;transform:none!important;opacity:1!important}${ownStrokes.reduce}`,
       `<g clip-path="url(#${c3})"><path class="${k3}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g><g clip-path="url(#${c2})"><path class="${k2}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g><g clip-path="url(#${c1})"><path class="${k1}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g>${ownStrokes.paths}`,

@@ -31,6 +31,7 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   conda: 'condaforge',
   elixirphoenix: 'elixir',
   axum: 'tokio',
+  mssql: 'microsoftsqlserver',
   gcp: 'googlecloud',
 };
 
