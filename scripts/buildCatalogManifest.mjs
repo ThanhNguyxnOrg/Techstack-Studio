@@ -189,8 +189,10 @@ const VERIFIED_FALLBACK_ICONS = {
   slack: {
     title: 'Slack',
     hex: '4A154B',
-    source: 'https://github.com/devicons/devicon/tree/master/icons/slack',
-    path: 'M6 15a2 2 0 1 1-2-2h2v2zm1 0a2 2 0 1 1 4 0v5a2 2 0 1 1-4 0v-5zM9 6a2 2 0 1 1 2-2v2H9zm0 1a2 2 0 1 1 0 4H4a2 2 0 1 1 0-4h5zm9 2a2 2 0 1 1 2 2h-2V9zm-1 0a2 2 0 1 1-4 0V4a2 2 0 1 1 4 0v5zm-2 9a2 2 0 1 1-2 2v-2h2zm0-1a2 2 0 1 1 0-4h5a2 2 0 1 1 0 4h-5z',
+    source: 'https://a.slack-edge.com/1f40066/marketing/img/nav/logo.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official hash; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   texasinstruments: {
     title: 'Texas Instruments',
@@ -5265,7 +5267,7 @@ const EXTRA_COMMUNITY_SLUGS = {
       'slack',
       'Docs & Project Management',
       'Channel-Based Messaging & Engineering Incident Collaboration',
-      ['slackbot'],
+      [],
       'orbital-spin',
     ],
     [

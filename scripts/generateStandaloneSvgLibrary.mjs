@@ -605,6 +605,43 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(10.5,0)"><path fill="#FF3E00" d="M94.1566,22.8189c-10.4-14.8851-30.94-19.2971-45.7914-9.8348L22.2825,29.6078A29.9234,29.9234,0,0,0,8.7639,49.6506a31.5136,31.5136,0,0,0,3.1076,20.2318A30.0061,30.0061,0,0,0,7.3953,81.0653a31.8886,31.8886,0,0,0,5.4473,24.1157c10.4022,14.8865,30.9423,19.2966,45.7914,9.8348L84.7167,98.3921A29.9177,29.9177,0,0,0,98.2353,78.3493,31.5263,31.5263,0,0,0,95.13,58.117a30,30,0,0,0,4.4743-11.1824,31.88,31.88,0,0,0-5.4473-24.1157"/><path fill="#FFFFFF" d="M45.8171,106.5815A20.7182,20.7182,0,0,1,23.58,98.3389a19.1739,19.1739,0,0,1-3.2766-14.5025,18.1886,18.1886,0,0,1,.6233-2.4357l.4912-1.4978,1.3363.9815a33.6443,33.6443,0,0,0,10.203,5.0978l.9694.2941-.0893.9675a5.8474,5.8474,0,0,0,1.052,3.8781,6.2389,6.2389,0,0,0,6.6952,2.485,5.7449,5.7449,0,0,0,1.6021-.7041L69.27,76.281a5.4306,5.4306,0,0,0,2.4506-3.631,5.7948,5.7948,0,0,0-.9875-4.3712,6.2436,6.2436,0,0,0-6.6978-2.4864,5.7427,5.7427,0,0,0-1.6.7036l-9.9532,6.3449a19.0329,19.0329,0,0,1-5.2965,2.3259,20.7181,20.7181,0,0,1-22.2368-8.2427,19.1725,19.1725,0,0,1-3.2766-14.5024,17.9885,17.9885,0,0,1,8.13-12.0513L55.8833,23.7472a19.0038,19.0038,0,0,1,5.3-2.3287A20.7182,20.7182,0,0,1,83.42,29.6611a19.1739,19.1739,0,0,1,3.2766,14.5025,18.4,18.4,0,0,1-.6233,2.4357l-.4912,1.4978-1.3356-.98a33.6175,33.6175,0,0,0-10.2037-5.1l-.9694-.2942.0893-.9675a5.8588,5.8588,0,0,0-1.052-3.878,6.2389,6.2389,0,0,0-6.6952-2.485,5.7449,5.7449,0,0,0-1.6021.7041L37.73,51.719a5.4218,5.4218,0,0,0-2.4487,3.63,5.7862,5.7862,0,0,0,.9856,4.3717,6.2437,6.2437,0,0,0,6.6978,2.4864,5.7652,5.7652,0,0,0,1.602-.7041l9.9519-6.3425a18.978,18.978,0,0,1,5.2959-2.3278,20.7181,20.7181,0,0,1,22.2368,8.2427,19.1725,19.1725,0,0,1,3.2766,14.5024,17.9977,17.9977,0,0,1-8.13,12.0532L51.1167,104.2528a19.0038,19.0038,0,0,1-5.3,2.3287"/></g></svg>`;
   }
 
+  // VUEDOTJS — official V (vuejs/art), verbatim: outer V
+  // #42b883 + inner V #35495E, native 196.32x170.02 scaled
+  // into the 128 box. Replaces the single-colour SI path
+  // (wrong green #4FC08D, inner V missing).
+  if (item.id === 'vuedotjs') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(0,8.57) scale(0.652004)"><path fill="#42B883" d="M120.83 0L98.16 39.26 75.49 0H0l98.16 170.02L196.32 0h-75.49z"/><path fill="#35495E" d="M120.83 0L98.16 39.26 75.49 0H39.26l58.9 102.01L157.06 0h-36.23z"/></g></svg>`;
+  }
+
+  // VUETIFY — official faceted V (vuetifyjs.com CDN),
+  // verbatim: 4 facets #1697F6/#AEDDFF/#1867C0/#7BC6FF,
+  // native 368x319 scaled into the 128 box. The light
+  // variant file is byte-identical, so no variant decision.
+  // Replaces the single-colour #1867C0 flattening.
+  if (item.id === 'vuetify') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(0,8.52) scale(0.347826)"><path fill="#1697F6" d="M187.897 71.248L114.523 198.363L184 318.772L276.021 159.386L368 0H229.005L187.897 71.248Z"/><path fill="#AEDDFF" d="M92.0209 159.386L96.8398 167.768L165.478 48.8258L193.68 0H184H0L92.0209 159.386Z"/><path fill="#1867C0" d="M229.005 0C263.785 114.458 184 318.772 184 318.772L114.523 198.363L229.005 0Z"/><path fill="#7BC6FF" d="M193.68 0C47.1426 0 96.8405 167.768 96.8405 167.768L193.68 0Z"/></g></svg>`;
+  }
+
+  // FIREBASE — official full-colour logomark (Firebase
+  // brand pack), verbatim: 4 flame facets #FFC400/#FF9100
+  // (x2)/#DD2C00, native 600x600 scaled into the 128 box.
+  // Replaces the single-path flat #DD2C00 silhouette.
+  if (item.id === 'firebase') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="scale(0.213333)"><path fill="#FF9100" d="M213.918 560.499C237.166 569.856 262.387 575.408 288.87 576.333C324.71 577.585 358.792 570.175 389.261 556.099C352.724 541.744 319.634 520.751 291.392 494.651C273.086 523.961 246.01 547.113 213.918 560.499Z"/><path fill="#FFC400" d="M291.389 494.66C226.923 435.038 187.815 348.743 191.12 254.092C191.228 251.019 191.39 247.947 191.58 244.876C180.034 241.89 167.98 240.068 155.576 239.635C137.821 239.015 120.626 241.217 104.393 245.788C87.1838 275.933 76.7989 310.521 75.5051 347.569C72.1663 443.18 130.027 526.723 213.914 560.508C246.007 547.121 273.082 523.998 291.389 494.66Z"/><path fill="#FF9100" d="M291.39 494.657C306.378 470.671 315.465 442.551 316.523 412.254C319.306 332.559 265.731 264.003 191.581 244.873C191.391 247.944 191.229 251.016 191.121 254.089C187.816 348.74 226.924 435.035 291.39 494.657Z"/><path fill="#DD2C00" d="M308.231 20.8584C266 54.6908 232.652 99.302 212.475 150.693C200.924 180.129 193.665 211.748 191.546 244.893C265.696 264.023 319.272 332.579 316.489 412.273C315.431 442.57 306.317 470.663 291.355 494.677C319.595 520.804 352.686 541.77 389.223 556.124C462.56 522.224 514.593 449.278 517.606 362.997C519.558 307.096 498.08 257.273 467.731 215.219C435.68 170.742 308.231 20.8584 308.231 20.8584Z"/></g></svg>`;
+  }
+
+  // SLACK — official hash (slack.com CDN), verbatim:
+  // 8 paths (4 dots + 4 bars) in #E3066A/#00B3FF/#41B658/
+  // #FCC003, native 54x54 scaled into the 128 box. The
+  // file's full-canvas white background rect is dropped
+  // (cards are dark; the hash is the mark). Palette is
+  // what slack.com serves today, not the classic hash
+  // palette. Replaces the pale-lavender #B39DB3 silhouette
+  // (not a Slack brand colour at all).
+  if (item.id === 'slack') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="scale(2.37037)"><path fill="#E3066A" d="M11.379 33.9993C11.379 37.1358 8.84512 39.6507 5.7276 39.6507C2.61008 39.6507 0.0572205 37.1168 0.0572205 33.9993C0.0572205 30.8817 2.5911 28.3479 5.70862 28.3479H11.36V33.9993H11.379Z"/><path fill="#E3066A" d="M14.1962 33.9997C14.1962 30.8632 16.7301 28.3483 19.8476 28.3483C22.9651 28.3483 25.499 30.8822 25.499 33.9997V48.1353C25.499 51.2718 22.9651 53.7867 19.8476 53.7867C16.7301 53.7867 14.1962 51.2718 14.1962 48.1353V33.9997Z"/><path fill="#00B3FF" d="M19.8662 11.2673C16.7296 11.2673 14.2148 8.73347 14.2148 5.61594C14.2148 2.49842 16.7486 -0.0354538 19.8662 -0.0354538C22.9837 -0.0354538 25.5175 2.49842 25.5175 5.61594V11.2673H19.8662Z"/><path fill="#00B3FF" d="M19.8682 14.1334C23.0047 14.1334 25.5196 16.6673 25.5196 19.7848C25.5196 22.9023 22.9857 25.4362 19.8682 25.4362H5.67566C2.53916 25.4362 0.0242615 22.9023 0.0242615 19.7848C0.0242615 16.6673 2.55814 14.1334 5.67566 14.1334H19.8682Z"/><path fill="#41B658" d="M42.5323 19.7853C42.5323 16.6488 45.0662 14.1339 48.1837 14.1339C51.3012 14.1339 53.8351 16.6678 53.8351 19.7853C53.8351 22.9028 51.3012 25.4367 48.1837 25.4367H42.5323V19.7853Z"/><path fill="#41B658" d="M39.7126 19.7934C39.7126 22.9299 37.1787 25.4448 34.0612 25.4448C30.9436 25.4448 28.4098 22.911 28.4098 19.7934V5.61986C28.4098 2.48336 30.9436 -0.0315399 34.0612 -0.0315399C37.1787 -0.0315399 39.7126 2.48336 39.7126 5.61986V19.7934Z"/><path fill="#FCC003" d="M34.0376 42.482C37.1741 42.482 39.689 45.0158 39.689 48.1334C39.689 51.2509 37.1552 53.7848 34.0376 53.7848C30.9201 53.7848 28.3862 51.2509 28.3862 48.1334V42.482H34.0376Z"/><path fill="#FCC003" d="M34.0381 39.6507C30.9016 39.6507 28.3867 37.1168 28.3867 33.9993C28.3867 30.8818 30.9206 28.3479 34.0381 28.3479H48.2306C51.3671 28.3479 53.882 30.8818 53.882 33.9993C53.882 37.1168 51.3482 39.6507 48.2306 39.6507H34.0381Z"/></g></svg>`;
+  }
+
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${item.svgViewBox || '0 0 24 24'}" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
 }
 
@@ -1251,6 +1288,55 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // VUETIFY — four facets assemble (segmented-assembly
+  // character): the four blue facets fade and rise in
+  // sequence, then the exact static mark holds for the
+  // second half. No clipPath, no foreign shapes.
+  if (item.id === 'vuetify') {
+    return wrapSvg(
+      ``,
+      `@keyframes tss_vuetify_f0{0%,0%{opacity:0;transform:translateY(3px)}10%,100%{opacity:1;transform:translateY(0)}}.tss_vuetify_f0{animation:tss_vuetify_f0 8s ease-out infinite}@keyframes tss_vuetify_f1{0%,10%{opacity:0;transform:translateY(3px)}20%,100%{opacity:1;transform:translateY(0)}}.tss_vuetify_f1{animation:tss_vuetify_f1 8s ease-out infinite}@keyframes tss_vuetify_f2{0%,20%{opacity:0;transform:translateY(3px)}30%,100%{opacity:1;transform:translateY(0)}}.tss_vuetify_f2{animation:tss_vuetify_f2 8s ease-out infinite}@keyframes tss_vuetify_f3{0%,30%{opacity:0;transform:translateY(3px)}40%,100%{opacity:1;transform:translateY(0)}}.tss_vuetify_f3{animation:tss_vuetify_f3 8s ease-out infinite}`,
+      `.tss_vuetify_f0,.tss_vuetify_f1,.tss_vuetify_f2,.tss_vuetify_f3{animation:none!important;opacity:1!important;transform:none!important}`,
+      `<g transform="translate(0,8.52) scale(0.347826)"><path class="tss_vuetify_f0" fill="#1697F6" d="M187.897 71.248L114.523 198.363L184 318.772L276.021 159.386L368 0H229.005L187.897 71.248Z"/><path class="tss_vuetify_f1" fill="#AEDDFF" d="M92.0209 159.386L96.8398 167.768L165.478 48.8258L193.68 0H184H0L92.0209 159.386Z"/><path class="tss_vuetify_f2" fill="#1867C0" d="M229.005 0C263.785 114.458 184 318.772 184 318.772L114.523 198.363L229.005 0Z"/><path class="tss_vuetify_f3" fill="#7BC6FF" d="M193.68 0C47.1426 0 96.8405 167.768 96.8405 167.768L193.68 0Z"/></g>`,
+      'Four Vuetify facets assemble in sequence, then the exact static mark holds in the second half',
+      'Per-facet opacity+translate entrances baked into 8s keyframe windows; static second half',
+      '0 0 128 128'
+    );
+  }
+
+  // FIREBASE — flame ignition flicker (flame-core-flicker
+  // character, Technique 1 spirit): the whole flame
+  // flickers in fill-opacity and scale for the first part
+  // of the loop, then the exact static mark holds. No
+  // halo copy (a halo would add a foreign shape).
+  if (item.id === 'firebase') {
+    return wrapSvg(
+      ``,
+      `@keyframes tss_firebase_ign{0%,10%{fill-opacity:0.28;transform:scale(0.96)}15%{fill-opacity:0.85;transform:scale(1)}20%{fill-opacity:0.38;transform:scale(0.98)}28%,100%{fill-opacity:1;transform:scale(1)}}.tss_firebase_ign{transform-box:fill-box;transform-origin:center;animation:tss_firebase_ign 8s ease-in-out infinite}`,
+      `.tss_firebase_ign{animation:none!important;transform:none!important;fill-opacity:1!important}`,
+      `<g transform="scale(0.213333)"><g class="tss_firebase_ign"><path fill="#FF9100" d="M213.918 560.499C237.166 569.856 262.387 575.408 288.87 576.333C324.71 577.585 358.792 570.175 389.261 556.099C352.724 541.744 319.634 520.751 291.392 494.651C273.086 523.961 246.01 547.113 213.918 560.499Z"/><path fill="#FFC400" d="M291.389 494.66C226.923 435.038 187.815 348.743 191.12 254.092C191.228 251.019 191.39 247.947 191.58 244.876C180.034 241.89 167.98 240.068 155.576 239.635C137.821 239.015 120.626 241.217 104.393 245.788C87.1838 275.933 76.7989 310.521 75.5051 347.569C72.1663 443.18 130.027 526.723 213.914 560.508C246.007 547.121 273.082 523.998 291.389 494.66Z"/><path fill="#FF9100" d="M291.39 494.657C306.378 470.671 315.465 442.551 316.523 412.254C319.306 332.559 265.731 264.003 191.581 244.873C191.391 247.944 191.229 251.016 191.121 254.089C187.816 348.74 226.924 435.035 291.39 494.657Z"/><path fill="#DD2C00" d="M308.231 20.8584C266 54.6908 232.652 99.302 212.475 150.693C200.924 180.129 193.665 211.748 191.546 244.893C265.696 264.023 319.272 332.579 316.489 412.273C315.431 442.57 306.317 470.663 291.355 494.677C319.595 520.804 352.686 541.77 389.223 556.124C462.56 522.224 514.593 449.278 517.606 362.997C519.558 307.096 498.08 257.273 467.731 215.219C435.68 170.742 308.231 20.8584 308.231 20.8584Z"/></g></g>`,
+      'Firebase flame ignites with a fill-opacity flicker, then the exact static mark holds in the second half',
+      'Whole-mark fill-opacity + scale ignition; static second half',
+      '0 0 128 128'
+    );
+  }
+
+  // SLACK — hash assembles colour by colour (orbital-spin
+  // / trace character): the four colour pairs (dot + bar)
+  // fade and scale in sequence, then the exact static
+  // mark holds for the second half. No clipPath.
+  if (item.id === 'slack') {
+    return wrapSvg(
+      ``,
+      `@keyframes tss_slack_p0{0%,0%{opacity:0;transform:scale(0.9)}12%,100%{opacity:1;transform:scale(1)}}.tss_slack_p0{transform-box:fill-box;transform-origin:center;animation:tss_slack_p0 8s ease-out infinite}@keyframes tss_slack_p1{0%,12%{opacity:0;transform:scale(0.9)}24%,100%{opacity:1;transform:scale(1)}}.tss_slack_p1{transform-box:fill-box;transform-origin:center;animation:tss_slack_p1 8s ease-out infinite}@keyframes tss_slack_p2{0%,24%{opacity:0;transform:scale(0.9)}36%,100%{opacity:1;transform:scale(1)}}.tss_slack_p2{transform-box:fill-box;transform-origin:center;animation:tss_slack_p2 8s ease-out infinite}@keyframes tss_slack_p3{0%,36%{opacity:0;transform:scale(0.9)}48%,100%{opacity:1;transform:scale(1)}}.tss_slack_p3{transform-box:fill-box;transform-origin:center;animation:tss_slack_p3 8s ease-out infinite}`,
+      `.tss_slack_p0,.tss_slack_p1,.tss_slack_p2,.tss_slack_p3{animation:none!important;opacity:1!important;transform:none!important}`,
+      `<g transform="scale(2.37037)"><g class="tss_slack_p0"><path fill="#E3066A" d="M11.379 33.9993C11.379 37.1358 8.84512 39.6507 5.7276 39.6507C2.61008 39.6507 0.0572205 37.1168 0.0572205 33.9993C0.0572205 30.8817 2.5911 28.3479 5.70862 28.3479H11.36V33.9993H11.379Z"/><path fill="#E3066A" d="M14.1962 33.9997C14.1962 30.8632 16.7301 28.3483 19.8476 28.3483C22.9651 28.3483 25.499 30.8822 25.499 33.9997V48.1353C25.499 51.2718 22.9651 53.7867 19.8476 53.7867C16.7301 53.7867 14.1962 51.2718 14.1962 48.1353V33.9997Z"/></g><g class="tss_slack_p1"><path fill="#00B3FF" d="M19.8662 11.2673C16.7296 11.2673 14.2148 8.73347 14.2148 5.61594C14.2148 2.49842 16.7486 -0.0354538 19.8662 -0.0354538C22.9837 -0.0354538 25.5175 2.49842 25.5175 5.61594V11.2673H19.8662Z"/><path fill="#00B3FF" d="M19.8682 14.1334C23.0047 14.1334 25.5196 16.6673 25.5196 19.7848C25.5196 22.9023 22.9857 25.4362 19.8682 25.4362H5.67566C2.53916 25.4362 0.0242615 22.9023 0.0242615 19.7848C0.0242615 16.6673 2.55814 14.1334 5.67566 14.1334H19.8682Z"/></g><g class="tss_slack_p2"><path fill="#41B658" d="M42.5323 19.7853C42.5323 16.6488 45.0662 14.1339 48.1837 14.1339C51.3012 14.1339 53.8351 16.6678 53.8351 19.7853C53.8351 22.9028 51.3012 25.4367 48.1837 25.4367H42.5323V19.7853Z"/><path fill="#41B658" d="M39.7126 19.7934C39.7126 22.9299 37.1787 25.4448 34.0612 25.4448C30.9436 25.4448 28.4098 22.911 28.4098 19.7934V5.61986C28.4098 2.48336 30.9436 -0.0315399 34.0612 -0.0315399C37.1787 -0.0315399 39.7126 2.48336 39.7126 5.61986V19.7934Z"/></g><g class="tss_slack_p3"><path fill="#FCC003" d="M34.0376 42.482C37.1741 42.482 39.689 45.0158 39.689 48.1334C39.689 51.2509 37.1552 53.7848 34.0376 53.7848C30.9201 53.7848 28.3862 51.2509 28.3862 48.1334V42.482H34.0376Z"/><path fill="#FCC003" d="M34.0381 39.6507C30.9016 39.6507 28.3867 37.1168 28.3867 33.9993C28.3867 30.8818 30.9206 28.3479 34.0381 28.3479H48.2306C51.3671 28.3479 53.882 30.8818 53.882 33.9993C53.882 37.1168 51.3482 39.6507 48.2306 39.6507H34.0381Z"/></g></g>`,
+      'Slack hash assembles colour by colour, then the exact static mark holds in the second half',
+      'Per-colour-pair opacity+scale entrances baked into 8s keyframe windows; static second half',
+      '0 0 128 128'
+    );
+  }
+
   // ==========================================================================
   // 1. PHASE 3 VALIDATION TRIO + REFERENCE 30 + PR #15 + CORE FLAGSHIPS
   // ==========================================================================
@@ -1649,10 +1735,10 @@ function buildAnimatedSvg(item) {
       kIn = `tss_${uid}_i`;
     return wrapSvg(
       '',
-      `@keyframes ${kOut}{0%,100%{transform:translateY(-1.2px) scale(0.95)}34%,80%{transform:translateY(0) scale(1)}}@keyframes ${kIn}{0%,10%,100%{transform:translateY(-3.2px) scale(0.85);opacity:0.35}40%,80%{transform:translateY(0) scale(1);opacity:1}}.${kOut}{transform-origin:12px 12px;animation:${kOut} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kIn}{transform-origin:12px 8px;animation:${kIn} ${dur} cubic-bezier(0.34,1.56,0.64,1) infinite}`,
+      `@keyframes ${kOut}{0%,100%{transform:translateY(-1.2px) scale(0.95)}34%,80%{transform:translateY(0) scale(1)}}@keyframes ${kIn}{0%,10%,100%{transform:translateY(-3.2px) scale(0.85);opacity:0.35}40%,80%{transform:translateY(0) scale(1);opacity:1}}.${kOut}{transform-box:fill-box;transform-origin:center;animation:${kOut} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kIn}{transform-box:fill-box;transform-origin:center;animation:${kIn} ${dur} cubic-bezier(0.34,1.56,0.64,1) infinite}`,
       `.${kOut},.${kIn}{animation:none!important;transform:none!important;opacity:1!important}`,
-      `<path class="${kOut}" fill="#4FC08D" d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39Z"/><path class="${kIn}" fill="#35495E" stroke="#E2E8F0" stroke-width="0.35" d="M12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z"/>`,
-      'Dual-color #4FC08D outer V and #35495E inner V telescoping into alignment',
+      `<g transform="translate(0,8.57) scale(0.652004)"><path class="${kOut}" fill="#42B883" d="M120.83 0L98.16 39.26 75.49 0H0l98.16 170.02L196.32 0h-75.49z"/><path class="${kIn}" fill="#35495E" d="M120.83 0L98.16 39.26 75.49 0H39.26l58.9 102.01L157.06 0h-36.23z"/></g>`,
+      'Dual-color #42B883 outer V and #35495E inner V telescoping into alignment',
       'Two-layer chevron vertical spring convergence'
     );
   }
