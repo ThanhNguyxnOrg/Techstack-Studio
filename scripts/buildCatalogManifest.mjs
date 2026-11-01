@@ -57,9 +57,12 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   cargo: {
     title: 'Cargo',
-    hex: 'EAB308',
-    source: 'https://doc.rust-lang.org/cargo/',
-    path: 'M12 1.8L2.8 6.8v10.4L12 22.2l9.2-5V6.8L12 1.8zm0 2.3l6.8 3.7-2.8 1.5-6.8-3.7L12 4.1zM8.1 7.2l6.8 3.7-2.9 1.6-6.8-3.7 2.9-1.6zM4.8 9.2l6.2 3.4v6.8l-6.2-3.4V9.2zm8.2 10.2v-6.8l6.2-3.4v6.8L13 19.4z',
+    hex: 'E7AC38',
+    source: 'https://doc.rust-lang.org/cargo/images/Cargo-Logo-Small.png',
+    // No vector path exists: the only official mark is raster, so the
+    // catalog svgPath is a degenerate no-op placeholder (rendering uses
+    // the embedded raster in the generator branches, never this path).
+    path: 'M0 0H0V0Z',
   },
   awk: {
     title: 'AWK',
