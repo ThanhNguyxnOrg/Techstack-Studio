@@ -51,12 +51,6 @@ const VERIFIED_FALLBACK_ICONS = {
     source: 'https://tinygo.org/',
     path: 'M7 5h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm-4 3h2v2H3V8zm0 6h2v2H3v-2zm16-6h2v2h-2V8zm0 6h2v2h-2v-2zM9 9v2h2v4h2v-4h2V9H9z',
   },
-  embassy: {
-    title: 'Embassy (Rust Embedded)',
-    hex: 'F59E0B',
-    source: 'https://embassy.dev/',
-    path: 'M6 5h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm-3 3h2v2H3V8zm0 6h2v2H3v-2zm16-6h2v2h-2V8zm0 6h2v2h-2v-2zM8.5 8.5v7h7v-2h-5v-1h4v-1.8h-4v-.4h5v-1.8h-7z',
-  },
   cargo: {
     title: 'Cargo',
     hex: 'E7AC38',
@@ -4895,15 +4889,6 @@ const EXTRA_COMMUNITY_SLUGS = {
       'Go Compiler for Microcontrollers, WebAssembly & Command-Line Tools',
       ['tinygo-org'],
       'circuit-trace-pulse',
-    ],
-    [
-      'embassy',
-      'Embassy (Rust Embedded)',
-      'rust',
-      'RTOS & Embedded Toolchains',
-      'Modern Asynchronous Rust Framework for Embedded Microcontrollers',
-      ['embedded-hal', 'probe-rs'],
-      'orbital-spin',
     ],
     [
       'lorawan',
