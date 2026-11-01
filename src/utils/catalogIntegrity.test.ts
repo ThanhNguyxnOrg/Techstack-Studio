@@ -38,6 +38,7 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   azuresqldatabase: ['#0078d4', 'M14.49,7.15'],
   echo: ['#00AFD1', '#4AE1FF', 'M52.5,22.3'],
   openvino: ['#FFFFFF', 'M117.045'],
+  freertos: ['#6CAE3E', 'M27.943'],
 };
 
 function assertSafeSvg(markup: string, id: string): void {

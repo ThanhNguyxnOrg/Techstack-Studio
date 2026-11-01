@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T05:29:30.753Z",
+  "generatedAt": "2026-11-01T06:18:49.613Z",
   "totalCatalogEntries": 552,
   "sourceSvgFilesCreated": 552,
   "animatedSvgFilesCreated": 552,
@@ -8750,8 +8750,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/freertos.svg",
       "animatedSvgPath": "/icons/animated/freertos.svg",
-      "animationConcept": "Sequential 3-subpath vector contour drawing (#A8EFC2) illuminating the #4ADE80 FreeRTOS silhouette",
-      "animationTechnique": "Multi-subpath stroke-dasharray/stroke-dashoffset choreography + synchronized fill-opacity reveal",
+      "animationConcept": "FreeRTOS chip draws itself in 5 sequential groups (frame, pins, arc, nodes, traces), then holds solid and loops seamlessly; final and reduced-motion frames are exactly the static glyph",
+      "animationTechnique": "Sequential staggered stroke draw on grouped subpaths + verbatim single-path fill layer; Material-style ease-out",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,

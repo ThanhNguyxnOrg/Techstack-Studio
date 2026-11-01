@@ -415,6 +415,16 @@ function buildSourceSvg(item) {
   // 24 box. Every default-path entry except microsoftsqlserver is 24-unit,
   // so this changes only that entry (Devicon 128-unit grid), which the
   // hardcoded box clipped to its top-left 24x24 corner.
+  if (item.id === 'freertos') {
+    // AWS Architecture icon for FreeRTOS, verbatim (Arch_Amazon-FreeRTOS_64):
+    // green gradient tile (#1B660F -> #6CAE3E, diagonal) + white chip/circuit
+    // glyph, 80-unit artwork scaled x1.6 into the 128 box. Gradient id
+    // namespaced to tss_freertos_g so it cannot collide in a shared banner.
+    // This replaces the invented green clock; the product's own wordmark
+    // exists only as PNG/font-based files, so no verbatim vector wordmark
+    // is available for the catalog.
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><defs><linearGradient id="tss_freertos_g" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#1B660F" offset="0%"/><stop stop-color="#6CAE3E" offset="100%"/></linearGradient></defs><g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path fill="#FFFFFF" fill-rule="evenodd" d="${d}"/></g></svg>`;
+  }
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${item.svgViewBox || '0 0 24 24'}" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
 }
 
@@ -733,6 +743,34 @@ function buildAnimatedSvg(item) {
       `<path fill="${primary}" fill-rule="evenodd" d="${d}"/><path class="tss_microsoftsqlserver_glow" fill="none" stroke="#FF7A70" stroke-width="2" stroke-linejoin="round" d="${d}"/>`,
       'Flat red grid exactly static; a same-path light edge breathes twice, then a long static hold; final and reduced-motion frames are exactly the static grid',
       'Overlaid same-path stroke breathing (opacity only, no movement, no clipping)',
+      '0 0 128 128'
+    );
+  }
+
+  // FREERTOS — sequential 5-group draw (12s, user-approved variant B5).
+  // The glyph is chunky filled shapes, not line art, so a single-path
+  // trace draws all 10 subpaths in parallel and never reads as a
+  // drawing completing (the user's "chưa vẽ xong hết đã hết" report
+  // on B4). B5 instead draws 5 groups in order — chip square, pins,
+  // arc, 3 nodes, traces — over 0–46% of a 12s loop, then the fill
+  // layer solidifies 44–52% while the trace strokes fade to 0 (so
+  // the solid frame is exactly the static glyph, no bold outline
+  // left over — the "đậm" defect of B/B2). The fill layer is the
+  // verbatim single catalog path, never split, so the evenodd holes
+  // survive exactly. Solid hold 52–70%, fade 70–84%, invisible
+  // 84–100% so the next loop restarts invisibly (seamless infinite
+  // loop, the user's "infi" request). Green tile static throughout.
+  // No clipPath, no foreign shapes. Reduced-motion is exactly the
+  // static glyph. Catalog motionRecipe.family stays orbital-spin
+  // per the no-new-family-names convention for bespoke branches.
+  if (item.id === 'freertos') {
+    return wrapSvg(
+      '<defs><linearGradient id="tss_freertos_g" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#1B660F" offset="0%"/><stop stop-color="#6CAE3E" offset="100%"/></linearGradient></defs>',
+      `.tss_freertos_g1{fill:none;stroke:#FFFFFF;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;stroke-opacity:1;pathLength:100;animation:tss_freertos_g1 12s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_freertos_g1{0%{stroke-dashoffset:100;stroke-opacity:1}10%{stroke-dashoffset:0;stroke-opacity:1}44%{stroke-opacity:1}52%,100%{stroke-dashoffset:0;stroke-opacity:0}}.tss_freertos_g2{fill:none;stroke:#FFFFFF;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;stroke-opacity:1;pathLength:100;animation:tss_freertos_g2 12s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_freertos_g2{8%{stroke-dashoffset:100;stroke-opacity:1}20%{stroke-dashoffset:0;stroke-opacity:1}44%{stroke-opacity:1}52%,100%{stroke-dashoffset:0;stroke-opacity:0}}.tss_freertos_g3{fill:none;stroke:#FFFFFF;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;stroke-opacity:1;pathLength:100;animation:tss_freertos_g3 12s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_freertos_g3{18%{stroke-dashoffset:100;stroke-opacity:1}30%{stroke-dashoffset:0;stroke-opacity:1}44%{stroke-opacity:1}52%,100%{stroke-dashoffset:0;stroke-opacity:0}}.tss_freertos_g4{fill:none;stroke:#FFFFFF;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;stroke-opacity:1;pathLength:100;animation:tss_freertos_g4 12s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_freertos_g4{28%{stroke-dashoffset:100;stroke-opacity:1}38%{stroke-dashoffset:0;stroke-opacity:1}44%{stroke-opacity:1}52%,100%{stroke-dashoffset:0;stroke-opacity:0}}.tss_freertos_g5{fill:none;stroke:#FFFFFF;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;stroke-opacity:1;pathLength:100;animation:tss_freertos_g5 12s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_freertos_g5{36%{stroke-dashoffset:100;stroke-opacity:1}46%{stroke-dashoffset:0;stroke-opacity:1}44%{stroke-opacity:1}52%,100%{stroke-dashoffset:0;stroke-opacity:0}}.tss_freertos_fill{fill-opacity:0;animation:tss_freertos_fill 12s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_freertos_fill{0%,44%{fill-opacity:0}52%,70%{fill-opacity:1}84%,100%{fill-opacity:0}}`,
+      `.tss_freertos_g1,.tss_freertos_g2,.tss_freertos_g3,.tss_freertos_g4,.tss_freertos_g5{animation:none!important;stroke-dashoffset:0!important;stroke-opacity:0!important}.tss_freertos_fill{animation:none!important;fill-opacity:1!important}`,
+      `<g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path class="tss_freertos_fill" fill="#FFFFFF" fill-rule="evenodd" d="${d}"/><path class="tss_freertos_g1" d="M18,61 L62,61 L62,20 L18,20 L18,61 Z "/><path class="tss_freertos_g2" d="M68,23 L68,21 L64,21 L64,19 C64,18.448 63.552,18 63,18 L17,18 C16.447,18 16,18.448 16,19 L16,21 L12,21 L12,23 L16,23 L16,27 L12,27 L12,29 L16,29 L16,33 L12,33 L12,35 L16,35 L16,39 L12,39 L12,41 L16,41 L16,45 L12,45 L12,47 L16,47 L16,51 L12,51 L12,53 L16,53 L16,57 L12,57 L12,59 L16,59 L16,62 C16,62.553 16.447,63 17,63 L63,63 C63.552,63 64,62.553 64,62 L64,59 L68,59 L68,57 L64,57 L64,53 L68,53 L68,51 L64,51 L64,47 L68,47 L68,45 L64,45 L64,41 L68,41 L68,39 L64,39 L64,35 L68,35 L68,33 L64,33 L64,29 L68,29 L68,27 L64,27 L64,23 L68,23 Z"/><path class="tss_freertos_g3" d="M27.775,44.486 C28.254,45.738 28.91,46.907 29.735,47.932 C29.807,48.033 29.891,48.133 29.967,48.222 C31.314,49.842 33.059,51.11 35,51.903 L35,57 L37,57 L37,52.555 C37.652,52.711 38.318,52.819 39,52.87 L39,57 L41,57 L41,52.87 C41.682,52.819 42.348,52.711 43,52.556 L43,57 L45,57 L45,51.903 C48.307,50.537 50.943,47.806 52.215,44.487 C54.624,44.401 56.559,42.429 56.559,40 C56.559,37.617 54.692,35.68 52.345,35.527 C51.047,31.802 48.172,28.893 44.473,27.546 C44.328,25.195 42.387,23.32 40,23.32 C37.612,23.32 35.672,25.195 35.525,27.547 C31.829,28.895 28.953,31.807 27.656,35.527 C25.308,35.678 23.44,37.616 23.44,40 C23.44,42.425 25.371,44.395 27.775,44.486 L27.775,44.486 Z "/><path class="tss_freertos_g4" d="M40,25.32 C41.38,25.32 42.502,26.443 42.502,27.823 C42.502,29.203 41.38,30.325 40,30.325 C38.62,30.325 37.498,29.203 37.498,27.823 C37.498,26.443 38.62,25.32 40,25.32 L40,25.32 Z M27.943,37.498 C29.323,37.498 30.445,38.621 30.445,40 C30.445,41.38 29.323,42.503 27.943,42.503 C26.563,42.503 25.44,41.38 25.44,40 C25.44,38.621 26.563,37.498 27.943,37.498 L27.943,37.498 Z M54.559,40 C54.559,41.38 53.436,42.503 52.056,42.503 C50.676,42.503 49.554,41.38 49.554,40 C49.554,38.621 50.676,37.498 52.056,37.498 C53.436,37.498 54.559,38.621 54.559,40 L54.559,40 Z "/><path class="tss_freertos_g5" d="M35.847,29.558 C36.402,30.881 37.574,31.878 39,32.205 L39,50.868 C38.322,50.807 37.651,50.68 37,50.495 L37,40 C37,39.448 36.552,39 36,39 L32.324,39 C31.998,37.571 30.996,36.397 29.667,35.844 C30.773,32.975 33,30.709 35.847,29.558 L35.847,29.558 Z M50.334,35.844 C49.005,36.397 48.002,37.571 47.675,39 L44,39 C43.447,39 43,39.448 43,40 L43,50.496 C42.35,50.681 41.679,50.807 41,50.868 L41,32.205 C42.425,31.878 43.598,30.88 44.153,29.556 C47.001,30.706 49.226,32.971 50.334,35.844 L50.334,35.844 Z M45,49.7 L45,41 L47.675,41 C47.993,42.39 48.951,43.533 50.224,44.104 C49.213,46.507 47.343,48.51 45,49.7 L45,49.7 Z M31.496,46.932 C31.448,46.875 31.399,46.82 31.326,46.721 C30.681,45.918 30.159,45.043 29.765,44.109 C31.045,43.54 32.005,42.393 32.324,41 L35,41 L35,49.697 C33.662,49.023 32.461,48.092 31.496,46.932 L31.496,46.932 Z "/></g>`,
+      'FreeRTOS chip draws itself in 5 sequential groups (frame, pins, arc, nodes, traces), then holds solid and loops seamlessly; final and reduced-motion frames are exactly the static glyph',
+      'Sequential staggered stroke draw on grouped subpaths + verbatim single-path fill layer; Material-style ease-out',
       '0 0 128 128'
     );
   }
