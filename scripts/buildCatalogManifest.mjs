@@ -1324,15 +1324,6 @@ const CATEGORY_SEEDS = {
       'circuit-trace-pulse',
     ],
     [
-      'pwa',
-      'PWA',
-      'pwa',
-      'Web Standards',
-      'Installable Offline-Capable Progressive Web Apps',
-      ['service-worker'],
-      'beacon-ripple-rings',
-    ],
-    [
       'esbuild',
       'esbuild',
       'esbuild',
