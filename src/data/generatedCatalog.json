@@ -939,8 +939,7 @@
     "name": "OCaml",
     "aliases": [
       "ocaml",
-      "ml",
-      "reason"
+      "ml"
     ],
     "category": "Programming languages",
     "subcategory": "Functional & Systems",
@@ -3643,9 +3642,7 @@
     "id": "webgl",
     "name": "WebGL",
     "aliases": [
-      "webgl",
-      "glsl",
-      "webgpu"
+      "webgl"
     ],
     "category": "Frontend",
     "subcategory": "Graphics & 3D",
@@ -3893,7 +3890,6 @@
     "name": "React Native",
     "aliases": [
       "reactnative",
-      "react",
       "rn"
     ],
     "category": "Frontend",
@@ -5545,7 +5541,6 @@
     "name": "Spring Boot",
     "aliases": [
       "springboot",
-      "spring",
       "java-spring"
     ],
     "category": "Backend",
@@ -11052,7 +11047,6 @@
     "name": "Neon (Serverless Postgres)",
     "aliases": [
       "neon",
-      "postgresql",
       "neon-tech",
       "neondb"
     ],
@@ -15465,10 +15459,8 @@
     "name": "PX4 Autopilot",
     "aliases": [
       "px4",
-      "drone",
       "mavlink",
-      "uav",
-      "ardupilot"
+      "uav"
     ],
     "category": "Embedded development",
     "subcategory": "Robotics & Autonomy",
@@ -15823,11 +15815,7 @@
     "id": "lorawan",
     "name": "LoRa / LoRaWAN",
     "aliases": [
-      "lorawan",
-      "semtech",
-      "thethingsnetwork",
-      "ttn",
-      "meshtastic"
+      "lorawan"
     ],
     "category": "Embedded development",
     "subcategory": "Protocols & Connectivity",

@@ -603,7 +603,7 @@ const CATEGORY_SEEDS = {
       'ocaml',
       'Functional & Systems',
       'Industrial-Strength Functional Programming',
-      ['ml', 'reason'],
+      ['ml'],
       'elastic-morph-bounce',
     ],
     [
@@ -1218,7 +1218,7 @@ const CATEGORY_SEEDS = {
       'webgl',
       'Graphics & 3D',
       'Hardware-Accelerated 2D & 3D Graphics API',
-      ['glsl', 'webgpu'],
+      [],
       'orbital-spin',
     ],
     [
@@ -1278,7 +1278,7 @@ const CATEGORY_SEEDS = {
     [
       'reactnative',
       'React Native',
-      'react',
+      'reactnative',
       'Cross-Platform & Mobile',
       'Build Native Mobile Apps Using React',
       ['rn'],
@@ -1509,7 +1509,7 @@ const CATEGORY_SEEDS = {
       'springboot',
       'Enterprise Frameworks',
       'Production-Grade Stand-Alone Spring Applications',
-      ['spring', 'java-spring'],
+      ['java-spring'],
       'iris-aperture-bloom',
     ],
     [
@@ -3372,10 +3372,10 @@ const CATEGORY_SEEDS = {
     [
       'px4',
       'PX4 Autopilot',
-      'drone',
+      'px4',
       'Robotics & Autonomy',
       'Open-Source Flight Control Software for Drones & UAVs',
-      ['mavlink', 'uav', 'ardupilot'],
+      ['mavlink', 'uav'],
       'orbital-spin',
     ],
     [
@@ -4451,7 +4451,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     [
       'neon',
       'Neon (Serverless Postgres)',
-      'postgresql',
+      'neon',
       'Cloud Postgres & BaaS',
       'Serverless Branchable PostgreSQL with Scale-to-Zero',
       ['neon-tech', 'neondb'],
@@ -4896,10 +4896,10 @@ const EXTRA_COMMUNITY_SLUGS = {
     [
       'lorawan',
       'LoRa / LoRaWAN',
-      'semtech',
+      'lorawan',
       'Protocols & Connectivity',
       'Long-Range Low-Power Wide-Area Network Modulation & Protocol',
-      ['thethingsnetwork', 'ttn', 'meshtastic'],
+      [],
       'beacon-ripple-rings',
     ],
     [
