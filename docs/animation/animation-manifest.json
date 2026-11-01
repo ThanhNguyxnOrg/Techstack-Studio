@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T15:10:43.118Z",
+  "generatedAt": "2026-11-01T15:24:17.355Z",
   "totalCatalogEntries": 544,
   "sourceSvgFilesCreated": 544,
   "animatedSvgFilesCreated": 544,
@@ -9086,8 +9086,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/thread.svg",
       "animatedSvgPath": "/icons/animated/thread.svg",
-      "animationConcept": "Sequential 1-subpath vector contour drawing (#9FDFFC) illuminating the #38BDF8 Thread silhouette",
-      "animationTechnique": "Multi-subpath stroke-dasharray/stroke-dashoffset choreography + synchronized fill-opacity reveal",
+      "animationConcept": "Wind-in: the disc fades in, then the mark winds back and forth around its centre like a thread screwing in; exact static hold in the second half",
+      "animationTechnique": "Fade-in plus one rotate oscillation baked into 8s keyframe windows (shared group, fill-box centre origin); static second half",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,

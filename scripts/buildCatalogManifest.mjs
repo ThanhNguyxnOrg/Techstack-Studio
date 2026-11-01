@@ -222,9 +222,12 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   thread: {
     title: 'Thread',
-    hex: '38BDF8',
-    source: 'https://www.threadgroup.org/',
-    path: 'M12 2a10 10 0 1 0 10 10h-2.5a7.5 7.5 0 1 1-7.5-7.5V12h5v-2.5h-2.5V2z',
+    hex: '464646',
+    source:
+      'https://threadgroup.org/Portals/_default/skins/threadnew-onesection18/images/Thread-logomark-dkg.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official logomark; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   balena: {
     title: 'balena',
@@ -3333,7 +3336,7 @@ const CATEGORY_SEEDS = {
       'thread',
       'Protocols & Connectivity',
       'IPv6-Based Low-Power Mesh Networking Protocol for IoT',
-      ['openthread'],
+      [],
       'stroke-trace-fill',
     ],
     [

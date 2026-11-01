@@ -41,6 +41,7 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   yocto: ['#4597D9', '#FFFFFF'],
   beagleboard: ['#a97f2c', '#f26322'],
   microchip: ['#ED2724', '#FFFFFF'],
+  thread: ['#464646'],
   azuresqldatabase: ['#0078d4', 'M14.49,7.15'],
   echo: ['#00AFD1', '#4AE1FF', 'M52.5,22.3'],
   openvino: ['#FFFFFF', 'M117.045'],
