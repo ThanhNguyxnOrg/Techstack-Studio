@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T11:30:23.168Z",
+  "generatedAt": "2026-11-01T11:37:35.082Z",
   "totalCatalogEntries": 545,
   "sourceSvgFilesCreated": 545,
   "animatedSvgFilesCreated": 545,
@@ -9317,8 +9317,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/beagleboard.svg",
       "animatedSvgPath": "/icons/animated/beagleboard.svg",
-      "animationConcept": "Ear flop: Boris's floppy ear flops twice around its top attachment, then the exact static lockup holds in the second half",
-      "animationTechnique": "One rotate oscillation baked into 8s keyframe windows (ear group, fill-box origin at the head attachment); static second half",
+      "animationConcept": "Ear wag: Boris's floppy ear wags continuously around its top attachment, settling to exact static at the loop seam",
+      "animationTechnique": "Continuous rotate oscillation baked into 8s keyframe windows (ear group, fill-box origin at the head attachment); settles to static at the loop seam",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
