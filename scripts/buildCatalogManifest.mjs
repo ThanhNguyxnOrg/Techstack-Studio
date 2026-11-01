@@ -82,9 +82,11 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   neon: {
     title: 'Neon (Serverless Postgres)',
-    hex: '00E599',
-    source: 'https://neon.tech/',
-    path: 'M4 3.5A1.5 1.5 0 0 1 5.5 2h13A1.5 1.5 0 0 1 20 3.5v17a1.5 1.5 0 0 1-2.56 1.06L10 14.12V20.5A1.5 1.5 0 0 1 8.5 22h-3A1.5 1.5 0 0 1 4 20.5v-17zm3 2.5v13h1v-7.5a1.5 1.5 0 0 1 2.56-1.06L17 16.88V6H7z',
+    hex: '34D59A',
+    source: 'https://neon.com/brand/neon-logomark-dark-color.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official mark; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   px4: {
     title: 'PX4 Autopilot',
@@ -172,9 +174,11 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   oracle: {
     title: 'Oracle Database',
-    hex: 'F80000',
-    source: 'https://github.com/devicons/devicon/tree/master/icons/oracle',
-    path: 'M7.5 6.5C4.46 6.5 2 8.96 2 12s2.46 5.5 5.5 5.5h9c3.04 0 5.5-2.46 5.5-5.5s-2.46-5.5-5.5-5.5h-9zm0 2.5h9c1.66 0 3 1.34 3 3s-1.34 3-3 3h-9c-1.66 0-3-1.34-3-3s1.34-3 3-3z',
+    hex: 'C74634',
+    source: 'https://www.oracle.com/a/ocom/img/oracle-logo.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official mark; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   heroku: {
     title: 'Heroku',
@@ -912,7 +916,7 @@ const CATEGORY_SEEDS = {
       'svelte',
       'UI Frameworks',
       'Compiler-First Cybernetically Enhanced Web Apps',
-      ['svelte5', 'sveltekit'],
+      ['svelte5'],
       'flame-core-flicker',
     ],
     [
