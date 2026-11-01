@@ -4943,10 +4943,9 @@
     }
   },
   {
-    "id": "marionette",
+    "id": "marko",
     "name": "Marko",
     "aliases": [
-      "marionette",
       "marko",
       "markojs"
     ],
@@ -4958,8 +4957,8 @@
     "iconUrl": "https://cdn.simpleicons.org/marko/2596BE",
     "sourceSvgPath": "/icons/source/marionette.svg",
     "animatedSvgPath": "/icons/animated/marionette.svg",
-    "docsUrl": "https://github.com/marko-js/website/blob/c03b8229e8fe8e01fde6c0772bc1cb0ceae9be05/src/logos/marko.svg",
-    "monogram": "MAR",
+    "docsUrl": "https://markojs.com/",
+    "monogram": "M",
     "svgPath": "M15.4 5.46h-3.39l-2.3 3.77L7.4 5.46H4l-4 6.55 4 6.53h3.39l-4-6.54L5.7 8.23 8.01 12h3.39l2.31-3.78L16.03 12l-4.01 6.54h3.39l4-6.54zm4.6 0h-3.39l4 6.54-4.01 6.54h3.39L24 12z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",

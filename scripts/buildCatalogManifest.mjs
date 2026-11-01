@@ -4025,7 +4025,7 @@ const EXTRA_COMMUNITY_SLUGS = {
       'curtain-vertical-reveal',
     ],
     [
-      'marionette',
+      'marko',
       'Marko',
       'marko',
       'UI Frameworks',

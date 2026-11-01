@@ -33,6 +33,7 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   axum: 'tokio',
   mssql: 'microsoftsqlserver',
   gcp: 'googlecloud',
+  marionette: 'marko',
 };
 
 export const TECH_BY_ID: Record<string, TechItem> = (() => {

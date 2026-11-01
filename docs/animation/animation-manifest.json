@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T10:27:34.676Z",
+  "generatedAt": "2026-11-01T10:34:29.466Z",
   "totalCatalogEntries": 546,
   "sourceSvgFilesCreated": 546,
   "animatedSvgFilesCreated": 546,
@@ -2925,14 +2925,14 @@
       "knownIssues": null
     },
     {
-      "id": "marionette",
+      "id": "marko",
       "name": "Marko",
-      "slug": "marionette",
+      "slug": "marko",
       "category": "Frontend",
       "subcategory": "UI Frameworks",
       "tier": "C",
-      "sourceAssetPath": "/icons/source/marionette.svg",
-      "animatedSvgPath": "/icons/animated/marionette.svg",
+      "sourceAssetPath": "/icons/source/marko.svg",
+      "animatedSvgPath": "/icons/animated/marko.svg",
       "animationConcept": "Progressive 2-subpath contour draw followed by an internal clipped #96CDE0 prism sheen across Marko",
       "animationTechnique": "Staggered subpath stroke-dashoffset trace + self-clipped specular prism sweep",
       "fileExists": true,
