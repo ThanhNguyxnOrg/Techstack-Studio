@@ -260,10 +260,13 @@ const VERIFIED_FALLBACK_ICONS = {
     path: 'M0 0H0V0Z',
   },
   seeedstudio: {
-    title: 'Seeed Studio (XIAO)',
+    title: 'Seeed Studio',
     hex: '8DC21F',
-    source: 'https://www.seeedstudio.com/',
-    path: 'M12 2C7 2 3 6 3 11c0 4.2 3 7.8 7 8.7V22h4v-2.3c4-.9 7-4.5 7-8.7 0-5-4-9-9-9zm0 3.5A5.5 5.5 0 1 1 6.5 11 5.5 5.5 0 0 1 12 5.5z',
+    source:
+      'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio_branding_kit_20230410.pdf',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official White wordmark; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   semtech: {
     title: 'LoRa / LoRaWAN',
@@ -4865,11 +4868,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'seeedstudio',
-      'Seeed Studio (XIAO)',
+      'Seeed Studio',
       'seeedstudio',
       'Microcontrollers & Boards',
       'XIAO Miniature MCU Boards, Grove Sensors & Edge AI Hardware',
-      ['xiao', 'reterminal'],
+      ['xiao'],
       'iris-aperture-bloom',
     ],
     [
