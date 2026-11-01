@@ -206,11 +206,16 @@ const VERIFIED_FALLBACK_ICONS = {
     // official logo; path is a placeholder (never rendered, parts exist).
     path: 'M0 0H0V0Z',
   },
-  yoctoproject: {
+  yocto: {
     title: 'Yocto Project',
-    hex: '2488C6',
-    source: 'https://www.yoctoproject.org/',
-    path: 'M4 5l6.5 7.5V19h3v-6.5L20 5h-3.5L12 10.5 7.5 5H4z',
+    hex: '4597D9',
+    source:
+      'https://www.yoctoproject.org/wp-content/uploads/sites/32/2023/09/YoctoProject_Logo_RGB_White_small.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official lockup; path is a placeholder (never rendered, parts exist).
+    // Key was 'yoctoproject' (never matched id 'yocto' — resolveIconAsset
+    // looks up by id); fixed to 'yocto'.
+    path: 'M0 0H0V0Z',
   },
   matter: {
     title: 'Matter',

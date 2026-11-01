@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T10:55:04.483Z",
+  "generatedAt": "2026-11-01T11:00:28.134Z",
   "totalCatalogEntries": 546,
   "sourceSvgFilesCreated": 546,
   "animatedSvgFilesCreated": 546,
@@ -8939,8 +8939,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/yocto.svg",
       "animatedSvgPath": "/icons/animated/yocto.svg",
-      "animationConcept": "Bipartite structural assembly along Yocto Project's horizontal axis at (12, 12) with 1-part contour trace",
-      "animationTechnique": "Centroid-split <clipPath> halves sliding into lock + staggered subpath contour draw",
+      "animationConcept": "Wordmark assembly: yocto letters slide in left to right, PROJECT rises, blue dot drops in last; exact static hold in the second half",
+      "animationTechnique": "Six staggered translate+fade entrances baked into 8s keyframe windows (4 yocto letters, PROJECT line, dot); static second half",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
