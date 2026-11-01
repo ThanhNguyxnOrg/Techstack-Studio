@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T04:48:24.907Z",
+  "generatedAt": "2026-11-01T05:07:31.138Z",
   "totalCatalogEntries": 552,
   "sourceSvgFilesCreated": 552,
   "animatedSvgFilesCreated": 552,
@@ -5264,8 +5264,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/openvino.svg",
       "animatedSvgPath": "/icons/animated/openvino.svg",
-      "animationConcept": "Sequential 3-subpath vector contour drawing (#85B7DB) illuminating the #0068B5 OpenVINO silhouette",
-      "animationTechnique": "Multi-subpath stroke-dasharray/stroke-dashoffset choreography + synchronized fill-opacity reveal",
+      "animationConcept": "OpenVINO letters flash brand purple in reading order like inference flowing through the model, then a long static hold; final and reduced-motion frames are exactly the static wordmark",
+      "animationTechnique": "Per-letter purple flash chase across the official wordmark itself (reading order, staggered); Material-style ease-out",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
