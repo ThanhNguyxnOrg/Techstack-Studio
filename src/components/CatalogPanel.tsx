@@ -96,13 +96,13 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
             />
             <input
               id="catalog-search-input"
-              type="search"
+              type="text"
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value);
                 setVisibleLimit(40);
               }}
-              placeholder="Search 550+ technologies (React, Python, AWS...)"
+              placeholder="Search technologies (React, Python, AWS...)"
               aria-label="Search technologies"
               className="w-full pl-9 pr-8 py-2 bg-[#090B10] border border-[#1E2636] focus:border-[#38BDF8] rounded-xl text-xs text-[#F1F5F9] placeholder-[#64748B] focus:outline-none transition-colors"
             />
