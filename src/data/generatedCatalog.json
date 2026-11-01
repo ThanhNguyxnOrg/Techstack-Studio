@@ -3896,7 +3896,7 @@
     "role": "Build Native Mobile Apps Using React",
     "brandColor": "#61DAFB",
     "darkSafeColor": "#61DAFB",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/reactnative/reactnative-original.svg",
+    "iconUrl": "https://reactnative.dev/img/header_logo.svg",
     "sourceSvgPath": "/icons/source/reactnative.svg",
     "animatedSvgPath": "/icons/animated/reactnative.svg",
     "docsUrl": "https://reactnative.dev/",
@@ -3906,7 +3906,7 @@
     "tier": "C",
     "categoryRank": 48,
     "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
+    "provenance": "Official logo (reactnative.dev)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -10026,15 +10026,14 @@
     "id": "duckdb",
     "name": "DuckDB",
     "aliases": [
-      "duckdb",
-      "motherduck"
+      "duckdb"
     ],
     "category": "Databases",
     "subcategory": "Analytical & OLAP",
     "role": "Fast In-Process Analytical SQL OLAP Database Engine",
-    "brandColor": "#FFF000",
-    "darkSafeColor": "#FFF000",
-    "iconUrl": "https://cdn.simpleicons.org/duckdb/FFF000",
+    "brandColor": "#FFF100",
+    "darkSafeColor": "#FFF100",
+    "iconUrl": "https://duckdb.org/design/duckdb.zip",
     "sourceSvgPath": "/icons/source/duckdb.svg",
     "animatedSvgPath": "/icons/animated/duckdb.svg",
     "docsUrl": "https://duckdb.org",
@@ -10044,7 +10043,7 @@
     "tier": "B",
     "categoryRank": 13,
     "evidenceSource": "Stack Overflow Developer Survey 2026",
-    "provenance": "Community icon set",
+    "provenance": "Official icon (duckdb.org design pack, darkmode variant)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -15457,16 +15456,14 @@
     "id": "px4",
     "name": "PX4 Autopilot",
     "aliases": [
-      "px4",
-      "mavlink",
-      "uav"
+      "px4"
     ],
     "category": "Embedded development",
     "subcategory": "Robotics & Autonomy",
     "role": "Open-Source Flight Control Software for Drones & UAVs",
-    "brandColor": "#38BDF8",
-    "darkSafeColor": "#38BDF8",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/px4/px4-original.svg",
+    "brandColor": "#FFFFFF",
+    "darkSafeColor": "#FFFFFF",
+    "iconUrl": "https://raw.githubusercontent.com/PX4/PX4-user_guide/main/public/px4-logo.svg",
     "sourceSvgPath": "/icons/source/px4.svg",
     "animatedSvgPath": "/icons/animated/px4.svg",
     "docsUrl": "https://px4.io/",
@@ -15476,7 +15473,7 @@
     "tier": "C",
     "categoryRank": 33,
     "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
+    "provenance": "Official wordmark (PX4-user_guide)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -16348,15 +16345,14 @@
     "id": "figma",
     "name": "Figma",
     "aliases": [
-      "figma",
-      "figjam"
+      "figma"
     ],
     "category": "Developer tools",
     "subcategory": "Design & Prototyping",
     "role": "Collaborative Interface Design & Design System Platform",
-    "brandColor": "#F24E1E",
-    "darkSafeColor": "#F24E1E",
-    "iconUrl": "https://cdn.simpleicons.org/figma/F24E1E",
+    "brandColor": "#FF3737",
+    "darkSafeColor": "#FF3737",
+    "iconUrl": "https://raw.githubusercontent.com/figma/mcp-server-guide/main/Figma%20Icon%20(Full-color).svg",
     "sourceSvgPath": "/icons/source/figma.svg",
     "animatedSvgPath": "/icons/animated/figma.svg",
     "docsUrl": "https://www.figma.com/using-the-figma-brand/",
@@ -16366,7 +16362,7 @@
     "tier": "B",
     "categoryRank": 12,
     "evidenceSource": "Stack Overflow Survey 2026 & GitHub Octoverse 2025",
-    "provenance": "Community icon set",
+    "provenance": "Official icon (figma/mcp-server-guide)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {

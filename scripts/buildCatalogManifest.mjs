@@ -65,8 +65,8 @@ const VERIFIED_FALLBACK_ICONS = {
   reactnative: {
     title: 'React Native',
     hex: '61DAFB',
-    source: 'https://reactnative.dev/',
-    path: 'M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2.5v13h10v-13H7zm5 14a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0-9.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-3.5 2c0-1.9 1.6-3.5 3.5-3.5s3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5-3.5-1.6-3.5-3.5z',
+    source: 'https://reactnative.dev/img/header_logo.svg',
+    path: 'M0 0H0V0Z',
   },
   openvino: {
     title: 'OpenVINO',
@@ -90,9 +90,9 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   px4: {
     title: 'PX4 Autopilot',
-    hex: '38BDF8',
-    source: 'https://px4.io/',
-    path: 'M5 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM5 17a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM6.5 6.5L10.5 10.5V13.5L6.5 17.5l1.4 1.4 4.1-4.1h0l4.1 4.1 1.4-1.4-4-4V10.5l4-4-1.4-1.4-4.1 4.1-4.1-4.1-1.4 1.4z',
+    hex: 'FFFFFF',
+    source: 'https://raw.githubusercontent.com/PX4/PX4-user_guide/main/public/px4-logo.svg',
+    path: 'M0 0H0V0Z',
   },
   java: {
     title: 'Java',
@@ -2385,7 +2385,7 @@ const CATEGORY_SEEDS = {
       'duckdb',
       'Analytical & OLAP',
       'Fast In-Process Analytical SQL OLAP Database Engine',
-      ['motherduck'],
+      [],
       'iris-aperture-bloom',
     ],
     [
@@ -3381,7 +3381,7 @@ const CATEGORY_SEEDS = {
       'px4',
       'Robotics & Autonomy',
       'Open-Source Flight Control Software for Drones & UAVs',
-      ['mavlink', 'uav'],
+      [],
       'orbital-spin',
     ],
     [
@@ -3528,7 +3528,7 @@ const CATEGORY_SEEDS = {
       'figma',
       'Design & Prototyping',
       'Collaborative Interface Design & Design System Platform',
-      ['figjam'],
+      [],
       'segmented-assembly',
     ],
     [

@@ -23,6 +23,10 @@ function readSvg(directory: string, id: string): string {
 }
 
 const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
+  reactnative: ['#61DAFB'],
+  px4: ['#FFFFFF'],
+  figma: ['#24CB71', '#FF7237', '#00B6FF', '#FF3737', '#874FFF'],
+  duckdb: ['#FFF100', '#1D1D1B'],
   googlecloud: ['#EA4335', '#4285F4', '#34A853', '#FBBC05'],
   python: ['#387EB8', '#FFE052'],
   typescript: ['#3178C6', 'M3.375 9.938'],
