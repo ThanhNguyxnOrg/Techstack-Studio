@@ -2,7 +2,7 @@ import { TechItem } from '../types/stack';
 import generatedCatalogJson from './generatedCatalog.json';
 
 /**
- * Canonical SVG-first technology catalog (553 verified entries).
+ * Canonical SVG-first technology catalog (552 verified entries).
  * Every entry maps deterministically to:
  * - Static source SVG: `/icons/source/{id}.svg`
  * - Standalone animated SVG: `/icons/animated/{id}.svg`
@@ -29,6 +29,7 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   hlsl: 'webgpu',
   sql: 'azuresqldatabase',
   conda: 'condaforge',
+  elixirphoenix: 'elixir',
   gcp: 'googlecloud',
 };
 

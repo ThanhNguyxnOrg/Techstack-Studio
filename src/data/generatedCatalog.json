@@ -7382,42 +7382,6 @@
     }
   },
   {
-    "id": "elixirphoenix",
-    "name": "LiveView / OTP",
-    "aliases": [
-      "elixirphoenix",
-      "elixir",
-      "otp"
-    ],
-    "category": "Backend",
-    "subcategory": "Runtimes & Servers",
-    "role": "Real-Time Server-Rendered Stateful Elixir Apps",
-    "brandColor": "#F97316",
-    "darkSafeColor": "#F97316",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elixirphoenix/elixirphoenix-original.svg",
-    "sourceSvgPath": "/icons/source/elixirphoenix.svg",
-    "animatedSvgPath": "/icons/animated/elixirphoenix.svg",
-    "docsUrl": "https://phoenixframework.org/",
-    "monogram": "LIV",
-    "svgPath": "M12 2.2c2.8 3.2 4.5 6.3 4.5 9.3 0 2.5-1.9 4.5-4.5 4.5s-4.5-2-4.5-4.5c0-3 1.7-6.1 4.5-9.3zm-7.5 8.3c1.8 1.2 3.2 3 3.8 5.2-2.6-.4-4.6-2.4-4.8-5 0-.2.5-.3 1-.2zm15 0c.5-.1 1 0 1 .2-.2 2.6-2.2 4.6-4.8 5 .6-2.2 2-4 3.8-5.2zM8 19.5h8v2H8v-2z",
-    "svgViewBox": "0 0 24 24",
-    "tier": "C",
-    "categoryRank": 52,
-    "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
-    "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
-    "verified": true,
-    "motionRecipe": {
-      "family": "flame-core-flicker",
-      "durationSec": 3.6,
-      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
-      "delaySec": 0,
-      "direction": "normal",
-      "secondaryColor": "#FCBC8F",
-      "rationale": "Upward thermal gradient wave and subtle crown oscillation animate the flame silhouette."
-    }
-  },
-  {
     "id": "spring",
     "name": "Spring Framework",
     "aliases": [
