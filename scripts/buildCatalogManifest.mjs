@@ -247,10 +247,12 @@ const VERIFIED_FALLBACK_ICONS = {
     path: 'M6 6h12v12H6V6zm-3 2h2v2H3V8zm0 3h2v2H3v-2zm0 3h2v2H3v-2zm16-6h2v2h-2V8zm0 3h2v2h-2v-2zm0 3h2v2h-2v-2zM8 3h2v2H8V3zm3 0h2v2h-2V3zm3 0h2v2h-2V3zM8 19h2v2H8v-2zm3 0h2v2h-2v-2zm3 0h2v2h-2v-2z',
   },
   beagleboard: {
-    title: 'BeagleBoard / BeagleBone',
-    hex: 'A34928',
-    source: 'https://www.beagleboard.org/',
-    path: 'M6 4h9a4 4 0 0 1 4 4c0 1.6-.9 3-2.3 3.6A4.2 4.2 0 0 1 19.5 15.5 4.5 4.5 0 0 1 15 20H6V4zm3 3v3.5h5.5a1.75 1.75 0 0 0 0-3.5H9zm0 6v4h6a2 2 0 0 0 0-4H9z',
+    title: 'BeagleBoard',
+    hex: 'AA5137',
+    source: 'https://www.beagleboard.org/app/uploads/2021/05/beagleboard-logo.svg',
+    // Bespoke branch in generateStandaloneSvgLibrary.mjs renders the
+    // official lockup; path is a placeholder (never rendered, parts exist).
+    path: 'M0 0H0V0Z',
   },
   seeedstudio: {
     title: 'Seeed Studio (XIAO)',
@@ -4858,7 +4860,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'beagleboard',
-      'BeagleBoard / BeagleBone',
+      'BeagleBoard',
       'beagleboard',
       'Microcontrollers & Boards',
       'Open-Hardware Single-Board Linux & PRU Real-Time Computers',
