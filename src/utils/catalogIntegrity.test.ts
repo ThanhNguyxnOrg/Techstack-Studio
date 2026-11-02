@@ -67,9 +67,28 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   freertos: ['#6CAE3E', 'M27.943'],
   cargo: ['data:image/png'],
   tinygo: ['data:image/png'],
+  flutter: ['data:image/png'],
+  googlegemini: ['data:image/jpeg'],
+  angular: ['data:image/png'],
+  mysql: ['data:image/png'],
+  raspberrypi: ['data:image/png'],
+  texasinstruments: ['data:image/png'],
+  vscode: ['data:image/png'],
+  azure: ['#0078D4'],
+  lorawan: ['#FFFFFF'],
 };
 
-const RASTER_DATA_URI_ONLY_IDS = new Set(['cargo', 'tinygo']);
+const RASTER_DATA_URI_ONLY_IDS = new Set([
+  'cargo',
+  'tinygo',
+  'flutter',
+  'googlegemini',
+  'angular',
+  'mysql',
+  'raspberrypi',
+  'texasinstruments',
+  'vscode',
+]);
 
 function assertSafeSvg(markup: string, id: string): void {
   assert.ok(markup.startsWith('<svg '), `${id}: SVG must start with an <svg> element`);

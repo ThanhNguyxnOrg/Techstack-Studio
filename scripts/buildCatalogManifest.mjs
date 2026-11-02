@@ -115,14 +115,14 @@ const VERIFIED_FALLBACK_ICONS = {
   azure: {
     title: 'Microsoft Azure',
     hex: '0078D4',
-    source: 'https://github.com/devicons/devicon/tree/master/icons/azure',
-    path: 'M5.48 18.29l4.9-14.37L14.2 12l-3.83 4.35 7.98 1.94H5.48zM13.06 2.5L6.89 7.82 2 18.29h4.14l6.92-15.79zm1.73 1.25l7.21 15.75H10.5l4.85-5.5-2.65-5.75 2.09-4.5z',
+    source: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg',
+    path: 'M0 0H0V0Z',
   },
   vscode: {
     title: 'VS Code',
     hex: '007ACC',
-    source: 'https://github.com/devicons/devicon/tree/master/icons/vscode',
-    path: 'M17.5 2L7.8 10.8 4 7.8 2 8.8v6.4l2 1 3.8-3L17.5 22l4.5-2.2V4.2L17.5 2zm0 4.5v11L10.8 12l6.7-5.5z',
+    source: 'https://code.visualstudio.com/assets/branding/code-stable.png',
+    path: 'M0 0H0V0Z',
   },
   visualstudio: {
     title: 'Visual Studio',
@@ -197,8 +197,8 @@ const VERIFIED_FALLBACK_ICONS = {
   texasinstruments: {
     title: 'Texas Instruments',
     hex: 'CC0000',
-    source: 'https://www.ti.com/',
-    path: 'M3 6h12v3h-4.5v9h-3V9H3V6zm14 0h3v12h-3V6z',
+    source: 'https://www.ti.com/content/dam/ticom/images/identities/ti-brand/ti-hz-2c-pos-rgb.png',
+    path: 'M0 0H0V0Z',
   },
   infineon: {
     title: 'Infineon',
@@ -910,7 +910,7 @@ const CATEGORY_SEEDS = {
       'angular',
       'UI Frameworks',
       'Enterprise TypeScript Web Application Platform',
-      ['ng', 'angularjs'],
+      ['ng'],
       'segmented-assembly',
     ],
     [
@@ -2005,7 +2005,7 @@ const CATEGORY_SEEDS = {
       'googlegemini',
       'LLM & Foundation Models',
       'Multimodal Frontier AI Models & GenAI SDK',
-      ['gemini', 'genai'],
+      ['gemini'],
       'iris-aperture-bloom',
     ],
     [
@@ -2722,7 +2722,7 @@ const CATEGORY_SEEDS = {
       'azure',
       'Cloud Providers',
       'Enterprise Cloud Computing, AKS & AI Services',
-      ['ms-azure', 'aks'],
+      ['ms-azure'],
       'segmented-assembly',
     ],
     [
@@ -3112,7 +3112,7 @@ const CATEGORY_SEEDS = {
       'raspberrypi',
       'Microcontrollers & Boards',
       'Single-Board Linux Computers & RP2040/RP2350 Silicon',
-      ['rpi', 'rp2040', 'pi5'],
+      ['rpi'],
       'iris-aperture-bloom',
     ],
     [
@@ -3220,7 +3220,7 @@ const CATEGORY_SEEDS = {
       'texasinstruments',
       'Silicon & Architectures',
       'MSP430, Sitara, C2000 DSP & Analog Embedded Semiconductors',
-      ['ti', 'msp430', 'cc2652'],
+      ['ti'],
       'stroke-trace-fill',
     ],
     [
@@ -3448,7 +3448,7 @@ const CATEGORY_SEEDS = {
       'vscode',
       'Editors & IDEs',
       'Extensible Cross-Platform Source Code Editor',
-      ['visual-studio-code', 'code'],
+      ['visual-studio-code'],
       'segmented-assembly',
     ],
     [
@@ -4902,11 +4902,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'lorawan',
-      'LoRa / LoRaWAN',
+      'LoRa',
       'lorawan',
       'Protocols & Connectivity',
       'Long-Range Low-Power Wide-Area Network Modulation & Protocol',
-      [],
+      ['lora'],
       'beacon-ripple-rings',
     ],
     [
