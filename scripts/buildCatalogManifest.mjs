@@ -324,6 +324,15 @@ const REFERENCE_SVG_MAP = {
 
 // Official documentation links for entries whose upstream metadata points at a logo index.
 const DOCS_URL_OVERRIDES = {
+  github: 'https://github.com/',
+  docker: 'https://www.docker.com/',
+  python: 'https://www.python.org/',
+  typescript: 'https://www.typescriptlang.org/',
+  kubernetes: 'https://kubernetes.io/',
+  postgresql: 'https://www.postgresql.org/',
+  react: 'https://react.dev/',
+  javascript: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+  opengl: 'https://www.opengl.org/',
   apachedoris: 'https://doris.apache.org/',
 };
 
@@ -426,11 +435,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'gnubash',
-      'Bash / Shell',
+      'Bash',
       'gnubash',
       'Scripting & Shell',
       'POSIX Command Language & Automation',
-      ['bash', 'sh', 'shell'],
+      ['bash', 'shell'],
       'circuit-trace-pulse',
     ],
     [
@@ -696,7 +705,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'v',
-      'V (Vlang)',
+      'V',
       'v',
       'Systems & Compiled',
       'Simple Fast Compiled Systems Language',
@@ -759,7 +768,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'd',
-      'D (Dlang)',
+      'D',
       'd',
       'Systems & Compiled',
       'Systems Programming with C++ Performance',
@@ -960,7 +969,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'sass',
-      'Sass / SCSS',
+      'Sass',
       'sass',
       'Styling & Design Systems',
       'Professional Grade CSS Extension Language',
@@ -1041,11 +1050,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'remix',
-      'Remix / React Router',
+      'Remix',
       'remix',
       'Meta-Frameworks',
       'Web Standards Full-Stack React Router Framework',
-      ['react-router'],
+      [],
       'shimmer-prism-sweep',
     ],
     [
@@ -1113,7 +1122,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'mui',
-      'Material UI (MUI)',
+      'MUI',
       'mui',
       'Styling & Design Systems',
       'Comprehensive React Material Design Component Suite',
@@ -1257,11 +1266,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'framer',
-      'Motion / Framer',
+      'Framer',
       'framer',
       'Animation & Motion',
       'Production-Ready Motion Library for React & Web',
-      ['framer-motion', 'motion'],
+      [],
       'segmented-assembly',
     ],
     [
@@ -1374,11 +1383,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'turborepo',
-      'Turborepo / Turbopack',
+      'Turborepo',
       'turborepo',
       'Build & Bundlers',
       'High-Performance Monorepo Build System',
-      ['turbo', 'turbopack'],
+      ['turbo'],
       'orbital-spin',
     ],
     [
@@ -1521,11 +1530,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'dotnet',
-      '.NET / ASP.NET Core',
+      '.NET',
       'dotnet',
       'Enterprise Frameworks',
       'Cross-Platform High-Performance .NET Server Platform',
-      ['aspnetcore', 'dotnet8', 'dotnet9'],
+      ['dotnet8', 'dotnet9'],
       'shimmer-prism-sweep',
     ],
     [
@@ -1836,7 +1845,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'jsonwebtokens',
-      'JWT (JSON Web Tokens)',
+      'JWT',
       'jsonwebtokens',
       'Auth & Identity',
       'Compact Claims-Based Token Standard (RFC 7519)',
@@ -1992,11 +2001,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'anthropic',
-      'Anthropic / Claude',
+      'Anthropic',
       'anthropic',
       'LLM & Foundation Models',
       'Constitutional AI & Claude Frontier Model API',
-      ['claude'],
+      [],
       'stroke-trace-fill',
     ],
     [
@@ -2199,7 +2208,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'dvc',
-      'DVC (Data Version Control)',
+      'DVC',
       'dvc',
       'MLOps & Experiment Tracking',
       'Git-Based Version Control for ML Datasets & Models',
@@ -2373,11 +2382,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'firebase',
-      'Firebase / Firestore',
+      'Firebase',
       'firebase',
       'Cloud & Realtime BaaS',
       'Real-Time NoSQL Document Database & App Platform',
-      ['firestore'],
+      [],
       'flame-core-flicker',
     ],
     [
@@ -2445,11 +2454,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'turso',
-      'Turso (libSQL)',
+      'Turso',
       'turso',
       'Edge & Embedded SQL',
       'Edge-Hosted Distributed Database Based on libSQL',
-      ['libsql'],
+      [],
       'Segmented-assembly'.toLowerCase(),
     ],
     [
@@ -2704,7 +2713,7 @@ const CATEGORY_SEEDS = {
       'googlecloud',
       'Cloud Providers',
       'Google Cloud Platform Compute, BigQuery & AI Infrastructure',
-      ['gcp', 'cloud-run', 'gke'],
+      ['gcp'],
       'beacon-ripple-rings',
     ],
     [
@@ -2844,11 +2853,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'nixos',
-      'Nix / NixOS',
+      'NixOS',
       'nixos',
       'Infrastructure as Code',
       'Reproducible Declarative Package Manager & Linux OS',
-      ['nix', 'flakes'],
+      [],
       'orbital-spin',
     ],
     [
@@ -3033,11 +3042,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'redhat',
-      'Red Hat / RHEL',
+      'Red Hat',
       'redhat',
       'Operating Systems & Kernel',
       'Enterprise Linux & OpenShift Hybrid Cloud Platform',
-      ['rhel'],
+      [],
       'shimmer-prism-sweep',
     ],
     [
@@ -3108,11 +3117,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'espressif',
-      'ESP32 / Espressif',
+      'Espressif',
       'espressif',
       'Microcontrollers & Boards',
       'Wi-Fi & Bluetooth Low Energy Microcontroller SoCs',
-      ['esp32', 'esp8266', 'esp-idf'],
+      [],
       'circuit-trace-pulse',
     ],
     [
@@ -3126,11 +3135,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'stmicroelectronics',
-      'STM32 / STMicroelectronics',
+      'STMicroelectronics',
       'stmicroelectronics',
       'Microcontrollers & Boards',
       '32-Bit ARM Cortex-M Microcontrollers & STM32Cube Ecosystem',
-      ['stm32', 'nucleo', 'hal'],
+      [],
       'shimmer-prism-sweep',
     ],
     [
@@ -3171,11 +3180,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'ros',
-      'ROS / ROS 2',
+      'ROS',
       'ros',
       'Robotics & Autonomy',
       'Robot Operating System Middleware, Drivers & State Estimation',
-      ['ros2', 'gazebo', 'rviz'],
+      ['ros2'],
       'pixel-grid-cascade',
     ],
     [
@@ -3198,11 +3207,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'nordicsemiconductor',
-      'Nordic Semiconductor (nRF)',
+      'Nordic Semiconductor',
       'nordicsemiconductor',
       'Microcontrollers & Boards',
       'Ultra-Low-Power Wireless nRF52/nRF53/nRF91 BLE & Cellular SoCs',
-      ['nrf52', 'nrf-connect'],
+      [],
       'beacon-ripple-rings',
     ],
     [
@@ -3234,20 +3243,20 @@ const CATEGORY_SEEDS = {
     ],
     [
       'amd',
-      'AMD / Xilinx FPGA',
+      'AMD',
       'amd',
       'Silicon & Architectures',
       'Zynq UltraScale+, Versal Adaptive SoCs, Vivado & x86 Compute',
-      ['xilinx', 'vivado', 'fpga'],
+      ['xilinx', 'fpga'],
       'segmented-assembly',
     ],
     [
       'intel',
-      'Intel / Altera FPGA',
+      'Intel',
       'intel',
       'Silicon & Architectures',
       'x86 Embedded Processors, Quartus FPGA & Edge Silicon',
-      ['altera', 'quartus'],
+      ['altera'],
       'orbital-spin',
     ],
     [
@@ -3306,7 +3315,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'bluetooth',
-      'Bluetooth / BLE',
+      'Bluetooth',
       'bluetooth',
       'Protocols & Connectivity',
       'Short-Range Wireless & Bluetooth Low Energy GATT Stack',
@@ -3579,7 +3588,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'uv',
-      'uv (Astral)',
+      'uv',
       'astral',
       'Package & Build Managers',
       'Extremely Fast Python Package and Project Manager in Rust',
@@ -3696,11 +3705,11 @@ const CATEGORY_SEEDS = {
     ],
     [
       'zsh',
-      'Zsh / Oh My Zsh',
+      'Zsh',
       'zsh',
       'Terminals & Shells',
       'Extended Bourne Shell with Rich Completion & Plugins',
-      ['ohmyzsh', 'zshrc'],
+      [],
       'circuit-trace-pulse',
     ],
     [
@@ -3899,12 +3908,12 @@ const EXTRA_COMMUNITY_SLUGS = {
       'pixel-grid-cascade',
     ],
     [
-      'glsl',
-      'GLSL / OpenGL',
+      'opengl',
+      'OpenGL',
       'opengl',
       'Graphics & Shaders',
       'OpenGL Shading Language for GPU Pipelines',
-      ['shaders'],
+      ['glsl', 'shaders'],
       'orbital-spin',
     ],
     [
@@ -3945,11 +3954,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'wolfram',
-      'Wolfram / Mathematica',
+      'Wolfram',
       'wolframlanguage',
       'Data & Scientific',
       'Symbolic & Symbolic-Numerical Computation Language',
-      ['mathematica'],
+      [],
       'iris-aperture-bloom',
     ],
   ],
@@ -4183,7 +4192,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'rocket',
-      'Rocket (Rust)',
+      'Rocket',
       'rocket',
       'Web Frameworks',
       'Web Framework for Rust Focused on Usability and Security',
@@ -4383,11 +4392,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'trino',
-      'Trino (Presto)',
+      'Trino',
       'trino',
       'Data Warehouses & Lakehouse',
       'Fast Distributed SQL Query Engine for Big Data Lakehouses',
-      ['presto', 'iceberg'],
+      [],
       'orbital-spin',
     ],
     [
@@ -4439,7 +4448,7 @@ const EXTRA_COMMUNITY_SLUGS = {
   Databases: [
     [
       'neon',
-      'Neon (Serverless Postgres)',
+      'Neon',
       'neon',
       'Cloud Postgres & BaaS',
       'Serverless Branchable PostgreSQL with Scale-to-Zero',
@@ -4448,11 +4457,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'tidb',
-      'TiDB (PingCAP)',
+      'TiDB',
       'tidb',
       'Distributed NewSQL',
       'Open-Source Distributed HTAP MySQL-Compatible Database',
-      ['pingcap', 'tikv'],
+      ['pingcap'],
       'segmented-assembly',
     ],
     [
@@ -4603,7 +4612,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'drone',
-      'Drone / Harness CI',
+      'Drone',
       'drone',
       'CI/CD & GitOps',
       'Container-Native Continuous Integration Platform',
@@ -4738,11 +4747,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'suse',
-      'SUSE / openSUSE',
+      'SUSE',
       'suse',
       'Operating Systems & Kernel',
       'Enterprise Linux & Rancher Cloud-Native OS',
-      ['opensuse', 'zypper'],
+      [],
       'elastic-morph-bounce',
     ],
     [
@@ -4756,11 +4765,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'centos',
-      'Rocky / CentOS Linux',
+      'CentOS',
       'rockylinux',
       'Operating Systems & Kernel',
       'Community Enterprise Operating System Bug-for-Bug RHEL Compatible',
-      ['centos', 'almalinux'],
+      [],
       'orbital-spin',
     ],
     [
@@ -4783,20 +4792,20 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'vmware',
-      'VMware ESXi / vSphere',
+      'VMware',
       'vmware',
       'Virtualization & Cloud',
       'Enterprise Hypervisor and Cloud Virtualization Infrastructure',
-      ['vsphere'],
+      [],
       'dual-snake-interlock',
     ],
     [
       'akamai',
-      'Linode / Akamai Cloud',
+      'Akamai',
       'akamai',
       'Cloud Providers',
       'Distributed Cloud Computing & Global Content Delivery Network',
-      ['linode'],
+      [],
       'beacon-ripple-rings',
     ],
     [
@@ -4902,7 +4911,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'autodeskeagle',
-      'Autodesk EAGLE / Fusion',
+      'Autodesk EAGLE',
       'autodesk',
       'EDA & PCB Design',
       'Electronic Automated Graphical Layout Editor & ECAD-MCAD',
@@ -4922,11 +4931,11 @@ const EXTRA_COMMUNITY_SLUGS = {
   'Developer tools': [
     [
       'gitea',
-      'Gitea / Forgejo',
+      'Gitea',
       'gitea',
       'Version Control & Forges',
       'Painless Self-Hosted All-in-One Software Development Service',
-      ['forgejo'],
+      [],
       'liquid-wave-fill',
     ],
     [
@@ -4949,7 +4958,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'subversion',
-      'Apache Subversion (SVN)',
+      'Apache Subversion',
       'subversion',
       'Version Control & Forges',
       'Enterprise Centralized Version Control System',
@@ -4958,7 +4967,7 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'mercurial',
-      'Mercurial (hg)',
+      'Mercurial',
       'mercurial',
       'Version Control & Forges',
       'Distributed Source Control Management Tool',
@@ -5083,8 +5092,8 @@ const EXTRA_COMMUNITY_SLUGS = {
       'liquid-wave-fill',
     ],
     [
-      'pip',
-      'pip / PyPI',
+      'pypi',
+      'PyPI',
       'pypi',
       'Package & Build Managers',
       'The Python Package Installer and Official Package Index',
@@ -5120,11 +5129,11 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'rubygems',
-      'RubyGems / Bundler',
+      'RubyGems',
       'rubygems',
       'Package & Build Managers',
       'Package Management Framework for the Ruby Programming Language',
-      ['gem', 'bundler'],
+      ['gem'],
       'segmented-assembly',
     ],
     [
@@ -5156,20 +5165,20 @@ const EXTRA_COMMUNITY_SLUGS = {
     ],
     [
       'gnu',
-      'GNU Make / GCC',
+      'GNU',
       'gnu',
       'Package & Build Managers',
       'Standard Build Automation Tool & GNU Compiler Collection',
-      ['make', 'makefile', 'gcc'],
+      [],
       'stroke-trace-fill',
     ],
     [
       'llvm',
-      'LLVM / Clang',
+      'LLVM',
       'llvm',
       'Package & Build Managers',
       'Modular and Reusable Compiler and Toolchain Technologies',
-      ['clang', 'clangd', 'lldb'],
+      [],
       'flame-core-flicker',
     ],
     [

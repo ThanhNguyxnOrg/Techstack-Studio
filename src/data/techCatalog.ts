@@ -2,7 +2,7 @@ import { TechItem } from '../types/stack';
 import generatedCatalogJson from './generatedCatalog.json';
 
 /**
- * Canonical SVG-first technology catalog (552 verified entries).
+ * Canonical SVG-first technology catalog (542 verified entries).
  * Every entry maps deterministically to:
  * - Static source SVG: `/icons/source/{id}.svg`
  * - Standalone animated SVG: `/icons/animated/{id}.svg`
@@ -33,6 +33,8 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   mssql: 'microsoftsqlserver',
   gcp: 'googlecloud',
   marionette: 'marko',
+  glsl: 'opengl',
+  pip: 'pypi',
 };
 
 export const TECH_BY_ID: Record<string, TechItem> = (() => {

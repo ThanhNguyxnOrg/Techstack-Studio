@@ -9,7 +9,7 @@ should be edited by hand.
 
 ```bash
 npm run generate:catalog   # seed table -> src/data/generatedCatalog.json
-npm run generate:icons     # catalog -> 554 source + 554 animated SVGs + runtime parts
+npm run generate:icons     # catalog -> 542 source + 542 animated SVGs + runtime parts
 npm run generate           # both, in order
 ```
 
@@ -96,7 +96,7 @@ table and is recorded in the animation manifest.
 
 The export runtime for the app. Each entry stores `defs`, `style`, `body`, and
 `staticBody` fragments so `generateStandaloneSvg()` can compose a banner without
-fetching 554 files. Also stores the human-readable `concept` and `technique` used
+fetching 542 files. Also stores the human-readable `concept` and `technique` used
 by the animation manifest.
 
 ### `docs/animation/animation-manifest.json`
@@ -108,9 +108,9 @@ technique, and concept. Useful when reviewing a large regeneration diff.
 
 | Output                | Count | Notes                                       |
 | --------------------- | ----: | ------------------------------------------- |
-| Catalog entries       |   554 | 8 categories, 50 Tier A                     |
-| Source SVGs           |   554 | `public/icons/source/`                      |
-| Animated SVGs         |   554 | `public/icons/animated/`                    |
+| Catalog entries       |   542 | 8 categories, 49 Tier A                     |
+| Source SVGs           |   542 | `public/icons/source/`                      |
+| Animated SVGs         |   542 | `public/icons/animated/`                    |
 | Runtime part entries  |   554 | `src/data/standaloneSvgParts.json`          |
 | Reference source SVGs |    29 | `public/icons/reference/` (provenance only) |
 | Motion families       |    18 | All used by at least one entry              |
@@ -120,7 +120,7 @@ technique, and concept. Useful when reviewing a large regeneration diff.
 
 `src/utils/catalogIntegrity.test.ts` fails the build if:
 
-- the catalog is not exactly 554 entries, 8 categories, and 18 families
+- the catalog is not exactly 542 entries, 8 categories, and 18 families
 - any category or motion family is unused
 - an ID is duplicated or does not match `/^[a-z0-9_]+$/`
 - the source folder, animated folder, or parts file drift from the catalog
@@ -191,4 +191,4 @@ surface as a new unresolved seed; fix the slug instead of deleting the row.
 | Test reports an extra SVG             | Removed entry left an orphan                       | `npm run generate` deletes it              |
 | Animated SVG has no motion            | Catalog entry is static or keyframes were stripped | Regenerate; check the family mapping       |
 | Export preview shows the wrong colors | Dark-safe color changed upstream                   | Review the diff in `generatedCatalog.json` |
-| Bundle size jumps                     | Parts JSON grew                                    | Confirm the catalog count is still 554     |
+| Bundle size jumps                     | Parts JSON grew                                    | Confirm the catalog count is still 542     |

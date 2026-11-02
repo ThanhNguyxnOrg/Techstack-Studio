@@ -1,7 +1,7 @@
 # Architecture
 
 Tech Stack Studio is a static, browser-only React application. It has no server,
-database, authentication, or runtime API. The 554-logo catalog and both SVG
+database, authentication, or runtime API. The 542-logo catalog and both SVG
 libraries are committed to the repository and shipped as static files.
 
 ## System overview
@@ -15,7 +15,7 @@ libraries are committed to the repository and shipped as static files.
 │  ├─ persistence: localStorage (versioned, sanitized)               │
 │  └─ views                                                          │
 │     ├─ HeroSection          navigation + reset/clear               │
-│     ├─ CatalogPanel         554-item searchable catalog            │
+│     ├─ CatalogPanel         542-item searchable catalog            │
 │     ├─ PreviewAndControls   live preview + customization           │
 │     ├─ SelectedStackBar     reorder/remove selected logos          │
 │     └─ ExportStudio         Markdown / HTML / SVG output           │
@@ -82,7 +82,7 @@ renders the static body instead of the animation.
 
 ## Export rendering
 
-Exports must work synchronously and offline, so they do not fetch 554 SVG files.
+Exports must work synchronously and offline, so they do not fetch 542 SVG files.
 Instead, `generateStandaloneSvgLibrary.mjs` compiles each logo into
 `standaloneSvgParts.json`:
 
