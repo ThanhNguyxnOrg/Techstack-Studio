@@ -237,9 +237,10 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   balena: {
     title: 'balena',
-    hex: '00AEEF',
-    source: 'https://www.balena.io/',
-    path: 'M12 2L3 7v10l9 5 9-5V7l-9-5zm0 3.2L17.8 8.5 12 11.8 6.2 8.5 12 5.2zm-6 5.6l5 2.9v5.6l-5-2.9v-5.6zm7 8.5v-5.6l5-2.9v5.6l-5 2.9z',
+    hex: '00A275',
+    source:
+      'https://cdn.prod.website-files.com/636ab6ba0e1bd250e3aaedaf/636e155e93894cd4d030c4d7_balena_logo_dark.svg',
+    path: 'M0 0H0V0Z',
   },
   klipper: {
     title: 'Klipper',
@@ -282,9 +283,9 @@ const VERIFIED_FALLBACK_ICONS = {
   },
   thethingsnetwork: {
     title: 'The Things Network',
-    hex: '0D83D0',
-    source: 'https://www.thethingsnetwork.org/',
-    path: 'M4 6h16v3h-6.5v9h-3V9H4V6z',
+    hex: 'FFFFFF',
+    source: 'https://www.thethingsnetwork.org/assets/logos/ttn-horizontal-white.svg',
+    path: 'M0 0H0V0Z',
   },
 };
 
@@ -891,7 +892,7 @@ const CATEGORY_SEEDS = {
       'vite',
       'Build & Bundlers',
       'Next-Generation Frontend Build Tool & Dev Server',
-      ['vitejs', 'rolldown'],
+      ['vitejs'],
       'flame-core-flicker',
     ],
     [
@@ -2049,7 +2050,7 @@ const CATEGORY_SEEDS = {
       'jupyter',
       'Notebooks & Workbenches',
       'Interactive Computing Notebooks across 40+ Languages',
-      ['ipynb', 'jupyterlab'],
+      ['ipynb'],
       'orbital-spin',
     ],
     [
@@ -3372,7 +3373,7 @@ const CATEGORY_SEEDS = {
       'balena',
       'IoT & Smart Automation',
       'Container-Based Fleet Management for Linux IoT Edge Devices',
-      ['balenaos', 'balena-etcher'],
+      [],
       'container-stack-slide',
     ],
     [
@@ -4914,7 +4915,7 @@ const EXTRA_COMMUNITY_SLUGS = {
       'thethingsnetwork',
       'Protocols & Connectivity',
       'Global Collaborative Open LoRaWAN IoT Network Infrastructure',
-      ['ttn-lorawan'],
+      ['ttn'],
       'node-network-signal',
     ],
     [

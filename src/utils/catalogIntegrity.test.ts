@@ -23,6 +23,12 @@ function readSvg(directory: string, id: string): string {
 }
 
 const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
+  thethingsnetwork: ['#FFFFFF'],
+  balena: ['#2A506F', '#FBBF09', '#00A275', '#EB8A04', '#F5EA64', '#48C0ED', '#FDD657'],
+  jupyter: ['#F37726', '#FFFFFF'],
+  vitest: ['#00FF74', '#00D0C7', '#03FF00', '#6EFFE1'],
+  vite: ['#9135FF', '#8900FF', '#00C2FF', '#EEE6FF'],
+  astro: ['#D83333', '#F041FF'],
   reactnative: ['#61DAFB'],
   px4: ['#FFFFFF'],
   figma: ['#24CB71', '#FF7237', '#00B6FF', '#FF3737', '#874FFF'],

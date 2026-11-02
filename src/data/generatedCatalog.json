@@ -2327,15 +2327,14 @@
     "name": "Vite",
     "aliases": [
       "vite",
-      "vitejs",
-      "rolldown"
+      "vitejs"
     ],
     "category": "Frontend",
     "subcategory": "Build & Bundlers",
     "role": "Next-Generation Frontend Build Tool & Dev Server",
     "brandColor": "#9135FF",
     "darkSafeColor": "#9135FF",
-    "iconUrl": "https://cdn.simpleicons.org/vite/9135FF",
+    "iconUrl": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/main/brand-assets/vite/vite-icon-color-bracketless.svg",
     "sourceSvgPath": "/icons/source/vite.svg",
     "animatedSvgPath": "/icons/animated/vite.svg",
     "docsUrl": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vite/vite-icon-color-bracketless.svg",
@@ -2345,7 +2344,7 @@
     "tier": "A",
     "categoryRank": 4,
     "evidenceSource": "Stack Overflow Survey 2026 & GitHub Octoverse 2025",
-    "provenance": "Community icon set",
+    "provenance": "Official icon (VoidZero brand-assets)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -2512,9 +2511,9 @@
     "category": "Frontend",
     "subcategory": "Meta-Frameworks",
     "role": "Content-Driven Islands Architecture Web Framework",
-    "brandColor": "#BC52EE",
-    "darkSafeColor": "#BC52EE",
-    "iconUrl": "https://cdn.simpleicons.org/astro/BC52EE",
+    "brandColor": "#D83333",
+    "darkSafeColor": "#D83333",
+    "iconUrl": "https://raw.githubusercontent.com/withastro/astro.build/main/public/assets/press/astro-icon-light-gradient.svg",
     "sourceSvgPath": "/icons/source/astro.svg",
     "animatedSvgPath": "/icons/animated/astro.svg",
     "docsUrl": "https://astro.build/press",
@@ -2524,7 +2523,7 @@
     "tier": "B",
     "categoryRank": 9,
     "evidenceSource": "Stack Overflow Survey 2026 & GitHub Octoverse 2025",
-    "provenance": "Community icon set",
+    "provenance": "Official logomark (withastro/astro.build press)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -2803,7 +2802,7 @@
     "role": "Blazing Fast Vite-Native Unit Test Framework",
     "brandColor": "#00FF74",
     "darkSafeColor": "#00FF74",
-    "iconUrl": "https://cdn.simpleicons.org/vitest/00FF74",
+    "iconUrl": "https://raw.githubusercontent.com/voidzero-dev/community-design-resources/main/brand-assets/vitest/vitest-icon-color-bracketless.svg",
     "sourceSvgPath": "/icons/source/vitest.svg",
     "animatedSvgPath": "/icons/animated/vitest.svg",
     "docsUrl": "https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vitest/vitest-icon-color-bracketless.svg",
@@ -2813,7 +2812,7 @@
     "tier": "B",
     "categoryRank": 17,
     "evidenceSource": "Stack Overflow Developer Survey 2026",
-    "provenance": "Community icon set",
+    "provenance": "Official icon (VoidZero brand-assets)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -8293,15 +8292,14 @@
     "name": "Jupyter",
     "aliases": [
       "jupyter",
-      "ipynb",
-      "jupyterlab"
+      "ipynb"
     ],
     "category": "AI and machine learning",
     "subcategory": "Notebooks & Workbenches",
     "role": "Interactive Computing Notebooks across 40+ Languages",
-    "brandColor": "#F37626",
-    "darkSafeColor": "#F37626",
-    "iconUrl": "https://cdn.simpleicons.org/jupyter/F37626",
+    "brandColor": "#F37726",
+    "darkSafeColor": "#F37726",
+    "iconUrl": "https://raw.githubusercontent.com/jupyter/design/main/logos/Logo%20Mark/logomark-orangebody-whitemoons/logomark-orangebody-whitemoons.svg",
     "sourceSvgPath": "/icons/source/jupyter.svg",
     "animatedSvgPath": "/icons/animated/jupyter.svg",
     "docsUrl": "https://github.com/jupyter/design/blob/80716ee75dd7b2a6ec6abcd89922d020483589b1/logos/Logo%20Mark/logomark-whitebody-whitemoons/logomark-whitebody-whitemoons.svg",
@@ -8311,7 +8309,7 @@
     "tier": "B",
     "categoryRank": 13,
     "evidenceSource": "Stack Overflow Developer Survey 2026",
-    "provenance": "Community icon set",
+    "provenance": "Official logomark (jupyter/design)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -15420,16 +15418,14 @@
     "id": "balena",
     "name": "balena",
     "aliases": [
-      "balena",
-      "balenaos",
-      "balena-etcher"
+      "balena"
     ],
     "category": "Embedded development",
     "subcategory": "IoT & Smart Automation",
     "role": "Container-Based Fleet Management for Linux IoT Edge Devices",
-    "brandColor": "#00AEEF",
-    "darkSafeColor": "#00AEEF",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/balena/balena-original.svg",
+    "brandColor": "#00A275",
+    "darkSafeColor": "#00A275",
+    "iconUrl": "https://cdn.prod.website-files.com/636ab6ba0e1bd250e3aaedaf/636e155e93894cd4d030c4d7_balena_logo_dark.svg",
     "sourceSvgPath": "/icons/source/balena.svg",
     "animatedSvgPath": "/icons/animated/balena.svg",
     "docsUrl": "https://www.balena.io/",
@@ -15439,7 +15435,7 @@
     "tier": "C",
     "categoryRank": 32,
     "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
+    "provenance": "Official logo (balena.io)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
@@ -15846,14 +15842,14 @@
     "name": "The Things Network",
     "aliases": [
       "thethingsnetwork",
-      "ttn-lorawan"
+      "ttn"
     ],
     "category": "Embedded development",
     "subcategory": "Protocols & Connectivity",
     "role": "Global Collaborative Open LoRaWAN IoT Network Infrastructure",
-    "brandColor": "#0D83D0",
-    "darkSafeColor": "#0D83D0",
-    "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/thethingsnetwork/thethingsnetwork-original.svg",
+    "brandColor": "#FFFFFF",
+    "darkSafeColor": "#FFFFFF",
+    "iconUrl": "https://www.thethingsnetwork.org/assets/logos/ttn-horizontal-white.svg",
     "sourceSvgPath": "/icons/source/thethingsnetwork.svg",
     "animatedSvgPath": "/icons/animated/thethingsnetwork.svg",
     "docsUrl": "https://www.thethingsnetwork.org/",
@@ -15863,7 +15859,7 @@
     "tier": "C",
     "categoryRank": 46,
     "evidenceSource": "GitHub Octoverse 2025 & Ecosystem Telemetry",
-    "provenance": "Verified community vector",
+    "provenance": "Official logo (thethingsnetwork.org, white variant)",
     "license": "Community-sourced \u00b7 see ATTRIBUTION.md",
     "verified": true,
     "motionRecipe": {
