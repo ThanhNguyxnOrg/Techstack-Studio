@@ -49,7 +49,7 @@
       <td align="center" width="92"><a href="https://tailwindcss.com/brand" target="_blank" rel="noreferrer"><img src="https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/tailwindcss.svg" alt="Tailwind CSS" width="48" height="48" /><br /><sub><b>Tailwind CSS</b></sub></a></td>
     </tr>
     <tr>
-      <td align="center" width="92"><a href="https://nodejs.org/en/about/branding" target="_blank" rel="noreferrer"><img src="https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/nodedotjs.svg" alt="Node.js" width="48" height="48" /><br /><sub><b>Node.js</b></sub></a></td>
+      <td align="center" width="92"><a href="https://nodejs.org/" target="_blank" rel="noreferrer"><img src="https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/nodedotjs.svg" alt="Node.js" width="48" height="48" /><br /><sub><b>Node.js</b></sub></a></td>
       <td align="center" width="92"><a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"><img src="https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/postgresql.svg" alt="PostgreSQL" width="48" height="48" /><br /><sub><b>PostgreSQL</b></sub></a></td>
       <td align="center" width="92"><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/docker.svg" alt="Docker" width="48" height="48" /><br /><sub><b>Docker</b></sub></a></td>
       <td align="center" width="92"><a href="https://kubernetes.io/" target="_blank" rel="noreferrer"><img src="https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/kubernetes.svg" alt="Kubernetes" width="48" height="48" /><br /><sub><b>Kubernetes</b></sub></a></td>
