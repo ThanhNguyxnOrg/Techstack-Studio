@@ -51,8 +51,8 @@ test('catalog manifest has >= 400 verified authentic technologies across all 8 c
   );
   assert.equal(
     report.tierACount,
-    50,
-    `Expected exactly 50 Tier A technologies, got ${report.tierACount}`
+    49,
+    `Expected exactly 49 Tier A technologies, got ${report.tierACount}`
   );
   assert.equal(
     report.distinctMotionFamilies,

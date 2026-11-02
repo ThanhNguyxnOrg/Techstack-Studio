@@ -2690,15 +2690,6 @@ const CATEGORY_SEEDS = {
       'node-network-signal',
     ],
     [
-      'linux',
-      'Linux',
-      'linux',
-      'Operating Systems & Kernel',
-      'Open-Source POSIX Kernel & Server Operating System',
-      ['kernel', 'tux'],
-      'elastic-morph-bounce',
-    ],
-    [
       'terraform',
       'Terraform',
       'terraform',
@@ -3411,15 +3402,6 @@ const CATEGORY_SEEDS = {
       'Web-Based Schematic Capture, Spice Simulation & PCB Layout',
       ['jlcpcb'],
       'circuit-trace-pulse',
-    ],
-    [
-      'ltspice',
-      'LTspice / Analog Devices',
-      'analogdevices',
-      'EDA & PCB Design',
-      'High-Performance SPICE Simulator for Analog & Power Circuits',
-      ['spice', 'adi'],
-      'segmented-assembly',
     ],
   ],
 
