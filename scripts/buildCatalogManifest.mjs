@@ -2700,7 +2700,7 @@ const CATEGORY_SEEDS = {
     ],
     [
       'googlecloud',
-      'Google Cloud (GCP)',
+      'Google Cloud',
       'googlecloud',
       'Cloud Providers',
       'Google Cloud Platform Compute, BigQuery & AI Infrastructure',

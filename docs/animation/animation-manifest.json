@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T04:15:53.904Z",
+  "generatedAt": "2026-11-02T04:29:36.518Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -6811,7 +6811,7 @@
     },
     {
       "id": "googlecloud",
-      "name": "Google Cloud (GCP)",
+      "name": "Google Cloud",
       "slug": "googlecloud",
       "category": "Cloud and DevOps",
       "subcategory": "Cloud Providers",
