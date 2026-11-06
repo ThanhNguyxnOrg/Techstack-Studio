@@ -66,6 +66,7 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   prettier: ['#56B3B4', '#F7B93E', '#EA5E5E', '#BF85BF'],
   graphql: ['#E10098', '#F472B6'],
   webpack: ['#8DD6F9', '#1C78C0'],
+  intellijidea: ['#131822', '#FF8100', '#FE2857', '#007EFF'],
   neon: ['#34D59A'],
   oracle: ['#C74634'],
   seeedstudio: ['#FFFFFF'],

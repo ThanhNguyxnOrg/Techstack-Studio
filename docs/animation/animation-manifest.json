@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T02:30:51.994Z",
+  "generatedAt": "2026-11-06T14:26:35.499Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -9569,8 +9569,8 @@
       "tier": "B",
       "sourceAssetPath": "/icons/source/intellijidea.svg",
       "animatedSvgPath": "/icons/animated/intellijidea.svg",
-      "animationConcept": "Progressive 4-subpath contour draw followed by an internal clipped #858585 prism sheen across IntelliJ IDEA",
-      "animationTechnique": "Staggered subpath stroke-dashoffset trace + self-clipped specular prism sweep",
+      "animationConcept": "IntelliJ IDEA dark plate with gradient IJ assembling and the underscore blinking like a text cursor (user motion)",
+      "animationTechnique": "user-supplied 3.6s loop",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
