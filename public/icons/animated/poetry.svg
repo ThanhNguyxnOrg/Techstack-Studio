@@ -1,1 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Poetry"><defs><clipPath id="tss_poetry_cs"><path clip-rule="evenodd" d="M21.604 0a19.144 19.144 0 0 1-5.268 13.213L2.396 0l13.583 13.583a19.149 19.149 0 0 1-13.583 5.624V0h19.208Zm-1.911 17.297A24.455 24.455 0 0 1 7.189 24l-4.053-4.053a19.91 19.91 0 0 0 13.37-5.838l3.187 3.188Z"/></clipPath></defs><style>@keyframes tss_poetry_fl{0%,100%{fill-opacity:0.55}34%,84%{fill-opacity:1}}@keyframes tss_poetry_sw{0%{transform:translateX(-22px) skewX(-22deg)}45%,82%{transform:translateX(24px) skewX(-22deg)}100%{transform:translateX(24px) skewX(-22deg)}}.tss_poetry_fl{animation:tss_poetry_fl 3.6s ease-in-out infinite}.tss_poetry_sw{animation:tss_poetry_sw 3.6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_poetry_sp0{0%,0%{stroke-dashoffset:100;stroke-opacity:1}30%,78%{stroke-dashoffset:0;stroke-opacity:0.25}100%{stroke-dashoffset:-100;stroke-opacity:1}}.tss_poetry_sp0{stroke-dasharray:100;animation:tss_poetry_sp0 3.6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_poetry_sp1{0%,6%{stroke-dashoffset:100;stroke-opacity:1}35%,78%{stroke-dashoffset:0;stroke-opacity:0.25}100%{stroke-dashoffset:-100;stroke-opacity:1}}.tss_poetry_sp1{stroke-dasharray:100;animation:tss_poetry_sp1 3.6s cubic-bezier(0.22,1,0.36,1) infinite}@media (prefers-reduced-motion: reduce){.tss_poetry_fl{animation:none!important;transform:none!important;fill-opacity:1!important}.tss_poetry_sw{animation:none!important;transform:none!important;opacity:0!important}.tss_poetry_sp0{animation:none!important;stroke-dashoffset:0!important;stroke-opacity:0!important}.tss_poetry_sp1{animation:none!important;stroke-dashoffset:0!important;stroke-opacity:0!important}}</style><path class="tss_poetry_fl" fill="#60A5FA" fill-rule="evenodd" d="M21.604 0a19.144 19.144 0 0 1-5.268 13.213L2.396 0l13.583 13.583a19.149 19.149 0 0 1-13.583 5.624V0h19.208Zm-1.911 17.297A24.455 24.455 0 0 1 7.189 24l-4.053-4.053a19.91 19.91 0 0 0 13.37-5.838l3.187 3.188Z"/><path class="tss_poetry_sp0" pathLength="100" fill="none" stroke="#B3D4FD" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" d="M21.604 0 a19.144 19.144 0 0 1 -5.268 13.213 L2.396 0 l13.583 13.583 a19.149 19.149 0 0 1 -13.583 5.624 V0 h19.208 Z"/><path class="tss_poetry_sp1" pathLength="100" fill="none" stroke="#B3D4FD" stroke-width="0.65" stroke-linecap="round" stroke-linejoin="round" d="M19.693 17.297 A24.455 24.455 0 0 1 7.189 24 l-4.053 -4.053 a19.91 19.91 0 0 0 13.37 -5.838 l3.187 3.188 Z"/><g clip-path="url(#tss_poetry_cs)"><rect class="tss_poetry_sw" x="0" y="-2" width="5.5" height="28" fill="#B3D4FD" fill-opacity="0.6"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Poetry"><defs><defs>
+        <radialGradient id="tss_poetry_a" cx="438.3" cy="639.01" fx="438.3" fy="639.01" r="569.94" gradientTransform="translate(4.213 5.333) scale(.21333)">
+            <stop offset="0" style="stop-color:#6877ec;stop-opacity:1"/>
+            <stop offset=".6" style="stop-color:#5362cf;stop-opacity:1"/>
+            <stop offset="1" style="stop-color:#4352b9;stop-opacity:1"/>
+        </radialGradient>
+        <radialGradient id="tss_poetry_b" cx="65.64" cy="-16.21" fx="65.64" fy="-16.21" r="746.46" gradientTransform="translate(4.213 5.333) scale(.21333)">
+            <stop offset="0" style="stop-color:#00d5ff;stop-opacity:1"/>
+            <stop offset=".38" style="stop-color:#00b8eb;stop-opacity:1"/>
+            <stop offset="1" style="stop-color:#0080c5;stop-opacity:1"/>
+        </radialGradient>
+        <radialGradient id="tss_poetry_f" cx="259.68" cy="-34.71" fx="259.68" fy="-34.71" r="431.37" gradientTransform="translate(4.213 5.333) scale(.21333)">
+            <stop offset="0" style="stop-color:#fff;stop-opacity:1"/>
+            <stop offset="1" style="stop-color:#000;stop-opacity:1"/>
+        </radialGradient>
+        <linearGradient id="tss_poetry_c" gradientUnits="userSpaceOnUse" x1="74.77" y1="67.3" x2="277.23" y2="512.72" gradientTransform="translate(4.213 5.333) scale(.21333)">
+            <stop offset="0" style="stop-color:#294ca7;stop-opacity:1"/>
+            <stop offset=".48" style="stop-color:#96a7d4;stop-opacity:1"/>
+            <stop offset=".84" style="stop-color:#e1e6f3;stop-opacity:1"/>
+            <stop offset="1" style="stop-color:#fff;stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="tss_poetry_d" gradientUnits="userSpaceOnUse" x1="-228.74" y1="-144.29" x2="451" y2="651.89" gradientTransform="translate(4.213 5.333) scale(.21333)">
+            <stop offset="0" style="stop-color:#6877ec"/>
+            <stop offset=".29" style="stop-color:#97a1f2"/>
+            <stop offset=".77" style="stop-color:#e2e4fb"/>
+            <stop offset="1" style="stop-color:#fff"/>
+        </linearGradient>
+        <linearGradient id="tss_poetry_e" gradientUnits="userSpaceOnUse" x1="-151.22" y1="-285.9" x2="450.08" y2="430.63" gradientTransform="translate(4.213 5.333) scale(.21333)">
+            <stop offset="0" style="stop-color:#8397cc"/>
+            <stop offset=".15" style="stop-color:#97a8d4"/>
+            <stop offset=".73" style="stop-color:#e2e6f3"/>
+            <stop offset="1" style="stop-color:#fff"/>
+        </linearGradient>
+    </defs><clipPath id="tss_poetry_cl"><path fill="url(#tss_poetry_a)" d="M40.07 124.8a121.72 121.72 0 0 0 62.242-33.366L16.216 5.332v95.61Zm0 0"/>
+    <path fill="url(#tss_poetry_b)" d="M16.215 100.941c52.805 0 95.61-42.804 95.61-95.609h-95.61Zm0 0"/>
+    <path fill="url(#tss_poetry_c)" style="mix-blend-mode:multiply" d="m16.215 100.941 3.68 3.68c25.933-.95 49.363-11.875 66.558-29.062l-2.621-2.618a95.294 95.294 0 0 1-67.617 28Zm0 0"/>
+    <path fill="url(#tss_poetry_d)" style="mix-blend-mode:multiply" d="M40.07 124.8a121.72 121.72 0 0 0 62.242-33.366L16.216 5.332v95.61Zm0 0"/>
+    <path fill="url(#tss_poetry_e)" style="mix-blend-mode:multiply" d="M102.313 91.434 16.215 5.332l78.27 93.254a122.174 122.174 0 0 0 7.828-7.152Zm0 0"/>
+    <path fill="url(#tss_poetry_f)" style="mix-blend-mode:screen" d="m16.215 5.332 67.605 67.61a98.72 98.72 0 0 0 1.782-1.837Zm0 0"/></clipPath><linearGradient id="tss_poetry_gs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><style>@keyframes tss_poetry_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes tss_poetry_pp{0%{opacity:0;transform:scale(.94)}18%,100%{opacity:1;transform:scale(1)}}@keyframes tss_poetry_sh{0%,48%{opacity:0;transform:translateX(-20px)}52%{opacity:1}64%{opacity:1;transform:translateX(40px)}68%,100%{opacity:0;transform:translateX(40px)}}.tss_poetry_al{animation:tss_poetry_al 3.6s linear infinite}.tss_poetry_pp{transform-box:fill-box;transform-origin:50% 50%;animation:tss_poetry_pp 3.6s cubic-bezier(.34,1.4,.64,1) infinite}.tss_poetry_sh{animation:tss_poetry_sh 3.6s ease-in-out infinite}@media (prefers-reduced-motion: reduce){.tss_poetry_al,.tss_poetry_pp,.tss_poetry_sh{animation:none!important}.tss_poetry_al{opacity:1!important}.tss_poetry_pp{opacity:1!important;transform:none!important}.tss_poetry_sh{opacity:0!important}}</style><g class="tss_poetry_al"><g class="tss_poetry_pp"><g transform="translate(0 0) scale(0.1875)"><path fill="url(#tss_poetry_a)" d="M40.07 124.8a121.72 121.72 0 0 0 62.242-33.366L16.216 5.332v95.61Zm0 0"/>
+    <path fill="url(#tss_poetry_b)" d="M16.215 100.941c52.805 0 95.61-42.804 95.61-95.609h-95.61Zm0 0"/>
+    <path fill="url(#tss_poetry_c)" style="mix-blend-mode:multiply" d="m16.215 100.941 3.68 3.68c25.933-.95 49.363-11.875 66.558-29.062l-2.621-2.618a95.294 95.294 0 0 1-67.617 28Zm0 0"/>
+    <path fill="url(#tss_poetry_d)" style="mix-blend-mode:multiply" d="M40.07 124.8a121.72 121.72 0 0 0 62.242-33.366L16.216 5.332v95.61Zm0 0"/>
+    <path fill="url(#tss_poetry_e)" style="mix-blend-mode:multiply" d="M102.313 91.434 16.215 5.332l78.27 93.254a122.174 122.174 0 0 0 7.828-7.152Zm0 0"/>
+    <path fill="url(#tss_poetry_f)" style="mix-blend-mode:screen" d="m16.215 5.332 67.605 67.61a98.72 98.72 0 0 0 1.782-1.837Zm0 0"/><g clip-path="url(#tss_poetry_cl)"><g transform="skewX(-18)"><rect class="tss_poetry_sh" x="-20" y="-20" width="10" height="168" fill="url(#tss_poetry_gs)"/></g></g></g></g></g></svg>

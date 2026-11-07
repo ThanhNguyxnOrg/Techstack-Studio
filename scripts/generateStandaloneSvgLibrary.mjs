@@ -9,6 +9,98 @@ const animatedDir = path.resolve('public/icons/animated');
 const manifestDir = path.resolve('docs/animation');
 const referenceDir = path.resolve('public/icons/reference');
 
+const DEVICON_ENTRIES = {
+  dart: 'dart',
+  ruby: 'ruby',
+  scala: 'scala',
+  lua: 'lua',
+  nuxt: 'nuxt',
+  cypress: 'cypressio',
+  solid: 'solidjs',
+  remix: 'remix',
+  qwik: 'qwik',
+  nestjs: 'nestjs',
+  laravel: 'laravel',
+  fastify: 'fastify',
+  symfony: 'symfony',
+  apachespark: 'apachespark',
+  prisma: 'prisma',
+  mariadb: 'mariadb',
+  influxdb: 'influxdb',
+  helm: 'helm',
+  argocd: 'argocd',
+  jenkins: 'jenkins',
+  netlify: 'netlify',
+  digitalocean: 'digitalocean',
+  ubuntu: 'ubuntu',
+  debian: 'debian',
+  ros: 'ros',
+  pnpm: 'pnpm',
+  postman: 'postman',
+  neovim: 'neovim',
+  cursor: 'cursor',
+  yarn: 'yarn',
+  homebrew: 'homebrew',
+  cmake: 'cmake',
+  gradle: 'gradle',
+  uv: 'uv',
+  poetry: 'poetry',
+  biome: 'biome',
+};
+
+const DEVICON_DARK_SAFE = {
+  remix: { fills: ['#121212'] },
+  symfony: { fills: ['#1A171B'] },
+  fastify: { noFill: true },
+  cursor: { fills: ['#555'], noFill: true, stops: true },
+  prisma: { fills: ['#2d3748'] },
+  mariadb: { fills: ['#003545'] },
+  influxdb: { fills: ['#020a47'] },
+  helm: { fills: ['#0F1689'] },
+  ros: { fills: ['#22314e'] },
+  gradle: { fills: ['#02303a'] },
+  lua: { fills: ['#000080'] },
+};
+
+function readDeviconReference(item) {
+  const itemId = item.id;
+  const raw = fs.readFileSync(path.join(referenceDir, `${itemId}-devicon.svg`), 'utf8');
+  const vb = (raw.match(/viewBox="([^"]+)"/) || [])[1] || '0 0 128 128';
+  const [minX, minY, vw, vh] = vb.split(/\s+/).map(Number);
+  const scale = Number((24 / Math.max(vw, vh)).toFixed(6));
+  const tx = Number(((24 - vw * scale) / 2 - minX * scale).toFixed(4));
+  const ty = Number(((24 - vh * scale) / 2 - minY * scale).toFixed(4));
+  const prefix = `tss_${itemId}_`;
+  const rewrite = (s) =>
+    s
+      .replace(/id="([^"]+)"/g, (_, v) => `id="${prefix}${v}"`)
+      .replace(/url\(#([^)]+)\)/g, (_, v) => `url(#${prefix}${v})`)
+      .replace(/href="#([^"]+)"/g, (_, v) => `href="#${prefix}${v}"`);
+  const full = raw
+    .replace(/^<svg[^>]*>/, '')
+    .replace(/<\/svg>\s*$/, '')
+    .trim();
+  const dark = DEVICON_DARK_SAFE[itemId];
+  const lighten = (s) => {
+    if (!dark) return s;
+    let out = s;
+    for (const f of dark.fills || []) {
+      out = out.replace(new RegExp(f, 'gi'), item.darkSafeColor);
+    }
+    if (dark.stops) {
+      out = out.replace(/<stop(?![^>]*stop-color)/g, `<stop stop-color="${item.darkSafeColor}"`);
+    }
+    if (dark.noFill) {
+      out = out.replace(/<path(?![^>]*\sfill=)/g, `<path fill="${item.darkSafeColor}"`);
+    }
+    return out;
+  };
+  const dm = full.match(/<defs>[\s\S]*?<\/defs>/);
+  const defs = dm ? rewrite(lighten(dm[0])) : '';
+  const body = rewrite(lighten(full.replace(/<defs>[\s\S]*?<\/defs>/, '').trim()));
+  return { defs, body, scale, tx, ty };
+}
+
 fs.mkdirSync(sourceDir, { recursive: true });
 fs.mkdirSync(animatedDir, { recursive: true });
 fs.mkdirSync(manifestDir, { recursive: true });
@@ -994,6 +1086,10 @@ function buildSourceSvg(item) {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="\${label}"><defs><linearGradient id="tss_intellijidea_ga1" x1="-.72" x2="24.144" y1="7.628" y2="61.252" gradientTransform="matrix(.4155 0 0 .4155 0 47.745)" gradientUnits="userSpaceOnUse"><stop offset=".1" stop-color="#FC801D"/><stop offset=".59" stop-color="#FE2857"/></linearGradient><linearGradient id="tss_intellijidea_gb1" x1="4.22" x2="62.921" y1="60.02" y2="1.311" gradientTransform="matrix(.4155 0 0 .4155 0 47.745)" gradientUnits="userSpaceOnUse"><stop offset=".21" stop-color="#FE2857"/><stop offset=".7" stop-color="#007EFF"/></linearGradient></defs><rect width="24" height="24" rx="3" fill="#131822"/><g transform="translate(0 -1.204) scale(.20625)"><path fill="#ff8100" d="M31.9 11.657H8.14c-4.5 0-8.14 3.66-8.14 8.14v23.015c0 2.38 1.04 4.64 2.84 6.18L79.16 114.4a8.188 8.188 0 0 0 5.3 1.96h23.76c4.5 0 8.14-3.64 8.14-8.14V85.207c0-2.38-1.04-4.64-2.84-6.18L37.2 13.618a8.188 8.188 0 0 0-5.3-1.96Z"/><g><g transform="matrix(4.81355 0 0 4.81355 .001 -229.824)"><path fill="url(#tss_intellijidea_ga1)" d="M6.033 50.167H1.69A1.69 1.69 0 0 0 0 51.857v5.439c0 .079.004.162.016.24L2.21 72.884c.12.835.831 1.454 1.675 1.454h6.51a1.69 1.69 0 0 0 1.691-1.691v-7.702c0-.183-.033-.362-.087-.536L7.636 51.322a1.69 1.69 0 0 0-1.603-1.155Z"/></g></g><g><g transform="matrix(4.81355 0 0 4.81355 .001 -229.824)"><path fill="url(#tss_intellijidea_gb1)" d="M24.9 47.75H10.786c-.677 0-1.288.403-1.554 1.026L2.555 64.35a1.67 1.67 0 0 0-.137.665v7.627c0 .935.756 1.69 1.691 1.69h7.466c.333 0 .661-.099.94-.286l13.324-8.89c.47-.316.752-.843.752-1.408V49.436a1.69 1.69 0 0 0-1.69-1.69z"/></g></g><path fill="#000" d="M104 24.001H24v80h80z"/><path fill="#fff" d="M51.68 58.8H45.72V39.26H51.68V34.04H34V39.26H39.96V58.8H34V64.02H51.68ZM63.44 34.02V54.16C63.44 55.04 63.26 55.8 62.88 56.48 62.5 57.16 61.98 57.68 61.3 58.06 60.62 58.44 59.84 58.62 58.98 58.62H54.68V64.02H59.72C61.54 64.02 63.16 63.62 64.62 62.8 66.08 61.98 67.22 60.86 68.04 59.42 68.86 57.98 69.28 56.36 69.28 54.56V34.02Z"/><path fill="#fff" d="M34 94.02H66V88.02H34Z"/></g></svg>`;
   }
 
+  if (DEVICON_ENTRIES[item.id]) {
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}" data-devicon="1">${defs}<g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></svg>`;
+  }
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${item.svgViewBox || '0 0 24 24'}" role="img" aria-label="${label}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></svg>`;
 }
 
@@ -3680,6 +3776,35 @@ function buildAnimatedSvg(item) {
         `<g clip-path="url(#${cSelf})"><g transform="skewX(-18)"><rect class="${kSweep}" x="-4" y="-3" width="5" height="30" fill="url(#${gSweep})"/></g></g></g>`,
       `The ${item.name} wordmark writes its own letter contours, locks the fill and takes one light pass — the name never splits`,
       'Staggered per-subpath contour trace + synchronized fill lock + clipped prism pass'
+    );
+  }
+
+  // DEVICON FULL-COLOUR SETTLE — shared motion for catalogue entries whose
+  // official-shaped art already exists as a Devicon original.
+  if (DEVICON_ENTRIES[item.id]) {
+    const kAll = `tss_${uid}_al`,
+      kPop = `tss_${uid}_pp`,
+      kSh = `tss_${uid}_sh`,
+      cLogo = `tss_${uid}_cl`,
+      gSh = `tss_${uid}_gs`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs +
+        `<clipPath id="${cLogo}">${body}</clipPath>` +
+        `<linearGradient id="${gSh}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPop}{0%{opacity:0;transform:scale(.94)}18%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kSh}{0%,48%{opacity:0;transform:translateX(-20px)}52%{opacity:1}64%{opacity:1;transform:translateX(40px)}68%,100%{opacity:0;transform:translateX(40px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPop}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPop} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
+        `.${kSh}{animation:${kSh} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kPop},.${kSh}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPop}{opacity:1!important;transform:none!important}.${kSh}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kPop}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}` +
+        `<g clip-path="url(#${cLogo})"><g transform="skewX(-18)"><rect class="${kSh}" x="-20" y="-20" width="10" height="168" fill="url(#${gSh})"/></g></g>` +
+        `</g></g></g>`,
+      `The ${item.name} mark settles in full colour and takes one light pass`,
+      'Devicon full-colour settle + clipped sheen'
     );
   }
 

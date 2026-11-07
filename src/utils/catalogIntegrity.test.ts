@@ -158,7 +158,7 @@ test('catalog and generated asset coverage stay in lockstep', () => {
     expectedFiles,
     'Animated SVG files must match the catalog exactly'
   );
-  assert.equal(svgFiles(REFERENCE_DIR).length, 31, 'Expected 31 upstream reference SVGs');
+  assert.equal(svgFiles(REFERENCE_DIR).length, 67, 'Expected 67 upstream reference SVGs');
 });
 
 test('every catalog item exposes complete, self-contained source and animated SVGs', () => {
@@ -188,7 +188,9 @@ test('every catalog item exposes complete, self-contained source and animated SV
 
     assert.ok(source.includes('role="img"'), `${item.id}: source SVG needs an image role`);
 
-    const customSignatures = CUSTOM_SOURCE_LOGO_SIGNATURES[item.id];
+    const customSignatures =
+      CUSTOM_SOURCE_LOGO_SIGNATURES[item.id] ??
+      (source.includes('data-devicon="1"') ? ['data-devicon="1"'] : undefined);
     if (customSignatures) {
       for (const signature of customSignatures) {
         assert.ok(

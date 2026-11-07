@@ -38,3 +38,7 @@ maintainers can review it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 The web app loads its display fonts from Google Fonts; they are not bundled with the
 repository. Repository artwork in `docs/assets/` and `public/og-image.png` was
 produced for this project and is covered by the MIT license above.
+
+## Devicon
+
+Full-colour technology icons from [Devicon](https://github.com/devicons/devicon) (MIT License) are used as reference artwork for the entries upgraded from the single-colour community set.
