@@ -111,7 +111,7 @@ export async function fetchStandaloneSvgAsset(assetPath: string): Promise<Parsed
   }
 
   const promise = (async () => {
-    const fetchUrl = resolvedUrl.includes('?') ? `${resolvedUrl}&v=4` : `${resolvedUrl}?v=4`;
+    const fetchUrl = resolvedUrl.includes('?') ? `${resolvedUrl}&v=5` : `${resolvedUrl}?v=5`;
     const response = await fetch(fetchUrl);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status} loading ${resolvedUrl}`);
