@@ -38,6 +38,8 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   typescript: ['#3178C6', 'M3.375 9.938'],
   javascript: ['#F7DF1E', '#111622', '#FEF08A'],
   java: ['#007396', '#F8981D'],
+  scikitlearn: ['#f89939', '#3499cd', '#010101', '#fff'],
+  visualstudio: ['#52218a', '#6c33af', '#854cc7', '#b179f1'],
   amazonaws: ['#F3F1EC', '#FF9900'],
   springboot: ['#6DB33F', '#FFFFFF'],
   c: ['#283593', '#5C6BC0', '#FFFFFF'],
@@ -156,7 +158,7 @@ test('catalog and generated asset coverage stay in lockstep', () => {
     expectedFiles,
     'Animated SVG files must match the catalog exactly'
   );
-  assert.equal(svgFiles(REFERENCE_DIR).length, 29, 'Expected 29 upstream reference SVGs');
+  assert.equal(svgFiles(REFERENCE_DIR).length, 31, 'Expected 31 upstream reference SVGs');
 });
 
 test('every catalog item exposes complete, self-contained source and animated SVGs', () => {

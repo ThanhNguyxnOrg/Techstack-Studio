@@ -7,6 +7,7 @@ const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
 const sourceDir = path.resolve('public/icons/source');
 const animatedDir = path.resolve('public/icons/animated');
 const manifestDir = path.resolve('docs/animation');
+const referenceDir = path.resolve('public/icons/reference');
 
 fs.mkdirSync(sourceDir, { recursive: true });
 fs.mkdirSync(animatedDir, { recursive: true });
@@ -372,6 +373,24 @@ function buildSourceSvg(item) {
   }
   if (item.id === 'java') {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><g transform="scale(.75)"><path fill="#007396" d="${JAVA_GLASS_PATH}"/><path fill="#F8981D" d="${JAVA_STEAM_PATH}"/></g></svg>`;
+  }
+  if (item.id === 'scikitlearn') {
+    const ref = fs.readFileSync(path.join(referenceDir, 'scikitlearn-original.svg'), 'utf8');
+    const body = ref
+      .replace(/^<svg[^>]*>/, '')
+      .replace(/<\/svg>\s*$/, '')
+      .trim();
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><g transform="scale(.1875)">${body}</g></svg>`;
+  }
+  if (item.id === 'visualstudio') {
+    const ref = fs.readFileSync(path.join(referenceDir, 'visualstudio-original.svg'), 'utf8');
+    const body = ref
+      .replace(/^<svg[^>]*>/, '')
+      .replace(/<\/svg>\s*$/, '')
+      .trim()
+      .replace(/id="a"/g, 'id="tss_visualstudio_ga"')
+      .replace(/url\(#a\)/g, 'url(#tss_visualstudio_ga)');
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><g transform="scale(.1875)">${body}</g></svg>`;
   }
   if (item.id === 'amazonaws' || item.id === 'aws') {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#F3F1EC" d="${AWS_WORDMARK_PATH}"/><path fill="#FF9900" d="${AWS_SMILE_CURVE_PATH}"/><path fill="#FF9900" d="${AWS_SMILE_ARROW_PATH}"/></svg>`;
@@ -1755,9 +1774,9 @@ function buildAnimatedSvg(item) {
       'user-supplied 3.6s loop'
     );
   }
-  // SCIKITLEARN — user-supplied 3.6s motion, ported verbatim onto the
-  // current catalog art (24-box; classes already tss_<id>_* scoped).
-  if (item.id === 'scikitlearn') {
+  // SCIKITLEARN — legacy single-colour motion, superseded by the
+  // Devicon full-colour branch below.
+  if (false && item.id === 'scikitlearn') {
     return wrapSvg(
       '<clipPath id="tss_scikitlearn_cb"><rect x="-2" y="0" width="9.6" height="24"/></clipPath><clipPath id="tss_scikitlearn_cm"><rect x="7.6" y="0" width="20" height="24"/></clipPath>',
       '@keyframes tss_scikitlearn_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes tss_scikitlearn_bl{0%,4%{transform:translate(-8px,0) rotate(-140deg);opacity:0}8%{opacity:1}14%{transform:translate(-4px,-3.2px) rotate(-70deg)}22%{transform:translate(0,0) rotate(0deg)}34%{transform:translate(0,0) rotate(0deg)}40%{transform:translate(.3px,-3px) rotate(8deg)}48%{transform:translate(0,0) rotate(0deg)}100%{transform:translate(0,0) rotate(0deg);opacity:1}}@keyframes tss_scikitlearn_mn{0%,20%{transform:scale(1,1)}25%{transform:scale(1.04,.94)}31%{transform:scale(.99,1.02)}36%{transform:scale(1,1)}46%{transform:scale(1,1)}50%{transform:scale(1.03,.96)}56%,100%{transform:scale(1,1)}}.tss_scikitlearn_al{animation:tss_scikitlearn_al 3.6s linear infinite}.tss_scikitlearn_bl{transform-box:fill-box;transform-origin:50% 100%;animation:tss_scikitlearn_bl 3.6s cubic-bezier(.45,0,.4,1) infinite}.tss_scikitlearn_mn{transform-origin:15px 18.5px;animation:tss_scikitlearn_mn 3.6s ease-in-out infinite}',
@@ -2659,6 +2678,101 @@ function buildAnimatedSvg(item) {
         `</g></g>`,
       'Steam lifts off the Java cup while the blue glass takes one light pass',
       'Staggered steam rise + clipped glass sheen on the two-colour cup'
+    );
+  }
+
+  // SCIKIT-LEARN — Devicon full-colour original (orange blob, blue disc,
+  // black script, white wordmark), all paths, no live text.
+  if (item.id === 'scikitlearn') {
+    const kAll = `tss_${uid}_al`,
+      kBlob = `tss_${uid}_b`,
+      kBlue = `tss_${uid}_c`,
+      kBlack = `tss_${uid}_k`,
+      kWhite = `tss_${uid}_w`,
+      kTrace = `tss_${uid}_tr`;
+    const ref = fs.readFileSync(path.join(referenceDir, 'scikitlearn-original.svg'), 'utf8');
+    const body = ref
+      .replace(/^<svg[^>]*>/, '')
+      .replace(/<\/svg>\s*$/, '')
+      .trim();
+    const paths = [...body.matchAll(/<path[^>]*\/>/g)].map((m) => m[0]);
+    const dOf = (p) => (p.match(/\sd="([^"]+)"/) || [])[1];
+    const withClass = (p, cls) => p.replace('<path ', `<path class="${cls}" `);
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kBlob}{0%{opacity:0;transform:scale(.9)}22%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kBlue}{0%,4%{opacity:0;transform:scale(.9)}26%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kBlack}{0%,28%{opacity:0}44%,100%{opacity:1}}` +
+        `@keyframes ${kWhite}{0%,22%{opacity:0}38%,100%{opacity:1}}` +
+        `@keyframes ${kTrace}{0%,10%{stroke-dashoffset:100;stroke-opacity:0}12%{stroke-opacity:1}42%,52%{stroke-dashoffset:0;stroke-opacity:1}62%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kBlob},.${kBlue}{transform-box:fill-box;transform-origin:50% 50%;animation:${kBlob} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
+        `.${kBlue}{animation-name:${kBlue}}` +
+        `.${kBlack}{animation:${kBlack} ${dur} ease-in-out infinite}` +
+        `.${kWhite}{animation:${kWhite} ${dur} ease-in-out infinite}` +
+        `.${kTrace}{stroke-dasharray:100;stroke-linecap:round;animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kBlack},.${kWhite},.${kTrace}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kBlob},.${kBlue}{animation:none!important;transform:none!important;opacity:1!important}` +
+        `.${kBlack}{opacity:1!important}.${kWhite}{opacity:1!important}.${kTrace}{opacity:0!important;stroke-opacity:0!important}`,
+      `<g class="${kAll}"><g transform="scale(.1875)">` +
+        withClass(paths[0], kBlob) +
+        withClass(paths[1], kBlue) +
+        withClass(paths[2], kBlack) +
+        withClass(paths[3], kWhite) +
+        `<path class="${kTrace}" fill="none" stroke="#010101" stroke-width="2" pathLength="100" d="${dOf(paths[2])}"/>` +
+        `</g></g>`,
+      'The scikit-learn mark settles, the script draws itself and the wordmark fades in',
+      'Staggered shape settle + script contour trace + wordmark fade'
+    );
+  }
+
+  // VISUAL STUDIO — Devicon full-colour ribbon (four purple layers + white
+  // gradient sheen). The ribbon assembles layer by layer, then holds.
+  if (item.id === 'visualstudio') {
+    const kAll = `tss_${uid}_al`,
+      k0 = `tss_${uid}_p0`,
+      k1 = `tss_${uid}_p1`,
+      k2 = `tss_${uid}_p2`,
+      k3 = `tss_${uid}_p3`,
+      kSh = `tss_${uid}_sh`,
+      gid = `tss_${uid}_ga`;
+    const ref = fs.readFileSync(path.join(referenceDir, 'visualstudio-original.svg'), 'utf8');
+    const body = ref
+      .replace(/^<svg[^>]*>/, '')
+      .replace(/<\/svg>\s*$/, '')
+      .trim()
+      .replace(/id="a"/g, `id="${gid}"`)
+      .replace(/url\(#a\)/g, `url(#${gid})`);
+    const defs = (body.match(/<defs>[\s\S]*?<\/defs>/) || [''])[0];
+    const bodyPaths = body.replace(/<defs>[\s\S]*?<\/defs>/, '').trim();
+    const pathList = [...bodyPaths.matchAll(/<path[^>]*\/>/g)].map((m) => m[0]);
+    const withClass = (p, cls) => p.replace('<path ', `<path class="${cls}" `);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${k0}{0%{opacity:0;transform:translateY(4px)}18%,100%{opacity:1;transform:translateY(0)}}` +
+        `@keyframes ${k1}{0%,4%{opacity:0;transform:translateY(4px)}22%,100%{opacity:1;transform:translateY(0)}}` +
+        `@keyframes ${k2}{0%,8%{opacity:0;transform:translateY(4px)}26%,100%{opacity:1;transform:translateY(0)}}` +
+        `@keyframes ${k3}{0%,12%{opacity:0;transform:translateY(4px)}30%,100%{opacity:1;transform:translateY(0)}}` +
+        `@keyframes ${kSh}{0%,20%{opacity:0}36%,100%{opacity:.25}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${k0}{animation:${k0} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${k1}{animation:${k1} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${k2}{animation:${k2} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${k3}{animation:${k3} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kSh}{animation:${kSh} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${k0},.${k1},.${k2},.${k3},.${kSh}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${k0},.${k1},.${k2},.${k3}{opacity:1!important;transform:none!important}.${kSh}{opacity:.25!important}`,
+      `<g class="${kAll}"><g transform="scale(.1875)">` +
+        withClass(pathList[0], k0) +
+        withClass(pathList[1], k1) +
+        withClass(pathList[2], k2) +
+        withClass(pathList[3], k3) +
+        withClass(pathList[4], kSh) +
+        `</g></g>`,
+      'The Visual Studio ribbon assembles layer by layer and holds its full-colour form',
+      'Staggered layer settle + gradient sheen lock'
     );
   }
 
