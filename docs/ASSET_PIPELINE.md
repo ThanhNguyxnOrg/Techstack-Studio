@@ -36,8 +36,8 @@ For every resolved row it derives:
 - documentation URL, provenance, license label
 - one of 18 motion recipes with a fixed 3.6 s duration and shared easing
 
-Output: `src/data/generatedCatalog.json` — currently **554 entries**: 506 from the
-bundled community icon set and 48 from verified fallback vectors.
+Output: `src/data/generatedCatalog.json` — currently **542 entries**: 489 from the
+bundled community icon set and 53 from official or verified vectors.
 
 > Unresolved seeds are intentionally dropped. The generator logs their count so a
 > missing icon is visible instead of silently shipping broken artwork. To add one,
@@ -111,7 +111,7 @@ technique, and concept. Useful when reviewing a large regeneration diff.
 | Catalog entries       |   542 | 8 categories, 49 Tier A                     |
 | Source SVGs           |   542 | `public/icons/source/`                      |
 | Animated SVGs         |   542 | `public/icons/animated/`                    |
-| Runtime part entries  |   554 | `src/data/standaloneSvgParts.json`          |
+| Runtime part entries  |   542 | `src/data/standaloneSvgParts.json`          |
 | Reference source SVGs |    29 | `public/icons/reference/` (provenance only) |
 | Motion families       |    18 | All used by at least one entry              |
 | Orphan assets         |     0 | Enforced by the generator and tests         |

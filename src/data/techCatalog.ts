@@ -35,6 +35,7 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   marionette: 'marko',
   glsl: 'opengl',
   pip: 'pypi',
+  gnat: 'ada',
 };
 
 export const TECH_BY_ID: Record<string, TechItem> = (() => {

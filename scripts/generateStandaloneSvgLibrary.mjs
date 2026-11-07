@@ -273,6 +273,11 @@ function analyzeGeometry(d) {
   };
 }
 
+const JAVA_GLASS_PATH =
+  'M11.622 24.74s-1.23.748.855.962c2.51.32 3.847.267 6.625-.267a10.02 10.02 0 0 0 1.763.855c-6.25 2.672-14.16-.16-9.244-1.55zm-.8-3.473s-1.336 1.015.748 1.23c2.725.267 4.862.32 8.55-.427a3.26 3.26 0 0 0 1.282.801c-7.534 2.244-15.976.214-10.58-1.603zm14.747 6.09s.908.748-1.015 1.336c-3.58 1.07-15.014 1.39-18.22 0-1.122-.48 1.015-1.175 1.7-1.282.695-.16 1.07-.16 1.07-.16-1.23-.855-8.175 1.763-3.526 2.51 12.77 2.084 23.296-.908 19.983-2.404zM12.2 17.633s-5.824 1.39-2.084 1.87c1.603.214 4.755.16 7.694-.053 2.404-.214 4.81-.64 4.81-.64s-.855.374-1.443.748c-5.93 1.55-17.312.855-14.052-.748 2.778-1.336 5.076-1.175 5.076-1.175zm10.42 5.824c5.984-3.1 3.206-6.09 1.282-5.717-.48.107-.695.214-.695.214s.16-.32.534-.427c3.794-1.336 6.786 4.007-1.23 6.09 0 0 .053-.053.107-.16zm-9.83 8.442c5.77.374 14.587-.214 14.8-2.94 0 0-.427 1.07-4.755 1.87-4.916.908-11.007.8-14.587.214 0 0 .748.64 4.542.855z';
+const JAVA_STEAM_PATH =
+  'M18.996.001s3.313 3.366-3.152 8.442c-5.183 4.114-1.175 6.465 0 9.137-3.046-2.725-5.236-5.13-3.74-7.373C14.294 6.893 20.332 5.3 18.996.001zm-1.7 15.335c1.55 1.763-.427 3.366-.427 3.366s3.954-2.03 2.137-4.542c-1.656-2.404-2.94-3.58 4.007-7.587 0 0-10.953 2.725-5.717 8.763z';
+
 const AWS_WORDMARK_PATH =
   'M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167z';
 const AWS_SMILE_CURVE_PATH =
@@ -363,7 +368,10 @@ function buildSourceSvg(item) {
       'M13.051 11.031h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z';
     const JS_S_PATH =
       'M22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067z';
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><rect x="0" y="0" width="24" height="24" rx="1.2" fill="#F7DF1E"/><path fill="#111622" d="${JS_J_PATH}"/><path fill="#111622" d="${JS_S_PATH}"/></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><rect x="0" y="0" width="24" height="24" rx="1.2" fill="#F7DF1E"/><path fill="#111622" d="${JS_J_PATH}"/><path fill="#111622" d="${JS_S_PATH}"/><rect x="0.35" y="0.35" width="23.3" height="23.3" rx="1.05" fill="none" stroke="#FEF08A" stroke-width="0.6"/></svg>`;
+  }
+  if (item.id === 'java') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><g transform="scale(.75)"><path fill="#007396" d="${JAVA_GLASS_PATH}"/><path fill="#F8981D" d="${JAVA_STEAM_PATH}"/></g></svg>`;
   }
   if (item.id === 'amazonaws' || item.id === 'aws') {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><path fill="#F3F1EC" d="${AWS_WORDMARK_PATH}"/><path fill="#FF9900" d="${AWS_SMILE_CURVE_PATH}"/><path fill="#FF9900" d="${AWS_SMILE_ARROW_PATH}"/></svg>`;
@@ -2582,22 +2590,75 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // 9. JAVASCRIPT (100% Solid #F7DF1E Official Badge + Direct J & S Vector Paths + Staggered Contour Trace — zero mask/rectangle artifacts!)
+  // 9. JAVASCRIPT — user-supplied gold-tide reveal, adapted from the 512 canvas
+  // card to the 24-box badge. The card dropped its wave again at the end of the
+  // loop and hid the mark; here the tide rises once and holds, so the J and S
+  // stay legible for the whole loop. Card label and 512 background dropped.
   if (item.id === 'javascript') {
-    const kJ = `tss_${uid}_kj`,
-      kS = `tss_${uid}_ks`,
-      kRim = `tss_${uid}_rm`;
+    const kAll = `tss_${uid}_al`,
+      kWave = `tss_${uid}_wv`,
+      kRim = `tss_${uid}_rm`,
+      kShine = `tss_${uid}_sh`,
+      mWave = `tss_${uid}_mw`,
+      cBadge = `tss_${uid}_cp`,
+      gShine = `tss_${uid}_gs`;
     const JS_J_PATH =
       'M13.051 11.031h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z';
     const JS_S_PATH =
       'M22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067z';
     return wrapSvg(
-      '',
-      `@keyframes ${kJ}{0%{stroke-dashoffset:60;transform:translateY(0.8px)}28%,85%{stroke-dashoffset:0;transform:translateY(0)}100%{stroke-dashoffset:-60;transform:translateY(0.8px)}}@keyframes ${kS}{0%,10%{stroke-dashoffset:70;transform:translateY(0.8px)}36%,85%{stroke-dashoffset:0;transform:translateY(0)}100%{stroke-dashoffset:-70;transform:translateY(0.8px)}}@keyframes ${kRim}{0%{stroke-dashoffset:88}40%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:-88}}.${kJ}{stroke-dasharray:60;transform-origin:9.5px 16px;animation:${kJ} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kS}{stroke-dasharray:70;transform-origin:18.5px 16px;animation:${kS} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${kRim}{stroke-dasharray:88;animation:${kRim} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}`,
-      `.${kJ},.${kS}{animation:none!important;transform:none!important;stroke-opacity:0!important}.${kRim}{animation:none!important;stroke-opacity:0!important}`,
-      `<rect x="0" y="0" width="24" height="24" rx="1.2" fill="#F7DF1E"/><path class="${kJ}" pathLength="60" fill="#111622" stroke="#111622" stroke-width="0.35" stroke-linejoin="round" d="${JS_J_PATH}"/><path class="${kS}" pathLength="70" fill="#111622" stroke="#111622" stroke-width="0.35" stroke-linejoin="round" d="${JS_S_PATH}"/><rect class="${kRim}" pathLength="88" x="0.4" y="0.4" width="23.2" height="23.2" rx="1.2" fill="none" stroke="#FEF08A" stroke-width="0.65"/>`,
-      'Solid #F7DF1E JavaScript badge with standalone #111622 J and S vector paths and perimeter trace',
-      'Direct J and S subpath decomposition + staggered contour trace over solid #F7DF1E badge'
+      `<linearGradient id="${gShine}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>` +
+        `<clipPath id="${cBadge}"><rect width="24" height="24" rx="1.2"/></clipPath>` +
+        `<mask id="${mWave}" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="#000"/><path class="${kWave}" fill="#fff" d="M-4-3.4C-1-5.6 3-5.6 6-3.4C9-1.2 13-1.2 16-3.4C19-5.6 23-5.6 28-3.4L28 30L-4 30Z"/></mask>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kWave}{0%,4%{transform:translateY(25px)}30%,100%{transform:translateY(0)}}` +
+        `@keyframes ${kRim}{0%{stroke-dashoffset:1;opacity:1}24%,100%{stroke-dashoffset:0;opacity:1}}` +
+        `@keyframes ${kShine}{0%,46%{opacity:0;transform:translateX(0)}50%{opacity:1}60%{opacity:1;transform:translateX(30px)}64%,100%{opacity:0;transform:translateX(30px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kWave}{animation:${kWave} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kRim}{fill:none;stroke:#FEF08A;stroke-width:.6;stroke-dasharray:1;stroke-dashoffset:1;animation:${kRim} ${dur} ease-in-out infinite}` +
+        `.${kShine}{fill:url(#${gShine});opacity:0;animation:${kShine} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kWave},.${kRim},.${kShine}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kWave}{transform:translateY(0)!important}` +
+        `.${kRim}{stroke-dashoffset:0!important;opacity:1!important}.${kShine}{opacity:0!important}`,
+      `<g class="${kAll}">` +
+        `<rect width="24" height="24" rx="1.2" fill="#0F1420"/>` +
+        `<g mask="url(#${mWave})"><rect width="24" height="24" rx="1.2" fill="#F7DF1E"/><path fill="#111622" d="${JS_J_PATH}"/><path fill="#111622" d="${JS_S_PATH}"/></g>` +
+        `<rect class="${kRim}" pathLength="1" x=".35" y=".35" width="23.3" height="23.3" rx="1.05"/>` +
+        `<g clip-path="url(#${cBadge})"><g transform="skewX(-18)"><rect class="${kShine}" x="-8" y="-3" width="4.5" height="30"/></g></g>` +
+        `</g>`,
+      'A gold tide rises through the JavaScript badge and settles with the J and S locked in place',
+      'user-supplied 3.6s loop'
+    );
+  }
+
+  // JAVA — two-colour cup from the repo's provenance asset (blue glass +
+  // orange steam), scaled from its 32-box to the catalog's 24-box. Supersedes
+  // the single-colour Simple Icons glyph.
+  if (item.id === 'java') {
+    const kAll = `tss_${uid}_al`,
+      kSteam = `tss_${uid}_st`,
+      kShine = `tss_${uid}_sh`,
+      cGlass = `tss_${uid}_cg`,
+      gShine = `tss_${uid}_gs`;
+    return wrapSvg(
+      `<clipPath id="${cGlass}"><path d="${JAVA_GLASS_PATH}"/></clipPath>` +
+        `<linearGradient id="${gShine}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kSteam}{0%,4%{opacity:0;transform:translateY(3px)}18%,100%{opacity:1;transform:translateY(0)}}` +
+        `@keyframes ${kShine}{0%,52%{opacity:0;transform:translateX(-12px)}56%{opacity:.85}66%{opacity:.85;transform:translateX(38px)}70%,100%{opacity:0;transform:translateX(38px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kSteam}{animation:${kSteam} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kShine}{animation:${kShine} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kSteam},.${kShine}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kSteam}{opacity:1!important;transform:none!important}.${kShine}{opacity:0!important}`,
+      `<g class="${kAll}"><g transform="scale(.75)">` +
+        `<path fill="#007396" d="${JAVA_GLASS_PATH}"/>` +
+        `<path class="${kSteam}" fill="#F8981D" d="${JAVA_STEAM_PATH}"/>` +
+        `<g clip-path="url(#${cGlass})"><g transform="skewX(-18)"><rect class="${kShine}" x="-10" y="-2" width="6" height="36" fill="url(#${gShine})"/></g></g>` +
+        `</g></g>`,
+      'Steam lifts off the Java cup while the blue glass takes one light pass',
+      'Staggered steam rise + clipped glass sheen on the two-colour cup'
     );
   }
 
@@ -3458,6 +3519,55 @@ function buildAnimatedSvg(item) {
       reduce: reduceRules.join(''),
     };
   };
+
+  // Long wordmarks must stay whole. The centroid-split family cut VMware, AMD
+  // and NXP in half and left a gap in the middle of the loop, which reads as a
+  // glitch at 44px. These three instead trace their own letter contours, lock
+  // the fill, then take one clipped light pass — the name never splits.
+  if (item.id === 'vmware' || item.id === 'amd' || item.id === 'nxp') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kSweep = `tss_${uid}_sw`,
+      cSelf = `tss_${uid}_cs`,
+      gSweep = `tss_${uid}_gs`;
+    const n = Math.max(1, subpaths.length);
+    const strokeStyles = [];
+    const strokePaths = [];
+    const strokeReduce = [];
+    subpaths.forEach((subD, idx) => {
+      const cls = `tss_${uid}_wp${idx}`;
+      const start = Number(((idx / n) * 18).toFixed(1));
+      const end = Number(Math.min(44, start + 24).toFixed(1));
+      strokeStyles.push(
+        `@keyframes ${cls}{0%,${start}%{stroke-dashoffset:100;stroke-opacity:1}${end}%,62%{stroke-dashoffset:0;stroke-opacity:.85}72%,100%{stroke-dashoffset:0;stroke-opacity:0}}.${cls}{stroke-dasharray:100;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      strokeReduce.push(
+        `.${cls}{animation:none!important;stroke-dashoffset:0!important;stroke-opacity:0!important}`
+      );
+      strokePaths.push(
+        `<path class="${cls}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" d="${subD}"/>`
+      );
+    });
+    return wrapSvg(
+      `<clipPath id="${cSelf}"><path clip-rule="evenodd" d="${d}"/></clipPath>` +
+        `<linearGradient id="${gSweep}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${secondary}" stop-opacity="0"/><stop offset=".5" stop-color="${secondary}" stop-opacity=".6"/><stop offset="1" stop-color="${secondary}" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,28%{fill-opacity:.35}48%,100%{fill-opacity:1}}` +
+        `@keyframes ${kSweep}{0%,50%{opacity:0;transform:translateX(-16px)}54%{opacity:1}64%{opacity:1;transform:translateX(26px)}68%,100%{opacity:0;transform:translateX(26px)}}` +
+        strokeStyles.join('') +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kSweep}{animation:${kSweep} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kSweep}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kSweep}{opacity:0!important}` +
+        strokeReduce.join(''),
+      `<g class="${kAll}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        strokePaths.join('') +
+        `<g clip-path="url(#${cSelf})"><g transform="skewX(-18)"><rect class="${kSweep}" x="-4" y="-3" width="5" height="30" fill="url(#${gSweep})"/></g></g></g>`,
+      `The ${item.name} wordmark writes its own letter contours, locks the fill and takes one light pass — the name never splits`,
+      'Staggered per-subpath contour trace + synchronized fill lock + clipped prism pass'
+    );
+  }
 
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (

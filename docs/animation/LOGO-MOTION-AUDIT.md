@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-29
 
-**Scope:** static TypeScript source, TypeScript animated SVG, the SVG generator's special-case animation branches, and the export fallback. This is a code-level audit, not a claimed screenshot-by-screenshot visual approval of all 554 icons.
+**Scope:** static TypeScript source, TypeScript animated SVG, the SVG generator's special-case animation branches, and the export fallback. This is a code-level audit, not a claimed screenshot-by-screenshot visual approval of all 542 icons.
 
 ## Immediate disposition
 
@@ -49,11 +49,11 @@ Other special branches reuse the canonical path but may add overlays, particles,
 3. Freeze start, mid, end, and reduced-motion frames; check for clipping, stray lines, and foreign shapes.
 4. Test browser rendering and standalone SVG export before marking an icon as visually approved.
 
-The repository was inspected through source and generator code in this pass; a full live-browser contact sheet and screenshot review for all 554 icons was not available. Therefore, the non-TypeScript entries are **not** certified visually correct by this note. The list above is a prioritized review queue, not a list of confirmed failures.
+The repository was inspected through source and generator code in this pass; a full live-browser contact sheet and screenshot review for all 542 icons was not available. Therefore, the non-TypeScript entries are **not** certified visually correct by this note. The list above is a prioritized review queue, not a list of confirmed failures.
 
 ## Static-logo integrity pass
 
-- The suite covers all **554** static source files and verifies that asset filenames match catalog IDs.
+- The suite covers all **542** static source files and verifies that asset filenames match catalog IDs.
 - For source SVGs generated directly from catalog data, the test requires the exact canonical `item.svgPath` and brand-safe fill to appear in the static asset.
 - The source generator has a small allowlist of brand-specific variants (Google Cloud, Python, TypeScript, JavaScript, AWS, Spring Boot, C, C++, C#). These are checked for expected brand colors/official-mark signatures rather than forcing multicolor badges into a single-path template.
 - This is a reproducible data/path integrity check, not a claim that every logo received an independent screenshot-based comparison against the brand's latest website. It establishes that generic assets follow catalog source data and intentional overrides retain their expected identifying marks.

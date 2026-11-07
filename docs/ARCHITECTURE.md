@@ -46,7 +46,7 @@ bundle, Google Fonts, and same-origin SVG files in `public/icons/`.
 | `src/components/TechIcon.tsx`              | Loads a standalone SVG, scopes its IDs, applies reduced motion, and renders it inline or as an image. |
 | `src/data/catalog.ts`                      | Public URLs, default settings, starter stack, and presets.                                            |
 | `src/data/techCatalog.ts`                  | Typed catalog index and legacy-ID aliases.                                                            |
-| `src/data/generatedCatalog.json`           | Generated catalog metadata for all 554 entries. Do not hand-edit.                                     |
+| `src/data/generatedCatalog.json`           | Generated catalog metadata for all 542 entries. Do not hand-edit.                                     |
 | `src/data/standaloneSvgParts.json`         | Generated `defs`/`style`/`body` fragments used for synchronous exports. Do not hand-edit.             |
 | `src/utils/studioLogic.ts`                 | Selection rules, search/sort, persistence sanitization, export generators, and SVG markup assembly.   |
 | `src/utils/svgAssetLoader.ts`              | Fetch cache, SVG parsing, ID scoping, and base-path resolution.                                       |

@@ -211,7 +211,7 @@ export default function App() {
               Live Demo
             </a>
           </div>
-          <span>553 standalone animated SVGs • Community-curated icons &amp; contributors</span>
+          <span>542 standalone animated SVGs • Community-curated icons &amp; contributors</span>
         </div>
       </footer>
     </div>
