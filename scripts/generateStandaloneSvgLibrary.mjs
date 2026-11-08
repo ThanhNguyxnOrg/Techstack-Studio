@@ -4418,7 +4418,7 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  const deviconBespokeIds = new Set(['quarkus', 'racket', 'railway']);
+  const deviconBespokeIds = new Set(['quarkus', 'racket', 'railway', 'rancher']);
 
   // DEVICON PER-MARK MOTION — each listed entry gets a mode fitted to its mark.
   if (
@@ -8669,6 +8669,166 @@ function buildAnimatedSvg(item) {
       `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
       'The Railway line pulls into place and settles',
       'Line slide with overshoot + slow pulse'
+    );
+  }
+
+  // RANCHER — the steer steps in from the side and settles.
+  if (item.id === 'rancher') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:translate(-6px,2px) rotate(-3deg)}38%{opacity:1;transform:translate(2px,0) rotate(1deg)}48%{transform:translate(0,0) rotate(0)}100%{transform:translate(0,0) rotate(0)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The Rancher steer steps into place and settles',
+      'Step-in with tilt + slow pulse'
+    );
+  }
+
+  // RAY — each ray of the burst blooms out and settles.
+  if (item.id === 'ray') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const bloomKeys = (start, mid, end) =>
+      `0%,${start}%{opacity:0;transform:scale(.7)}${mid}%{opacity:1;transform:scale(1.08)}${end}%,100%{opacity:1;transform:scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 22).toFixed(1));
+        const mid = Number(Math.min(34, start + 12).toFixed(1));
+        const end = Number(Math.min(38, start + 18).toFixed(1));
+        styles.push(`@keyframes ${cls}{${bloomKeys(start, mid, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:scale(1)!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${bloomKeys(0, 16, 32)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:scale(1)!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Ray burst blooms out ray by ray and settles',
+      'Per-ray bloom + slow pulse'
+    );
+  }
+
+  // REACTIVEX — the quasar waves turn in and settle.
+  if (item.id === 'reactivex') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const turnKeys = (start, mid, end) =>
+      `0%,${start}%{opacity:0;transform:rotate(-40deg) scale(.82)}${mid}%{opacity:1;transform:rotate(3deg) scale(1.06)}${end}%,100%{opacity:1;transform:rotate(0) scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 22).toFixed(1));
+        const mid = Number(Math.min(34, start + 12).toFixed(1));
+        const end = Number(Math.min(38, start + 18).toFixed(1));
+        styles.push(`@keyframes ${cls}{${turnKeys(start, mid, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${turnKeys(0, 16, 32)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The ReactiveX quasar waves turn into place and settle',
+      'Per-wave rotate-in + slow pulse'
+    );
+  }
+
+  // REASON — the mark draws its own contour, then locks the fill.
+  if (item.id === 'reason') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kTrace = `tss_${uid}_tr`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}">` +
+        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Reason mark draws itself and settles',
+      'Contour draw + fill lock + slow pulse'
     );
   }
 
