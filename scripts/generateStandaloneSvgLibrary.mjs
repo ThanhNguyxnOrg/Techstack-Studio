@@ -1771,6 +1771,8 @@ const STORY_OVERRIDES = {
   githubcopilot: 'beat',
   greensock: 'trace',
   haproxy: 'glide',
+  heroku: 'pop',
+  homebrew: 'stack',
 };
 
 const STORY_MOTIONS = {
