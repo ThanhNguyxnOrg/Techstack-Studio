@@ -4548,7 +4548,15 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  const deviconBespokeIds = new Set(['quarkus', 'racket', 'railway', 'rancher', 'redhat', 'remix']);
+  const deviconBespokeIds = new Set([
+    'quarkus',
+    'racket',
+    'railway',
+    'rancher',
+    'redhat',
+    'remix',
+    'rider',
+  ]);
 
   // DEVICON PER-MARK MOTION — each listed entry gets a mode fitted to its mark.
   if (
@@ -9085,6 +9093,138 @@ function buildAnimatedSvg(item) {
       `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
       'The Remix mark presses into place and settles',
       'Soft press settle + slow pulse'
+    );
+  }
+
+  // RENDER — the mark draws its own contour, then locks the fill.
+  if (item.id === 'render') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kTrace = `tss_${uid}_tr`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}">` +
+        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Render mark draws itself and settles',
+      'Contour draw + fill lock + slow pulse'
+    );
+  }
+
+  // RENOVATE — the mark presses in and catches one light pass.
+  if (item.id === 'renovate') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`,
+      kSheen = `tss_${uid}_sh`,
+      cSheen = `tss_${uid}_cp`,
+      gSheen = `tss_${uid}_sg`;
+    return wrapSvg(
+      `<clipPath id="${cSheen}"><path d="${d}"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%{transform:scale(1)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{transform:translateX(0);opacity:0}58%{opacity:1}74%,100%{transform:translateX(38px);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        `.${kSheen}{animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}.${kSheen}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g clip-path="url(#${cSheen})"><rect class="${kSheen}" x="-14" y="0" width="12" height="24" fill="url(#${gSheen})"/></g></g>`,
+      'The Renovate mark presses into place and catches one light pass',
+      'Press settle + clipped sheen'
+    );
+  }
+
+  // REPLICATE — the plates bloom out one after another and settle.
+  if (item.id === 'replicate') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const bloomKeys = (start, mid, end) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px) scale(.9)}${mid}%{opacity:1;transform:translateY(0) scale(1.05)}${end}%,100%{opacity:1;transform:translateY(0) scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 22).toFixed(1));
+        const mid = Number(Math.min(36, start + 12).toFixed(1));
+        const end = Number(Math.min(38, start + 18).toFixed(1));
+        styles.push(`@keyframes ${cls}{${bloomKeys(start, mid, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${bloomKeys(0, 16, 32)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Replicate plates bloom in one after another and settle',
+      'Per-plate rise + slow pulse'
+    );
+  }
+
+  // RIDER — the rider leans in and settles.
+  if (item.id === 'rider') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:translate(-6px,2px) rotate(-4deg)}38%{opacity:1;transform:translate(2px,0) rotate(1.5deg)}48%{transform:translate(0,0) rotate(0)}100%{transform:translate(0,0) rotate(0)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The Rider mark leans into place and settles',
+      'Lean-in with overshoot + slow pulse'
     );
   }
 
