@@ -5507,6 +5507,131 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // AUTHELIA — key turn: the key rotates into place, sways gently through the
+  // hold, then the whole mark settles with one slow pulse.
+  if (item.id === 'authelia') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-20deg) scale(.94);opacity:0}38%{transform:rotate(2deg) scale(1.03);opacity:1}48%{transform:rotate(0deg) scale(1);opacity:1}64%{transform:rotate(-2deg) scale(1);opacity:1}80%{transform:rotate(2deg) scale(1);opacity:1}100%{transform:rotate(0deg) scale(1);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Authelia key turns and the shield locks',
+      'Key turn + slow pulse'
+    );
+  }
+
+  // AUTODESKEAGLE — wing spread: the eagle spreads its wings, flutters them
+  // through the hold, and settles with one slow pulse.
+  if (item.id === 'autodeskeagle') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:scaleX(.9) scaleY(.95);opacity:0}38%{transform:scaleX(1.04) scaleY(1.02);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scaleX(1.02) scaleY(1);opacity:1}78%{transform:scaleX(1) scaleY(1);opacity:1}100%{transform:scale(1);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Autodesk EAGLE spreads its wings and settles',
+      'Wing spread + flutter + slow pulse'
+    );
+  }
+
+  // BABYLONDOTJS — tower stack: each block stacks into place in turn, then the
+  // whole tower settles with one slow pulse.
+  if (item.id === 'babylondotjs') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const stackKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${stackKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${stackKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Babylon.js tower stacks into place and settles',
+      'Per-block rise + slow pulse'
+    );
+  }
+
+  // BACKBONEDOTJS — spine draw: the contour draws itself, the fill locks in,
+  // then the whole mark settles with one slow pulse.
+  if (item.id === 'backbonedotjs') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kDraw = `tss_${uid}_dr`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kDraw}{0%{stroke-dashoffset:100;stroke-opacity:1}38%{stroke-dashoffset:0;stroke-opacity:1}48%{stroke-dashoffset:0;stroke-opacity:1}58%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kDraw}{stroke-dasharray:100;animation:${kDraw} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kDraw},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kDraw}{stroke-opacity:0!important;stroke-dashoffset:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kDraw}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" d="${d}"/></g></g>`,
+      'The Backbone spine draws itself and settles',
+      'Contour draw + fill lock + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
