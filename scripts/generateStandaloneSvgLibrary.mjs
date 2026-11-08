@@ -8585,25 +8585,21 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // OPENWRT — one Wi-Fi signal ring leaves the mark and settles.
+  // OPENWRT — the radio handshakes: two quick beats before it locks.
   if (item.id === 'openwrt') {
     const kAll = `tss_${uid}_al`,
-      kRing = `tss_${uid}_rg`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%,94%{opacity:1}100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:scale(.94)}12%{transform:scale(1)}22%{transform:scale(.96)}30%{transform:scale(1.06)}38%{transform:scale(.99)}46%{transform:scale(1.02)}54%,100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kRing},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kRing}{opacity:0!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
-        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
-      'OpenWrt sends one Wi-Fi signal ring and settles',
-      'Transient signal ring + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The OpenWrt radio handshakes with two quick beats before it locks',
+      'Handshake beats'
     );
   }
 
@@ -9065,47 +9061,41 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // RAILWAY — the line pulls in from the left, overshoots, then settles.
+  // RAILWAY — the line extends out from its start and settles.
   if (item.id === 'railway') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     const { defs, body, scale, tx, ty } = readDeviconReference(item);
     return wrapSvg(
       defs,
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:translateX(-6px)}38%{opacity:1;transform:translateX(2px)}48%{transform:translateX(0)}100%{transform:translateX(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:scaleX(.55)}38%{transform:scaleX(1.05)}50%{transform:scaleX(1)}100%{transform:scaleX(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
-      'The Railway line pulls into place and settles',
-      'Line slide with overshoot + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:0% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g>`,
+      'The Railway line extends out from its start and settles',
+      'Track extension from the left'
     );
   }
 
-  // RANCHER — the steer steps in from the side and settles.
+  // RANCHER — the brand presses down onto the hide.
   if (item.id === 'rancher') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     const { defs, body, scale, tx, ty } = readDeviconReference(item);
     return wrapSvg(
       defs,
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:translate(-6px,2px) rotate(-3deg)}38%{opacity:1;transform:translate(2px,0) rotate(1deg)}48%{transform:translate(0,0) rotate(0)}100%{transform:translate(0,0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%,94%{opacity:1}100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:scale(1.2) translateY(-2px)}34%{transform:scale(.95) translateY(1px)}46%{transform:scale(1.02) translateY(0)}58%,100%{transform:scale(1) translateY(0)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
-      'The Rancher steer steps into place and settles',
-      'Step-in with tilt + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.36,0,.2,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g>`,
+      'The Rancher brand presses down onto the hide and holds',
+      'Brand press'
     );
   }
 
@@ -9478,25 +9468,22 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // RIDER — the rider leans in and settles.
+  // RIDER — the mark hops twice like a runner clearing obstacles.
   if (item.id === 'rider') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     const { defs, body, scale, tx, ty } = readDeviconReference(item);
     return wrapSvg(
       defs,
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:translate(-6px,2px) rotate(-4deg)}38%{opacity:1;transform:translate(2px,0) rotate(1.5deg)}48%{transform:translate(0,0) rotate(0)}100%{transform:translate(0,0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%,94%{opacity:1}100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:translateY(0) rotate(0)}14%{transform:translateY(-4px) rotate(-2deg)}22%{transform:translateY(0) rotate(0)}32%{transform:translateY(-3px) rotate(-1deg)}40%,100%{transform:translateY(0) rotate(0)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
-      'The Rider mark leans into place and settles',
-      'Lean-in with overshoot + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.36,0,.2,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g>`,
+      'The Rider mark hops twice like a runner clearing obstacles',
+      'Double hop'
     );
   }
 
