@@ -7946,6 +7946,110 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // NATIVESCRIPT — the phone boots into place and catches one light pass.
+  if (item.id === 'nativescript') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`,
+      kSheen = `tss_${uid}_sh`,
+      cSelf = `tss_${uid}_cs`,
+      gSheen = `tss_${uid}_gs`;
+    return wrapSvg(
+      `<clipPath id="${cSelf}"><path clip-rule="evenodd" d="${d}"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(-14px)}60%{opacity:1}70%{opacity:1;transform:translateX(22px)}74%,100%{opacity:0;transform:translateX(22px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        `.${kSheen}{animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}.${kSheen}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g clip-path="url(#${cSelf})"><g transform="skewX(-18)"><rect class="${kSheen}" x="-4" y="-3" width="5" height="30" fill="url(#${gSheen})"/></g></g></g>`,
+      'The NativeScript phone boots into place and catches one light pass',
+      'Boot scale + clipped sheen'
+    );
+  }
+
+  // NATSDOTIO — one signal ring leaves the mark and settles.
+  if (item.id === 'natsdotio') {
+    const kAll = `tss_${uid}_al`,
+      kRing = `tss_${uid}_rg`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kRing},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kRing}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
+      'NATS sends one signal ring and settles',
+      'Transient signal ring + slow pulse'
+    );
+  }
+
+  // NORDICSEMICONDUCTOR — two signal rings leave the chip and settle.
+  if (item.id === 'nordicsemiconductor') {
+    const kAll = `tss_${uid}_al`,
+      kRing0 = `tss_${uid}_rg0`,
+      kRing1 = `tss_${uid}_rg1`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kRing0}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
+        `@keyframes ${kRing1}{0%,16%{opacity:0;transform:scale(.6)}37%{opacity:.5;transform:scale(1)}58%,100%{opacity:0;transform:scale(1.4)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRing0}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing0} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kRing1}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing1} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kRing0},.${kRing1},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kRing0}{opacity:0!important}.${kRing1}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<circle class="${kRing0}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/>` +
+        `<circle class="${kRing1}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
+      'The Nordic chip sends two signal rings and settles',
+      'Dual transient rings + slow pulse'
+    );
+  }
+
+  // OBSIDIAN — the crystal settles and catches one light pass.
+  if (item.id === 'obsidian') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`,
+      kSheen = `tss_${uid}_sh`,
+      cSelf = `tss_${uid}_cs`,
+      gSheen = `tss_${uid}_gs`;
+    return wrapSvg(
+      `<clipPath id="${cSelf}"><path clip-rule="evenodd" d="${d}"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(-14px)}60%{opacity:1}70%{opacity:1;transform:translateX(22px)}74%,100%{opacity:0;transform:translateX(22px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        `.${kSheen}{animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}.${kSheen}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g clip-path="url(#${cSelf})"><g transform="skewX(-18)"><rect class="${kSheen}" x="-4" y="-3" width="5" height="30" fill="url(#${gSheen})"/></g></g></g>`,
+      'The Obsidian crystal settles and catches one light pass',
+      'Crystal settle + clipped sheen'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
