@@ -1999,7 +1999,7 @@ function buildAnimatedSvg(item) {
   // DECLARED STORY — one mechanism per logo, read from STORY_MOTIONS.
   if (STORY_MOTIONS[item.id]) {
     const declared = STORY_MOTIONS[item.id];
-    const kind = Array.isArray(declared) ? declared[0] : declared;
+    const declaredKind = Array.isArray(declared) ? declared[0] : declared;
     const params = Array.isArray(declared) ? declared[1] || {} : {};
     const kAll = `tss_${uid}_al`,
       kMv = `tss_${uid}_mv`;
@@ -2012,6 +2012,36 @@ function buildAnimatedSvg(item) {
           tx: 0,
           ty: 0,
         };
+    // A whole-mark keyword is a fallback: read the artwork instead and move its own parts.
+    const KEYWORD_KINDS = new Set([
+      'glide',
+      'spin',
+      'zigzag',
+      'press',
+      'unfold',
+      'hop',
+      'beat',
+      'quarter',
+      'rise',
+      'drop',
+      'flip',
+      'pop',
+      'stretch',
+      'sway',
+      'wave',
+      'orbit',
+    ]);
+    let kind = declaredKind;
+    let dir = params.dir || 0;
+    if (KEYWORD_KINDS.has(kind)) {
+      const pieceCount = (art.body.match(/<path[^>]*\/>/g) || []).length;
+      if (pieceCount >= 5) kind = 'assemble';
+      else if (pieceCount === 4) kind = 'cascade';
+      else if (pieceCount === 3) kind = 'fan';
+      else if (pieceCount === 2) kind = 'assemble';
+      else kind = 'trace';
+      if (!dir) dir = item.id.length % 2 === 0 ? 1 : -1;
+    }
     const conceptText =
       params.concept || `The ${item.name} mark ${STORY_VERBS[kind] || 'settles into place'}`;
 
@@ -2029,9 +2059,16 @@ function buildAnimatedSvg(item) {
           const end = Number(Math.min(54, start + 22).toFixed(1));
           const from =
             kind === 'fan'
-              ? `translateY(4px) rotate(${idx % 2 ? 9 : -9}deg) scale(.9)`
-              : `translateY(${kind === 'cascade' ? -7 : 7}px)`;
-          const origin = kind === 'cascade' ? '50% 0%' : '50% 100%';
+              ? `translateY(${4 * (dir || 1)}px) rotate(${idx % 2 ? 9 : -9}deg) scale(.9)`
+              : `translateY(${(kind === 'cascade' ? -7 : 7) * (dir || 1)}px)`;
+          const origin =
+            kind === 'cascade'
+              ? dir > 0
+                ? '50% 0%'
+                : '50% 100%'
+              : dir > 0
+                ? '50% 100%'
+                : '50% 0%';
           styles.push(
             `@keyframes ${cls}{0%,${start}%{opacity:0;transform:${from}}${end}%,100%{opacity:1;transform:none}}`
           );
