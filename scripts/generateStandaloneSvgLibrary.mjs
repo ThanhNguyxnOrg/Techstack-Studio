@@ -7456,6 +7456,111 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // JSONWEBTOKENS — the token signs into place and catches one light pass.
+  if (item.id === 'jsonwebtokens') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kSheen = `tss_${uid}_sh`,
+      idClip = `tss_${uid}_cp`,
+      idGrad = `tss_${uid}_gr`;
+    const sheenW = Math.max(6, Number((geo.width * 0.45).toFixed(2)));
+    const sheenY = Number(geo.minY.toFixed(2));
+    const sheenH = Number(geo.height.toFixed(2));
+    const sheenX0 = Number((geo.minX - sheenW - 2).toFixed(2));
+    const sheenX1 = Number((geo.maxX + sheenW + 2).toFixed(2));
+    return wrapSvg(
+      `<linearGradient id="${idGrad}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>` +
+        `<clipPath id="${idClip}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(${sheenX0}px)}60%{opacity:1}70%{opacity:1}74%,100%{opacity:0;transform:translateX(${sheenX1}px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-out infinite}` +
+        `.${kSheen}{animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}` +
+        `.${kSheen}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<g clip-path="url(#${idClip})"><g transform="skewX(-16)"><rect class="${kSheen}" x="0" y="${sheenY}" width="${sheenW}" height="${sheenH}" fill="url(#${idGrad})"/></g></g></g>`,
+      'The JWT token signs into place and catches one light pass',
+      'Token lock + clipped sheen'
+    );
+  }
+
+  // KEYCLOAK — the key turns into place and settles.
+  if (item.id === 'keycloak') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.03)}48%{transform:rotate(0) scale(1)}62%{transform:rotate(2deg) scale(1)}76%{transform:rotate(-2deg) scale(1)}88%{transform:rotate(1deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}` +
+        `.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Keycloak key turns into place and settles',
+      'Key turn + slow pulse'
+    );
+  }
+
+  // KNEXDOTJS — the K draws itself and settles.
+  if (item.id === 'knexdotjs') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kTrace = `tss_${uid}_tr`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}">` +
+        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Knex K draws itself and settles',
+      'Contour draw + fill lock + slow pulse'
+    );
+  }
+
+  // KOA — the K grows into place and settles.
+  if (item.id === 'koa') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kTrace = `tss_${uid}_tr`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}">` +
+        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Koa K grows into place and settles',
+      'Contour draw + fill lock + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
