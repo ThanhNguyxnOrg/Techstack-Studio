@@ -7242,6 +7242,118 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // HASURA — the whole mark blooms into place, then pulses slowly.
+  if (item.id === 'hasura') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.85)}38%{opacity:1;transform:scale(1.06)}48%,100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}` +
+        `.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Hasura mark blooms and settles',
+      'Whole-mark bloom + slow pulse'
+    );
+  }
+
+  // HEADLESSUI — the whole mark rises into place, then pulses slowly.
+  if (item.id === 'headlessui') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}` +
+        `.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Headless UI mark rises and settles',
+      'Whole-mark rise + slow pulse'
+    );
+  }
+
+  // HETZNER — the server boots into place and catches one light pass.
+  if (item.id === 'hetzner') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`,
+      kSheen = `tss_${uid}_sh`,
+      idClip = `tss_${uid}_cp`,
+      idGrad = `tss_${uid}_gr`;
+    const sheenW = Math.max(6, Number((geo.width * 0.45).toFixed(2)));
+    const sheenY = Number(geo.minY.toFixed(2));
+    const sheenH = Number(geo.height.toFixed(2));
+    const sheenX0 = Number((geo.minX - sheenW - 2).toFixed(2));
+    const sheenX1 = Number((geo.maxX + sheenW + 2).toFixed(2));
+    return wrapSvg(
+      `<linearGradient id="${idGrad}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>` +
+        `<clipPath id="${idClip}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(${sheenX0}px)}60%{opacity:1}70%{opacity:1}74%,100%{opacity:0;transform:translateX(${sheenX1}px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-out infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        `.${kSheen}{animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}` +
+        `.${kPulse}{transform:none!important}.${kSheen}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g clip-path="url(#${idClip})"><g transform="skewX(-16)"><rect class="${kSheen}" x="0" y="${sheenY}" width="${sheenW}" height="${sheenH}" fill="url(#${idGrad})"/></g></g></g>`,
+      'The Hetzner server boots into place and catches one light pass',
+      'Boot scale + clipped sheen'
+    );
+  }
+
+  // HOMEASSISTANT — the house boots, lights up, and settles into a warm glow.
+  if (item.id === 'homeassistant') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`,
+      kSheen = `tss_${uid}_sh`,
+      idClip = `tss_${uid}_cp`,
+      idGrad = `tss_${uid}_gr`;
+    const sheenW = Math.max(6, Number((geo.width * 0.45).toFixed(2)));
+    const sheenY = Number(geo.minY.toFixed(2));
+    const sheenH = Number(geo.height.toFixed(2));
+    const sheenX0 = Number((geo.minX - sheenW - 2).toFixed(2));
+    const sheenX1 = Number((geo.maxX + sheenW + 2).toFixed(2));
+    return wrapSvg(
+      `<linearGradient id="${idGrad}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FDE68A" stop-opacity="0"/><stop offset=".5" stop-color="#FDE68A" stop-opacity=".7"/><stop offset="1" stop-color="#FDE68A" stop-opacity="0"/></linearGradient>` +
+        `<clipPath id="${idClip}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.015)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(${sheenX0}px)}60%{opacity:1}70%{opacity:1}74%,100%{opacity:0;transform:translateX(${sheenX1}px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-out infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        `.${kSheen}{animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}` +
+        `.${kPulse}{transform:none!important}.${kSheen}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>` +
+        `<g clip-path="url(#${idClip})"><g transform="skewX(-16)"><rect class="${kSheen}" x="0" y="${sheenY}" width="${sheenW}" height="${sheenH}" fill="url(#${idGrad})"/></g></g></g>`,
+      'The Home Assistant house lights up and settles',
+      'House glow + clipped sheen'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
