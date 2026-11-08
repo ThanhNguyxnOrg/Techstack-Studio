@@ -1764,7 +1764,33 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // MATTER — the nodes link up from the baseline one after another.
+  // AZURESQLDATABASE — the disc rises and the SQL letters stamp onto it.
+  if (item.id === 'azuresqldatabase') {
+    const art = readSourceArt('azuresqldatabase');
+    const kAll = `tss_${uid}_al`,
+      kDisc = `tss_${uid}_ds`,
+      kText = `tss_${uid}_tx`;
+    const textPaths = [];
+    const disc = art.replace(/<path[^>]*fill="#f2f2f2"[^>]*\/>/g, (path) => {
+      textPaths.push(path);
+      return '';
+    });
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}` +
+        `@keyframes ${kDisc}{0%{transform:translateY(6px) scaleY(.82)}34%{transform:translateY(0) scaleY(1.05)}46%,100%{transform:translateY(0) scaleY(1)}}` +
+        `@keyframes ${kText}{0%,46%{opacity:0;transform:scale(1.25)}58%{opacity:1;transform:scale(.97)}68%,100%{opacity:1;transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kDisc}{transform-box:fill-box;transform-origin:50% 100%;animation:${kDisc} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kText}{transform-box:fill-box;transform-origin:50% 50%;animation:${kText} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kDisc},.${kText}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kDisc}{transform:none!important}.${kText}{opacity:1!important;transform:none!important}`,
+      `<g class="${kAll}"><g class="${kDisc}">${disc}</g><g class="${kText}">${textPaths.join('')}</g></g>`,
+      'The Azure SQL disc rises and its letters stamp down onto the plate',
+      'Disc rise + letter stamp'
+    );
+  }
+
   if (item.id === 'matter') {
     const kAll = `tss_${uid}_al`,
       kPulse = `tss_${uid}_pl`;
@@ -9646,45 +9672,46 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // RUBYGEMS — the gem drops in and settles.
+  // RUBYGEMS — the gem turns facet-first into the light.
   if (item.id === 'rubygems') {
     const kAll = `tss_${uid}_al`,
       kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kLight = `tss_${uid}_lt`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:translateY(-9px)}38%{opacity:1;transform:translateY(1px)}50%{transform:translateY(-.5px)}62%,100%{transform:translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(38deg) scale(.9)}40%{transform:rotate(-4deg) scale(1.04)}56%{transform:rotate(0) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kLight}{0%,10%{opacity:.35}34%{opacity:1}58%{opacity:.85}100%{opacity:1}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
-      'The RubyGems gem drops into place and settles',
-      'Drop-in with a bounce + slow pulse'
+        `.${kLight}{animation:${kLight} ${dur} ease-out infinite}`,
+      `.${kAll},.${kMv},.${kLight}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}.${kLight}{opacity:1!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path class="${kLight}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The RubyGems gem turns facet-first and catches the light',
+      'Facet turn + light catch'
     );
   }
 
-  // RUBYONRAILS — the mark rolls in from the left and settles.
+  // RUBYONRAILS — the rail lays itself down and the fill locks behind it.
   if (item.id === 'rubyonrails') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kFill = `tss_${uid}_fl`,
+      kTrace = `tss_${uid}_tr`;
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:translateX(-8px)}38%{opacity:1;transform:translateX(2px)}50%{transform:translateX(0)}100%{transform:translateX(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+        `@keyframes ${kFill}{0%,40%{fill-opacity:.25}56%,100%{fill-opacity:1}}` +
+        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;stroke-opacity:1}44%{stroke-dashoffset:0;stroke-opacity:1}54%{stroke-opacity:1}64%,100%{stroke-opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
-      'The Ruby on Rails mark rolls into place and settles',
-      'Roll-in from the left + slow pulse'
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kTrace}{stroke-dasharray:100;animation:${kTrace} ${dur} cubic-bezier(.4,0,.2,1) infinite}`,
+      `.${kAll},.${kFill},.${kTrace}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{stroke-opacity:0!important}`,
+      `<g class="${kAll}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width="1" stroke-linecap="round" fill-rule="evenodd" d="${d}"/></g>`,
+      'The Rails mark lays its own rail down and the fill follows behind',
+      'Contour rail + fill lock'
     );
   }
 
@@ -9785,24 +9812,21 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // SANIC — the runner dashes in and settles.
+  // SANIC — the runner takes two quick strides before it holds.
   if (item.id === 'sanic') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:translateX(-9px) rotate(-6deg)}36%{opacity:1;transform:translateX(2px) rotate(1deg)}48%{transform:translateX(0) rotate(0)}100%{transform:translateX(0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%,94%{opacity:1}100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:translateX(0) rotate(0)}16%{transform:translateX(-5px) rotate(-4deg)}26%{transform:translateX(3px) rotate(2deg)}36%{transform:translateX(0) rotate(0)}48%{transform:translateX(-3px) rotate(-2deg)}58%{transform:translateX(2px) rotate(1deg)}68%,100%{transform:translateX(0) rotate(0)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
-      'The Sanic runner dashes into place and settles',
-      'Dash-in with overshoot + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.36,0,.2,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Sanic runner takes two quick strides and holds',
+      'Double stride'
     );
   }
 
