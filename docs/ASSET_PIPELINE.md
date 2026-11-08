@@ -112,7 +112,7 @@ technique, and concept. Useful when reviewing a large regeneration diff.
 | Source SVGs           |   542 | `public/icons/source/`                      |
 | Animated SVGs         |   542 | `public/icons/animated/`                    |
 | Runtime part entries  |   542 | `src/data/standaloneSvgParts.json`          |
-| Reference source SVGs |    67 | `public/icons/reference/` (provenance only) |
+| Reference source SVGs |   221 | `public/icons/reference/` (provenance only) |
 | Motion families       |    18 | All used by at least one entry              |
 | Orphan assets         |     0 | Enforced by the generator and tests         |
 

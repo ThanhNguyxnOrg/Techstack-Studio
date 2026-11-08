@@ -2159,7 +2159,7 @@ const CATEGORY_SEEDS = {
       'openai',
       'LLM & Foundation Models',
       'Frontier GPT & Reasoning Model API Platform',
-      ['chatgpt', 'gpt4', 'o1'],
+      ['gpt4', 'o1'],
       'iris-aperture-bloom',
     ],
     [
@@ -2195,7 +2195,7 @@ const CATEGORY_SEEDS = {
       'langchain',
       'LLM & Agent Orchestration',
       'Framework for Context-Aware LLM & Agent Applications',
-      ['langgraph', 'langsmith'],
+      [],
       'node-network-signal',
     ],
     [
@@ -2276,7 +2276,7 @@ const CATEGORY_SEEDS = {
       'nvidia',
       'GPU & AI Acceleration',
       'Parallel Computing Platform & Tensor Core Acceleration',
-      ['cuda', 'cudnn', 'tensorrt'],
+      ['cuda'],
       'circuit-trace-pulse',
     ],
     [

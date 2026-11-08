@@ -158,7 +158,7 @@ test('catalog and generated asset coverage stay in lockstep', () => {
     expectedFiles,
     'Animated SVG files must match the catalog exactly'
   );
-  assert.equal(svgFiles(REFERENCE_DIR).length, 67, 'Expected 67 upstream reference SVGs');
+  assert.equal(svgFiles(REFERENCE_DIR).length, 221, 'Expected 221 upstream reference SVGs');
 });
 
 test('every catalog item exposes complete, self-contained source and animated SVGs', () => {
