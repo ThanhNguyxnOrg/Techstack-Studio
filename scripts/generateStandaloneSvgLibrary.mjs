@@ -4556,6 +4556,7 @@ function buildAnimatedSvg(item) {
     'redhat',
     'remix',
     'rider',
+    'ros',
   ]);
 
   // DEVICON PER-MARK MOTION — each listed entry gets a mode fitted to its mark.
@@ -9225,6 +9226,159 @@ function buildAnimatedSvg(item) {
       `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
       'The Rider mark leans into place and settles',
       'Lean-in with overshoot + slow pulse'
+    );
+  }
+
+  // RISCV — the three strokes stack in from the baseline and settle.
+  if (item.id === 'riscv') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start, end) =>
+      `0%,${start}%{opacity:0;transform:translateY(7px)}${end}%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 24).toFixed(1));
+        const end = Number(Math.min(38, start + 16).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0, 30)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The RISC-V strokes stack into place and settle',
+      'Per-stroke rise + slow pulse'
+    );
+  }
+
+  // ROCKET — the mark lifts off the baseline, overshoots, then settles.
+  if (item.id === 'rocket') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:translateY(10px)}38%{opacity:1;transform:translateY(-1.5px)}50%{transform:translateY(1px)}62%,100%{transform:translateY(0)}}` +
+        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Rocket mark lifts off into place and settles',
+      'Lift-off with overshoot + slow pulse'
+    );
+  }
+
+  // ROLLUPDOTJS — the bars roll in from the left one after another.
+  if (item.id === 'rollupdotjs') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const slideKeys = (start, end) =>
+      `0%,${start}%{opacity:0;transform:translateX(-7px)}${end}%,100%{opacity:1;transform:translateX(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 22).toFixed(1));
+        const end = Number(Math.min(38, start + 18).toFixed(1));
+        styles.push(`@keyframes ${cls}{${slideKeys(start, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${slideKeys(0, 30)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Rollup bars roll into place and settle',
+      'Per-bar slide-in + slow pulse'
+    );
+  }
+
+  // ROS — the mark turns into place and holds.
+  if (item.id === 'ros') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg)}38%{opacity:1;transform:rotate(2deg)}48%{transform:rotate(0)}62%{transform:rotate(1.5deg)}74%{transform:rotate(-1.5deg)}86%,100%{transform:rotate(0)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The ROS mark turns into place and holds',
+      'Turn-in with sway + slow pulse'
     );
   }
 
