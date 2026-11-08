@@ -6529,6 +6529,162 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // DGRAPH — nodes connect: every node blooms into place in sequence, then the
+  // graph settles with one slow pulse.
+  if (item.id === 'dgraph') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const bloomKeys = (start) =>
+      `${start === 0 ? '0%' : `0%,${start}%`}{opacity:0;transform:scale(.85)}` +
+      `${Math.min(38, start + 8)}%{opacity:1;transform:scale(1.06)}` +
+      `38%,100%{opacity:1;transform:scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${bloomKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${bloomKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Dgraph nodes light up and connect',
+      'Per-node bloom + slow pulse'
+    );
+  }
+
+  // DIRECTUS — D assembles: each part rises into place in sequence, then the
+  // letter settles with one slow pulse.
+  if (item.id === 'directus') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Directus D assembles and settles',
+      'Per-part rise + slow pulse'
+    );
+  }
+
+  // DISCORD — controller wakes: the mark tilts in, settles, then sways with a
+  // slow bob and one closing pulse.
+  if (item.id === 'discord') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0) translateY(0)}64%{transform:rotate(3deg) translateY(-0.8px)}80%{transform:rotate(-3deg) translateY(0)}100%{transform:rotate(0) translateY(0)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Discord controller wakes and settles',
+      'Controller sway + bob + slow pulse'
+    );
+  }
+
+  // DOCUSAURUS — dino waddles: the mark tilts in, settles, then waddles with a
+  // slow bob and one closing pulse.
+  if (item.id === 'docusaurus') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0) translateY(0)}64%{transform:rotate(3deg) translateY(-0.8px)}80%{transform:rotate(-3deg) translateY(0)}100%{transform:rotate(0) translateY(0)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Docusaurus dino waddles into place and settles',
+      'Dino waddle + bob + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
