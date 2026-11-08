@@ -1667,6 +1667,8 @@ const STORY_VERBS = {
   pop: 'pops into shape',
   stretch: 'stretches into place',
   sway: 'sways into line',
+  sweep: 'settles in from the side, part by part',
+  blade: 'opens like a fan and locks',
 };
 
 const STORY_OVERRIDES = {
@@ -1722,6 +1724,18 @@ const STORY_OVERRIDES = {
   tidb: 'bloom',
   fauna: 'bloom',
   upstash: 'stack',
+  sphinx: 'sweep',
+  cocoapods: 'sweep',
+  nginx: 'blade',
+  traefikproxy: 'blade',
+  trivy: 'blade',
+  zerotier: 'blade',
+  splunk: 'blade',
+  fastly: 'blade',
+  arm: 'blade',
+  zephyr: 'blade',
+  postcss: 'blade',
+  stylelint: 'blade',
 };
 
 const STORY_MOTIONS = {
@@ -1997,6 +2011,8 @@ const STORY_FRAMES = {
   wave: () =>
     `0%{transform:scale(1.14)}26%{transform:scale(.97)}44%{transform:scale(1.04)}62%{transform:scale(.99)}78%,100%{transform:scale(1)}`,
   orbit: () => `0%{transform:rotate(0)}100%{transform:rotate(360deg)}`,
+  blade: () =>
+    `0%{transform:rotate(${-9 * 1}deg) scale(.95)}42%{transform:rotate(2deg) scale(1.02)}56%,100%{transform:rotate(0) scale(1)}`,
 };
 
 function buildAnimatedSvg(item) {
@@ -2108,6 +2124,7 @@ function buildAnimatedSvg(item) {
       kind === 'fan' ||
       kind === 'swirl' ||
       kind === 'bloom' ||
+      kind === 'sweep' ||
       kind === 'stack'
     ) {
       const pieces0 = (art.body.match(/<path[^>]*\/>/g) || []).slice();
@@ -2143,6 +2160,9 @@ function buildAnimatedSvg(item) {
           } else if (kind === 'bloom') {
             from = 'scale(.55)';
             origin = '50% 50%';
+          } else if (kind === 'sweep') {
+            from = `translateX(${-9 * (dir || 1)}px)`;
+            origin = dir > 0 ? '0% 50%' : '100% 50%';
           } else if (kind === 'stack') {
             from = `translateY(${-9 * (dir || 1)}px) scaleY(.88)`;
             origin = dir > 0 ? '50% 0%' : '50% 100%';
@@ -2210,6 +2230,7 @@ function buildAnimatedSvg(item) {
         fan: 'pop',
         swirl: 'spin',
         bloom: 'pop',
+        sweep: 'rise',
         stack: 'drop',
       }[kind] || kind;
     const frames = STORY_FRAMES[framesKind](params);
