@@ -8050,6 +8050,111 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // OPENAPIINITIATIVE — one connection ring leaves the mark and settles.
+  if (item.id === 'openapiinitiative') {
+    const kAll = `tss_${uid}_al`,
+      kRing = `tss_${uid}_rg`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kRing},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kRing}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
+      'OpenAPI sends one connection ring and settles',
+      'Transient connection ring + slow pulse'
+    );
+  }
+
+  // OPENSEARCH — one search ring leaves the mark and settles.
+  if (item.id === 'opensearch') {
+    const kAll = `tss_${uid}_al`,
+      kRing = `tss_${uid}_rg`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kRing},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kRing}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
+      'OpenSearch sends one search pulse and settles',
+      'Transient search ring + slow pulse'
+    );
+  }
+
+  // OPENSHIFT — the orbit spins into place, sways in the hold, and settles.
+  if (item.id === 'openshift') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-25deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}58%{transform:rotate(2deg)}70%{transform:rotate(-2deg)}82%,100%{transform:rotate(0)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The OpenShift orbit spins into place and settles',
+      'Orbit spin + slow pulse'
+    );
+  }
+
+  // OPENTOFU — the own subpath blocks rise in sequence and settle.
+  if (item.id === 'opentofu') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const riseStyles = [];
+    const riseParts = [];
+    const riseReduce = [];
+    const parts = subpaths.length >= 2 ? subpaths : [d];
+    const n = Math.max(1, parts.length);
+    parts.forEach((subD, idx) => {
+      const cls = `tss_${uid}_pt${idx}`;
+      const start = Number(((idx / n) * 24).toFixed(1));
+      const end = Number(Math.min(38, start + 14).toFixed(1));
+      riseStyles.push(
+        `@keyframes ${cls}{0%,${start}%{opacity:0;transform:translateY(6px)}${end}%,100%{opacity:1;transform:translateY(0)}}` +
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      riseReduce.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      riseParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+      );
+    });
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        riseStyles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        riseReduce.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${riseParts.join('')}</g></g>`,
+      'The OpenTofu blocks assemble and settle',
+      'Per-block rise + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
