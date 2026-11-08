@@ -6335,6 +6335,200 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // CURL — request flies: a packet of dash runs the mark's own contour while the
+  // fill locks in behind it, then the mark settles with one slow pulse.
+  if (item.id === 'curl') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kPacket = `tss_${uid}_pk`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
+        `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%{stroke-dashoffset:-100;stroke-opacity:1}78%{stroke-opacity:1}88%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} ease-out infinite}` +
+        `.${kPacket}{animation:${kPacket} ${dur} ease-in-out infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kPacket},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kPacket}{stroke-opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}">` +
+        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kPacket}" pathLength="100" fill="none" stroke="${secondary}" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="8 92" stroke-dashoffset="0" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'A request packet runs the cURL swoosh and the mark locks',
+      'Dash packet + fill lock + slow pulse'
+    );
+  }
+
+  // D3 — bars draw: each bar rises into place in sequence, then the chart
+  // settles with one slow pulse.
+  if (item.id === 'd3') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The D3 bars draw into place and settle',
+      'Per-bar rise + slow pulse'
+    );
+  }
+
+  // DAISYUI — daisy blooms: every petal blooms into place in sequence, then the
+  // flower settles with one slow pulse.
+  if (item.id === 'daisyui') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const bloomKeys = (start) =>
+      `${start === 0 ? '0%' : `0%,${start}%`}{opacity:0;transform:scale(.85)}` +
+      `${Math.min(38, start + 8)}%{opacity:1;transform:scale(1.06)}` +
+      `38%,100%{opacity:1;transform:scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${bloomKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${bloomKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The daisyUI daisy blooms petal by petal',
+      'Per-petal bloom + slow pulse'
+    );
+  }
+
+  // DATABRICKS — lakehouse layers: each layer rises into place in sequence,
+  // then the stack settles with one slow pulse.
+  if (item.id === 'databricks') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Databricks lakehouse layers assemble and settle',
+      'Per-layer rise + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
