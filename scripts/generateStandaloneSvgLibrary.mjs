@@ -1663,90 +1663,90 @@ const STORY_VERBS = {
 };
 
 const STORY_MOTIONS = {
-  dart: ['glide', { dir: 1, concept: 'The Dart dart glides in and settles' }],
-  scala: ['spin', { dir: -1, concept: 'The Scala spiral turns into its angle' }],
-  zig: ['zigzag', { concept: 'The Zig mark zig-zags into place' }],
-  haskell: ['press', { concept: 'The Haskell lambda presses into place' }],
-  clojure: ['unfold', { concept: 'The Clojure form unfolds sideways' }],
-  ocaml: ['hop', { concept: 'The OCaml camel hops twice' }],
-  erlang: ['beat', { concept: 'The Erlang atom beats twice' }],
-  fsharp: ['quarter', { concept: 'The F# mark turns a quarter and locks' }],
-  fortran: ['rise', { concept: 'The Fortran mark rises off the baseline' }],
-  solidity: ['drop', { concept: 'The Solidity block drops and settles' }],
-  perl: ['flip', { concept: 'The Perl mark flips open' }],
-  crystal: ['pop', { concept: 'The Crystal pops into shape' }],
-  nim: ['stretch', { concept: 'The Nim crown stretches into place' }],
-  gleam: ['sway', { concept: 'The Gleam mark sways into line' }],
-  v: ['rise', { concept: 'The V mark rises off the baseline' }],
-  webassembly: ['flip', { concept: 'The WebAssembly mark flips open' }],
-  elm: ['quarter', { concept: 'The Elm branch turns a quarter and locks' }],
-  purescript: ['press', { concept: 'The PureScript mark presses into place' }],
-  coffeescript: ['beat', { concept: 'The CoffeeScript mark beats twice' }],
-  latex: ['rise', { concept: 'The LaTeX mark rises off the baseline' }],
-  markdown: ['glide', { dir: -1, concept: 'The Markdown mark glides in from the right' }],
-  yaml: ['unfold', { concept: 'The YAML form unfolds sideways' }],
-  toml: ['sway', { concept: 'The TOML mark sways into line' }],
-  json: ['pop', { concept: 'The JSON mark pops into shape' }],
-  d: ['press', { concept: 'The D block presses into place' }],
-  commonlisp: ['pop', { concept: 'The Common Lisp mark pops into shape' }],
-  ada: ['quarter', { concept: 'The Ada mark turns a quarter and locks' }],
-  xml: ['unfold', { concept: 'The XML tag pair unfolds sideways' }],
-  typst: ['rise', { concept: 'The Typst mark rises off the baseline' }],
-  haxe: ['beat', { concept: 'The Haxe mark beats twice' }],
-  opengl: ['spin', { direction: 1, concept: 'The OpenGL mark spins into its angle' }],
-  scratch: ['hop', { concept: 'The Scratch cat hops twice' }],
-  processingfoundation: ['sway', { concept: 'The Processing mark sways into line' }],
-  labview: ['flip', { concept: 'The LabVIEW mark flips open' }],
-  wolfram: ['press', { concept: 'The Wolfram mark presses into place' }],
-  tanstack: ['drop', { concept: 'The TanStack mark drops and settles' }],
-  cypress: ['glide', { dir: 1, concept: 'The Cypress mark glides in and settles' }],
-  solid: ['unfold', { concept: 'The Solid mark unfolds sideways' }],
-  htmx: ['rise', { concept: 'The htmx mark rises off the baseline' }],
-  alpinedotjs: ['zigzag', { concept: 'The Alpine mark zig-zags into place' }],
-  shadcnui: ['press', { concept: 'The shadcn mark presses into place' }],
-  mui: ['beat', { concept: 'The MUI mark beats twice' }],
-  chakraui: ['pop', { concept: 'The Chakra mark pops into shape' }],
-  antdesign: ['spin', { direction: -1, concept: 'The Ant Design mark spins into place' }],
-  bootstrap: ['drop', { concept: 'The Bootstrap mark drops and settles' }],
-  styledcomponents: ['stretch', { concept: 'The styled mark stretches into place' }],
-  unocss: ['sway', { concept: 'The UnoCSS mark sways into line' }],
-  postcss: ['flip', { concept: 'The PostCSS mark flips open' }],
-  threedotjs: ['spin', { direction: 1, concept: 'The three.js mark spins into place' }],
-  webgl: ['rise', { concept: 'The WebGL mark rises off the baseline' }],
-  greensock: ['beat', { concept: 'The GreenSock mark beats twice' }],
-  expo: ['glide', { dir: -1, concept: 'The Expo mark glides in from the right' }],
-  electron: ['spin', { direction: -1, concept: 'The Electron orbit turns into place' }],
-  tauri: ['press', { concept: 'The Tauri mark presses into place' }],
-  ionic: ['hop', { concept: 'The Ionic mark hops twice' }],
-  capacitor: ['stretch', { concept: 'The Capacitor mark stretches into place' }],
-  swc: ['zigzag', { concept: 'The SWC mark zig-zags into place' }],
-  babel: ['quarter', { concept: 'The Babel mark turns a quarter and locks' }],
-  turborepo: ['drop', { concept: 'The Turborepo mark drops and settles' }],
-  apollographql: ['unfold', { concept: 'The Apollo mark unfolds sideways' }],
-  mobx: ['pop', { concept: 'The MobX mark pops into shape' }],
-  xstate: ['flip', { concept: 'The XState mark flips open' }],
-  swr: ['sway', { concept: 'The SWR mark sways into line' }],
-  trpc: ['rise', { concept: 'The tRPC mark rises off the baseline' }],
-  jquery: ['glide', { dir: 1, concept: 'The jQuery mark glides in and settles' }],
-  webrtc: ['hop', { concept: 'The WebRTC mark hops twice' }],
-  quasar: ['spin', { direction: 1, concept: 'The Quasar mark spins into place' }],
-  bulma: ['pop', { concept: 'The Bulma mark pops into shape' }],
-  stylelint: ['press', { concept: 'The Stylelint mark presses into place' }],
-  marko: ['beat', { concept: 'The Marko mark beats twice' }],
-  stencil: ['unfold', { concept: 'The Stencil mark unfolds sideways' }],
-  puppeteer: ['glide', { dir: -1, concept: 'The Puppeteer mark glides in from the right' }],
-  selenium: ['hop', { concept: 'The Selenium mark hops twice' }],
-  webdriverio: ['zigzag', { concept: 'The WebdriverIO mark zig-zags into place' }],
-  mocha: ['rise', { concept: 'The Mocha mark rises off the baseline' }],
-  jasmine: ['sway', { concept: 'The Jasmine mark sways into line' }],
-  aframe: ['flip', { concept: 'The A-Frame mark flips open' }],
-  svg: ['stretch', { concept: 'The SVG mark stretches into place' }],
-  nestjs: ['drop', { concept: 'The NestJS mark drops and settles' }],
-  laravel: ['quarter', { concept: 'The Laravel mark turns a quarter and locks' }],
-  fastify: ['zigzag', { concept: 'The Fastify mark zig-zags into place' }],
-  gin: ['pop', { concept: 'The Gin mark pops into shape' }],
-  symfony: ['spin', { direction: -1, concept: 'The Symfony mark spins into place' }],
-  ktor: ['press', { concept: 'The Ktor mark presses into place' }],
+  dart: 'assemble',
+  scala: 'fan',
+  zig: 'assemble',
+  haskell: 'fan',
+  clojure: 'cascade',
+  ocaml: 'assemble',
+  erlang: 'trace',
+  fsharp: 'fan',
+  fortran: 'trace',
+  solidity: 'assemble',
+  perl: 'cascade',
+  crystal: 'trace',
+  nim: 'assemble',
+  gleam: 'fan',
+  v: 'cascade',
+  webassembly: 'trace',
+  elm: 'assemble',
+  purescript: 'trace',
+  coffeescript: 'fan',
+  latex: 'cascade',
+  markdown: 'assemble',
+  yaml: 'trace',
+  toml: 'fan',
+  json: 'cascade',
+  d: 'trace',
+  commonlisp: 'trace',
+  ada: 'trace',
+  xml: 'cascade',
+  typst: 'trace',
+  haxe: 'assemble',
+  opengl: 'cascade',
+  scratch: 'trace',
+  processingfoundation: 'fan',
+  labview: 'fan',
+  wolfram: 'fan',
+  tanstack: 'trace',
+  cypress: 'assemble',
+  solid: 'assemble',
+  htmx: 'cascade',
+  alpinedotjs: 'cascade',
+  shadcnui: 'trace',
+  mui: 'cascade',
+  chakraui: 'trace',
+  antdesign: 'cascade',
+  bootstrap: 'cascade',
+  styledcomponents: 'assemble',
+  unocss: 'trace',
+  postcss: 'trace',
+  threedotjs: 'trace',
+  webgl: 'trace',
+  greensock: 'trace',
+  expo: 'trace',
+  electron: 'cascade',
+  tauri: 'cascade',
+  ionic: 'trace',
+  capacitor: 'assemble',
+  swc: 'trace',
+  babel: 'cascade',
+  turborepo: 'trace',
+  apollographql: 'trace',
+  mobx: 'assemble',
+  xstate: 'trace',
+  swr: 'trace',
+  trpc: 'cascade',
+  jquery: 'trace',
+  webrtc: 'trace',
+  quasar: 'cascade',
+  bulma: 'trace',
+  stylelint: 'trace',
+  marko: 'trace',
+  stencil: 'trace',
+  puppeteer: 'cascade',
+  selenium: 'cascade',
+  webdriverio: 'trace',
+  mocha: 'assemble',
+  jasmine: 'trace',
+  aframe: 'assemble',
+  svg: 'trace',
+  nestjs: 'trace',
+  laravel: 'trace',
+  fastify: 'cascade',
+  gin: 'trace',
+  symfony: 'trace',
+  ktor: 'fan',
   socketdotio: 'beat',
   swagger: 'unfold',
   traefikproxy: 'quarter',
@@ -1932,6 +1932,9 @@ const STORY_FRAMES = {
   stretch: () => `0%{transform:scaleY(.7)}34%{transform:scaleY(1.06)}48%,100%{transform:scaleY(1)}`,
   sway: () =>
     `0%{transform:translateX(-4px)}30%{transform:translateX(4px)}60%{transform:translateX(-2px)}80%,100%{transform:translateX(0)}`,
+  wave: () =>
+    `0%{transform:scale(1.14)}26%{transform:scale(.97)}44%{transform:scale(1.04)}62%{transform:scale(.99)}78%,100%{transform:scale(1)}`,
+  orbit: () => `0%{transform:rotate(0)}100%{transform:rotate(360deg)}`,
 };
 
 function buildAnimatedSvg(item) {
@@ -1998,10 +2001,8 @@ function buildAnimatedSvg(item) {
     const declared = STORY_MOTIONS[item.id];
     const kind = Array.isArray(declared) ? declared[0] : declared;
     const params = Array.isArray(declared) ? declared[1] || {} : {};
-    const frames = STORY_FRAMES[kind](params);
     const kAll = `tss_${uid}_al`,
       kMv = `tss_${uid}_mv`;
-    const origin = kind === 'rise' || kind === 'stretch' ? '50% 100%' : '50% 50%';
     const art = DEVICON_ENTRIES[item.id]
       ? readDeviconReference(item)
       : {
@@ -2011,12 +2012,82 @@ function buildAnimatedSvg(item) {
           tx: 0,
           ty: 0,
         };
+    const conceptText =
+      params.concept || `The ${item.name} mark ${STORY_VERBS[kind] || 'settles into place'}`;
+
+    // Pieces: move the mark's own parts, in the order the logo reads.
+    if (kind === 'assemble' || kind === 'cascade' || kind === 'fan') {
+      const pieces = (art.body.match(/<path[^>]*\/>/g) || []).slice();
+      if (pieces.length >= 2) {
+        const styles = [];
+        const rules = [];
+        const reduce = [];
+        const gap = kind === 'fan' ? 3 : 4;
+        pieces.forEach((piece, idx) => {
+          const cls = `tss_${uid}_pc${idx}`;
+          const start = Number(Math.min(38, idx * gap).toFixed(1));
+          const end = Number(Math.min(54, start + 22).toFixed(1));
+          const from =
+            kind === 'fan'
+              ? `translateY(4px) rotate(${idx % 2 ? 9 : -9}deg) scale(.9)`
+              : `translateY(${kind === 'cascade' ? -7 : 7}px)`;
+          const origin = kind === 'cascade' ? '50% 0%' : '50% 100%';
+          styles.push(
+            `@keyframes ${cls}{0%,${start}%{opacity:0;transform:${from}}${end}%,100%{opacity:1;transform:none}}`
+          );
+          rules.push(
+            `.${cls}{transform-box:fill-box;transform-origin:${origin};animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+          );
+          reduce.push(
+            `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+          );
+        });
+        const wrapped = pieces.map((piece, idx) => `<g class="tss_${uid}_pc${idx}">${piece}</g>`);
+        return wrapSvg(
+          art.defs,
+          `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+            `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+            styles.join('') +
+            rules.join(''),
+          `.${kAll}{animation:none!important;opacity:1!important}` + reduce.join(''),
+          `<g class="${kAll}"><g transform="translate(${art.tx} ${art.ty}) scale(${art.scale})">${wrapped.join('')}</g></g>`,
+          conceptText,
+          `story: ${kind} (${pieces.length} pieces)`
+        );
+      }
+    }
+    // Trace: a one-piece mark draws its own contour, then the fill locks.
+    if (kind === 'trace') {
+      const dTrace = (art.body.match(/\sd="([^"]+)"/) || [])[1] || d;
+      const kFill = `tss_${uid}_fl`,
+        kTr = `tss_${uid}_tr`;
+      return wrapSvg(
+        art.defs,
+        `@keyframes ${kAll}{0%{opacity:0}4%,93%{opacity:1}99%,100%{opacity:0}}` +
+          `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+          `@keyframes ${kFill}{0%,42%{fill-opacity:.25}58%,100%{fill-opacity:1}}` +
+          `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+          `@keyframes ${kTr}{0%{stroke-dashoffset:100;stroke-opacity:1}44%{stroke-dashoffset:0;stroke-opacity:1}54%{stroke-opacity:1}64%,100%{stroke-opacity:0}}` +
+          `.${kTr}{stroke-dasharray:100;animation:${kTr} ${dur} cubic-bezier(.4,0,.2,1) infinite}`,
+        `.${kAll},.${kFill},.${kTr}{animation:none!important}` +
+          `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTr}{stroke-opacity:0!important}`,
+        `<g class="${kAll}"><g class="${kFill}"><g transform="translate(${art.tx} ${art.ty}) scale(${art.scale})">${art.body}</g></g>` +
+          `<path class="${kTr}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".6" stroke-linecap="round" stroke-linejoin="round" transform="translate(${art.tx} ${art.ty}) scale(${art.scale})" d="${dTrace}"/></g>`,
+        conceptText,
+        'story: trace'
+      );
+    }
+
+    const framesKind = { assemble: 'rise', cascade: 'drop', fan: 'pop' }[kind] || kind;
+    const frames = STORY_FRAMES[framesKind](params);
+    const origin = framesKind === 'rise' || framesKind === 'stretch' ? '50% 100%' : '50% 50%';
+    const ease = framesKind === 'orbit' ? 'linear' : 'cubic-bezier(.22,1,.36,1)';
     return wrapSvg(
       art.defs,
       `@keyframes ${kAll}{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `@keyframes ${kMv}{${frames}}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:${origin};animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+        `.${kMv}{transform-box:fill-box;transform-origin:${origin};animation:${kMv} ${dur} ${ease} infinite}`,
       `.${kAll},.${kMv}{animation:none!important}` +
         `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
       `<g class="${kAll}"><g class="${kMv}"><g transform="translate(${art.tx} ${art.ty}) scale(${art.scale})">${art.body}</g></g></g>`,
