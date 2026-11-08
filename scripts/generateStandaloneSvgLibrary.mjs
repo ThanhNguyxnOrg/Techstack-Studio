@@ -6137,6 +6137,204 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // COMMITLINT — check draws: the mark's contour draws itself, the fill locks
+  // in behind it, then the mark settles with one slow pulse.
+  if (item.id === 'commitlint') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kTrace = `tss_${uid}_tr`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} ease-out infinite}` +
+        `.${kTrace}{animation:${kTrace} ${dur} ease-in-out infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}">` +
+        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The commitlint check draws itself and settles',
+      'Contour draw + fill lock + slow pulse'
+    );
+  }
+
+  // CONAN — package assembles: each part rises into place in sequence, then
+  // the package settles with one slow pulse.
+  if (item.id === 'conan') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Conan package assembles and settles',
+      'Per-part rise + slow pulse'
+    );
+  }
+
+  // CONTAINERD — container stack: each layer rises into place in sequence,
+  // then the stack settles with one slow pulse.
+  if (item.id === 'containerd') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const kf = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${kf}{${riseKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${kf} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      const kf = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${kf}{${riseKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${kf} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The containerd container stack settles',
+      'Per-layer rise + slow pulse'
+    );
+  }
+
+  // CONTENTFUL — content blocks: every block blooms into place in sequence,
+  // then the grid settles with one slow pulse.
+  if (item.id === 'contentful') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const bloomKeys = (start) =>
+      `${start === 0 ? '0%' : `0%,${start}%`}{opacity:0;transform:scale(.85)}` +
+      `${Math.min(38, start + 8)}%{opacity:1;transform:scale(1.06)}` +
+      `38%,100%{opacity:1;transform:scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const kf = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${kf}{${bloomKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${kf} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      const kf = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${kf}{${bloomKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${kf} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Contentful content blocks assemble and settle',
+      'Per-block bloom + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
