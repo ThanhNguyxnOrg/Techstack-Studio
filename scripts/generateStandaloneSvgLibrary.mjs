@@ -456,7 +456,9 @@ function readDeviconReference(item) {
   let rest = full;
   for (const block of defsBlocks) rest = rest.replace(block, '');
   // Some references keep gradients, masks or clips outside a defs wrapper.
-  const stray = rest.match(/<(linearGradient|radialGradient|mask|clipPath|filter|pattern)[\s\S]*?<\/\1>/g) || [];
+  const stray =
+    rest.match(/<(linearGradient|radialGradient|mask|clipPath|filter|pattern)[\s\S]*?<\/\1>/g) ||
+    [];
   for (const block of stray) rest = rest.replace(block, '');
   const defs = rewrite(lighten(defsBlocks.join('') + stray.join('')));
   const body = rewrite(lighten(rest.trim()));
