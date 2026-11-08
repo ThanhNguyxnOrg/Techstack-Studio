@@ -1652,6 +1652,11 @@ function buildAnimatedSvg(item) {
   const primary = item.darkSafeColor;
   const secondary = item.motionRecipe?.secondaryColor || '#F8FAFC';
   const dur = '3.6s';
+  const readSourceArt = (id) =>
+    fs
+      .readFileSync(path.join(sourceDir, `${id}.svg`), 'utf8')
+      .replace(/^<svg[^>]*>/, '')
+      .replace(/<\/svg>\s*$/, '');
 
   const wrapSvg = (defs, style, reducedMotionCss, body, concept, technique, customViewBox) => {
     // Motion smaller than this disappears at 44px, so every keyframe is lifted to a floor.
@@ -1698,6 +1703,66 @@ function buildAnimatedSvg(item) {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}${fullStyle}${body}</svg>`;
     return { svg, concept, technique };
   };
+
+  // PRETTIER — the code lines slide in from alternating sides and line up.
+  if (item.id === 'prettier') {
+    const styles = [];
+    const reduce = [];
+    const rules = [];
+    let line = 0;
+    const staged = readSourceArt('prettier').replace(/<rect/g, () => {
+      const cls = `tss_${uid}_l${line}`;
+      const dir = line % 2 === 0 ? -1 : 1;
+      const start = Number(Math.min(38, line * 3).toFixed(1));
+      const end = Number(Math.min(56, start + 22).toFixed(1));
+      styles.push(
+        `@keyframes ${cls}{0%,${start}%{opacity:0;transform:translateX(${dir * 7}px)}${end}%,100%{opacity:1;transform:translateX(0)}}`
+      );
+      rules.push(`.${cls}{animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`);
+      reduce.push(`.${cls}{animation:none!important;opacity:1!important;transform:none!important}`);
+      line += 1;
+      return `<rect class="${cls}"`;
+    });
+    const kAll = `tss_${uid}_al`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        styles.join('') +
+        rules.join(''),
+      `.${kAll}{animation:none!important;opacity:1!important}` + reduce.join(''),
+      `<g class="${kAll}">${staged}</g>`,
+      'The Prettier lines slide in from alternating sides and line up',
+      'Per-line stagger + alignment'
+    );
+  }
+
+  // AMAZONAWS — the smile draws under the wordmark, then the arrow tips in.
+  if (item.id === 'amazonaws' || item.id === 'aws') {
+    const art = readSourceArt('amazonaws');
+    const kAll = `tss_${uid}_al`,
+      kSmile = `tss_${uid}_sm`,
+      kWord = `tss_${uid}_wm`;
+    const smilePaths = [];
+    let rest = art.replace(/<path[^>]*fill="#FF9900"[^>]*\/>/g, (path) => {
+      smilePaths.push(path);
+      return '';
+    });
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kSmile}{0%,10%{opacity:0;transform:scale(.55)}34%{opacity:1;transform:scale(1.06)}44%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kWord}{0%,46%{opacity:0;transform:translateY(3px)}62%{opacity:1;transform:translateY(0)}100%{opacity:1;transform:translateY(0)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kSmile}{transform-box:fill-box;transform-origin:20% 80%;animation:${kSmile} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kWord}{transform-box:fill-box;transform-origin:50% 50%;animation:${kWord} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kSmile},.${kWord}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kSmile}{opacity:1!important;transform:none!important}.${kWord}{opacity:1!important;transform:none!important}`,
+      `<g class="${kAll}"><g class="${kSmile}">${smilePaths.join('')}</g><g class="${kWord}">${rest}</g></g>`,
+      'The AWS smile sweeps in underneath, then the wordmark settles over it',
+      'Smile sweep + wordmark settle'
+    );
+  }
 
   if (item.id === 'circleci') {
     return wrapSvg(
@@ -2470,7 +2535,7 @@ function buildAnimatedSvg(item) {
   if (item.id === 'css3') {
     return wrapSvg(
       '',
-      '@keyframes tss_css3_lc{0%,12%{opacity:0;transform:translateY(1.2px);fill:#D9C2FF}22%{opacity:1;transform:translateY(0);fill:#D9C2FF}44%{fill:#D9C2FF}54%{fill:#FF9EC7}64%{fill:#D9C2FF}92%{opacity:1}98%,100%{opacity:0;transform:translateY(0);fill:#D9C2FF}}.tss_css3_lc{fill:#D9C2FF;opacity:0;animation:tss_css3_lc 3.6s ease-in-out infinite}@keyframes tss_css3_l1{0%,20%{opacity:0;transform:translateY(1.2px);fill:#D9C2FF}30%{opacity:1;transform:translateY(0);fill:#D9C2FF}52%{fill:#D9C2FF}62%{fill:#FFE29A}72%{fill:#D9C2FF}92%{opacity:1}98%,100%{opacity:0;transform:translateY(0);fill:#D9C2FF}}.tss_css3_l1{fill:#D9C2FF;opacity:0;animation:tss_css3_l1 3.6s ease-in-out infinite}@keyframes tss_css3_l2{0%,28%{opacity:0;transform:translateY(1.2px);fill:#D9C2FF}38%{opacity:1;transform:translateY(0);fill:#D9C2FF}60%{fill:#D9C2FF}70%{fill:#9AE6FF}80%{fill:#D9C2FF}92%{opacity:1}98%,100%{opacity:0;transform:translateY(0);fill:#D9C2FF}}.tss_css3_l2{fill:#D9C2FF;opacity:0;animation:tss_css3_l2 3.6s ease-in-out infinite}',
+      '@keyframes tss_css3_lc{0%,12%{opacity:0;transform:translateY(4px);fill:#D9C2FF}22%{opacity:1;transform:translateY(0);fill:#D9C2FF}44%{fill:#D9C2FF}54%{fill:#FF9EC7}64%{fill:#D9C2FF}92%{opacity:1}98%,100%{opacity:0;transform:translateY(0);fill:#D9C2FF}}.tss_css3_lc{fill:#D9C2FF;opacity:0;animation:tss_css3_lc 3.6s ease-in-out infinite}@keyframes tss_css3_l1{0%,20%{opacity:0;transform:translateY(4px);fill:#D9C2FF}30%{opacity:1;transform:translateY(0);fill:#D9C2FF}52%{fill:#D9C2FF}62%{fill:#FFE29A}72%{fill:#D9C2FF}92%{opacity:1}98%,100%{opacity:0;transform:translateY(0);fill:#D9C2FF}}.tss_css3_l1{fill:#D9C2FF;opacity:0;animation:tss_css3_l1 3.6s ease-in-out infinite}@keyframes tss_css3_l2{0%,28%{opacity:0;transform:translateY(4px);fill:#D9C2FF}38%{opacity:1;transform:translateY(0);fill:#D9C2FF}60%{fill:#D9C2FF}70%{fill:#9AE6FF}80%{fill:#D9C2FF}92%{opacity:1}98%,100%{opacity:0;transform:translateY(0);fill:#D9C2FF}}.tss_css3_l2{fill:#D9C2FF;opacity:0;animation:tss_css3_l2 3.6s ease-in-out infinite}',
       '.tss_css3_l1,.tss_css3_l2,.tss_css3_lc{animation:none!important;transform:none!important}.tss_css3_lc,.tss_css3_l1,.tss_css3_l2{opacity:0!important}',
       '<path fill="#663399" fill-rule="evenodd" d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63"/><path class="tss_css3_lc" d="M8.625 13.098C9.336 13.092 10.044 13.296 10.464 13.728 10.896 14.16 11.136 14.856 11.112 15.72H9.336C9.36 15.264 9.24 14.928 8.904 14.76 8.592 14.616 8.136 14.712 8.016 15 7.896 15.264 7.824 15.576 7.848 15.864V19.368C7.848 20.112 8.112 20.496 8.616 20.496A0.65 0.65 0 0 0 9.168 20.232C9.336 19.992 9.36 19.68 9.336 19.392H11.112C11.208 21.024 10.128 22.104 8.544 22.08 7.008 22.08 6.048 21.216 6.072 19.608V15.576C6.072 14.76 6.312 14.136 6.768 13.728 7.2 13.32 7.914 13.104 8.625 13.098"/><path class="tss_css3_l1" d="M14.256 13.08C15.816 13.08 16.536 14.16 16.56 15.72H14.952C14.976 15.432 14.904 15.12 14.808 14.88 14.712 14.688 14.52 14.616 14.256 14.616 13.8 14.616 13.56 14.88 13.56 15.456 13.536 16.032 13.848 16.344 14.328 16.536 15.048 16.824 15.936 17.28 16.248 17.832Q16.68 18.48 16.68 19.488C16.68 21.096 15.768 22.08 14.184 22.08 12.528 22.08 11.784 21.048 11.76 19.392H13.44C13.44 20.184 13.704 20.568 14.232 20.568 14.496 20.568 14.688 20.496 14.784 20.328 14.976 20.016 15.024 19.152 14.736 18.816 14.424 18.408 13.824 18.216 13.416 18Q12.588 17.604 12.192 17.064C11.952 16.704 11.832 16.176 11.832 15.528 11.832 14.088 12.768 13.056 14.256 13.08"/><path class="tss_css3_l2" d="M19.656 13.08C21.24 13.08 21.96 14.16 21.984 15.72H20.376C20.376 15.432 20.328 15.12 20.208 14.88 20.112 14.688 19.944 14.616 19.68 14.616 19.2 14.616 18.96 14.88 18.96 15.456S19.248 16.344 19.752 16.536C20.448 16.824 21.36 17.28 21.672 17.832 21.936 18.264 22.08 18.816 22.08 19.488 22.104 21.096 21.192 22.08 19.608 22.08 17.928 22.08 17.184 21.024 17.16 19.392H18.84C18.84 20.136 19.104 20.568 19.632 20.568 19.896 20.568 20.088 20.496 20.184 20.328 20.4 20.016 20.448 19.152 20.136 18.816 19.848 18.408 19.248 18.216 18.816 18 18.264 17.736 17.856 17.424 17.616 17.064S17.256 16.176 17.256 15.528C17.232 14.088 18.168 13.056 19.656 13.08"/>',
       'Glowing CSS letters light up on the purple card (user motion)',
@@ -9695,7 +9760,7 @@ function buildAnimatedSvg(item) {
     const ownStrokes = buildOwnSubpathStrokes('0.55');
     return wrapSvg(
       `<clipPath id="${c1}"><rect x="0" y="0" width="${boxW}" height="${y1}"/></clipPath><clipPath id="${c2}"><rect x="0" y="${y1 - 0.15}" width="${boxW}" height="${Number((y2 - y1 + 0.3).toFixed(2))}"/></clipPath><clipPath id="${c3}"><rect x="0" y="${y2 - 0.15}" width="${boxW}" height="${Number((boxH - y2 + 0.15).toFixed(2))}"/></clipPath>`,
-      `@keyframes ${k1}{0%,14%,100%{transform:translateY(-1.8px);opacity:0.35}42%,82%{transform:translateY(0);opacity:1}}@keyframes ${k2}{0%,8%,100%{transform:translateX(-1.8px);opacity:0.45}36%,82%{transform:translateX(0);opacity:1}}@keyframes ${k3}{0%,100%{transform:translateY(1.2px);opacity:0.6}30%,82%{transform:translateY(0);opacity:1}}.${k1}{animation:${k1} ${dur} cubic-bezier(0.34,1.56,0.64,1) infinite}.${k2}{animation:${k2} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${k3}{animation:${k3} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}${ownStrokes.style}`,
+      `@keyframes ${k1}{0%,14%,100%{transform:translateY(-1.8px);opacity:0.35}42%,82%{transform:translateY(0);opacity:1}}@keyframes ${k2}{0%,8%,100%{transform:translateX(-1.8px);opacity:0.45}36%,82%{transform:translateX(0);opacity:1}}@keyframes ${k3}{0%,100%{transform:translateY(4px);opacity:0.6}30%,82%{transform:translateY(0);opacity:1}}.${k1}{animation:${k1} ${dur} cubic-bezier(0.34,1.56,0.64,1) infinite}.${k2}{animation:${k2} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}.${k3}{animation:${k3} ${dur} cubic-bezier(0.22,1,0.36,1) infinite}${ownStrokes.style}`,
       `.${k1},.${k2},.${k3}{animation:none!important;transform:none!important;opacity:1!important}${ownStrokes.reduce}`,
       `<g clip-path="url(#${c3})"><path class="${k3}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g><g clip-path="url(#${c2})"><path class="${k2}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g><g clip-path="url(#${c1})"><path class="${k1}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g>${ownStrokes.paths}`,
       `3-tier horizontal strata assembly across ${item.name}'s vertical bounds (${geo.minY}..${geo.maxY}) with contour illumination`,
