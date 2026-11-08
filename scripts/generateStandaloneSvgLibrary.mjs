@@ -424,9 +424,15 @@ function readDeviconReference(item) {
   const raw = fs.readFileSync(path.join(referenceDir, `${itemId}-devicon.svg`), 'utf8');
   const vb = (raw.match(/viewBox="([^"]+)"/) || [])[1] || '0 0 128 128';
   const [minX, minY, vw, vh] = vb.split(/\s+/).map(Number);
-  const scale = Number((24 / Math.max(vw, vh)).toFixed(6));
-  const tx = Number(((24 - vw * scale) / 2 - minX * scale).toFixed(4));
-  const ty = Number(((24 - vh * scale) / 2 - minY * scale).toFixed(4));
+  // Some references declare a 128 box but carry art in another scale, so measure the paths only.
+  const dAttrs = [...raw.matchAll(/\sd="([^"]+)"/g)].map((m) => m[1]).join(' ');
+  const coordNums = (dAttrs.match(/-?\d*\.?\d+(?:[eE][+-]?\d+)?/gi) || []).map(Number);
+  const coordMax = coordNums.length ? Math.max(...coordNums.map((n) => Math.abs(n))) : 0;
+  const declaredMax = Math.max(vw, vh);
+  const artMax = coordMax > declaredMax * 1.2 ? coordMax : declaredMax;
+  const scale = Number((24 / Math.max(artMax, 1)).toFixed(6));
+  const tx = Number(((24 - vw * (artMax / declaredMax) * scale) / 2 - minX * scale).toFixed(4));
+  const ty = Number(((24 - vh * (artMax / declaredMax) * scale) / 2 - minY * scale).toFixed(4));
   const prefix = `tss_${itemId}_`;
   const rewrite = (s) =>
     s
@@ -2105,12 +2111,19 @@ function buildAnimatedSvg(item) {
     ) {
       const pieces0 = (art.body.match(/<path[^>]*\/>/g) || []).slice();
       let pieces = pieces0;
+      let pieceScale = art.scale;
+      let pieceTx = art.tx;
+      let pieceTy = art.ty;
       if (pieces0.length < 2) {
         // One compound path can still hold several shapes; split it when it is single-colour.
+        // `d` is already in the 24 box, so the Devicon rescale must be dropped here.
         const subs = analyzeGeometry(d).subpaths;
         const fillColours = new Set(art.body.match(/fill="#[0-9a-fA-F]{3,8}"/g) || []);
         if (subs.length >= 2 && subs.length <= 24 && fillColours.size <= 1) {
           pieces = subs.map((sd) => `<path fill="${primary}" fill-rule="evenodd" d="${sd}"/>`);
+          pieceScale = 1;
+          pieceTx = 0;
+          pieceTy = 0;
         }
       }
       if (pieces.length >= 2) {
@@ -2167,7 +2180,7 @@ function buildAnimatedSvg(item) {
             styles.join('') +
             rules.join(''),
           `.${kAll}{animation:none!important;opacity:1!important}` + reduce.join(''),
-          `<g class="${kAll}"><g transform="translate(${art.tx} ${art.ty}) scale(${art.scale})">${wrapped.join('')}</g></g>`,
+          `<g class="${kAll}"><g transform="translate(${pieceTx} ${pieceTy}) scale(${pieceScale})">${wrapped.join('')}</g></g>`,
           conceptText,
           `story: ${kind} (${pieces.length} pieces)`
         );
