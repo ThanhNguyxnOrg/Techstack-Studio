@@ -768,6 +768,46 @@ const R_RING_D =
 const R_BODY_D =
   'M9.889 7.736000000000001V21.252000000000002L13.982 21.250000000000004 13.979999999999999 15.959000000000003H15.079999999999998C15.304999999999998 15.959000000000003 15.400999999999998 16.025000000000002 15.628999999999998 16.209000000000003 15.900999999999998 16.429000000000002 16.343999999999998 17.191000000000003 16.343999999999998 17.191000000000003L18.508 21.254 23.134999999999998 21.252000000000002 20.270999999999997 16.426000000000002S20.185 16.233 20.005999999999997 16.043000000000003A2.22 2.22 0 0 0 19.423999999999996 15.627000000000002C19.001999999999995 15.413000000000002 18.274999999999995 15.193000000000003 18.274999999999995 15.193000000000003S21.852999999999994 14.929000000000004 21.852999999999994 11.367000000000003C21.852999999999994 7.805000000000003 18.108999999999995 7.737000000000003 18.108999999999995 7.737000000000003ZM14.015999999999998 10.666L16.494 10.668000000000001S17.643 10.606000000000002 17.643 11.795000000000002C17.643 12.96 16.494 12.965000000000002 16.494 12.965000000000002H14.016ZM15.769999999999998 16.785C15.275999999999998 16.834 14.757999999999997 16.864 14.229999999999997 16.873V18.68A16.622 16.622 0 0 0 16.599999999999998 18.207L16.128999999999998 17.316000000000003S16.020999999999997 17.133000000000003 15.880999999999998 16.922000000000004C15.841999999999999 16.868000000000006 15.800999999999998 16.824000000000005 15.769999999999998 16.785000000000004Z';
 
+const USER_PORT_CIRCLECI = {
+  defs: `<clipPath id="tss_circleci_cl"><path clip-rule="evenodd" d="M8.963 12c0-1.584 1.284-2.855 2.855-2.855 1.572 0 2.856 1.284 2.856 2.855 0 1.572-1.284 2.856-2.856 2.856-1.57 0-2.855-1.284-2.855-2.856zm2.855-12C6.215 0 1.522 3.84.19 9.025c-.01.036-.01.07-.01.12 0 .313.252.576.575.576H5.59c.23 0 .433-.13.517-.333.997-2.16 3.18-3.672 5.712-3.672 3.466 0 6.286 2.82 6.286 6.287 0 3.47-2.82 6.29-6.29 6.29-2.53 0-4.714-1.5-5.71-3.673-.097-.19-.29-.336-.517-.336H.755c-.312 0-.575.253-.575.576 0 .037.014.072.014.12C1.514 20.16 6.214 24 11.818 24c6.624 0 12-5.375 12-12 0-6.623-5.376-12-12-12z"/></clipPath>`,
+  style: `@keyframes tss_circleci_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}.tss_circleci_al{animation:tss_circleci_al 3.6s linear infinite}@keyframes tss_circleci_ce{0%,8%{transform:scale(0)}18%{transform:scale(1.2)}24%,40%{transform:scale(1)}44%{transform:scale(1.22)}50%,68%{transform:scale(1)}72%{transform:scale(1.22)}80%,100%{transform:scale(1)}}.tss_circleci_ce{transform-box:fill-box;transform-origin:center;animation:tss_circleci_ce 3.6s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_circleci_co{0%,24%{stroke-dashoffset:20;opacity:0}28%{opacity:1}72%{opacity:1}76%,100%{stroke-dashoffset:-200;opacity:0}}.tss_circleci_co{fill:none;stroke:#04AA51;stroke-width:2.6;stroke-linecap:round;stroke-dasharray:20 180;stroke-dashoffset:20;opacity:0;animation:tss_circleci_co 3.6s cubic-bezier(.45,0,.4,1) infinite}`,
+  plate: `<rect width="24" height="24" rx="3" fill="#131822"/>`,
+  reduced: `.tss_circleci_al,.tss_circleci_ce,.tss_circleci_co{animation:none!important}`,
+  body: `<g class="tss_circleci_al"><path fill="#F3F1EC" fill-rule="evenodd" d="M11.818 0C6.215 0 1.522 3.84 0.19 9.025 0.18 9.061 0.18 9.095 0.18 9.145 0.18 9.458 0.432 9.721 0.755 9.721H5.59C5.82 9.721 6.023 9.591 6.107 9.388 7.104 7.228 9.287 5.716 11.819 5.716 15.285 5.716 18.105 8.536 18.105 12.003 18.105 15.473 15.285 18.293 11.815 18.293 9.285 18.293 7.101 16.793 6.105 14.62 6.008 14.43 5.815 14.284 5.588 14.284H0.755C0.443 14.284 0.18 14.537 0.18 14.86 0.18 14.897 0.194 14.932 0.194 14.98 1.514 20.16 6.214 24 11.818 24 18.442 24 23.818 18.625 23.818 12 23.818 5.377 18.442 0 11.818 0Z"/><path class="tss_circleci_ce" fill="#F3F1EC" d="M8.963 12C8.963 10.416 10.247 9.145 11.818 9.145 13.39 9.145 14.674 10.429 14.674 12 14.674 13.572 13.39 14.856 11.818 14.856 10.248 14.856 8.963 13.572 8.963 12Z"/><g clip-path="url(#tss_circleci_cl)"><path class="tss_circleci_co" pathLength="200" d="M21.7 12A9.7 9.7 0 0 1 2.3 12A9.7 9.7 0 0 1 21.7 12Z"/></g></g>`,
+};
+
+const USER_PORT_GITLAB = {
+  defs: ``,
+  style: `@keyframes tss_gitlab_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}.tss_gitlab_al{animation:tss_gitlab_al 3.6s linear infinite}@keyframes tss_gitlab_bs{0%,4%{transform:scale(.4);opacity:0}22%{transform:scale(1.06);opacity:1}30%,100%{transform:scale(1);opacity:1}}.tss_gitlab_bs{transform-origin:64px 64px;animation:tss_gitlab_bs 3.6s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_gitlab_tl{0%,22%{transform:translateX(-26px);opacity:0}42%,100%{transform:translateX(0);opacity:1}}.tss_gitlab_tl{animation:tss_gitlab_tl 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_gitlab_tr{0%,28%{transform:translateX(26px);opacity:0}48%,100%{transform:translateX(0);opacity:1}}.tss_gitlab_tr{animation:tss_gitlab_tr 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_gitlab_tb{0%,34%{transform:translateY(26px);opacity:0}54%,100%{transform:translateY(0);opacity:1}}.tss_gitlab_tb{animation:tss_gitlab_tb 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_gitlab_pk{0%,60%{transform:scale(1)}66%{transform:scale(1.05)}74%,100%{transform:scale(1)}}.tss_gitlab_pk{transform-origin:64px 110px;animation:tss_gitlab_pk 3.6s cubic-bezier(.34,1.4,.64,1) infinite}`,
+  plate: `<rect width="24" height="24" rx="3" fill="#131822"/>`,
+  reduced: `.tss_gitlab_al,.tss_gitlab_bs,.tss_gitlab_tl,.tss_gitlab_tr,.tss_gitlab_tb,.tss_gitlab_pk{animation:none!important}`,
+  body: `<g transform="translate(-.22 -.219) scale(.19093)"><g class="tss_gitlab_al"><g class="tss_gitlab_pk"><path class="tss_gitlab_bs" fill="#E24329" d="m124.755 51.382-.177-.452L107.47 6.282a4.459 4.459 0 0 0-1.761-2.121 4.581 4.581 0 0 0-5.236.281 4.578 4.578 0 0 0-1.518 2.304L87.404 42.088H40.629L29.077 6.746a4.492 4.492 0 0 0-1.518-2.31 4.581 4.581 0 0 0-5.236-.281 4.502 4.502 0 0 0-1.761 2.121L3.422 50.904l-.17.452c-5.059 13.219-.763 28.192 10.537 36.716l.59.046.157.111 26.061 19.516 12.893 9.758 7.854 5.93a5.283 5.283 0 0 0 6.388 0l7.854-5.93 12.893-9.758 26.218-19.634.065-.052c11.273-8.526 15.562-23.472 10.524-36.677z"/><path class="tss_gitlab_tl" fill="#FC6D26" d="M26.42 61.271A57.73 57.73 0 0 0 3.422 50.904l-.17.452c-5.059 13.219-.763 28.192 10.537 36.716l.59.046.157.111 26.061 19.516L64 89.655 26.42 61.271z"/><path class="tss_gitlab_tr" fill="#FC6D26" d="m124.755 51.382-.177-.452a57.79 57.79 0 0 0-23.005 10.341L64 89.682c12.795 9.68 23.934 18.09 23.934 18.09l26.218-19.634.065-.052c11.291-8.527 15.586-23.488 10.538-36.704z"/><path class="tss_gitlab_tb" fill="#FCA326" d="m40.066 107.771 12.893 9.758 7.854 5.93a5.283 5.283 0 0 0 6.388 0l7.854-5.93 12.893-9.758s-11.152-8.436-23.947-18.09a18379.202 18379.202 0 0 0-23.935 18.09z"/></g></g></g>`,
+};
+
+const USER_PORT_HELM = {
+  defs: ``,
+  style: `@keyframes tss_helm_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}.tss_helm_al{animation:tss_helm_al 3.6s linear infinite}@keyframes tss_helm_wh{0%,4%{transform:rotate(-80deg);opacity:0}26%{transform:rotate(0deg);opacity:1}40%{transform:rotate(0deg)}48%{transform:rotate(-22deg)}57%{transform:rotate(22deg)}65%{transform:rotate(-8deg)}72%,100%{transform:rotate(0deg);opacity:1}}.tss_helm_wh{transform-origin:12.35px 12.05px;animation:tss_helm_wh 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_helm_l0{0%,14%{transform:translateY(3px);opacity:0}28%,100%{transform:translateY(0);opacity:1}}.tss_helm_l0{animation:tss_helm_l0 3.6s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_helm_f0{0%,66%{opacity:0}70%{opacity:.7}78%,100%{opacity:0}}.tss_helm_f0{opacity:0;animation:tss_helm_f0 3.6s ease-out infinite}@keyframes tss_helm_l1{0%,18%{transform:translateY(3px);opacity:0}32%,100%{transform:translateY(0);opacity:1}}.tss_helm_l1{animation:tss_helm_l1 3.6s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_helm_f1{0%,70%{opacity:0}74%{opacity:.7}82%,100%{opacity:0}}.tss_helm_f1{opacity:0;animation:tss_helm_f1 3.6s ease-out infinite}@keyframes tss_helm_l2{0%,22%{transform:translateY(3px);opacity:0}36%,100%{transform:translateY(0);opacity:1}}.tss_helm_l2{animation:tss_helm_l2 3.6s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_helm_f2{0%,74%{opacity:0}78%{opacity:.7}86%,100%{opacity:0}}.tss_helm_f2{opacity:0;animation:tss_helm_f2 3.6s ease-out infinite}@keyframes tss_helm_l3{0%,26%{transform:translateY(3px);opacity:0}40%,100%{transform:translateY(0);opacity:1}}.tss_helm_l3{animation:tss_helm_l3 3.6s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_helm_f3{0%,78%{opacity:0}82%{opacity:.7}90%,100%{opacity:0}}.tss_helm_f3{opacity:0;animation:tss_helm_f3 3.6s ease-out infinite}`,
+  plate: `<rect width="24" height="24" rx="3" fill="#131822"/>`,
+  reduced: `.tss_helm_al,.tss_helm_wh,.tss_helm_l0,.tss_helm_f0,.tss_helm_l1,.tss_helm_f1,.tss_helm_l2,.tss_helm_f2,.tss_helm_l3,.tss_helm_f3{animation:none!important}`,
+  body: `<g class="tss_helm_al"><g class="tss_helm_wh"><path fill="#9A9DCD" d="M12.337 0C11.862 0 11.476 1.016 11.476 2.269 11.476 2.796 11.545 3.28 11.659 3.665A8.514 8.514 0 0 0 7.698 4.885 5.229 5.229 0 0 0 7.103 3.792C6.497 2.926 5.763 2.356 5.313 2.362A0.381 0.381 0 0 0 5.096 2.428C4.706 2.701 4.973 3.754 5.692 4.781 5.959 5.162 6.251 5.486 6.532 5.729A8.683 8.683 0 0 0 5.004 7.445H6.738A7.179 7.179 0 0 1 12.119 5.024 7.18 7.18 0 0 1 17.501 7.444H19.234A8.687 8.687 0 0 0 17.914 5.914C18.264 5.665 18.649 5.271 18.992 4.781 19.711 3.754 19.978 2.701 19.588 2.428A0.382 0.382 0 0 0 19.371 2.363C18.921 2.356 18.187 2.926 17.581 3.793A4.897 4.897 0 0 0 16.905 5.118 8.52 8.52 0 0 0 13.006 3.698C13.126 3.308 13.199 2.811 13.199 2.269 13.199 1.016 12.813 0 12.337 0Z"/><path fill="#9A9DCD" d="M5.12 16.723A8.688 8.688 0 0 0 6.532 18.271 5.206 5.206 0 0 0 5.691 19.219C4.972 20.246 4.706 21.299 5.095 21.572 5.485 21.845 6.384 21.234 7.102 20.208A5.23 5.23 0 0 0 7.697 19.116 8.514 8.514 0 0 0 11.658 20.335 5.01 5.01 0 0 0 11.475 21.731C11.475 22.984 11.861 24 12.336 24 12.812 24 13.198 22.984 13.198 21.731 13.198 21.189 13.126 20.691 13.005 20.301A8.52 8.52 0 0 0 16.905 18.881C17.026 19.281 17.257 19.746 17.58 20.208 18.299 21.234 19.197 21.845 19.587 21.572 19.977 21.299 19.71 20.246 18.991 19.219 18.648 18.729 18.264 18.334 17.914 18.084A8.69 8.69 0 0 0 19.116 16.724H17.345A7.174 7.174 0 0 1 12.118 18.976 7.174 7.174 0 0 1 6.892 16.724Z"/></g><g class="tss_helm_l0"><path fill="#9A9DCD" d="M1.624 9.443V14.605H2.982V12.637H4.622V14.605H5.979V9.443H4.62V11.281H2.98V9.443Z"/><path class="tss_helm_f0" fill="#fff" d="M1.624 9.443V14.605H2.982V12.637H4.622V14.605H5.979V9.443H4.62V11.281H2.98V9.443Z"/></g><g class="tss_helm_l1"><path fill="#9A9DCD" d="M7.536 9.443V14.605H10.746V13.497H8.893V12.547H10.533V11.405H8.893V10.565H10.746V9.443Z"/><path class="tss_helm_f1" fill="#fff" d="M7.536 9.443V14.605H10.746V13.497H8.893V12.547H10.533V11.405H8.893V10.565H10.746V9.443Z"/></g><g class="tss_helm_l2"><path fill="#9A9DCD" d="M12.234 9.443V14.605H15.452V13.243H13.592V9.443Z"/><path class="tss_helm_f2" fill="#fff" d="M12.234 9.443V14.605H15.452V13.243H13.592V9.443Z"/></g><g class="tss_helm_l3"><path fill="#9A9DCD" d="M16.94 9.443V14.605H18.304V11.962L19.661 13.187 21.011 11.955V14.605H22.376V9.443H21.762L19.662 11.357 17.553 9.443Z"/><path class="tss_helm_f3" fill="#fff" d="M16.94 9.443V14.605H18.304V11.962L19.661 13.187 21.011 11.955V14.605H22.376V9.443H21.762L19.662 11.357 17.553 9.443Z"/></g></g>`,
+};
+
+const USER_PORT_NETLIFY = {
+  defs: ``,
+  style: `@keyframes tss_netlify_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}.tss_netlify_al{animation:tss_netlify_al 3.6s linear infinite}@keyframes tss_netlify_nn{0%,4%{transform:scale(0)}18%{transform:scale(1.15)}26%,50%{transform:scale(1)}58%{transform:scale(1.08)}66%,100%{transform:scale(1)}}.tss_netlify_nn{transform-box:fill-box;transform-origin:center;animation:tss_netlify_nn 3.6s cubic-bezier(.34,1.4,.64,1) infinite}@keyframes tss_netlify_ra{0%,6%{transform:translate(5px,0);opacity:0}22%{transform:translate(0,0);opacity:1}50%{transform:translate(0,0)}58%{transform:translate(-1.4px,0)}68%,100%{transform:translate(0,0);opacity:1}}.tss_netlify_ra{animation:tss_netlify_ra 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_netlify_rb{0%,8%{transform:translate(-5px,0);opacity:0}24%{transform:translate(0,0);opacity:1}50%{transform:translate(0,0)}58%{transform:translate(1.4px,0)}68%,100%{transform:translate(0,0);opacity:1}}.tss_netlify_rb{animation:tss_netlify_rb 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_netlify_rc{0%,10%{transform:translate(0,5px);opacity:0}26%{transform:translate(0,0);opacity:1}50%{transform:translate(0,0)}58%{transform:translate(0,-1.4px)}68%,100%{transform:translate(0,0);opacity:1}}.tss_netlify_rc{animation:tss_netlify_rc 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_netlify_rd{0%,12%{transform:translate(0,-5px);opacity:0}28%{transform:translate(0,0);opacity:1}50%{transform:translate(0,0)}58%{transform:translate(0,1.4px)}68%,100%{transform:translate(0,0);opacity:1}}.tss_netlify_rd{animation:tss_netlify_rd 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_netlify_re{0%,14%{transform:translate(2.6px,2.6px);opacity:0}30%{transform:translate(0,0);opacity:1}50%{transform:translate(0,0)}58%{transform:translate(-1px,-1px)}68%,100%{transform:translate(0,0);opacity:1}}.tss_netlify_re{animation:tss_netlify_re 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_netlify_rf{0%,16%{transform:translate(2.6px,-2.6px);opacity:0}32%{transform:translate(0,0);opacity:1}50%{transform:translate(0,0)}58%{transform:translate(-1px,1px)}68%,100%{transform:translate(0,0);opacity:1}}.tss_netlify_rf{animation:tss_netlify_rf 3.6s cubic-bezier(.34,1.3,.64,1) infinite}`,
+  plate: `<rect width="24" height="24" rx="3" fill="#131822"/>`,
+  reduced: `.tss_netlify_al,.tss_netlify_nn,.tss_netlify_ra,.tss_netlify_rb,.tss_netlify_rc,.tss_netlify_rd,.tss_netlify_re,.tss_netlify_rf{animation:none!important}`,
+  body: `<g class="tss_netlify_al"><path class="tss_netlify_ra" fill="#00C7B7" d="M6.72 12.96H0.14L0 12.82V11.18L0.14 11.04H6.72L6.86 11.18V12.82L6.72 12.96Z"/><path class="tss_netlify_rb" fill="#00C7B7" d="M23.86 12.96H17.28L17.14 12.82V11.18L17.28 11.04H23.86L24 11.18V12.82L23.86 12.96Z"/><path class="tss_netlify_rc" fill="#00C7B7" d="M11.05 6.55V1.64L11.19 1.5H12.84L12.98 1.64V6.54L12.84 6.68H11.19L11.05 6.55Z"/><path class="tss_netlify_rd" fill="#00C7B7" d="M11.05 22.36V17.46L11.19 17.32H12.84L12.98 17.45V22.36L12.84 22.5H11.19L11.05 22.36Z"/><path class="tss_netlify_re" fill="#00C7B7" d="M5.13 6.31V6.1L6.26 4.97H6.49L8.2 6.68V7.88L8.05 8.03H6.85L5.13 6.31Z"/><path class="tss_netlify_rf" fill="#00C7B7" d="M6.49 19.04H6.26L5.13 17.9V17.67L6.86 15.96H8.06L8.21 16.11V17.31L6.5 19.04Z"/><path class="tss_netlify_nn" fill="#00C7B7" d="M15.09 15.4H13.44L13.3 15.27V11.44C13.3 10.76 13.03 10.24 12.2 10.21 11.78 10.21 11.3 10.21 10.77 10.23L10.7 10.31V15.27L10.56 15.41H8.9L8.77 15.27V8.73L8.9 8.59H12.6A2.6 2.6 0 0 1 15.21 11.19V15.27L15.08 15.41Z"/></g>`,
+};
+
+const USER_PORT_SLACK = {
+  defs: ``,
+  style: `@keyframes tss_slack_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}.tss_slack_al{animation:tss_slack_al 3.6s linear infinite}@keyframes tss_slack_gb{0%,4%{transform:translate(-28px,-28px) rotate(-22deg) scale(1);opacity:0}22%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}50%{transform:translate(0,0) rotate(0deg) scale(1)}55%{transform:translate(0,0) rotate(0deg) scale(1.1)}63%,100%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}}.tss_slack_gb{transform-origin:30.6px 30.6px;animation:tss_slack_gb 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_slack_fb{0%,50%{opacity:0}55%{opacity:.4}63%,100%{opacity:0}}.tss_slack_fb{opacity:0;animation:tss_slack_fb 3.6s ease-out infinite}@keyframes tss_slack_gg{0%,10%{transform:translate(28px,-28px) rotate(22deg) scale(1);opacity:0}28%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}58%{transform:translate(0,0) rotate(0deg) scale(1)}63%{transform:translate(0,0) rotate(0deg) scale(1.1)}71%,100%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}}.tss_slack_gg{transform-origin:97.4px 30.6px;animation:tss_slack_gg 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_slack_fg{0%,58%{opacity:0}63%{opacity:.4}71%,100%{opacity:0}}.tss_slack_fg{opacity:0;animation:tss_slack_fg 3.6s ease-out infinite}@keyframes tss_slack_gy{0%,16%{transform:translate(28px,28px) rotate(-22deg) scale(1);opacity:0}34%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}66%{transform:translate(0,0) rotate(0deg) scale(1)}71%{transform:translate(0,0) rotate(0deg) scale(1.1)}79%,100%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}}.tss_slack_gy{transform-origin:97.4px 97.4px;animation:tss_slack_gy 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_slack_fy{0%,66%{opacity:0}71%{opacity:.4}79%,100%{opacity:0}}.tss_slack_fy{opacity:0;animation:tss_slack_fy 3.6s ease-out infinite}@keyframes tss_slack_gr{0%,22%{transform:translate(-28px,28px) rotate(22deg) scale(1);opacity:0}40%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}74%{transform:translate(0,0) rotate(0deg) scale(1)}79%{transform:translate(0,0) rotate(0deg) scale(1.1)}87%,100%{transform:translate(0,0) rotate(0deg) scale(1);opacity:1}}.tss_slack_gr{transform-origin:30.6px 97.4px;animation:tss_slack_gr 3.6s cubic-bezier(.34,1.3,.64,1) infinite}@keyframes tss_slack_fr{0%,74%{opacity:0}79%{opacity:.4}87%,100%{opacity:0}}.tss_slack_fr{opacity:0;animation:tss_slack_fr 3.6s ease-out infinite}`,
+  plate: `<rect width="24" height="24" rx="3" fill="#131822"/>`,
+  reduced: `.tss_slack_al,.tss_slack_gb,.tss_slack_fb,.tss_slack_gg,.tss_slack_fg,.tss_slack_gy,.tss_slack_fy,.tss_slack_gr,.tss_slack_fr{animation:none!important}`,
+  body: `<g transform="translate(-.119 -.119) scale(.18936)"><g class="tss_slack_al"><g class="tss_slack_gb"><path fill="#36C5F0" d="M47.281 27.255c-7.33 0-13.317-5.978-13.317-13.309C33.964 6.616 39.951.63 47.281.63s13.317 5.987 13.317 13.317v13.309zm0 6.709c7.33 0 13.317 5.987 13.317 13.317s-5.986 13.317-13.317 13.317H13.946C6.616 60.598.63 54.612.63 47.281c0-7.33 5.987-13.317 13.317-13.317zm0 0"/><path class="tss_slack_fb" fill="#fff" d="M47.281 27.255c-7.33 0-13.317-5.978-13.317-13.309C33.964 6.616 39.951.63 47.281.63s13.317 5.987 13.317 13.317v13.309zm0 6.709c7.33 0 13.317 5.987 13.317 13.317s-5.986 13.317-13.317 13.317H13.946C6.616 60.598.63 54.612.63 47.281c0-7.33 5.987-13.317 13.317-13.317zm0 0"/></g><g class="tss_slack_gg"><path fill="#2EB67D" d="M100.745 47.281c0-7.33 5.978-13.317 13.309-13.317 7.33 0 13.317 5.987 13.317 13.317s-5.987 13.317-13.317 13.317h-13.309zm-6.709 0c0 7.33-5.987 13.317-13.317 13.317s-13.317-5.986-13.317-13.317V13.946C67.402 6.616 73.388.63 80.719.63c7.33 0 13.317 5.987 13.317 13.317zm0 0"/><path class="tss_slack_fg" fill="#fff" d="M100.745 47.281c0-7.33 5.978-13.317 13.309-13.317 7.33 0 13.317 5.987 13.317 13.317s-5.987 13.317-13.317 13.317h-13.309zm-6.709 0c0 7.33-5.987 13.317-13.317 13.317s-13.317-5.986-13.317-13.317V13.946C67.402 6.616 73.388.63 80.719.63c7.33 0 13.317 5.987 13.317 13.317zm0 0"/></g><g class="tss_slack_gy"><path fill="#ECB22E" d="M80.719 100.745c7.33 0 13.317 5.978 13.317 13.309 0 7.33-5.987 13.317-13.317 13.317s-13.317-5.987-13.317-13.317v-13.309zm0-6.709c-7.33 0-13.317-5.987-13.317-13.317s5.986-13.317 13.317-13.317h33.335c7.33 0 13.317 5.986 13.317 13.317 0 7.33-5.987 13.317-13.317 13.317zm0 0"/><path class="tss_slack_fy" fill="#fff" d="M80.719 100.745c7.33 0 13.317 5.978 13.317 13.309 0 7.33-5.987 13.317-13.317 13.317s-13.317-5.987-13.317-13.317v-13.309zm0-6.709c-7.33 0-13.317-5.987-13.317-13.317s5.986-13.317 13.317-13.317h33.335c7.33 0 13.317 5.986 13.317 13.317 0 7.33-5.987 13.317-13.317 13.317zm0 0"/></g><g class="tss_slack_gr"><path fill="#E01E5A" d="M27.255 80.719c0 7.33-5.978 13.317-13.309 13.317C6.616 94.036.63 88.049.63 80.719s5.987-13.317 13.317-13.317h13.309zm6.709 0c0-7.33 5.987-13.317 13.317-13.317s13.317 5.986 13.317 13.317v33.335c0 7.33-5.986 13.317-13.317 13.317-7.33 0-13.317-5.987-13.317-13.317zm0 0"/><path class="tss_slack_fr" fill="#fff" d="M27.255 80.719c0 7.33-5.978 13.317-13.309 13.317C6.616 94.036.63 88.049.63 80.719s5.987-13.317 13.317-13.317h13.309zm6.709 0c0-7.33 5.987-13.317 13.317-13.317s13.317 5.986 13.317 13.317v33.335c0 7.33-5.986 13.317-13.317 13.317-7.33 0-13.317-5.987-13.317-13.317zm0 0"/></g></g></g>`,
+};
+
 /**
  * Generates the preserved static source SVG for `public/icons/source/{id}.svg`
  */
@@ -800,6 +840,26 @@ function buildSourceSvg(item) {
   const label = escapeXml(item.name);
   const d = item.svgPath;
   const primary = item.darkSafeColor;
+
+  if (item.id === 'circleci') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${USER_PORT_CIRCLECI.defs}${USER_PORT_CIRCLECI.plate}${USER_PORT_CIRCLECI.body}</svg>`;
+  }
+
+  if (item.id === 'gitlab') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${USER_PORT_GITLAB.defs}${USER_PORT_GITLAB.plate}${USER_PORT_GITLAB.body}</svg>`;
+  }
+
+  if (item.id === 'helm') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${USER_PORT_HELM.defs}${USER_PORT_HELM.plate}${USER_PORT_HELM.body}</svg>`;
+  }
+
+  if (item.id === 'netlify') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${USER_PORT_NETLIFY.defs}${USER_PORT_NETLIFY.plate}${USER_PORT_NETLIFY.body}</svg>`;
+  }
+
+  if (item.id === 'slack') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${USER_PORT_SLACK.defs}${USER_PORT_SLACK.plate}${USER_PORT_SLACK.body}</svg>`;
+  }
 
   if (item.id === 'googlecloud') {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}"><g transform="translate(-21.18, -18.98) scale(0.2077)"><path fill="#EA4335" d="M173.874,130.552 L177.188,130.614 L186.193,121.608 L186.632,117.794 C179.477,111.427 170.061,107.551 159.75,107.551 C141.081,107.551 125.336,120.247 120.668,137.459 C121.652,136.779 123.75,137.285 123.75,137.285 L141.75,134.326 C141.75,134.326 142.684,132.796 143.139,132.892 C147.257,128.386 153.18,125.551 159.75,125.551 C165.094,125.551 170.01,127.43 173.874,130.552 Z"/><path fill="#4285F4" d="M198.844,137.482 C196.757,129.764 192.437,122.958 186.626,117.789 L173.869,130.546 C178.976,134.675 182.25,140.986 182.25,148.051 L182.25,150.301 C188.454,150.301 193.5,155.347 193.5,161.551 C193.5,167.756 188.454,172.801 182.25,172.801 L159.75,172.801 L157.5,175.063 L157.5,188.563 L159.75,190.801 L182.25,190.801 C198.377,190.801 211.5,177.678 211.5,161.551 C211.5,151.578 206.483,142.764 198.844,137.482 Z"/><path fill="#34A853" d="M137.25,190.801 L159.733,190.801 L159.733,172.801 L137.25,172.801 C135.596,172.801 134.033,172.436 132.615,171.789 L129.375,172.784 L120.364,181.796 L119.576,184.839 C124.487,188.574 130.613,190.801 137.25,190.801 Z"/><path fill="#FBBC05" d="M137.25,132.301 C121.123,132.301 108,145.424 108,161.551 C108,171.046 112.551,179.501 119.588,184.844 L132.632,171.8 C128.728,170.034 126,166.108 126,161.551 C126,155.347 131.046,150.301 137.25,150.301 C141.806,150.301 145.733,153.029 147.499,156.933 L160.543,143.889 C155.199,136.852 146.745,132.301 137.25,132.301 Z"/></g></svg>`;
@@ -1472,6 +1532,66 @@ function buildAnimatedSvg(item) {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}${fullStyle}${body}</svg>`;
     return { svg, concept, technique };
   };
+
+  if (item.id === 'circleci') {
+    return wrapSvg(
+      USER_PORT_CIRCLECI.defs,
+      USER_PORT_CIRCLECI.style,
+      USER_PORT_CIRCLECI.reduced,
+      USER_PORT_CIRCLECI.plate + USER_PORT_CIRCLECI.body,
+      'The CircleCI ring and dot settle into their pipeline loop',
+      'user-supplied 3.6s loop',
+      '0 0 24 24'
+    );
+  }
+
+  if (item.id === 'gitlab') {
+    return wrapSvg(
+      USER_PORT_GITLAB.defs,
+      USER_PORT_GITLAB.style,
+      USER_PORT_GITLAB.reduced,
+      USER_PORT_GITLAB.plate + USER_PORT_GITLAB.body,
+      'The GitLab tanuki bounces and its pieces lock',
+      'user-supplied 3.6s loop',
+      '0 0 24 24'
+    );
+  }
+
+  if (item.id === 'helm') {
+    return wrapSvg(
+      USER_PORT_HELM.defs,
+      USER_PORT_HELM.style,
+      USER_PORT_HELM.reduced,
+      USER_PORT_HELM.plate + USER_PORT_HELM.body,
+      'The Helm wheel and wordmark settle into place',
+      'user-supplied 3.6s loop',
+      '0 0 24 24'
+    );
+  }
+
+  if (item.id === 'netlify') {
+    return wrapSvg(
+      USER_PORT_NETLIFY.defs,
+      USER_PORT_NETLIFY.style,
+      USER_PORT_NETLIFY.reduced,
+      USER_PORT_NETLIFY.plate + USER_PORT_NETLIFY.body,
+      'The Netlify diamond pieces assemble into place',
+      'user-supplied 3.6s loop',
+      '0 0 24 24'
+    );
+  }
+
+  if (item.id === 'slack') {
+    return wrapSvg(
+      USER_PORT_SLACK.defs,
+      USER_PORT_SLACK.style,
+      USER_PORT_SLACK.reduced,
+      USER_PORT_SLACK.plate + USER_PORT_SLACK.body,
+      'The Slack hash assembles colour by colour',
+      'user-supplied 3.6s loop',
+      '0 0 24 24'
+    );
+  }
 
   // PLAYWRIGHT — Bespoke theatre choreography (8s, approved demo v2).
   // Red mask enters from the left, green mask from the right, they glance
