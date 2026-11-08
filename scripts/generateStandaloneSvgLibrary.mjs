@@ -3710,7 +3710,7 @@ function buildAnimatedSvg(item) {
       kB = `tss_${uid}_kb`;
     return wrapSvg(
       `<clipPath id="${cT}"><rect x="0" y="0" width="24" height="12"/></clipPath><clipPath id="${cB}"><rect x="0" y="12" width="24" height="12"/></clipPath>`,
-      `@keyframes ${kT}{0%,100%{transform:translateX(-1.5px)}50%{transform:translateX(1.5px)}}@keyframes ${kB}{0%,100%{transform:translateX(1.5px)}50%{transform:translateX(-1.5px)}}.${kT}{animation:${kT} ${dur} ease-in-out infinite}.${kB}{animation:${kB} ${dur} ease-in-out infinite}`,
+      `@keyframes ${kT}{0%,100%{transform:translate(-4.5px,1.5px)}30%{transform:translate(4.5px,-1.5px)}60%{transform:translate(1.5px,.5px)}}@keyframes ${kB}{0%,100%{transform:translate(4.5px,-1.5px)}30%{transform:translate(-4.5px,1.5px)}60%{transform:translate(-1.5px,-.5px)}}.${kT}{animation:${kT} ${dur} ease-in-out infinite}.${kB}{animation:${kB} ${dur} ease-in-out infinite}`,
       `.${kT},.${kB}{animation:none!important;transform:none!important}`,
       `<g clip-path="url(#${cT})"><path class="${kT}" fill="#38BDF8" d="${d}"/></g><g clip-path="url(#${cB})"><path class="${kB}" fill="#0EA5E9" d="${d}"/></g>`,
       'Upper and lower #38BDF8/#0EA5E9 Tailwind wave crests gliding in counter-phase',
@@ -7502,21 +7502,21 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // HONO — the flame flickers into place and settles.
+  // HONO — the flame rises off the ground and flicks twice.
   if (item.id === 'hono') {
     const kAll = `tss_${uid}_al`,
       kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:scaleY(.96) translateY(2px)}38%{opacity:1;transform:scaleY(1.03) translateY(0)}48%,58%{transform:scaleY(1) translateY(0)}79%{transform:scaleY(1.02) translateY(-0.6px)}100%{transform:scaleY(1) translateY(0)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%,90%{opacity:1}97%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:translateY(7px) scaleY(.9)}30%{transform:translateY(0) scaleY(1.06) rotate(-3deg)}42%{transform:translateY(0) scaleY(.97) rotate(2deg)}54%{transform:translateY(0) scaleY(1.02) rotate(-1deg)}68%,100%{transform:translateY(0) scaleY(1) rotate(0)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
       `.${kAll},.${kMv}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}`,
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
       `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
-      'The Hono flame flickers into place and settles',
-      'Flame flicker + slow hold'
+      'The Hono flame rises off the ground and flicks twice',
+      'Rise + two-beat flick'
     );
   }
 
@@ -7784,21 +7784,24 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // LIT — the flame flickers into place and settles.
+  // LIT — the element catches: one flash, one pop, then it glows steady.
   if (item.id === 'lit') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`;
+      kMv = `tss_${uid}_mv`,
+      kGlow = `tss_${uid}_gl`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:scaleY(.96) translateY(2px)}38%{opacity:1;transform:scaleY(1.03) translateY(0)}48%,58%{transform:scaleY(1) translateY(0)}79%{transform:scaleY(1.02) translateY(-0.6px)}100%{transform:scaleY(1) translateY(0)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}5%,94%{opacity:1}100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:scale(.88)}18%{transform:scale(1.06)}30%{transform:scale(.99)}40%,100%{transform:scale(1)}}` +
+        `@keyframes ${kGlow}{0%,6%{opacity:.35}18%{opacity:1}34%{opacity:.7}60%,100%{opacity:1}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
-      `.${kAll},.${kMv}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}`,
-      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
-      'The Lit flame flickers into place and settles',
-      'Flame flicker + slow hold'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kGlow}{animation:${kGlow} ${dur} ease-out infinite}`,
+      `.${kAll},.${kMv},.${kGlow}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}.${kGlow}{opacity:1!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path class="${kGlow}" fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Lit element catches with one flash and holds its glow',
+      'Ignition flash + pop'
     );
   }
 
@@ -8325,24 +8328,21 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // OVH — the cloud drifts into place and settles.
+  // OVH — the cloud gathers out of the air and settles.
   if (item.id === 'ovh') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:translate(0,8px)}38%{opacity:1;transform:translate(0,0)}50%{transform:translate(1px,-1px)}62%{transform:translate(0,0)}74%{transform:translate(-1px,-1px)}86%,100%{transform:translate(0,0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}5%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:scale(1.14) translateY(5px)}34%{transform:scale(.98) translateY(0)}46%{transform:scale(1.02)}58%{transform:scale(.995) translateY(-1.5px)}70%,100%{transform:scale(1) translateY(0)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
-      'The OVHcloud drifts into place and settles',
-      'Cloud drift + bob + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The OVHcloud gathers out of the air and settles',
+      'Cloud gather with a soft bounce'
     );
   }
 
