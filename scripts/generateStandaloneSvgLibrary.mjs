@@ -4776,6 +4776,163 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // AMAZONDYNAMODB — table partitions stack: each partition rises into the
+  // table, then the whole table takes one slow breath.
+  if (item.id === 'amazondynamodb') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start, end) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}${end}%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 36).toFixed(1));
+        const end = Number(Math.min(start + 16, 52).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(`<g class="${cls}"><path fill="${primary}" d="${subD}"/></g>`);
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0, 30)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'DynamoDB partitions stack into place and the table breathes',
+      'Per-partition rise + slow table pulse'
+    );
+  }
+
+  // ANTHROPIC — facet spark: each facet blooms outward, settles, and the
+  // whole mark counter-sways gently in the hold.
+  if (item.id === 'anthropic') {
+    const kAll = `tss_${uid}_al`,
+      kSway = `tss_${uid}_sw`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const sparkKeys = (start, peak, settle) =>
+      `0%,${start}%{opacity:0;transform:scale(.85)}${peak}%{opacity:1;transform:scale(1.06)}${settle}%,100%{opacity:1;transform:scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 36).toFixed(1));
+        const peak = Number(Math.min(start + 14, 48).toFixed(1));
+        const settle = Number(Math.min(peak + 8, 56).toFixed(1));
+        styles.push(`@keyframes ${cls}{${sparkKeys(start, peak, settle)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(`<g class="${cls}"><path fill="${primary}" d="${subD}"/></g>`);
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${sparkKeys(0, 14, 22)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kSway}{0%,55%{transform:rotate(0deg)}70%{transform:rotate(-2deg)}85%{transform:rotate(2deg)}100%{transform:rotate(0deg)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kSway}{transform-box:fill-box;transform-origin:50% 50%;animation:${kSway} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kSway}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kSway}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kSway}">${bodyParts.join('')}</g></g>`,
+      'The Anthropic facets spark outward and settle',
+      'Per-facet bloom + slow counter-sway'
+    );
+  }
+
+  // APACHEARROW — arrow flight: the mark flies in, overshoots, settles, then
+  // one clipped sheen stripe crosses it.
+  if (item.id === 'apachearrow') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kSheen = `tss_${uid}_sh`,
+      gSheen = `tss_${uid}_gs`,
+      cMark = `tss_${uid}_cm`;
+    return wrapSvg(
+      `<clipPath id="${cMark}"><path d="${d}" clip-rule="evenodd"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%,30%{transform:translateX(-14px) rotate(-8deg) scale(.9);opacity:0}34%{transform:translateX(-14px) rotate(-8deg) scale(.9);opacity:1}44%{transform:translateX(1.5px) rotate(1deg) scale(1.03);opacity:1}52%,100%{transform:translateX(0) rotate(0deg) scale(1);opacity:1}}` +
+        `@keyframes ${kSheen}{0%,56%{transform:translateX(-10px);opacity:0}62%{opacity:.75}74%,100%{transform:translateX(28px);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kSheen}{opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kSheen}{opacity:0!important;transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<g clip-path="url(#${cMark})"><rect class="${kSheen}" x="-10" y="-2" width="10" height="28" fill="url(#${gSheen})"/></g></g>`,
+      'The Apache Arrow flies in and catches one light pass',
+      'Flight-in + clipped sheen'
+    );
+  }
+
+  // APACHECASSANDRA — ring orbit + blink: the ring rotates into place, sways
+  // gently, and the mark pulses once like an eye blink.
+  if (item.id === 'apachecassandra') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-28deg)}30%{transform:rotate(3deg)}44%{transform:rotate(0deg)}60%{transform:rotate(-2deg)}78%{transform:rotate(2deg)}100%{transform:rotate(0deg)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.015)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv},.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Cassandra ring turns into place and blinks once',
+      'Ring rotation + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
