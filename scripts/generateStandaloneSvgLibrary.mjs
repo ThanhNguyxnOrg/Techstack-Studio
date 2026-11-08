@@ -48,6 +48,39 @@ const DEVICON_ENTRIES = {
   biome: 'biome',
 };
 
+const DEVICON_MOTION = {
+  cypress: 'rotate',
+  ubuntu: { mode: 'rotate', skipFirst: true },
+  debian: 'rotate',
+  netlify: 'rise',
+  postman: 'rise',
+  homebrew: 'rise',
+  fastify: 'zip',
+  uv: 'zip',
+  prisma: 'tilt',
+  biome: 'tilt',
+  remix: 'sway',
+  nestjs: 'sway',
+  mariadb: 'sway',
+  argocd: 'sway',
+  jenkins: 'sway',
+  yarn: 'sway',
+  gradle: 'sway',
+  apachespark: 'pulse',
+  influxdb: 'pulse',
+  ros: 'pulse',
+  dart: 'stagger',
+  ruby: 'stagger',
+  scala: 'stagger',
+  solid: 'stagger',
+  laravel: 'stagger',
+  symfony: 'stagger',
+  pnpm: 'stagger',
+  cmake: 'stagger',
+  neovim: 'stagger',
+  poetry: 'stagger',
+};
+
 const DEVICON_DARK_SAFE = {
   remix: { fills: ['#121212'] },
   symfony: { fills: ['#1A171B'] },
@@ -3907,6 +3940,133 @@ function buildAnimatedSvg(item) {
       `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><g class="${kMove}">${body}</g><g clip-path="url(#${cLogo})"><g transform="skewX(-18)"><rect class="${kSh}" x="-20" y="-20" width="10" height="168" fill="url(#${gSh})"/></g></g></g></g>`,
       'The DigitalOcean droplet falls into place and catches one light pass',
       'Drop with overshoot + clipped sheen'
+    );
+  }
+
+  // DEVICON PER-MARK MOTION — each listed entry gets a mode fitted to its mark.
+  if (DEVICON_ENTRIES[item.id] && DEVICON_MOTION[item.id]) {
+    const spec = DEVICON_MOTION[item.id];
+    const mode = typeof spec === 'string' ? spec : spec.mode;
+    const skipFirst = typeof spec === 'object' && spec.skipFirst;
+    const kAll = `tss_${uid}_al`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    const baseStyle = `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}`;
+    const baseReduced = `.${kAll}{opacity:1!important}`;
+    const modeStory = {
+      rotate: 'turns into place and settles with a gentle sway',
+      rise: 'rises into place and holds with a slow breath',
+      zip: 'zips in and snaps, then breathes',
+      tilt: 'tilts into place and rocks gently',
+      sway: 'settles and sways with its own rhythm',
+      pulse: 'settles and breathes with a slow pulse',
+      stagger: 'assembles part by part and holds',
+    };
+    const concept = `The ${item.name} mark ${modeStory[mode]}`;
+    const technique = `Per-mark ${mode} motion with a slow entrance and a continuous hold cycle`;
+
+    const wholeMark = (kMove, keyframes) =>
+      wrapSvg(
+        defs,
+        `${baseStyle}@keyframes ${kMove}{${keyframes}}` +
+          `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+          `.${kMove}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMove} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}`,
+        `${baseReduced}.${kAll},.${kMove}{animation:none!important}.${kMove}{transform:none!important}`,
+        `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><g class="${kMove}">${body}</g></g></g>`,
+        concept,
+        technique
+      );
+
+    if (mode === 'rotate') {
+      if (skipFirst) {
+        const bare = body.trim();
+        const paths = [...bare.matchAll(/<path[^>]*\/>/g)].map((m) => m[0]);
+        if (paths.length >= 2 && paths.join('').length === bare.length) {
+          const kMove = `tss_${uid}_mv`;
+          const inner = paths[1].replace('<path ', `<path class="${kMove}" `);
+          return wrapSvg(
+            defs,
+            `${baseStyle}@keyframes ${kMove}{0%{transform:rotate(-38deg)}38%{transform:rotate(3deg)}48%{transform:rotate(0)}66%{transform:rotate(-3deg)}84%{transform:rotate(2deg)}100%{transform:rotate(0)}}` +
+              `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+              `.${kMove}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMove} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+            `${baseReduced}.${kAll},.${kMove}{animation:none!important}.${kMove}{transform:none!important}`,
+            `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})">${paths[0]}${inner}${paths.slice(2).join('')}</g></g>`,
+            concept,
+            technique
+          );
+        }
+      }
+      return wholeMark(
+        `tss_${uid}_mv`,
+        '0%{transform:rotate(-38deg)}38%{transform:rotate(3deg)}48%{transform:rotate(0)}66%{transform:rotate(-3deg)}84%{transform:rotate(2deg)}100%{transform:rotate(0)}'
+      );
+    }
+    if (mode === 'rise') {
+      return wholeMark(
+        `tss_${uid}_mv`,
+        '0%{transform:translateY(10px);opacity:0}40%{transform:translateY(-1px);opacity:1}48%{transform:translateY(0);opacity:1}68%{transform:translateY(-0.8px);opacity:1}86%{transform:translateY(-0.2px);opacity:1}100%{transform:translateY(0);opacity:1}'
+      );
+    }
+    if (mode === 'zip') {
+      return wholeMark(
+        `tss_${uid}_mv`,
+        '0%{transform:translate(-14px,-10px) scale(.9);opacity:0}30%{transform:translate(0,0) scale(1.04);opacity:1}40%{transform:scale(1);opacity:1}60%{transform:scale(1.015);opacity:1}82%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}'
+      );
+    }
+    if (mode === 'tilt') {
+      return wholeMark(
+        `tss_${uid}_mv`,
+        '0%{transform:rotate(-10deg) scale(.94);opacity:0}40%{transform:rotate(2deg) scale(1.02);opacity:1}48%{transform:rotate(0) scale(1)}64%{transform:rotate(-2deg) scale(1)}82%{transform:rotate(1.5deg) scale(1)}100%{transform:rotate(0) scale(1)}'
+      );
+    }
+    if (mode === 'sway') {
+      return wholeMark(
+        `tss_${uid}_mv`,
+        '0%{transform:rotate(-5deg) translateY(2px);opacity:0}40%{transform:rotate(2deg) translateY(0);opacity:1}48%{transform:rotate(0) translateY(0)}64%{transform:rotate(-3deg)}82%{transform:rotate(2deg)}100%{transform:rotate(0)}'
+      );
+    }
+    if (mode === 'pulse') {
+      return wholeMark(
+        `tss_${uid}_mv`,
+        '0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.03);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}'
+      );
+    }
+    // stagger: only when the body is a bare sequence of paths
+    const bare = body.trim();
+    const paths = [...bare.matchAll(/<path[^>]*\/>/g)].map((m) => m[0]);
+    if (paths.length >= 2 && paths.join('').length === bare.length) {
+      const styles = [];
+      const rules = [];
+      const reduces = [];
+      const markup = [];
+      const n = paths.length;
+      paths.forEach((p, i) => {
+        const cls = `tss_${uid}_s${i}`;
+        const start = Math.round((i / n) * 16);
+        const end = Math.min(44, start + 26);
+        styles.push(
+          `@keyframes ${cls}{0%,${start}%{opacity:0;transform:translateY(8px)}${end}%,100%{opacity:1;transform:translateY(0)}}`
+        );
+        rules.push(`.${cls}{animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`);
+        reduces.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        markup.push(p.replace('<path ', `<path class="${cls}" `));
+      });
+      return wrapSvg(
+        defs,
+        baseStyle +
+          styles.join('') +
+          `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+          rules.join(''),
+        baseReduced + `.${kAll}{animation:none!important}` + reduces.join(''),
+        `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})">${markup.join('')}</g></g>`,
+        concept,
+        technique
+      );
+    }
+    return wholeMark(
+      `tss_${uid}_mv`,
+      '0%{transform:translateY(8px);opacity:0}40%{transform:translateY(0);opacity:1}48%,100%{transform:translateY(0);opacity:1}'
     );
   }
 
