@@ -1645,6 +1645,61 @@ function buildSourceSvg(item) {
  * Every file is 100% self-contained, has unique scoped IDs/classes (`tss_${uid}_*`),
  * includes `@media (prefers-reduced-motion: reduce)`, and never adds unrelated foreign shapes.
  */
+const STORY_MOTIONS = {
+  dart: ['glide', { dir: 1, concept: 'The Dart dart glides in and settles' }],
+  scala: ['spin', { dir: -1, concept: 'The Scala spiral turns into its angle' }],
+  zig: ['zigzag', { concept: 'The Zig mark zig-zags into place' }],
+  haskell: ['press', { concept: 'The Haskell lambda presses into place' }],
+  clojure: ['unfold', { concept: 'The Clojure form unfolds sideways' }],
+  ocaml: ['hop', { concept: 'The OCaml camel hops twice' }],
+  erlang: ['beat', { concept: 'The Erlang atom beats twice' }],
+  fsharp: ['quarter', { concept: 'The F# mark turns a quarter and locks' }],
+  fortran: ['rise', { concept: 'The Fortran mark rises off the baseline' }],
+  solidity: ['drop', { concept: 'The Solidity block drops and settles' }],
+  perl: ['flip', { concept: 'The Perl mark flips open' }],
+  crystal: ['pop', { concept: 'The Crystal pops into shape' }],
+  nim: ['stretch', { concept: 'The Nim crown stretches into place' }],
+  gleam: ['sway', { concept: 'The Gleam mark sways into line' }],
+  v: ['rise', { concept: 'The V mark rises off the baseline' }],
+  webassembly: ['flip', { concept: 'The WebAssembly mark flips open' }],
+  elm: ['quarter', { concept: 'The Elm branch turns a quarter and locks' }],
+  purescript: ['press', { concept: 'The PureScript mark presses into place' }],
+  coffeescript: ['beat', { concept: 'The CoffeeScript mark beats twice' }],
+  latex: ['rise', { concept: 'The LaTeX mark rises off the baseline' }],
+  markdown: ['glide', { dir: -1, concept: 'The Markdown mark glides in from the right' }],
+  yaml: ['unfold', { concept: 'The YAML form unfolds sideways' }],
+  toml: ['sway', { concept: 'The TOML mark sways into line' }],
+  json: ['pop', { concept: 'The JSON mark pops into shape' }],
+};
+
+const STORY_FRAMES = {
+  glide: (p) =>
+    `0%{opacity:0;transform:translateX(${-8 * (p.dir || 1)}px) rotate(${-6 * (p.dir || 1)}deg)}38%{opacity:1;transform:translateX(${3 * (p.dir || 1)}px) rotate(${2 * (p.dir || 1)}deg)}52%,100%{transform:translateX(0) rotate(0)}`,
+  spin: (p) =>
+    `0%{transform:rotate(${-30 * (p.dir || 1)}deg) scale(.9)}42%{transform:rotate(${4 * (p.dir || 1)}deg) scale(1.04)}56%,100%{transform:rotate(0) scale(1)}`,
+  zigzag: () =>
+    `0%{opacity:0;transform:translateX(-7px)}18%{opacity:1;transform:translateX(5px)}30%{transform:translateX(-3px)}42%{transform:translateX(2px)}54%,100%{transform:translateX(0)}`,
+  press: () =>
+    `0%{transform:scale(1.16)}28%{transform:scale(.95)}40%{transform:scale(1.02)}52%,100%{transform:scale(1)}`,
+  unfold: () => `0%{transform:scaleX(.62)}38%{transform:scaleX(1.05)}50%,100%{transform:scaleX(1)}`,
+  hop: () =>
+    `0%{transform:translateY(0)}14%{transform:translateY(-4px)}24%{transform:translateY(0)}34%{transform:translateY(-3px)}44%,100%{transform:translateY(0)}`,
+  beat: () =>
+    `0%{transform:scale(.94)}12%{transform:scale(1)}22%{transform:scale(.96)}30%{transform:scale(1.07)}38%{transform:scale(.99)}46%{transform:scale(1.03)}54%,100%{transform:scale(1)}`,
+  quarter: () =>
+    `0%{transform:rotate(-75deg) scale(.94)}40%{transform:rotate(4deg) scale(1.03)}54%,100%{transform:rotate(0) scale(1)}`,
+  rise: () =>
+    `0%{transform:translateY(8px) scaleY(.94)}36%{transform:translateY(0) scaleY(1.04)}48%,100%{transform:translateY(0) scaleY(1)}`,
+  drop: () =>
+    `0%{transform:translateY(-9px)}36%{transform:translateY(1.5px)}48%{transform:translateY(-1px)}60%,100%{transform:translateY(0)}`,
+  flip: () => `0%{transform:scaleX(.12)}38%{transform:scaleX(1.06)}52%,100%{transform:scaleX(1)}`,
+  pop: () =>
+    `0%{transform:scale(.78)}30%{transform:scale(1.08)}44%{transform:scale(1.02)}56%,100%{transform:scale(1)}`,
+  stretch: () => `0%{transform:scaleY(.7)}34%{transform:scaleY(1.06)}48%,100%{transform:scaleY(1)}`,
+  sway: () =>
+    `0%{transform:translateX(-4px)}30%{transform:translateX(4px)}60%{transform:translateX(-2px)}80%,100%{transform:translateX(0)}`,
+};
+
 function buildAnimatedSvg(item) {
   const uid = item.id.replace(/[^a-zA-Z0-9]/g, '');
   const label = escapeXml(item.name);
@@ -1703,6 +1758,36 @@ function buildAnimatedSvg(item) {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}${fullStyle}${body}</svg>`;
     return { svg, concept, technique };
   };
+
+  // DECLARED STORY — one mechanism per logo, read from STORY_MOTIONS.
+  if (STORY_MOTIONS[item.id]) {
+    const [kind, params] = STORY_MOTIONS[item.id];
+    const frames = STORY_FRAMES[kind](params);
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`;
+    const origin = kind === 'rise' || kind === 'stretch' ? '50% 100%' : '50% 50%';
+    const art = DEVICON_ENTRIES[item.id]
+      ? readDeviconReference(item)
+      : {
+          defs: '',
+          body: `<path fill="${primary}" fill-rule="evenodd" d="${d}"/>`,
+          scale: 1,
+          tx: 0,
+          ty: 0,
+        };
+    return wrapSvg(
+      art.defs,
+      `@keyframes ${kAll}{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `@keyframes ${kMv}{${frames}}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:${origin};animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g transform="translate(${art.tx} ${art.ty}) scale(${art.scale})">${art.body}</g></g></g>`,
+      params.concept || `The ${item.name} mark moves into place`,
+      `story: ${kind}`
+    );
+  }
 
   // PRETTIER — the code lines slide in from alternating sides and line up.
   if (item.id === 'prettier') {
