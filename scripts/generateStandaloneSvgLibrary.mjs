@@ -5056,6 +5056,102 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // APACHEGROOVY — star spin: the star spins in from a tilt, settles, sways
+  // once through the hold, and pulses.
+  if (item.id === 'apachegroovy') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-32deg) scale(.94);opacity:0}38%{transform:rotate(3deg) scale(1.02);opacity:1}48%{transform:rotate(0deg) scale(1);opacity:1}62%{transform:rotate(-2deg) scale(1);opacity:1}80%{transform:rotate(2deg) scale(1);opacity:1}100%{transform:rotate(0deg) scale(1);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Groovy star spins into place and settles',
+      'Star spin + slow pulse'
+    );
+  }
+
+  // APACHEHADOOP — elephant waddle: the elephant rocks in, then waddles and
+  // bobs through the hold before one slow pulse.
+  if (item.id === 'apachehadoop') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-4deg) translateY(2px);opacity:0}40%{transform:rotate(2deg) translateY(0);opacity:1}48%{transform:rotate(0deg) translateY(0);opacity:1}62%{transform:rotate(-3deg) translateY(-.8px);opacity:1}80%{transform:rotate(3deg) translateY(-.8px);opacity:1}100%{transform:rotate(0deg) translateY(0);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Hadoop elephant waddles into place and settles',
+      'Waddle rotation + bob + slow pulse'
+    );
+  }
+
+  // APACHEHIVE — bee hover: the bee rises in, then hovers with a bob and a
+  // wing flutter before one slow pulse.
+  if (item.id === 'apachehive') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:translateY(8px);opacity:0}38%{transform:translateY(0);opacity:1}52%{transform:translateY(-1px) scaleX(1.03);opacity:1}66%{transform:translateY(0) scaleX(1);opacity:1}80%{transform:translateY(-1px) scaleX(1.03);opacity:1}100%{transform:translateY(0) scaleX(1);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Hive bee hovers into place',
+      'Hover bob + wing flutter + slow pulse'
+    );
+  }
+
+  // APACHEMAVEN — feather write: the contour draws itself, the fill locks in,
+  // and one clipped sheen passes over the feather.
+  if (item.id === 'apachemaven') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kDraw = `tss_${uid}_dr`,
+      kSheen = `tss_${uid}_sh`,
+      gSheen = `tss_${uid}_gs`,
+      cMark = `tss_${uid}_cm`;
+    return wrapSvg(
+      `<clipPath id="${cMark}"><path d="${d}" clip-rule="evenodd"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kDraw}{0%{stroke-dashoffset:100;stroke-opacity:1}38%{stroke-dashoffset:0;stroke-opacity:1}48%{stroke-dashoffset:0;stroke-opacity:1}58%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
+        `@keyframes ${kSheen}{0%,56%{transform:translateX(-10px);opacity:0}62%{opacity:.75}74%,100%{transform:translateX(28px);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kDraw}{stroke-dasharray:100;animation:${kDraw} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kSheen}{opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kDraw},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kDraw}{stroke-opacity:0!important;stroke-dashoffset:0!important}.${kSheen}{opacity:0!important;transform:none!important}`,
+      `<g class="${kAll}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kDraw}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" d="${d}"/>` +
+        `<g clip-path="url(#${cMark})"><rect class="${kSheen}" x="-10" y="-2" width="10" height="28" fill="url(#${gSheen})"/></g></g>`,
+      'The Maven feather draws its own outline and takes one light pass',
+      'Contour draw + fill lock + clipped sheen'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
