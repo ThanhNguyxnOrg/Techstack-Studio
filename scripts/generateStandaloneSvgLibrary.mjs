@@ -1765,6 +1765,9 @@ const STORY_OVERRIDES = {
   chakraui: 'pop',
   clion: 'press',
   clojure: 'unfold',
+  gitea: 'assemble',
+  gitkraken: 'fan',
+  gradle: 'hop',
 };
 
 const STORY_MOTIONS = {
