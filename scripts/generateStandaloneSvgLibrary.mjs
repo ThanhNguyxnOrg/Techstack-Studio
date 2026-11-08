@@ -3779,6 +3779,137 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // HELM — steering wheel: the wheel turns into place like a ship being
+  // steered, overshoots slightly, then holds static.
+  if (item.id === 'helm') {
+    const kAll = `tss_${uid}_al`,
+      kMove = `tss_${uid}_mv`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMove}{0%{transform:rotate(-42deg)}38%{transform:rotate(3deg)}48%{transform:rotate(0)}66%{transform:rotate(-3deg)}84%{transform:rotate(2deg)}100%{transform:rotate(0)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMove}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMove} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kMove}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMove}{transform:none!important}`,
+      `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><g class="${kMove}">${body}</g></g></g>`,
+      'The Helm wheel turns into place like a ship being steered, then holds',
+      'Steering-wheel rotation with overshoot + static hold'
+    );
+  }
+
+  // NUXT — the peaks rise from the baseline and settle into their ridge.
+  if (item.id === 'nuxt') {
+    const kAll = `tss_${uid}_al`,
+      kMove = `tss_${uid}_mv`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMove}{0%{transform:translateY(10px);opacity:0}40%{transform:translateY(-1px);opacity:1}48%{transform:translateY(0);opacity:1}68%{transform:translateY(-0.8px);opacity:1}86%{transform:translateY(-0.2px);opacity:1}100%{transform:translateY(0);opacity:1}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMove}{animation:${kMove} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}`,
+      `.${kAll},.${kMove}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMove}{transform:none!important}`,
+      `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><g class="${kMove}">${body}</g></g></g>`,
+      'The Nuxt peaks rise from the baseline and settle into their ridge',
+      'Rise-in with a small overshoot + static hold'
+    );
+  }
+
+  // LUA — the moon rises and a soft halo blooms behind it, then fades.
+  if (item.id === 'lua') {
+    const kAll = `tss_${uid}_al`,
+      kMove = `tss_${uid}_mv`,
+      kGlow = `tss_${uid}_gl`,
+      gGlow = `tss_${uid}_gg`;
+    const { defs: baseDefs, body, scale, tx, ty } = readDeviconReference(item);
+    const defs =
+      baseDefs +
+      `<radialGradient id="${gGlow}"><stop offset="0" stop-color="#9494CA" stop-opacity=".6"/><stop offset="1" stop-color="#9494CA" stop-opacity="0"/></radialGradient>`;
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMove}{0%{transform:translateY(8px);opacity:0}40%{transform:translateY(0);opacity:1}48%,100%{transform:translateY(0);opacity:1}}` +
+        `@keyframes ${kGlow}{0%,20%{opacity:0;transform:scale(.8)}34%{opacity:.45;transform:scale(1)}50%{opacity:.18;transform:scale(.96)}66%{opacity:.5;transform:scale(1.02)}82%{opacity:.22;transform:scale(.98)}100%{opacity:0;transform:scale(.9)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMove}{animation:${kMove} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
+        `.${kGlow}{transform-box:fill-box;transform-origin:50% 50%;animation:${kGlow} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMove},.${kGlow}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMove}{transform:none!important}.${kGlow}{opacity:0!important}`,
+      `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><circle class="${kGlow}" cx="64" cy="64" r="56" fill="url(#${gGlow})"/><g class="${kMove}">${body}</g></g></g>`,
+      'The Lua moon rises and a soft halo blooms behind it, then fades',
+      'Moon rise + radial halo bloom + static hold'
+    );
+  }
+
+  // QWIK — the bolt zips in from the corner and snaps into place.
+  if (item.id === 'qwik') {
+    const kAll = `tss_${uid}_al`,
+      kMove = `tss_${uid}_mv`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMove}{0%{transform:translate(-14px,-10px) scale(.9);opacity:0}30%{transform:translate(0,0) scale(1.04);opacity:1}40%{transform:scale(1);opacity:1}60%{transform:scale(1.015);opacity:1}82%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMove}{animation:${kMove} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+      `.${kAll},.${kMove}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMove}{transform:none!important}`,
+      `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><g class="${kMove}">${body}</g></g></g>`,
+      'The Qwik bolt zips in from the corner and snaps into place',
+      'Fast diagonal zip + snap + static hold'
+    );
+  }
+
+  // CURSOR — the cube tilts to point at the next cell, then locks.
+  if (item.id === 'cursor') {
+    const kAll = `tss_${uid}_al`,
+      kMove = `tss_${uid}_mv`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMove}{0%{transform:rotate(-10deg) scale(.94);opacity:0}40%{transform:rotate(2deg) scale(1.02);opacity:1}48%{transform:rotate(0) scale(1)}64%{transform:rotate(-2deg) scale(1)}82%{transform:rotate(1.5deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMove}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMove} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}`,
+      `.${kAll},.${kMove}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMove}{transform:none!important}`,
+      `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><g class="${kMove}">${body}</g></g></g>`,
+      'The Cursor cube tilts to point at the next cell, then locks',
+      'Tilt + overshoot settle + static hold'
+    );
+  }
+
+  // DIGITALOCEAN — the droplet falls into place and catches one light pass.
+  if (item.id === 'digitalocean') {
+    const kAll = `tss_${uid}_al`,
+      kMove = `tss_${uid}_mv`,
+      kSh = `tss_${uid}_sh`,
+      cLogo = `tss_${uid}_cl`,
+      gSh = `tss_${uid}_gs`;
+    const { defs: baseDefs, body, scale, tx, ty } = readDeviconReference(item);
+    const defs =
+      baseDefs +
+      `<clipPath id="${cLogo}">${body}</clipPath>` +
+      `<linearGradient id="${gSh}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>`;
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMove}{0%{transform:translateY(-14px);opacity:0}40%{transform:translateY(2px);opacity:1}48%{transform:translateY(0);opacity:1}66%{transform:translateY(-1px);opacity:1}84%{transform:translateY(0.5px);opacity:1}100%{transform:translateY(0);opacity:1}}` +
+        `@keyframes ${kSh}{0%,54%{opacity:0;transform:translateX(-20px)}58%{opacity:1}70%{opacity:1;transform:translateX(40px)}74%,100%{opacity:0;transform:translateX(40px)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMove}{animation:${kMove} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
+        `.${kSh}{animation:${kSh} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMove},.${kSh}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMove}{transform:none!important}.${kSh}{opacity:0!important}`,
+      `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})"><g class="${kMove}">${body}</g><g clip-path="url(#${cLogo})"><g transform="skewX(-18)"><rect class="${kSh}" x="-20" y="-20" width="10" height="168" fill="url(#${gSh})"/></g></g></g></g>`,
+      'The DigitalOcean droplet falls into place and catches one light pass',
+      'Drop with overshoot + clipped sheen'
+    );
+  }
+
   // DEVICON FULL-COLOUR SETTLE — shared motion for catalogue entries whose
   // official-shaped art already exists as a Devicon original.
   if (DEVICON_ENTRIES[item.id]) {
