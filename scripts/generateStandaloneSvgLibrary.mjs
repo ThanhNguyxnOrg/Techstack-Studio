@@ -1783,6 +1783,8 @@ const STORY_OVERRIDES = {
   logstash: 'cascade',
   mariadb: 'press',
   newrelic: 'sweep',
+  opengl: 'swirl',
+  opentelemetry: 'cascade',
 };
 
 const STORY_MOTIONS = {
