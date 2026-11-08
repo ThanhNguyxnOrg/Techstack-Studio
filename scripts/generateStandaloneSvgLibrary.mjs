@@ -1779,6 +1779,7 @@ const STORY_OVERRIDES = {
   jenkins: 'assemble',
   jira: 'cascade',
   json: 'unfold',
+  laravel: 'trace',
 };
 
 const STORY_MOTIONS = {

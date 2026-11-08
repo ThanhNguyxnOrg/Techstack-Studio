@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:13:39.149Z",
+  "generatedAt": "2026-11-08T13:18:31.616Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -3396,7 +3396,7 @@
       "sourceAssetPath": "/icons/source/laravel.svg",
       "animatedSvgPath": "/icons/animated/laravel.svg",
       "animationConcept": "The Laravel mark settles into place",
-      "animationTechnique": "story: swirl",
+      "animationTechnique": "story: trace",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
