@@ -4475,6 +4475,152 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // ACTIX — request/response story: the mark's own subpaths trace in like
+  // request arrows, the fill locks behind them, then the whole mark breathes
+  // once. Only the logo's own geometry is used: no foreign shapes.
+  if (item.id === 'actix') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kPulse = `tss_${uid}_pl`;
+    const n = Math.max(1, subpaths.length);
+    const traceStyles = [];
+    const tracePaths = [];
+    const traceReduce = [];
+    subpaths.forEach((subD, idx) => {
+      const cls = `tss_${uid}_tr${idx}`;
+      const start = Number(((idx / n) * 24).toFixed(1));
+      const end = Number(Math.min(40, start + 16).toFixed(1));
+      traceStyles.push(
+        `@keyframes ${cls}{0%,${start}%{stroke-dashoffset:100}${end}%,100%{stroke-dashoffset:0}}.${cls}{stroke-dasharray:100;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      traceReduce.push(
+        `.${cls}{animation:none!important;stroke-dashoffset:0!important;stroke-opacity:0!important}`
+      );
+      tracePaths.push(
+        `<path class="${cls}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" d="${subD}"/>`
+      );
+    });
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,30%{fill-opacity:.3}50%,100%{fill-opacity:1}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        traceStyles.join('') +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kPulse}{transform:none!important}` +
+        traceReduce.join(''),
+      `<g class="${kAll}"><g class="${kPulse}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>${tracePaths.join('')}</g></g>`,
+      'Actix request arrows draw in and lock, then breathe once',
+      'Staggered subpath trace + fill lock + slow pulse'
+    );
+  }
+
+  // ADAFRUIT — flower bloom: every petal (own subpath) swells outward in
+  // sequence around its own centre and settles, then holds static.
+  if (item.id === 'adafruit') {
+    const kAll = `tss_${uid}_al`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const bloomKeys = (start, mid, end) =>
+      `0%,${start}%{opacity:0;transform:scale(.85)}${mid}%{opacity:1;transform:scale(1.06)}${end}%,100%{opacity:1;transform:scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 24).toFixed(1));
+        const mid = Number(Math.min(36, start + 10).toFixed(1));
+        const end = Number(Math.min(40, start + 16).toFixed(1));
+        styles.push(`@keyframes ${cls}{${bloomKeys(start, mid, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt`;
+      styles.push(`@keyframes ${cls}{${bloomKeys(0, 16, 32)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        styles.join(''),
+      `.${kAll}{animation:none!important;opacity:1!important}` + reduceRules.join(''),
+      `<g class="${kAll}">${bodyParts.join('')}</g>`,
+      'The Adafruit petals bloom outward in sequence and settle',
+      'Per-petal scale bloom + static hold'
+    );
+  }
+
+  // AIOHTTP — async wave: a clipped liquid wave rises through the mark while
+  // the fill locks in, then the wave sways gently inside the silhouette.
+  if (item.id === 'aiohttp') {
+    const kAll = `tss_${uid}_al`,
+      kMark = `tss_${uid}_mk`,
+      kWaveG = `tss_${uid}_wg`,
+      kWave = `tss_${uid}_wv`,
+      cWave = `tss_${uid}_cw`;
+    return wrapSvg(
+      `<clipPath id="${cWave}"><path d="${d}" clip-rule="evenodd"/></clipPath>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMark}{0%,30%{opacity:.25}50%,100%{opacity:1}}` +
+        `@keyframes ${kWaveG}{0%{transform:translateY(18px)}40%,100%{transform:translateY(0)}}` +
+        `@keyframes ${kWave}{0%,40%{transform:translateX(0)}55%{transform:translateX(-1px)}70%{transform:translateX(1px)}85%{transform:translateX(-1px)}100%{transform:translateX(0)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMark}{animation:${kMark} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kWaveG}{animation:${kWaveG} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kWave}{animation:${kWave} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMark},.${kWaveG},.${kWave}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMark}{opacity:1!important}.${kWaveG}{transform:translateY(0)!important}.${kWave}{transform:none!important}`,
+      `<g class="${kAll}"><g clip-path="url(#${cWave})"><path class="${kMark}" fill="${primary}" fill-rule="evenodd" d="${d}"/><g class="${kWaveG}"><path class="${kWave}" fill="${secondary}" d="M-4 12 C 0 8 4 8 8 12 C 12 16 16 16 20 12 C 24 8 28 8 32 12 L32 30 L-4 30 Z"/></g></g></g>`,
+      'An async wave rises through the aiohttp mark and settles',
+      'Clipped liquid wave rise + fill lock'
+    );
+  }
+
+  // AIRBYTE — data packet loop: a dash packet keeps circling the ring while
+  // the mark fills, then the whole mark takes one slow breath.
+  if (item.id === 'airbyte') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kPkt = `tss_${uid}_pk`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,25%{fill-opacity:0}45%,100%{fill-opacity:1}}` +
+        `@keyframes ${kPkt}{0%{stroke-dashoffset:0;stroke-opacity:1}80%{stroke-dashoffset:-100;stroke-opacity:1}84%{stroke-opacity:1}92%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
+        `@keyframes ${kPulse}{0%,50%{transform:scale(1)}75%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPkt}{animation:${kPkt} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kPkt},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kPkt}{opacity:0!important;stroke-opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/><path class="${kPkt}" fill="none" stroke="${secondary}" stroke-width="1.2" stroke-linecap="round" pathLength="100" stroke-dasharray="10 90" d="${d}"/></g></g>`,
+      'A data packet loops around the Airbyte ring while the mark fills',
+      'Dash packet loop + fill lock + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
