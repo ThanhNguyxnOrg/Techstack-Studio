@@ -452,9 +452,14 @@ function readDeviconReference(item) {
     }
     return out;
   };
-  const dm = full.match(/<defs>[\s\S]*?<\/defs>/);
-  const defs = dm ? rewrite(lighten(dm[0])) : '';
-  const body = rewrite(lighten(full.replace(/<defs>[\s\S]*?<\/defs>/, '').trim()));
+  const defsBlocks = full.match(/<defs>[\s\S]*?<\/defs>/g) || [];
+  let rest = full;
+  for (const block of defsBlocks) rest = rest.replace(block, '');
+  // Some references keep gradients, masks or clips outside a defs wrapper.
+  const stray = rest.match(/<(linearGradient|radialGradient|mask|clipPath|filter|pattern)[\s\S]*?<\/\1>/g) || [];
+  for (const block of stray) rest = rest.replace(block, '');
+  const defs = rewrite(lighten(defsBlocks.join('') + stray.join('')));
+  const body = rewrite(lighten(rest.trim()));
   return { defs, body, scale, tx, ty };
 }
 
