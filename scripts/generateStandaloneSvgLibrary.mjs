@@ -1662,6 +1662,61 @@ const STORY_VERBS = {
   sway: 'sways into line',
 };
 
+const STORY_OVERRIDES = {
+  socketdotio: 'beat',
+  nginx: 'spin',
+  redis: 'drop',
+  datadog: 'beat',
+  threedotjs: 'orbit',
+  blender: 'orbit',
+  greensock: 'orbit',
+  quasar: 'swirl',
+  laravel: 'swirl',
+  nestjs: 'bloom',
+  fastify: 'swirl',
+  symfony: 'swirl',
+  argocd: 'swirl',
+  jenkins: 'stack',
+  ubuntu: 'bloom',
+  debian: 'swirl',
+  archlinux: 'swirl',
+  nixos: 'swirl',
+  podman: 'stack',
+  datadog: 'bloom',
+  sentry: 'bloom',
+  opentelemetry: 'swirl',
+  pulumi: 'bloom',
+  heroku: 'stack',
+  istio: 'swirl',
+  consul: 'bloom',
+  vault: 'stack',
+  snyk: 'bloom',
+  tailscale: 'bloom',
+  wireguard: 'swirl',
+  snowflake: 'swirl',
+  trino: 'bloom',
+  prisma: 'swirl',
+  mariadb: 'stack',
+  planetscale: 'swirl',
+  turso: 'bloom',
+  influxdb: 'swirl',
+  timescale: 'stack',
+  couchbase: 'stack',
+  appwrite: 'bloom',
+  pocketbase: 'stack',
+  surrealdb: 'bloom',
+  typeorm: 'bloom',
+  sequelize: 'swirl',
+  hibernate: 'bloom',
+  sqlalchemy: 'swirl',
+  mongoose: 'bloom',
+  flyway: 'stack',
+  liquibase: 'stack',
+  tidb: 'bloom',
+  fauna: 'bloom',
+  upstash: 'stack',
+};
+
 const STORY_MOTIONS = {
   dart: 'assemble',
   scala: 'fan',
@@ -1997,21 +2052,15 @@ function buildAnimatedSvg(item) {
   };
 
   // DECLARED STORY — one mechanism per logo, read from STORY_MOTIONS.
-  if (STORY_MOTIONS[item.id]) {
-    const declared = STORY_MOTIONS[item.id];
+  if (STORY_OVERRIDES[item.id] || STORY_MOTIONS[item.id]) {
+    const declared = STORY_OVERRIDES[item.id] || STORY_MOTIONS[item.id];
     const declaredKind = Array.isArray(declared) ? declared[0] : declared;
     const params = Array.isArray(declared) ? declared[1] || {} : {};
     const kAll = `tss_${uid}_al`,
       kMv = `tss_${uid}_mv`;
     const art = DEVICON_ENTRIES[item.id]
       ? readDeviconReference(item)
-      : {
-          defs: '',
-          body: `<path fill="${primary}" fill-rule="evenodd" d="${d}"/>`,
-          scale: 1,
-          tx: 0,
-          ty: 0,
-        };
+      : { defs: '', body: readSourceArt(item.id), scale: 1, tx: 0, ty: 0 };
     // A whole-mark keyword is a fallback: read the artwork instead and move its own parts.
     const KEYWORD_KINDS = new Set([
       'glide',
@@ -2033,7 +2082,7 @@ function buildAnimatedSvg(item) {
     ]);
     let kind = declaredKind;
     let dir = params.dir || 0;
-    if (KEYWORD_KINDS.has(kind)) {
+    if (!STORY_OVERRIDES[item.id] && KEYWORD_KINDS.has(kind)) {
       const pieceCount = (art.body.match(/<path[^>]*\/>/g) || []).length;
       if (pieceCount >= 5) kind = 'assemble';
       else if (pieceCount === 4) kind = 'cascade';
@@ -2046,29 +2095,60 @@ function buildAnimatedSvg(item) {
       params.concept || `The ${item.name} mark ${STORY_VERBS[kind] || 'settles into place'}`;
 
     // Pieces: move the mark's own parts, in the order the logo reads.
-    if (kind === 'assemble' || kind === 'cascade' || kind === 'fan') {
-      const pieces = (art.body.match(/<path[^>]*\/>/g) || []).slice();
+    if (
+      kind === 'assemble' ||
+      kind === 'cascade' ||
+      kind === 'fan' ||
+      kind === 'swirl' ||
+      kind === 'bloom' ||
+      kind === 'stack'
+    ) {
+      const pieces0 = (art.body.match(/<path[^>]*\/>/g) || []).slice();
+      let pieces = pieces0;
+      if (pieces0.length < 2) {
+        // One compound path can still hold several shapes; split it when it is single-colour.
+        const subs = analyzeGeometry(d).subpaths;
+        const fillColours = new Set(art.body.match(/fill="#[0-9a-fA-F]{3,8}"/g) || []);
+        if (subs.length >= 2 && subs.length <= 24 && fillColours.size <= 1) {
+          pieces = subs.map((sd) => `<path fill="${primary}" fill-rule="evenodd" d="${sd}"/>`);
+        }
+      }
       if (pieces.length >= 2) {
         const styles = [];
         const rules = [];
         const reduce = [];
-        const gap = kind === 'fan' ? 3 : 4;
+        const baseGap = kind === 'stack' ? 2 : kind === 'fan' ? 3 : 4;
+        const spread = kind === 'stack' ? 26 : 38;
+        const gap = Math.max(1.2, Math.min(baseGap, spread / pieces.length));
         pieces.forEach((piece, idx) => {
           const cls = `tss_${uid}_pc${idx}`;
           const start = Number(Math.min(38, idx * gap).toFixed(1));
           const end = Number(Math.min(54, start + 22).toFixed(1));
-          const from =
-            kind === 'fan'
-              ? `translateY(${4 * (dir || 1)}px) rotate(${idx % 2 ? 9 : -9}deg) scale(.9)`
-              : `translateY(${(kind === 'cascade' ? -7 : 7) * (dir || 1)}px)`;
-          const origin =
-            kind === 'cascade'
-              ? dir > 0
-                ? '50% 0%'
-                : '50% 100%'
-              : dir > 0
-                ? '50% 100%'
-                : '50% 0%';
+          let from;
+          let origin;
+          if (kind === 'fan') {
+            from = `translateY(${4 * (dir || 1)}px) rotate(${idx % 2 ? 9 : -9}deg) scale(.9)`;
+            origin = dir > 0 ? '50% 100%' : '50% 0%';
+          } else if (kind === 'swirl') {
+            from = `rotate(${idx % 2 ? 120 * (dir || 1) : -120 * (dir || 1)}deg) scale(.8)`;
+            origin = '50% 50%';
+          } else if (kind === 'bloom') {
+            from = 'scale(.55)';
+            origin = '50% 50%';
+          } else if (kind === 'stack') {
+            from = `translateY(${-9 * (dir || 1)}px) scaleY(.88)`;
+            origin = dir > 0 ? '50% 0%' : '50% 100%';
+          } else {
+            from = `translateY(${(kind === 'cascade' ? -7 : 7) * (dir || 1)}px)`;
+            origin =
+              kind === 'cascade'
+                ? dir > 0
+                  ? '50% 0%'
+                  : '50% 100%'
+                : dir > 0
+                  ? '50% 100%'
+                  : '50% 0%';
+          }
           styles.push(
             `@keyframes ${cls}{0%,${start}%{opacity:0;transform:${from}}${end}%,100%{opacity:1;transform:none}}`
           );
@@ -2115,7 +2195,15 @@ function buildAnimatedSvg(item) {
       );
     }
 
-    const framesKind = { assemble: 'rise', cascade: 'drop', fan: 'pop' }[kind] || kind;
+    const framesKind =
+      {
+        assemble: 'rise',
+        cascade: 'drop',
+        fan: 'pop',
+        swirl: 'spin',
+        bloom: 'pop',
+        stack: 'drop',
+      }[kind] || kind;
     const frames = STORY_FRAMES[framesKind](params);
     const origin = framesKind === 'rise' || framesKind === 'stretch' ? '50% 100%' : '50% 50%';
     const ease = framesKind === 'orbit' ? 'linear' : 'cubic-bezier(.22,1,.36,1)';
