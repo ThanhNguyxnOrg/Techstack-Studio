@@ -472,6 +472,123 @@ function escapeXml(str) {
 }
 
 /**
+ * Axis-aligned bounds of one absolute-`M` subpath, walking every command so
+ * relative segments are resolved before they are measured.
+ */
+function subpathBounds(part) {
+  const nums = (part.match(/-?\d*\.?\d+(?:[eE][+-]?\d+)?/gi) || []).map(Number);
+  const cmds = part.match(/[MmZzLlHhVvCcSsQqTtAa]/g) || [];
+  if (!nums.length || !cmds.length) return null;
+  let i = 0,
+    minX = Infinity,
+    minY = Infinity,
+    maxX = -Infinity,
+    maxY = -Infinity,
+    x = 0,
+    y = 0,
+    startX = 0,
+    startY = 0;
+  const take = (n) => nums.slice(i, (i += n));
+  const hit = (px, py) => {
+    if (!Number.isFinite(px) || !Number.isFinite(py)) return;
+    if (px < minX) minX = px;
+    if (px > maxX) maxX = px;
+    if (py < minY) minY = py;
+    if (py > maxY) maxY = py;
+  };
+  for (const cmd of cmds) {
+    const rel = cmd === cmd.toLowerCase();
+    switch (cmd.toUpperCase()) {
+      case 'M': {
+        const [nx, ny] = take(2);
+        x = rel ? x + nx : nx;
+        y = rel ? y + ny : ny;
+        startX = x;
+        startY = y;
+        hit(x, y);
+        break;
+      }
+      case 'L': {
+        const [nx, ny] = take(2);
+        x = rel ? x + nx : nx;
+        y = rel ? y + ny : ny;
+        hit(x, y);
+        break;
+      }
+      case 'H': {
+        const [nx] = take(1);
+        x = rel ? x + nx : nx;
+        hit(x, y);
+        break;
+      }
+      case 'V': {
+        const [ny] = take(1);
+        y = rel ? y + ny : ny;
+        hit(x, y);
+        break;
+      }
+      case 'C': {
+        const [a, b, c, dd, nx, ny] = take(6);
+        hit(rel ? x + a : a, rel ? y + b : b);
+        hit(rel ? x + c : c, rel ? y + dd : dd);
+        x = rel ? x + nx : nx;
+        y = rel ? y + ny : ny;
+        hit(x, y);
+        break;
+      }
+      case 'S':
+      case 'Q': {
+        const [a, b, nx, ny] = take(4);
+        hit(rel ? x + a : a, rel ? y + b : b);
+        x = rel ? x + nx : nx;
+        y = rel ? y + ny : ny;
+        hit(x, y);
+        break;
+      }
+      case 'T': {
+        const [nx, ny] = take(2);
+        x = rel ? x + nx : nx;
+        y = rel ? y + ny : ny;
+        hit(x, y);
+        break;
+      }
+      case 'A': {
+        const [rx, ry, rot, laf, sf, nx, ny] = take(7);
+        const ex = rel ? x + nx : nx;
+        const ey = rel ? y + ny : ny;
+        hit(Math.min(x, ex) - Math.abs(rx), Math.min(y, ey) - Math.abs(ry));
+        hit(Math.max(x, ex) + Math.abs(rx), Math.max(y, ey) + Math.abs(ry));
+        x = ex;
+        y = ey;
+        hit(x, y);
+        void rot;
+        void laf;
+        void sf;
+        break;
+      }
+      case 'Z':
+        x = startX;
+        y = startY;
+        break;
+      default:
+        break;
+    }
+  }
+  if (!Number.isFinite(minX)) return null;
+  return { minX, minY, maxX, maxY, area: (maxX - minX) * (maxY - minY) };
+}
+
+function boxContains(outer, inner) {
+  const eps = 0.35;
+  return (
+    inner.minX > outer.minX + eps &&
+    inner.maxX < outer.maxX - eps &&
+    inner.minY > outer.minY + eps &&
+    inner.maxY < outer.maxY - eps
+  );
+}
+
+/**
  * Splits a compound SVG path `d` into standalone subpaths with absolute `M` starts,
  * and computes bounding box + centroid metrics for geometry-driven animation design.
  */
@@ -698,13 +815,26 @@ function analyzeGeometry(d) {
   const cy = Number(((bMinY + bMaxY) / 2).toFixed(2));
 
   let subpaths = rawParts.length > 0 ? rawParts : [d];
-  if (subpaths.length > 4) {
-    const grouped = [];
-    const chunk = Math.ceil(subpaths.length / 4);
-    for (let i = 0; i < subpaths.length; i += chunk) {
-      grouped.push(subpaths.slice(i, i + chunk).join(' '));
+  if (subpaths.length > 1) {
+    // A cut-out that lands in its own path becomes a solid disc, so compound art with
+    // nested subpaths animates as one piece; only disjoint shapes may split.
+    const boxes = subpaths.map((part) => subpathBounds(part));
+    const nested = boxes.some((box, i) =>
+      boxes.some(
+        (other, j) =>
+          j !== i && box && other && (boxContains(box, other) || boxContains(other, box))
+      )
+    );
+    if (nested) {
+      subpaths = [d];
+    } else if (subpaths.length > 4) {
+      const grouped = [];
+      const chunk = Math.ceil(subpaths.length / 4);
+      for (let i = 0; i < subpaths.length; i += chunk) {
+        grouped.push(subpaths.slice(i, i + chunk).join(' '));
+      }
+      subpaths = grouped;
     }
-    subpaths = grouped;
   }
 
   return {
