@@ -1768,6 +1768,9 @@ const STORY_OVERRIDES = {
   gitea: 'assemble',
   gitkraken: 'fan',
   gradle: 'hop',
+  githubcopilot: 'beat',
+  greensock: 'trace',
+  haproxy: 'glide',
 };
 
 const STORY_MOTIONS = {
