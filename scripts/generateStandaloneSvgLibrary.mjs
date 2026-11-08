@@ -1764,6 +1764,158 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // MATTER — the nodes link up from the baseline one after another.
+  if (item.id === 'matter') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const subpaths = analyzeGeometry(d).subpaths;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start, end) =>
+      `0%,${start}%{opacity:0;transform:translateY(7px)}${end}%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 24).toFixed(1));
+        const end = Number(Math.min(40, start + 18).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0, 32)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Matter nodes link up one after another and settle',
+      'Per-node rise + slow pulse'
+    );
+  }
+
+  // RADIX UI — the cells stack in from the left.
+  if (item.id === 'radixui') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const subpaths = analyzeGeometry(d).subpaths;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const slideKeys = (start, end) =>
+      `0%,${start}%{opacity:0;transform:translateX(-7px)}${end}%,100%{opacity:1;transform:translateX(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 22).toFixed(1));
+        const end = Number(Math.min(40, start + 18).toFixed(1));
+        styles.push(`@keyframes ${cls}{${slideKeys(start, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${slideKeys(0, 32)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Radix cells stack in from the left one after another',
+      'Per-cell slide-in + slow pulse'
+    );
+  }
+
+  // OPENSEARCH — the glass sweeps across, then one hit ring fires.
+  if (item.id === 'opensearch') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kRing = `tss_${uid}_rg`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-14deg) scale(.94)}36%{opacity:1;transform:rotate(3deg) scale(1.02)}48%{transform:rotate(0) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kRing}{0%,52%{opacity:0;transform:scale(.6)}62%{opacity:.5;transform:scale(1)}80%,100%{opacity:0;transform:scale(1.45)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:35% 35%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} ease-out infinite}`,
+      `.${kAll},.${kMv},.${kRing}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kRing}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g>`,
+      'The OpenSearch glass sweeps across the field and one hit ring fires',
+      'Sweep around the lens + late hit ring'
+    );
+  }
+
+  // OPENAPIINITIATIVE — the spec turns down and locks.
+  if (item.id === 'openapiinitiative') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-16deg) scale(.9)}38%{transform:rotate(4deg) scale(1.04)}52%{transform:rotate(-1deg) scale(1)}64%,100%{transform:rotate(0) scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.36,0,.2,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The OpenAPI spec turns down and clicks into its lock',
+      'Turn-down with a lock click'
+    );
+  }
+
   if (item.id === 'circleci') {
     return wrapSvg(
       USER_PORT_CIRCLECI.defs,
