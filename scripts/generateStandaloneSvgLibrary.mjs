@@ -4418,8 +4418,15 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  const deviconBespokeIds = new Set(['quarkus', 'racket', 'railway']);
+
   // DEVICON PER-MARK MOTION — each listed entry gets a mode fitted to its mark.
-  if (DEVICON_ENTRIES[item.id] && DEVICON_MOTION[item.id] && item.id !== 'algolia') {
+  if (
+    DEVICON_ENTRIES[item.id] &&
+    DEVICON_MOTION[item.id] &&
+    item.id !== 'algolia' &&
+    !deviconBespokeIds.has(item.id)
+  ) {
     const spec = DEVICON_MOTION[item.id];
     const mode = typeof spec === 'string' ? spec : spec.mode;
     const skipFirst = typeof spec === 'object' && spec.skipFirst;
@@ -4568,7 +4575,7 @@ function buildAnimatedSvg(item) {
 
   // DEVICON FULL-COLOUR SETTLE — shared motion for catalogue entries whose
   // official-shaped art already exists as a Devicon original.
-  if (DEVICON_ENTRIES[item.id] && item.id !== 'algolia') {
+  if (DEVICON_ENTRIES[item.id] && item.id !== 'algolia' && !deviconBespokeIds.has(item.id)) {
     const kAll = `tss_${uid}_al`,
       kPop = `tss_${uid}_pp`,
       kSh = `tss_${uid}_sh`,
@@ -8574,6 +8581,94 @@ function buildAnimatedSvg(item) {
       `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
       'The Qdrant vectors light up and connect',
       'Per-part bloom + slow pulse'
+    );
+  }
+
+  // QUARKUS — the swirl spins into place and settles.
+  if (item.id === 'quarkus') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-25deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}62%{transform:rotate(2deg)}74%{transform:rotate(-2deg)}86%{transform:rotate(2deg)}100%{transform:rotate(0)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The Quarkus swirl spins into place and settles',
+      'Swirl spin + slow pulse'
+    );
+  }
+
+  // RACKET — the lambda lands into place and settles.
+  if (item.id === 'racket') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%{transform:scale(1)}57%{transform:translateY(-1px)}66%{transform:translateY(0)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The Racket lambda lands into place and settles',
+      'Land scale + bounce + slow pulse'
+    );
+  }
+
+  // RADIXUI — the R sends one signal ring and settles.
+  if (item.id === 'radixui') {
+    const kAll = `tss_${uid}_al`,
+      kRing = `tss_${uid}_rg`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kRing},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kRing}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
+      'Radix UI sends one signal ring and settles',
+      'Transient signal ring + slow pulse'
+    );
+  }
+
+  // RAILWAY — the line pulls in from the left, overshoots, then settles.
+  if (item.id === 'railway') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:translateX(-6px)}38%{opacity:1;transform:translateX(2px)}48%{transform:translateX(0)}100%{transform:translateX(0)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The Railway line pulls into place and settles',
+      'Line slide with overshoot + slow pulse'
     );
   }
 
