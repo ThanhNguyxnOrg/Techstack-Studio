@@ -1654,9 +1654,45 @@ function buildAnimatedSvg(item) {
   const dur = '3.6s';
 
   const wrapSvg = (defs, style, reducedMotionCss, body, concept, technique, customViewBox) => {
+    // Motion smaller than this disappears at 44px, so every keyframe is lifted to a floor.
+    const liftMotion = (css) =>
+      String(css || '')
+        .replace(/translate(?:X|Y|3d)?\(([^)]*)\)/g, (whole, args) => {
+          const out = args
+            .split(',')
+            .map((raw) => {
+              const token = raw.trim();
+              const n = parseFloat(token);
+              if (!Number.isFinite(n) || n === 0) return token;
+              const unit = token.replace(/^[-+]?[\d.]+/, '');
+              const mag = Math.abs(n) < 2.6 ? 2.6 : Math.abs(n);
+              return `${n < 0 ? -mag : mag}${unit}`;
+            })
+            .join(',');
+          return whole.slice(0, whole.indexOf('(')) + '(' + out + ')';
+        })
+        .replace(/rotate\(([-+]?[\d.]+)deg\)/g, (whole, deg) => {
+          const n = parseFloat(deg);
+          const mag = Math.abs(n) < 6 ? 6 : Math.abs(n);
+          return `rotate(${n < 0 ? -mag : mag}deg)`;
+        })
+        .replace(/scale\(([^)]*)\)/g, (whole, args) => {
+          const out = args
+            .split(',')
+            .map((raw) => {
+              const token = raw.trim();
+              const n = parseFloat(token);
+              if (!Number.isFinite(n) || n === 1) return token;
+              const delta = n - 1;
+              const mag = Math.abs(delta) < 0.05 ? 0.05 : Math.abs(delta);
+              return String(Number((1 + (delta < 0 ? -mag : mag)).toFixed(3)));
+            })
+            .join(',');
+          return `scale(${out})`;
+        });
     const fullStyle =
       style || reducedMotionCss
-        ? `<style>${style}@media (prefers-reduced-motion: reduce){${reducedMotionCss}}</style>`
+        ? `<style>${liftMotion(style)}@media (prefers-reduced-motion: reduce){${reducedMotionCss}}</style>`
         : '';
     const vb = customViewBox || item.svgViewBox || '0 0 24 24';
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}${fullStyle}${body}</svg>`;
