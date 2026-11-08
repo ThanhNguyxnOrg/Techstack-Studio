@@ -6000,6 +6000,143 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // CILIUM — network nodes: every node blooms into place in sequence, then
+  // the connected graph settles with one slow pulse.
+  if (item.id === 'cilium') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const bloomKeys = (start) =>
+      `${start === 0 ? '0%' : `0%,${start}%`}{opacity:0;transform:scale(.85)}` +
+      `${Math.min(38, start + 8)}%{opacity:1;transform:scale(1.06)}` +
+      `38%,100%{opacity:1;transform:scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${bloomKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${bloomKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Cilium network nodes light up and connect',
+      'Per-node bloom + slow pulse'
+    );
+  }
+
+  // CLERK — key locks: the key locks into place, one clipped sheen crosses
+  // it, then the mark settles with a slow pulse.
+  if (item.id === 'clerk') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`,
+      kSheen = `tss_${uid}_sh`,
+      gSheen = `tss_${uid}_gs`,
+      cMark = `tss_${uid}_cm`;
+    return wrapSvg(
+      `<clipPath id="${cMark}"><path d="${d}" clip-rule="evenodd"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{transform:translateX(-12px);opacity:0}62%{opacity:.7}74%,100%{transform:translateX(28px);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        `.${kSheen}{opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}.${kSheen}{opacity:0!important;transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<g clip-path="url(#${cMark})"><rect class="${kSheen}" x="-10" y="-2" width="10" height="28" fill="url(#${gSheen})"/></g></g></g>`,
+      'The Clerk key locks into place and catches one light pass',
+      'Key lock + clipped sheen'
+    );
+  }
+
+  // COCKROACHLABS — antennae twitch: the mark twitches into place, sways and
+  // bobs gently in the hold, then settles with one slow pulse.
+  if (item.id === 'cockroachlabs') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0deg) translateY(0)}60%{transform:rotate(-3deg) translateY(-0.8px)}74%{transform:rotate(3deg) translateY(0)}86%,100%{transform:rotate(0deg) translateY(0)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The CockroachDB antennae twitch and the mark settles',
+      'Antenna twitch + bob + slow pulse'
+    );
+  }
+
+  // CODEIGNITER — flame grows: the flame grows into place, one clipped sheen
+  // crosses it, then the mark settles with a slow pulse.
+  if (item.id === 'codeigniter') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`,
+      kSheen = `tss_${uid}_sh`,
+      gSheen = `tss_${uid}_gs`,
+      cMark = `tss_${uid}_cm`;
+    return wrapSvg(
+      `<clipPath id="${cMark}"><path d="${d}" clip-rule="evenodd"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%,100%{opacity:1;transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kSheen}{0%,56%{transform:translateX(-12px);opacity:0}62%{opacity:.7}74%,100%{transform:translateX(28px);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        `.${kSheen}{opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}.${kSheen}{opacity:0!important;transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<g clip-path="url(#${cMark})"><rect class="${kSheen}" x="-10" y="-2" width="10" height="28" fill="url(#${gSheen})"/></g></g></g>`,
+      'The CodeIgniter flame grows and catches one light pass',
+      'Flame grow + clipped sheen'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
