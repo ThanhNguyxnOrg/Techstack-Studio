@@ -4799,7 +4799,9 @@ function buildAnimatedSvg(item) {
         reduceRules.push(
           `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
         );
-        bodyParts.push(`<g class="${cls}"><path fill="${primary}" d="${subD}"/></g>`);
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
       });
     } else {
       const cls = `tss_${uid}_pt0`;
@@ -4854,7 +4856,9 @@ function buildAnimatedSvg(item) {
         reduceRules.push(
           `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
         );
-        bodyParts.push(`<g class="${cls}"><path fill="${primary}" d="${subD}"/></g>`);
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
       });
     } else {
       const cls = `tss_${uid}_pt0`;
@@ -5003,7 +5007,9 @@ function buildAnimatedSvg(item) {
         reduceRules.push(
           `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
         );
-        bodyParts.push(`<g class="${cls}"><path fill="${primary}" d="${subD}"/></g>`);
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
       });
     } else {
       const cls = `tss_${uid}_pt0`;
@@ -5149,6 +5155,161 @@ function buildAnimatedSvg(item) {
         `<g clip-path="url(#${cMark})"><rect class="${kSheen}" x="-10" y="-2" width="10" height="28" fill="url(#${gSheen})"/></g></g>`,
       'The Maven feather draws its own outline and takes one light pass',
       'Contour draw + fill lock + clipped sheen'
+    );
+  }
+
+  // APACHENETBEANSIDE — blocks stack: each block rises into place in turn,
+  // then the whole mark settles with one slow pulse.
+  if (item.id === 'apachenetbeanside') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const stackKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(7px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${stackKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${stackKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The NetBeans blocks stack into place and settle',
+      'Per-block rise + slow pulse'
+    );
+  }
+
+  // APACHEPULSAR — pulse wave: one signal ring expands outward from the mark,
+  // then the mark breathes with one slow pulse.
+  if (item.id === 'apachepulsar') {
+    const kAll = `tss_${uid}_al`,
+      kRing = `tss_${uid}_rg`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5}42%,100%{opacity:0;transform:scale(1.5)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;opacity:0;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kRing},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kRing}{opacity:0!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<circle class="ring ${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g>`,
+      'Pulsar sends one pulse wave outward and settles',
+      'Transient pulse ring + slow breathing'
+    );
+  }
+
+  // APACHESUPERSET — layers stack: each layer rises into place in turn, then
+  // the whole mark settles with one slow pulse.
+  if (item.id === 'apachesuperset') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const stackKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${stackKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${stackKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Superset layers stack and settle',
+      'Per-layer rise + slow pulse'
+    );
+  }
+
+  // APACHETOMCAT — cat sway: the cat sways into place, then bobs gently
+  // through the hold before one slow pulse.
+  if (item.id === 'apachetomcat') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-4deg) translateY(2px);opacity:0}40%{transform:rotate(2deg) translateY(0);opacity:1}48%{transform:rotate(0deg) translateY(0);opacity:1}62%{transform:rotate(-3deg) translateY(-.8px);opacity:1}80%{transform:rotate(3deg) translateY(-.8px);opacity:1}100%{transform:rotate(0deg) translateY(0);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Tomcat cat sways into place and settles',
+      'Sway + bob + slow pulse'
     );
   }
 
