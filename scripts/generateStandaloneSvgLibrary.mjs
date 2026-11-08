@@ -1775,6 +1775,10 @@ const STORY_OVERRIDES = {
   homebrew: 'stack',
   influxdb: 'trace',
   istio: 'fan',
+  jasmine: 'blade',
+  jenkins: 'assemble',
+  jira: 'cascade',
+  json: 'unfold',
 };
 
 const STORY_MOTIONS = {
