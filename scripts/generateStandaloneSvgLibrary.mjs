@@ -1845,7 +1845,7 @@ function buildAnimatedSvg(item) {
       kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.02);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 6s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 6s cubic-bezier(.34,1.4,.64,1) infinite}` +
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.05);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 6s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 6s cubic-bezier(.34,1.4,.64,1) infinite}` +
         `.tss_condaforge_heat{animation:tss_condaforge_heat 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_condaforge_heat{0%{fill:#F3F1EC}30%{fill:#FF7A29}50%,100%{fill:#F3F1EC}}`,
       `.${kAll},.${kMv}{animation:none!important}.${kAll}{opacity:1!important}.${kMv}{transform:none!important}` +
         `.tss_condaforge_heat{animation:none!important;fill:#F3F1EC!important}`,
@@ -1997,7 +1997,7 @@ function buildAnimatedSvg(item) {
       kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.02);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 6s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 6s cubic-bezier(.34,1.4,.64,1) infinite}` +
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.05);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 6s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 6s cubic-bezier(.34,1.4,.64,1) infinite}` +
         `.tss_ov_chase0{animation:tss_ov_chase0 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase0{0%{fill:#FFFFFF}0%{fill:#FFFFFF}3.125%{fill:#6C24F0}6.25%,100%{fill:#FFFFFF}}.tss_ov_chase1{animation:tss_ov_chase1 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase1{0%{fill:#FFFFFF}6.25%{fill:#FFFFFF}9.375%{fill:#6C24F0}12.5%,100%{fill:#FFFFFF}}.tss_ov_chase2{animation:tss_ov_chase2 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase2{0%{fill:#FFFFFF}12.5%{fill:#FFFFFF}15.625%{fill:#6C24F0}18.75%,100%{fill:#FFFFFF}}.tss_ov_chase3{animation:tss_ov_chase3 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase3{0%{fill:#FFFFFF}18.75%{fill:#FFFFFF}21.875%{fill:#6C24F0}25%,100%{fill:#FFFFFF}}.tss_ov_chase4{animation:tss_ov_chase4 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase4{0%{fill:#FFFFFF}25%{fill:#FFFFFF}28.125%{fill:#6C24F0}31.25%,100%{fill:#FFFFFF}}.tss_ov_chase5{animation:tss_ov_chase5 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase5{0%{fill:#FFFFFF}31.25%{fill:#FFFFFF}34.375%{fill:#6C24F0}37.5%,100%{fill:#FFFFFF}}.tss_ov_chase6{animation:tss_ov_chase6 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase6{0%{fill:#FFFFFF}37.5%{fill:#FFFFFF}40.625%{fill:#6C24F0}43.75%,100%{fill:#FFFFFF}}.tss_ov_chase7{animation:tss_ov_chase7 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_ov_chase7{0%{fill:#FFFFFF}43.75%{fill:#FFFFFF}46.875%{fill:#6C24F0}50%,100%{fill:#FFFFFF}}`,
       `.${kAll},.${kMv}{animation:none!important}.${kAll}{opacity:1!important}.${kMv}{transform:none!important}` +
         `.tss_ov_chase0,.tss_ov_chase1,.tss_ov_chase2,.tss_ov_chase3,.tss_ov_chase4,.tss_ov_chase5,.tss_ov_chase6,.tss_ov_chase7{animation:none!important;fill:#FFFFFF!important}`,
@@ -2025,7 +2025,7 @@ function buildAnimatedSvg(item) {
       kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.02);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 6s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 6s cubic-bezier(.34,1.4,.64,1) infinite}` +
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.05);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 6s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 6s cubic-bezier(.34,1.4,.64,1) infinite}` +
         `.tss_microsoftsqlserver_glow{stroke-opacity:0;animation:tss_microsoftsqlserver_glow 6s cubic-bezier(0.22,1,0.36,1) infinite}@keyframes tss_microsoftsqlserver_glow{0%{stroke-opacity:0}10%{stroke-opacity:0.85}20%{stroke-opacity:0}30%{stroke-opacity:0.85}40%,100%{stroke-opacity:0}}`,
       `.${kAll},.${kMv}{animation:none!important}.${kAll}{opacity:1!important}.${kMv}{transform:none!important}` +
         `.tss_microsoftsqlserver_glow{animation:none!important;stroke-opacity:0!important}`,
@@ -2561,7 +2561,7 @@ function buildAnimatedSvg(item) {
       kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.02);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 8s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 8s cubic-bezier(.34,1.4,.64,1) infinite}` +
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.05);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 8s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 8s cubic-bezier(.34,1.4,.64,1) infinite}` +
         `@keyframes tss_px4_l1{0%{opacity:0}12%,100%{opacity:1}}@keyframes tss_px4_l2{0%,10%{opacity:0}24%,100%{opacity:1}}.tss_px4_l1{animation:tss_px4_l1 8s ease-out infinite}.tss_px4_l2{animation:tss_px4_l2 8s ease-out infinite}`,
       `.${kAll},.${kMv}{animation:none!important}.${kAll}{opacity:1!important}.${kMv}{transform:none!important}` +
         `.tss_px4_l1,.tss_px4_l2{animation:none!important;opacity:1!important}`,
@@ -3203,7 +3203,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       `<filter id="${fHalo}" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.3"/></filter>`,
       `@keyframes ${kHex}{0%,12%{fill:#2E352A}16%{fill:#4A7A2C}20%{fill:#2E352A}26%{fill:#5A972F}30%{fill:#3A4A30}38%,88%{fill:#6DB33F}100%{fill:#2E352A}}@keyframes ${kSym}{0%,12%{fill:#5A6552}16%{fill:#E8F7DA}20%{fill:#5A6552}26%{fill:#FFFFFF}30%{fill:#7C8A72}38%,88%{fill:#FFFFFF}100%{fill:#5A6552}}@keyframes ${kGlow}{0%,12%{opacity:0}16%{opacity:0.45}20%{opacity:0}26%{opacity:0.95}30%{opacity:0.1}38%{opacity:0.7}60%{opacity:0.4}80%{opacity:0.7}92%,100%{opacity:0}}.${kHex}{animation:${kHex} 4s ease-in-out infinite}.${kSym}{animation:${kSym} 4s ease-in-out infinite}.${kGlow}{animation:${kGlow} 4s ease-in-out infinite;opacity:0}` +
-        `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.02);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 4s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 4s cubic-bezier(.34,1.4,.64,1) infinite}`,
+        `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.05);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} 4s linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} 4s cubic-bezier(.34,1.4,.64,1) infinite}`,
       `.${kHex}{animation:none!important;fill:#6DB33F!important}.${kSym}{animation:none!important;fill:#FFFFFF!important}.${kGlow}{animation:none!important;opacity:0.45!important}.${kAll},.${kMv}{animation:none!important}.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
       `<g class="${kAll}"><g class="${kMv}"><path class="${kHex}" fill="#6DB33F" d="${hexD}"/><g class="${kGlow}" filter="url(#${fHalo})" fill="#FFFFFF"><path d="${symD1}"/><path d="${symD2}"/></g><g class="${kSym}" fill="#FFFFFF"><path d="${symD1}"/><path d="${symD2}"/></g></g></g>`,
       'PR #15 Spring Boot power-button startup flicker and breathing Gaussian halo',
@@ -3780,7 +3780,7 @@ function buildAnimatedSvg(item) {
       kCore = `tss_${uid}_core`;
     return wrapSvg(
       '',
-      `@keyframes ${kF}{0%,100%{transform:scale(0.96) rotate(-2deg)}45%,75%{transform:scale(1.03) rotate(2deg)}}@keyframes ${kD}{0%,100%{transform:translate(0,0) scale(0.88);fill:#FF9E2C}50%{transform:translate(0.5px,-0.9px) scale(1.25);fill:#FEF08A}}.${kF}{transform-origin:12px 15px;animation:${kF} ${dur} ease-in-out infinite}.${kD}{transform-origin:15.2px 4.8px;animation:${kD} 1.8s ease-in-out infinite}`,
+      `@keyframes ${kF}{0%,100%{transform:scale(0.96) rotate(-2deg)}45%,75%{transform:scale(1.06) rotate(2deg)}}@keyframes ${kD}{0%,100%{transform:translate(0,0) scale(0.88);fill:#FF9E2C}50%{transform:translate(0.5px,-0.9px) scale(1.25);fill:#FEF08A}}.${kF}{transform-origin:12px 15px;animation:${kF} ${dur} ease-in-out infinite}.${kD}{transform-origin:15.2px 4.8px;animation:${kD} 1.8s ease-in-out infinite}`,
       `.${kF}{animation:none!important;transform:none!important}.${kD}{animation:none!important;opacity:0!important}.${kCore}{opacity:0!important}`,
       `<g class="${kF}"><path fill="#EE4C2C" d="${d}"/><path class="${kCore}" fill="#FF9E2C" fill-opacity="0.5" transform="translate(2.4, 3.2) scale(0.8)" d="${d}"/></g><circle class="${kD}" cx="15.2" cy="4.8" r="1.55" fill="#FEF08A"/>`,
       'PyTorch #EE4C2C flame with warm #FF9E2C inner core and pulsing #FEF08A top spark',
@@ -3794,7 +3794,7 @@ function buildAnimatedSvg(item) {
       kC = `tss_${uid}_c`;
     return wrapSvg(
       '',
-      `@keyframes ${kR}{0%{transform:rotate(0deg) scale(0.95)}45%,75%{transform:rotate(120deg) scale(1.02)}100%{transform:rotate(240deg) scale(0.95)}}@keyframes ${kC}{0%,100%{r:1.5px;opacity:0.45}50%{r:2.4px;opacity:0.95}}.${kR}{transform-origin:12px 12px;animation:${kR} 4.2s cubic-bezier(0.4,0,0.2,1) infinite}.${kC}{animation:${kC} 2.1s ease-in-out infinite}`,
+      `@keyframes ${kR}{0%{transform:rotate(0deg) scale(0.95)}45%,75%{transform:rotate(120deg) scale(1.05)}100%{transform:rotate(240deg) scale(0.95)}}@keyframes ${kC}{0%,100%{r:1.5px;opacity:0.45}50%{r:2.4px;opacity:0.95}}.${kR}{transform-origin:12px 12px;animation:${kR} 4.2s cubic-bezier(0.4,0,0.2,1) infinite}.${kC}{animation:${kC} 2.1s ease-in-out infinite}`,
       `.${kR}{animation:none!important;transform:none!important;opacity:1!important}.${kC}{animation:none!important;opacity:0!important}`,
       `<g class="${kR}"><path fill="#10A37F" d="${d}"/></g><circle class="${kC}" cx="12" cy="12" r="2" fill="#A7F3D0"/>`,
       '6-petal rotational symmetry bloom in #10A37F with breathing #A7F3D0 central core',
@@ -4178,7 +4178,7 @@ function buildAnimatedSvg(item) {
         `<clipPath id="${kB}c"><path clip-rule="evenodd" d="${ring(19.9, 12.3)}"/></clipPath>` +
         `<clipPath id="${kC}c"><path clip-rule="evenodd" d="${ring(27.5, 19.9)}"/></clipPath>` +
         `<clipPath id="${kD}c"><path clip-rule="evenodd" d="${ring(48, 27.5)}"/></clipPath>`,
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.02);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} ${dur} linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}@keyframes ${kMv}{0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.05);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}}.${kAll}{animation:${kAll} ${dur} linear infinite}.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
         pulse(kA, 8, 78) +
         pulse(kB, 14, 70) +
         pulse(kC, 20, 62) +
@@ -4470,7 +4470,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMove}{0%{transform:translateY(8px);opacity:0}40%{transform:translateY(0);opacity:1}48%,100%{transform:translateY(0);opacity:1}}` +
-        `@keyframes ${kGlow}{0%,20%{opacity:0;transform:scale(.8)}34%{opacity:.45;transform:scale(1)}50%{opacity:.18;transform:scale(.96)}66%{opacity:.5;transform:scale(1.02)}82%{opacity:.22;transform:scale(.98)}100%{opacity:0;transform:scale(.9)}}` +
+        `@keyframes ${kGlow}{0%,20%{opacity:0;transform:scale(.8)}34%{opacity:.45;transform:scale(1)}50%{opacity:.18;transform:scale(.96)}66%{opacity:.5;transform:scale(1.05)}82%{opacity:.22;transform:scale(.98)}100%{opacity:0;transform:scale(.9)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMove}{animation:${kMove} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}` +
         `.${kGlow}{transform-box:fill-box;transform-origin:50% 50%;animation:${kGlow} ${dur} ease-in-out infinite}`,
@@ -4509,7 +4509,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMove}{0%{transform:rotate(-10deg) scale(.94);opacity:0}40%{transform:rotate(2deg) scale(1.02);opacity:1}48%{transform:rotate(0) scale(1)}64%{transform:rotate(-2deg) scale(1)}82%{transform:rotate(1.5deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kMove}{0%{transform:rotate(-10deg) scale(.94);opacity:0}40%{transform:rotate(2deg) scale(1.05);opacity:1}48%{transform:rotate(0) scale(1)}64%{transform:rotate(-2deg) scale(1)}82%{transform:rotate(1.5deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMove}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMove} ${dur} cubic-bezier(.34,1.4,.64,1) infinite}`,
       `.${kAll},.${kMove}{animation:none!important}` +
@@ -4638,7 +4638,7 @@ function buildAnimatedSvg(item) {
     if (mode === 'tilt') {
       return wholeMark(
         `tss_${uid}_mv`,
-        '0%{transform:rotate(-10deg) scale(.94);opacity:0}40%{transform:rotate(2deg) scale(1.02);opacity:1}48%{transform:rotate(0) scale(1)}64%{transform:rotate(-2deg) scale(1)}82%{transform:rotate(1.5deg) scale(1)}100%{transform:rotate(0) scale(1)}'
+        '0%{transform:rotate(-10deg) scale(.94);opacity:0}40%{transform:rotate(2deg) scale(1.05);opacity:1}48%{transform:rotate(0) scale(1)}64%{transform:rotate(-2deg) scale(1)}82%{transform:rotate(1.5deg) scale(1)}100%{transform:rotate(0) scale(1)}'
       );
     }
     if (mode === 'sway') {
@@ -4650,7 +4650,7 @@ function buildAnimatedSvg(item) {
     if (mode === 'pulse') {
       return wholeMark(
         `tss_${uid}_mv`,
-        '0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.03);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}'
+        '0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.06);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}'
       );
     }
     if (mode === 'trace') {
@@ -4772,7 +4772,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,30%{fill-opacity:.3}50%,100%{fill-opacity:1}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         traceStyles.join('') +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -4876,7 +4876,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,25%{fill-opacity:0}45%,100%{fill-opacity:1}}` +
         `@keyframes ${kPkt}{0%{stroke-dashoffset:0;stroke-opacity:1}80%{stroke-dashoffset:-100;stroke-opacity:1}84%{stroke-opacity:1}92%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,50%{transform:scale(1)}75%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,50%{transform:scale(1)}75%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPkt}{animation:${kPkt} ${dur} linear infinite}` +
@@ -4971,7 +4971,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,25%{opacity:0}45%,100%{opacity:1}}` +
         `@keyframes ${kPkt}{0%{stroke-dashoffset:0;stroke-opacity:1}70%{stroke-dashoffset:-100;stroke-opacity:1}80%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,50%{transform:scale(1)}75%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,50%{transform:scale(1)}75%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPkt}{animation:${kPkt} ${dur} linear infinite}` +
@@ -5087,7 +5087,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5169,7 +5169,7 @@ function buildAnimatedSvg(item) {
       `<clipPath id="${cMark}"><path d="${d}" clip-rule="evenodd"/></clipPath>` +
         `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%,30%{transform:translateX(-14px) rotate(-8deg) scale(.9);opacity:0}34%{transform:translateX(-14px) rotate(-8deg) scale(.9);opacity:1}44%{transform:translateX(1.5px) rotate(1deg) scale(1.03);opacity:1}52%,100%{transform:translateX(0) rotate(0deg) scale(1);opacity:1}}` +
+        `@keyframes ${kMv}{0%,30%{transform:translateX(-14px) rotate(-8deg) scale(.9);opacity:0}34%{transform:translateX(-14px) rotate(-8deg) scale(.9);opacity:1}44%{transform:translateX(1.5px) rotate(1deg) scale(1.06);opacity:1}52%,100%{transform:translateX(0) rotate(0deg) scale(1);opacity:1}}` +
         `@keyframes ${kSheen}{0%,56%{transform:translateX(-10px);opacity:0}62%{opacity:.75}74%,100%{transform:translateX(28px);opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -5215,7 +5215,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{transform:translateY(10px);opacity:0}40%,100%{transform:translateY(0);opacity:1}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5240,7 +5240,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kScan}{0%,18%{transform:translateY(0);opacity:0}30%{opacity:.8}48%,100%{transform:translateY(26px);opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kScan}{opacity:0;animation:${kScan} ${dur} cubic-bezier(.5,0,.5,1) infinite}` +
@@ -5295,7 +5295,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5318,7 +5318,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{transform:rotate(-5deg)}30%{transform:rotate(2deg)}44%{transform:rotate(0deg)}62%{transform:rotate(-2deg)}80%{transform:rotate(2deg)}100%{transform:rotate(0deg)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5339,8 +5339,8 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{transform:rotate(-32deg) scale(.94);opacity:0}38%{transform:rotate(3deg) scale(1.02);opacity:1}48%{transform:rotate(0deg) scale(1);opacity:1}62%{transform:rotate(-2deg) scale(1);opacity:1}80%{transform:rotate(2deg) scale(1);opacity:1}100%{transform:rotate(0deg) scale(1);opacity:1}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-32deg) scale(.94);opacity:0}38%{transform:rotate(3deg) scale(1.05);opacity:1}48%{transform:rotate(0deg) scale(1);opacity:1}62%{transform:rotate(-2deg) scale(1);opacity:1}80%{transform:rotate(2deg) scale(1);opacity:1}100%{transform:rotate(0deg) scale(1);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5362,7 +5362,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{transform:rotate(-4deg) translateY(2px);opacity:0}40%{transform:rotate(2deg) translateY(0);opacity:1}48%{transform:rotate(0deg) translateY(0);opacity:1}62%{transform:rotate(-3deg) translateY(-.8px);opacity:1}80%{transform:rotate(3deg) translateY(-.8px);opacity:1}100%{transform:rotate(0deg) translateY(0);opacity:1}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5384,7 +5384,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{transform:translateY(8px);opacity:0}38%{transform:translateY(0);opacity:1}52%{transform:translateY(-1px) scaleX(1.03);opacity:1}66%{transform:translateY(0) scaleX(1);opacity:1}80%{transform:translateY(-1px) scaleX(1.03);opacity:1}100%{transform:translateY(0) scaleX(1);opacity:1}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5468,7 +5468,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5491,7 +5491,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5}42%,100%{opacity:0;transform:scale(1.5)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;opacity:0;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5546,7 +5546,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5569,7 +5569,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{transform:rotate(-4deg) translateY(2px);opacity:0}40%{transform:rotate(2deg) translateY(0);opacity:1}48%{transform:rotate(0deg) translateY(0);opacity:1}62%{transform:rotate(-3deg) translateY(-.8px);opacity:1}80%{transform:rotate(3deg) translateY(-.8px);opacity:1}100%{transform:rotate(0deg) translateY(0);opacity:1}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5623,7 +5623,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5678,7 +5678,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5733,7 +5733,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5760,7 +5760,7 @@ function buildAnimatedSvg(item) {
         `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{transform:translateX(-12px);opacity:0}62%{opacity:.7}74%,100%{transform:translateX(28px);opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -5784,8 +5784,8 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{transform:rotate(-20deg) scale(.94);opacity:0}38%{transform:rotate(2deg) scale(1.03);opacity:1}48%{transform:rotate(0deg) scale(1);opacity:1}64%{transform:rotate(-2deg) scale(1);opacity:1}80%{transform:rotate(2deg) scale(1);opacity:1}100%{transform:rotate(0deg) scale(1);opacity:1}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-20deg) scale(.94);opacity:0}38%{transform:rotate(2deg) scale(1.06);opacity:1}48%{transform:rotate(0deg) scale(1);opacity:1}64%{transform:rotate(-2deg) scale(1);opacity:1}80%{transform:rotate(2deg) scale(1);opacity:1}100%{transform:rotate(0deg) scale(1);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5807,7 +5807,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{transform:scaleX(.9) scaleY(.95);opacity:0}38%{transform:scaleX(1.04) scaleY(1.02);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scaleX(1.02) scaleY(1);opacity:1}78%{transform:scaleX(1) scaleY(1);opacity:1}100%{transform:scale(1);opacity:1}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5861,7 +5861,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5886,7 +5886,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kDraw}{0%{stroke-dashoffset:100;stroke-opacity:1}38%{stroke-dashoffset:0;stroke-opacity:1}48%{stroke-dashoffset:0;stroke-opacity:1}58%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kDraw}{stroke-dasharray:100;animation:${kDraw} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -5942,7 +5942,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -5965,7 +5965,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -5989,7 +5989,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kDraw}{0%{stroke-dashoffset:100;stroke-opacity:1}38%{stroke-dashoffset:0;stroke-opacity:1}48%{stroke-dashoffset:0;stroke-opacity:1}58%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kDraw}{stroke-dasharray:100;animation:${kDraw} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -6015,7 +6015,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPkt}{0%{stroke-dashoffset:0;stroke-opacity:1}72%{stroke-dashoffset:-100;stroke-opacity:1}78%{stroke-dashoffset:-100;stroke-opacity:1}88%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPkt}{animation:${kPkt} ${dur} linear infinite}` +
@@ -6039,7 +6039,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -6060,7 +6060,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%{transform:scale(1)}58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%{transform:scale(1)}58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
       `.${kAll},.${kMv}{animation:none!important}` +
@@ -6113,7 +6113,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6136,7 +6136,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0deg) translateY(0)}62%{transform:rotate(-3deg) translateY(0)}76%{transform:rotate(3deg) translateY(0)}88%,100%{transform:rotate(0deg) translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -6192,7 +6192,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6219,7 +6219,7 @@ function buildAnimatedSvg(item) {
         `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{transform:translateX(-12px);opacity:0}62%{opacity:.7}74%,100%{transform:translateX(28px);opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -6244,7 +6244,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0deg) translateY(0)}60%{transform:rotate(-3deg) translateY(-0.8px)}74%{transform:rotate(3deg) translateY(0)}86%,100%{transform:rotate(0deg) translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -6270,7 +6270,7 @@ function buildAnimatedSvg(item) {
         `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%,100%{opacity:1;transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{transform:translateX(-12px);opacity:0}62%{opacity:.7}74%,100%{transform:translateX(28px);opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -6297,7 +6297,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} ease-out infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} ease-in-out infinite}` +
@@ -6354,7 +6354,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6411,7 +6411,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6470,7 +6470,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6495,7 +6495,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%{stroke-dashoffset:-100;stroke-opacity:1}78%{stroke-opacity:1}88%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} ease-out infinite}` +
         `.${kPacket}{animation:${kPacket} ${dur} ease-in-out infinite}` +
@@ -6552,7 +6552,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6609,7 +6609,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6664,7 +6664,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6721,7 +6721,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6776,7 +6776,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6799,7 +6799,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0) translateY(0)}64%{transform:rotate(3deg) translateY(-0.8px)}80%{transform:rotate(-3deg) translateY(0)}100%{transform:rotate(0) translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -6821,7 +6821,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0) translateY(0)}64%{transform:rotate(3deg) translateY(-0.8px)}80%{transform:rotate(-3deg) translateY(0)}100%{transform:rotate(0) translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -6876,7 +6876,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -6899,7 +6899,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(8px)}38%{opacity:1;transform:translateY(0)}48%{transform:translateY(-0.5px) rotate(-2deg)}58%{transform:translateY(-1px) rotate(0)}68%{transform:translateY(-0.5px) rotate(2deg)}78%,100%{transform:translateY(0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -6923,7 +6923,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%,78%{stroke-dashoffset:-100;stroke-opacity:1}88%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPacket}{animation:${kPacket} ${dur} linear infinite}` +
@@ -6950,7 +6950,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kDraw}{0%{stroke-dashoffset:100;stroke-opacity:1}38%,48%{stroke-dashoffset:0;stroke-opacity:1}58%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kDraw}{stroke-dasharray:100;animation:${kDraw} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -6975,7 +6975,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-25deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}58%{transform:rotate(2deg)}68%{transform:rotate(0)}78%{transform:rotate(-2deg)}88%,100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -6996,8 +6996,8 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.03)}48%{transform:rotate(0) scale(1)}58%{transform:rotate(2deg) scale(1)}68%{transform:rotate(0) scale(1)}78%{transform:rotate(-2deg) scale(1)}88%,100%{transform:rotate(0) scale(1)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.06)}48%{transform:rotate(0) scale(1)}58%{transform:rotate(2deg) scale(1)}68%{transform:rotate(0) scale(1)}78%{transform:rotate(-2deg) scale(1)}88%,100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7017,7 +7017,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}`,
       `.${kAll},.${kMv}{animation:none!important}` +
@@ -7040,7 +7040,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%,78%{stroke-dashoffset:-100;stroke-opacity:1}88%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPacket}{animation:${kPacket} ${dur} linear infinite}` +
@@ -7084,7 +7084,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} ease-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7107,7 +7107,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0)}58%{transform:rotate(4deg) translateY(-0.4px)}68%{transform:rotate(0) translateY(-0.8px)}78%{transform:rotate(-4deg) translateY(-0.4px)}88%,100%{transform:rotate(0) translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7131,7 +7131,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%,78%{stroke-dashoffset:-100;stroke-opacity:1}88%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPacket}{animation:${kPacket} ${dur} linear infinite}` +
@@ -7207,7 +7207,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -7230,7 +7230,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0)}58%{transform:rotate(3deg) translateY(-0.4px)}68%{transform:rotate(0) translateY(-0.8px)}78%{transform:rotate(-3deg) translateY(-0.4px)}88%,100%{transform:rotate(0) translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7252,7 +7252,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0)}80%{transform:rotate(3deg)}100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7276,7 +7276,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7301,7 +7301,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(8px)}38%{opacity:1;transform:translateY(0) rotate(0)}50%{transform:rotate(-2deg)}62%{transform:translateY(-1px) rotate(0)}74%{transform:translateY(0) rotate(2deg)}86%,100%{transform:translateY(0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7355,7 +7355,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -7378,7 +7378,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-4deg) translateY(2px)}40%{opacity:1;transform:rotate(2deg) translateY(0)}48%{transform:rotate(0)}58%{transform:rotate(3deg) translateY(-0.4px)}68%{transform:rotate(0) translateY(-0.8px)}78%{transform:rotate(-3deg) translateY(-0.4px)}88%,100%{transform:rotate(0) translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}81%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7399,7 +7399,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.85)}38%{opacity:1;transform:scale(1.06)}48%,100%{transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7421,7 +7421,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(6px)}38%,100%{opacity:1;transform:translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7452,7 +7452,7 @@ function buildAnimatedSvg(item) {
         `<clipPath id="${idClip}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(${sheenX0}px)}60%{opacity:1}70%{opacity:1}74%,100%{opacity:0;transform:translateX(${sheenX1}px)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-out infinite}` +
@@ -7531,7 +7531,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7560,7 +7560,7 @@ function buildAnimatedSvg(item) {
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kScan}{0%,18%{opacity:0;transform:translateY(0)}33%{opacity:.8}48%,100%{opacity:0;transform:translateY(26px)}}` +
         `@keyframes ${kCur}{0%,58%{opacity:0}62%{opacity:1}68%{opacity:0}73%{opacity:1}78%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kScan}{opacity:0;animation:${kScan} ${dur} cubic-bezier(.5,0,.5,1) infinite}` +
@@ -7589,7 +7589,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7620,7 +7620,7 @@ function buildAnimatedSvg(item) {
       `<linearGradient id="${idGrad}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>` +
         `<clipPath id="${idClip}"><path clip-rule="evenodd" d="${d}"/></clipPath>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(${sheenX0}px)}60%{opacity:1}70%{opacity:1}74%,100%{opacity:0;transform:translateX(${sheenX1}px)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-out infinite}` +
@@ -7643,8 +7643,8 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.03)}48%{transform:rotate(0) scale(1)}62%{transform:rotate(2deg) scale(1)}76%{transform:rotate(-2deg) scale(1)}88%{transform:rotate(1deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.06)}48%{transform:rotate(0) scale(1)}62%{transform:rotate(2deg) scale(1)}76%{transform:rotate(-2deg) scale(1)}88%{transform:rotate(1deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7668,7 +7668,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7694,7 +7694,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7720,7 +7720,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7743,8 +7743,8 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.03)}48%{transform:rotate(0) scale(1)}62%{transform:rotate(2deg) scale(1)}76%{transform:rotate(-2deg) scale(1)}88%{transform:rotate(1deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.06)}48%{transform:rotate(0) scale(1)}62%{transform:rotate(2deg) scale(1)}76%{transform:rotate(-2deg) scale(1)}88%{transform:rotate(1deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7768,7 +7768,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%,78%{stroke-dashoffset:-100;stroke-opacity:1}88%,100%{stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPacket}{animation:${kPacket} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7813,7 +7813,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%,78%{stroke-dashoffset:-100;stroke-opacity:1}88%,100%{stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPacket}{animation:${kPacket} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7872,7 +7872,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -7894,7 +7894,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} ease-out infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -7920,7 +7920,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -7978,7 +7978,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -8033,7 +8033,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -8055,7 +8055,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.92)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8079,7 +8079,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -8107,7 +8107,7 @@ function buildAnimatedSvg(item) {
         `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(-14px)}60%{opacity:1}70%{opacity:1;transform:translateX(22px)}74%,100%{opacity:0;transform:translateX(22px)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -8131,7 +8131,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8155,7 +8155,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing0}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
         `@keyframes ${kRing1}{0%,16%{opacity:0;transform:scale(.6)}37%{opacity:.5;transform:scale(1)}58%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing0}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing0} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kRing1}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing1} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -8183,7 +8183,7 @@ function buildAnimatedSvg(item) {
         `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%,100%{opacity:1;transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{opacity:0;transform:translateX(-14px)}60%{opacity:1}70%{opacity:1;transform:translateX(22px)}74%,100%{opacity:0;transform:translateX(22px)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -8207,7 +8207,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8229,7 +8229,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8251,7 +8251,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-25deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}58%{transform:rotate(2deg)}70%{transform:rotate(-2deg)}82%,100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8290,7 +8290,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         riseStyles.join(''),
@@ -8312,7 +8312,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8334,7 +8334,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translate(0,8px)}38%{opacity:1;transform:translate(0,0)}50%{transform:translate(1px,-1px)}62%{transform:translate(0,0)}74%{transform:translate(-1px,-1px)}86%,100%{transform:translate(0,0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8355,7 +8355,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(8px)}38%{opacity:1;transform:translateY(0)}50%{transform:translateY(-1px) scaleX(1.03)}62%{transform:translateY(0) scaleX(1)}74%{transform:translateY(-1px) scaleX(1.03)}86%,100%{transform:translateY(0) scaleX(1)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8378,7 +8378,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -8431,8 +8431,8 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.03)}48%{transform:rotate(0) scale(1)}62%{transform:rotate(2deg) scale(1)}74%{transform:rotate(-2deg) scale(1)}86%{transform:rotate(2deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg) scale(.94)}38%{opacity:1;transform:rotate(2deg) scale(1.06)}48%{transform:rotate(0) scale(1)}62%{transform:rotate(2deg) scale(1)}74%{transform:rotate(-2deg) scale(1)}86%{transform:rotate(2deg) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8453,7 +8453,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8475,7 +8475,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%,100%{transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8498,7 +8498,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
         `@keyframes ${kPacket}{0%{stroke-dashoffset:0;stroke-opacity:1}72%{stroke-dashoffset:-100;stroke-opacity:1}78%{stroke-opacity:1}88%,100%{stroke-opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPacket}{animation:${kPacket} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -8522,7 +8522,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-25deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}62%{transform:rotate(2deg)}74%{transform:rotate(-2deg)}86%{transform:rotate(2deg)}100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8543,7 +8543,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-30deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}62%{transform:rotate(3deg)}74%{transform:rotate(-3deg)}86%{transform:rotate(3deg)}100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8555,49 +8555,39 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // PREFECT — the orbit spins into place with one signal ring.
+  // PREFECT — the workflow keeps orbiting: the ring never stops turning.
   if (item.id === 'prefect') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kRing = `tss_${uid}_rg`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg)}38%{opacity:1;transform:rotate(2deg)}48%{transform:rotate(0)}62%{transform:rotate(2deg)}74%{transform:rotate(-2deg)}86%{transform:rotate(2deg)}100%{transform:rotate(0)}}` +
-        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}8%,90%{opacity:1}97%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kRing},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kRing}{opacity:0!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
-        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
-      'The Prefect orbit spins into place with one signal ring',
-      'Orbit spin + transient ring + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} linear infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Prefect flow keeps orbiting, one full turn per loop',
+      'Continuous orbit'
     );
   }
 
-  // PRIMEREACT — the atom spins into place and settles.
+  // PRIMEREACT — the atom beats twice before it holds.
   if (item.id === 'primereact') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     return wrapSvg(
       '',
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-30deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}62%{transform:rotate(2deg)}74%{transform:rotate(-2deg)}86%{transform:rotate(2deg)}100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%{opacity:1}92%,96%{opacity:1}100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:scale(.92)}10%{transform:scale(1)}26%{transform:scale(.95)}34%{transform:scale(1.06)}42%{transform:scale(.98)}48%{transform:scale(1)}60%{transform:scale(1.04)}68%,100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
-      'The PrimeReact atom spins into place and settles',
-      'Atom spin + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The PrimeReact atom beats twice and then holds',
+      'Double scale beat'
     );
   }
 
@@ -8643,7 +8633,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -8665,7 +8655,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(8px) rotate(0)}38%{opacity:1;transform:translateY(0) rotate(0)}50%{transform:translateY(0) rotate(-4deg)}62%{transform:translateY(0) rotate(3deg)}74%,100%{transform:translateY(0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8720,7 +8710,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -8733,25 +8723,22 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // QUARKUS — the swirl spins into place and settles.
+  // QUARKUS — the swirl spirals down into its resting angle.
   if (item.id === 'quarkus') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     const { defs, body, scale, tx, ty } = readDeviconReference(item);
     return wrapSvg(
       defs,
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-25deg)}38%{opacity:1;transform:rotate(3deg)}48%{transform:rotate(0)}62%{transform:rotate(2deg)}74%{transform:rotate(-2deg)}86%{transform:rotate(2deg)}100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%,90%{opacity:1}97%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-140deg) scale(.86)}62%{transform:rotate(4deg) scale(1.05)}80%,100%{transform:rotate(0) scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
-      'The Quarkus swirl spins into place and settles',
-      'Swirl spin + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.16,1,.3,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g>`,
+      'The Quarkus swirl spirals down into its resting angle',
+      'Long spiral unwind'
     );
   }
 
@@ -8765,7 +8752,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.9)}38%{opacity:1;transform:scale(1.05)}48%{transform:scale(1)}57%{transform:translateY(-1px)}66%{transform:translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8786,7 +8773,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.06)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8809,7 +8796,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateX(-6px)}38%{opacity:1;transform:translateX(2px)}48%{transform:translateX(0)}100%{transform:translateX(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8831,7 +8818,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translate(-6px,2px) rotate(-3deg)}38%{opacity:1;transform:translate(2px,0) rotate(1deg)}48%{transform:translate(0,0) rotate(0)}100%{transform:translate(0,0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -8886,7 +8873,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -8942,7 +8929,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -8966,7 +8953,7 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
         `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -9024,7 +9011,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -9047,7 +9034,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-8deg) translateY(4px)}38%{opacity:1;transform:rotate(2deg) translateY(0)}50%{transform:rotate(-1deg)}62%,100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9095,7 +9082,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(1.1)}38%{opacity:1;transform:scale(.97)}48%{transform:scale(1)}100%{transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9116,7 +9103,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scaleX(.18)}30%{opacity:1;transform:scaleX(.9)}44%{transform:scaleX(1.05)}54%{transform:scaleX(1)}100%{transform:scaleX(1)}}` +
-        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9141,7 +9128,7 @@ function buildAnimatedSvg(item) {
         `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".55"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(.94)}38%{opacity:1;transform:scale(1.04)}48%{transform:scale(1)}100%{transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `@keyframes ${kSheen}{0%,56%{transform:translateX(0);opacity:0}58%{opacity:1}74%,100%{transform:translateX(38px);opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
@@ -9199,7 +9186,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -9222,7 +9209,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translate(-6px,2px) rotate(-4deg)}38%{opacity:1;transform:translate(2px,0) rotate(1.5deg)}48%{transform:translate(0,0) rotate(0)}100%{transform:translate(0,0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9276,7 +9263,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -9298,7 +9285,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(10px)}38%{opacity:1;transform:translateY(-1.5px)}50%{transform:translateY(1px)}62%,100%{transform:translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9352,7 +9339,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -9365,25 +9352,22 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // ROS — the mark turns into place and holds.
+  // ROS — the gear meshes: two short turns, then it locks.
   if (item.id === 'ros') {
     const kAll = `tss_${uid}_al`,
-      kMv = `tss_${uid}_mv`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`;
     const { defs, body, scale, tx, ty } = readDeviconReference(item);
     return wrapSvg(
       defs,
-      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-20deg)}38%{opacity:1;transform:rotate(2deg)}48%{transform:rotate(0)}62%{transform:rotate(1.5deg)}74%{transform:rotate(-1.5deg)}86%,100%{transform:rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+      `@keyframes ${kAll}{0%{opacity:0}6%,90%{opacity:1}97%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(8deg) scale(.97)}26%{transform:rotate(-3deg) scale(1)}38%{transform:rotate(4deg) scale(.99)}52%{transform:rotate(-1deg)}66%{transform:rotate(1deg)}80%,100%{transform:rotate(0) scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
-      'The ROS mark turns into place and holds',
-      'Turn-in with sway + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.36,0,.2,1) infinite}`,
+      `.${kAll},.${kMv}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g>`,
+      'The ROS gear meshes through two short turns and locks',
+      'Gear mesh ratchet'
     );
   }
 
@@ -9396,8 +9380,8 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-40deg) scale(.9)}40%{opacity:1;transform:rotate(4deg) scale(1.03)}52%{transform:rotate(0) scale(1)}100%{transform:rotate(0) scale(1)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-40deg) scale(.9)}40%{opacity:1;transform:rotate(4deg) scale(1.06)}52%{transform:rotate(0) scale(1)}100%{transform:rotate(0) scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9418,7 +9402,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(-9px)}38%{opacity:1;transform:translateY(1px)}50%{transform:translateY(-.5px)}62%,100%{transform:translateY(0)}}` +
-        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9439,7 +9423,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateX(-8px)}38%{opacity:1;transform:translateX(2px)}50%{transform:translateX(0)}100%{transform:translateX(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9460,7 +9444,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(1.14) rotate(6deg)}38%{opacity:1;transform:scale(.96) rotate(-2deg)}50%{transform:scale(1) rotate(0)}100%{transform:scale(1) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9514,7 +9498,7 @@ function buildAnimatedSvg(item) {
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
         styles.join(''),
@@ -9536,7 +9520,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateY(-7px) scaleY(.9)}34%{opacity:1;transform:translateY(0) scaleY(1.04)}46%{transform:translateY(0) scaleY(.98)}56%,100%{transform:translateY(0) scaleY(1)}}` +
-        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9557,7 +9541,7 @@ function buildAnimatedSvg(item) {
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:translateX(-9px) rotate(-6deg)}36%{opacity:1;transform:translateX(2px) rotate(1deg)}48%{transform:translateX(0) rotate(0)}100%{transform:translateX(0) rotate(0)}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
@@ -9579,7 +9563,7 @@ function buildAnimatedSvg(item) {
       defs,
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMv}{0%{opacity:0;transform:scale(1.1)}38%{opacity:1;transform:scale(.97)}50%{transform:scale(1)}100%{transform:scale(1)}}` +
-        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.05)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
