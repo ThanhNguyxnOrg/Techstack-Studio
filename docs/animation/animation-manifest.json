@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:23:54.572Z",
+  "generatedAt": "2026-11-08T13:33:01.211Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -8141,8 +8141,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/newrelic.svg",
       "animatedSvgPath": "/icons/animated/newrelic.svg",
-      "animationConcept": "The New Relic mark settles into place",
-      "animationTechnique": "story: fan (3 pieces)",
+      "animationConcept": "The New Relic mark settles in from the side, part by part",
+      "animationTechnique": "story: sweep (3 pieces)",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,

@@ -1782,6 +1782,7 @@ const STORY_OVERRIDES = {
   laravel: 'trace',
   logstash: 'cascade',
   mariadb: 'press',
+  newrelic: 'sweep',
 };
 
 const STORY_MOTIONS = {
