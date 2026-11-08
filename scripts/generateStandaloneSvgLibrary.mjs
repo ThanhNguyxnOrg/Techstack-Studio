@@ -1773,6 +1773,8 @@ const STORY_OVERRIDES = {
   haproxy: 'glide',
   heroku: 'pop',
   homebrew: 'stack',
+  influxdb: 'trace',
+  istio: 'fan',
 };
 
 const STORY_MOTIONS = {
