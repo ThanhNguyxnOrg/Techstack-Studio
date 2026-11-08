@@ -4418,7 +4418,7 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  const deviconBespokeIds = new Set(['quarkus', 'racket', 'railway', 'rancher']);
+  const deviconBespokeIds = new Set(['quarkus', 'racket', 'railway', 'rancher', 'redhat', 'remix']);
 
   // DEVICON PER-MARK MOTION — each listed entry gets a mode fitted to its mark.
   if (
@@ -8829,6 +8829,132 @@ function buildAnimatedSvg(item) {
         `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
       'The Reason mark draws itself and settles',
       'Contour draw + fill lock + slow pulse'
+    );
+  }
+
+  // RECOIL — the orbits turn in one after another and settle.
+  if (item.id === 'recoil') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const turnKeys = (start, mid, end) =>
+      `0%,${start}%{opacity:0;transform:rotate(-35deg) scale(.84)}${mid}%{opacity:1;transform:rotate(3deg) scale(1.05)}${end}%,100%{opacity:1;transform:rotate(0) scale(1)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 22).toFixed(1));
+        const mid = Number(Math.min(34, start + 12).toFixed(1));
+        const end = Number(Math.min(38, start + 18).toFixed(1));
+        styles.push(`@keyframes ${cls}{${turnKeys(start, mid, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${turnKeys(0, 16, 32)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 50%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Recoil orbits turn into place and settle',
+      'Per-orbit rotate-in + slow pulse'
+    );
+  }
+
+  // REDHAT — the hat tips in, nods once, then settles.
+  if (item.id === 'redhat') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(-8deg) translateY(4px)}38%{opacity:1;transform:rotate(2deg) translateY(0)}50%{transform:rotate(-1deg)}62%,100%{transform:rotate(0)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The Red Hat tips into place and settles',
+      'Hat tilt with a nod + slow pulse'
+    );
+  }
+
+  // RELAY — the node draws its own contour, then locks the fill.
+  if (item.id === 'relay') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kTrace = `tss_${uid}_tr`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
+        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}">` +
+        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
+      'The Relay node draws itself and settles',
+      'Contour draw + fill lock + slow pulse'
+    );
+  }
+
+  // REMIX — the mark settles into place with one soft press.
+  if (item.id === 'remix') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scale(1.1)}38%{opacity:1;transform:scale(.97)}48%{transform:scale(1)}100%{transform:scale(1)}}` +
+        `@keyframes ${kPulse}{0%,62%{transform:scale(1)}82%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><g transform="translate(${tx} ${ty}) scale(${scale})">${body}</g></g></g></g>`,
+      'The Remix mark presses into place and settles',
+      'Soft press settle + slow pulse'
     );
   }
 
