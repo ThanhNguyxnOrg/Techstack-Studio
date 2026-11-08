@@ -4933,6 +4933,129 @@ function buildAnimatedSvg(item) {
     );
   }
 
+  // APACHECOUCHDB — couch settles: the whole couch rises into place, then
+  // breathes with one slow pulse.
+  if (item.id === 'apachecouchdb') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:translateY(10px);opacity:0}40%,100%{transform:translateY(0);opacity:1}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{transform:none!important;opacity:1!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The CouchDB couch rises into place and breathes',
+      'Couch rise + slow pulse'
+    );
+  }
+
+  // APACHECORDOVA — robot boot: a scan line loads the clipped mark, the fill
+  // locks in, then the whole robot wakes with a slow pulse.
+  if (item.id === 'apachecordova') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kScan = `tss_${uid}_sc`,
+      kPulse = `tss_${uid}_pl`,
+      cWin = `tss_${uid}_cw`;
+    return wrapSvg(
+      `<clipPath id="${cWin}"><path d="${d}" clip-rule="evenodd"/></clipPath>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,28%{fill-opacity:.3}46%,100%{fill-opacity:1}}` +
+        `@keyframes ${kScan}{0%,18%{transform:translateY(0);opacity:0}30%{opacity:.8}48%,100%{transform:translateY(26px);opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kScan}{opacity:0;animation:${kScan} ${dur} cubic-bezier(.5,0,.5,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kScan},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kScan}{opacity:0!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g clip-path="url(#${cWin})"><path class="${kFill}" fill="${primary}" d="${d}"/><rect class="${kScan}" x="-2" y="-2" width="28" height="1.2" fill="#FFFFFF"/></g></g></g>`,
+      'Cordova boots with a scan line and wakes',
+      'Clipped scan line + fill + wake pulse'
+    );
+  }
+
+  // APACHEDORIS — triangle assembly: the data triangle assembles from its
+  // parts, then settles into a slow breath.
+  if (item.id === 'apachedoris') {
+    const kAll = `tss_${uid}_al`,
+      kPulse = `tss_${uid}_pl`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start) =>
+      `0%,${start}%{opacity:0;transform:translateY(7px)}38%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 38).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(`<g class="${cls}"><path fill="${primary}" d="${subD}"/></g>`);
+      });
+    } else {
+      const cls = `tss_${uid}_pt0`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kPulse}{transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}"><g class="${kPulse}">${bodyParts.join('')}</g></g>`,
+      'The Doris data triangle assembles and breathes',
+      'Per-part rise + slow pulse'
+    );
+  }
+
+  // APACHEFLINK — squirrel tail flick: the mark flicks into place, sways
+  // gently through the hold, and pulses once.
+  if (item.id === 'apacheflink') {
+    const kAll = `tss_${uid}_al`,
+      kMv = `tss_${uid}_mv`,
+      kPulse = `tss_${uid}_pl`;
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kMv}{0%{transform:rotate(-5deg)}30%{transform:rotate(2deg)}44%{transform:rotate(0deg)}62%{transform:rotate(-2deg)}80%{transform:rotate(2deg)}100%{transform:rotate(0deg)}}` +
+        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv},.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Flink squirrel flicks its tail and settles',
+      'Tail-flick rotation + slow pulse'
+    );
+  }
+
   // Technique 1: Power-Ignition + Brand Halo (PR #15 Spring Boot style, using the logo's own geometry!)
   if (
     family === 'flame-core-flicker' ||
