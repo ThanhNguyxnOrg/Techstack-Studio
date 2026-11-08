@@ -4299,7 +4299,7 @@ function buildAnimatedSvg(item) {
   }
 
   // DEVICON PER-MARK MOTION — each listed entry gets a mode fitted to its mark.
-  if (DEVICON_ENTRIES[item.id] && DEVICON_MOTION[item.id]) {
+  if (DEVICON_ENTRIES[item.id] && DEVICON_MOTION[item.id] && item.id !== 'algolia') {
     const spec = DEVICON_MOTION[item.id];
     const mode = typeof spec === 'string' ? spec : spec.mode;
     const skipFirst = typeof spec === 'object' && spec.skipFirst;
@@ -4448,7 +4448,7 @@ function buildAnimatedSvg(item) {
 
   // DEVICON FULL-COLOUR SETTLE — shared motion for catalogue entries whose
   // official-shaped art already exists as a Devicon original.
-  if (DEVICON_ENTRIES[item.id]) {
+  if (DEVICON_ENTRIES[item.id] && item.id !== 'algolia') {
     const kAll = `tss_${uid}_al`,
       kPop = `tss_${uid}_pp`,
       kSh = `tss_${uid}_sh`,
@@ -4618,6 +4618,161 @@ function buildAnimatedSvg(item) {
       `<g class="${kAll}"><g class="${kPulse}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/><path class="${kPkt}" fill="none" stroke="${secondary}" stroke-width="1.2" stroke-linecap="round" pathLength="100" stroke-dasharray="10 90" d="${d}"/></g></g>`,
       'A data packet loops around the Airbyte ring while the mark fills',
       'Dash packet loop + fill lock + slow pulse'
+    );
+  }
+
+  // AKAMAI — edge signal: the mark's own subpaths trace in, the fill locks,
+  // then one signal ring radiates outward from the edge mark.
+  if (item.id === 'akamai') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kRing = `tss_${uid}_rg`;
+    const n = Math.max(1, subpaths.length);
+    const traceStyles = [];
+    const tracePaths = [];
+    const traceReduce = [];
+    subpaths.forEach((subD, idx) => {
+      const cls = `tss_${uid}_tr${idx}`;
+      const start = Number(((idx / n) * 20).toFixed(1));
+      const end = Number(Math.min(36, start + 16).toFixed(1));
+      traceStyles.push(
+        `@keyframes ${cls}{0%,${start}%{stroke-dashoffset:100}${end}%,100%{stroke-dashoffset:0}}.${cls}{stroke-dasharray:100;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      traceReduce.push(
+        `.${cls}{animation:none!important;stroke-dashoffset:0!important;stroke-opacity:0!important}`
+      );
+      tracePaths.push(
+        `<path class="${cls}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" d="${subD}"/>`
+      );
+    });
+    return wrapSvg(
+      '',
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,30%{fill-opacity:.3}48%,100%{fill-opacity:1}}` +
+        `@keyframes ${kRing}{0%,40%{opacity:0;transform:scale(.6)}54%{opacity:.5}68%,100%{opacity:0;transform:scale(1.4)}}` +
+        traceStyles.join('') +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;opacity:0;animation:${kRing} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kRing}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kRing}{opacity:0!important;transform:none!important}` +
+        traceReduce.join(''),
+      `<g class="${kAll}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>${tracePaths.join('')}<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g>`,
+      'The Akamai edge mark draws in and sends one signal ring outward',
+      'Subpath trace + fill lock + transient edge ring'
+    );
+  }
+
+  // ALACRITTY — terminal boot: a scan line loads the clipped mark, then the
+  // cursor blinks in the corner while the mark holds.
+  if (item.id === 'alacritty') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kScan = `tss_${uid}_sc`,
+      kCur = `tss_${uid}_cu`,
+      cWin = `tss_${uid}_cw`;
+    return wrapSvg(
+      `<clipPath id="${cWin}"><path d="${d}" clip-rule="evenodd"/></clipPath>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,30%{fill-opacity:.3}50%,100%{fill-opacity:1}}` +
+        `@keyframes ${kScan}{0%,18%{transform:translateY(0);opacity:0}30%{opacity:.8}48%,100%{transform:translateY(26px);opacity:0}}` +
+        `@keyframes ${kCur}{0%,58%{opacity:0}63%{opacity:1}68%{opacity:0}73%{opacity:1}78%,100%{opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kScan}{opacity:0;animation:${kScan} ${dur} cubic-bezier(.5,0,.5,1) infinite}` +
+        `.${kCur}{opacity:0;animation:${kCur} ${dur} steps(1,end) infinite}`,
+      `.${kAll},.${kFill},.${kScan},.${kCur}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kScan}{opacity:0!important;transform:none!important}.${kCur}{opacity:0!important}`,
+      `<g class="${kAll}"><g clip-path="url(#${cWin})"><path class="${kFill}" fill="${primary}" d="${d}"/><rect class="${kScan}" x="-2" y="-2" width="28" height="1.2" fill="#FFFFFF"/></g><rect class="${kCur}" x="9.5" y="16" width="5" height="1.6" rx=".3" fill="#FFFFFF"/></g>`,
+      'Alacritty boots: a scan line loads the mark and the cursor blinks',
+      'Clipped scan line + cursor blink'
+    );
+  }
+
+  // ALGOLIA — search finds: a dash packet runs the outline, the fill locks,
+  // then the found mark takes one slow pulse.
+  if (item.id === 'algolia') {
+    const kAll = `tss_${uid}_al`,
+      kFill = `tss_${uid}_fl`,
+      kPkt = `tss_${uid}_pk`,
+      kPulse = `tss_${uid}_pl`;
+    const { defs, body, scale, tx, ty } = readDeviconReference(item);
+    const d0 = (body.match(/\sd="([^"]+)"/) || [])[1] || d;
+    return wrapSvg(
+      defs,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kFill}{0%,25%{opacity:0}45%,100%{opacity:1}}` +
+        `@keyframes ${kPkt}{0%{stroke-dashoffset:0;stroke-opacity:1}70%{stroke-dashoffset:-100;stroke-opacity:1}80%,100%{stroke-dashoffset:-100;stroke-opacity:0}}` +
+        `@keyframes ${kPulse}{0%,50%{transform:scale(1)}75%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kPkt}{animation:${kPkt} ${dur} linear infinite}` +
+        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
+      `.${kAll},.${kFill},.${kPkt},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{opacity:1!important}.${kPkt}{opacity:0!important;stroke-opacity:0!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kFill}" transform="translate(${tx} ${ty}) scale(${scale})">${body}</g>` +
+        `<path class="${kPkt}" transform="translate(${tx} ${ty}) scale(${scale})" fill="none" stroke="${primary}" stroke-width="2" stroke-linecap="round" pathLength="100" stroke-dasharray="6 94" d="${d0}"/></g></g>`,
+      'A search cursor runs the Algolia outline, then the mark locks',
+      'Dash search packet + fill lock + slow pulse'
+    );
+  }
+
+  // ALPINELINUX — peaks rise: each peak subpath rises from the baseline, then
+  // one clipped sheen passes across the settled mark.
+  if (item.id === 'alpinelinux') {
+    const kAll = `tss_${uid}_al`,
+      kSheen = `tss_${uid}_sh`,
+      gSheen = `tss_${uid}_gs`,
+      cMark = `tss_${uid}_cm`;
+    const styles = [];
+    const bodyParts = [];
+    const reduceRules = [];
+    const riseKeys = (start, end) =>
+      `0%,${start}%{opacity:0;transform:translateY(8px)}${end}%,100%{opacity:1;transform:translateY(0)}`;
+    if (subpaths.length >= 2) {
+      const n = subpaths.length;
+      subpaths.forEach((subD, idx) => {
+        const cls = `tss_${uid}_pt${idx}`;
+        const start = Number(((idx / n) * 24).toFixed(1));
+        const end = Number(Math.min(40, start + 16).toFixed(1));
+        styles.push(`@keyframes ${cls}{${riseKeys(start, end)}}`);
+        styles.push(
+          `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+        );
+        reduceRules.push(
+          `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+        );
+        bodyParts.push(
+          `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${subD}"/></g>`
+        );
+      });
+    } else {
+      const cls = `tss_${uid}_pt`;
+      styles.push(`@keyframes ${cls}{${riseKeys(0, 30)}}`);
+      styles.push(
+        `.${cls}{transform-box:fill-box;transform-origin:50% 100%;animation:${cls} ${dur} cubic-bezier(.22,1,.36,1) infinite}`
+      );
+      reduceRules.push(
+        `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
+      );
+      bodyParts.push(
+        `<g class="${cls}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>`
+      );
+    }
+    return wrapSvg(
+      `<clipPath id="${cMark}"><path d="${d}" clip-rule="evenodd"/></clipPath>` +
+        `<linearGradient id="${gSheen}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>`,
+      `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `@keyframes ${kSheen}{0%,54%{transform:translateX(0);opacity:0}58%{opacity:.6}72%,100%{transform:translateX(32px);opacity:0}}` +
+        `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+        `.${kSheen}{opacity:0;animation:${kSheen} ${dur} ease-in-out infinite}` +
+        styles.join(''),
+      `.${kAll},.${kSheen}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kSheen}{opacity:0!important;transform:none!important}` +
+        reduceRules.join(''),
+      `<g class="${kAll}">${bodyParts.join('')}<g clip-path="url(#${cMark})"><rect class="${kSheen}" x="-8" y="-2" width="8" height="28" fill="url(#${gSheen})"/></g></g>`,
+      'The Alpine peaks rise from the baseline and catch one light pass',
+      'Staggered peak rise + clipped sheen'
     );
   }
 
