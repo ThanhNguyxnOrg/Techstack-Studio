@@ -73,8 +73,8 @@ const DEVICON_MOTION = {
   ruby: 'stagger',
   scala: 'stagger',
   solid: 'stagger',
-  laravel: 'stagger',
-  symfony: 'stagger',
+  laravel: 'trace',
+  symfony: 'trace',
   pnpm: 'stagger',
   cmake: 'stagger',
   neovim: 'stagger',
@@ -4061,16 +4061,37 @@ function buildAnimatedSvg(item) {
         '0%{transform:scale(.94);opacity:0}36%{transform:scale(1.04);opacity:1}48%{transform:scale(1);opacity:1}62%{transform:scale(1.03);opacity:1}80%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:1}'
       );
     }
-    // stagger: only when the body is a bare sequence of paths
-    const bare = body.trim();
-    const paths = [...bare.matchAll(/<path[^>]*\/>/g)].map((m) => m[0]);
-    if (paths.length >= 2 && paths.join('').length === bare.length) {
+    if (mode === 'trace') {
+      const d0 = (body.match(/\sd="([^"]+)"/) || [])[1] || '';
+      const fill = (body.match(/fill="([^"]+)"/) || [])[1] || primary;
+      const kFill = `tss_${uid}_fl`;
+      const kTr = `tss_${uid}_tr`;
+      const fillLayer = body.replace('<path ', `<path class="${kFill}" `);
+      return wrapSvg(
+        defs,
+        `${baseStyle}` +
+          `@keyframes ${kFill}{0%,40%{fill-opacity:0}55%,100%{fill-opacity:1}}` +
+          `@keyframes ${kTr}{0%{stroke-dashoffset:100;stroke-opacity:1}40%{stroke-dashoffset:0;stroke-opacity:1}55%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
+          `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
+          `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+          `.${kTr}{stroke-dasharray:100;animation:${kTr} ${dur} cubic-bezier(.22,1,.36,1) infinite}`,
+        `${baseReduced}.${kAll},.${kFill},.${kTr}{animation:none!important}.${kFill}{fill-opacity:1!important}.${kTr}{opacity:0!important;stroke-opacity:0!important}`,
+        `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})">${fillLayer}` +
+          `<path class="${kTr}" fill="none" stroke="${fill}" stroke-width="2" stroke-linejoin="round" pathLength="100" d="${d0}"/></g></g>`,
+        `The ${item.name} mark draws its own contour, then locks the fill`,
+        'Owner-path contour trace + fill lock'
+      );
+    }
+    // stagger: inject a per-path class into the body, whatever its markup
+    const pathMatches = [...body.matchAll(/<path[^>]*\/>/g)];
+    if (pathMatches.length >= 2) {
       const styles = [];
       const rules = [];
       const reduces = [];
-      const markup = [];
-      const n = paths.length;
-      paths.forEach((p, i) => {
+      const n = pathMatches.length;
+      let idx = 0;
+      const styledBody = body.replace(/<path/g, () => {
+        const i = idx++;
         const cls = `tss_${uid}_s${i}`;
         const start = Math.round((i / n) * 16);
         const end = Math.min(44, start + 26);
@@ -4081,7 +4102,7 @@ function buildAnimatedSvg(item) {
         reduces.push(
           `.${cls}{animation:none!important;opacity:1!important;transform:none!important}`
         );
-        markup.push(p.replace('<path ', `<path class="${cls}" `));
+        return `<path class="${cls}"`;
       });
       return wrapSvg(
         defs,
@@ -4090,7 +4111,7 @@ function buildAnimatedSvg(item) {
           `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
           rules.join(''),
         baseReduced + `.${kAll}{animation:none!important}` + reduces.join(''),
-        `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})">${markup.join('')}</g></g>`,
+        `<g class="${kAll}"><g transform="translate(${tx} ${ty}) scale(${scale})">${styledBody}</g></g>`,
         concept,
         technique
       );
