@@ -1780,6 +1780,8 @@ const STORY_OVERRIDES = {
   jira: 'cascade',
   json: 'unfold',
   laravel: 'trace',
+  logstash: 'cascade',
+  mariadb: 'press',
 };
 
 const STORY_MOTIONS = {
