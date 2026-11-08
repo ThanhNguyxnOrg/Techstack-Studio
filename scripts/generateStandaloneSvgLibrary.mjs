@@ -8393,25 +8393,33 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // PAGERDUTY — one alert ring leaves the mark and settles.
+  // PAGERDUTY — the bell shakes and rings twice, then rests.
   if (item.id === 'pagerduty') {
     const kAll = `tss_${uid}_al`,
-      kRing = `tss_${uid}_rg`,
-      kPulse = `tss_${uid}_pl`;
+      kMv = `tss_${uid}_mv`,
+      kRingA = `tss_${uid}_rg0`,
+      kRingB = `tss_${uid}_rg1`;
+    const ringKeys = (start, peak, end) =>
+      `0%,${start}%{opacity:0;transform:scale(.55)}${peak}%{opacity:.45;transform:scale(1)}${end}%,100%{opacity:0;transform:scale(1.45)}`;
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kRing}{0%{opacity:0;transform:scale(.6)}21%{opacity:.5;transform:scale(1)}42%,100%{opacity:0;transform:scale(1.4)}}` +
-        `@keyframes ${kPulse}{0%,58%{transform:scale(1)}79%{transform:scale(1.03)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:rotate(0)}26%{opacity:1;transform:rotate(0)}34%{transform:rotate(-4deg)}42%{transform:rotate(3deg)}50%{transform:rotate(-1.5deg)}58%,100%{transform:rotate(0)}}` +
+        `@keyframes ${kRingA}{${ringKeys(30, 40, 56)}}` +
+        `@keyframes ${kRingB}{${ringKeys(42, 52, 68)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kRing},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kRing}{opacity:0!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
-        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g></g>`,
-      'PagerDuty sends one alert ring and settles',
-      'Transient alert ring + slow pulse'
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 88%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kRingA},.${kRingB}{transform-box:fill-box;transform-origin:50% 50%}` +
+        `.${kRingA}{animation:${kRingA} ${dur} ease-out infinite}` +
+        `.${kRingB}{animation:${kRingB} ${dur} ease-out infinite}`,
+      `.${kAll},.${kMv},.${kRingA},.${kRingB}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}` +
+        `.${kRingA},.${kRingB}{opacity:0!important}`,
+      `<g class="${kAll}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g>` +
+        `<circle class="${kRingA}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/>` +
+        `<circle class="${kRingB}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g>`,
+      'The PagerDuty bell shakes twice and sends two alert rings',
+      'Bell shake + staggered double ring'
     );
   }
 
@@ -9051,29 +9059,29 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // RELAY — the node draws its own contour, then locks the fill.
+  // RELAY — a message runs around the node, then one ring leaves it.
   if (item.id === 'relay') {
     const kAll = `tss_${uid}_al`,
       kFill = `tss_${uid}_fl`,
-      kTrace = `tss_${uid}_tr`,
-      kPulse = `tss_${uid}_pl`;
+      kPacket = `tss_${uid}_pk`,
+      kRing = `tss_${uid}_rg`;
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
-        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kFill}{0%,10%{fill-opacity:.25}28%,100%{fill-opacity:1}}` +
+        `@keyframes ${kPacket}{0%{stroke-dashoffset:100;stroke-opacity:1}14%{stroke-opacity:1}52%{stroke-dashoffset:0;stroke-opacity:1}60%,100%{stroke-dashoffset:0;stroke-opacity:0}}` +
+        `@keyframes ${kRing}{0%,52%{opacity:0;transform:scale(.6)}60%{opacity:.45;transform:scale(1)}76%,100%{opacity:0;transform:scale(1.4)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}">` +
-        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
-        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
-      'The Relay node draws itself and settles',
-      'Contour draw + fill lock + slow pulse'
+        `.${kPacket}{stroke-dasharray:12 88;animation:${kPacket} ${dur} cubic-bezier(.4,0,.2,1) infinite}` +
+        `.${kRing}{transform-box:fill-box;transform-origin:50% 50%;animation:${kRing} ${dur} ease-out infinite}`,
+      `.${kAll},.${kFill},.${kPacket},.${kRing}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kPacket}{stroke-opacity:0!important}.${kRing}{opacity:0!important}`,
+      `<g class="${kAll}"><path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
+        `<path class="${kPacket}" pathLength="100" fill="none" stroke="${secondary}" stroke-width="1.2" stroke-linecap="round" fill-rule="evenodd" d="${d}"/>` +
+        `<circle class="${kRing}" cx="12" cy="12" r="8" fill="none" stroke="${secondary}" stroke-width=".5"/></g>`,
+      'A Relay message runs around the node and hands off one ring',
+      'Packet orbit + hand-off ring'
     );
   }
 
@@ -9099,29 +9107,24 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // RENDER — the mark draws its own contour, then locks the fill.
+  // RENDER — the panels unfold sideways into place.
   if (item.id === 'render') {
     const kAll = `tss_${uid}_al`,
-      kFill = `tss_${uid}_fl`,
-      kTrace = `tss_${uid}_tr`,
+      kMv = `tss_${uid}_mv`,
       kPulse = `tss_${uid}_pl`;
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
-        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:scaleX(.18)}30%{opacity:1;transform:scaleX(.9)}44%{transform:scaleX(1.05)}54%{transform:scaleX(1)}100%{transform:scaleX(1)}}` +
+        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.02)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 50%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}">` +
-        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
-        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
-      'The Render mark draws itself and settles',
-      'Contour draw + fill lock + slow pulse'
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Render panels unfold sideways into place',
+      'Horizontal unfold + slow pulse'
     );
   }
 
@@ -9524,29 +9527,24 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // SALTPROJECT — the mark draws its own contour, then locks the fill.
+  // SALTPROJECT — the grain settles down onto the plate.
   if (item.id === 'saltproject') {
     const kAll = `tss_${uid}_al`,
-      kFill = `tss_${uid}_fl`,
-      kTrace = `tss_${uid}_tr`,
+      kMv = `tss_${uid}_mv`,
       kPulse = `tss_${uid}_pl`;
     return wrapSvg(
       '',
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
-        `@keyframes ${kFill}{0%,34%{fill-opacity:.3}52%,100%{fill-opacity:1}}` +
-        `@keyframes ${kTrace}{0%{stroke-dashoffset:100;opacity:1}38%{stroke-dashoffset:0;opacity:1}48%{opacity:1}58%,100%{stroke-dashoffset:0;opacity:0}}` +
-        `@keyframes ${kPulse}{0%,60%{transform:scale(1)}80%{transform:scale(1.02)}100%{transform:scale(1)}}` +
+        `@keyframes ${kMv}{0%{opacity:0;transform:translateY(-7px) scaleY(.9)}34%{opacity:1;transform:translateY(0) scaleY(1.04)}46%{transform:translateY(0) scaleY(.98)}56%,100%{transform:translateY(0) scaleY(1)}}` +
+        `@keyframes ${kPulse}{0%,64%{transform:scale(1)}84%{transform:scale(1.02)}100%{transform:scale(1)}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
-        `.${kFill}{animation:${kFill} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kTrace}{animation:${kTrace} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
+        `.${kMv}{transform-box:fill-box;transform-origin:50% 100%;animation:${kMv} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kPulse}{transform-box:fill-box;transform-origin:50% 50%;animation:${kPulse} ${dur} ease-in-out infinite}`,
-      `.${kAll},.${kFill},.${kTrace},.${kPulse}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kFill}{fill-opacity:1!important}.${kTrace}{opacity:0!important}.${kPulse}{transform:none!important}`,
-      `<g class="${kAll}"><g class="${kPulse}">` +
-        `<path class="${kFill}" fill="${primary}" fill-rule="evenodd" d="${d}"/>` +
-        `<path class="${kTrace}" pathLength="100" fill="none" stroke="${secondary}" stroke-width=".55" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100" fill-rule="evenodd" d="${d}"/></g></g>`,
-      'The Salt mark draws itself and settles',
-      'Contour draw + fill lock + slow pulse'
+      `.${kAll},.${kMv},.${kPulse}{animation:none!important}` +
+        `.${kAll}{opacity:1!important}.${kMv}{opacity:1!important;transform:none!important}.${kPulse}{transform:none!important}`,
+      `<g class="${kAll}"><g class="${kPulse}"><g class="${kMv}"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></g></g>`,
+      'The Salt grain settles down onto the plate',
+      'Squash landing + slow pulse'
     );
   }
 
