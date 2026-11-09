@@ -10600,6 +10600,24 @@ let xmlValidCount = 0;
 
 // Custom artwork is drawn in its own frame (128, 32, 18 units). If the animated
 // file kept a 24 box, the browser would clip or blow that artwork up.
+/** Union of the real drawn bounds of every path, in the artwork's own space. */
+const contentBounds = (svg) => {
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+  for (const path of svg.matchAll(/\sd="([^"]+)"/g)) {
+    const geometry = analyzeGeometry(path[1]);
+    if (!Number.isFinite(geometry.width)) continue;
+    minX = Math.min(minX, geometry.minX);
+    minY = Math.min(minY, geometry.minY);
+    maxX = Math.max(maxX, geometry.maxX);
+    maxY = Math.max(maxY, geometry.maxY);
+  }
+  if (!Number.isFinite(minX)) return null;
+  return { minX, minY, maxX, maxY, width: maxX - minX, height: maxY - minY };
+};
+
 const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
   const sourceBox = (sourceSvg.match(/viewBox="([^"]+)"/) || [])[1];
   const animatedBox = (animatedSvg.match(/viewBox="([^"]+)"/) || [])[1];
@@ -10613,15 +10631,10 @@ const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
       if (Number.isFinite(value) && value > 0) netScale *= value;
     }
   }
-  let maxCoord = 0;
-  for (const path of animatedSvg.matchAll(/\sd="([^"]+)"/g)) {
-    for (const token of path[1].match(/-?\d*\.?\d+/g) || []) {
-      const value = Math.abs(parseFloat(token));
-      if (value > maxCoord) maxCoord = value;
-    }
-  }
+  // Real ink bounds, so relative-only paths and huge arc radii stop fooling us.
+  const bounds = contentBounds(animatedSvg);
   const sourceWidth = parseFloat(sourceBox.split(/\s+/)[2]) || width;
-  const span = maxCoord * netScale;
+  const span = bounds ? Math.max(bounds.width, bounds.height) * netScale : 0;
   // Arc radii inflate the raw coordinate maximum, so only trust "overflow" when
   // the artwork really belongs to the source frame.
   const fitsSource = span <= sourceWidth * 1.15;
