@@ -1780,6 +1780,7 @@ const STORY_OVERRIDES = {
   toml: 'unfold',
   trpc: 'unfold',
   weightsandbiases: 'stack',
+  xcode: 'press',
 };
 
 const STORY_MOTIONS = {
