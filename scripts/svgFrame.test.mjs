@@ -4,6 +4,7 @@ import { composeTransforms, measureArtwork, parseTransform, transformBounds } fr
 
 const box = { minX: 0, minY: 0, maxX: 10, maxY: 10, width: 10, height: 10 };
 const unitBox = () => ({ minX: 0, minY: 0, maxX: 10, maxY: 10 });
+const noPaths = () => null;
 
 test('uniform scale multiplies both axes', () => {
   assert.deepEqual(parseTransform('scale(2)'), [2, 0, 0, 2, 0, 0]);
@@ -54,7 +55,7 @@ test('measureArtwork follows each element’s own matrix', () => {
 
 test('measureArtwork counts image width and height', () => {
   const svg = '<svg><image x="1" y="1" width="4" height="6"/></svg>';
-  const out = measureArtwork(svg, unitBox);
+  const out = measureArtwork(svg, noPaths);
   assert.equal(out.minX, 1);
   assert.equal(out.minY, 1);
   assert.equal(out.width, 4);
@@ -80,4 +81,31 @@ test('measureArtwork ignores definitions that are never used', () => {
   const out = measureArtwork(svg, bounds);
   assert.equal(out.minX, 0);
   assert.equal(out.maxX, 5);
+});
+
+test('measureArtwork measures circle and ellipse geometry', () => {
+  const circle = measureArtwork('<svg><circle cx="5" cy="6" r="2"/></svg>', noPaths);
+  assert.deepEqual([circle.minX, circle.minY, circle.width, circle.height], [3, 4, 4, 4]);
+  const ellipse = measureArtwork('<svg><ellipse cx="5" cy="6" rx="3" ry="2"/></svg>', noPaths);
+  assert.deepEqual([ellipse.minX, ellipse.minY, ellipse.width, ellipse.height], [2, 4, 6, 4]);
+});
+
+test('measureArtwork measures rect, line, polygon and polyline geometry', () => {
+  const rect = measureArtwork('<svg><rect x="1" y="2" width="4" height="5"/></svg>', noPaths);
+  assert.deepEqual([rect.minX, rect.minY, rect.width, rect.height], [1, 2, 4, 5]);
+
+  const line = measureArtwork('<svg><line x1="1" y1="1" x2="6" y2="9"/></svg>', noPaths);
+  assert.deepEqual([line.minX, line.minY, line.width, line.height], [1, 1, 5, 8]);
+
+  const polygon = measureArtwork('<svg><polygon points="1,2 6,2 3,8"/></svg>', noPaths);
+  assert.deepEqual([polygon.minX, polygon.minY, polygon.width, polygon.height], [1, 2, 5, 6]);
+
+  const polyline = measureArtwork('<svg><polyline points="0,0 4,4"/></svg>', noPaths);
+  assert.deepEqual([polyline.minX, polyline.minY, polyline.width, polyline.height], [0, 0, 4, 4]);
+});
+
+test('shape geometry honours the ancestor matrix', () => {
+  const svg = '<svg><g transform="translate(10 20)"><circle cx="5" cy="5" r="1"/></g></svg>';
+  const out = measureArtwork(svg, noPaths);
+  assert.deepEqual([out.minX, out.minY, out.width, out.height], [14, 24, 2, 2]);
 });

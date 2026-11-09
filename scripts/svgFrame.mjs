@@ -150,6 +150,49 @@ export function measureArtwork(svg, pathBounds) {
         const box = d ? pathBounds(d) : null;
         return box ? transformBounds(box, matrix) : null;
       }
+      const rectOf = (x, y, width, height) =>
+        transformBounds(
+          { minX: x, minY: y, maxX: x + width, maxY: y + height, width, height },
+          matrix
+        );
+      if (name === 'circle') {
+        const r = number(attrs, 'r', 0);
+        if (!(r > 0)) return null;
+        return rectOf(number(attrs, 'cx', 0) - r, number(attrs, 'cy', 0) - r, 2 * r, 2 * r);
+      }
+      if (name === 'ellipse') {
+        const rx = number(attrs, 'rx', 0);
+        const ry = number(attrs, 'ry', 0);
+        if (!(rx > 0) || !(ry > 0)) return null;
+        return rectOf(number(attrs, 'cx', 0) - rx, number(attrs, 'cy', 0) - ry, 2 * rx, 2 * ry);
+      }
+      if (name === 'rect') {
+        const width = number(attrs, 'width', 0);
+        const height = number(attrs, 'height', 0);
+        if (!(width > 0) || !(height > 0)) return null;
+        return rectOf(number(attrs, 'x', 0), number(attrs, 'y', 0), width, height);
+      }
+      if (name === 'line') {
+        return rectOf(
+          Math.min(number(attrs, 'x1', 0), number(attrs, 'x2', 0)),
+          Math.min(number(attrs, 'y1', 0), number(attrs, 'y2', 0)),
+          Math.abs(number(attrs, 'x2', 0) - number(attrs, 'x1', 0)),
+          Math.abs(number(attrs, 'y2', 0) - number(attrs, 'y1', 0))
+        );
+      }
+      if (name === 'polygon' || name === 'polyline') {
+        const values = (attr(attrs, 'points') || '')
+          .split(/[\s,]+/)
+          .filter(Boolean)
+          .map(Number)
+          .filter((value) => Number.isFinite(value));
+        if (values.length < 4) return null;
+        const xs = values.filter((_, index) => index % 2 === 0);
+        const ys = values.filter((_, index) => index % 2 === 1);
+        const minX = Math.min(...xs);
+        const minY = Math.min(...ys);
+        return rectOf(minX, minY, Math.max(...xs) - minX, Math.max(...ys) - minY);
+      }
       if (name === 'image') {
         const width = number(attrs, 'width', 0);
         const height = number(attrs, 'height', 0);
