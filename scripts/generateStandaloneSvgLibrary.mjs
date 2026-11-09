@@ -1789,6 +1789,9 @@ const STORY_OVERRIDES = {
   plotly: 'cascade',
   pocketbase: 'trace',
   podman: 'blade',
+  postcss: 'trace',
+  powershell: 'sweep',
+  prisma: 'unfold',
 };
 
 const STORY_MOTIONS = {
