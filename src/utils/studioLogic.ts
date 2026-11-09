@@ -29,6 +29,7 @@ interface StandaloneSvgPartEntry {
   style: string;
   body: string;
   staticBody: string;
+  viewBox?: string;
   concept: string;
   technique: string;
 }
@@ -605,6 +606,10 @@ export function serializePersistedState(state: PersistedStudioState): string {
  * theatre masks get clipped to the top-left corner.
  */
 function getIconViewBox(item: TechItem): string {
+  // The generated part knows the artwork's real frame, so 128-unit logos such as
+  // Vue or Vite are no longer drawn inside a 24-unit box and blown up.
+  const partViewBox = STANDALONE_SVG_PARTS[item.id]?.viewBox;
+  if (partViewBox) return partViewBox;
   if (item.id === 'playwright') return '0 0 128 128';
   if (item.id === 'echo') return '0 0 128 128';
   if (item.id === 'openvino') return '0 0 128 128';

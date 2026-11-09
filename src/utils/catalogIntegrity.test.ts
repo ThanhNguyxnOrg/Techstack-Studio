@@ -269,3 +269,15 @@ test('no SVG relies on an xlink prefix without declaring its namespace', () => {
   }
   assert.deepEqual(offenders, []);
 });
+
+test('every animated icon uses the same frame as its static artwork', () => {
+  const mismatched: string[] = [];
+  for (const item of TECH_CATALOG) {
+    const source = readSvg(SOURCE_DIR, item.id);
+    const animated = readSvg(ANIMATED_DIR, item.id);
+    const sourceBox = (source.match(/viewBox="([^"]+)"/) || [])[1];
+    const animatedBox = (animated.match(/viewBox="([^"]+)"/) || [])[1];
+    if (sourceBox !== animatedBox) mismatched.push();
+  }
+  assert.deepEqual(mismatched, []);
+});

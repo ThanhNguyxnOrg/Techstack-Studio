@@ -10592,6 +10592,40 @@ let sourceCreated = 0;
 let animatedCreated = 0;
 let xmlValidCount = 0;
 
+// Custom artwork is drawn in its own frame (128, 32, 18 units). If the animated
+// file kept a 24 box, the browser would clip or blow that artwork up.
+const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
+  const sourceBox = (sourceSvg.match(/viewBox="([^"]+)"/) || [])[1];
+  const animatedBox = (animatedSvg.match(/viewBox="([^"]+)"/) || [])[1];
+  if (!sourceBox || !animatedBox || sourceBox === animatedBox) return animatedSvg;
+
+  const width = parseFloat(animatedBox.split(/\s+/)[2]) || 24;
+  let netScale = 1;
+  for (const group of animatedSvg.matchAll(/<g[^>]*transform="([^"]+)"/g)) {
+    for (const scale of group[1].matchAll(/scale\(([^)]+)\)/g)) {
+      const value = parseFloat(scale[1]);
+      if (Number.isFinite(value) && value > 0) netScale *= value;
+    }
+  }
+  let maxCoord = 0;
+  for (const path of animatedSvg.matchAll(/\sd="([^"]+)"/g)) {
+    for (const token of path[1].match(/-?\d*\.?\d+/g) || []) {
+      const value = Math.abs(parseFloat(token));
+      if (value > maxCoord) maxCoord = value;
+    }
+  }
+  const sourceWidth = parseFloat(sourceBox.split(/\s+/)[2]) || width;
+  const overflows = maxCoord * netScale > width * 1.15;
+  // Also adopt a smaller source frame: an 18-unit logo drawn inside a 24 box
+  // renders at 75% of its size.
+  const shrinks = sourceWidth < width;
+  // Embedded bitmaps carry their own pixel frame, so they follow the source box.
+  const rasterArt = /<image\s/.test(animatedSvg);
+  return overflows || shrinks || rasterArt
+    ? animatedSvg.replace(animatedBox, sourceBox)
+    : animatedSvg;
+};
+
 const withXlinkNamespace = (svg) =>
   /xlink:/.test(svg) && !/xmlns:xlink=/.test(svg)
     ? svg.replace('<svg ', '<svg xmlns:xlink="http://www.w3.org/1999/xlink" ')
@@ -10603,7 +10637,9 @@ for (const item of catalog) {
   fs.writeFileSync(srcFile, withXlinkNamespace(srcSvg), 'utf8');
   sourceCreated++;
 
-  const { svg: animSvg, concept, technique } = buildAnimatedSvg(item);
+  const animated = buildAnimatedSvg(item);
+  const animSvg = adoptSourceViewBox(animated.svg, srcSvg);
+  const { concept, technique } = animated;
   const animFile = path.join(animatedDir, `${item.id}.svg`);
   fs.writeFileSync(animFile, withXlinkNamespace(animSvg), 'utf8');
   animatedCreated++;
@@ -10615,6 +10651,7 @@ for (const item of catalog) {
     style: animParts.style,
     body: animParts.body,
     staticBody: srcParts.body,
+    viewBox: (srcSvg.match(/viewBox="([^"]+)"/) || [])[1] || '0 0 24 24',
     concept,
     technique,
   };
