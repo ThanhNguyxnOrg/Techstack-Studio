@@ -10630,8 +10630,10 @@ const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
   // Real ink bounds, so relative-only paths and huge arc radii stop fooling us.
   const bounds = contentBounds(animatedSvg);
   // Full affine transform: translate, rotate, matrix() and non-uniform scale.
+  // Collect from every element, not just <g>: 87 files put a transform on the
+  // <path> itself, so a group-only sweep would miss part of the chain.
   const artMatrix = composeTransforms(
-    [...animatedSvg.matchAll(/<g[^>]*transform="([^"]+)"/g)].map((match) => match[1])
+    [...animatedSvg.matchAll(/<[a-zA-Z][^>]*\stransform="([^"]+)"/g)].map((match) => match[1])
   );
   const drawn = bounds ? transformBounds(bounds, artMatrix) : null;
   const spanX = drawn ? drawn.width : 0;
