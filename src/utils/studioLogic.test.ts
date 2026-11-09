@@ -399,3 +399,38 @@ test('README Markdown, HTML, and Animated SVG exports reflect selected items, sh
     'Expected SVG text labels to be omitted when showLabels is false'
   );
 });
+
+test('search finds entries by their legacy vendor-prefixed and suffixed names', () => {
+  const cases: [string, string][] = [
+    ['HashiCorp Vault', 'vault'],
+    ['HashiCorp Consul', 'consul'],
+    ['HashiCorp Nomad', 'nomad'],
+    ['HashiCorp Packer', 'packer'],
+    ['Microsoft SQL Server', 'microsoftsqlserver'],
+    ['Red Hat OpenShift', 'openshift'],
+    ['Qualcomm Snapdragon', 'qualcomm'],
+    ['Amazon DynamoDB', 'amazondynamodb'],
+    ['Microsoft Azure', 'azure'],
+    ['Google Gemini', 'googlegemini'],
+    ['Google Dataflow', 'googledataflow'],
+    ['Autodesk EAGLE', 'autodeskeagle'],
+    ['Seeed Studio', 'seeedstudio'],
+    ['JetBrains Rider', 'rider'],
+    ['Aqua Trivy', 'trivy'],
+    ['Perforce Helix Core', 'perforce'],
+    ['QMK Firmware', 'qmk'],
+    ['PX4 Autopilot', 'px4'],
+    ['Zephyr RTOS', 'zephyr'],
+    ['Serverless Framework', 'serverless'],
+    ['Spring Framework', 'spring'],
+    ['Oracle Database', 'oracle'],
+    ['Eclipse IDE', 'eclipseide'],
+    ['Godot Engine', 'godotengine'],
+    ['Unreal Engine', 'unrealengine'],
+  ];
+
+  for (const [query, id] of cases) {
+    const [first] = filterCatalog(TECH_CATALOG, query, 'all');
+    assert.equal(first?.id, id);
+  }
+});
