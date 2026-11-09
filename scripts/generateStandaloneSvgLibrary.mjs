@@ -1798,6 +1798,8 @@ const STORY_OVERRIDES = {
   clion: 'assemble',
   bruno: 'assemble',
   scala: 'swirl',
+  sequelize: 'cascade',
+  snowflake: 'blade',
 };
 
 const STORY_MOTIONS = {
