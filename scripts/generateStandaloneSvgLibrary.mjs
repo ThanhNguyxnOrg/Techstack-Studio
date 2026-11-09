@@ -1700,7 +1700,7 @@ const STORY_OVERRIDES = {
   vault: 'press',
   snyk: 'blade',
   tailscale: 'blade',
-  wireguard: 'swirl',
+  wireguard: 'trace',
   snowflake: 'blade',
   trino: 'trace',
   prisma: 'unfold',
@@ -1779,6 +1779,7 @@ const STORY_OVERRIDES = {
   subversion: 'trace',
   toml: 'unfold',
   trpc: 'unfold',
+  weightsandbiases: 'stack',
 };
 
 const STORY_MOTIONS = {
