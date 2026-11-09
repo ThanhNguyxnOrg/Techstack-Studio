@@ -1699,7 +1699,7 @@ const STORY_OVERRIDES = {
   consul: 'bloom',
   vault: 'stack',
   snyk: 'blade',
-  tailscale: 'bloom',
+  tailscale: 'blade',
   wireguard: 'swirl',
   snowflake: 'blade',
   trino: 'bloom',

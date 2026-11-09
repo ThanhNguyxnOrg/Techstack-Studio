@@ -2865,11 +2865,11 @@
   },
   "tailscale": {
     "defs": "",
-    "style": "@keyframes tss_tailscale_al{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}.tss_tailscale_al{animation:tss_tailscale_al 3.6s linear infinite}@keyframes tss_tailscale_mv{0%{transform:scale(0.78)}30%{transform:scale(1.08)}44%{transform:scale(1.05)}56%,100%{transform:scale(1)}}.tss_tailscale_mv{transform-box:fill-box;transform-origin:50% 50%;animation:tss_tailscale_mv 3.6s cubic-bezier(.22,1,.36,1) infinite}@media (prefers-reduced-motion: reduce){.tss_tailscale_al,.tss_tailscale_mv{animation:none!important}.tss_tailscale_al{opacity:1!important}.tss_tailscale_mv{transform:none!important}}",
+    "style": "@keyframes tss_tailscale_al{0%{opacity:0}5%,94%{opacity:1}99%,100%{opacity:0}}.tss_tailscale_al{animation:tss_tailscale_al 3.6s linear infinite}@keyframes tss_tailscale_mv{0%{transform:rotate(-9deg) scale(0.95)}42%{transform:rotate(6deg) scale(1.05)}56%,100%{transform:rotate(0) scale(1)}}.tss_tailscale_mv{transform-box:fill-box;transform-origin:50% 50%;animation:tss_tailscale_mv 3.6s cubic-bezier(.22,1,.36,1) infinite}@media (prefers-reduced-motion: reduce){.tss_tailscale_al,.tss_tailscale_mv{animation:none!important}.tss_tailscale_al{opacity:1!important}.tss_tailscale_mv{transform:none!important}}",
     "body": "<g class=\"tss_tailscale_al\"><g class=\"tss_tailscale_mv\"><g transform=\"translate(0 0) scale(1)\"><path fill=\"#F3F1EC\" fill-rule=\"evenodd\" d=\"M24 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-9 9a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm0-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm6-6a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM3 24a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm18 .5a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM6 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm9-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 2.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM3 5.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z\"/></g></g></g>",
     "staticBody": "<path fill=\"#F3F1EC\" fill-rule=\"evenodd\" d=\"M24 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-9 9a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm0-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm6-6a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM3 24a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm18 .5a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM6 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm9-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 2.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM3 5.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z\"/>",
-    "concept": "The Tailscale mark settles into place",
-    "technique": "story: bloom"
+    "concept": "The Tailscale mark opens like a fan and locks",
+    "technique": "story: blade"
   },
   "wireguard": {
     "defs": "",
