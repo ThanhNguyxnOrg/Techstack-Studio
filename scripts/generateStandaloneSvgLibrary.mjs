@@ -1706,7 +1706,7 @@ const STORY_OVERRIDES = {
   prisma: 'unfold',
   mariadb: 'press',
   planetscale: 'swirl',
-  turso: 'bloom',
+  turso: 'trace',
   influxdb: 'trace',
   timescale: 'trace',
   couchbase: 'stack',

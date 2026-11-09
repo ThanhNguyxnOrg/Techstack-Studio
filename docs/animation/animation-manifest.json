@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T04:59:37.807Z",
+  "generatedAt": "2026-11-09T05:09:51.715Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -6105,7 +6105,7 @@
       "sourceAssetPath": "/icons/source/turso.svg",
       "animatedSvgPath": "/icons/animated/turso.svg",
       "animationConcept": "The Turso mark settles into place",
-      "animationTechnique": "story: bloom",
+      "animationTechnique": "story: trace",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
