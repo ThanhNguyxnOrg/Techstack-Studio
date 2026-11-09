@@ -434,3 +434,36 @@ test('search finds entries by their legacy vendor-prefixed and suffixed names', 
     assert.equal(first?.id, id);
   }
 });
+
+test('search tolerates partial names and a single typo', () => {
+  const firstMatch: [string, string][] = [
+    ['vault', 'vault'],
+    ['azure', 'azure'],
+    ['spring', 'spring'],
+    ['openshift', 'openshift'],
+    ['sql server', 'microsoftsqlserver'],
+    ['microsoft sql server', 'microsoftsqlserver'],
+    ['snapdragon', 'qualcomm'],
+    ['autopilot', 'px4'],
+    ['red hat', 'redhat'],
+    ['vualt', 'vault'],
+    ['valut', 'vault'],
+    ['reactt', 'react'],
+    ['typecript', 'typescript'],
+    ['kubernets', 'kubernetes'],
+    ['javscript', 'javascript'],
+    ['postgress', 'postgresql'],
+    ['dockerr', 'docker'],
+    ['pyton', 'python'],
+  ];
+
+  for (const [query, id] of firstMatch) {
+    const [first] = filterCatalog(TECH_CATALOG, query, 'all');
+    assert.equal(first?.id, id);
+  }
+
+  const hashicorp = filterCatalog(TECH_CATALOG, 'hashicorp', 'all').map((item) => item.id);
+  for (const id of ['consul', 'nomad', 'packer', 'vault']) {
+    assert.ok(hashicorp.includes(id));
+  }
+});

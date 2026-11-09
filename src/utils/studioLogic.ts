@@ -228,9 +228,54 @@ export function reorderTechInStack(
   return next;
 }
 
+/** True when two strings differ by at most one insert, delete, substitution or adjacent swap. */
+function withinOneEdit(a: string, b: string): boolean {
+  if (Math.abs(a.length - b.length) > 1) return false;
+
+  if (a.length === b.length) {
+    let first = -1;
+    for (let k = 0; k < a.length; k++) {
+      if (a[k] !== b[k]) {
+        first = k;
+        break;
+      }
+    }
+    if (first === -1) return true;
+
+    let substitutions = 0;
+    for (let k = first; k < a.length; k++) if (a[k] !== b[k]) substitutions++;
+    if (substitutions === 1) return true;
+
+    return (
+      first + 1 < a.length &&
+      a[first] === b[first + 1] &&
+      a[first + 1] === b[first] &&
+      a.slice(first + 2) === b.slice(first + 2)
+    );
+  }
+
+  const longer = a.length > b.length ? a : b;
+  const shorter = a.length > b.length ? b : a;
+  let i = 0;
+  let j = 0;
+  let skipped = false;
+  while (i < longer.length && j < shorter.length) {
+    if (longer[i] === shorter[j]) {
+      i++;
+      j++;
+      continue;
+    }
+    if (skipped) return false;
+    skipped = true;
+    i++;
+  }
+  return true;
+}
+
 /**
  * Filters the technology catalog by search query, category, and optional subcategory.
  * Matches canonical names, IDs, roles, categories, subcategories, and community aliases.
+ * Exact and prefix hits come first; a single typo still finds the entry.
  */
 export function filterCatalog(
   catalog: readonly TechItem[],
@@ -240,30 +285,67 @@ export function filterCatalog(
 ): TechItem[] {
   const normalizedQuery = query.trim().toLowerCase();
 
-  return catalog.filter((item) => {
+  const scoped = catalog.filter((item) => {
     const matchesCategory = category === 'all' || item.category === category;
     if (!matchesCategory) return false;
-
-    const matchesSubcategory =
-      !subcategory || subcategory === 'all' || item.subcategory === subcategory;
-    if (!matchesSubcategory) return false;
-
-    if (!normalizedQuery) return true;
-
-    const aliasMatch =
-      Array.isArray(item.aliases) &&
-      item.aliases.some((alias) => alias.toLowerCase().includes(normalizedQuery));
-
-    return (
-      item.name.toLowerCase().includes(normalizedQuery) ||
-      item.id.toLowerCase().includes(normalizedQuery) ||
-      item.category.toLowerCase().includes(normalizedQuery) ||
-      (item.subcategory && item.subcategory.toLowerCase().includes(normalizedQuery)) ||
-      item.role.toLowerCase().includes(normalizedQuery) ||
-      item.monogram.toLowerCase().includes(normalizedQuery) ||
-      aliasMatch
-    );
+    return !subcategory || subcategory === 'all' || item.subcategory === subcategory;
   });
+
+  if (!normalizedQuery) return scoped;
+
+  const scoreOf = (item: TechItem): number => {
+    const name = item.name.toLowerCase();
+    const id = item.id.toLowerCase();
+    const aliases = Array.isArray(item.aliases) ? item.aliases.map((a) => a.toLowerCase()) : [];
+
+    if (name === normalizedQuery) return 100;
+    if (id === normalizedQuery) return 95;
+    if (name.startsWith(normalizedQuery)) return 80;
+    if (id.startsWith(normalizedQuery)) return 75;
+    if (aliases.includes(normalizedQuery)) return 70;
+    if (name.includes(normalizedQuery)) return 60;
+    if (aliases.some((alias) => alias.includes(normalizedQuery))) return 50;
+    if (id.includes(normalizedQuery)) return 45;
+    if (item.monogram.toLowerCase() === normalizedQuery) return 40;
+    if (
+      item.category.toLowerCase().includes(normalizedQuery) ||
+      (item.subcategory && item.subcategory.toLowerCase().includes(normalizedQuery))
+    )
+      return 20;
+    if (item.role.toLowerCase().includes(normalizedQuery)) return 10;
+    return 0;
+  };
+
+  const ranked = scoped
+    .map((item, index) => ({ item, index, score: scoreOf(item) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .map((entry) => entry.item);
+
+  if (ranked.length > 0 || normalizedQuery.length < 5) return ranked;
+
+  return scoped
+    .map((item) => {
+      const candidates = [item.name, item.id, ...(Array.isArray(item.aliases) ? item.aliases : [])];
+      let best = 0;
+      candidates.forEach((candidate, rank) => {
+        const value = candidate.toLowerCase();
+        if (value.length < 5) return;
+        const hit =
+          withinOneEdit(value, normalizedQuery) ||
+          value
+            .split(/[^a-z0-9+#.]+/)
+            .some((word) => word.length >= 5 && withinOneEdit(word, normalizedQuery));
+        if (!hit) return;
+        const score = rank === 0 ? 30 : rank === 1 ? 20 : 10;
+        if (score > best) best = score;
+      });
+      return { item, score: best };
+    })
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 12)
+    .map((entry) => entry.item);
 }
 
 const TIER_WEIGHT: Record<string, number> = {
