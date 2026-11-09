@@ -2171,15 +2171,28 @@ function buildAnimatedSvg(item) {
       kind === 'stack'
     ) {
       const pieces0 = (art.body.match(/<path[^>]*\/>/g) || []).slice();
+      // Splitting drops the groups that carried paint and nested transforms, so keep them.
+      const inheritedFill = (art.body.match(/<g[^>]*\sfill="([^"]+)"/) || [])[1];
+      const innerTransforms = [...art.body.matchAll(/<g[^>]*\stransform="([^"]+)"/g)].map(
+        (m) => m[1]
+      );
       let pieces = pieces0;
       if (pieces0.length < 2) {
         // Split the art's own compound path, so the geometry and its scale stay in one space.
         const artD = (art.body.match(/\sd="([^"]+)"/) || [])[1];
         const fillColours = new Set(art.body.match(/fill="#[0-9a-fA-F]{3,8}"/g) || []);
+        // Keep the artwork's own ink; `primary` is only a fallback for unpainted art.
+        const artFill = /fill="(#[0-9a-fA-F]{3,8})"/.exec(art.body);
+        const pieceFill = artFill ? artFill[1] : primary;
         const subs = artD ? analyzeGeometry(artD).subpaths : [];
         if (subs.length >= 2 && subs.length <= 24 && fillColours.size <= 1) {
-          pieces = subs.map((sd) => `<path fill="${primary}" fill-rule="evenodd" d="${sd}"/>`);
+          pieces = subs.map((sd) => `<path fill="${pieceFill}" fill-rule="evenodd" d="${sd}"/>`);
         }
+      }
+      if (inheritedFill) {
+        pieces = pieces.map((piece) =>
+          /\sfill="/.test(piece) ? piece : piece.replace('<path', `<path fill="${inheritedFill}"`)
+        );
       }
       if (pieces.length >= 2) {
         const styles = [];
@@ -2238,7 +2251,7 @@ function buildAnimatedSvg(item) {
             styles.join('') +
             rules.join(''),
           `.${kAll}{animation:none!important;opacity:1!important}` + reduce.join(''),
-          `<g class="${kAll}"><g transform="translate(${art.tx} ${art.ty}) scale(${art.scale})">${wrapped.join('')}</g></g>`,
+          `<g class="${kAll}"><g transform="translate(${art.tx} ${art.ty}) scale(${art.scale})${innerTransforms.length ? ` ${innerTransforms.join(' ')}` : ''}">${wrapped.join('')}</g></g>`,
           conceptText,
           `story: ${kind} (${pieces.length} pieces)`
         );
@@ -10577,15 +10590,20 @@ let sourceCreated = 0;
 let animatedCreated = 0;
 let xmlValidCount = 0;
 
+const withXlinkNamespace = (svg) =>
+  /xlink:/.test(svg) && !/xmlns:xlink=/.test(svg)
+    ? svg.replace('<svg ', '<svg xmlns:xlink="http://www.w3.org/1999/xlink" ')
+    : svg;
+
 for (const item of catalog) {
   const srcSvg = buildSourceSvg(item);
   const srcFile = path.join(sourceDir, `${item.id}.svg`);
-  fs.writeFileSync(srcFile, srcSvg, 'utf8');
+  fs.writeFileSync(srcFile, withXlinkNamespace(srcSvg), 'utf8');
   sourceCreated++;
 
   const { svg: animSvg, concept, technique } = buildAnimatedSvg(item);
   const animFile = path.join(animatedDir, `${item.id}.svg`);
-  fs.writeFileSync(animFile, animSvg, 'utf8');
+  fs.writeFileSync(animFile, withXlinkNamespace(animSvg), 'utf8');
   animatedCreated++;
 
   const animParts = extractSvgParts(animSvg);
