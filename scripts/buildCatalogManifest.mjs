@@ -329,6 +329,62 @@ const REFERENCE_SVG_MAP = {
 };
 
 // Official documentation links for entries whose upstream metadata points at a logo index.
+const NAME_OVERRIDES = {
+  consul: 'Consul',
+  nomad: 'Nomad',
+  packer: 'Packer',
+  vault: 'Vault',
+  openshift: 'OpenShift',
+  perforce: 'Helix Core',
+  qualcomm: 'Snapdragon',
+  trivy: 'Trivy',
+  rider: 'Rider',
+  qmk: 'QMK',
+  px4: 'PX4',
+  zephyr: 'Zephyr',
+  serverless: 'Serverless',
+  spring: 'Spring',
+  oracle: 'Oracle',
+  eclipseide: 'Eclipse',
+  godotengine: 'Godot',
+  unrealengine: 'Unreal',
+  autodeskeagle: 'EAGLE',
+  seeedstudio: 'Seeed',
+  microsoftsqlserver: 'SQL Server',
+  azure: 'Azure',
+  googlegemini: 'Gemini',
+  googledataflow: 'Dataflow',
+  amazondynamodb: 'DynamoDB',
+};
+
+const NAME_ALIASES = {
+  consul: ['HashiCorp Consul'],
+  nomad: ['HashiCorp Nomad'],
+  packer: ['HashiCorp Packer'],
+  vault: ['HashiCorp Vault'],
+  openshift: ['Red Hat OpenShift'],
+  perforce: ['Perforce Helix Core'],
+  qualcomm: ['Qualcomm Snapdragon'],
+  trivy: ['Aqua Trivy'],
+  rider: ['JetBrains Rider'],
+  qmk: ['QMK Firmware'],
+  px4: ['PX4 Autopilot'],
+  zephyr: ['Zephyr RTOS'],
+  serverless: ['Serverless Framework'],
+  spring: ['Spring Framework'],
+  oracle: ['Oracle Database'],
+  eclipseide: ['Eclipse IDE', 'Eclipse Java IDE'],
+  godotengine: ['Godot Engine'],
+  unrealengine: ['Unreal Engine'],
+  autodeskeagle: ['Autodesk EAGLE'],
+  seeedstudio: ['Seeed Studio'],
+  microsoftsqlserver: ['Microsoft SQL Server'],
+  azure: ['Microsoft Azure'],
+  googlegemini: ['Google Gemini'],
+  googledataflow: ['Google Dataflow'],
+  amazondynamodb: ['Amazon DynamoDB'],
+};
+
 const DOCS_URL_OVERRIDES = {
   reactnative: 'https://reactnative.dev/',
   marko: 'https://markojs.com/',
@@ -5829,6 +5885,8 @@ for (const [category, baseItems] of Object.entries(CATEGORY_SEEDS)) {
       .toLowerCase()
       .replace(/[^a-z0-9_]/g, '');
 
+    const displayName = NAME_OVERRIDES[id] || name;
+
     if (seenIds.has(id)) continue;
 
     const resolved = resolveIconAsset(slugKey, id, name);
@@ -5876,15 +5934,19 @@ for (const [category, baseItems] of Object.entries(CATEGORY_SEEDS)) {
           : 'GitHub Octoverse 2025 & Ecosystem Telemetry';
 
     const monogram =
-      name
+      displayName
         .replace(/[^A-Za-z0-9+#]/g, '')
         .slice(0, 3)
         .toUpperCase() || id.slice(0, 2).toUpperCase();
 
     catalog.push({
       id,
-      name,
-      aliases: Array.from(new Set([id, slugKey, ...aliases].map((a) => a.toLowerCase()))),
+      name: displayName,
+      aliases: Array.from(
+        new Set(
+          [id, slugKey, name, ...(NAME_ALIASES[id] || []), ...aliases].map((a) => a.toLowerCase())
+        )
+      ),
       category,
       subcategory,
       role,

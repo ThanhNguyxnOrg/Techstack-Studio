@@ -300,6 +300,7 @@
     "aliases": [
       "cpp",
       "cplusplus",
+      "c++",
       "c++20"
     ],
     "category": "Programming languages",
@@ -1577,6 +1578,7 @@
     "name": "Common Lisp",
     "aliases": [
       "commonlisp",
+      "common lisp",
       "cl",
       "sbcl"
     ],
@@ -1899,6 +1901,7 @@
     "name": "ReasonML",
     "aliases": [
       "reason",
+      "reasonml",
       "reason-react"
     ],
     "category": "Programming languages",
@@ -2075,6 +2078,7 @@
     "name": "Processing",
     "aliases": [
       "processingfoundation",
+      "processing",
       "pde"
     ],
     "category": "Programming languages",
@@ -2218,6 +2222,7 @@
     "name": "Next.js",
     "aliases": [
       "nextdotjs",
+      "next.js",
       "nextjs",
       "next"
     ],
@@ -2254,6 +2259,7 @@
     "name": "Tailwind CSS",
     "aliases": [
       "tailwindcss",
+      "tailwind css",
       "tailwind",
       "tw"
     ],
@@ -2325,6 +2331,7 @@
     "name": "Vue.js",
     "aliases": [
       "vuedotjs",
+      "vue.js",
       "vue",
       "vue3",
       "vuejs"
@@ -2541,6 +2548,7 @@
     "aliases": [
       "tanstack",
       "reactquery",
+      "tanstack query",
       "react-query",
       "tanstack-query"
     ],
@@ -2827,6 +2835,7 @@
     "name": "Testing Library",
     "aliases": [
       "testinglibrary",
+      "testing library",
       "rtl",
       "react-testing-library"
     ],
@@ -3039,6 +3048,7 @@
     "name": "Alpine.js",
     "aliases": [
       "alpinedotjs",
+      "alpine.js",
       "alpinejs"
     ],
     "category": "Frontend",
@@ -3110,6 +3120,7 @@
     "name": "shadcn/ui",
     "aliases": [
       "shadcnui",
+      "shadcn/ui",
       "shadcn"
     ],
     "category": "Frontend",
@@ -3145,6 +3156,7 @@
     "name": "Radix UI",
     "aliases": [
       "radixui",
+      "radix ui",
       "radix"
     ],
     "category": "Frontend",
@@ -3215,6 +3227,7 @@
     "name": "Chakra UI",
     "aliases": [
       "chakraui",
+      "chakra ui",
       "chakra"
     ],
     "category": "Frontend",
@@ -3250,6 +3263,7 @@
     "name": "Ant Design",
     "aliases": [
       "antdesign",
+      "ant design",
       "antd"
     ],
     "category": "Frontend",
@@ -3390,6 +3404,7 @@
     "name": "Headless UI",
     "aliases": [
       "headlessui",
+      "headless ui",
       "headless"
     ],
     "category": "Frontend",
@@ -3425,6 +3440,7 @@
     "name": "styled-components",
     "aliases": [
       "styledcomponents",
+      "styled-components",
       "css-in-js"
     ],
     "category": "Frontend",
@@ -3565,6 +3581,7 @@
     "name": "Three.js",
     "aliases": [
       "threedotjs",
+      "three.js",
       "threejs",
       "r3f",
       "3d"
@@ -3636,6 +3653,7 @@
     "name": "D3.js",
     "aliases": [
       "d3",
+      "d3.js",
       "d3js"
     ],
     "category": "Frontend",
@@ -3671,6 +3689,7 @@
     "name": "Chart.js",
     "aliases": [
       "chartdotjs",
+      "chart.js",
       "chartjs"
     ],
     "category": "Frontend",
@@ -3776,6 +3795,7 @@
     "name": "p5.js",
     "aliases": [
       "p5dotjs",
+      "p5.js",
       "p5js",
       "processing"
     ],
@@ -3847,6 +3867,7 @@
     "name": "React Native",
     "aliases": [
       "reactnative",
+      "react native",
       "rn"
     ],
     "category": "Frontend",
@@ -4232,6 +4253,7 @@
     "name": "Apollo GraphQL",
     "aliases": [
       "apollographql",
+      "apollo graphql",
       "apollo"
     ],
     "category": "Frontend",
@@ -4514,6 +4536,7 @@
     "name": "Ember.js",
     "aliases": [
       "emberdotjs",
+      "ember.js",
       "ember"
     ],
     "category": "Frontend",
@@ -4829,6 +4852,7 @@
     "name": "Backbone.js",
     "aliases": [
       "backbonedotjs",
+      "backbone.js",
       "backbone"
     ],
     "category": "Frontend",
@@ -5214,6 +5238,7 @@
     "name": "Babylon.js",
     "aliases": [
       "babylondotjs",
+      "babylon.js",
       "babylonjs"
     ],
     "category": "Frontend",
@@ -5249,6 +5274,7 @@
     "name": "A-Frame",
     "aliases": [
       "aframe",
+      "a-frame",
       "webxr"
     ],
     "category": "Frontend",
@@ -5319,6 +5345,7 @@
     "name": "Apache Cordova",
     "aliases": [
       "apachecordova",
+      "apache cordova",
       "phonegap"
     ],
     "category": "Frontend",
@@ -5389,6 +5416,7 @@
     "name": "Node.js",
     "aliases": [
       "nodedotjs",
+      "node.js",
       "node",
       "nodejs",
       "v8"
@@ -5497,6 +5525,7 @@
     "name": "Spring Boot",
     "aliases": [
       "springboot",
+      "spring boot",
       "java-spring"
     ],
     "category": "Backend",
@@ -5532,6 +5561,7 @@
     "name": ".NET",
     "aliases": [
       "dotnet",
+      ".net",
       "dotnet8",
       "dotnet9"
     ],
@@ -5783,6 +5813,7 @@
     "name": "Apache Kafka",
     "aliases": [
       "apachekafka",
+      "apache kafka",
       "kafka"
     ],
     "category": "Backend",
@@ -5924,6 +5955,7 @@
     "name": "Ruby on Rails",
     "aliases": [
       "rubyonrails",
+      "ruby on rails",
       "rails",
       "ror"
     ],
@@ -6065,6 +6097,7 @@
     "name": "Phoenix",
     "aliases": [
       "phoenixframework",
+      "phoenix",
       "liveview"
     ],
     "category": "Backend",
@@ -6205,6 +6238,7 @@
     "name": "Actix Web",
     "aliases": [
       "actix",
+      "actix web",
       "actix-rs"
     ],
     "category": "Backend",
@@ -6240,6 +6274,7 @@
     "name": "Socket.IO",
     "aliases": [
       "socketdotio",
+      "socket.io",
       "socketio",
       "websocket"
     ],
@@ -6276,6 +6311,7 @@
     "name": "OpenAPI",
     "aliases": [
       "openapiinitiative",
+      "openapi",
       "oas",
       "openapi3"
     ],
@@ -6487,6 +6523,7 @@
     "name": "Apache HTTP Server",
     "aliases": [
       "apache",
+      "apache http server",
       "httpd"
     ],
     "category": "Backend",
@@ -6979,6 +7016,7 @@
     "name": "Apache Pulsar",
     "aliases": [
       "apachepulsar",
+      "apache pulsar",
       "pulsar"
     ],
     "category": "Backend",
@@ -7011,9 +7049,10 @@
   },
   {
     "id": "serverless",
-    "name": "Serverless Framework",
+    "name": "Serverless",
     "aliases": [
       "serverless",
+      "serverless framework",
       "sls",
       "lambda"
     ],
@@ -7152,9 +7191,10 @@
   },
   {
     "id": "spring",
-    "name": "Spring Framework",
+    "name": "Spring",
     "aliases": [
       "spring",
+      "spring framework",
       "spring-mvc",
       "spring-cloud"
     ],
@@ -7191,6 +7231,7 @@
     "name": "Spring Security",
     "aliases": [
       "springsecurity",
+      "spring security",
       "oauth2-spring"
     ],
     "category": "Backend",
@@ -7365,6 +7406,7 @@
     "name": "Sails.js",
     "aliases": [
       "sailsdotjs",
+      "sails.js",
       "sails"
     ],
     "category": "Backend",
@@ -7470,6 +7512,7 @@
     "name": "Payload CMS",
     "aliases": [
       "payloadcms",
+      "payload cms",
       "payload"
     ],
     "category": "Backend",
@@ -7645,6 +7688,7 @@
     "name": "Apache Tomcat",
     "aliases": [
       "apachetomcat",
+      "apache tomcat",
       "tomcat"
     ],
     "category": "Backend",
@@ -7750,6 +7794,7 @@
     "name": "Passport.js",
     "aliases": [
       "passport",
+      "passport.js",
       "passportjs"
     ],
     "category": "Backend",
@@ -7892,6 +7937,7 @@
     "name": "Hugging Face",
     "aliases": [
       "huggingface",
+      "hugging face",
       "hf",
       "transformers"
     ],
@@ -7964,6 +8010,7 @@
     "name": "scikit-learn",
     "aliases": [
       "scikitlearn",
+      "scikit-learn",
       "sklearn"
     ],
     "category": "AI and machine learning",
@@ -8064,9 +8111,10 @@
   },
   {
     "id": "googlegemini",
-    "name": "Google Gemini",
+    "name": "Gemini",
     "aliases": [
       "googlegemini",
+      "google gemini",
       "gemini"
     ],
     "category": "AI and machine learning",
@@ -8078,7 +8126,7 @@
     "sourceSvgPath": "/icons/source/googlegemini.svg",
     "animatedSvgPath": "/icons/animated/googlegemini.svg",
     "docsUrl": "https://gemini.google.com",
-    "monogram": "GOO",
+    "monogram": "GEM",
     "svgPath": "M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81",
     "svgViewBox": "0 0 24 24",
     "tier": "B",
@@ -8384,6 +8432,7 @@
     "name": "Apache Spark",
     "aliases": [
       "apachespark",
+      "apache spark",
       "pyspark",
       "mllib"
     ],
@@ -8525,6 +8574,7 @@
     "name": "Weights & Biases",
     "aliases": [
       "weightsandbiases",
+      "weights & biases",
       "wandb",
       "w&b"
     ],
@@ -8876,6 +8926,7 @@
     "name": "Apache Airflow",
     "aliases": [
       "apacheairflow",
+      "apache airflow",
       "airflow",
       "dag"
     ],
@@ -8982,6 +9033,7 @@
     "name": "Apache Flink",
     "aliases": [
       "apacheflink",
+      "apache flink",
       "flink"
     ],
     "category": "AI and machine learning",
@@ -9053,6 +9105,7 @@
     "name": "Mistral AI",
     "aliases": [
       "mistralai",
+      "mistral ai",
       "mistral",
       "mixtral"
     ],
@@ -9156,9 +9209,10 @@
   },
   {
     "id": "googledataflow",
-    "name": "Google Dataflow",
+    "name": "Dataflow",
     "aliases": [
       "googledataflow",
+      "google dataflow",
       "dataflow"
     ],
     "category": "AI and machine learning",
@@ -9170,7 +9224,7 @@
     "sourceSvgPath": "/icons/source/googledataflow.svg",
     "animatedSvgPath": "/icons/animated/googledataflow.svg",
     "docsUrl": "https://cloud.google.com/dataflow",
-    "monogram": "GOO",
+    "monogram": "DAT",
     "svgPath": "M18.39 6.71L18.03 5.46L16.14 5.38L13.86 6.66L15.89 8.65L15.86 10.96L17.21 10.98L17.24 8.67L22.9 12.09L22.88 13.51L25.24 13.54L25.24 10.81L18.39 6.71ZM16.14 5.38L16.14 5.38L16.14 5.38L14.24 5.83L13.86 6.66L6.83 10.56L6.8 13.3L9.18 13.33L9.19 11.9L14.95 8.64L14.92 10.95L16.07 10.96L16.14 5.38ZM16.14 5.38L16.14 5.38L16.14 5.38L11.59 2.67L9.27 3.93L13.86 6.66L16.14 5.38L16.14 5.38ZM22.79 20.09L17.05 23.35L17.08 21.05L14.79 21.02L14.76 23.32L15.86 26.62L17.75 26.47L18.14 25.34L25.16 21.43L25.2 18.64L22.81 18.61L22.79 20.09ZM15.86 26.62L15.86 26.62L15.86 26.62L11.23 29.21L11.17 29.21L8.95 27.89L13.61 25.28L15.86 26.62L15.86 26.62ZM18.39 6.71L23.04 4.11L20.82 2.79L20.76 2.79L16.14 5.38L18.39 6.71ZM18.14 25.34L22.73 28.07L20.48 29.33L20.41 29.33L15.86 26.62L15.86 26.62L15.86 26.62L15.86 26.62L18.14 25.34ZM15.86 26.62L13.61 25.28L6.76 21.19L6.76 18.52L9.11 18.52L9.09 19.91L14.76 23.33L14.79 21.02L15.93 21.04L15.86 26.62ZM22.64 16.05a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0M6.32 15.83a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0M14.57 13.32a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0M14.440000000000001 18.67a1.52 1.52 0 1 0 3.04 0a1.52 1.52 0 1 0 -3.04 0",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -9229,6 +9283,7 @@
     "name": "Apache Arrow",
     "aliases": [
       "apachearrow",
+      "apache arrow",
       "pyarrow",
       "parquet"
     ],
@@ -9265,6 +9320,7 @@
     "name": "Apache Hadoop",
     "aliases": [
       "apachehadoop",
+      "apache hadoop",
       "hdfs",
       "mapreduce"
     ],
@@ -9301,6 +9357,7 @@
     "name": "Apache Hive",
     "aliases": [
       "apachehive",
+      "apache hive",
       "hiveql"
     ],
     "category": "AI and machine learning",
@@ -9370,6 +9427,7 @@
     "name": "Apache Doris",
     "aliases": [
       "apachedoris",
+      "apache doris",
       "doris"
     ],
     "category": "AI and machine learning",
@@ -9510,6 +9568,7 @@
     "name": "Apache Superset",
     "aliases": [
       "apachesuperset",
+      "apache superset",
       "superset"
     ],
     "category": "AI and machine learning",
@@ -9863,9 +9922,10 @@
   },
   {
     "id": "microsoftsqlserver",
-    "name": "Microsoft SQL Server",
+    "name": "SQL Server",
     "aliases": [
       "microsoftsqlserver",
+      "microsoft sql server",
       "sqlserver",
       "tsql"
     ],
@@ -9878,7 +9938,7 @@
     "sourceSvgPath": "/icons/source/microsoftsqlserver.svg",
     "animatedSvgPath": "/icons/animated/microsoftsqlserver.svg",
     "docsUrl": "https://github.com/devicons/devicon/tree/master/icons/microsoftsqlserver",
-    "monogram": "MIC",
+    "monogram": "SQL",
     "svgPath": "M52.935 0v.002c-.426-.058-7.306 2.42-11.742 4.223-5.988 2.44-10.636 4.766-13.504 6.78-.926.657-2.054 1.75-2.475 2.37l-.007-.021a1.424 1.424 0 0 0-.069.148c-.022.04-.052.086-.066.12a1.812 1.812 0 0 0-.115.66l.064.06c.017.207.065.44.168.695.252.62.988 1.376 1.822 2.15 0 0 8.621 8.409 9.668 9.61 4.766 5.503 6.84 10.927 7.034 18.406.117 4.805-.796 9.03-3.063 13.932-4.03 8.796-12.535 18.504-25.652 29.276l.199-.067c-.09.072-.208.174-.295.242-1.57 1.24-3.896 3.565-5.078 5.038-1.764 2.209-3.157 4.553-3.758 6.355-1.066 3.255-.543 6.548 1.51 9.59 2.636 3.875 7.887 7.83 14.01 10.521 3.12 1.377 8.368 3.14 12.322 4.127 6.567 1.667 19.28 3.469 26.273 3.739 1.414.059 3.312.059 3.39 0 .155-.097 1.241-2.168 2.501-4.744 4.3-8.778 7.399-17.013 9.086-24.047 1.007-4.262 1.801-9.94 2.324-16.663.136-1.88.194-8.177.078-10.308-.175-3.487-.483-6.316-.968-9.086a4.17 4.17 0 0 1-.07-.573c15.578-4.628 32.768-8.821 44.187-10.568l1.764-.271-.272-.428c-1.55-2.403-2.615-3.894-3.894-5.483-3.72-4.61-8.233-8.349-13.756-11.449-7.595-4.244-17.419-7.557-29.858-10.018-2.344-.465-7.495-1.357-11.68-1.996l-.39-.699c-2.287-4.03-4.805-9.027-6.278-12.398-1.142-2.616-2.228-5.639-2.828-7.809C53.187.098 53.15.02 52.935 0Zm-.31.988h.02c.018.02.095.564.173 1.203.33 2.712.931 5.328 1.881 8.157.716 2.13.716 2.015-.117 1.763-1.976-.542-10.83-2.072-17.244-2.964-1.027-.135-1.899-.271-1.899-.291-.077-.078 4.63-2.537 6.703-3.506 2.654-1.22 9.94-4.265 10.483-4.362ZM33.947 9.67l.756.252c4.108 1.395 14.434 3.373 20.13 3.838.64.058 1.182.115 1.2.115.02.02-.52.31-1.219.639-2.75 1.376-5.775 3.061-7.867 4.36-.476.296-.912.546-1.127.648a1193.726 1193.726 0 0 1-1.932-.315l-1.824-1.787a803.536 803.536 0 0 0-7.11-6.84zm-.775.602 2.732 3.41c1.492 1.88 3.003 3.72 3.332 4.127.291.359.503.622.543.7-1.935-.337-4.006-.708-5.6-1.052-1.163-.252-3.39-.775-5.134-1.375-.18-.07-.385-.146-.58-.219v-.205c.02-1.3 1.666-3.238 4.455-5.213zm23.173 4.646c.015-.007.03-.006.04.004.077 0 .172.172.404.695.66 1.453 2.715 5.367 3.219 6.123l.064.104a1193.726 1193.726 0 0 1-10.977-1.79 2.86 2.86 0 0 1 .372-.232c2.035-1.124 4.088-2.557 5.91-4.088.445-.368.851-.715.93-.773a.097.097 0 0 1 .038-.043zm-26.138 3.275c.019-.018.329.1.736.235a50.336 50.336 0 0 0 2.81.851 142.909 142.909 0 0 0 2.557.678c1.162.29 2.132.563 2.15.563.137.136 2.094 6.394 2.753 8.797.252.91.446 1.685.427 1.685-.02.02-.234-.31-.486-.756-2.267-3.99-5.851-8.04-9.998-11.297-.542-.387-.95-.736-.95-.756zm9.513 2.618c0 .038 0 .02.02.02.098 0 .524.057 1.047.173 3.293.736 9.203 1.86 12.98 2.5.64.097 1.143.214 1.143.252 0 .04-.23.175-.522.33-.64.33-3.217 1.86-4.07 2.44-2.15 1.435-4.087 2.983-5.482 4.378a79.99 79.99 0 0 1-1.047 1.028s-.115-.33-.213-.737c-.697-2.694-2.15-6.684-3.469-9.494-.213-.445-.387-.852-.387-.89zm16.8 3.215c.115.04.31.699.697 2.152a31.732 31.732 0 0 1 .93 8.873c-.04.814-.079 1.57-.118 1.668l-.057.191-1.007-.33c-2.073-.658-5.444-1.645-8.33-2.459-1.648-.446-2.985-.852-2.985-.89 0-.117 2.403-2.52 3.43-3.43 1.956-1.725 7.264-5.832 7.44-5.775zm1.335.195c.058-.058 8.024 1.316 11.647 2.014 2.694.523 6.607 1.338 6.84 1.435.115.04-.291.269-1.59.852-5.115 2.305-8.914 4.38-12.692 6.898-.988.66-1.822 1.201-1.84 1.201-.02 0-.039-.562-.039-1.24 0-3.681-.734-7.401-2.091-10.54-.136-.31-.254-.601-.235-.62zm20.596 4.068c.058.057-.193 1.629-.426 2.559-.698 2.887-2.576 7.17-4.88 11.2-.409.716-.778 1.297-.817 1.316-.038.02-.558-.273-1.16-.622-2.247-1.318-4.806-2.555-7.596-3.718-.775-.33-1.454-.601-1.473-.641-.136-.115 6.104-4.242 9.397-6.219 2.617-1.589 6.879-3.952 6.955-3.875zm1.475.233c.174 0 3.7.968 5.54 1.511 4.554 1.356 9.784 3.275 13.194 4.825l1.414.638-.986.233c-8.33 1.918-15.463 4.129-22.342 6.918-.562.233-1.066.425-1.104.425-.039 0 .157-.444.409-.986 2.073-4.399 3.408-8.991 3.738-12.906.019-.368.079-.658.137-.658zm-35.11 8.06c.058-.058 2.751.582 4.205.989 2.21.62 6.899 2.19 6.899 2.304 0 .02-.525.466-1.145 1.008-2.538 2.112-4.98 4.341-7.906 7.17-.871.833-1.606 1.51-1.645 1.51-.04 0-.059-.115-.04-.27.445-3.255.35-7.44-.27-11.683-.06-.543-.117-1.009-.098-1.028zm56.596.059c.038.039-1.24 2.052-2.055 3.195-1.162 1.667-2.867 3.877-6.722 8.72a1289.46 1289.46 0 0 0-5.076 6.413c-.775.969-1.415 1.783-1.436 1.783-.018 0-.27-.35-.541-.775-2.17-3.256-4.767-6.103-7.848-8.66a44.534 44.534 0 0 0-1.431-1.164c-.214-.155-.39-.31-.39-.33 0-.057 3.294-1.472 5.794-2.479 4.38-1.783 10.345-3.913 14.822-5.29 2.344-.735 4.844-1.452 4.883-1.413zm1.492.387c.077-.02.543.214 1.104.543 4.709 2.693 9.32 6.162 12.963 9.726 1.027 1.008 3.564 3.641 3.525 3.66 0 0-.891.08-1.937.157-8.157.62-18.6 2.343-28.635 4.765-.68.155-1.28.291-1.319.291-.038 0 .716-.756 1.666-1.666 5.89-5.677 8.583-9.261 11.76-15.656.446-.948.834-1.762.873-1.82zm-43.148 4.418c.27.058 2.788 1.239 4.687 2.189 1.744.871 4.361 2.266 4.496 2.383.02.019-.91.503-2.054 1.066a135.033 135.033 0 0 0-10.018 5.522c-.93.562-1.704 1.027-1.723 1.027-.078 0-.058-.078.465-1.027 1.744-3.177 3.14-6.975 3.934-10.676.077-.29.155-.484.213-.484zm-2.52.464c.058.058-.6 2.442-1.008 3.74-.795 2.46-2.131 5.54-3.43 7.866-.31.542-.775 1.338-1.027 1.783l-.484.774-1.084-1.045c-1.26-1.22-2.287-1.978-3.604-2.657-.524-.27-.93-.502-.93-.54 0-.156 3.314-3.159 5.852-5.329 1.82-1.57 5.657-4.65 5.715-4.592zm15.404 6.336.95.62c2.17 1.414 4.726 3.295 6.683 4.94 1.104.91 3.235 2.83 3.662 3.294l.233.252-1.57.447c-8.874 2.46-15.733 4.649-23.735 7.594-.892.33-1.647.6-1.705.6-.116 0-.213.096 1.783-1.745 5.115-4.707 9.65-9.898 13.022-14.955zm-4.05 1.008c.04.04-2.614 3.777-4.203 5.889-1.9 2.519-5.272 6.743-7.598 9.494-.968 1.144-1.8 2.092-1.84 2.111-.058.02-.078-.27-.078-.716 0-2.344-.599-4.844-1.645-6.975-.446-.891-.523-1.104-.425-1.201.368-.33 6.004-3.545 9.568-5.463 2.404-1.28 6.163-3.177 6.22-3.139zM44.1 55.26c.057 0 .502.233 1.007.504a21.28 21.28 0 0 1 3.332 2.248c.04.038-.464.446-1.123.93-1.84 1.317-4.63 3.43-6.258 4.728-1.705 1.356-1.763 1.394-1.57 1.104 1.28-1.957 1.92-3.062 2.598-4.477a36.066 36.066 0 0 0 1.627-4.05c.155-.56.347-.987.386-.987zm6.53 5.113c.097-.018.213.157.735.932 1.104 1.647 1.957 3.857 2.17 5.639l.039.386-2.654 1.028c-4.747 1.84-9.126 3.662-12.09 5.02a217.067 217.067 0 0 0-3.237 1.548c-.95.484-1.724.853-1.724.834 0-.02.6-.465 1.336-1.008 5.794-4.204 10.813-8.816 14.572-13.427.407-.484.775-.93.813-.95zm-3.003.737v.002c.078.077-2.132 2.576-3.643 4.107-3.74 3.816-7.441 6.801-12.033 9.707-.582.368-1.104.697-1.162.735-.135.078.038-.116 2.054-2.305a52.694 52.694 0 0 0 3.352-3.97c.736-.95.871-1.086 1.937-1.84 2.85-2.056 9.418-6.513 9.495-6.436zm25.974 2.3c.274 1.057.78 6.126.918 9.481.04.795.019 1.318-.021 1.318-.154 0-3.273-1.84-5.5-3.236-1.93-1.215-5.579-3.634-6.18-4.113a358.495 358.495 0 0 1 10.783-3.45zm-12.867 4.192c.254.11.635.32 1.404.795 3.991 2.5 9.418 5.522 11.743 6.53.716.31.793.193-.854 1.318-3.526 2.402-7.924 4.765-13.31 7.148-.95.426-1.745.756-1.764.756-.04 0 .077-.486.232-1.067 1.297-4.825 2.036-9.705 2.075-13.619.01-.977.014-1.46.039-1.707l.435-.154zm-2.965 1.055c.094.476.021 4.368-.127 5.494a49.361 49.361 0 0 1-1.78 8.428c-.214.717-.41 1.319-.448 1.357-.078.097-2.732-2.5-3.604-3.508-1.51-1.744-2.692-3.486-3.564-5.191-.404-.79-.987-2.205-1.055-2.518a345.346 345.346 0 0 1 8.592-3.355c.617-.232 1.343-.473 1.986-.707zm-12.603 4.9c.047.069.163.327.271.652.62 1.685 2.013 4.165 3.215 5.754 1.318 1.744 3.043 3.605 4.477 4.825.465.387.89.756.949.814.116.117.155.097-3.004 1.299-3.66 1.395-7.652 2.79-12.225 4.262a609.84 609.84 0 0 0-3.275 1.066c-.175.058-.114-.04.389-.834 2.267-3.544 5.714-10.5 7.652-15.422.33-.853.659-1.706.717-1.9.027-.095.066-.15.103-.211l.73-.305zm-4.01 1.7c-.132.39-.973 2.151-1.842 3.853-1.88 3.663-3.933 7.267-6.684 11.646-.466.755-.91 1.453-.97 1.53-.096.136-.135.098-.446-.502-.659-1.3-1.2-2.965-1.492-4.496-.29-1.511-.232-4.146.098-5.774.15-.717.216-.987.36-1.16a225.041 225.041 0 0 1 10.976-5.098zm33.479 1.2v.813c0 4.321-.465 10.25-1.143 14.57-.116.756-.213 1.377-.232 1.397 0 0-.563-.156-1.221-.35a49.985 49.985 0 0 1-8.912-3.816c-1.88-1.027-4.61-2.714-4.533-2.791.019-.02.832-.445 1.78-.95 3.799-1.975 7.441-4.107 10.6-6.22 1.182-.794 2.963-2.071 3.35-2.42zm-48.048 5.737c.074.004.052.163-.062.851a27.507 27.507 0 0 0-.213 2.07c-.155 2.83.31 4.925 1.705 7.792.388.794.698 1.453.678 1.472-.135.117-12.962 3.875-16.992 4.979-1.201.33-2.247.62-2.325.639-.136.04-.155.021-.097-.309.446-2.848 2.617-6.568 5.64-9.707 2.014-2.093 3.622-3.314 6.373-4.883.921-.524 2.066-1.163 3.057-1.71.737-.401 1.484-.799 2.236-1.194zm30.221 5.404h.002c.02-.02.483.232 1.045.56 4.147 2.404 9.921 4.633 14.842 5.776l.445.096-.619.35c-2.576 1.433-11.045 4.96-19.705 8.195-1.26.465-2.498.93-2.73 1.027-.233.097-.448.155-.448.135 0-.02.35-.698.795-1.531 2.422-4.534 4.863-10.055 6.104-13.891.155-.368.25-.697.27-.717zm-3.08 1.006h.002c.02.02-.136.428-.33.893-1.686 4.088-3.895 8.545-6.724 13.543-.716 1.28-1.317 2.306-1.336 2.306-.02 0-.601-.35-1.3-.775-4.106-2.52-7.75-5.62-10.132-8.623l-.35-.426 1.764-.484c6.316-1.724 11.684-3.584 17.012-5.87.756-.31 1.375-.564 1.394-.564zm19.143 6.686c.02.446-.967 4.437-1.781 7.324-.678 2.422-1.26 4.32-2.327 7.672-.464 1.474-.87 2.693-.89 2.693-.02 0-.135-.018-.252-.056-5.754-1.047-10.908-2.501-15.752-4.438-1.356-.543-3.293-1.415-3.41-1.512-.038-.039 1.124-.581 2.597-1.22 8.816-3.856 17.96-8.235 21.1-10.114.368-.233.657-.35.715-.35zM28.677 96.8c.04.04-2.423 3.585-5.87 8.41-1.203 1.686-2.597 3.661-3.12 4.397a77.468 77.468 0 0 0-1.764 2.596l-.814 1.261-.871-.738c-1.027-.853-2.809-2.673-3.604-3.68-1.666-2.073-2.791-4.264-3.236-6.26-.214-.93-.214-1.394-.02-1.45a1459.308 1459.308 0 0 1 10.31-2.424 861.655 861.655 0 0 0 6.935-1.627c1.124-.271 2.035-.485 2.054-.485zm2.479.95.621.697c2.79 3.12 5.637 5.425 9.086 7.44.62.35 1.086.659 1.047.679-.135.096-11.974 4.3-17.457 6.2a462.503 462.503 0 0 1-5.639 1.956c-.019 0-.194-.117-.387-.252l-.35-.252.563-.814c1.82-2.635 4.107-5.521 9.086-11.528zm15.463 11.062c.019-.02.87.29 1.918.68 2.519.949 4.513 1.55 7.187 2.228 3.294.833 8.061 1.646 10.872 1.88.426.037.657.076.58.134-.136.077-2.985 1.028-5.077 1.686-3.333 1.047-13.504 4.05-21.797 6.433a218.736 218.736 0 0 1-2.925.834c-.194.038-.834-.138-.834-.215 0-.038.465-.638 1.027-1.297 2.79-3.333 5.561-7.054 7.867-10.58.64-.969 1.182-1.764 1.182-1.783zm-3.412.098h.002c.019.02-1.357 2.227-3.76 6.025-1.026 1.608-2.17 3.432-2.576 4.07-.388.62-.971 1.59-1.3 2.131l-.56.987-.29-.076c-.699-.195-5.601-1.919-6.9-2.442a48.226 48.226 0 0 1-4.513-2.072c-1.55-.834-3.487-2.074-3.332-2.113.038-.02 2.692-.736 5.889-1.608 8.485-2.306 13.194-3.642 16.275-4.611.562-.175 1.046-.311 1.065-.291zm24.123 5.656h.021c.077.195-3.063 8.913-4.207 11.664-.25.62-.348.776-.484.756-.33-.02-4.881-.657-7.652-1.064-4.824-.736-12.925-2.15-14.958-2.616l-.464-.097 2.886-.659c6.2-1.395 9.184-2.15 12.207-3.08a86.251 86.251 0 0 0 11.413-4.4c.6-.27 1.102-.483 1.238-.502z",
     "svgViewBox": "0 0 24 24",
     "tier": "B",
@@ -9899,9 +9959,10 @@
   },
   {
     "id": "amazondynamodb",
-    "name": "Amazon DynamoDB",
+    "name": "DynamoDB",
     "aliases": [
       "amazondynamodb",
+      "amazon dynamodb",
       "dynamodb"
     ],
     "category": "Databases",
@@ -9913,7 +9974,7 @@
     "sourceSvgPath": "/icons/source/amazondynamodb.svg",
     "animatedSvgPath": "/icons/animated/amazondynamodb.svg",
     "docsUrl": "https://aws.amazon.com/dynamodb/",
-    "monogram": "AMA",
+    "monogram": "DYN",
     "svgPath": "M12 2L3 6.5v11L12 22l9-4.5v-11L12 2zm0 2.2l6.8 3.4L12 11 5.2 7.6 12 4.2zM5 9.8l6 3v6.8l-6-3V9.8zm8 9.8v-6.8l6-3v6.8l-6 3z",
     "svgViewBox": "0 0 24 24",
     "tier": "B",
@@ -10040,6 +10101,7 @@
     "name": "Drizzle ORM",
     "aliases": [
       "drizzle",
+      "drizzle orm",
       "drizzle-orm"
     ],
     "category": "Databases",
@@ -10111,6 +10173,7 @@
     "name": "Apache Cassandra",
     "aliases": [
       "apachecassandra",
+      "apache cassandra",
       "cassandra",
       "cql"
     ],
@@ -10462,6 +10525,7 @@
     "name": "Apache CouchDB",
     "aliases": [
       "apachecouchdb",
+      "apache couchdb",
       "couchdb",
       "pouchdb"
     ],
@@ -10988,6 +11052,7 @@
     "name": "Azure SQL Database",
     "aliases": [
       "azuresqldatabase",
+      "azure sql database",
       "azure sql"
     ],
     "category": "Databases",
@@ -11091,9 +11156,10 @@
   },
   {
     "id": "oracle",
-    "name": "Oracle Database",
+    "name": "Oracle",
     "aliases": [
       "oracle",
+      "oracle database",
       "plsql"
     ],
     "category": "Databases",
@@ -11234,6 +11300,7 @@
     "name": "Knex.js",
     "aliases": [
       "knexdotjs",
+      "knex.js",
       "knex"
     ],
     "category": "Databases",
@@ -11386,6 +11453,7 @@
     "name": "GitHub Actions",
     "aliases": [
       "githubactions",
+      "github actions",
       "gha",
       "workflows"
     ],
@@ -11459,6 +11527,7 @@
     "name": "Google Cloud",
     "aliases": [
       "googlecloud",
+      "google cloud",
       "gcp"
     ],
     "category": "Cloud and DevOps",
@@ -11492,9 +11561,10 @@
   },
   {
     "id": "azure",
-    "name": "Microsoft Azure",
+    "name": "Azure",
     "aliases": [
       "azure",
+      "microsoft azure",
       "ms-azure"
     ],
     "category": "Cloud and DevOps",
@@ -11506,7 +11576,7 @@
     "sourceSvgPath": "/icons/source/azure.svg",
     "animatedSvgPath": "/icons/animated/azure.svg",
     "docsUrl": "https://azure.microsoft.com/",
-    "monogram": "MIC",
+    "monogram": "AZU",
     "svgPath": "M0 0H0V0Z",
     "svgViewBox": "0 0 24 24",
     "tier": "B",
@@ -11743,6 +11813,7 @@
     "aliases": [
       "argocd",
       "argo",
+      "argo cd",
       "gitops"
     ],
     "category": "Cloud and DevOps",
@@ -11954,6 +12025,7 @@
     "name": "Alpine Linux",
     "aliases": [
       "alpinelinux",
+      "alpine linux",
       "alpine",
       "apk"
     ],
@@ -11990,6 +12062,7 @@
     "name": "Arch Linux",
     "aliases": [
       "archlinux",
+      "arch linux",
       "pacman",
       "btw"
     ],
@@ -12375,6 +12448,7 @@
     "name": "Fly.io",
     "aliases": [
       "flydotio",
+      "fly.io",
       "flyio"
     ],
     "category": "Cloud and DevOps",
@@ -12547,9 +12621,10 @@
   },
   {
     "id": "consul",
-    "name": "HashiCorp Consul",
+    "name": "Consul",
     "aliases": [
       "consul",
+      "hashicorp consul",
       "hashicorp-consul"
     ],
     "category": "Cloud and DevOps",
@@ -12561,7 +12636,7 @@
     "sourceSvgPath": "/icons/source/consul.svg",
     "animatedSvgPath": "/icons/animated/consul.svg",
     "docsUrl": "https://developer.hashicorp.com/consul",
-    "monogram": "HAS",
+    "monogram": "CON",
     "svgPath": "M14.0754 12.0285a2.5059 2.5059 0 0 0-2.506-2.506 2.5059 2.5059 0 0 0-2.5058 2.506 2.5059 2.5059 0 0 0 2.5059 2.5059 2.5059 2.5059 0 0 0 2.5059-2.506zm3.5317.0003a1.1559 1.1556 0 0 0-1.1558-1.1556 1.1559 1.1556 0 0 0-1.1559 1.1556 1.1559 1.1556 0 0 0 1.1559 1.1555 1.1559 1.1556 0 0 0 1.1558-1.1555zm4.7917 5.5103a1.1576 1.1564 0 0 0-1.1577-1.1564 1.1576 1.1564 0 0 0-1.1576 1.1564 1.1576 1.1564 0 0 0 1.1576 1.1564 1.1576 1.1564 0 0 0 1.1577-1.1564zM20.748 13.888a1.1534 1.157 0 0 0-1.1533-1.157 1.1534 1.157 0 0 0-1.1534 1.157 1.1534 1.157 0 0 0 1.1534 1.1571 1.1534 1.157 0 0 0 1.1533-1.157zm3.2512.0619a1.1542 1.1538 0 0 0-1.1542-1.1538 1.1542 1.1538 0 0 0-1.1542 1.1538 1.1542 1.1538 0 0 0 1.1542 1.1538 1.1542 1.1538 0 0 0 1.1542-1.1538zm-3.279-3.883a1.1561 1.1535 0 0 0-1.156-1.1535 1.1561 1.1535 0 0 0-1.1562 1.1535 1.1561 1.1535 0 0 0 1.1561 1.1535 1.1561 1.1535 0 0 0 1.1562-1.1535zm3.2798.045a1.1614 1.157 0 0 0-1.1614-1.157 1.1614 1.157 0 0 0-1.1613 1.157 1.1614 1.157 0 0 0 1.1613 1.1572A1.1614 1.157 0 0 0 24 10.1119zm-1.626-3.631a1.1575 1.1601 0 0 0-1.1575-1.16 1.1575 1.1601 0 0 0-1.1575 1.16 1.1575 1.1601 0 0 0 1.1575 1.1602A1.1575 1.1601 0 0 0 22.374 6.481zM11.6171.3832c-3.1098 0-6.029 1.2063-8.2197 3.3974C1.206 5.9822 0 8.9007 0 11.9998c0 3.109 1.2067 6.0279 3.3974 8.2193 2.2028 2.1922 5.1213 3.3978 8.2197 3.3978 2.578 0 5.0176-.8252 7.055-2.386l-1.4196-1.8524c-1.6263 1.246-3.5748 1.9048-5.6354 1.9048-2.4776 0-4.8112-.9641-6.5717-2.7154-1.748-1.7488-2.7118-4.0828-2.7118-6.568 0-2.4784.9645-4.812 2.7158-6.5703 1.7484-1.7488 4.0817-2.713 6.5677-2.713 2.058 0 4.0069.659 5.6365 1.9057l1.4179-1.854C16.6314 1.2083 14.1922.3831 11.617.3831Z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -12582,9 +12657,10 @@
   },
   {
     "id": "vault",
-    "name": "HashiCorp Vault",
+    "name": "Vault",
     "aliases": [
       "vault",
+      "hashicorp vault",
       "hashicorp-vault"
     ],
     "category": "Cloud and DevOps",
@@ -12596,7 +12672,7 @@
     "sourceSvgPath": "/icons/source/vault.svg",
     "animatedSvgPath": "/icons/animated/vault.svg",
     "docsUrl": "https://developer.hashicorp.com/vault",
-    "monogram": "HAS",
+    "monogram": "VAU",
     "svgPath": "M0 0l11.955 24L24 0zm13.366 4.827h1.393v1.38h-1.393zm-2.77 5.569H9.22V8.993h1.389zm0-2.087H9.22V6.906h1.389zm0-2.086H9.22V4.819h1.389zm2.087 6.263h-1.377V11.08h1.388zm0-2.09h-1.377V8.993h1.388zm0-2.087h-1.377V6.906h1.388zm0-2.086h-1.377V4.819h1.388zm.683.683h1.393v1.389h-1.393zm0 3.475V8.993h1.389v1.388Z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -12725,6 +12801,7 @@
     "name": "Let's Encrypt",
     "aliases": [
       "letsencrypt",
+      "let's encrypt",
       "certbot",
       "tls"
     ],
@@ -12760,7 +12837,8 @@
     "id": "redhat",
     "name": "Red Hat",
     "aliases": [
-      "redhat"
+      "redhat",
+      "red hat"
     ],
     "category": "Cloud and DevOps",
     "subcategory": "Operating Systems & Kernel",
@@ -12866,6 +12944,7 @@
     "name": "Proxmox VE",
     "aliases": [
       "proxmox",
+      "proxmox ve",
       "pve",
       "kvm"
     ],
@@ -12899,9 +12978,10 @@
   },
   {
     "id": "packer",
-    "name": "HashiCorp Packer",
+    "name": "Packer",
     "aliases": [
       "packer",
+      "hashicorp packer",
       "hashicorp-packer"
     ],
     "category": "Cloud and DevOps",
@@ -12913,7 +12993,7 @@
     "sourceSvgPath": "/icons/source/packer.svg",
     "animatedSvgPath": "/icons/animated/packer.svg",
     "docsUrl": "https://developer.hashicorp.com/packer",
-    "monogram": "HAS",
+    "monogram": "PAC",
     "svgPath": "M7.844 0v3.38l5.75 3.32v10.148l2.705 1.552c1.676.967 3.045.388 3.045-1.285V9.668c-.014-1.687-1.382-3.832-3.059-4.799L7.844 0zM4.656 2.932v16.574L12.436 24V7.426l-7.78-4.494Z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -12969,10 +13049,11 @@
   },
   {
     "id": "openshift",
-    "name": "Red Hat OpenShift",
+    "name": "OpenShift",
     "aliases": [
       "openshift",
       "redhatopenshift",
+      "red hat openshift",
       "okd"
     ],
     "category": "Cloud and DevOps",
@@ -12984,7 +13065,7 @@
     "sourceSvgPath": "/icons/source/openshift.svg",
     "animatedSvgPath": "/icons/animated/openshift.svg",
     "docsUrl": "https://www.openshift.com",
-    "monogram": "RED",
+    "monogram": "OPE",
     "svgPath": "M21.665,11.812c-0.11-1.377-0.476-2.724-1.08-3.966L24,6.599c-0.268-0.556-0.585-1.092-0.943-1.595 l-1.601,0.583c-3.534-4.95-10.412-6.098-15.363-2.565c-3.144,2.244-4.883,5.972-4.582,9.823l1.604-0.584 c0.051,0.615,0.153,1.224,0.305,1.822L0,15.335c0.338,1.339,0.922,2.604,1.721,3.731l1.812-0.659 c3.526,4.95,10.398,6.106,15.349,2.58c1.555-1.107,2.796-2.6,3.599-4.332c0.802-1.715,1.144-3.61,0.991-5.497L21.665,11.812z M16.925,9.177c0.687,1.227,0.998,2.629,0.895,4.032l1.809-0.657c-0.063,0.856-0.282,1.694-0.646,2.471 c-1.67,3.584-5.928,5.138-9.514,3.472c-0.782-0.365-1.491-0.87-2.092-1.49l-1.813,0.66c-0.979-1.01-1.64-2.285-1.903-3.667 l3.426-1.242c-0.121-0.624-0.159-1.262-0.111-1.896H6.97l-1.604,0.583c0.294-3.932,3.72-6.881,7.652-6.587 c0.868,0.065,1.716,0.288,2.504,0.658V5.508c0.778,0.364,1.483,0.867,2.082,1.483l1.599-0.582c0.002,0.002,0.004,0.003,0.006,0.005 c0.441,0.454,0.82,0.965,1.128,1.518L16.925,9.177z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -13181,9 +13262,10 @@
   },
   {
     "id": "nomad",
-    "name": "HashiCorp Nomad",
+    "name": "Nomad",
     "aliases": [
       "nomad",
+      "hashicorp nomad",
       "hashicorp-nomad"
     ],
     "category": "Cloud and DevOps",
@@ -13195,7 +13277,7 @@
     "sourceSvgPath": "/icons/source/nomad.svg",
     "animatedSvgPath": "/icons/animated/nomad.svg",
     "docsUrl": "https://developer.hashicorp.com/nomad",
-    "monogram": "HAS",
+    "monogram": "NOM",
     "svgPath": "m12.004 0-10.4 6v12l10.392 6 10.4-6V6L12.004 0zm4.639 13.204-2.77 1.6-3.347-1.832v3.826l-3.144 1.995V10.8L9.88 9.272l3.462 1.823V7.191l3.301-1.984v7.997z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -13219,6 +13301,7 @@
     "name": "Flux CD",
     "aliases": [
       "flux",
+      "flux cd",
       "fluxcd"
     ],
     "category": "Cloud and DevOps",
@@ -13289,6 +13372,7 @@
     "name": "Travis CI",
     "aliases": [
       "travisci",
+      "travis ci",
       "travis"
     ],
     "category": "Cloud and DevOps",
@@ -13429,6 +13513,7 @@
     "name": "Progress Chef",
     "aliases": [
       "chef",
+      "progress chef",
       "chef-infra"
     ],
     "category": "Cloud and DevOps",
@@ -13499,6 +13584,7 @@
     "name": "Salt Project",
     "aliases": [
       "saltproject",
+      "salt project",
       "salt"
     ],
     "category": "Cloud and DevOps",
@@ -13674,6 +13760,7 @@
     "name": "New Relic",
     "aliases": [
       "newrelic",
+      "new relic",
       "nrql"
     ],
     "category": "Cloud and DevOps",
@@ -13812,10 +13899,11 @@
   },
   {
     "id": "trivy",
-    "name": "Aqua Trivy",
+    "name": "Trivy",
     "aliases": [
       "trivy",
       "aquasecurity",
+      "aqua trivy",
       "trivy-scanner"
     ],
     "category": "Cloud and DevOps",
@@ -13827,7 +13915,7 @@
     "sourceSvgPath": "/icons/source/trivy.svg",
     "animatedSvgPath": "/icons/animated/trivy.svg",
     "docsUrl": "https://trivy.dev/",
-    "monogram": "AQU",
+    "monogram": "TRI",
     "svgPath": "M4.375 7.311 1.962 5.918a.1.1 0 0 1 0-.174L11.828.047a.343.343 0 0 1 .344 0l9.864 5.696a.1.1 0 0 1 0 .175L19.624 7.31a.962.962 0 0 1-.052-.074c-.914-1.478-2.124-2.592-3.596-3.31-4.088-1.994-9.164-.505-11.6 3.385ZM12.262 23.899v-3.14c5.693-2.087 9.01-7.766 7.588-12.985l2.436-1.42a.1.1 0 0 1 .151.088v11.645a.1.1 0 0 1-.05.087l-9.973 5.812a.1.1 0 0 1-.152-.087Zm-.559-3.141v3.14a.1.1 0 0 1-.151.086l-9.933-5.81a.114.114 0 0 1-.056-.099V6.436a.1.1 0 0 1 .15-.087l2.44 1.41c-1.455 5.307 1.846 10.993 7.55 13ZM7.013 8.834 4.807 7.561c2.306-3.665 7.094-5.066 10.95-3.186 1.385.676 2.526 1.727 3.39 3.124l.04.062-2.195 1.268a5.57 5.57 0 0 0-2.429-2.307c-2.603-1.27-5.901-.253-7.552 2.311Zm9.337 5.2c.813-1.371 1.088-2.99.798-4.685l2.255-1.314c1.245 4.86-1.864 10.169-7.14 12.192v-3.072c1.86-.67 3.272-1.747 4.087-3.12ZM4.6 8.018l2.27 1.31c-.225 1.571.112 3.204.951 4.606.919 1.536 2.225 2.629 3.881 3.25v3.045C6.327 18.25 3.297 13.042 4.601 8.017Zm5.303 2.486-2.459-1.42c1.52-2.34 4.53-3.268 6.9-2.112a5.075 5.075 0 0 1 2.216 2.108l-2.471 1.427a2.311 2.311 0 0 0-2.03-1.195c-.825 0-1.645.43-2.156 1.192Zm4.338.522 2.443-1.408c.22 1.51-.043 2.945-.765 4.162-.735 1.238-1.998 2.224-3.658 2.856v-2.631c1.25-.691 1.968-1.771 1.98-2.979ZM8.25 13.676A6.576 6.576 0 0 1 7.34 9.6l2.446 1.412c-.016 1.271.73 2.437 1.917 2.997v2.624a6.977 6.977 0 0 1-3.453-2.956Zm3.853-.148-.137.073-.157-.075c-1.023-.504-1.524-1.606-1.557-2.417a1.99 1.99 0 0 1 .004-.23 2.153 2.153 0 0 1 1.163-.957c.508-.178 1.034-.153 1.444.071.6.327.84.797.86.86.008.156.004.253.004.256-.038.981-.63 1.863-1.624 2.419Z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -13920,6 +14008,7 @@
     "name": "Kali Linux",
     "aliases": [
       "kalilinux",
+      "kali linux",
       "kali",
       "offsec"
     ],
@@ -14306,6 +14395,7 @@
     "name": "Raspberry Pi",
     "aliases": [
       "raspberrypi",
+      "raspberry pi",
       "rpi"
     ],
     "category": "Embedded development",
@@ -14518,6 +14608,7 @@
     "name": "RISC-V",
     "aliases": [
       "riscv",
+      "risc-v",
       "riscv64",
       "rv32i"
     ],
@@ -14551,10 +14642,11 @@
   },
   {
     "id": "zephyr",
-    "name": "Zephyr RTOS",
+    "name": "Zephyr",
     "aliases": [
       "zephyr",
       "linuxfoundation",
+      "zephyr rtos",
       "zephyrproject",
       "west"
     ],
@@ -14696,7 +14788,8 @@
     "id": "nordicsemiconductor",
     "name": "Nordic Semiconductor",
     "aliases": [
-      "nordicsemiconductor"
+      "nordicsemiconductor",
+      "nordic semiconductor"
     ],
     "category": "Embedded development",
     "subcategory": "Microcontrollers & Boards",
@@ -14731,6 +14824,7 @@
     "name": "Texas Instruments",
     "aliases": [
       "texasinstruments",
+      "texas instruments",
       "ti"
     ],
     "category": "Embedded development",
@@ -14766,6 +14860,7 @@
     "name": "NXP Semiconductors",
     "aliases": [
       "nxp",
+      "nxp semiconductors",
       "imx",
       "teensy-nxp"
     ],
@@ -14906,9 +15001,10 @@
   },
   {
     "id": "qualcomm",
-    "name": "Qualcomm Snapdragon",
+    "name": "Snapdragon",
     "aliases": [
       "qualcomm",
+      "qualcomm snapdragon",
       "qcom",
       "dragonboard"
     ],
@@ -14921,7 +15017,7 @@
     "sourceSvgPath": "/icons/source/qualcomm.svg",
     "animatedSvgPath": "/icons/animated/qualcomm.svg",
     "docsUrl": "https://www.qualcomm.com",
-    "monogram": "QUA",
+    "monogram": "SNA",
     "svgPath": "M12 0C6.22933 0 1.5761 4.48645 1.5761 10.47394c0 6.00417 4.65323 10.47394 10.4239 10.47394.98402 0 1.93468-.13343 2.8353-.3836l1.13412 2.9187c.11675.31688.35025.51702.7672.51702h1.80125c.43364 0 .75052-.28353.55038-.83391l-1.46768-3.81932c2.88534-1.81793 4.80333-5.03683 4.80333-8.8895C22.4239 4.48644 17.77067 0 12 0m4.53648 16.5615l-1.31758-3.41904c-.11675-.28353-.35024-.55038-.85059-.55038h-1.71786c-.43363 0-.7672.28353-.56706.83391l1.73454 4.48645c-.56706.1501-1.18416.21682-1.81793.21682-4.2196 0-7.22168-3.31897-7.22168-7.65532C4.77832 6.1376 7.7804 2.81862 12 2.81862s7.22168 3.31898 7.22168 7.65532c0 2.5351-1.01737 4.70327-2.6852 6.08756",
     "svgViewBox": "0 0 24 24",
     "tier": "B",
@@ -14946,6 +15042,7 @@
     "aliases": [
       "yocto",
       "yoctoproject",
+      "yocto project",
       "bitbake",
       "poky"
     ],
@@ -14982,6 +15079,7 @@
     "name": "Home Assistant",
     "aliases": [
       "homeassistant",
+      "home assistant",
       "hass",
       "iot"
     ],
@@ -15053,6 +15151,7 @@
     "name": "Node-RED",
     "aliases": [
       "nodered",
+      "node-red",
       "nodered-iot"
     ],
     "category": "Embedded development",
@@ -15366,9 +15465,10 @@
   },
   {
     "id": "px4",
-    "name": "PX4 Autopilot",
+    "name": "PX4",
     "aliases": [
-      "px4"
+      "px4",
+      "px4 autopilot"
     ],
     "category": "Embedded development",
     "subcategory": "Robotics & Autonomy",
@@ -15400,9 +15500,10 @@
   },
   {
     "id": "qmk",
-    "name": "QMK Firmware",
+    "name": "QMK",
     "aliases": [
       "qmk",
+      "qmk firmware",
       "via",
       "zmk"
     ],
@@ -15578,9 +15679,10 @@
   },
   {
     "id": "seeedstudio",
-    "name": "Seeed Studio",
+    "name": "Seeed",
     "aliases": [
       "seeedstudio",
+      "seeed studio",
       "xiao"
     ],
     "category": "Embedded development",
@@ -15722,6 +15824,7 @@
     "name": "The Things Network",
     "aliases": [
       "thethingsnetwork",
+      "the things network",
       "ttn"
     ],
     "category": "Embedded development",
@@ -15754,10 +15857,11 @@
   },
   {
     "id": "autodeskeagle",
-    "name": "Autodesk EAGLE",
+    "name": "EAGLE",
     "aliases": [
       "autodeskeagle",
       "autodesk",
+      "autodesk eagle",
       "eagle-pcb"
     ],
     "category": "Embedded development",
@@ -15769,7 +15873,7 @@
     "sourceSvgPath": "/icons/source/autodeskeagle.svg",
     "animatedSvgPath": "/icons/animated/autodeskeagle.svg",
     "docsUrl": "https://www.autodesk.com/products/eagle/overview",
-    "monogram": "AUT",
+    "monogram": "EAG",
     "svgPath": "m.129 20.202 14.7-9.136h7.625c.235 0 .445.188.445.445 0 .21-.092.305-.21.375l-7.222 4.323c-.47.283-.633.845-.633 1.265l-.008 2.725H24V4.362a.561.561 0 0 0-.585-.562h-8.752L0 12.893V20.2h.129z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -15901,6 +16005,7 @@
     "name": "VS Code",
     "aliases": [
       "vscode",
+      "vs code",
       "visual-studio-code"
     ],
     "category": "Developer tools",
@@ -16078,6 +16183,7 @@
     "name": "IntelliJ IDEA",
     "aliases": [
       "intellijidea",
+      "intellij idea",
       "jetbrains",
       "idea"
     ],
@@ -16431,6 +16537,7 @@
     "name": "Apache Maven",
     "aliases": [
       "apachemaven",
+      "apache maven",
       "maven",
       "pom"
     ],
@@ -16679,6 +16786,7 @@
     "name": "Zed",
     "aliases": [
       "zedindustries",
+      "zed",
       "zed-editor"
     ],
     "category": "Developer tools",
@@ -16784,6 +16892,7 @@
     "name": "Android Studio",
     "aliases": [
       "androidstudio",
+      "android studio",
       "adb",
       "gradle-android"
     ],
@@ -16855,6 +16964,7 @@
     "name": "Visual Studio",
     "aliases": [
       "visualstudio",
+      "visual studio",
       "vs2022",
       "msbuild"
     ],
@@ -16891,6 +17001,7 @@
     "name": "GitHub Copilot",
     "aliases": [
       "githubcopilot",
+      "github copilot",
       "copilot"
     ],
     "category": "Developer tools",
@@ -17344,9 +17455,10 @@
   },
   {
     "id": "unrealengine",
-    "name": "Unreal Engine",
+    "name": "Unreal",
     "aliases": [
       "unrealengine",
+      "unreal engine",
       "ue5"
     ],
     "category": "Developer tools",
@@ -17379,9 +17491,10 @@
   },
   {
     "id": "godotengine",
-    "name": "Godot Engine",
+    "name": "Godot",
     "aliases": [
       "godotengine",
+      "godot engine",
       "gdscript",
       "godot4"
     ],
@@ -17767,6 +17880,7 @@
     "name": "Apache Subversion",
     "aliases": [
       "subversion",
+      "apache subversion",
       "svn"
     ],
     "category": "Developer tools",
@@ -17834,9 +17948,10 @@
   },
   {
     "id": "perforce",
-    "name": "Perforce Helix Core",
+    "name": "Helix Core",
     "aliases": [
       "perforce",
+      "perforce helix core",
       "p4v"
     ],
     "category": "Developer tools",
@@ -17848,7 +17963,7 @@
     "sourceSvgPath": "/icons/source/perforce.svg",
     "animatedSvgPath": "/icons/animated/perforce.svg",
     "docsUrl": "https://www.perforce.com/products/helix-core",
-    "monogram": "PER",
+    "monogram": "HEL",
     "svgPath": "m7.386 14.957 2.279-1.316-.576-.333A1.48 1.48 0 0 1 8.334 12c0-.262.073-.915.755-1.308l10.31-5.953a1.49 1.49 0 0 1 1.51 0c.228.13.755.52.755 1.308v11.906c0 .788-.527 1.178-.754 1.308s-.828.393-1.51 0l-2.732-1.577-2.334 1.348 3.899 2.251a3.81 3.81 0 0 0 3.845 0A3.81 3.81 0 0 0 24 17.953V6.047a3.81 3.81 0 0 0-1.922-3.33 3.83 3.83 0 0 0-1.923-.52c-.66 0-1.32.173-1.922.52L7.923 8.67A3.81 3.81 0 0 0 6 12c0 1.17.51 2.234 1.386 2.956zm9.228-5.913-2.279 1.316.576.333c.682.393.755 1.046.755 1.308 0 .263-.073.915-.755 1.308l-10.31 5.954a1.49 1.49 0 0 1-1.51 0 1.48 1.48 0 0 1-.755-1.308V6.047c0-.788.527-1.178.754-1.308s.828-.393 1.51 0l2.732 1.577 2.334-1.348-3.899-2.251a3.81 3.81 0 0 0-3.845 0A3.81 3.81 0 0 0 0 6.047v11.906c0 1.39.72 2.635 1.922 3.33a3.83 3.83 0 0 0 1.923.52c.66 0 1.32-.173 1.922-.52l10.31-5.953A3.81 3.81 0 0 0 18 12c0-1.17-.51-2.234-1.386-2.956",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -17939,9 +18054,10 @@
   },
   {
     "id": "rider",
-    "name": "JetBrains Rider",
+    "name": "Rider",
     "aliases": [
       "rider",
+      "jetbrains rider",
       "jetbrains-rider"
     ],
     "category": "Developer tools",
@@ -17953,7 +18069,7 @@
     "sourceSvgPath": "/icons/source/rider.svg",
     "animatedSvgPath": "/icons/animated/rider.svg",
     "docsUrl": "https://www.jetbrains.com/rider/",
-    "monogram": "JET",
+    "monogram": "RID",
     "svgPath": "M0 0v24h24V0zm7.031 3.113A4.063 4.063 0 0 1 9.72 4.14a3.23 3.23 0 0 1 .84 2.28A3.16 3.16 0 0 1 8.4 9.54l2.46 3.6H8.28L6.12 9.9H4.38v3.24H2.16V3.12c1.61-.004 3.281.009 4.871-.007zm5.509.007h3.96c3.18 0 5.34 2.16 5.34 5.04 0 2.82-2.16 5.04-5.34 5.04h-3.96zm4.069 1.976c-.607.01-1.235.004-1.849.004v6.06h1.74a2.882 2.882 0 0 0 3.06-3 2.897 2.897 0 0 0-2.951-3.064zM4.319 5.1v2.88H6.6c1.08 0 1.68-.6 1.68-1.44 0-.96-.66-1.44-1.74-1.44zM2.16 19.5h9V21h-9Z",
     "svgViewBox": "0 0 24 24",
     "tier": "C",
@@ -18012,6 +18128,7 @@
     "name": "Sublime Text",
     "aliases": [
       "sublimetext",
+      "sublime text",
       "subl"
     ],
     "category": "Developer tools",
@@ -18047,6 +18164,7 @@
     "name": "GNU Emacs",
     "aliases": [
       "gnuemacs",
+      "gnu emacs",
       "emacs",
       "org-mode",
       "doom-emacs"
@@ -18081,9 +18199,11 @@
   },
   {
     "id": "eclipseide",
-    "name": "Eclipse IDE",
+    "name": "Eclipse",
     "aliases": [
       "eclipseide",
+      "eclipse ide",
+      "eclipse java ide",
       "eclipse"
     ],
     "category": "Developer tools",
@@ -18119,6 +18239,7 @@
     "name": "Apache NetBeans",
     "aliases": [
       "apachenetbeanside",
+      "apache netbeans",
       "netbeans"
     ],
     "category": "Developer tools",
@@ -18154,6 +18275,7 @@
     "name": "Helix Editor",
     "aliases": [
       "helix",
+      "helix editor",
       "hx"
     ],
     "category": "Developer tools",
@@ -18259,6 +18381,7 @@
     "name": "fish shell",
     "aliases": [
       "fishshell",
+      "fish shell",
       "fish"
     ],
     "category": "Developer tools",
@@ -18328,7 +18451,8 @@
     "id": "condaforge",
     "name": "conda-forge",
     "aliases": [
-      "condaforge"
+      "condaforge",
+      "conda-forge"
     ],
     "category": "Developer tools",
     "subcategory": "Package & Build Managers",
