@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T04:13:22.474Z",
+  "generatedAt": "2026-11-09T04:20:00.262Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -7511,8 +7511,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/snyk.svg",
       "animatedSvgPath": "/icons/animated/snyk.svg",
-      "animationConcept": "The Snyk mark settles into place",
-      "animationTechnique": "story: bloom",
+      "animationConcept": "The Snyk mark opens like a fan and locks",
+      "animationTechnique": "story: blade",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
