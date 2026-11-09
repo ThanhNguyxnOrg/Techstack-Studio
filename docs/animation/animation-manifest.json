@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T04:04:25.522Z",
+  "generatedAt": "2026-11-09T04:09:48.345Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -414,7 +414,7 @@
       "sourceAssetPath": "/icons/source/scala.svg",
       "animatedSvgPath": "/icons/animated/scala.svg",
       "animationConcept": "The Scala mark settles into place",
-      "animationTechnique": "story: fan (2 pieces)",
+      "animationTechnique": "story: swirl (2 pieces)",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
