@@ -10,6 +10,7 @@ const manifestDir = path.resolve('docs/animation');
 const referenceDir = path.resolve('public/icons/reference');
 
 const DEVICON_ENTRIES = {
+  lorawan: 'lorawan',
   dart: 'dart',
   ruby: 'ruby',
   scala: 'scala',
@@ -1121,7 +1122,7 @@ function buildSourceSvg(item) {
     // This replaces the invented green clock; the product's own wordmark
     // exists only as PNG/font-based files, so no verbatim vector wordmark
     // is available for the catalog.
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><defs><linearGradient id="tss_freertos_g" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#1B660F" offset="0%"/><stop stop-color="#6CAE3E" offset="100%"/></linearGradient></defs><g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path fill="#FFFFFF" fill-rule="evenodd" d="${d}"/></g></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><defs><linearGradient id="tss_freertos_g" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#1B660F" offset="0%"/><stop stop-color="#6CAE3E" offset="100%"/></linearGradient></defs><g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></svg>`;
   }
   if (item.id === 'matter') {
     // Matter connectivity standard, verbatim official mark (three
@@ -1134,7 +1135,7 @@ function buildSourceSvg(item) {
     // animated template only accepts 24/18/32/128/200 viewBoxes).
     // White fill = darkSafeColor, matching the app's dark cards.
     // This replaces the invented cyan 4-point star.
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(0,1.46) scale(1.7228)"><path fill="#FFFFFF" fill-rule="evenodd" d="${d}"/></g></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(0,1.46) scale(1.7228)"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></svg>`;
   }
   if (item.id === 'cargo') {
     // Verbatim official PNG (see CARGO_PNG_DATA_URI above), scaled from

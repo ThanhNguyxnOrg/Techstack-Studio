@@ -162,7 +162,8 @@ test('catalog and generated asset coverage stay in lockstep', () => {
     expectedFiles,
     'Animated SVG files must match the catalog exactly'
   );
-  assert.equal(svgFiles(REFERENCE_DIR).length, 221, 'Expected 221 upstream reference SVGs');
+  // 222 since LoRaWAN's official mark is kept as a reference file (Simple Icons dropped it).
+  assert.equal(svgFiles(REFERENCE_DIR).length, 222, 'Expected 222 upstream reference SVGs');
 });
 
 test('every catalog item exposes complete, self-contained source and animated SVGs', () => {
