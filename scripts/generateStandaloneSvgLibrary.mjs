@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { composeTransforms, transformBounds } from './svgFrame.mjs';
 
 const catalogPath = path.resolve('src/data/generatedCatalog.json');
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
@@ -10623,22 +10624,25 @@ const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
   const animatedBox = (animatedSvg.match(/viewBox="([^"]+)"/) || [])[1];
   if (!sourceBox || !animatedBox || sourceBox === animatedBox) return animatedSvg;
 
-  const width = parseFloat(animatedBox.split(/\s+/)[2]) || 24;
-  let netScale = 1;
-  for (const group of animatedSvg.matchAll(/<g[^>]*transform="([^"]+)"/g)) {
-    for (const scale of group[1].matchAll(/scale\(([^)]+)\)/g)) {
-      const value = parseFloat(scale[1]);
-      if (Number.isFinite(value) && value > 0) netScale *= value;
-    }
-  }
+  const [boxWidth, boxHeight] = animatedBox.split(/\s+/).slice(2).map(Number);
+  const width = Number.isFinite(boxWidth) ? boxWidth : 24;
+  const height = Number.isFinite(boxHeight) ? boxHeight : width;
   // Real ink bounds, so relative-only paths and huge arc radii stop fooling us.
   const bounds = contentBounds(animatedSvg);
-  const sourceWidth = parseFloat(sourceBox.split(/\s+/)[2]) || width;
-  const span = bounds ? Math.max(bounds.width, bounds.height) * netScale : 0;
-  // Arc radii inflate the raw coordinate maximum, so only trust "overflow" when
-  // the artwork really belongs to the source frame.
-  const fitsSource = span <= sourceWidth * 1.15;
-  const overflows = span > width * 1.15 && fitsSource;
+  // Full affine transform: translate, rotate, matrix() and non-uniform scale.
+  const artMatrix = composeTransforms(
+    [...animatedSvg.matchAll(/<g[^>]*transform="([^"]+)"/g)].map((match) => match[1])
+  );
+  const drawn = bounds ? transformBounds(bounds, artMatrix) : null;
+  const spanX = drawn ? drawn.width : 0;
+  const spanY = drawn ? drawn.height : 0;
+  const [sourceBoxWidth, sourceBoxHeight] = sourceBox.split(/\s+/).slice(2).map(Number);
+  const sourceWidth = Number.isFinite(sourceBoxWidth) ? sourceBoxWidth : width;
+  const sourceHeight = Number.isFinite(sourceBoxHeight) ? sourceBoxHeight : sourceWidth;
+  // Only trust a frame when the artwork really belongs to it, per axis so a
+  // stretched transform is caught too.
+  const fitsSource = spanX <= sourceWidth * 1.15 && spanY <= sourceHeight * 1.15;
+  const overflows = fitsSource && (spanX > width * 1.15 || spanY > height * 1.15);
   // Also adopt a smaller source frame: an 18-unit logo drawn inside a 24 box
   // renders at 75% of its size.
   const shrinks = sourceWidth < width && fitsSource;
