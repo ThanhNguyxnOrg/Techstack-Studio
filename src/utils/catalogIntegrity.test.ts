@@ -261,7 +261,7 @@ test('no SVG relies on an xlink prefix without declaring its namespace', () => {
   for (const dir of ['source', 'animated'] as const) {
     const folder = dir === 'source' ? SOURCE_DIR : ANIMATED_DIR;
     for (const file of svgFiles(folder)) {
-      const markup = readSvg(folder, file);
+      const markup = readSvg(folder, file.replace(/.svg$/, ''));
       if (markup.includes('xlink:') && !markup.includes('xmlns:xlink=')) {
         offenders.push();
       }
