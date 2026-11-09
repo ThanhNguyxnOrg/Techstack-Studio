@@ -4587,19 +4587,17 @@ function buildAnimatedSvg(item) {
     );
   }
 
-  // 24. TAILWIND CSS (Counter-Gliding Dual Wind Waves)
+  // 24. TAILWIND CSS — both crests ride one slow swell, never split apart.
   if (item.id === 'tailwindcss') {
-    const cT = `tss_${uid}_ct`,
-      cB = `tss_${uid}_cb`,
-      kT = `tss_${uid}_kt`,
-      kB = `tss_${uid}_kb`;
+    const kSwell = `tss_${uid}_sw`;
     return wrapSvg(
-      `<clipPath id="${cT}"><rect x="0" y="0" width="24" height="12"/></clipPath><clipPath id="${cB}"><rect x="0" y="12" width="24" height="12"/></clipPath>`,
-      `@keyframes ${kT}{0%,100%{transform:translate(-4.5px,1.5px)}30%{transform:translate(4.5px,-1.5px)}60%{transform:translate(1.5px,.5px)}}@keyframes ${kB}{0%,100%{transform:translate(4.5px,-1.5px)}30%{transform:translate(-4.5px,1.5px)}60%{transform:translate(-1.5px,-.5px)}}.${kT}{animation:${kT} ${dur} ease-in-out infinite}.${kB}{animation:${kB} ${dur} ease-in-out infinite}`,
-      `.${kT},.${kB}{animation:none!important;transform:none!important}`,
-      `<g clip-path="url(#${cT})"><path class="${kT}" fill="#38BDF8" d="${d}"/></g><g clip-path="url(#${cB})"><path class="${kB}" fill="#0EA5E9" d="${d}"/></g>`,
-      'Upper and lower #38BDF8/#0EA5E9 Tailwind wave crests gliding in counter-phase',
-      'Dual horizontal <clipPath> split + counter-phase wave glide'
+      '',
+      `@keyframes ${kSwell}{0%,100%{transform:translate(-2.4px,1.1px)}25%{transform:translate(-.8px,-1.1px)}50%{transform:translate(2.4px,1.1px)}75%{transform:translate(.8px,-1.1px)}}` +
+        `.${kSwell}{animation:${kSwell} ${dur} ease-in-out infinite}`,
+      `.${kSwell}{animation:none!important;transform:none!important}`,
+      `<path class="${kSwell}" fill="${primary}" d="${d}"/>`,
+      'The Tailwind crests ride one slow swell and the mark stays whole',
+      'Whole-mark swell (no clip split)'
     );
   }
 

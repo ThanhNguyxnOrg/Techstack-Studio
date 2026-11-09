@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T09:34:12.850Z",
+  "generatedAt": "2026-11-09T09:40:39.865Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -1337,8 +1337,8 @@
       "tier": "A",
       "sourceAssetPath": "/icons/source/tailwindcss.svg",
       "animatedSvgPath": "/icons/animated/tailwindcss.svg",
-      "animationConcept": "Upper and lower #38BDF8/#0EA5E9 Tailwind wave crests gliding in counter-phase",
-      "animationTechnique": "Dual horizontal <clipPath> split + counter-phase wave glide",
+      "animationConcept": "The Tailwind crests ride one slow swell and the mark stays whole",
+      "animationTechnique": "Whole-mark swell (no clip split)",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
