@@ -255,3 +255,17 @@ test('the replaced DuckDB/Delta entry is gone and Apache Doris is authentic', ()
   assert.equal(doris.category, 'AI and machine learning');
   assert.equal(doris.subcategory, 'Data Warehouses & Lakehouse');
 });
+
+test('no SVG relies on an xlink prefix without declaring its namespace', () => {
+  const offenders: string[] = [];
+  for (const dir of ['source', 'animated'] as const) {
+    const folder = dir === 'source' ? SOURCE_DIR : ANIMATED_DIR;
+    for (const file of svgFiles(folder)) {
+      const markup = readSvg(folder, file);
+      if (markup.includes('xlink:') && !markup.includes('xmlns:xlink=')) {
+        offenders.push();
+      }
+    }
+  }
+  assert.deepEqual(offenders, []);
+});

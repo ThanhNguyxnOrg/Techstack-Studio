@@ -15693,7 +15693,7 @@
     "iconUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/seeedstudio/seeedstudio-original.svg",
     "sourceSvgPath": "/icons/source/seeedstudio.svg",
     "animatedSvgPath": "/icons/animated/seeedstudio.svg",
-    "docsUrl": "https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio_branding_kit_20230410.pdf",
+    "docsUrl": "https://www.seeedstudio.com/",
     "monogram": "SEE",
     "svgPath": "M0 0H0V0Z",
     "svgViewBox": "0 0 24 24",
@@ -18699,7 +18699,7 @@
       "gnu"
     ],
     "category": "Developer tools",
-    "subcategory": "Package & Build Managers",
+    "subcategory": "Compilers & Toolchains",
     "role": "Standard Build Automation Tool & GNU Compiler Collection",
     "brandColor": "#A42E2B",
     "darkSafeColor": "#A42E2B",
@@ -18733,7 +18733,7 @@
       "llvm"
     ],
     "category": "Developer tools",
-    "subcategory": "Package & Build Managers",
+    "subcategory": "Compilers & Toolchains",
     "role": "Modular and Reusable Compiler and Toolchain Technologies",
     "brandColor": "#262D3A",
     "darkSafeColor": "#A4A7AC",
@@ -18839,7 +18839,7 @@
       "renovatebot"
     ],
     "category": "Developer tools",
-    "subcategory": "Code Quality & Formatting",
+    "subcategory": "Package & Build Managers",
     "role": "Automated Multi-Platform Dependency Update Tool",
     "brandColor": "#308BE3",
     "darkSafeColor": "#308BE3",
@@ -18874,7 +18874,7 @@
       "github-dependabot"
     ],
     "category": "Developer tools",
-    "subcategory": "Code Quality & Formatting",
+    "subcategory": "Package & Build Managers",
     "role": "Automated GitHub Dependency Security & Version Updates",
     "brandColor": "#025E8C",
     "darkSafeColor": "#025E8C",

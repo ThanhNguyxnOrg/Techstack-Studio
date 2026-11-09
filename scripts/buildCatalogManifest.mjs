@@ -386,6 +386,7 @@ const NAME_ALIASES = {
 };
 
 const DOCS_URL_OVERRIDES = {
+  seeedstudio: 'https://www.seeedstudio.com/',
   reactnative: 'https://reactnative.dev/',
   marko: 'https://markojs.com/',
   tokio: 'https://tokio.rs/',
@@ -5578,7 +5579,7 @@ const EXTRA_COMMUNITY_SLUGS = {
       'gnu',
       'GNU',
       'gnu',
-      'Package & Build Managers',
+      'Compilers & Toolchains',
       'Standard Build Automation Tool & GNU Compiler Collection',
       [],
       'stroke-trace-fill',
@@ -5587,7 +5588,7 @@ const EXTRA_COMMUNITY_SLUGS = {
       'llvm',
       'LLVM',
       'llvm',
-      'Package & Build Managers',
+      'Compilers & Toolchains',
       'Modular and Reusable Compiler and Toolchain Technologies',
       [],
       'flame-core-flicker',
@@ -5614,7 +5615,7 @@ const EXTRA_COMMUNITY_SLUGS = {
       'renovate',
       'Renovate',
       'renovate',
-      'Code Quality & Formatting',
+      'Package & Build Managers',
       'Automated Multi-Platform Dependency Update Tool',
       ['renovatebot'],
       'orbital-spin',
@@ -5623,7 +5624,7 @@ const EXTRA_COMMUNITY_SLUGS = {
       'dependabot',
       'Dependabot',
       'dependabot',
-      'Code Quality & Formatting',
+      'Package & Build Managers',
       'Automated GitHub Dependency Security & Version Updates',
       ['github-dependabot'],
       'elastic-morph-bounce',

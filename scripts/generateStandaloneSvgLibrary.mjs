@@ -1780,6 +1780,9 @@ const STORY_OVERRIDES = {
   trpc: 'unfold',
   weightsandbiases: 'stack',
   xcode: 'press',
+  proxmox: 'trace',
+  seeedstudio: 'glide',
+  texasinstruments: 'blade',
 };
 
 const STORY_MOTIONS = {
