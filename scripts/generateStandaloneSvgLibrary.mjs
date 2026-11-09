@@ -1702,7 +1702,7 @@ const STORY_OVERRIDES = {
   tailscale: 'blade',
   wireguard: 'swirl',
   snowflake: 'blade',
-  trino: 'bloom',
+  trino: 'trace',
   prisma: 'unfold',
   mariadb: 'press',
   planetscale: 'swirl',
@@ -1778,6 +1778,7 @@ const STORY_OVERRIDES = {
   starship: 'assemble',
   subversion: 'trace',
   toml: 'unfold',
+  trpc: 'unfold',
 };
 
 const STORY_MOTIONS = {
