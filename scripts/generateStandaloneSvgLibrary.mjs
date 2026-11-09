@@ -1137,6 +1137,12 @@ function buildSourceSvg(item) {
     // This replaces the invented cyan 4-point star.
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><g transform="translate(0,1.46) scale(1.7228)"><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></svg>`;
   }
+  // MICROSOFT SQL SERVER — the artwork ships in a 128-unit space while the
+  // catalog box says 24, which left the static icon blank. Both files use 128.
+  if (item.id === 'microsoftsqlserver') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><path fill="#EE352C" fill-rule="evenodd" d="${d}"/></svg>`;
+  }
+
   if (item.id === 'cargo') {
     // Verbatim official PNG (see CARGO_PNG_DATA_URI above), scaled from
     // its native 306x275 box into the 128 box. This replaces the
@@ -10615,10 +10621,14 @@ const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
     }
   }
   const sourceWidth = parseFloat(sourceBox.split(/\s+/)[2]) || width;
-  const overflows = maxCoord * netScale > width * 1.15;
+  const span = maxCoord * netScale;
+  // Arc radii inflate the raw coordinate maximum, so only trust "overflow" when
+  // the artwork really belongs to the source frame.
+  const fitsSource = span <= sourceWidth * 1.15;
+  const overflows = span > width * 1.15 && fitsSource;
   // Also adopt a smaller source frame: an 18-unit logo drawn inside a 24 box
   // renders at 75% of its size.
-  const shrinks = sourceWidth < width;
+  const shrinks = sourceWidth < width && fitsSource;
   // Embedded bitmaps carry their own pixel frame, so they follow the source box.
   const rasterArt = /<image\s/.test(animatedSvg);
   return overflows || shrinks || rasterArt

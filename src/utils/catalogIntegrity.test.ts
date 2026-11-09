@@ -281,3 +281,21 @@ test('every animated icon uses the same frame as its static artwork', () => {
   }
   assert.deepEqual(mismatched, []);
 });
+
+test('artwork that ships outside the 24-unit box keeps its own frame', () => {
+  const expected: Record<string, string> = {
+    vuedotjs: '0 0 128 128',
+    matter: '0 0 128 128',
+    seeedstudio: '0 0 128 128',
+    texasinstruments: '0 0 128 128',
+    microsoftsqlserver: '0 0 128 128',
+    azuresqldatabase: '0 0 18 18',
+    googledataflow: '0 0 32 32',
+  };
+  for (const [id, box] of Object.entries(expected)) {
+    const sourceBox = (readSvg(SOURCE_DIR, id).match(/viewBox="([^"]+)"/) || [])[1];
+    const animatedBox = (readSvg(ANIMATED_DIR, id).match(/viewBox="([^"]+)"/) || [])[1];
+    assert.equal(sourceBox, box, id + ' static frame');
+    assert.equal(animatedBox, box, id + ' animated frame');
+  }
+});
