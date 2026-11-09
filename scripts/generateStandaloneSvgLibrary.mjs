@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { composeTransforms, transformBounds } from './svgFrame.mjs';
+import { measureArtwork } from './svgFrame.mjs';
 
 const catalogPath = path.resolve('src/data/generatedCatalog.json');
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
@@ -10601,24 +10601,6 @@ let xmlValidCount = 0;
 
 // Custom artwork is drawn in its own frame (128, 32, 18 units). If the animated
 // file kept a 24 box, the browser would clip or blow that artwork up.
-/** Union of the real drawn bounds of every path, in the artwork's own space. */
-const contentBounds = (svg) => {
-  let minX = Infinity;
-  let minY = Infinity;
-  let maxX = -Infinity;
-  let maxY = -Infinity;
-  for (const path of svg.matchAll(/\sd="([^"]+)"/g)) {
-    const geometry = analyzeGeometry(path[1]);
-    if (!Number.isFinite(geometry.width)) continue;
-    minX = Math.min(minX, geometry.minX);
-    minY = Math.min(minY, geometry.minY);
-    maxX = Math.max(maxX, geometry.maxX);
-    maxY = Math.max(maxY, geometry.maxY);
-  }
-  if (!Number.isFinite(minX)) return null;
-  return { minX, minY, maxX, maxY, width: maxX - minX, height: maxY - minY };
-};
-
 const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
   const sourceBox = (sourceSvg.match(/viewBox="([^"]+)"/) || [])[1];
   const animatedBox = (animatedSvg.match(/viewBox="([^"]+)"/) || [])[1];
@@ -10627,22 +10609,19 @@ const adoptSourceViewBox = (animatedSvg, sourceSvg) => {
   const [boxWidth, boxHeight] = animatedBox.split(/\s+/).slice(2).map(Number);
   const width = Number.isFinite(boxWidth) ? boxWidth : 24;
   const height = Number.isFinite(boxHeight) ? boxHeight : width;
-  // Real ink bounds, so relative-only paths and huge arc radii stop fooling us.
-  const bounds = contentBounds(animatedSvg);
-  // Full affine transform: translate, rotate, matrix() and non-uniform scale.
-  // Collect from every element, not just <g>: 87 files put a transform on the
-  // <path> itself, so a group-only sweep would miss part of the chain.
-  const artMatrix = composeTransforms(
-    [...animatedSvg.matchAll(/<[a-zA-Z][^>]*\stransform="([^"]+)"/g)].map((match) => match[1])
-  );
-  const drawn = bounds ? transformBounds(bounds, artMatrix) : null;
+  // Measure what the document actually draws: every element with its own
+  // matrix, plus <image> rectangles and <use> offsets.
+  const drawn = measureArtwork(animatedSvg, (d) => {
+    const geometry = analyzeGeometry(d);
+    return Number.isFinite(geometry.width)
+      ? { minX: geometry.minX, minY: geometry.minY, maxX: geometry.maxX, maxY: geometry.maxY }
+      : null;
+  });
   const spanX = drawn ? drawn.width : 0;
   const spanY = drawn ? drawn.height : 0;
   const [sourceBoxWidth, sourceBoxHeight] = sourceBox.split(/\s+/).slice(2).map(Number);
   const sourceWidth = Number.isFinite(sourceBoxWidth) ? sourceBoxWidth : width;
   const sourceHeight = Number.isFinite(sourceBoxHeight) ? sourceBoxHeight : sourceWidth;
-  // Only trust a frame when the artwork really belongs to it, per axis so a
-  // stretched transform is caught too.
   const fitsSource = spanX <= sourceWidth * 1.15 && spanY <= sourceHeight * 1.15;
   const overflows = fitsSource && (spanX > width * 1.15 || spanY > height * 1.15);
   // Also adopt a smaller source frame: an 18-unit logo drawn inside a 24 box

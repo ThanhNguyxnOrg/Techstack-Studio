@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { composeTransforms, parseTransform, transformBounds } from './svgFrame.mjs';
+import { composeTransforms, measureArtwork, parseTransform, transformBounds } from './svgFrame.mjs';
 
 const box = { minX: 0, minY: 0, maxX: 10, maxY: 10, width: 10, height: 10 };
+const unitBox = () => ({ minX: 0, minY: 0, maxX: 10, maxY: 10 });
 
 test('uniform scale multiplies both axes', () => {
   assert.deepEqual(parseTransform('scale(2)'), [2, 0, 0, 2, 0, 0]);
@@ -40,4 +41,43 @@ test('nested groups compose outermost first', () => {
   const art = { minX: 0, minY: 0, maxX: 196.32, maxY: 170.02, width: 196.32, height: 170.02 };
   const out = transformBounds(art, matrix);
   assert.ok(Math.abs(out.width - 196.32 * 0.652004 * 0.256) < 1e-6);
+});
+
+test('measureArtwork follows each element’s own matrix', () => {
+  const svg =
+    '<svg viewBox="0 0 24 24"><g transform="translate(2 3)"><path d="M0 0H10V10Z"/></g></svg>';
+  const out = measureArtwork(svg, unitBox);
+  assert.equal(out.minX, 2);
+  assert.equal(out.minY, 3);
+  assert.equal(out.width, 10);
+});
+
+test('measureArtwork counts image width and height', () => {
+  const svg = '<svg><image x="1" y="1" width="4" height="6"/></svg>';
+  const out = measureArtwork(svg, unitBox);
+  assert.equal(out.minX, 1);
+  assert.equal(out.minY, 1);
+  assert.equal(out.width, 4);
+  assert.equal(out.height, 6);
+});
+
+test('measureArtwork applies the use x/y offset to the referenced shape', () => {
+  const svg =
+    '<svg><defs><symbol id="s"><path d="M0 0H10V10Z"/></symbol></defs><use href="#s" x="5" y="7"/></svg>';
+  const out = measureArtwork(svg, unitBox);
+  assert.equal(out.minX, 5);
+  assert.equal(out.minY, 7);
+  assert.equal(out.width, 10);
+  assert.equal(out.height, 10);
+});
+
+test('measureArtwork ignores definitions that are never used', () => {
+  const svg = '<svg><defs><path d="M100 100H110V110Z"/></defs><path d="M0 0H5V5Z"/></svg>';
+  const bounds = (d) =>
+    d.includes('100')
+      ? { minX: 100, minY: 100, maxX: 110, maxY: 110 }
+      : { minX: 0, minY: 0, maxX: 5, maxY: 5 };
+  const out = measureArtwork(svg, bounds);
+  assert.equal(out.minX, 0);
+  assert.equal(out.maxX, 5);
 });
