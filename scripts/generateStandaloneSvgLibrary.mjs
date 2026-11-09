@@ -1786,6 +1786,9 @@ const STORY_OVERRIDES = {
   opengl: 'swirl',
   opentelemetry: 'cascade',
   packer: 'stack',
+  plotly: 'cascade',
+  pocketbase: 'trace',
+  podman: 'blade',
 };
 
 const STORY_MOTIONS = {
