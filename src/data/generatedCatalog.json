@@ -1365,7 +1365,6 @@
     "name": "ReScript",
     "aliases": [
       "rescript",
-      "reasonml",
       "bucklescript"
     ],
     "category": "Programming languages",
@@ -3796,8 +3795,7 @@
     "aliases": [
       "p5dotjs",
       "p5.js",
-      "p5js",
-      "processing"
+      "p5js"
     ],
     "category": "Frontend",
     "subcategory": "Creative Coding",

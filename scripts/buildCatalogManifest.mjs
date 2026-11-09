@@ -1148,7 +1148,7 @@ const CATEGORY_SEEDS = {
       'rescript',
       'Web & Functional',
       'Fast Soundly Typed Language for JS & React',
-      ['reasonml', 'bucklescript'],
+      ['bucklescript'],
       'stroke-trace-fill',
     ],
     [
@@ -1691,7 +1691,7 @@ const CATEGORY_SEEDS = {
       'p5dotjs',
       'Creative Coding',
       'Creative Coding Library for Visual Arts',
-      ['p5js', 'processing'],
+      ['p5js'],
       'iris-aperture-bloom',
     ],
     [
