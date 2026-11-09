@@ -1712,7 +1712,7 @@ const STORY_OVERRIDES = {
   couchbase: 'stack',
   appwrite: 'bloom',
   pocketbase: 'trace',
-  surrealdb: 'bloom',
+  surrealdb: 'blade',
   typeorm: 'bloom',
   sequelize: 'cascade',
   hibernate: 'bloom',
@@ -1776,6 +1776,7 @@ const STORY_OVERRIDES = {
   powershell: 'sweep',
   scala: 'swirl',
   starship: 'assemble',
+  subversion: 'trace',
 };
 
 const STORY_MOTIONS = {

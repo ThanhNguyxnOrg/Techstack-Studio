@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T04:23:44.717Z",
+  "generatedAt": "2026-11-09T04:43:28.035Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -6314,8 +6314,8 @@
       "tier": "C",
       "sourceAssetPath": "/icons/source/surrealdb.svg",
       "animatedSvgPath": "/icons/animated/surrealdb.svg",
-      "animationConcept": "The SurrealDB mark settles into place",
-      "animationTechnique": "story: bloom",
+      "animationConcept": "The SurrealDB mark opens like a fan and locks",
+      "animationTechnique": "story: blade",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,
