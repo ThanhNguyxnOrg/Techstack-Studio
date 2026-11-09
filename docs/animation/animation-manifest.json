@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:45:10.848Z",
+  "generatedAt": "2026-11-09T03:51:55.742Z",
   "totalCatalogEntries": 542,
   "sourceSvgFilesCreated": 542,
   "animatedSvgFilesCreated": 542,
@@ -7680,7 +7680,7 @@
       "sourceAssetPath": "/icons/source/packer.svg",
       "animatedSvgPath": "/icons/animated/packer.svg",
       "animationConcept": "The HashiCorp Packer mark settles into place",
-      "animationTechnique": "story: assemble (2 pieces)",
+      "animationTechnique": "story: stack (2 pieces)",
       "fileExists": true,
       "xmlValid": true,
       "visualReviewPending": false,

@@ -1785,6 +1785,7 @@ const STORY_OVERRIDES = {
   newrelic: 'sweep',
   opengl: 'swirl',
   opentelemetry: 'cascade',
+  packer: 'stack',
 };
 
 const STORY_MOTIONS = {
