@@ -1673,8 +1673,6 @@ const STORY_VERBS = {
 
 const STORY_OVERRIDES = {
   socketdotio: 'beat',
-  nginx: 'blade',
-  redis: 'drop',
   datadog: 'bloom',
   threedotjs: 'trace',
   blender: 'swirl',
