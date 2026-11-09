@@ -467,3 +467,22 @@ test('search tolerates partial names and a single typo', () => {
     assert.ok(hashicorp.includes(id));
   }
 });
+
+test('every alias resolves to its own entry, apart from five terms two entries share', () => {
+  // Terms genuinely claimed by two catalog entries; the first result is whichever
+  // entry owns the name, and both stay in the list.
+  const shared = new Set(['reasonml', 'processing', 'lambda', 'uno', 'rust']);
+  const misranked: string[] = [];
+
+  for (const item of TECH_CATALOG) {
+    for (const alias of item.aliases) {
+      if (!alias || alias.length < 2 || shared.has(alias)) continue;
+      const [first] = filterCatalog(TECH_CATALOG, alias, 'all');
+      if (first?.id !== item.id) {
+        misranked.push(`${alias} -> ${first?.id} (expected ${item.id})`);
+      }
+    }
+  }
+
+  assert.deepEqual(misranked, []);
+});

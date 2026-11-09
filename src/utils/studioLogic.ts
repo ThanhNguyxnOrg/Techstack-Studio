@@ -298,22 +298,26 @@ export function filterCatalog(
     const id = item.id.toLowerCase();
     const aliases = Array.isArray(item.aliases) ? item.aliases.map((a) => a.toLowerCase()) : [];
 
-    if (name === normalizedQuery) return 100;
-    if (id === normalizedQuery) return 95;
-    if (name.startsWith(normalizedQuery)) return 80;
-    if (id.startsWith(normalizedQuery)) return 75;
-    if (aliases.includes(normalizedQuery)) return 70;
-    if (name.includes(normalizedQuery)) return 60;
-    if (aliases.some((alias) => alias.includes(normalizedQuery))) return 50;
-    if (id.includes(normalizedQuery)) return 45;
-    if (item.monogram.toLowerCase() === normalizedQuery) return 40;
+    // Highest matching signal wins: an exact alias (js, kt, compose) must beat a
+    // longer product name that merely starts with the same letters (JSON, Ktor).
+    let score = 0;
+    if (name === normalizedQuery) score = Math.max(score, 100);
+    if (id === normalizedQuery) score = Math.max(score, 95);
+    if (aliases.includes(normalizedQuery)) score = Math.max(score, 85);
+    if (name.startsWith(normalizedQuery)) score = Math.max(score, 80);
+    if (id.startsWith(normalizedQuery)) score = Math.max(score, 75);
+    if (aliases.some((alias) => alias.startsWith(normalizedQuery))) score = Math.max(score, 68);
+    if (name.includes(normalizedQuery)) score = Math.max(score, 60);
+    if (aliases.some((alias) => alias.includes(normalizedQuery))) score = Math.max(score, 50);
+    if (id.includes(normalizedQuery)) score = Math.max(score, 45);
+    if (item.monogram.toLowerCase() === normalizedQuery) score = Math.max(score, 40);
     if (
       item.category.toLowerCase().includes(normalizedQuery) ||
       (item.subcategory && item.subcategory.toLowerCase().includes(normalizedQuery))
     )
-      return 20;
-    if (item.role.toLowerCase().includes(normalizedQuery)) return 10;
-    return 0;
+      score = Math.max(score, 20);
+    if (item.role.toLowerCase().includes(normalizedQuery)) score = Math.max(score, 10);
+    return score;
   };
 
   const ranked = scoped
