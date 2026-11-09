@@ -1716,7 +1716,7 @@ const STORY_OVERRIDES = {
   typeorm: 'bloom',
   sequelize: 'cascade',
   hibernate: 'bloom',
-  sqlalchemy: 'swirl',
+  sqlalchemy: 'cascade',
   mongoose: 'bloom',
   flyway: 'stack',
   liquibase: 'stack',
@@ -1775,6 +1775,7 @@ const STORY_OVERRIDES = {
   plotly: 'cascade',
   powershell: 'sweep',
   scala: 'swirl',
+  starship: 'assemble',
 };
 
 const STORY_MOTIONS = {
