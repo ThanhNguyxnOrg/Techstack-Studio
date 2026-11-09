@@ -1676,7 +1676,7 @@ const STORY_OVERRIDES = {
   nginx: 'blade',
   redis: 'drop',
   datadog: 'bloom',
-  threedotjs: 'bloom',
+  threedotjs: 'trace',
   blender: 'swirl',
   greensock: 'trace',
   quasar: 'swirl',
@@ -1708,7 +1708,7 @@ const STORY_OVERRIDES = {
   planetscale: 'swirl',
   turso: 'bloom',
   influxdb: 'trace',
-  timescale: 'stack',
+  timescale: 'trace',
   couchbase: 'stack',
   appwrite: 'bloom',
   pocketbase: 'trace',
@@ -1720,7 +1720,7 @@ const STORY_OVERRIDES = {
   mongoose: 'bloom',
   flyway: 'stack',
   liquibase: 'stack',
-  tidb: 'bloom',
+  tidb: 'blade',
   fauna: 'bloom',
   upstash: 'stack',
   sphinx: 'sweep',
@@ -1777,6 +1777,7 @@ const STORY_OVERRIDES = {
   scala: 'swirl',
   starship: 'assemble',
   subversion: 'trace',
+  toml: 'unfold',
 };
 
 const STORY_MOTIONS = {
