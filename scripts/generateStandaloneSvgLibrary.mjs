@@ -1690,7 +1690,7 @@ const STORY_OVERRIDES = {
   nestjs: 'bloom',
   fastify: 'swirl',
   symfony: 'swirl',
-  argocd: 'fan',
+  argocd: 'blade',
   jenkins: 'assemble',
   ubuntu: 'bloom',
   debian: 'swirl',
@@ -1729,7 +1729,7 @@ const STORY_OVERRIDES = {
   tidb: 'blade',
   fauna: 'bloom',
   upstash: 'stack',
-  sphinx: 'sweep',
+  sphinx: 'glide',
   cocoapods: 'sweep',
   traefikproxy: 'blade',
   trivy: 'blade',
@@ -1790,6 +1790,8 @@ const STORY_OVERRIDES = {
   proxmox: 'trace',
   seeedstudio: 'glide',
   texasinstruments: 'blade',
+  circleci: 'blade',
+
 };
 
 const STORY_MOTIONS = {
