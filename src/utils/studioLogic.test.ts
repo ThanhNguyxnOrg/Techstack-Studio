@@ -468,10 +468,10 @@ test('search tolerates partial names and a single typo', () => {
   }
 });
 
-test('every alias resolves to its own entry, apart from three terms two entries share', () => {
+test('every alias resolves to its own entry, with no exceptions left', () => {
   // Terms genuinely claimed by two catalog entries; the first result is whichever
   // entry owns the name, and both stay in the list.
-  const shared = new Set(['lambda', 'uno', 'rust']);
+  const shared = new Set<string>([]);
   const misranked: string[] = [];
 
   for (const item of TECH_CATALOG) {

@@ -2123,12 +2123,29 @@ function buildAnimatedSvg(item) {
             .join(',');
           return `scale(${out})`;
         });
+    // Icons whose entrance replays every loop need the standard end fade so the
+    // reset happens while the mark is invisible.
+    let styledCss = style;
+    let styledBody = body;
+    let styledReduced = reducedMotionCss;
+    const fadeMatch = /tss_([a-z0-9]+)_/.exec(String(style || ''));
+    if (fadeMatch && !String(style).includes(`tss_${fadeMatch[1]}_al`)) {
+      const fadeUid = fadeMatch[1];
+      styledCss =
+        `@keyframes tss_${fadeUid}_al{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
+        `.tss_${fadeUid}_al{animation:tss_${fadeUid}_al 3.6s linear infinite}` +
+        String(style || '');
+      styledReduced =
+        `.tss_${fadeUid}_al{animation:none!important;opacity:1!important}` +
+        String(reducedMotionCss || '');
+      styledBody = `<g class="tss_${fadeUid}_al">${body}</g>`;
+    }
     const fullStyle =
-      style || reducedMotionCss
-        ? `<style>${liftMotion(style)}@media (prefers-reduced-motion: reduce){${reducedMotionCss}}</style>`
+      styledCss || styledReduced
+        ? `<style>${liftMotion(styledCss)}@media (prefers-reduced-motion: reduce){${styledReduced}}</style>`
         : '';
     const vb = customViewBox || item.svgViewBox || '0 0 24 24';
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}${fullStyle}${body}</svg>`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vb}" role="img" aria-label="${label}">${defs ? `<defs>${defs}</defs>` : ''}${fullStyle}${styledBody}</svg>`;
     return { svg, concept, technique };
   };
 
@@ -5757,7 +5774,7 @@ function buildAnimatedSvg(item) {
         `.${kWave}{opacity:0;animation:${kWave} ${dur} ease-in-out infinite}`,
       `.${kAll},.${kMark},.${kWaveG},.${kWave}{animation:none!important}` +
         `.${kAll}{opacity:1!important}.${kMark}{opacity:1!important}.${kWaveG}{transform:translateY(0)!important}.${kWave}{transform:none!important;opacity:0!important}`,
-      `<g class="${kAll}"><g clip-path="url(#${cWave})"><path class="${kMark}" fill="${primary}" fill-rule="evenodd" d="${d}"/><g class="${kWaveG}"><path class="${kWave}" fill="${secondary}" d="M-4 12 C 0 8 4 8 8 12 C 12 16 16 16 20 12 C 24 8 28 8 32 12 L32 30 L-4 30 Z"/></g></g></g>`,
+      `<g class="${kAll}"><path class="${kMark}" fill="${primary}" fill-rule="evenodd" d="${d}"/><g clip-path="url(#${cWave})"><g class="${kWaveG}"><path class="${kWave}" fill="${secondary}" d="M-4 12 C 0 8 4 8 8 12 C 12 16 16 16 20 12 C 24 8 28 8 32 12 L32 30 L-4 30 Z"/></g></g></g>`,
       'An async wave rises through the aiohttp mark and settles',
       'Clipped liquid wave rise + fill lock'
     );

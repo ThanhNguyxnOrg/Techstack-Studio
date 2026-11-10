@@ -385,8 +385,16 @@ const NAME_ALIASES = {
   amazondynamodb: ['Amazon DynamoDB'],
 };
 
+const NAME_ALIAS_EXCLUSIONS = {
+  cargo: ['rust'],
+  arduino: ['uno'],
+  serverless: ['lambda'],
+};
+
 const DOCS_URL_OVERRIDES = {
   seeedstudio: 'https://www.seeedstudio.com/',
+  labview: 'https://www.ni.com/labview',
+  openapiinitiative: 'https://www.openapis.org',
   reactnative: 'https://reactnative.dev/',
   marko: 'https://markojs.com/',
   tokio: 'https://tokio.rs/',
@@ -5945,7 +5953,9 @@ for (const [category, baseItems] of Object.entries(CATEGORY_SEEDS)) {
       name: displayName,
       aliases: Array.from(
         new Set(
-          [id, slugKey, name, ...(NAME_ALIASES[id] || []), ...aliases].map((a) => a.toLowerCase())
+          [id, slugKey, name, ...(NAME_ALIASES[id] || []), ...aliases]
+            .filter((a) => !(NAME_ALIAS_EXCLUSIONS[id] || []).includes(String(a).toLowerCase()))
+            .map((a) => a.toLowerCase())
         )
       ),
       category,
