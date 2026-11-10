@@ -31,6 +31,27 @@ import { SelectedStackBar } from './components/SelectedStackBar';
 
 export default function App() {
   const initialState = useMemo(() => {
+    const sharedIds = (() => {
+      try {
+        const raw = new URLSearchParams(window.location.search).get('stack');
+        if (raw === null) return null;
+        return raw
+          .split(',')
+          .map((value) => value.trim())
+          .filter(Boolean);
+      } catch {
+        return null;
+      }
+    })();
+
+    if (sharedIds) {
+      return {
+        version: 1 as const,
+        selectedIds: resolveSelectedItems(sharedIds).map((item) => item.id),
+        settings: { ...DEFAULT_CUSTOMIZATION_SETTINGS },
+      };
+    }
+
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
       return parsePersistedState(raw);
@@ -66,6 +87,18 @@ export default function App() {
       // Ignore storage quota or private-browsing errors
     }
   }, [selectedIds, settings]);
+
+  // Keep the address bar shareable: ?stack=react,nodejs
+  useEffect(() => {
+    try {
+      const url = new URL(window.location.href);
+      if (selectedIds.length > 0) url.searchParams.set('stack', selectedIds.join(','));
+      else url.searchParams.delete('stack');
+      window.history.replaceState(null, '', url.toString());
+    } catch {
+      // Ignore history failures (sandboxed iframes, file://, …)
+    }
+  }, [selectedIds]);
 
   const selectedItems = useMemo(() => resolveSelectedItems(selectedIds), [selectedIds]);
 

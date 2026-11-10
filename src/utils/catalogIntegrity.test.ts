@@ -299,3 +299,20 @@ test('artwork that ships outside the 24-unit box keeps its own frame', () => {
     assert.equal(animatedBox, box, id + ' animated frame');
   }
 });
+
+test('published agent artifacts stay in sync with the catalog', () => {
+  const catalog = JSON.parse(fs.readFileSync('public/catalog.json', 'utf8'));
+  assert.equal(catalog.count, TECH_CATALOG.length);
+  assert.equal(catalog.icons.length, TECH_CATALOG.length);
+
+  const sample = catalog.icons.find((icon: { id: string }) => icon.id === 'react');
+  assert.ok(sample, 'react is present in the published catalog');
+  assert.ok(sample.svg.endsWith('/react.svg'));
+  assert.ok(sample.docsUrl.startsWith('http'));
+  assert.ok(readSvg(ANIMATED_DIR, 'react').includes('<svg'));
+
+  const llms = fs.readFileSync('public/llms.txt', 'utf8');
+  assert.ok(llms.includes('/catalog.json'));
+  assert.ok(llms.includes('?stack='));
+  assert.ok(llms.includes('npm run stack') || llms.includes('buildStackBanner'));
+});

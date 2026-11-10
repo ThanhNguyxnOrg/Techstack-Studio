@@ -1,0 +1,2717 @@
+{
+ "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
+ "count": 542,
+ "generatedAt": "2026-11-10T08:47:02.166Z",
+ "icons": {
+  "actix": {
+   "concept": "Actix request arrows draw in and lock, then breathe once",
+   "technique": "Staggered subpath trace + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "ada": {
+   "concept": "The Ada mark presses into place",
+   "technique": "story: press",
+   "status": "visual_qa_passed"
+  },
+  "adafruit": {
+   "concept": "The Adafruit petals bloom outward in sequence and settle",
+   "technique": "Per-petal scale bloom + static hold",
+   "status": "visual_qa_passed"
+  },
+  "adonisjs": {
+   "concept": "The AdonisJS mark unfolds sideways",
+   "technique": "story: unfold",
+   "status": "visual_qa_passed"
+  },
+  "aframe": {
+   "concept": "The A-Frame mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "aiohttp": {
+   "concept": "An async wave rises through the aiohttp mark and settles",
+   "technique": "Clipped liquid wave rise + fill lock",
+   "status": "visual_qa_passed"
+  },
+  "airbyte": {
+   "concept": "A data packet loops around the Airbyte ring while the mark fills",
+   "technique": "Dash packet loop + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "akamai": {
+   "concept": "The Akamai edge mark draws in and sends one signal ring outward",
+   "technique": "Subpath trace + fill lock + transient edge ring",
+   "status": "visual_qa_passed"
+  },
+  "alacritty": {
+   "concept": "Alacritty boots: a scan line loads the mark and the cursor blinks",
+   "technique": "Clipped scan line + cursor blink",
+   "status": "visual_qa_passed"
+  },
+  "algolia": {
+   "concept": "A search cursor runs the Algolia outline, then the mark locks",
+   "technique": "Dash search packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "alpinedotjs": {
+   "concept": "The Alpine.js mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "alpinelinux": {
+   "concept": "The Alpine peaks rise from the baseline and catch one light pass",
+   "technique": "Staggered peak rise + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "amazonaws": {
+   "concept": "The AWS smile sweeps in underneath, then the wordmark settles over it",
+   "technique": "Smile sweep + wordmark settle",
+   "status": "visual_qa_passed"
+  },
+  "amazondynamodb": {
+   "concept": "DynamoDB partitions stack into place and the table breathes",
+   "technique": "Per-partition rise + slow table pulse",
+   "status": "visual_qa_passed"
+  },
+  "amd": {
+   "concept": "The AMD wordmark writes its own letter contours, locks the fill and takes one light pass — the name never splits",
+   "technique": "Staggered per-subpath contour trace + synchronized fill lock + clipped prism pass",
+   "status": "visual_qa_passed"
+  },
+  "anaconda": {
+   "concept": "The Anaconda mark settles into place",
+   "technique": "story: swirl",
+   "status": "visual_qa_passed"
+  },
+  "androidstudio": {
+   "concept": "The Android Studio mark settles into place",
+   "technique": "story: bloom (7 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "angular": {
+   "concept": "Light sweep over the official Angular icon (press-kit GIF frame): a soft band passes once per loop, then holds static; the mark never moves or vanishes. Replaces the user shield motion — the raster has no paths to assemble.",
+   "technique": "Real PNG + alpha mask + gradient light band sweeping once per 8s loop; no redrawn shapes, no moving pieces",
+   "status": "visual_qa_passed"
+  },
+  "ansible": {
+   "concept": "Ansible A fills in from both ends with light, inner triangle flashes (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "antdesign": {
+   "concept": "The Ant Design mark settles into place",
+   "technique": "story: fan (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "anthropic": {
+   "concept": "The Anthropic facets spark outward and settle",
+   "technique": "Per-facet bloom + slow counter-sway",
+   "status": "visual_qa_passed"
+  },
+  "apache": {
+   "concept": "The Apache HTTP Server mark settles into place",
+   "technique": "story: cascade (20 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "apacheairflow": {
+   "concept": "The Apache Airflow mark settles in from the side, part by part",
+   "technique": "story: sweep (8 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "apachearrow": {
+   "concept": "The Apache Arrow flies in and catches one light pass",
+   "technique": "Flight-in + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "apachecassandra": {
+   "concept": "The Cassandra ring turns into place and blinks once",
+   "technique": "Ring rotation + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachecordova": {
+   "concept": "Cordova boots with a scan line and wakes",
+   "technique": "Clipped scan line + fill + wake pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachecouchdb": {
+   "concept": "The CouchDB couch rises into place and breathes",
+   "technique": "Couch rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachedoris": {
+   "concept": "The Doris data triangle assembles and breathes",
+   "technique": "Per-part rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apacheflink": {
+   "concept": "The Flink squirrel flicks its tail and settles",
+   "technique": "Tail-flick rotation + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachegroovy": {
+   "concept": "The Groovy star spins into place and settles",
+   "technique": "Star spin + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachehadoop": {
+   "concept": "The Hadoop elephant waddles into place and settles",
+   "technique": "Waddle rotation + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachehive": {
+   "concept": "The Hive bee hovers into place",
+   "technique": "Hover bob + wing flutter + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachekafka": {
+   "concept": "Kafka dots stream outward and flashes pulse in sequence (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "apachemaven": {
+   "concept": "The Maven feather draws its own outline and takes one light pass",
+   "technique": "Contour draw + fill lock + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "apachenetbeanside": {
+   "concept": "The NetBeans blocks stack into place and settle",
+   "technique": "Per-block rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachepulsar": {
+   "concept": "Pulsar sends one pulse wave outward and settles",
+   "technique": "Transient pulse ring + slow breathing",
+   "status": "visual_qa_passed"
+  },
+  "apachespark": {
+   "concept": "The Apache Spark mark settles into place",
+   "technique": "story: bloom",
+   "status": "visual_qa_passed"
+  },
+  "apachesuperset": {
+   "concept": "The Superset layers stack and settle",
+   "technique": "Per-layer rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apachetomcat": {
+   "concept": "The Tomcat cat sways into place and settles",
+   "technique": "Sway + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "apollographql": {
+   "concept": "The Apollo GraphQL mark settles into place",
+   "technique": "story: swirl",
+   "status": "visual_qa_passed"
+  },
+  "appwrite": {
+   "concept": "The Appwrite mark settles into place",
+   "technique": "story: bloom (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "arangodb": {
+   "concept": "The ArangoDB nodes light up and connect",
+   "technique": "Per-node bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "archlinux": {
+   "concept": "The Arch Linux mark rises off the baseline",
+   "technique": "story: rise",
+   "status": "visual_qa_passed"
+  },
+  "arduino": {
+   "concept": "Arduino Blink: the plus and minus take turns dimming like an LED while a pulse of current runs around the infinity loop",
+   "technique": "Clip-split plus/minus opacity blink + pathLength dash pulse along the loop centerline clipped to the logo",
+   "status": "visual_qa_passed"
+  },
+  "argocd": {
+   "concept": "The Argo CD mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "arm": {
+   "concept": "The Arm mark presses into place",
+   "technique": "story: press",
+   "status": "visual_qa_passed"
+  },
+  "aseprite": {
+   "concept": "The Aseprite pixels draw in and settle",
+   "technique": "Per-pixel rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "assemblyscript": {
+   "concept": "The AssemblyScript letters assemble and settle",
+   "technique": "Per-letter rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "astro": {
+   "concept": "Astro gradient logomark ignites, then holds static",
+   "technique": "Whole-mark fill-opacity + scale ignition; static second half",
+   "status": "visual_qa_passed"
+  },
+  "auth0": {
+   "concept": "The Auth0 shield locks into place and catches one light pass",
+   "technique": "Shield lock + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "authelia": {
+   "concept": "The Authelia key turns and the shield locks",
+   "technique": "Key turn + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "autodeskeagle": {
+   "concept": "The Autodesk EAGLE spreads its wings and settles",
+   "technique": "Wing spread + flutter + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "azure": {
+   "concept": "Ribbon pieces fade and rise in sequence over the official Azure mark, then static hold",
+   "technique": "Official ribbon verbatim + staggered fade-and-rise assembly, static second half",
+   "status": "visual_qa_passed"
+  },
+  "azuresqldatabase": {
+   "concept": "The Azure SQL disc rises and its letters stamp down onto the plate",
+   "technique": "Disc rise + letter stamp",
+   "status": "visual_qa_passed"
+  },
+  "babel": {
+   "concept": "The Babel mark settles into place",
+   "technique": "story: swirl (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "babylondotjs": {
+   "concept": "The Babylon.js tower stacks into place and settles",
+   "technique": "Per-block rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "backbonedotjs": {
+   "concept": "The Backbone spine draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "balena": {
+   "concept": "Cube faces assemble, wordmark fades in, then hold static",
+   "technique": "Two-group sequential assembly; static second half",
+   "status": "visual_qa_passed"
+  },
+  "baserow": {
+   "concept": "The Baserow grid rows fill in and settle",
+   "technique": "Per-row rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "bazel": {
+   "concept": "The Bazel mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "beagleboard": {
+   "concept": "Ear wag: Boris's floppy ear wags continuously around its top attachment, settling to exact static at the loop seam",
+   "technique": "Continuous rotate oscillation baked into 8s keyframe windows (ear group, fill-box origin at the head attachment); settles to static at the loop seam",
+   "status": "visual_qa_passed"
+  },
+  "bentoml": {
+   "concept": "The BentoML box opens into place and settles",
+   "technique": "Box open + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "biome": {
+   "concept": "The Biome mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "bitbucket": {
+   "concept": "The Bitbucket mark settles into place",
+   "technique": "story: stack (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "blender": {
+   "concept": "The Blender mark settles into place",
+   "technique": "story: swirl (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "bluetooth": {
+   "concept": "The Bluetooth rune draws its signal and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "bootstrap": {
+   "concept": "The Bootstrap mark presses into place",
+   "technique": "story: press",
+   "status": "visual_qa_passed"
+  },
+  "broadcom": {
+   "concept": "A signal packet runs the Broadcom wave and the mark locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "bruno": {
+   "concept": "The Bruno mark settles into place",
+   "technique": "story: assemble (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "buildkite": {
+   "concept": "The Buildkite mark glides in and settles",
+   "technique": "story: glide",
+   "status": "visual_qa_passed"
+  },
+  "bulma": {
+   "concept": "The Bulma mark presses into place",
+   "technique": "story: press",
+   "status": "visual_qa_passed"
+  },
+  "bun": {
+   "concept": "Bun bounces in with a squash-stretch, eyes blink, tongue flicks (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "c": {
+   "concept": "ISO C 3-facet blue hexagon with pure central C emblem (no ++) and progressive C-arc energy trace",
+   "technique": "Isometric hexagon facet luminance + pathLength=64 C-arc stroke-dashoffset draw",
+   "status": "visual_qa_passed"
+  },
+  "caddy": {
+   "concept": "Caddy serves one request and answers with a signal ring",
+   "technique": "Transient signal ring + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "cakephp": {
+   "concept": "The CakePHP mark settles into place",
+   "technique": "story: stack (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "capacitor": {
+   "concept": "The Capacitor mark settles into place",
+   "technique": "story: stack (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "cargo": {
+   "concept": "Light sweep over golden crates: a soft band of light passes across the real logo once per loop, then holds static; the mark itself never moves or vanishes",
+   "technique": "Real PNG + silhouette clips (stack + pallet regions) + gradient light band sweeping once per 10s loop; no redrawn shapes, no moving pieces",
+   "status": "visual_qa_passed"
+  },
+  "celery": {
+   "concept": "The Celery stalk grows into place and settles",
+   "technique": "Grow-in + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "centos": {
+   "concept": "The CentOS mark settles into place",
+   "technique": "story: swirl (9 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "chakraui": {
+   "concept": "The Chakra UI mark pops into shape",
+   "technique": "story: pop",
+   "status": "visual_qa_passed"
+  },
+  "chartdotjs": {
+   "concept": "The Chart.js bars grow in sequence and settle",
+   "technique": "Per-bar rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "chef": {
+   "concept": "The Chef hat tips into place and settles",
+   "technique": "Hat tip + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "cilium": {
+   "concept": "The Cilium network nodes light up and connect",
+   "technique": "Per-node bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "circleci": {
+   "concept": "The CircleCI mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "clerk": {
+   "concept": "The Clerk key locks into place and catches one light pass",
+   "technique": "Key lock + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "clickhouse": {
+   "concept": "ClickHouse bars grow in sequence, flashes sweep, square pops with a flicker (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "clion": {
+   "concept": "The CLion mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "clojure": {
+   "concept": "The Clojure mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "cloudflare": {
+   "concept": "Cloudflare cloud halves slide in from both sides, traces sweep across (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "cmake": {
+   "concept": "The CMake mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "cockroachlabs": {
+   "concept": "The CockroachDB antennae twitch and the mark settles",
+   "technique": "Antenna twitch + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "cocoapods": {
+   "concept": "The CocoaPods mark settles in from the side, part by part",
+   "technique": "story: sweep (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "codeberg": {
+   "concept": "The Codeberg mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "codeigniter": {
+   "concept": "The CodeIgniter flame grows and catches one light pass",
+   "technique": "Flame grow + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "coffeescript": {
+   "concept": "The CoffeeScript mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "commitlint": {
+   "concept": "The commitlint check draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "commonlisp": {
+   "concept": "The Common Lisp mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "composer": {
+   "concept": "The Composer mark settles into place",
+   "technique": "story: assemble",
+   "status": "visual_qa_passed"
+  },
+  "conan": {
+   "concept": "The Conan package assembles and settles",
+   "technique": "Per-part rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "condaforge": {
+   "concept": "Anvil heated to orange and cooled back to its static colour, then a long static hold; final and reduced-motion frames are exactly the static anvil",
+   "technique": "Fill-colour keyframes on the catalog path itself (light grey to hot orange to light grey); Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "confluence": {
+   "concept": "The Confluence mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "consul": {
+   "concept": "The Consul mark settles into place",
+   "technique": "story: bloom",
+   "status": "visual_qa_passed"
+  },
+  "containerd": {
+   "concept": "The containerd container stack settles",
+   "technique": "Per-layer rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "contentful": {
+   "concept": "The Contentful content blocks assemble and settle",
+   "technique": "Per-block bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "couchbase": {
+   "concept": "The Couchbase mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "cpp": {
+   "concept": "Official C++ hexagon: facets draw as line-art and lock in, the C sweeps around, then the two + operators pop and tick one after the other like an increment",
+   "technique": "Per-facet pathLength trace + masked C-arc stroke wipe + overshoot scale pops on each + + skewed clipped sheen sweep",
+   "status": "visual_qa_passed"
+  },
+  "crystal": {
+   "concept": "The Crystal mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "csharp": {
+   "concept": "Upstream C# choreography: purple hexagon and C arc with 4-bar # octothorpe spinning out into locked position",
+   "technique": "Rotational translation keyframe on the # octothorpe group + C-arc trace",
+   "status": "visual_qa_passed"
+  },
+  "css3": {
+   "concept": "Glowing CSS letters light up on the purple card (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "curl": {
+   "concept": "A request packet runs the cURL swoosh and the mark locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "cursor": {
+   "concept": "The Cursor cube tilts to point at the next cell, then locks",
+   "technique": "Tilt + overshoot settle + static hold",
+   "status": "visual_qa_passed"
+  },
+  "cypress": {
+   "concept": "The Cypress mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "d": {
+   "concept": "The D mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "d3": {
+   "concept": "The D3 bars draw into place and settle",
+   "technique": "Per-bar rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "daisyui": {
+   "concept": "The daisyUI daisy blooms petal by petal",
+   "technique": "Per-petal bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "dart": {
+   "concept": "The Dart mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "databricks": {
+   "concept": "The Databricks lakehouse layers assemble and settle",
+   "technique": "Per-layer rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "datadog": {
+   "concept": "The Datadog mark settles into place",
+   "technique": "story: bloom",
+   "status": "visual_qa_passed"
+  },
+  "debian": {
+   "concept": "The Debian mark settles into place",
+   "technique": "story: swirl",
+   "status": "visual_qa_passed"
+  },
+  "deno": {
+   "concept": "Deno mark squashes and stretches like jelly, eye blinks open (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "dependabot": {
+   "concept": "The Dependabot mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "dgraph": {
+   "concept": "The Dgraph nodes light up and connect",
+   "technique": "Per-node bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "digitalocean": {
+   "concept": "The DigitalOcean droplet falls into place and catches one light pass",
+   "technique": "Drop with overshoot + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "directus": {
+   "concept": "The Directus D assembles and settles",
+   "technique": "Per-part rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "discord": {
+   "concept": "The Discord controller wakes and settles",
+   "technique": "Controller sway + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "django": {
+   "concept": "Upstream django-icon.svg choreography: dual d and j typographic stems drawing via stroke-dashoffset and illuminating from #092E20 to #44B78B",
+   "technique": "Synchronized stroke-dashoffset contour draw + brand green fill transition",
+   "status": "visual_qa_passed"
+  },
+  "docker": {
+   "concept": "3-tier shipping container assembly sliding onto a gently rocking whale hull within safe 24x24 optical margins",
+   "technique": "Multi-group CSS keyframe transforms with safe 2.2..21.8 viewBox framing",
+   "status": "visual_qa_passed"
+  },
+  "docusaurus": {
+   "concept": "The Docusaurus dino waddles into place and settles",
+   "technique": "Dino waddle + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "dotnet": {
+   "concept": "Dot blinks, N/E/T grow from the baseline, white flashes (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "drizzle": {
+   "concept": "The Drizzle drops fall into place and settle",
+   "technique": "Per-drop fall + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "drone": {
+   "concept": "The Drone hovers into place",
+   "technique": "Hover bob + rotor wobble + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "duckdb": {
+   "concept": "DuckDB disc + glyph ignite with a fill-opacity flicker, then hold static",
+   "technique": "Whole-mark fill-opacity + scale ignition; static second half",
+   "status": "visual_qa_passed"
+  },
+  "dvc": {
+   "concept": "A data packet runs the DVC pipeline and the mark locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "dynatrace": {
+   "concept": "The Dynatrace mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "easyeda": {
+   "concept": "The EasyEDA circuit traces itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "echo": {
+   "concept": "Echo wordmark draws itself element by element (device, then e, c, h, o), then a long static hold; final and reduced-motion frames are exactly the static wordmark",
+   "technique": "One-line stroke draw on the official wordmark itself (trace, then fill fade-in per element); Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "eclipseide": {
+   "concept": "The Eclipse orbit spins into place and settles",
+   "technique": "Orbit spin + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "editorconfig": {
+   "concept": "The EditorConfig gear turns into place and settles",
+   "technique": "Gear turn + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "elasticsearch": {
+   "concept": "Elasticsearch shards slide in from alternating sides, flashes pulse (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "electron": {
+   "concept": "The Electron mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "elixir": {
+   "concept": "Elixir drop draws itself along its own outline, then fills; final and reduced-motion frames are exactly the static drop",
+   "technique": "One-line stroke draw on the catalog path itself (trace, then fill fade-in); Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "elm": {
+   "concept": "The Elm mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "emberdotjs": {
+   "concept": "The Ember ember glows into place and breathes",
+   "technique": "Ember grow + slow glow pulse",
+   "status": "visual_qa_passed"
+  },
+  "envoyproxy": {
+   "concept": "An Envoy packet routes around the mark and the fill locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "erlang": {
+   "concept": "The Erlang mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "esbuild": {
+   "concept": "The esbuild mark zips in and snaps into place",
+   "technique": "Fast zip + snap + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "eslint": {
+   "concept": "Upstream eslint-icon.svg choreography: #4B32C3 outer hexagon and #8080F2 inner core counter-rotating 60deg into lock",
+   "technique": "Dual concentric hexagon counter-rotation keyframes",
+   "status": "visual_qa_passed"
+  },
+  "esphome": {
+   "concept": "ESPHome sends one signal ring and settles",
+   "technique": "Transient signal ring + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "espressif": {
+   "concept": "Espressif signal: the mark spreads outward from the chip dot so the arcs appear by distance, then two light waves radiate across it",
+   "technique": "Soft radial mask reveal scaled from the dot + two radial-gradient wave discs clipped to the logo",
+   "status": "visual_qa_passed"
+  },
+  "expo": {
+   "concept": "The Expo mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "express": {
+   "concept": "Clean typographic stroke-to-fill trace of the authentic Express ex monogram without artificial underline bars",
+   "technique": "Progressive pathLength=100 stroke-dashoffset draw + synchronized fill illumination",
+   "status": "visual_qa_passed"
+  },
+  "fastapi": {
+   "concept": "FastAPI #009688 lightning badge with high-speed bolt ignition pulse and #5EEAD4 perimeter circuit trace",
+   "technique": "Multi-stage bolt ignition scale/opacity + perimeter circle stroke-dashoffset",
+   "status": "visual_qa_passed"
+  },
+  "fastify": {
+   "concept": "The Fastify mark settles into place",
+   "technique": "story: swirl (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "fastly": {
+   "concept": "The Fastly mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "fauna": {
+   "concept": "The Fauna mark settles into place",
+   "technique": "story: bloom",
+   "status": "visual_qa_passed"
+  },
+  "fedora": {
+   "concept": "The Fedora mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "figma": {
+   "concept": "5-colour Figma shapes spring into place with the same petal assembly",
+   "technique": "5 independent shape spring assembly keyframes",
+   "status": "visual_qa_passed"
+  },
+  "firebase": {
+   "concept": "Firebase flame grows from the base and flickers with a rising heat shimmer (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "fishshell": {
+   "concept": "The fish shell fish swims into place and settles",
+   "technique": "Swim sway + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "flask": {
+   "concept": "Flask segments fly in staggered with a white flash on each (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "flutter": {
+   "concept": "Whole-mark ignition flicker over the official Flutter logomark: brief flicker, then static hold",
+   "technique": "Official logomark verbatim (vector + embedded shadow) + whole-mark ignition flicker, static second half",
+   "status": "visual_qa_passed"
+  },
+  "flux": {
+   "concept": "A Flux packet runs the loop and the mark locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "flydotio": {
+   "concept": "The Fly.io mark darts in and snaps into place",
+   "technique": "Fast dart + snap + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "flyway": {
+   "concept": "The Flyway mark glides in and settles",
+   "technique": "story: glide",
+   "status": "visual_qa_passed"
+  },
+  "fortran": {
+   "concept": "The Fortran mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "framer": {
+   "concept": "The Framer shapes assemble and settle",
+   "technique": "Per-shape rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "freebsd": {
+   "concept": "The FreeBSD Beastie waves into place and settles",
+   "technique": "Beastie wave + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "freertos": {
+   "concept": "FreeRTOS chip draws itself in 5 sequential groups (frame, pins, arc, nodes, traces), then holds solid and loops seamlessly; final and reduced-motion frames are exactly the static glyph",
+   "technique": "Sequential staggered stroke draw on grouped subpaths + verbatim single-path fill layer; Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "fsharp": {
+   "concept": "The F# mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "gatsby": {
+   "concept": "Upstream gatsby-icon.svg choreography: #663399 circular G monogram and diagonal slash progressive stroke draw",
+   "technique": "Circular G monogram stroke-dashoffset trace + fill lock",
+   "status": "visual_qa_passed"
+  },
+  "ghost": {
+   "concept": "The Ghost mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "gin": {
+   "concept": "The Gin mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "git": {
+   "concept": "Git #F05032 diamond badge with progressive white branch/merge graph draw and sequential commit node pop-ins",
+   "technique": "Branch path stroke-dashoffset + 3 staggered commit <circle> spring scale keyframes",
+   "status": "visual_qa_passed"
+  },
+  "gitea": {
+   "concept": "The Gitea mark settles into place",
+   "technique": "story: assemble",
+   "status": "visual_qa_passed"
+  },
+  "github": {
+   "concept": "Upstream github-icon.svg choreography: Octocat silhouette with subtle head/tentacle poise and #93C5FD rim trace",
+   "technique": "Pivot poise around (12, 16) + pathLength=100 rim contour trace",
+   "status": "visual_qa_passed"
+  },
+  "githubactions": {
+   "concept": "Workflow traces draw through the checkmark nodes (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "githubcopilot": {
+   "concept": "The GitHub Copilot mark beats twice",
+   "technique": "story: beat",
+   "status": "visual_qa_passed"
+  },
+  "gitkraken": {
+   "concept": "The GitKraken mark settles into place",
+   "technique": "story: swirl",
+   "status": "visual_qa_passed"
+  },
+  "gitlab": {
+   "concept": "The GitLab tanuki bounces and its pieces lock",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "gleam": {
+   "concept": "The Gleam mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "gnu": {
+   "concept": "The GNU gnu nods into place and settles",
+   "technique": "Gnu nod + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "gnubash": {
+   "concept": "Hexagon outline traces, prompt bar and cursor blink (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "gnuemacs": {
+   "concept": "The GNU Emacs E draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "go": {
+   "concept": "Go letters dash in and settle while the three speed lines stretch out behind them one after another, then flutter",
+   "technique": "Clip-split layers (letters + 3 line strips): translateX dash-in and right-anchored scaleX stretch with staggered timing",
+   "status": "visual_qa_passed"
+  },
+  "godotengine": {
+   "concept": "The Godot robot wakes into place",
+   "technique": "Robot bob + tilt + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "goland": {
+   "concept": "The GoLand mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "googlecloud": {
+   "concept": "PR #10 4-quadrant multicolor cloud sequential path drawing (yellow, green, blue, red) with synchronized hold phase",
+   "technique": "4-quadrant <clipPath> + multi-arc stroke-dasharray/stroke-dashoffset choreography",
+   "status": "visual_qa_passed"
+  },
+  "googledataflow": {
+   "concept": "Node-by-node flow around the pipeline loop: left, top-centre, right, bottom-centre nodes swell and light in turn, bars static, then a long static hold; final and reduced-motion frames are exactly the static official Dataflow icon",
+   "technique": "Per-node CSS scale + fill on the icon's own circles only (transform-box: fill-box, centre origin); Material-style ease-out for each pulse, no whole-mark transform",
+   "status": "visual_qa_passed"
+  },
+  "googlegemini": {
+   "concept": "Spark twinkle over the official Gemini aurora spark: gentle pulse, then static hold",
+   "technique": "Official aurora spark verbatim (vector + embedded JPEG) + whole-mark twinkle pulse, static second half",
+   "status": "visual_qa_passed"
+  },
+  "gradio": {
+   "concept": "The Gradio blocks assemble and settle",
+   "technique": "Per-block rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "gradle": {
+   "concept": "The Gradle mark hops twice",
+   "technique": "story: hop",
+   "status": "visual_qa_passed"
+  },
+  "grafana": {
+   "concept": "Grafana ring traces draw around the mark with a warm glow (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "graphql": {
+   "concept": "Upstream graphql-icon.svg choreography: #E10098 6-vertex orbital rotation with inscribed triangle bloom",
+   "technique": "Separated vertex node ring rotation + inscribed polygon spring scale",
+   "status": "visual_qa_passed"
+  },
+  "greensock": {
+   "concept": "The GSAP mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "gunicorn": {
+   "concept": "The Gunicorn steps into place and settles",
+   "technique": "Gunicorn step + bob + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "haproxy": {
+   "concept": "The HAProxy mark glides in and settles",
+   "technique": "story: glide",
+   "status": "visual_qa_passed"
+  },
+  "harbor": {
+   "concept": "The Harbor mark settles into place",
+   "technique": "story: assemble (11 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "haskell": {
+   "concept": "The Haskell mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "hasura": {
+   "concept": "The Hasura mark blooms and settles",
+   "technique": "Whole-mark bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "haxe": {
+   "concept": "The Haxe mark settles into place",
+   "technique": "story: assemble (10 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "headlessui": {
+   "concept": "The Headless UI mark rises and settles",
+   "technique": "Whole-mark rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "helix": {
+   "concept": "The Helix Editor mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "helm": {
+   "concept": "The Helm wheel and wordmark settle into place",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "heroku": {
+   "concept": "The Heroku mark pops into shape",
+   "technique": "story: pop",
+   "status": "visual_qa_passed"
+  },
+  "hetzner": {
+   "concept": "The Hetzner server boots into place and catches one light pass",
+   "technique": "Boot scale + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "hibernate": {
+   "concept": "The Hibernate mark settles into place",
+   "technique": "story: bloom (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "homeassistant": {
+   "concept": "The Home Assistant house lights up and settles",
+   "technique": "House glow + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "homebrew": {
+   "concept": "The Homebrew mark settles into place",
+   "technique": "story: stack (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "hono": {
+   "concept": "The Hono flame rises off the ground and flicks twice",
+   "technique": "Rise + two-beat flick",
+   "status": "visual_qa_passed"
+  },
+  "hoppscotch": {
+   "concept": "The Hoppscotch mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "html5": {
+   "concept": "HTML5 renders like a page loading: a scan line sweeps down the shield and the mark brightens behind it",
+   "technique": "Animated mask scaleY reveal from the top + synchronized scan-line translateY clipped to the logo",
+   "status": "visual_qa_passed"
+  },
+  "htmx": {
+   "concept": "The htmx mark settles into place",
+   "technique": "story: cascade (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "huggingface": {
+   "concept": "Hugging Face #FFD21E smiling mascot with cheerful hand-wave rock and warm highlight",
+   "technique": "Harmonic mascot rock around (12, 14) with golden contour highlight",
+   "status": "visual_qa_passed"
+  },
+  "infineon": {
+   "concept": "Wordmark assembly: the lowercase letters fade in left to right, then the red arc sweeps in to complete the mark; exact static hold in the second half",
+   "technique": "Nine staggered opacity+translate entrances baked into 8s keyframe windows (letters, then arc); static second half",
+   "status": "visual_qa_passed"
+  },
+  "influxdb": {
+   "concept": "The InfluxDB mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "insomnia": {
+   "concept": "The Insomnia mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "intel": {
+   "concept": "The Intel wordmark draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "intellijidea": {
+   "concept": "IntelliJ IDEA dark plate with gradient IJ assembling and the underscore blinking like a text cursor (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "ionic": {
+   "concept": "The Ionic mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "istio": {
+   "concept": "The Istio mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "iterm2": {
+   "concept": "iTerm2 boots with a scan line and a blinking cursor",
+   "technique": "Clipped scan + cursor blink + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "jaeger": {
+   "concept": "The Jaeger trace draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "jasmine": {
+   "concept": "The Jasmine mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "java": {
+   "concept": "Steam lifts off the Java cup while the blue glass takes one light pass",
+   "technique": "Staggered steam rise + clipped glass sheen on the two-colour cup",
+   "status": "visual_qa_passed"
+  },
+  "javascript": {
+   "concept": "A gold tide rises through the JavaScript badge and settles with the J and S locked in place",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "jenkins": {
+   "concept": "The Jenkins mark settles into place",
+   "technique": "story: assemble (17 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "jest": {
+   "concept": "Upstream jest-icon.svg choreography: #C21325 jester boots spring bounce",
+   "technique": "Spring rotation/scale keyframe + contour trace",
+   "status": "visual_qa_passed"
+  },
+  "jira": {
+   "concept": "The Jira mark settles into place",
+   "technique": "story: cascade (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "jquery": {
+   "concept": "The jQuery mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "json": {
+   "concept": "The JSON mark unfolds sideways",
+   "technique": "story: unfold",
+   "status": "visual_qa_passed"
+  },
+  "jsonwebtokens": {
+   "concept": "The JWT token signs into place and catches one light pass",
+   "technique": "Token lock + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "julia": {
+   "concept": "Three Julia dots pop in sequence, then the exact static mark holds in the second half",
+   "technique": "Per-dot opacity+scale entrances baked into 8s keyframe windows; static second half",
+   "status": "visual_qa_passed"
+  },
+  "jupyter": {
+   "concept": "Jupyter planet arcs grow from the centre seam and moons swing into orbit (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "kaggle": {
+   "concept": "The Kaggle mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "kalilinux": {
+   "concept": "The Kali Linux mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "keras": {
+   "concept": "Keras K draws itself in three mask strokes in turn, then a light flash sweeps the mark (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "keycloak": {
+   "concept": "The Keycloak key turns into place and settles",
+   "technique": "Key turn + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "kibana": {
+   "concept": "The Kibana mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "kicad": {
+   "concept": "KiCad mark assembles in four springy slices, dot blinks (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "klipper": {
+   "concept": "Gantry assembly: the slate beams slide in, the red stripe traces down from the top vertex, then the wordmark fades in; exact static hold in the second half",
+   "technique": "Three staggered translate+fade entrances baked into 8s keyframe windows (beams, stripe, wordmark); static second half",
+   "status": "visual_qa_passed"
+  },
+  "knexdotjs": {
+   "concept": "The Knex K draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "koa": {
+   "concept": "The Koa K grows into place and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "kong": {
+   "concept": "The Kong mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "kotlin": {
+   "concept": "Kotlin facets slide in from three sides, then a shine sweeps (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "ktor": {
+   "concept": "The Ktor mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "kubernetes": {
+   "concept": "Upstream kubernetes-icon.svg choreography: stationary #326CE5 heptagon hull with wind-up and 360deg helm wheel rotation",
+   "technique": "Separated heptagon hull + 7-spoke helm <g> rotational keyframe",
+   "status": "visual_qa_passed"
+  },
+  "labview": {
+   "concept": "The LabVIEW mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "langchain": {
+   "concept": "Two chain links slide in and settle with a wiggle (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "laravel": {
+   "concept": "The Laravel mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "latex": {
+   "concept": "The LaTeX mark settles into place",
+   "technique": "story: cascade (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "less": {
+   "concept": "The Less wordmark draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "letsencrypt": {
+   "concept": "The Let’s Encrypt lock turns into place and settles",
+   "technique": "Lock turn + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "linear": {
+   "concept": "The Linear mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "linkerd": {
+   "concept": "A Linkerd packet runs the loop and the mark locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "liquibase": {
+   "concept": "The Liquibase mark settles into place",
+   "technique": "story: stack (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "lit": {
+   "concept": "The Lit element catches with one flash and holds its glow",
+   "technique": "Ignition flash + pop",
+   "status": "visual_qa_passed"
+  },
+  "llvm": {
+   "concept": "The LLVM mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "logstash": {
+   "concept": "The Logstash mark settles into place",
+   "technique": "story: cascade (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "loopback": {
+   "concept": "A LoopBack packet runs the loop and the mark locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "lorawan": {
+   "concept": "Whole-lockup fade and rise over the official LoRa Alliance lockup, then static hold",
+   "technique": "Official white lockup verbatim + whole-lockup fade-and-rise, static second half",
+   "status": "visual_qa_passed"
+  },
+  "lua": {
+   "concept": "The Lua moon rises and a soft halo blooms behind it, then fades",
+   "technique": "Moon rise + radial halo bloom + static hold",
+   "status": "visual_qa_passed"
+  },
+  "mantine": {
+   "concept": "The Mantine M blooms into place and settles",
+   "technique": "Per-part bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "mariadb": {
+   "concept": "The MariaDB mark presses into place",
+   "technique": "story: press",
+   "status": "visual_qa_passed"
+  },
+  "markdown": {
+   "concept": "The Markdown mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "marko": {
+   "concept": "The Marko mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "matter": {
+   "concept": "The Matter nodes link up one after another and settle",
+   "technique": "Per-node rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "mdx": {
+   "concept": "The MDX wordmark draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "meilisearch": {
+   "concept": "Meilisearch sends one search pulse and settles",
+   "technique": "Transient search ring + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "mercurial": {
+   "concept": "The Mercurial mark settles into place",
+   "technique": "story: assemble (8 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "meta": {
+   "concept": "Infinity drawn as one continuous line, then filled, then a long static hold; final and reduced-motion frames are exactly the static infinity",
+   "technique": "Stroke-dashoffset draw on the catalog path itself (pathLength 100) + fill-opacity fade-in; Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "metabase": {
+   "concept": "The Metabase mark settles into place",
+   "technique": "story: assemble (11 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "meteor": {
+   "concept": "The Meteor mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "microchip": {
+   "concept": "Disc + M trace-in: the red disc fades in, the white M slides in along its diagonal, then the wordmark fades in; exact static hold in the second half",
+   "technique": "Three staggered opacity+translate entrances baked into 8s keyframe windows (disc, M, wordmark); static second half",
+   "status": "visual_qa_passed"
+  },
+  "micropython": {
+   "concept": "MicroPython bars pulse like a signal, cursor blinks (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "microsoftsqlserver": {
+   "concept": "Flat red grid exactly static; a same-path light edge breathes twice, then a long static hold; final and reduced-motion frames are exactly the static grid",
+   "technique": "Overlaid same-path stroke breathing (opacity only, no movement, no clipping)",
+   "status": "visual_qa_passed"
+  },
+  "milvus": {
+   "concept": "The Milvus vectors light up and connect",
+   "technique": "Per-part bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "mistralai": {
+   "concept": "The Mistral wind bars flow into place and settle",
+   "technique": "Per-bar slide + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "mkdocs": {
+   "concept": "The MkDocs book opens into place and settles",
+   "technique": "Book open + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "mlflow": {
+   "concept": "The MLflow track draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "mobx": {
+   "concept": "The MobX mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "mocha": {
+   "concept": "The Mocha mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "mongodb": {
+   "concept": "MongoDB leaf: it grows from the stem with a soft overshoot, sways in a breeze, and a light climbs along the leaf",
+   "technique": "Scale-in from the stem with overshoot + rotate sway about the stem + clipped vertical sheen sweep",
+   "status": "visual_qa_passed"
+  },
+  "mongoose": {
+   "concept": "The Mongoose mark settles into place",
+   "technique": "story: bloom (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "mqtt": {
+   "concept": "MQTT publish and subscribe: the four radio bands light up one after another outward from the corner, then travel back inward",
+   "technique": "Annulus clip-split bands with staggered opacity pulses, outward pass then inward pass",
+   "status": "visual_qa_passed"
+  },
+  "mui": {
+   "concept": "The MUI mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "mysql": {
+   "concept": "Light sweep over the official MySQL lockup (dolphin + wordmark): a soft band passes once per loop, then holds static. Replaces the upstream dolphin choreography — the raster has no paths to trace.",
+   "technique": "Real PNG + alpha mask + gradient light band sweeping once per 8s loop; no redrawn shapes, no moving pieces",
+   "status": "visual_qa_passed"
+  },
+  "nativescript": {
+   "concept": "The NativeScript phone boots into place and catches one light pass",
+   "technique": "Boot scale + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "natsdotio": {
+   "concept": "NATS sends one signal ring and settles",
+   "technique": "Transient signal ring + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "neo4j": {
+   "concept": "Neo4j graph nodes drift off, flashes pulse, arrow traces (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "neon": {
+   "concept": "Neon N traces in its own colour then fills, then the exact static mark holds in the second half",
+   "technique": "Single-path stroke-dashoffset trace + fill-opacity reveal; static second half",
+   "status": "visual_qa_passed"
+  },
+  "neovim": {
+   "concept": "The Neovim mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "nestjs": {
+   "concept": "The NestJS mark settles into place",
+   "technique": "story: bloom",
+   "status": "visual_qa_passed"
+  },
+  "netlify": {
+   "concept": "The Netlify diamond pieces assemble into place",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "newrelic": {
+   "concept": "The New Relic mark settles in from the side, part by part",
+   "technique": "story: sweep (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "nextdotjs": {
+   "concept": "Authentic monochrome Next.js emblem with specular light sweeping along the signature diagonal N slash",
+   "technique": "Clipped diagonal slash highlight + monochrome rim trace",
+   "status": "visual_qa_passed"
+  },
+  "nginx": {
+   "concept": "Upstream nginx-icon.svg choreography: #009639 hexagon with white N proxy pipeline trace and 5 junction nodes",
+   "technique": "N-pipeline stroke-dashoffset trace + 5 junction node scale pulses",
+   "status": "visual_qa_passed"
+  },
+  "nim": {
+   "concept": "The Nim mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "nixos": {
+   "concept": "The NixOS mark settles into place",
+   "technique": "story: swirl (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "nodedotjs": {
+   "concept": "Authentic Node.js multi-faceted green hexagon with isometric facet illumination and perimeter energy trace",
+   "technique": "Community Node.js vector + isometric left-facet luminance + perimeter stroke-dashoffset draw",
+   "status": "visual_qa_passed"
+  },
+  "nodered": {
+   "concept": "Node-RED flow: a message packet runs along each wire and the receiving nodes light up as it arrives",
+   "technique": "pathLength dash packets along the two wires + node interior flashes timed to the arrival",
+   "status": "visual_qa_passed"
+  },
+  "nomad": {
+   "concept": "The Nomad mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "nordicsemiconductor": {
+   "concept": "The Nordic chip sends two signal rings and settles",
+   "technique": "Dual transient rings + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "notion": {
+   "concept": "The Notion mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "npm": {
+   "concept": "npm block fills up with light, then flashes (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "nuget": {
+   "concept": "The NuGet mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "numpy": {
+   "concept": "NumPy cubes pop in one by one, then the mark settles (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "nuxt": {
+   "concept": "The Nuxt peaks rise from the baseline and settle into their ridge",
+   "technique": "Rise-in with a small overshoot + static hold",
+   "status": "visual_qa_passed"
+  },
+  "nvidia": {
+   "concept": "The NVIDIA mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "nxp": {
+   "concept": "The NXP Semiconductors wordmark writes its own letter contours, locks the fill and takes one light pass — the name never splits",
+   "technique": "Staggered per-subpath contour trace + synchronized fill lock + clipped prism pass",
+   "status": "visual_qa_passed"
+  },
+  "obsidian": {
+   "concept": "The Obsidian crystal settles and catches one light pass",
+   "technique": "Crystal settle + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "ocaml": {
+   "concept": "The OCaml mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "ollama": {
+   "concept": "Ollama llama ears wobble with a skew-and-stretch, eyes blink (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "onnx": {
+   "concept": "ONNX network nodes light up and drift outward, flashes ripple (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "openai": {
+   "concept": "6-petal rotational symmetry bloom in #10A37F with breathing #A7F3D0 central core",
+   "technique": "120deg rotational step keyframe + central aperture pulse",
+   "status": "visual_qa_passed"
+  },
+  "openapiinitiative": {
+   "concept": "The OpenAPI spec turns down and clicks into its lock",
+   "technique": "Turn-down with a lock click",
+   "status": "visual_qa_passed"
+  },
+  "opencv": {
+   "concept": "OpenCV rings spin in and traces sparkle (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "opengl": {
+   "concept": "The OpenGL mark settles into place",
+   "technique": "story: swirl (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "opensearch": {
+   "concept": "The OpenSearch glass sweeps across the field and one hit ring fires",
+   "technique": "Sweep around the lens + late hit ring",
+   "status": "visual_qa_passed"
+  },
+  "openshift": {
+   "concept": "The OpenShift orbit spins into place and settles",
+   "technique": "Orbit spin + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "opentelemetry": {
+   "concept": "The OpenTelemetry mark settles into place",
+   "technique": "story: cascade (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "opentofu": {
+   "concept": "The OpenTofu blocks assemble and settle",
+   "technique": "Per-block rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "openvino": {
+   "concept": "OpenVINO letters flash brand purple in reading order like inference flowing through the model, then a long static hold; final and reduced-motion frames are exactly the static wordmark",
+   "technique": "Per-letter purple flash chase across the official wordmark itself (reading order, staggered); Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "openwrt": {
+   "concept": "The OpenWrt radio handshakes with two quick beats before it locks",
+   "technique": "Handshake beats",
+   "status": "visual_qa_passed"
+  },
+  "oracle": {
+   "concept": "Oracle wordmark traces in its own colour then fills, then the exact static mark holds in the second half",
+   "technique": "Single-path stroke-dashoffset trace + fill-opacity reveal; static second half",
+   "status": "visual_qa_passed"
+  },
+  "ovh": {
+   "concept": "The OVHcloud gathers out of the air and settles",
+   "technique": "Cloud gather with a soft bounce",
+   "status": "visual_qa_passed"
+  },
+  "owasp": {
+   "concept": "The OWASP bee hovers into place",
+   "technique": "Hover bob + wing flutter + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "p5dotjs": {
+   "concept": "The p5.js sketch draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "packer": {
+   "concept": "The Packer mark settles into place",
+   "technique": "story: stack (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "pagerduty": {
+   "concept": "The PagerDuty bell shakes twice and sends two alert rings",
+   "technique": "Bell shake + staggered double ring",
+   "status": "visual_qa_passed"
+  },
+  "pandas": {
+   "concept": "Pandas bars grow in sequence with flashes (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "passport": {
+   "concept": "The Passport.js mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "payloadcms": {
+   "concept": "The Payload CMS mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "perforce": {
+   "concept": "The Perforce helix spins into place and settles",
+   "technique": "Helix spin + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "perl": {
+   "concept": "The Perl mark settles into place",
+   "technique": "story: cascade (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "perplexity": {
+   "concept": "The Perplexity spark pulses once and settles",
+   "technique": "Transient spark ring + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "phoenixframework": {
+   "concept": "Phoenix bird assembled from its own 9 pieces in path order, then a long static hold; final and reduced-motion frames are exactly the static bird",
+   "technique": "Staggered piece assembly on the catalog path itself (rise + fade-in per piece); Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "php": {
+   "concept": "PHP oval pops in, letters flash in turn, then all letters flash (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "phpstorm": {
+   "concept": "The PhpStorm mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "pinia": {
+   "concept": "The Pinia pineapple grows into place and settles",
+   "technique": "Grow-in + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "planetscale": {
+   "concept": "The PlanetScale mark settles into place",
+   "technique": "story: swirl (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "platformio": {
+   "concept": "PlatformIO alien comes alive: the antennae wiggle in turn while the pupils glance left and then right",
+   "technique": "Clip-split layers: antenna rotate about their bases + synchronized pupil translateX",
+   "status": "visual_qa_passed"
+  },
+  "playwright": {
+   "concept": "User motion: whole two-mask mark pops in, rocks side to side, fades at the loop seam",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "plotly": {
+   "concept": "The Plotly mark settles into place",
+   "technique": "story: cascade (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "pm2": {
+   "concept": "The PM2 mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "pnpm": {
+   "concept": "The pnpm mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "pocketbase": {
+   "concept": "The PocketBase mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "podman": {
+   "concept": "The Podman mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "poetry": {
+   "concept": "The Poetry mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "polars": {
+   "concept": "A Polars packet runs the arrow and the mark locks",
+   "technique": "Dash packet + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "polymerproject": {
+   "concept": "The Polymer molecule spins into place and settles",
+   "technique": "Molecule spin + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "portainer": {
+   "concept": "The Portainer mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "postcss": {
+   "concept": "The PostCSS mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "postgresql": {
+   "concept": "Solid #4169E1 PostgreSQL elephant mark with progressive #93C5FD ear and trunk contour illumination",
+   "technique": "Solid brand base + pathLength=100 contour trace + subtle vertical poise",
+   "status": "visual_qa_passed"
+  },
+  "postman": {
+   "concept": "The Postman mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "powershell": {
+   "concept": "The PowerShell mark settles in from the side, part by part",
+   "technique": "story: sweep (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "preact": {
+   "concept": "The Preact atom spins into place and settles",
+   "technique": "Atom spin + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "prefect": {
+   "concept": "The Prefect flow keeps orbiting, one full turn per loop",
+   "technique": "Continuous orbit",
+   "status": "visual_qa_passed"
+  },
+  "prettier": {
+   "concept": "The Prettier lines slide in from alternating sides and line up",
+   "technique": "Per-line stagger + alignment",
+   "status": "visual_qa_passed"
+  },
+  "primereact": {
+   "concept": "The PrimeReact atom beats twice and then holds",
+   "technique": "Double scale beat",
+   "status": "visual_qa_passed"
+  },
+  "primevue": {
+   "concept": "The PrimeVue V assembles and settles",
+   "technique": "Per-part rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "prisma": {
+   "concept": "The Prisma mark unfolds sideways",
+   "technique": "story: unfold",
+   "status": "visual_qa_passed"
+  },
+  "processingfoundation": {
+   "concept": "The Processing mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "prometheus": {
+   "concept": "Prometheus flame flares with gradient fire, embers pulse (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "proxmox": {
+   "concept": "The Proxmox VE mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "pulumi": {
+   "concept": "The Pulumi mark settles into place",
+   "technique": "story: bloom (12 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "puppet": {
+   "concept": "The Puppet nods into place and settles",
+   "technique": "Nod + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "puppeteer": {
+   "concept": "The Puppeteer mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "purescript": {
+   "concept": "The PureScript mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "px4": {
+   "concept": "PX4 line fades in, AUTOPILOT line follows, then the static wordmark holds",
+   "technique": "Two-group sequential fade; static second half",
+   "status": "visual_qa_passed"
+  },
+  "pycharm": {
+   "concept": "The PyCharm mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "pypi": {
+   "concept": "The PyPI mark settles into place",
+   "technique": "story: assemble (10 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "python": {
+   "concept": "Dual interlocking blue and yellow Python snakes gliding diagonally into lock while tracing contours",
+   "technique": "Dual-element counter-diagonal translation + synchronized stroke-dashoffset contour reveal",
+   "status": "visual_qa_passed"
+  },
+  "pytorch": {
+   "concept": "PyTorch #EE4C2C flame with warm #FF9E2C inner core and pulsing #FEF08A top spark",
+   "technique": "Dual-scale flame paths + independent top ignition spark keyframe",
+   "status": "visual_qa_passed"
+  },
+  "qdrant": {
+   "concept": "The Qdrant vectors light up and connect",
+   "technique": "Per-part bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "qemu": {
+   "concept": "The QEMU mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "qmk": {
+   "concept": "The QMK mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "qualcomm": {
+   "concept": "The Snapdragon mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "quarkus": {
+   "concept": "The Quarkus swirl spirals down into its resting angle",
+   "technique": "Long spiral unwind",
+   "status": "visual_qa_passed"
+  },
+  "quasar": {
+   "concept": "The Quasar mark settles into place",
+   "technique": "story: swirl (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "qwik": {
+   "concept": "The Qwik bolt zips in from the corner and snaps into place",
+   "technique": "Fast diagonal zip + snap + static hold",
+   "status": "visual_qa_passed"
+  },
+  "r": {
+   "concept": "R language: a comet orbits the ring once without touching the letter, then the R flashes like a finished run",
+   "technique": "Ring-only clip + pathLength comet dashes on the ellipse centerline + letter flash on completion",
+   "status": "visual_qa_passed"
+  },
+  "rabbitmq": {
+   "concept": "RabbitMQ packets hop along, flashes pulse (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "racket": {
+   "concept": "The Racket lambda lands into place and settles",
+   "technique": "Land scale + bounce + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "radixui": {
+   "concept": "The Radix cells stack in from the left one after another",
+   "technique": "Per-cell slide-in + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "railway": {
+   "concept": "The Railway line extends out from its start and settles",
+   "technique": "Track extension from the left",
+   "status": "visual_qa_passed"
+  },
+  "rancher": {
+   "concept": "The Rancher brand presses down onto the hide and holds",
+   "technique": "Brand press",
+   "status": "visual_qa_passed"
+  },
+  "raspberrypi": {
+   "concept": "Light sweep over the official Raspberry Pi symbol: a soft band passes once per loop, then holds static. Replaces the upstream leaf/berry choreography — the raster has no paths to move.",
+   "technique": "Real PNG + alpha mask + gradient light band sweeping once per 8s loop; no redrawn shapes, no moving pieces",
+   "status": "visual_qa_passed"
+  },
+  "ray": {
+   "concept": "The Ray burst blooms out ray by ray and settles",
+   "technique": "Per-ray bloom + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "react": {
+   "concept": "Upstream react-icon.svg choreography: 3 phase-staggered #61DAFB electron orbits revolving around a pulsing nucleus",
+   "technique": "3 rotated <ellipse> orbital traces + continuous atom rotation + nucleus scale pulse",
+   "status": "visual_qa_passed"
+  },
+  "reactivex": {
+   "concept": "The ReactiveX quasar waves turn into place and settle",
+   "technique": "Per-wave rotate-in + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "reactnative": {
+   "concept": "Three orbits revolve around the static cyan disc",
+   "technique": "Continuous orbital rotation; reduced-motion frame is the exact static atom",
+   "status": "visual_qa_passed"
+  },
+  "reason": {
+   "concept": "The Reason mark draws itself and settles",
+   "technique": "Contour draw + fill lock + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "recoil": {
+   "concept": "The Recoil orbits turn into place and settle",
+   "technique": "Per-orbit rotate-in + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "redhat": {
+   "concept": "The Red Hat tips into place and settles",
+   "technique": "Hat tilt with a nod + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "redis": {
+   "concept": "Redis ping and pong: two small bumps, each sending a light ripple outward from the counter of the R across the mark",
+   "technique": "Overshoot scale bump + radial-gradient ripple discs scaled 0.4 to 15 and clipped to the logo silhouette",
+   "status": "visual_qa_passed"
+  },
+  "redux": {
+   "concept": "Upstream redux-icon.svg choreography: 3 interlocking #764ABC orbital bowls tracing continuously with pulsing state nodes",
+   "technique": "Continuous stroke-dashoffset arc trace + harmonic state node pulse",
+   "status": "visual_qa_passed"
+  },
+  "relay": {
+   "concept": "A Relay message runs around the node and hands off one ring",
+   "technique": "Packet orbit + hand-off ring",
+   "status": "visual_qa_passed"
+  },
+  "remix": {
+   "concept": "The Remix mark presses into place and settles",
+   "technique": "Soft press settle + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "render": {
+   "concept": "The Render panels unfold sideways into place",
+   "technique": "Horizontal unfold + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "renovate": {
+   "concept": "The Renovate mark presses into place and catches one light pass",
+   "technique": "Press settle + clipped sheen",
+   "status": "visual_qa_passed"
+  },
+  "replicate": {
+   "concept": "The Replicate plates bloom in one after another and settle",
+   "technique": "Per-plate rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "rescript": {
+   "concept": "Upstream rescript-icon.svg choreography: #E6484F ReScript R monogram facet assembly and contour draw",
+   "technique": "Facet scale convergence + stroke-dashoffset contour trace",
+   "status": "visual_qa_passed"
+  },
+  "rider": {
+   "concept": "The Rider mark hops twice like a runner clearing obstacles",
+   "technique": "Double hop",
+   "status": "visual_qa_passed"
+  },
+  "riscv": {
+   "concept": "The RISC-V strokes stack into place and settle",
+   "technique": "Per-stroke rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "rocket": {
+   "concept": "The Rocket mark lifts off into place and settles",
+   "technique": "Lift-off with overshoot + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "rollupdotjs": {
+   "concept": "The Rollup bars roll into place and settle",
+   "technique": "Per-bar slide-in + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "ros": {
+   "concept": "The ROS gear meshes through two short turns and locks",
+   "technique": "Gear mesh ratchet",
+   "status": "visual_qa_passed"
+  },
+  "ruby": {
+   "concept": "The Ruby gem turns into place and settles",
+   "technique": "Gem turn-in + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "rubygems": {
+   "concept": "The RubyGems gem turns facet-first and catches the light",
+   "technique": "Facet turn + light catch",
+   "status": "visual_qa_passed"
+  },
+  "rubyonrails": {
+   "concept": "The Rails mark lays its own rail down and the fill follows behind",
+   "technique": "Contour rail + fill lock",
+   "status": "visual_qa_passed"
+  },
+  "ruff": {
+   "concept": "The Ruff mark flicks into place and settles",
+   "technique": "Quick press flick + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "rust": {
+   "concept": "Rust cog stays solid while a rust-orange heat beam sweeps once around it, lighting the teeth and the R as it passes",
+   "technique": "Rotating gradient wedge (transform rotate 0-360deg) clipped to the logo silhouette",
+   "status": "visual_qa_passed"
+  },
+  "sailsdotjs": {
+   "concept": "The Sails sails rise out of the hull and settle",
+   "technique": "Per-sail rise + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "saltproject": {
+   "concept": "The Salt grain settles down onto the plate",
+   "technique": "Squash landing + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "sanic": {
+   "concept": "The Sanic runner takes two quick strides and holds",
+   "technique": "Double stride",
+   "status": "visual_qa_passed"
+  },
+  "sanity": {
+   "concept": "The Sanity mark settles into place",
+   "technique": "Soft settle + slow pulse",
+   "status": "visual_qa_passed"
+  },
+  "sass": {
+   "concept": "Upstream sass-icon.svg choreography: continuous #CC6699 cursive calligraphy ribbon trace",
+   "technique": "Continuous stroke-dashoffset calligraphy draw + fill reveal",
+   "status": "visual_qa_passed"
+  },
+  "scala": {
+   "concept": "The Scala mark settles into place",
+   "technique": "story: swirl (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "scaleway": {
+   "concept": "The Scaleway mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "scikitlearn": {
+   "concept": "The scikit-learn mark settles, the script draws itself and the wordmark fades in",
+   "technique": "Staggered shape settle + script contour trace + wordmark fade",
+   "status": "visual_qa_passed"
+  },
+  "scipy": {
+   "concept": "The SciPy mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "scratch": {
+   "concept": "The Scratch mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "seeedstudio": {
+   "concept": "The Seeed mark glides in and settles",
+   "technique": "story: glide",
+   "status": "visual_qa_passed"
+  },
+  "selenium": {
+   "concept": "The Selenium mark settles into place",
+   "technique": "story: cascade (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "sentry": {
+   "concept": "The Sentry mark settles into place",
+   "technique": "story: bloom",
+   "status": "visual_qa_passed"
+  },
+  "sequelize": {
+   "concept": "The Sequelize mark settles into place",
+   "technique": "story: cascade (27 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "serverless": {
+   "concept": "The Serverless mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "shadcnui": {
+   "concept": "The shadcn/ui mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "sketch": {
+   "concept": "The Sketch mark settles into place",
+   "technique": "story: assemble (7 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "slack": {
+   "concept": "The Slack hash assembles colour by colour",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "snowflake": {
+   "concept": "The Snowflake mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "snyk": {
+   "concept": "The Snyk mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "socketdotio": {
+   "concept": "The Socket.IO mark beats twice",
+   "technique": "story: beat",
+   "status": "visual_qa_passed"
+  },
+  "solid": {
+   "concept": "The SolidJS mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "solidity": {
+   "concept": "The Solidity mark settles into place",
+   "technique": "story: assemble (6 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "spacy": {
+   "concept": "The spaCy mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "sparkfun": {
+   "concept": "The SparkFun mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "sphinx": {
+   "concept": "The Sphinx mark glides in and settles",
+   "technique": "story: glide",
+   "status": "visual_qa_passed"
+  },
+  "splunk": {
+   "concept": "The Splunk mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "spring": {
+   "concept": "The Spring mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "springboot": {
+   "concept": "PR #15 Spring Boot power-button startup flicker and breathing Gaussian halo",
+   "technique": "Multi-stage fill ignition keyframes (powerHex, powerSym) + feGaussianBlur halo filter",
+   "status": "visual_qa_passed"
+  },
+  "springsecurity": {
+   "concept": "The Spring Security mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "sqlalchemy": {
+   "concept": "The SQLAlchemy mark settles into place",
+   "technique": "story: cascade (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "sqlite": {
+   "concept": "SQLite #94ADB8 feather quill and database page with nib writing motion and ink contour trace",
+   "technique": "Quill nib pivot motion + pathLength=100 contour trace",
+   "status": "visual_qa_passed"
+  },
+  "starship": {
+   "concept": "The Starship mark settles into place",
+   "technique": "story: assemble (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "stencil": {
+   "concept": "The Stencil mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "stmicroelectronics": {
+   "concept": "The STMicroelectronics mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "storybook": {
+   "concept": "Upstream storybook-icon.svg choreography: #FF4785 book badge spring poise with white S emblem contour reveal",
+   "technique": "Spring badge tilt + stroke-dashoffset emblem trace",
+   "status": "visual_qa_passed"
+  },
+  "strapi": {
+   "concept": "The Strapi mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "streamlit": {
+   "concept": "Streamlit petals bloom and the flower sways gently (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "styledcomponents": {
+   "concept": "The styled-components mark settles into place",
+   "technique": "story: assemble (13 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "stylelint": {
+   "concept": "The Stylelint mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "sublimetext": {
+   "concept": "The Sublime Text mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "subversion": {
+   "concept": "The Apache Subversion mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "supabase": {
+   "concept": "Supabase lightning traces through a mask, mark fills in, flickers and settles (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "surrealdb": {
+   "concept": "The SurrealDB mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "suse": {
+   "concept": "The SUSE mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "svelte": {
+   "concept": "User motion: S traces in, fills, then skew-wobbles on the official shell + white S",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "svg": {
+   "concept": "The SVG mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "swagger": {
+   "concept": "The Swagger mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "swc": {
+   "concept": "The SWC mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "swift": {
+   "concept": "Upstream swift-icon.svg choreography: #F05138 Swift bird swooping along its flight arc with wing-edge highlight",
+   "technique": "Aerodynamic swoop transform + wing contour stroke-dashoffset trace",
+   "status": "visual_qa_passed"
+  },
+  "swr": {
+   "concept": "The SWR mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "symfony": {
+   "concept": "The Symfony mark settles into place",
+   "technique": "story: swirl",
+   "status": "visual_qa_passed"
+  },
+  "tailscale": {
+   "concept": "The Tailscale mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "tailwindcss": {
+   "concept": "The Tailwind crests ride one slow swell and the mark stays whole",
+   "technique": "Whole-mark swell (no clip split)",
+   "status": "visual_qa_passed"
+  },
+  "tanstack": {
+   "concept": "The TanStack Query mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "tauri": {
+   "concept": "The Tauri mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "teamcity": {
+   "concept": "The TeamCity mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "tekton": {
+   "concept": "The Tekton mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "temporal": {
+   "concept": "The Temporal mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "tensorflow": {
+   "concept": "Two halves slide in, gradient shines fall (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "terraform": {
+   "concept": "Four blocks rise in sequence with white flashes (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "testinglibrary": {
+   "concept": "Upstream testinglibrary-icon.svg choreography: #E33332 Testing Library octopus buoyantly bobbing with tentacle wave",
+   "technique": "Buoyant vertical + rotational wave keyframe",
+   "status": "visual_qa_passed"
+  },
+  "texasinstruments": {
+   "concept": "The Texas Instruments mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "thethingsnetwork": {
+   "concept": "TTN symbol pops, wordmark fades in, then hold static",
+   "technique": "Two-group sequential assembly; static second half",
+   "status": "visual_qa_passed"
+  },
+  "thread": {
+   "concept": "Wind-in: the disc fades in, then the mark winds back and forth around its centre like a thread screwing in; exact static hold in the second half",
+   "technique": "Fade-in plus one rotate oscillation baked into 8s keyframe windows (shared group, fill-box centre origin); static second half",
+   "status": "visual_qa_passed"
+  },
+  "threedotjs": {
+   "concept": "The Three.js mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "tidb": {
+   "concept": "The TiDB mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "timescale": {
+   "concept": "The TimescaleDB mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "tinygo": {
+   "concept": "Light sweep over the gopher chip: a soft band of light passes across the real logo once per loop, then holds static; the mark itself never moves or vanishes",
+   "technique": "Real PNG + alpha mask + gradient light band sweeping once per 8s loop; no redrawn shapes, no moving pieces",
+   "status": "visual_qa_passed"
+  },
+  "tmux": {
+   "concept": "The tmux mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "tokio": {
+   "concept": "Tokio task dots commute continuously along their spokes to the scheduler ring and back, a perpetual round-trip wave; spokes, ring and center dot never move",
+   "technique": "Continuous staggered round-trip commute of the mark’s own task dots along their spokes (3s cycle, 0.5s stagger, seamless loop); Material-style ease-out",
+   "status": "visual_qa_passed"
+  },
+  "toml": {
+   "concept": "The TOML mark unfolds sideways",
+   "technique": "story: unfold",
+   "status": "visual_qa_passed"
+  },
+  "traefikproxy": {
+   "concept": "The Traefik mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "travisci": {
+   "concept": "The Travis CI mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "trino": {
+   "concept": "The Trino mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "trivy": {
+   "concept": "The Trivy mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "trpc": {
+   "concept": "The tRPC mark unfolds sideways",
+   "technique": "story: unfold",
+   "status": "visual_qa_passed"
+  },
+  "turborepo": {
+   "concept": "The Turborepo mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "turso": {
+   "concept": "The Turso mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "typeorm": {
+   "concept": "The TypeORM mark settles into place",
+   "technique": "story: bloom (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "typescript": {
+   "concept": "Official #3178C6 TypeScript badge: the rim traces, the badge fills in, T and S draw as outlines and then fill, and a light sheen crosses the badge",
+   "technique": "Rim pathLength trace + badge scale-in + staggered T/S outline-to-fill (stroke-dashoffset + fill-opacity) + skewed clipped sheen",
+   "status": "needs_visual_review"
+  },
+  "typst": {
+   "concept": "The Typst mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "ubuntu": {
+   "concept": "The Ubuntu mark settles into place",
+   "technique": "story: bloom (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "unity": {
+   "concept": "The Unity mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "unocss": {
+   "concept": "The UnoCSS mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "unrealengine": {
+   "concept": "The Unreal mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "upstash": {
+   "concept": "The Upstash mark settles into place",
+   "technique": "story: stack (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "uv": {
+   "concept": "The uv mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "v": {
+   "concept": "The V mark settles into place",
+   "technique": "story: cascade (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "vagrant": {
+   "concept": "The Vagrant mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "vapor": {
+   "concept": "The Vapor mark settles into place",
+   "technique": "story: assemble (12 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "vault": {
+   "concept": "The Vault mark presses into place",
+   "technique": "story: press",
+   "status": "visual_qa_passed"
+  },
+  "vcpkg": {
+   "concept": "Cycle assembly: the four gradient swooshes fly in clockwise around the cycle, then the exact static mark holds",
+   "technique": "Four staggered translate+fade entrances (top, right, bottom, left) baked into 8s keyframe windows; static second half",
+   "status": "visual_qa_passed"
+  },
+  "vercel": {
+   "concept": "Vercel triangle traces in, mask reveals it bottom-up, edge sweeps and flash (user motion)",
+   "technique": "user-supplied 3.6s loop",
+   "status": "visual_qa_passed"
+  },
+  "vim": {
+   "concept": "The Vim mark settles into place",
+   "technique": "story: assemble (33 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "virtualbox": {
+   "concept": "The VirtualBox mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "visualstudio": {
+   "concept": "The Visual Studio ribbon assembles layer by layer and holds its full-colour form",
+   "technique": "Staggered layer settle + gradient sheen lock",
+   "status": "visual_qa_passed"
+  },
+  "vite": {
+   "concept": "Vite flame + shading ignite, then hold static",
+   "technique": "Whole-mark fill-opacity + scale ignition; static second half",
+   "status": "visual_qa_passed"
+  },
+  "vitepress": {
+   "concept": "The VitePress mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "vitest": {
+   "concept": "Vitest flame + glows ignite, then hold static",
+   "technique": "Whole-mark fill-opacity + scale ignition; static second half",
+   "status": "visual_qa_passed"
+  },
+  "vmware": {
+   "concept": "The VMware wordmark writes its own letter contours, locks the fill and takes one light pass — the name never splits",
+   "technique": "Staggered per-subpath contour trace + synchronized fill lock + clipped prism pass",
+   "status": "visual_qa_passed"
+  },
+  "vscode": {
+   "concept": "Light sweep over the official VS Code icon: a soft band passes once per loop, then holds static. Replaces the user trace/cursor motion — the raster has no paths to trace.",
+   "technique": "Real PNG + alpha mask + gradient light band sweeping once per 8s loop; no redrawn shapes, no moving pieces",
+   "status": "visual_qa_passed"
+  },
+  "vuedotjs": {
+   "concept": "Dual-color #42B883 outer V and #35495E inner V telescoping into alignment",
+   "technique": "Two-layer chevron vertical spring convergence",
+   "status": "visual_qa_passed"
+  },
+  "vuetify": {
+   "concept": "Four Vuetify facets assemble in sequence, then the exact static mark holds in the second half",
+   "technique": "Per-facet opacity+translate entrances baked into 8s keyframe windows; static second half",
+   "status": "visual_qa_passed"
+  },
+  "vultr": {
+   "concept": "The Vultr mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "warp": {
+   "concept": "The Warp mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "webassembly": {
+   "concept": "The WebAssembly mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "webdriverio": {
+   "concept": "The WebdriverIO mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "webgl": {
+   "concept": "The WebGL mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "webgpu": {
+   "concept": "W assembles triangle by triangle in path order, then a long static hold; final and reduced-motion frames are exactly the static W",
+   "technique": "Per-triangle CSS translateY + opacity (transform-box: fill-box, centre origin); Material-style ease-out for each entrance",
+   "status": "visual_qa_passed"
+  },
+  "webpack": {
+   "concept": "Upstream webpack-icon.svg choreography: #8DD6F9 isometric cube with #1C78C0 edge lines rotating",
+   "technique": "Single isometric cube rotation + scale pulse",
+   "status": "visual_qa_passed"
+  },
+  "webrtc": {
+   "concept": "The WebRTC mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "webstorm": {
+   "concept": "The WebStorm mark settles into place",
+   "technique": "story: assemble (5 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "weightsandbiases": {
+   "concept": "The Weights & Biases mark settles into place",
+   "technique": "story: stack (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "wezterm": {
+   "concept": "The WezTerm mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "wireguard": {
+   "concept": "The WireGuard mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "wireshark": {
+   "concept": "The Wireshark mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "wolfram": {
+   "concept": "The Wolfram mark settles into place",
+   "technique": "story: fan (3 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "xcode": {
+   "concept": "The Xcode mark presses into place",
+   "technique": "story: press",
+   "status": "visual_qa_passed"
+  },
+  "xml": {
+   "concept": "The XML mark settles into place",
+   "technique": "story: cascade (4 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "xstate": {
+   "concept": "The XState mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "yaml": {
+   "concept": "The YAML mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "yarn": {
+   "concept": "The Yarn mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "yocto": {
+   "concept": "Wordmark assembly: yocto letters slide in left to right, PROJECT rises, blue dot drops in last; exact static hold in the second half",
+   "technique": "Six staggered translate+fade entrances baked into 8s keyframe windows (4 yocto letters, PROJECT line, dot); static second half",
+   "status": "visual_qa_passed"
+  },
+  "zedindustries": {
+   "concept": "The Zed mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "zephyr": {
+   "concept": "The Zephyr mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "zerotier": {
+   "concept": "The ZeroTier mark opens like a fan and locks",
+   "technique": "story: blade",
+   "status": "visual_qa_passed"
+  },
+  "zig": {
+   "concept": "The Zig mark settles into place",
+   "technique": "story: assemble (9 pieces)",
+   "status": "visual_qa_passed"
+  },
+  "zigbee": {
+   "concept": "The Zigbee mark settles into place",
+   "technique": "story: trace",
+   "status": "visual_qa_passed"
+  },
+  "zsh": {
+   "concept": "The Zsh mark settles into place",
+   "technique": "story: assemble (2 pieces)",
+   "status": "visual_qa_passed"
+  }
+ }
+}

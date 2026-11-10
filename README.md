@@ -186,6 +186,26 @@ See the [asset pipeline](docs/ASSET_PIPELINE.md) for the full technique table.
 
 <a id="exports"></a>
 
+## For agents and scripts
+
+Machine-readable endpoints on the published site:
+
+| Path                       | Contents                                                                                                             |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `/catalog.json`            | every icon: id, name, category, subcategory, role, docsUrl, monogram, brandColor, svg, sourceSvg, concept, technique |
+| `/icons/manifest.json`     | id → motion concept, technique, review status                                                                        |
+| `/llms.txt`                | short guide for assistants: endpoints, id conventions, ready-to-paste snippets                                       |
+| `/icons/animated/<id>.svg` | the animated icon (static sibling under `/icons/source/`)                                                            |
+
+Build a banner without opening the studio:
+
+```bash
+npm run stack -- --ids=react,nodejs,postgresql --out=stack.svg
+npm run stack -- --ids=react,vue,aws --format=md --out=stack.md
+```
+
+Share a stack with `?stack=react,nodejs` appended to the site URL.
+
 ## Export formats
 
 ### GitHub README Markdown

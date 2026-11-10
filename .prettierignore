@@ -11,3 +11,7 @@ src/data/standaloneSvgParts.json
 docs/animation/animation-manifest.json
 docs/assets/*.svg
 docs/assets/*.png
+public/catalog.json
+public/icons/manifest.json
+public/llms.txt
+exports/
