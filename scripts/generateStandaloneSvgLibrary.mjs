@@ -2102,6 +2102,9 @@ function buildAnimatedSvg(item) {
         })
         .replace(/rotate\(([-+]?[\d.]+)deg\)/g, (whole, deg) => {
           const n = parseFloat(deg);
+          // Zero must stay zero: lifting it to 6° made every spin start six
+          // degrees off its end pose and snap at the loop seam.
+          if (!Number.isFinite(n) || n === 0) return whole;
           const mag = Math.abs(n) < 6 ? 6 : Math.abs(n);
           return `rotate(${n < 0 ? -mag : mag}deg)`;
         })
