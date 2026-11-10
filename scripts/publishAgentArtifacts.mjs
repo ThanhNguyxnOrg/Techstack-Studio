@@ -29,6 +29,7 @@ const icons = catalog
       subcategory: item.subcategory,
       role: item.role,
       docsUrl: item.docsUrl,
+      aliases: item.aliases || [],
       monogram: item.monogram,
       brandColor: item.brandColor,
       svg: `icons/animated/${item.id}.svg`,
@@ -106,14 +107,19 @@ Icon paths in catalog.json are relative to the site root. Ids are lowercase and
 punctuation-free: next.js → nextdotjs, vue → vuedotjs, three.js → threedotjs,
 socket.io → socketdotio, aws → amazonaws. Use catalog.json instead of guessing.
 
+Every icon carries an aliases array, so resolve a human name before
+building a URL (vue → vuedotjs, nodejs → nodedotjs, aws → amazonaws).
+
 ## Share link
 
-${SITE}/?stack=react,nodejs,postgresql opens the builder with that stack.
+${SITE}/?stack=react,nodedotjs opens the builder with that stack. Aliases such as
+nodejs are accepted by the CLI and the share link, but icon files use canonical
+ids from catalog.json.
 
 ## Build a banner without the UI
 
 \`\`\`bash
-npm run stack -- --ids=react,nodejs,postgresql --out=stack.svg
+npm run stack -- --ids=react,nodedotjs --out=stack.svg
 \`\`\`
 
 Formats: svg (default), md (README table), html (standalone page). Inside the repo

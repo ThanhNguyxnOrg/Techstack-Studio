@@ -309,6 +309,14 @@ test('published agent artifacts stay in sync with the catalog', () => {
   assert.ok(sample, 'react is present in the published catalog');
   assert.ok(sample.svg.endsWith('/react.svg'));
   assert.ok(sample.docsUrl.startsWith('http'));
+  assert.ok(Array.isArray(sample.aliases) && sample.aliases.length >= 1, 'aliases are published');
+  const vue = catalog.icons.find((icon: { id: string }) => icon.id === 'vuedotjs');
+  assert.ok(vue.aliases.includes('vue'), 'vue resolves to vuedotjs through aliases');
+  const indexHtml = fs.readFileSync('index.html', 'utf8');
+  assert.ok(
+    indexHtml.includes('catalog.json') && indexHtml.includes('llms.txt'),
+    'page links the agent endpoints'
+  );
   assert.ok(readSvg(ANIMATED_DIR, 'react').includes('<svg'));
 
   const llms = fs.readFileSync('public/llms.txt', 'utf8');

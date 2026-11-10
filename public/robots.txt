@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://thanhnguyxnorg.github.io/Techstack-Studio/sitemap.xml
+
+# Machine-readable icon catalog and assistant guide
+# https://thanhnguyxnorg.github.io/Techstack-Studio/catalog.json
+# https://thanhnguyxnorg.github.io/Techstack-Studio/llms.txt

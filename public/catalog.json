@@ -10,6 +10,11 @@
    "subcategory": "Web Frameworks",
    "role": "Powerful Pragmatic & Extremely Fast Rust Web Framework",
    "docsUrl": "https://actix.rs/",
+   "aliases": [
+    "actix",
+    "actix web",
+    "actix-rs"
+   ],
    "monogram": "ACT",
    "brandColor": "#000000",
    "svg": "icons/animated/actix.svg",
@@ -24,6 +29,12 @@
    "subcategory": "Systems & Safety",
    "role": "High-Integrity Real-Time Safety-Critical Language",
    "docsUrl": "https://ada-lang.io/",
+   "aliases": [
+    "ada",
+    "gnat",
+    "adalang",
+    "spark-ada"
+   ],
    "monogram": "ADA",
    "brandColor": "#000000",
    "svg": "icons/animated/ada.svg",
@@ -38,6 +49,11 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "Open-Source Hardware Feather Boards, Sensors & Drivers",
    "docsUrl": "https://www.adafruit.com",
+   "aliases": [
+    "adafruit",
+    "feather",
+    "stemma"
+   ],
    "monogram": "ADA",
    "brandColor": "#000000",
    "svg": "icons/animated/adafruit.svg",
@@ -52,6 +68,10 @@
    "subcategory": "Web Frameworks",
    "role": "Type-Safe Full-Stack MVC Node.js Framework",
    "docsUrl": "https://adonisjs.com",
+   "aliases": [
+    "adonisjs",
+    "adonis"
+   ],
    "monogram": "ADO",
    "brandColor": "#5A45FF",
    "svg": "icons/animated/adonisjs.svg",
@@ -66,6 +86,11 @@
    "subcategory": "Graphics & 3D",
    "role": "Web Framework for Building Virtual Reality (WebXR) Experiences",
    "docsUrl": "https://aframe.io/docs",
+   "aliases": [
+    "aframe",
+    "a-frame",
+    "webxr"
+   ],
    "monogram": "AFR",
    "brandColor": "#EF2D5E",
    "svg": "icons/animated/aframe.svg",
@@ -80,6 +105,10 @@
    "subcategory": "Web Frameworks",
    "role": "Asynchronous HTTP Client/Server for asyncio and Python",
    "docsUrl": "https://docs.aiohttp.org/",
+   "aliases": [
+    "aiohttp",
+    "asyncio-http"
+   ],
    "monogram": "AIO",
    "brandColor": "#2C5BB4",
    "svg": "icons/animated/aiohttp.svg",
@@ -94,6 +123,10 @@
    "subcategory": "Data Engineering & Pipelines",
    "role": "Open-Source Data Integration & ELT Pipeline Platform",
    "docsUrl": "https://airbyte.com",
+   "aliases": [
+    "airbyte",
+    "elt"
+   ],
    "monogram": "AIR",
    "brandColor": "#615EFF",
    "svg": "icons/animated/airbyte.svg",
@@ -108,6 +141,9 @@
    "subcategory": "Cloud Providers",
    "role": "Distributed Cloud Computing & Global Content Delivery Network",
    "docsUrl": "https://www.akamai.com",
+   "aliases": [
+    "akamai"
+   ],
    "monogram": "AKA",
    "brandColor": "#0096D6",
    "svg": "icons/animated/akamai.svg",
@@ -122,6 +158,10 @@
    "subcategory": "Terminals & Shells",
    "role": "Fast Cross-Platform OpenGL GPU-Accelerated Terminal Emulator",
    "docsUrl": "https://alacritty.org/",
+   "aliases": [
+    "alacritty",
+    "alacritty-term"
+   ],
    "monogram": "ALA",
    "brandColor": "#F46D01",
    "svg": "icons/animated/alacritty.svg",
@@ -136,6 +176,10 @@
    "subcategory": "Search & Vector",
    "role": "Hosted AI Search & Discovery API Platform",
    "docsUrl": "https://www.algolia.com/",
+   "aliases": [
+    "algolia",
+    "algoliasearch"
+   ],
    "monogram": "ALG",
    "brandColor": "#003DFF",
    "svg": "icons/animated/algolia.svg",
@@ -150,6 +194,11 @@
    "subcategory": "Hypermedia & Lightweight",
    "role": "Rugged Minimal Reactive Behavior in Markup",
    "docsUrl": "https://alpinejs.dev",
+   "aliases": [
+    "alpinedotjs",
+    "alpine.js",
+    "alpinejs"
+   ],
    "monogram": "ALP",
    "brandColor": "#8BC0D0",
    "svg": "icons/animated/alpinedotjs.svg",
@@ -164,6 +213,12 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Security-Oriented Lightweight musl/BusyBox Linux for Containers",
    "docsUrl": "https://alpinelinux.org",
+   "aliases": [
+    "alpinelinux",
+    "alpine linux",
+    "alpine",
+    "apk"
+   ],
    "monogram": "ALP",
    "brandColor": "#0D597F",
    "svg": "icons/animated/alpinelinux.svg",
@@ -178,6 +233,14 @@
    "subcategory": "Cloud Providers",
    "role": "Amazon Web Services Global Cloud Infrastructure",
    "docsUrl": "https://aws.amazon.com/",
+   "aliases": [
+    "amazonaws",
+    "aws",
+    "amazon-web-services",
+    "ec2",
+    "s3",
+    "lambda"
+   ],
    "monogram": "AWS",
    "brandColor": "#FF9900",
    "svg": "icons/animated/amazonaws.svg",
@@ -192,6 +255,11 @@
    "subcategory": "Document & NoSQL",
    "role": "Serverless Single-Digit Millisecond Key-Value & Document DB",
    "docsUrl": "https://aws.amazon.com/dynamodb/",
+   "aliases": [
+    "amazondynamodb",
+    "amazon dynamodb",
+    "dynamodb"
+   ],
    "monogram": "DYN",
    "brandColor": "#4053D6",
    "svg": "icons/animated/amazondynamodb.svg",
@@ -206,6 +274,11 @@
    "subcategory": "Silicon & Architectures",
    "role": "Zynq UltraScale+, Versal Adaptive SoCs, Vivado & x86 Compute",
    "docsUrl": "https://www.amd.com",
+   "aliases": [
+    "amd",
+    "xilinx",
+    "fpga"
+   ],
    "monogram": "AMD",
    "brandColor": "#ED1C24",
    "svg": "icons/animated/amd.svg",
@@ -220,6 +293,9 @@
    "subcategory": "Notebooks & Workbenches",
    "role": "Enterprise Data Science & Python Distribution",
    "docsUrl": "https://www.anaconda.com",
+   "aliases": [
+    "anaconda"
+   ],
    "monogram": "ANA",
    "brandColor": "#44A833",
    "svg": "icons/animated/anaconda.svg",
@@ -234,6 +310,12 @@
    "subcategory": "Editors & IDEs",
    "role": "Official Integrated Development Environment for Android OS",
    "docsUrl": "https://developer.android.com/studio",
+   "aliases": [
+    "androidstudio",
+    "android studio",
+    "adb",
+    "gradle-android"
+   ],
    "monogram": "AND",
    "brandColor": "#3DDC84",
    "svg": "icons/animated/androidstudio.svg",
@@ -248,6 +330,10 @@
    "subcategory": "UI Frameworks",
    "role": "Enterprise TypeScript Web Application Platform",
    "docsUrl": "https://angular.dev/",
+   "aliases": [
+    "angular",
+    "ng"
+   ],
    "monogram": "ANG",
    "brandColor": "#0F0F11",
    "svg": "icons/animated/angular.svg",
@@ -262,6 +348,10 @@
    "subcategory": "Infrastructure as Code",
    "role": "Agentless IT Automation & Configuration Management",
    "docsUrl": "https://www.ansible.com/",
+   "aliases": [
+    "ansible",
+    "ansible-playbook"
+   ],
    "monogram": "ANS",
    "brandColor": "#EE0000",
    "svg": "icons/animated/ansible.svg",
@@ -276,6 +366,11 @@
    "subcategory": "Styling & Design Systems",
    "role": "Enterprise-Class UI Design Language & React Kit",
    "docsUrl": "https://ant.design",
+   "aliases": [
+    "antdesign",
+    "ant design",
+    "antd"
+   ],
    "monogram": "ANT",
    "brandColor": "#0170FE",
    "svg": "icons/animated/antdesign.svg",
@@ -290,6 +385,9 @@
    "subcategory": "LLM & Foundation Models",
    "role": "Constitutional AI & Claude Frontier Model API",
    "docsUrl": "https://www.anthropic.com",
+   "aliases": [
+    "anthropic"
+   ],
    "monogram": "ANT",
    "brandColor": "#191919",
    "svg": "icons/animated/anthropic.svg",
@@ -304,6 +402,11 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Open-Source Cross-Platform HTTP Server",
    "docsUrl": "https://httpd.apache.org/",
+   "aliases": [
+    "apache",
+    "apache http server",
+    "httpd"
+   ],
    "monogram": "APA",
    "brandColor": "#D22128",
    "svg": "icons/animated/apache.svg",
@@ -318,6 +421,12 @@
    "subcategory": "Data Engineering & Pipelines",
    "role": "Programmatically Author, Schedule & Monitor Workflows",
    "docsUrl": "https://airflow.apache.org/",
+   "aliases": [
+    "apacheairflow",
+    "apache airflow",
+    "airflow",
+    "dag"
+   ],
    "monogram": "APA",
    "brandColor": "#017CEE",
    "svg": "icons/animated/apacheairflow.svg",
@@ -332,6 +441,12 @@
    "subcategory": "Data Science & Arrays",
    "role": "Cross-Language Columnar In-Memory Data Analytics Format",
    "docsUrl": "https://arrow.apache.org/visual_identity",
+   "aliases": [
+    "apachearrow",
+    "apache arrow",
+    "pyarrow",
+    "parquet"
+   ],
    "monogram": "APA",
    "brandColor": "#000000",
    "svg": "icons/animated/apachearrow.svg",
@@ -346,6 +461,12 @@
    "subcategory": "Wide-Column & NoSQL",
    "role": "Distributed Wide-Column NoSQL Database for Linear Scale",
    "docsUrl": "https://cassandra.apache.org/",
+   "aliases": [
+    "apachecassandra",
+    "apache cassandra",
+    "cassandra",
+    "cql"
+   ],
    "monogram": "APA",
    "brandColor": "#1287B1",
    "svg": "icons/animated/apachecassandra.svg",
@@ -360,6 +481,11 @@
    "subcategory": "Cross-Platform & Mobile",
    "role": "Mobile Apps with HTML, CSS & JS",
    "docsUrl": "https://cordova.apache.org/artwork",
+   "aliases": [
+    "apachecordova",
+    "apache cordova",
+    "phonegap"
+   ],
    "monogram": "APA",
    "brandColor": "#E8E8E8",
    "svg": "icons/animated/apachecordova.svg",
@@ -374,6 +500,12 @@
    "subcategory": "Document & NoSQL",
    "role": "Seamless Multi-Master Sync JSON Document Database",
    "docsUrl": "https://couchdb.apache.org/",
+   "aliases": [
+    "apachecouchdb",
+    "apache couchdb",
+    "couchdb",
+    "pouchdb"
+   ],
    "monogram": "APA",
    "brandColor": "#E42528",
    "svg": "icons/animated/apachecouchdb.svg",
@@ -388,6 +520,11 @@
    "subcategory": "Data Warehouses & Lakehouse",
    "role": "Real-Time Analytical MPP Database for BI & Lakehouse",
    "docsUrl": "https://doris.apache.org/",
+   "aliases": [
+    "apachedoris",
+    "apache doris",
+    "doris"
+   ],
    "monogram": "APA",
    "brandColor": "#444FD9",
    "svg": "icons/animated/apachedoris.svg",
@@ -402,6 +539,11 @@
    "subcategory": "Distributed Data & ML",
    "role": "Stateful Computations over Data Streams",
    "docsUrl": "https://flink.apache.org/",
+   "aliases": [
+    "apacheflink",
+    "apache flink",
+    "flink"
+   ],
    "monogram": "APA",
    "brandColor": "#E6526F",
    "svg": "icons/animated/apacheflink.svg",
@@ -416,6 +558,10 @@
    "subcategory": "JVM & Scripting",
    "role": "Dynamic Scripting & Gradle DSL for JVM",
    "docsUrl": "https://groovy.apache.org/",
+   "aliases": [
+    "apachegroovy",
+    "groovy"
+   ],
    "monogram": "GRO",
    "brandColor": "#4298B8",
    "svg": "icons/animated/apachegroovy.svg",
@@ -430,6 +576,12 @@
    "subcategory": "Distributed Data & ML",
    "role": "Distributed Storage (HDFS) & Big Data Processing",
    "docsUrl": "https://hadoop.apache.org/",
+   "aliases": [
+    "apachehadoop",
+    "apache hadoop",
+    "hdfs",
+    "mapreduce"
+   ],
    "monogram": "APA",
    "brandColor": "#66CCFF",
    "svg": "icons/animated/apachehadoop.svg",
@@ -444,6 +596,11 @@
    "subcategory": "Data Warehouses & Lakehouse",
    "role": "Distributed Fault-Tolerant Data Warehouse System",
    "docsUrl": "https://hive.apache.org/",
+   "aliases": [
+    "apachehive",
+    "apache hive",
+    "hiveql"
+   ],
    "monogram": "APA",
    "brandColor": "#FDEE21",
    "svg": "icons/animated/apachehive.svg",
@@ -458,6 +615,11 @@
    "subcategory": "Messaging & Streaming",
    "role": "Distributed Event Streaming & Log Platform",
    "docsUrl": "https://kafka.apache.org/",
+   "aliases": [
+    "apachekafka",
+    "apache kafka",
+    "kafka"
+   ],
    "monogram": "APA",
    "brandColor": "#231F20",
    "svg": "icons/animated/apachekafka.svg",
@@ -472,6 +634,12 @@
    "subcategory": "Package & Build Managers",
    "role": "Software Project Management and Comprehension Tool for Java",
    "docsUrl": "https://maven.apache.org/",
+   "aliases": [
+    "apachemaven",
+    "apache maven",
+    "maven",
+    "pom"
+   ],
    "monogram": "APA",
    "brandColor": "#C71A36",
    "svg": "icons/animated/apachemaven.svg",
@@ -486,6 +654,11 @@
    "subcategory": "Editors & IDEs",
    "role": "Development Environment, Tooling Platform and Application Framework",
    "docsUrl": "https://netbeans.apache.org/",
+   "aliases": [
+    "apachenetbeanside",
+    "apache netbeans",
+    "netbeans"
+   ],
    "monogram": "APA",
    "brandColor": "#1B6AC6",
    "svg": "icons/animated/apachenetbeanside.svg",
@@ -500,6 +673,11 @@
    "subcategory": "Messaging & Streaming",
    "role": "Cloud-Native Distributed Messaging and Streaming",
    "docsUrl": "https://pulsar.apache.org/",
+   "aliases": [
+    "apachepulsar",
+    "apache pulsar",
+    "pulsar"
+   ],
    "monogram": "APA",
    "brandColor": "#188FFF",
    "svg": "icons/animated/apachepulsar.svg",
@@ -514,6 +692,12 @@
    "subcategory": "Distributed Data & ML",
    "role": "Unified Analytics Engine for Large-Scale Data Processing",
    "docsUrl": "https://spark.apache.org/",
+   "aliases": [
+    "apachespark",
+    "apache spark",
+    "pyspark",
+    "mllib"
+   ],
    "monogram": "APA",
    "brandColor": "#E25A1C",
    "svg": "icons/animated/apachespark.svg",
@@ -528,6 +712,11 @@
    "subcategory": "Visualization & Dashboards",
    "role": "Modern Data Exploration and Visualization Platform",
    "docsUrl": "https://superset.apache.org/",
+   "aliases": [
+    "apachesuperset",
+    "apache superset",
+    "superset"
+   ],
    "monogram": "APA",
    "brandColor": "#20A6C9",
    "svg": "icons/animated/apachesuperset.svg",
@@ -542,6 +731,11 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Open-Source Jakarta Servlet & WebSocket Container",
    "docsUrl": "https://tomcat.apache.org/",
+   "aliases": [
+    "apachetomcat",
+    "apache tomcat",
+    "tomcat"
+   ],
    "monogram": "APA",
    "brandColor": "#F8DC75",
    "svg": "icons/animated/apachetomcat.svg",
@@ -556,6 +750,11 @@
    "subcategory": "State & Data",
    "role": "GraphQL State Management & Caching Client",
    "docsUrl": "https://www.apollographql.com",
+   "aliases": [
+    "apollographql",
+    "apollo graphql",
+    "apollo"
+   ],
    "monogram": "APO",
    "brandColor": "#311C87",
    "svg": "icons/animated/apollographql.svg",
@@ -570,6 +769,10 @@
    "subcategory": "Cloud & Realtime BaaS",
    "role": "Open-Source Backend-as-a-Service for Web, Mobile & Flutter",
    "docsUrl": "https://appwrite.io/",
+   "aliases": [
+    "appwrite",
+    "appwrite-cloud"
+   ],
    "monogram": "APP",
    "brandColor": "#FD366E",
    "svg": "icons/animated/appwrite.svg",
@@ -584,6 +787,10 @@
    "subcategory": "Multi-Model & Graph",
    "role": "Native Multi-Model Graph, Document & Search Database",
    "docsUrl": "https://arangodb.com/",
+   "aliases": [
+    "arangodb",
+    "aql"
+   ],
    "monogram": "ARA",
    "brandColor": "#DDDF72",
    "svg": "icons/animated/arangodb.svg",
@@ -598,6 +805,12 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Lightweight Flexible Rolling-Release Linux Distribution",
    "docsUrl": "https://www.archlinux.org/art",
+   "aliases": [
+    "archlinux",
+    "arch linux",
+    "pacman",
+    "btw"
+   ],
    "monogram": "ARC",
    "brandColor": "#1793D1",
    "svg": "icons/animated/archlinux.svg",
@@ -612,6 +825,11 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "Open-Source Microcontroller Hardware & Prototyping Ecosystem",
    "docsUrl": "https://www.arduino.cc",
+   "aliases": [
+    "arduino",
+    "avr",
+    "mega"
+   ],
    "monogram": "ARD",
    "brandColor": "#00878F",
    "svg": "icons/animated/arduino.svg",
@@ -626,6 +844,12 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Declarative GitOps Continuous Delivery for Kubernetes",
    "docsUrl": "https://argo-cd.readthedocs.io/",
+   "aliases": [
+    "argocd",
+    "argo",
+    "argo cd",
+    "gitops"
+   ],
    "monogram": "ARG",
    "brandColor": "#EF7B4D",
    "svg": "icons/animated/argocd.svg",
@@ -640,6 +864,12 @@
    "subcategory": "Silicon & Architectures",
    "role": "Cortex-M, Cortex-A & Neoverse RISC Processor Architecture",
    "docsUrl": "https://www.arm.com",
+   "aliases": [
+    "arm",
+    "cortex-m",
+    "aarch64",
+    "cmsis"
+   ],
    "monogram": "ARM",
    "brandColor": "#0091BD",
    "svg": "icons/animated/arm.svg",
@@ -654,6 +884,10 @@
    "subcategory": "3D & Game Engines",
    "role": "Animated Sprite Editor & Pixel Art Tool for Game Dev",
    "docsUrl": "https://www.aseprite.org",
+   "aliases": [
+    "aseprite",
+    "pixel-art"
+   ],
    "monogram": "ASE",
    "brandColor": "#7D929E",
    "svg": "icons/animated/aseprite.svg",
@@ -668,6 +902,11 @@
    "subcategory": "WebAssembly",
    "role": "TypeScript-Like Language Compiling to Wasm",
    "docsUrl": "https://www.assemblyscript.org",
+   "aliases": [
+    "assemblyscript",
+    "as",
+    "wasm-ts"
+   ],
    "monogram": "ASS",
    "brandColor": "#007ACC",
    "svg": "icons/animated/assemblyscript.svg",
@@ -682,6 +921,10 @@
    "subcategory": "Meta-Frameworks",
    "role": "Content-Driven Islands Architecture Web Framework",
    "docsUrl": "https://astro.build/",
+   "aliases": [
+    "astro",
+    "astrobuild"
+   ],
    "monogram": "AST",
    "brandColor": "#BC52EE",
    "svg": "icons/animated/astro.svg",
@@ -696,6 +939,10 @@
    "subcategory": "Auth & Identity",
    "role": "Drop-In Authentication & Authorization Platform",
    "docsUrl": "https://auth0.com",
+   "aliases": [
+    "auth0",
+    "okta"
+   ],
    "monogram": "AUT",
    "brandColor": "#EB5424",
    "svg": "icons/animated/auth0.svg",
@@ -710,6 +957,10 @@
    "subcategory": "Auth & Identity",
    "role": "Open-Source Authentication and Authorization Server (2FA/SSO)",
    "docsUrl": "https://www.authelia.com/",
+   "aliases": [
+    "authelia",
+    "forward-auth"
+   ],
    "monogram": "AUT",
    "brandColor": "#113155",
    "svg": "icons/animated/authelia.svg",
@@ -724,6 +975,12 @@
    "subcategory": "EDA & PCB Design",
    "role": "Electronic Automated Graphical Layout Editor & ECAD-MCAD",
    "docsUrl": "https://www.autodesk.com/products/eagle/overview",
+   "aliases": [
+    "autodeskeagle",
+    "autodesk",
+    "autodesk eagle",
+    "eagle-pcb"
+   ],
    "monogram": "EAG",
    "brandColor": "#000000",
    "svg": "icons/animated/autodeskeagle.svg",
@@ -738,6 +995,11 @@
    "subcategory": "Cloud Providers",
    "role": "Enterprise Cloud Computing, AKS & AI Services",
    "docsUrl": "https://azure.microsoft.com/",
+   "aliases": [
+    "azure",
+    "microsoft azure",
+    "ms-azure"
+   ],
    "monogram": "AZU",
    "brandColor": "#0078D4",
    "svg": "icons/animated/azure.svg",
@@ -752,6 +1014,11 @@
    "subcategory": "Relational SQL",
    "role": "Fully Managed Cloud Relational Database Service",
    "docsUrl": "https://learn.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview",
+   "aliases": [
+    "azuresqldatabase",
+    "azure sql database",
+    "azure sql"
+   ],
    "monogram": "AZU",
    "brandColor": "#0078D4",
    "svg": "icons/animated/azuresqldatabase.svg",
@@ -766,6 +1033,10 @@
    "subcategory": "Build & Bundlers",
    "role": "Next-Generation JavaScript Compiler & Transpiler",
    "docsUrl": "https://babeljs.io/",
+   "aliases": [
+    "babel",
+    "babeljs"
+   ],
    "monogram": "BAB",
    "brandColor": "#F9DC3E",
    "svg": "icons/animated/babel.svg",
@@ -780,6 +1051,11 @@
    "subcategory": "Graphics & 3D",
    "role": "Powerful Real-Time 3D WebGL & WebGPU Rendering Engine",
    "docsUrl": "https://www.babylonjs.com/",
+   "aliases": [
+    "babylondotjs",
+    "babylon.js",
+    "babylonjs"
+   ],
    "monogram": "BAB",
    "brandColor": "#BB464B",
    "svg": "icons/animated/babylondotjs.svg",
@@ -794,6 +1070,11 @@
    "subcategory": "UI Frameworks",
    "role": "Lightweight MVC Models & Views for JavaScript",
    "docsUrl": "https://backbonejs.org/",
+   "aliases": [
+    "backbonedotjs",
+    "backbone.js",
+    "backbone"
+   ],
    "monogram": "BAC",
    "brandColor": "#0071B5",
    "svg": "icons/animated/backbonedotjs.svg",
@@ -808,6 +1089,9 @@
    "subcategory": "IoT & Smart Automation",
    "role": "Container-Based Fleet Management for Linux IoT Edge Devices",
    "docsUrl": "https://www.balena.io/",
+   "aliases": [
+    "balena"
+   ],
    "monogram": "BAL",
    "brandColor": "#00A275",
    "svg": "icons/animated/balena.svg",
@@ -822,6 +1106,10 @@
    "subcategory": "Cloud & Realtime BaaS",
    "role": "Open-Source No-Code Database & Airtable Alternative",
    "docsUrl": "https://baserow.io",
+   "aliases": [
+    "baserow",
+    "baserow-io"
+   ],
    "monogram": "BAS",
    "brandColor": "#5190EF",
    "svg": "icons/animated/baserow.svg",
@@ -836,6 +1124,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Fast Scalable Multi-Language Polyglot Build and Test System",
    "docsUrl": "https://bazel.build",
+   "aliases": [
+    "bazel",
+    "starlark"
+   ],
    "monogram": "BAZ",
    "brandColor": "#43A047",
    "svg": "icons/animated/bazel.svg",
@@ -850,6 +1142,11 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "Open-Hardware Single-Board Linux & PRU Real-Time Computers",
    "docsUrl": "https://www.beagleboard.org/",
+   "aliases": [
+    "beagleboard",
+    "beaglebone",
+    "pocketbeagle"
+   ],
    "monogram": "BEA",
    "brandColor": "#AA5137",
    "svg": "icons/animated/beagleboard.svg",
@@ -864,6 +1161,10 @@
    "subcategory": "Local & Cloud Inference",
    "role": "Unified AI Application & Model Serving Framework",
    "docsUrl": "https://www.bentoml.com/",
+   "aliases": [
+    "bentoml",
+    "bento"
+   ],
    "monogram": "BEN",
    "brandColor": "#000000",
    "svg": "icons/animated/bentoml.svg",
@@ -878,6 +1179,10 @@
    "subcategory": "Code Quality & Formatting",
    "role": "Fast Rust Toolchain for Formatting and Linting Web Projects",
    "docsUrl": "https://biomejs.dev/",
+   "aliases": [
+    "biome",
+    "biomejs"
+   ],
    "monogram": "BIO",
    "brandColor": "#60A5FA",
    "svg": "icons/animated/biome.svg",
@@ -892,6 +1197,10 @@
    "subcategory": "Version Control & Forges",
    "role": "Git Code Management & CI/CD for Enterprise Teams",
    "docsUrl": "https://bitbucket.org/",
+   "aliases": [
+    "bitbucket",
+    "atlassian-bitbucket"
+   ],
    "monogram": "BIT",
    "brandColor": "#0052CC",
    "svg": "icons/animated/bitbucket.svg",
@@ -906,6 +1215,10 @@
    "subcategory": "3D & Game Engines",
    "role": "Free and Open-Source 3D Creation, Modeling & Rendering Suite",
    "docsUrl": "https://www.blender.org/",
+   "aliases": [
+    "blender",
+    "b3d"
+   ],
    "monogram": "BLE",
    "brandColor": "#E87D0D",
    "svg": "icons/animated/blender.svg",
@@ -920,6 +1233,11 @@
    "subcategory": "Protocols & Connectivity",
    "role": "Short-Range Wireless & Bluetooth Low Energy GATT Stack",
    "docsUrl": "https://www.bluetooth.com/",
+   "aliases": [
+    "bluetooth",
+    "ble",
+    "bluetooth-le"
+   ],
    "monogram": "BLU",
    "brandColor": "#0082FC",
    "svg": "icons/animated/bluetooth.svg",
@@ -934,6 +1252,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Responsive Front-End Component Toolkit",
    "docsUrl": "https://getbootstrap.com/",
+   "aliases": [
+    "bootstrap",
+    "bs5"
+   ],
    "monogram": "BOO",
    "brandColor": "#7952B3",
    "svg": "icons/animated/bootstrap.svg",
@@ -948,6 +1270,11 @@
    "subcategory": "Silicon & Architectures",
    "role": "Networking, Wi-Fi/BT Combo Chips & Raspberry Pi VideoCore SoCs",
    "docsUrl": "https://www.broadcom.com/support",
+   "aliases": [
+    "broadcom",
+    "bcm2711",
+    "bcm2712"
+   ],
    "monogram": "BRO",
    "brandColor": "#E31837",
    "svg": "icons/animated/broadcom.svg",
@@ -962,6 +1289,10 @@
    "subcategory": "API & Network Tools",
    "role": "Fast Git-Friendly Open-Source API Client Stored in Plaintext",
    "docsUrl": "https://www.usebruno.com",
+   "aliases": [
+    "bruno",
+    "usebruno"
+   ],
    "monogram": "BRU",
    "brandColor": "#F4AA41",
    "svg": "icons/animated/bruno.svg",
@@ -976,6 +1307,10 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Hybrid Cloud/Self-Hosted Lightning-Fast CI/CD Pipelines",
    "docsUrl": "https://buildkite.com/",
+   "aliases": [
+    "buildkite",
+    "buildkite-ci"
+   ],
    "monogram": "BUI",
    "brandColor": "#14CC80",
    "svg": "icons/animated/buildkite.svg",
@@ -990,6 +1325,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Modern CSS Framework Based on Flexbox",
    "docsUrl": "https://bulma.io/",
+   "aliases": [
+    "bulma",
+    "bulmacss"
+   ],
    "monogram": "BUL",
    "brandColor": "#00D1B2",
    "svg": "icons/animated/bulma.svg",
@@ -1004,6 +1343,11 @@
    "subcategory": "Runtimes & Servers",
    "role": "All-in-One Fast JavaScript Runtime, Bundler & Test Runner",
    "docsUrl": "https://bun.sh/",
+   "aliases": [
+    "bun",
+    "bunjs",
+    "jsc"
+   ],
    "monogram": "BUN",
    "brandColor": "#000000",
    "svg": "icons/animated/bun.svg",
@@ -1018,6 +1362,11 @@
    "subcategory": "Systems & Compiled",
    "role": "Low-Level OS & Embedded Systems Language",
    "docsUrl": "https://www.open-std.org/jtc1/sc22/wg14/",
+   "aliases": [
+    "c",
+    "clang",
+    "ansi-c"
+   ],
    "monogram": "C",
    "brandColor": "#5C6BC0",
    "svg": "icons/animated/c.svg",
@@ -1032,6 +1381,10 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Fast Multi-Platform Web Server with Automatic HTTPS",
    "docsUrl": "https://caddyserver.com",
+   "aliases": [
+    "caddy",
+    "caddyserver"
+   ],
    "monogram": "CAD",
    "brandColor": "#1F88C0",
    "svg": "icons/animated/caddy.svg",
@@ -1046,6 +1399,10 @@
    "subcategory": "Web Frameworks",
    "role": "Rapid Development Framework for PHP",
    "docsUrl": "https://cakephp.org/",
+   "aliases": [
+    "cakephp",
+    "cake"
+   ],
    "monogram": "CAK",
    "brandColor": "#D33C43",
    "svg": "icons/animated/cakephp.svg",
@@ -1060,6 +1417,10 @@
    "subcategory": "Cross-Platform & Mobile",
    "role": "Cross-Platform Native Runtime for Web Apps",
    "docsUrl": "https://capacitorjs.com/",
+   "aliases": [
+    "capacitor",
+    "capacitorjs"
+   ],
    "monogram": "CAP",
    "brandColor": "#119EFF",
    "svg": "icons/animated/capacitor.svg",
@@ -1074,6 +1435,10 @@
    "subcategory": "Package & Build Managers",
    "role": "The Rust Package Manager, Build System & Crate Runner",
    "docsUrl": "https://doc.rust-lang.org/cargo/",
+   "aliases": [
+    "cargo",
+    "crates-io"
+   ],
    "monogram": "CAR",
    "brandColor": "#E7AC38",
    "svg": "icons/animated/cargo.svg",
@@ -1088,6 +1453,10 @@
    "subcategory": "Task Queues & Workflows",
    "role": "Distributed Task Queue for Real-Time Python Operations",
    "docsUrl": "https://docs.celeryproject.org/",
+   "aliases": [
+    "celery",
+    "celery-beat"
+   ],
    "monogram": "CEL",
    "brandColor": "#37814A",
    "svg": "icons/animated/celery.svg",
@@ -1102,6 +1471,10 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Community Enterprise Operating System Bug-for-Bug RHEL Compatible",
    "docsUrl": "https://www.centos.org/",
+   "aliases": [
+    "centos",
+    "rockylinux"
+   ],
    "monogram": "CEN",
    "brandColor": "#262577",
    "svg": "icons/animated/centos.svg",
@@ -1116,6 +1489,11 @@
    "subcategory": "Styling & Design Systems",
    "role": "Simple Modular Accessible Component Library",
    "docsUrl": "https://chakra-ui.com/",
+   "aliases": [
+    "chakraui",
+    "chakra ui",
+    "chakra"
+   ],
    "monogram": "CHA",
    "brandColor": "#1BB2A9",
    "svg": "icons/animated/chakraui.svg",
@@ -1130,6 +1508,11 @@
    "subcategory": "Data Visualization",
    "role": "Simple Flexible Canvas Charting for Designers",
    "docsUrl": "https://www.chartjs.org",
+   "aliases": [
+    "chartdotjs",
+    "chart.js",
+    "chartjs"
+   ],
    "monogram": "CHA",
    "brandColor": "#FF6384",
    "svg": "icons/animated/chartdotjs.svg",
@@ -1144,6 +1527,11 @@
    "subcategory": "Infrastructure as Code",
    "role": "Policy-Based Configuration & Infrastructure Automation",
    "docsUrl": "https://www.chef.io",
+   "aliases": [
+    "chef",
+    "progress chef",
+    "chef-infra"
+   ],
    "monogram": "PRO",
    "brandColor": "#F09820",
    "svg": "icons/animated/chef.svg",
@@ -1158,6 +1546,10 @@
    "subcategory": "Containers & Orchestration",
    "role": "eBPF-Based Networking, Observability & Security for K8s",
    "docsUrl": "https://cilium.io/",
+   "aliases": [
+    "cilium",
+    "ebpf"
+   ],
    "monogram": "CIL",
    "brandColor": "#F8C517",
    "svg": "icons/animated/cilium.svg",
@@ -1172,6 +1564,10 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Cloud-Native Continuous Integration & Delivery Platform",
    "docsUrl": "https://circleci.com/",
+   "aliases": [
+    "circleci",
+    "circle"
+   ],
    "monogram": "CIR",
    "brandColor": "#343434",
    "svg": "icons/animated/circleci.svg",
@@ -1186,6 +1582,10 @@
    "subcategory": "Auth & Identity",
    "role": "Complete User Management & Authentication for React/Next",
    "docsUrl": "https://clerk.com",
+   "aliases": [
+    "clerk",
+    "clerkdev"
+   ],
    "monogram": "CLE",
    "brandColor": "#6C47FF",
    "svg": "icons/animated/clerk.svg",
@@ -1200,6 +1600,10 @@
    "subcategory": "Analytical & OLAP",
    "role": "Column-Oriented Real-Time Analytical DBMS",
    "docsUrl": "https://clickhouse.com/",
+   "aliases": [
+    "clickhouse",
+    "ch"
+   ],
    "monogram": "CLI",
    "brandColor": "#FFCC01",
    "svg": "icons/animated/clickhouse.svg",
@@ -1214,6 +1618,10 @@
    "subcategory": "Editors & IDEs",
    "role": "JetBrains Cross-Platform IDE for C, C++, Rust & Embedded",
    "docsUrl": "https://www.jetbrains.com/clion/",
+   "aliases": [
+    "clion",
+    "jetbrains-clion"
+   ],
    "monogram": "CLI",
    "brandColor": "#000000",
    "svg": "icons/animated/clion.svg",
@@ -1228,6 +1636,10 @@
    "subcategory": "JVM & Functional",
    "role": "Dynamic Functional Lisp on the JVM",
    "docsUrl": "https://clojure.org/",
+   "aliases": [
+    "clojure",
+    "clj"
+   ],
    "monogram": "CLO",
    "brandColor": "#5881D8",
    "svg": "icons/animated/clojure.svg",
@@ -1242,6 +1654,11 @@
    "subcategory": "Cloud & Edge Network",
    "role": "Global Edge Network, Workers Serverless & Zero Trust",
    "docsUrl": "https://www.cloudflare.com/",
+   "aliases": [
+    "cloudflare",
+    "cf",
+    "cloudflare-workers"
+   ],
    "monogram": "CLO",
    "brandColor": "#F38020",
    "svg": "icons/animated/cloudflare.svg",
@@ -1256,6 +1673,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Cross-Platform Family of Tools to Build, Test & Package C/C++",
    "docsUrl": "https://cmake.org/",
+   "aliases": [
+    "cmake",
+    "cmakelists"
+   ],
    "monogram": "CMA",
    "brandColor": "#064F8C",
    "svg": "icons/animated/cmake.svg",
@@ -1270,6 +1691,11 @@
    "subcategory": "Distributed NewSQL",
    "role": "Cloud-Native Distributed SQL Database for Global Scale",
    "docsUrl": "https://www.cockroachlabs.com",
+   "aliases": [
+    "cockroachlabs",
+    "cockroachdb",
+    "crdb"
+   ],
    "monogram": "COC",
    "brandColor": "#6933FF",
    "svg": "icons/animated/cockroachlabs.svg",
@@ -1284,6 +1710,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Dependency Manager for Swift and Objective-C Cocoa Projects",
    "docsUrl": "https://cocoapods.org/",
+   "aliases": [
+    "cocoapods",
+    "podfile"
+   ],
    "monogram": "COC",
    "brandColor": "#EE3322",
    "svg": "icons/animated/cocoapods.svg",
@@ -1298,6 +1728,10 @@
    "subcategory": "Version Control & Forges",
    "role": "Non-Profit Community-Led Free Software Git Hosting",
    "docsUrl": "https://codeberg.org/",
+   "aliases": [
+    "codeberg",
+    "codeberg-org"
+   ],
    "monogram": "COD",
    "brandColor": "#2185D0",
    "svg": "icons/animated/codeberg.svg",
@@ -1312,6 +1746,10 @@
    "subcategory": "Web Frameworks",
    "role": "Lightweight MVC PHP Framework",
    "docsUrl": "https://www.codeigniter.com/help/legal",
+   "aliases": [
+    "codeigniter",
+    "ci4"
+   ],
    "monogram": "COD",
    "brandColor": "#EF4223",
    "svg": "icons/animated/codeigniter.svg",
@@ -1326,6 +1764,10 @@
    "subcategory": "Web & Scripting",
    "role": "Expressive Language Transpiling to JavaScript",
    "docsUrl": "https://coffeescript.org",
+   "aliases": [
+    "coffeescript",
+    "coffee"
+   ],
    "monogram": "COF",
    "brandColor": "#2F2625",
    "svg": "icons/animated/coffeescript.svg",
@@ -1340,6 +1782,11 @@
    "subcategory": "Code Quality & Formatting",
    "role": "Lint Commit Messages Against Conventional Commits Standard",
    "docsUrl": "https://commitlint.js.org/",
+   "aliases": [
+    "commitlint",
+    "conventional-commits",
+    "husky"
+   ],
    "monogram": "COM",
    "brandColor": "#000000",
    "svg": "icons/animated/commitlint.svg",
@@ -1354,6 +1801,12 @@
    "subcategory": "Functional & Lisp",
    "role": "Multi-Paradigm Programmable Lisp Standard",
    "docsUrl": "https://common-lisp.net/",
+   "aliases": [
+    "commonlisp",
+    "common lisp",
+    "cl",
+    "sbcl"
+   ],
    "monogram": "COM",
    "brandColor": "#000000",
    "svg": "icons/animated/commonlisp.svg",
@@ -1368,6 +1821,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Dependency Manager for PHP Applications",
    "docsUrl": "https://getcomposer.org",
+   "aliases": [
+    "composer",
+    "packagist"
+   ],
    "monogram": "COM",
    "brandColor": "#885630",
    "svg": "icons/animated/composer.svg",
@@ -1382,6 +1839,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Decentralized Open-Source C and C++ Package Manager",
    "docsUrl": "https://conan.io",
+   "aliases": [
+    "conan",
+    "conan-io"
+   ],
    "monogram": "CON",
    "brandColor": "#6699CB",
    "svg": "icons/animated/conan.svg",
@@ -1396,6 +1857,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Community-led Recipes, Infrastructure & Distributions for Conda",
    "docsUrl": "https://conda-forge.org/",
+   "aliases": [
+    "condaforge",
+    "conda-forge"
+   ],
    "monogram": "CON",
    "brandColor": "#000000",
    "svg": "icons/animated/condaforge.svg",
@@ -1410,6 +1875,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Team Workspace and Technical Documentation Wiki",
    "docsUrl": "https://www.atlassian.com/software/confluence",
+   "aliases": [
+    "confluence",
+    "atlassian-confluence"
+   ],
    "monogram": "CON",
    "brandColor": "#172B4D",
    "svg": "icons/animated/confluence.svg",
@@ -1424,6 +1893,11 @@
    "subcategory": "Containers & Orchestration",
    "role": "Service Networking, Discovery & Mesh Across Clouds",
    "docsUrl": "https://developer.hashicorp.com/consul",
+   "aliases": [
+    "consul",
+    "hashicorp consul",
+    "hashicorp-consul"
+   ],
    "monogram": "CON",
    "brandColor": "#F24C53",
    "svg": "icons/animated/consul.svg",
@@ -1438,6 +1912,10 @@
    "subcategory": "Containers & Runtime",
    "role": "Industry-Standard Core Container Runtime (CNCF)",
    "docsUrl": "https://containerd.io/",
+   "aliases": [
+    "containerd",
+    "cri"
+   ],
    "monogram": "CON",
    "brandColor": "#575757",
    "svg": "icons/animated/containerd.svg",
@@ -1452,6 +1930,10 @@
    "subcategory": "Headless CMS & BaaS",
    "role": "API-First Composable Content Platform",
    "docsUrl": "https://www.contentful.com/",
+   "aliases": [
+    "contentful",
+    "contentful-cms"
+   ],
    "monogram": "CON",
    "brandColor": "#2478CC",
    "svg": "icons/animated/contentful.svg",
@@ -1466,6 +1948,10 @@
    "subcategory": "Document & NoSQL",
    "role": "Distributed NoSQL Cloud Database for Enterprise Apps",
    "docsUrl": "https://www.couchbase.com",
+   "aliases": [
+    "couchbase",
+    "n1ql"
+   ],
    "monogram": "COU",
    "brandColor": "#EA2328",
    "svg": "icons/animated/couchbase.svg",
@@ -1480,6 +1966,12 @@
    "subcategory": "Systems & Compiled",
    "role": "High-Performance Systems & Game Programming",
    "docsUrl": "https://isocpp.org/",
+   "aliases": [
+    "cpp",
+    "cplusplus",
+    "c++",
+    "c++20"
+   ],
    "monogram": "C++",
    "brandColor": "#00599C",
    "svg": "icons/animated/cpp.svg",
@@ -1494,6 +1986,10 @@
    "subcategory": "Systems & Compiled",
    "role": "Fast Compiled Language with Ruby-Like Syntax",
    "docsUrl": "https://crystal-lang.org/",
+   "aliases": [
+    "crystal",
+    "cr"
+   ],
    "monogram": "CRY",
    "brandColor": "#000000",
    "svg": "icons/animated/crystal.svg",
@@ -1508,6 +2004,11 @@
    "subcategory": "Enterprise & .NET",
    "role": "Modern Multi-Paradigm .NET Language",
    "docsUrl": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+   "aliases": [
+    "csharp",
+    "c#",
+    "dotnet-csharp"
+   ],
    "monogram": "C#",
    "brandColor": "#512BD4",
    "svg": "icons/animated/csharp.svg",
@@ -1522,6 +2023,11 @@
    "subcategory": "Web & Markup",
    "role": "Cascading Style Sheets Specification",
    "docsUrl": "https://www.w3.org/Style/CSS/",
+   "aliases": [
+    "css3",
+    "css",
+    "stylesheets"
+   ],
    "monogram": "CSS",
    "brandColor": "#663399",
    "svg": "icons/animated/css3.svg",
@@ -1536,6 +2042,10 @@
    "subcategory": "API & Network Tools",
    "role": "Command-Line Tool and Library (libcurl) for Transferring Data with URLs",
    "docsUrl": "https://curl.se/",
+   "aliases": [
+    "curl",
+    "libcurl"
+   ],
    "monogram": "CUR",
    "brandColor": "#073551",
    "svg": "icons/animated/curl.svg",
@@ -1550,6 +2060,10 @@
    "subcategory": "Editors & IDEs",
    "role": "AI-First Code Editor Built for Pair Programming",
    "docsUrl": "https://cursor.com/",
+   "aliases": [
+    "cursor",
+    "cursor-ide"
+   ],
    "monogram": "CUR",
    "brandColor": "#000000",
    "svg": "icons/animated/cursor.svg",
@@ -1564,6 +2078,10 @@
    "subcategory": "Testing & QA",
    "role": "Fast Easy & Reliable Browser Component Testing",
    "docsUrl": "https://www.cypress.io/",
+   "aliases": [
+    "cypress",
+    "cy"
+   ],
    "monogram": "CYP",
    "brandColor": "#69D3A7",
    "svg": "icons/animated/cypress.svg",
@@ -1578,6 +2096,10 @@
    "subcategory": "Systems & Compiled",
    "role": "Systems Programming with C++ Performance",
    "docsUrl": "https://dlang.org/",
+   "aliases": [
+    "d",
+    "dlang"
+   ],
    "monogram": "D",
    "brandColor": "#B03931",
    "svg": "icons/animated/d.svg",
@@ -1592,6 +2114,11 @@
    "subcategory": "Data Visualization",
    "role": "Data-Driven Documents & Bespoke SVG Visualization",
    "docsUrl": "https://d3js.org/",
+   "aliases": [
+    "d3",
+    "d3.js",
+    "d3js"
+   ],
    "monogram": "D3J",
    "brandColor": "#F9A03C",
    "svg": "icons/animated/d3.svg",
@@ -1606,6 +2133,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Semantic Component Class Plugin for Tailwind CSS",
    "docsUrl": "https://daisyui.com/",
+   "aliases": [
+    "daisyui",
+    "daisy"
+   ],
    "monogram": "DAI",
    "brandColor": "#FFC63A",
    "svg": "icons/animated/daisyui.svg",
@@ -1620,6 +2151,10 @@
    "subcategory": "Mobile & Web",
    "role": "Client-Optimized Language for Flutter UI",
    "docsUrl": "https://dart.dev/",
+   "aliases": [
+    "dart",
+    "dartlang"
+   ],
    "monogram": "DAR",
    "brandColor": "#0175C2",
    "svg": "icons/animated/dart.svg",
@@ -1634,6 +2169,10 @@
    "subcategory": "Data Warehouses & Lakehouse",
    "role": "Unified Data Lakehouse & Mosaic AI Platform",
    "docsUrl": "https://www.databricks.com",
+   "aliases": [
+    "databricks",
+    "delta-lake"
+   ],
    "monogram": "DAT",
    "brandColor": "#FF3621",
    "svg": "icons/animated/databricks.svg",
@@ -1648,6 +2187,10 @@
    "subcategory": "Observability & Security",
    "role": "Cloud-Scale Monitoring, APM, Logs & Security Platform",
    "docsUrl": "https://www.datadoghq.com/about/resources",
+   "aliases": [
+    "datadog",
+    "dd"
+   ],
    "monogram": "DAT",
    "brandColor": "#632CA6",
    "svg": "icons/animated/datadog.svg",
@@ -1662,6 +2205,10 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Universal Stable Linux Operating System",
    "docsUrl": "https://www.debian.org/",
+   "aliases": [
+    "debian",
+    "deb"
+   ],
    "monogram": "DEB",
    "brandColor": "#A81D33",
    "svg": "icons/animated/debian.svg",
@@ -1676,6 +2223,10 @@
    "subcategory": "Runtimes & Servers",
    "role": "Secure TypeScript & JavaScript Runtime on V8 & Rust",
    "docsUrl": "https://deno.com/",
+   "aliases": [
+    "deno",
+    "deno2"
+   ],
    "monogram": "DEN",
    "brandColor": "#000000",
    "svg": "icons/animated/deno.svg",
@@ -1690,6 +2241,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Automated GitHub Dependency Security & Version Updates",
    "docsUrl": "https://dependabot.com",
+   "aliases": [
+    "dependabot",
+    "github-dependabot"
+   ],
    "monogram": "DEP",
    "brandColor": "#025E8C",
    "svg": "icons/animated/dependabot.svg",
@@ -1704,6 +2259,10 @@
    "subcategory": "Graph & Vector",
    "role": "Distributed Native GraphQL Graph Database",
    "docsUrl": "https://dgraph.io",
+   "aliases": [
+    "dgraph",
+    "dgraph-io"
+   ],
    "monogram": "DGR",
    "brandColor": "#E50695",
    "svg": "icons/animated/dgraph.svg",
@@ -1718,6 +2277,10 @@
    "subcategory": "Cloud Providers",
    "role": "Developer-Friendly Cloud Droplets & Managed Kubernetes",
    "docsUrl": "https://www.digitalocean.com/",
+   "aliases": [
+    "digitalocean",
+    "do"
+   ],
    "monogram": "DIG",
    "brandColor": "#0080FF",
    "svg": "icons/animated/digitalocean.svg",
@@ -1732,6 +2295,10 @@
    "subcategory": "Headless CMS & BaaS",
    "role": "Open Data Platform & Instant SQL Headless CMS",
    "docsUrl": "https://directus.io",
+   "aliases": [
+    "directus",
+    "directus-io"
+   ],
    "monogram": "DIR",
    "brandColor": "#263238",
    "svg": "icons/animated/directus.svg",
@@ -1746,6 +2313,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Voice, Video and Text Communication for Developer Communities",
    "docsUrl": "https://discord.com/",
+   "aliases": [
+    "discord",
+    "discordjs"
+   ],
    "monogram": "DIS",
    "brandColor": "#5865F2",
    "svg": "icons/animated/discord.svg",
@@ -1760,6 +2331,11 @@
    "subcategory": "Web Frameworks",
    "role": "Batteries-Included Python Web Framework",
    "docsUrl": "https://www.djangoproject.com/",
+   "aliases": [
+    "django",
+    "drf",
+    "djangoproject"
+   ],
    "monogram": "DJA",
    "brandColor": "#092E20",
    "svg": "icons/animated/django.svg",
@@ -1774,6 +2350,12 @@
    "subcategory": "Containers & Runtime",
    "role": "Containerization Platform for Packaging & Running Apps",
    "docsUrl": "https://www.docker.com/",
+   "aliases": [
+    "docker",
+    "dockerfile",
+    "compose",
+    "containers"
+   ],
    "monogram": "DOC",
    "brandColor": "#2496ED",
    "svg": "icons/animated/docker.svg",
@@ -1788,6 +2370,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Easy-to-Maintain Open-Source Documentation Websites with React",
    "docsUrl": "https://docusaurus.io/",
+   "aliases": [
+    "docusaurus",
+    "mdx-docs"
+   ],
    "monogram": "DOC",
    "brandColor": "#3ECC5F",
    "svg": "icons/animated/docusaurus.svg",
@@ -1802,6 +2388,12 @@
    "subcategory": "Enterprise Frameworks",
    "role": "Cross-Platform High-Performance .NET Server Platform",
    "docsUrl": "https://dotnet.microsoft.com/",
+   "aliases": [
+    "dotnet",
+    ".net",
+    "dotnet8",
+    "dotnet9"
+   ],
    "monogram": "NET",
    "brandColor": "#512BD4",
    "svg": "icons/animated/dotnet.svg",
@@ -1816,6 +2408,11 @@
    "subcategory": "ORMs & Data Access",
    "role": "Headless TypeScript ORM with Zero-Overhead SQL",
    "docsUrl": "https://orm.drizzle.team",
+   "aliases": [
+    "drizzle",
+    "drizzle orm",
+    "drizzle-orm"
+   ],
    "monogram": "DRI",
    "brandColor": "#C5F74F",
    "svg": "icons/animated/drizzle.svg",
@@ -1830,6 +2427,10 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Container-Native Continuous Integration Platform",
    "docsUrl": "https://www.drone.io/",
+   "aliases": [
+    "drone",
+    "drone-ci"
+   ],
    "monogram": "DRO",
    "brandColor": "#212121",
    "svg": "icons/animated/drone.svg",
@@ -1844,6 +2445,9 @@
    "subcategory": "Analytical & OLAP",
    "role": "Fast In-Process Analytical SQL OLAP Database Engine",
    "docsUrl": "https://duckdb.org",
+   "aliases": [
+    "duckdb"
+   ],
    "monogram": "DUC",
    "brandColor": "#FFF000",
    "svg": "icons/animated/duckdb.svg",
@@ -1858,6 +2462,10 @@
    "subcategory": "MLOps & Experiment Tracking",
    "role": "Git-Based Version Control for ML Datasets & Models",
    "docsUrl": "https://dvc.org/",
+   "aliases": [
+    "dvc",
+    "iterative-dvc"
+   ],
    "monogram": "DVC",
    "brandColor": "#13ADC7",
    "svg": "icons/animated/dvc.svg",
@@ -1872,6 +2480,10 @@
    "subcategory": "Observability & Security",
    "role": "AI-Powered Full-Stack Application & Infrastructure Monitoring",
    "docsUrl": "https://www.dynatrace.com/",
+   "aliases": [
+    "dynatrace",
+    "oneagent"
+   ],
    "monogram": "DYN",
    "brandColor": "#1496FF",
    "svg": "icons/animated/dynatrace.svg",
@@ -1886,6 +2498,10 @@
    "subcategory": "EDA & PCB Design",
    "role": "Web-Based Schematic Capture, Spice Simulation & PCB Layout",
    "docsUrl": "https://easyeda.com",
+   "aliases": [
+    "easyeda",
+    "jlcpcb"
+   ],
    "monogram": "EAS",
    "brandColor": "#1765F6",
    "svg": "icons/animated/easyeda.svg",
@@ -1900,6 +2516,10 @@
    "subcategory": "Web Frameworks",
    "role": "High-Performance Minimalist Go Web Router & Middleware",
    "docsUrl": "https://echo.labstack.com/",
+   "aliases": [
+    "echo",
+    "echo-go"
+   ],
    "monogram": "ECH",
    "brandColor": "#00AFD1",
    "svg": "icons/animated/echo.svg",
@@ -1914,6 +2534,12 @@
    "subcategory": "Editors & IDEs",
    "role": "Extensible Open-Source Java & Embedded C/C++ (CDT) Platform",
    "docsUrl": "https://www.eclipse.org/artwork/",
+   "aliases": [
+    "eclipseide",
+    "eclipse ide",
+    "eclipse java ide",
+    "eclipse"
+   ],
    "monogram": "ECL",
    "brandColor": "#2C2255",
    "svg": "icons/animated/eclipseide.svg",
@@ -1928,6 +2554,10 @@
    "subcategory": "Code Quality & Formatting",
    "role": "Consistent Coding Styles Across Different Editors and IDEs",
    "docsUrl": "https://editorconfig.org",
+   "aliases": [
+    "editorconfig",
+    "editorconfig-org"
+   ],
    "monogram": "EDI",
    "brandColor": "#FEFEFE",
    "svg": "icons/animated/editorconfig.svg",
@@ -1942,6 +2572,11 @@
    "subcategory": "Search & Analytics",
    "role": "Distributed RESTful Search and Analytics Engine",
    "docsUrl": "https://www.elastic.co/elasticsearch",
+   "aliases": [
+    "elasticsearch",
+    "elastic",
+    "elk"
+   ],
    "monogram": "ELA",
    "brandColor": "#005571",
    "svg": "icons/animated/elasticsearch.svg",
@@ -1956,6 +2591,10 @@
    "subcategory": "Desktop & Cross-Platform",
    "role": "Cross-Platform Desktop Apps with JS, HTML & CSS",
    "docsUrl": "https://www.electronjs.org",
+   "aliases": [
+    "electron",
+    "electronjs"
+   ],
    "monogram": "ELE",
    "brandColor": "#47848F",
    "svg": "icons/animated/electron.svg",
@@ -1970,6 +2609,11 @@
    "subcategory": "Functional & BEAM",
    "role": "Fault-Tolerant Concurrent BEAM Language",
    "docsUrl": "https://elixir-lang.org/",
+   "aliases": [
+    "elixir",
+    "ex",
+    "exs"
+   ],
    "monogram": "ELI",
    "brandColor": "#8847B9",
    "svg": "icons/animated/elixir.svg",
@@ -1984,6 +2628,10 @@
    "subcategory": "Web & Functional",
    "role": "Delightful Functional Language for Web UIs",
    "docsUrl": "https://elm-lang.org/",
+   "aliases": [
+    "elm",
+    "elmlang"
+   ],
    "monogram": "ELM",
    "brandColor": "#1293D8",
    "svg": "icons/animated/elm.svg",
@@ -1998,6 +2646,11 @@
    "subcategory": "UI Frameworks",
    "role": "Productive Battle-Tested JavaScript Framework",
    "docsUrl": "https://emberjs.com/",
+   "aliases": [
+    "emberdotjs",
+    "ember.js",
+    "ember"
+   ],
    "monogram": "EMB",
    "brandColor": "#E04E39",
    "svg": "icons/animated/emberdotjs.svg",
@@ -2012,6 +2665,10 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Cloud-Native High-Performance Edge & Service Proxy",
    "docsUrl": "https://www.envoyproxy.io/",
+   "aliases": [
+    "envoyproxy",
+    "envoy"
+   ],
    "monogram": "ENV",
    "brandColor": "#AC6199",
    "svg": "icons/animated/envoyproxy.svg",
@@ -2026,6 +2683,11 @@
    "subcategory": "Functional & BEAM",
    "role": "Distributed Telecom & Fault-Tolerant Runtime",
    "docsUrl": "https://www.erlang.org/",
+   "aliases": [
+    "erlang",
+    "beam",
+    "otp"
+   ],
    "monogram": "ERL",
    "brandColor": "#A90533",
    "svg": "icons/animated/erlang.svg",
@@ -2040,6 +2702,10 @@
    "subcategory": "Build & Bundlers",
    "role": "Extremely Fast Go-Based JavaScript Bundler",
    "docsUrl": "https://esbuild.github.io/",
+   "aliases": [
+    "esbuild",
+    "esbuild-bundler"
+   ],
    "monogram": "ESB",
    "brandColor": "#FFCF00",
    "svg": "icons/animated/esbuild.svg",
@@ -2054,6 +2720,10 @@
    "subcategory": "Code Quality & Formatting",
    "role": "Pluggable JavaScript and TypeScript Static Code Linter",
    "docsUrl": "https://eslint.org",
+   "aliases": [
+    "eslint",
+    "linter"
+   ],
    "monogram": "ESL",
    "brandColor": "#4B32C3",
    "svg": "icons/animated/eslint.svg",
@@ -2068,6 +2738,10 @@
    "subcategory": "IoT & Smart Automation",
    "role": "YAML-Driven Firmware Generator for ESP32/ESP8266 Devices",
    "docsUrl": "https://esphome.io/",
+   "aliases": [
+    "esphome",
+    "esphome-yaml"
+   ],
    "monogram": "ESP",
    "brandColor": "#18BCF2",
    "svg": "icons/animated/esphome.svg",
@@ -2082,6 +2756,9 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "Wi-Fi & Bluetooth Low Energy Microcontroller SoCs",
    "docsUrl": "https://www.espressif.com/",
+   "aliases": [
+    "espressif"
+   ],
    "monogram": "ESP",
    "brandColor": "#E7352C",
    "svg": "icons/animated/espressif.svg",
@@ -2096,6 +2773,10 @@
    "subcategory": "Cross-Platform & Mobile",
    "role": "Universal React Native App Platform & Router",
    "docsUrl": "https://expo.dev/",
+   "aliases": [
+    "expo",
+    "expo-go"
+   ],
    "monogram": "EXP",
    "brandColor": "#1C2024",
    "svg": "icons/animated/expo.svg",
@@ -2110,6 +2791,10 @@
    "subcategory": "Web Frameworks",
    "role": "Fast Unopinionated Minimalist Web Framework for Node.js",
    "docsUrl": "https://expressjs.com/",
+   "aliases": [
+    "express",
+    "expressjs"
+   ],
    "monogram": "EXP",
    "brandColor": "#0A0A0A",
    "svg": "icons/animated/express.svg",
@@ -2124,6 +2809,11 @@
    "subcategory": "Web Frameworks",
    "role": "High-Performance Async Python API Framework",
    "docsUrl": "https://fastapi.tiangolo.com/",
+   "aliases": [
+    "fastapi",
+    "starlette",
+    "pydantic"
+   ],
    "monogram": "FAS",
    "brandColor": "#009688",
    "svg": "icons/animated/fastapi.svg",
@@ -2138,6 +2828,10 @@
    "subcategory": "Web Frameworks",
    "role": "Fast and Low-Overhead Web Framework for Node.js",
    "docsUrl": "https://fastify.dev/",
+   "aliases": [
+    "fastify",
+    "fastifyjs"
+   ],
    "monogram": "FAS",
    "brandColor": "#000000",
    "svg": "icons/animated/fastify.svg",
@@ -2152,6 +2846,10 @@
    "subcategory": "Cloud & Edge Network",
    "role": "Programmable Edge Cloud Platform & Varnish CDN",
    "docsUrl": "https://www.fastly.com/",
+   "aliases": [
+    "fastly",
+    "fastly-compute"
+   ],
    "monogram": "FAS",
    "brandColor": "#FF282D",
    "svg": "icons/animated/fastly.svg",
@@ -2166,6 +2864,10 @@
    "subcategory": "Document & NoSQL",
    "role": "Distributed Document-Relational Serverless Database",
    "docsUrl": "https://fauna.com",
+   "aliases": [
+    "fauna",
+    "fql"
+   ],
    "monogram": "FAU",
    "brandColor": "#3A1AB6",
    "svg": "icons/animated/fauna.svg",
@@ -2180,6 +2882,10 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Innovative Community Linux Distribution Backed by Red Hat",
    "docsUrl": "https://fedoraproject.org/",
+   "aliases": [
+    "fedora",
+    "fedoraproject"
+   ],
    "monogram": "FED",
    "brandColor": "#51A2DA",
    "svg": "icons/animated/fedora.svg",
@@ -2194,6 +2900,9 @@
    "subcategory": "Design & Prototyping",
    "role": "Collaborative Interface Design & Design System Platform",
    "docsUrl": "https://www.figma.com/",
+   "aliases": [
+    "figma"
+   ],
    "monogram": "FIG",
    "brandColor": "#F24E1E",
    "svg": "icons/animated/figma.svg",
@@ -2208,6 +2917,9 @@
    "subcategory": "Cloud & Realtime BaaS",
    "role": "Real-Time NoSQL Document Database & App Platform",
    "docsUrl": "https://firebase.google.com/",
+   "aliases": [
+    "firebase"
+   ],
    "monogram": "FIR",
    "brandColor": "#DD2C00",
    "svg": "icons/animated/firebase.svg",
@@ -2222,6 +2934,11 @@
    "subcategory": "Terminals & Shells",
    "role": "Smart and User-Friendly Command Line Shell with Autosuggestions",
    "docsUrl": "https://fishshell.com/",
+   "aliases": [
+    "fishshell",
+    "fish shell",
+    "fish"
+   ],
    "monogram": "FIS",
    "brandColor": "#34C534",
    "svg": "icons/animated/fishshell.svg",
@@ -2236,6 +2953,10 @@
    "subcategory": "Web Frameworks",
    "role": "Lightweight WSGI Python Microframework",
    "docsUrl": "https://flask.palletsprojects.com/",
+   "aliases": [
+    "flask",
+    "pallets-flask"
+   ],
    "monogram": "FLA",
    "brandColor": "#3BABC3",
    "svg": "icons/animated/flask.svg",
@@ -2250,6 +2971,10 @@
    "subcategory": "Cross-Platform & Mobile",
    "role": "Multi-Platform Native Compiled UI Toolkit",
    "docsUrl": "https://flutter.dev/",
+   "aliases": [
+    "flutter",
+    "flutter-web"
+   ],
    "monogram": "FLU",
    "brandColor": "#02569B",
    "svg": "icons/animated/flutter.svg",
@@ -2264,6 +2989,11 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Open and Extensible Continuous Delivery Solution for Kubernetes",
    "docsUrl": "https://fluxcd.io/",
+   "aliases": [
+    "flux",
+    "flux cd",
+    "fluxcd"
+   ],
    "monogram": "FLU",
    "brandColor": "#5468FF",
    "svg": "icons/animated/flux.svg",
@@ -2278,6 +3008,11 @@
    "subcategory": "Cloud & Edge Network",
    "role": "Deploy App Servers Close to Users on Global Firecracker VMs",
    "docsUrl": "https://fly.io/",
+   "aliases": [
+    "flydotio",
+    "fly.io",
+    "flyio"
+   ],
    "monogram": "FLY",
    "brandColor": "#24175B",
    "svg": "icons/animated/flydotio.svg",
@@ -2292,6 +3027,10 @@
    "subcategory": "Schema Migrations",
    "role": "Version Control and Automated Migrations for Databases",
    "docsUrl": "https://flywaydb.org/",
+   "aliases": [
+    "flyway",
+    "redgate-flyway"
+   ],
    "monogram": "FLY",
    "brandColor": "#CC0200",
    "svg": "icons/animated/flyway.svg",
@@ -2306,6 +3045,11 @@
    "subcategory": "Data & Scientific",
    "role": "High-Performance Scientific Array Computing",
    "docsUrl": "https://fortran-lang.org/",
+   "aliases": [
+    "fortran",
+    "f90",
+    "hpc"
+   ],
    "monogram": "FOR",
    "brandColor": "#734F96",
    "svg": "icons/animated/fortran.svg",
@@ -2320,6 +3064,9 @@
    "subcategory": "Animation & Motion",
    "role": "Production-Ready Motion Library for React & Web",
    "docsUrl": "https://framer.com",
+   "aliases": [
+    "framer"
+   ],
    "monogram": "FRA",
    "brandColor": "#0055FF",
    "svg": "icons/animated/framer.svg",
@@ -2334,6 +3081,11 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Advanced UNIX-Like Operating System for Servers & Storage",
    "docsUrl": "https://www.freebsdfoundation.org/about/project/",
+   "aliases": [
+    "freebsd",
+    "bsd",
+    "zfs"
+   ],
    "monogram": "FRE",
    "brandColor": "#AB2B28",
    "svg": "icons/animated/freebsd.svg",
@@ -2348,6 +3100,11 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Market-Leading Real-Time Operating System for Microcontrollers",
    "docsUrl": "https://www.freertos.org/",
+   "aliases": [
+    "freertos",
+    "rtos",
+    "aws-freertos"
+   ],
    "monogram": "FRE",
    "brandColor": "#6CAE3E",
    "svg": "icons/animated/freertos.svg",
@@ -2362,6 +3119,11 @@
    "subcategory": "Functional & .NET",
    "role": "Functional-First Language on .NET",
    "docsUrl": "https://fsharp.org/",
+   "aliases": [
+    "fsharp",
+    "f#",
+    "fs"
+   ],
    "monogram": "F#",
    "brandColor": "#378BBA",
    "svg": "icons/animated/fsharp.svg",
@@ -2376,6 +3138,10 @@
    "subcategory": "Meta-Frameworks",
    "role": "React-Based GraphQL Static Site Framework",
    "docsUrl": "https://www.gatsbyjs.com/",
+   "aliases": [
+    "gatsby",
+    "gatsbyjs"
+   ],
    "monogram": "GAT",
    "brandColor": "#663399",
    "svg": "icons/animated/gatsby.svg",
@@ -2390,6 +3156,10 @@
    "subcategory": "Headless CMS & BaaS",
    "role": "Open-Source Headless Node.js Publishing Platform",
    "docsUrl": "https://ghost.org/",
+   "aliases": [
+    "ghost",
+    "ghost-cms"
+   ],
    "monogram": "GHO",
    "brandColor": "#15171A",
    "svg": "icons/animated/ghost.svg",
@@ -2404,6 +3174,10 @@
    "subcategory": "Web Frameworks",
    "role": "High-Performance HTTP Web Framework Written in Go",
    "docsUrl": "https://gin-gonic.com/",
+   "aliases": [
+    "gin",
+    "gin-gonic"
+   ],
    "monogram": "GIN",
    "brandColor": "#008ECF",
    "svg": "icons/animated/gin.svg",
@@ -2418,6 +3192,11 @@
    "subcategory": "Version Control & Forges",
    "role": "Distributed Version Control System for Source Code",
    "docsUrl": "https://git-scm.com/",
+   "aliases": [
+    "git",
+    "scm",
+    "git-scm"
+   ],
    "monogram": "GIT",
    "brandColor": "#F03C2E",
    "svg": "icons/animated/git.svg",
@@ -2432,6 +3211,9 @@
    "subcategory": "Version Control & Forges",
    "role": "Painless Self-Hosted All-in-One Software Development Service",
    "docsUrl": "https://gitea.io/",
+   "aliases": [
+    "gitea"
+   ],
    "monogram": "GIT",
    "brandColor": "#609926",
    "svg": "icons/animated/gitea.svg",
@@ -2446,6 +3228,11 @@
    "subcategory": "Version Control & Forges",
    "role": "Global Developer Platform for Open Source & Collaboration",
    "docsUrl": "https://github.com/",
+   "aliases": [
+    "github",
+    "gh",
+    "octocat"
+   ],
    "monogram": "GIT",
    "brandColor": "#181717",
    "svg": "icons/animated/github.svg",
@@ -2460,6 +3247,12 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Event-Driven CI/CD Workflows Integrated in GitHub",
    "docsUrl": "https://github.com/features/actions",
+   "aliases": [
+    "githubactions",
+    "github actions",
+    "gha",
+    "workflows"
+   ],
    "monogram": "GIT",
    "brandColor": "#2088FF",
    "svg": "icons/animated/githubactions.svg",
@@ -2474,6 +3267,11 @@
    "subcategory": "AI Coding Assistants",
    "role": "AI Pair Programmer & Autonomous Coding Agent",
    "docsUrl": "https://primer.style/foundations/icons/copilot-24",
+   "aliases": [
+    "githubcopilot",
+    "github copilot",
+    "copilot"
+   ],
    "monogram": "GIT",
    "brandColor": "#000000",
    "svg": "icons/animated/githubcopilot.svg",
@@ -2488,6 +3286,10 @@
    "subcategory": "Version Control & Forges",
    "role": "Visual Git Client, Merge Conflict Resolver & GitLens",
    "docsUrl": "https://www.gitkraken.com",
+   "aliases": [
+    "gitkraken",
+    "gitlens"
+   ],
    "monogram": "GIT",
    "brandColor": "#179287",
    "svg": "icons/animated/gitkraken.svg",
@@ -2502,6 +3304,10 @@
    "subcategory": "Version Control & Forges",
    "role": "Complete DevSecOps Source Hosting & Issue Tracking Platform",
    "docsUrl": "https://about.gitlab.com/",
+   "aliases": [
+    "gitlab",
+    "gl"
+   ],
    "monogram": "GIT",
    "brandColor": "#FC6D26",
    "svg": "icons/animated/gitlab.svg",
@@ -2516,6 +3322,10 @@
    "subcategory": "Functional & BEAM",
    "role": "Type-Safe Functional Language for BEAM & JS",
    "docsUrl": "https://gleam.run",
+   "aliases": [
+    "gleam",
+    "gleamlang"
+   ],
    "monogram": "GLE",
    "brandColor": "#FFAFF3",
    "svg": "icons/animated/gleam.svg",
@@ -2530,6 +3340,9 @@
    "subcategory": "Compilers & Toolchains",
    "role": "Standard Build Automation Tool & GNU Compiler Collection",
    "docsUrl": "https://gnu.org",
+   "aliases": [
+    "gnu"
+   ],
    "monogram": "GNU",
    "brandColor": "#A42E2B",
    "svg": "icons/animated/gnu.svg",
@@ -2544,6 +3357,11 @@
    "subcategory": "Scripting & Shell",
    "role": "POSIX Command Language & Automation",
    "docsUrl": "https://www.gnu.org/software/bash/",
+   "aliases": [
+    "gnubash",
+    "bash",
+    "shell"
+   ],
    "monogram": "BAS",
    "brandColor": "#4EAA25",
    "svg": "icons/animated/gnubash.svg",
@@ -2558,6 +3376,13 @@
    "subcategory": "Editors & IDEs",
    "role": "Extensible Customizable Self-Documenting Lisp Text Editor",
    "docsUrl": "https://www.gnu.org/software/emacs/",
+   "aliases": [
+    "gnuemacs",
+    "gnu emacs",
+    "emacs",
+    "org-mode",
+    "doom-emacs"
+   ],
    "monogram": "GNU",
    "brandColor": "#7F5AB6",
    "svg": "icons/animated/gnuemacs.svg",
@@ -2572,6 +3397,10 @@
    "subcategory": "Systems & Cloud",
    "role": "Cloud-Native Concurrent Systems Language",
    "docsUrl": "https://go.dev/",
+   "aliases": [
+    "go",
+    "golang"
+   ],
    "monogram": "GO",
    "brandColor": "#00ADD8",
    "svg": "icons/animated/go.svg",
@@ -2586,6 +3415,12 @@
    "subcategory": "3D & Game Engines",
    "role": "Feature-Packed Cross-Platform 2D and 3D Open-Source Game Engine",
    "docsUrl": "https://godotengine.org/",
+   "aliases": [
+    "godotengine",
+    "godot engine",
+    "gdscript",
+    "godot4"
+   ],
    "monogram": "GOD",
    "brandColor": "#478CBF",
    "svg": "icons/animated/godotengine.svg",
@@ -2600,6 +3435,10 @@
    "subcategory": "Editors & IDEs",
    "role": "JetBrains Ergonomic IDE Built Specifically for Go Developers",
    "docsUrl": "https://www.jetbrains.com/go/",
+   "aliases": [
+    "goland",
+    "jetbrains-goland"
+   ],
    "monogram": "GOL",
    "brandColor": "#000000",
    "svg": "icons/animated/goland.svg",
@@ -2614,6 +3453,11 @@
    "subcategory": "Cloud Providers",
    "role": "Google Cloud Platform Compute, BigQuery & AI Infrastructure",
    "docsUrl": "https://cloud.google.com",
+   "aliases": [
+    "googlecloud",
+    "google cloud",
+    "gcp"
+   ],
    "monogram": "GOO",
    "brandColor": "#4285F4",
    "svg": "icons/animated/googlecloud.svg",
@@ -2628,6 +3472,11 @@
    "subcategory": "Data Engineering & Pipelines",
    "role": "Unified Stream & Batch Data Processing",
    "docsUrl": "https://cloud.google.com/dataflow",
+   "aliases": [
+    "googledataflow",
+    "google dataflow",
+    "dataflow"
+   ],
    "monogram": "DAT",
    "brandColor": "#4285F4",
    "svg": "icons/animated/googledataflow.svg",
@@ -2642,6 +3491,11 @@
    "subcategory": "LLM & Foundation Models",
    "role": "Multimodal Frontier AI Models & GenAI SDK",
    "docsUrl": "https://gemini.google.com",
+   "aliases": [
+    "googlegemini",
+    "google gemini",
+    "gemini"
+   ],
    "monogram": "GEM",
    "brandColor": "#8E75B2",
    "svg": "icons/animated/googlegemini.svg",
@@ -2656,6 +3510,10 @@
    "subcategory": "AI Apps & Dashboards",
    "role": "Build & Share Interactive Machine Learning Web Demos",
    "docsUrl": "https://www.gradio.app",
+   "aliases": [
+    "gradio",
+    "gradio-app"
+   ],
    "monogram": "GRA",
    "brandColor": "#F97316",
    "svg": "icons/animated/gradio.svg",
@@ -2670,6 +3528,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Flexible Build Automation Tool for JVM, Android & Native",
    "docsUrl": "https://gradle.org/",
+   "aliases": [
+    "gradle",
+    "gradlew"
+   ],
    "monogram": "GRA",
    "brandColor": "#02303A",
    "svg": "icons/animated/gradle.svg",
@@ -2684,6 +3546,11 @@
    "subcategory": "Observability & Security",
    "role": "Open-Source Operational Dashboards & Metrics Visualization",
    "docsUrl": "https://grafana.com",
+   "aliases": [
+    "grafana",
+    "lgtm",
+    "grafana-labs"
+   ],
    "monogram": "GRA",
    "brandColor": "#F46800",
    "svg": "icons/animated/grafana.svg",
@@ -2698,6 +3565,10 @@
    "subcategory": "APIs & Protocols",
    "role": "Typed Declarative API Query Language & Runtime",
    "docsUrl": "https://graphql.org/",
+   "aliases": [
+    "graphql",
+    "gql"
+   ],
    "monogram": "GRA",
    "brandColor": "#E10098",
    "svg": "icons/animated/graphql.svg",
@@ -2712,6 +3583,11 @@
    "subcategory": "Animation & Motion",
    "role": "Professional-Grade JavaScript Animation Platform",
    "docsUrl": "https://greensock.com",
+   "aliases": [
+    "greensock",
+    "gsap",
+    "scrolltrigger"
+   ],
    "monogram": "GSA",
    "brandColor": "#88CE02",
    "svg": "icons/animated/greensock.svg",
@@ -2726,6 +3602,10 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Python WSGI HTTP Server for UNIX",
    "docsUrl": "https://gunicorn.org/",
+   "aliases": [
+    "gunicorn",
+    "uvicorn"
+   ],
    "monogram": "GUN",
    "brandColor": "#499848",
    "svg": "icons/animated/gunicorn.svg",
@@ -2740,6 +3620,10 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Reliable High-Performance TCP/HTTP Load Balancer",
    "docsUrl": "https://www.haproxy.org/",
+   "aliases": [
+    "haproxy",
+    "load-balancer"
+   ],
    "monogram": "HAP",
    "brandColor": "#169BD6",
    "svg": "icons/animated/haproxy.svg",
@@ -2754,6 +3638,10 @@
    "subcategory": "Containers & Orchestration",
    "role": "CNCF Open-Source Trusted Cloud-Native Container Registry",
    "docsUrl": "https://goharbor.io/",
+   "aliases": [
+    "harbor",
+    "oci-registry"
+   ],
    "monogram": "HAR",
    "brandColor": "#60B932",
    "svg": "icons/animated/harbor.svg",
@@ -2768,6 +3656,11 @@
    "subcategory": "Functional",
    "role": "Purely Functional Statically Typed Language",
    "docsUrl": "https://www.haskell.org/",
+   "aliases": [
+    "haskell",
+    "ghc",
+    "hs"
+   ],
    "monogram": "HAS",
    "brandColor": "#5D4F85",
    "svg": "icons/animated/haskell.svg",
@@ -2782,6 +3675,10 @@
    "subcategory": "APIs & Protocols",
    "role": "Instant Real-Time GraphQL & REST APIs on Databases",
    "docsUrl": "https://hasura.io/",
+   "aliases": [
+    "hasura",
+    "hasura-graphql"
+   ],
    "monogram": "HAS",
    "brandColor": "#1EB4D4",
    "svg": "icons/animated/hasura.svg",
@@ -2796,6 +3693,10 @@
    "subcategory": "Cross-Platform",
    "role": "High-Level Cross-Platform Multi-Target Language",
    "docsUrl": "https://haxe.org/",
+   "aliases": [
+    "haxe",
+    "haxelib"
+   ],
    "monogram": "HAX",
    "brandColor": "#EA8220",
    "svg": "icons/animated/haxe.svg",
@@ -2810,6 +3711,11 @@
    "subcategory": "Styling & Design Systems",
    "role": "Unstyled Accessible UI Components by Tailwind Labs",
    "docsUrl": "https://headlessui.dev",
+   "aliases": [
+    "headlessui",
+    "headless ui",
+    "headless"
+   ],
    "monogram": "HEA",
    "brandColor": "#66E3FF",
    "svg": "icons/animated/headlessui.svg",
@@ -2824,6 +3730,11 @@
    "subcategory": "Editors & IDEs",
    "role": "Post-Modern Modal Text Editor with Built-in Tree-sitter & LSP",
    "docsUrl": "https://helix-editor.com",
+   "aliases": [
+    "helix",
+    "helix editor",
+    "hx"
+   ],
    "monogram": "HEL",
    "brandColor": "#281733",
    "svg": "icons/animated/helix.svg",
@@ -2838,6 +3749,10 @@
    "subcategory": "Containers & Orchestration",
    "role": "The Package Manager for Kubernetes Applications",
    "docsUrl": "https://helm.sh",
+   "aliases": [
+    "helm",
+    "helm-charts"
+   ],
    "monogram": "HEL",
    "brandColor": "#0F1689",
    "svg": "icons/animated/helm.svg",
@@ -2852,6 +3767,10 @@
    "subcategory": "Cloud Providers",
    "role": "Container-Based Cloud Platform-as-a-Service (PaaS)",
    "docsUrl": "https://www.heroku.com/",
+   "aliases": [
+    "heroku",
+    "dyno"
+   ],
    "monogram": "HER",
    "brandColor": "#430098",
    "svg": "icons/animated/heroku.svg",
@@ -2866,6 +3785,10 @@
    "subcategory": "Cloud Providers",
    "role": "High-Performance European Dedicated & Cloud Servers",
    "docsUrl": "https://www.hetzner.com",
+   "aliases": [
+    "hetzner",
+    "hetzner-cloud"
+   ],
    "monogram": "HET",
    "brandColor": "#D50C2D",
    "svg": "icons/animated/hetzner.svg",
@@ -2880,6 +3803,10 @@
    "subcategory": "ORMs & Data Access",
    "role": "Object-Relational Mapping Framework for Java & JPA",
    "docsUrl": "https://hibernate.org",
+   "aliases": [
+    "hibernate",
+    "jpa"
+   ],
    "monogram": "HIB",
    "brandColor": "#59666C",
    "svg": "icons/animated/hibernate.svg",
@@ -2894,6 +3821,12 @@
    "subcategory": "IoT & Smart Automation",
    "role": "Open-Source Local-First Smart Home Automation Platform",
    "docsUrl": "https://www.home-assistant.io/",
+   "aliases": [
+    "homeassistant",
+    "home assistant",
+    "hass",
+    "iot"
+   ],
    "monogram": "HOM",
    "brandColor": "#18BCF2",
    "svg": "icons/animated/homeassistant.svg",
@@ -2908,6 +3841,10 @@
    "subcategory": "Package & Build Managers",
    "role": "The Missing Package Manager for macOS and Linux",
    "docsUrl": "https://brew.sh/",
+   "aliases": [
+    "homebrew",
+    "brew"
+   ],
    "monogram": "HOM",
    "brandColor": "#FBB040",
    "svg": "icons/animated/homebrew.svg",
@@ -2922,6 +3859,10 @@
    "subcategory": "Web Frameworks",
    "role": "Ultrafast Web Standard Framework for Cloudflare, Bun & Node",
    "docsUrl": "https://hono.dev/",
+   "aliases": [
+    "hono",
+    "honojs"
+   ],
    "monogram": "HON",
    "brandColor": "#E36002",
    "svg": "icons/animated/hono.svg",
@@ -2936,6 +3877,10 @@
    "subcategory": "API & Network Tools",
    "role": "Open-Source Web-Based API Development Ecosystem",
    "docsUrl": "https://hoppscotch.com",
+   "aliases": [
+    "hoppscotch",
+    "hopp"
+   ],
    "monogram": "HOP",
    "brandColor": "#09090B",
    "svg": "icons/animated/hoppscotch.svg",
@@ -2950,6 +3895,11 @@
    "subcategory": "Web & Markup",
    "role": "Semantic Web Document Standard",
    "docsUrl": "https://html.spec.whatwg.org/",
+   "aliases": [
+    "html5",
+    "html",
+    "markup"
+   ],
    "monogram": "HTM",
    "brandColor": "#E34F26",
    "svg": "icons/animated/html5.svg",
@@ -2964,6 +3914,10 @@
    "subcategory": "Hypermedia & Lightweight",
    "role": "High-Power Tools for HTML via Attributes",
    "docsUrl": "https://htmx.org/",
+   "aliases": [
+    "htmx",
+    "hypermedia"
+   ],
    "monogram": "HTM",
    "brandColor": "#3366CC",
    "svg": "icons/animated/htmx.svg",
@@ -2978,6 +3932,12 @@
    "subcategory": "Models & Datasets Hub",
    "role": "Open-Source Transformers, Diffusers & Model Hub",
    "docsUrl": "https://huggingface.co/",
+   "aliases": [
+    "huggingface",
+    "hugging face",
+    "hf",
+    "transformers"
+   ],
    "monogram": "HUG",
    "brandColor": "#FFD21E",
    "svg": "icons/animated/huggingface.svg",
@@ -2992,6 +3952,11 @@
    "subcategory": "Silicon & Architectures",
    "role": "AURIX, PSoC & Power Semiconductor Systems for Automotive/IoT",
    "docsUrl": "https://www.infineon.com/",
+   "aliases": [
+    "infineon",
+    "psoc",
+    "aurix"
+   ],
    "monogram": "INF",
    "brandColor": "#0066B3",
    "svg": "icons/animated/infineon.svg",
@@ -3006,6 +3971,10 @@
    "subcategory": "Time-Series",
    "role": "High-Throughput Time-Series Database for Metrics & IoT",
    "docsUrl": "https://www.influxdata.com/",
+   "aliases": [
+    "influxdb",
+    "tsdb"
+   ],
    "monogram": "INF",
    "brandColor": "#22ADF6",
    "svg": "icons/animated/influxdb.svg",
@@ -3020,6 +3989,10 @@
    "subcategory": "API & Network Tools",
    "role": "Collaborative Open-Source API Client for REST, GraphQL & gRPC",
    "docsUrl": "https://insomnia.rest",
+   "aliases": [
+    "insomnia",
+    "kong-insomnia"
+   ],
    "monogram": "INS",
    "brandColor": "#4000BF",
    "svg": "icons/animated/insomnia.svg",
@@ -3034,6 +4007,10 @@
    "subcategory": "Silicon & Architectures",
    "role": "x86 Embedded Processors, Quartus FPGA & Edge Silicon",
    "docsUrl": "https://www.intel.com/",
+   "aliases": [
+    "intel",
+    "altera"
+   ],
    "monogram": "INT",
    "brandColor": "#0071C5",
    "svg": "icons/animated/intel.svg",
@@ -3048,6 +4025,12 @@
    "subcategory": "Editors & IDEs",
    "role": "Ergonomic JVM & Polyglot IDE by JetBrains",
    "docsUrl": "https://www.jetbrains.com/idea/",
+   "aliases": [
+    "intellijidea",
+    "intellij idea",
+    "jetbrains",
+    "idea"
+   ],
    "monogram": "INT",
    "brandColor": "#000000",
    "svg": "icons/animated/intellijidea.svg",
@@ -3062,6 +4045,10 @@
    "subcategory": "Cross-Platform & Mobile",
    "role": "Cross-Platform Mobile UI Toolkit for Web Developers",
    "docsUrl": "https://ionicframework.com/",
+   "aliases": [
+    "ionic",
+    "ionicframework"
+   ],
    "monogram": "ION",
    "brandColor": "#3880FF",
    "svg": "icons/animated/ionic.svg",
@@ -3076,6 +4063,10 @@
    "subcategory": "Containers & Orchestration",
    "role": "Open-Source Service Mesh for Traffic, mTLS & Observability",
    "docsUrl": "https://istio.io/",
+   "aliases": [
+    "istio",
+    "service-mesh"
+   ],
    "monogram": "IST",
    "brandColor": "#466BB0",
    "svg": "icons/animated/istio.svg",
@@ -3090,6 +4081,10 @@
    "subcategory": "Terminals & Shells",
    "role": "Terminal Emulator for macOS with Split Panes & Tmux Integration",
    "docsUrl": "https://iterm2.com/",
+   "aliases": [
+    "iterm2",
+    "iterm"
+   ],
    "monogram": "ITE",
    "brandColor": "#000000",
    "svg": "icons/animated/iterm2.svg",
@@ -3104,6 +4099,10 @@
    "subcategory": "Observability & Security",
    "role": "Open-Source End-to-End Distributed Tracing (CNCF)",
    "docsUrl": "https://www.jaegertracing.io/",
+   "aliases": [
+    "jaeger",
+    "distributed-tracing"
+   ],
    "monogram": "JAE",
    "brandColor": "#66CFE3",
    "svg": "icons/animated/jaeger.svg",
@@ -3118,6 +4117,10 @@
    "subcategory": "Testing & QA",
    "role": "Behavior-Driven Development Testing Framework for JS",
    "docsUrl": "https://jasmine.github.io/",
+   "aliases": [
+    "jasmine",
+    "jasminejs"
+   ],
    "monogram": "JAS",
    "brandColor": "#8A4182",
    "svg": "icons/animated/jasmine.svg",
@@ -3132,6 +4135,12 @@
    "subcategory": "JVM & Enterprise",
    "role": "Concurrent Object-Oriented JVM Language",
    "docsUrl": "https://www.java.com/",
+   "aliases": [
+    "java",
+    "jdk",
+    "jvm",
+    "openjdk"
+   ],
    "monogram": "JAV",
    "brandColor": "#E76F00",
    "svg": "icons/animated/java.svg",
@@ -3146,6 +4155,12 @@
    "subcategory": "Web & Application",
    "role": "Ubiquitous Web Platform Language",
    "docsUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+   "aliases": [
+    "javascript",
+    "js",
+    "ecmascript",
+    "es6"
+   ],
    "monogram": "JAV",
    "brandColor": "#F7DF1E",
    "svg": "icons/animated/javascript.svg",
@@ -3160,6 +4175,10 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Extensible Open-Source Automation & Pipeline Server",
    "docsUrl": "https://get.jenkins.io/art/",
+   "aliases": [
+    "jenkins",
+    "jenkinsfile"
+   ],
    "monogram": "JEN",
    "brandColor": "#D24939",
    "svg": "icons/animated/jenkins.svg",
@@ -3174,6 +4193,10 @@
    "subcategory": "Testing & QA",
    "role": "Delightful JavaScript Unit Testing Framework",
    "docsUrl": "https://jestjs.io",
+   "aliases": [
+    "jest",
+    "jestjs"
+   ],
    "monogram": "JES",
    "brandColor": "#C21325",
    "svg": "icons/animated/jest.svg",
@@ -3188,6 +4211,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Agile Issue & Project Tracking for Software Teams",
    "docsUrl": "https://www.atlassian.com/software/jira",
+   "aliases": [
+    "jira",
+    "atlassian-jira"
+   ],
    "monogram": "JIR",
    "brandColor": "#0052CC",
    "svg": "icons/animated/jira.svg",
@@ -3202,6 +4229,10 @@
    "subcategory": "DOM & Legacy",
    "role": "Fast Small Cross-Platform DOM Library",
    "docsUrl": "https://jquery.com/",
+   "aliases": [
+    "jquery",
+    "jq"
+   ],
    "monogram": "JQU",
    "brandColor": "#0769AD",
    "svg": "icons/animated/jquery.svg",
@@ -3216,6 +4247,11 @@
    "subcategory": "Data & Config",
    "role": "JavaScript Object Notation Data Interchange",
    "docsUrl": "https://www.json.org/",
+   "aliases": [
+    "json",
+    "json5",
+    "jsonl"
+   ],
    "monogram": "JSO",
    "brandColor": "#000000",
    "svg": "icons/animated/json.svg",
@@ -3230,6 +4266,10 @@
    "subcategory": "Auth & Identity",
    "role": "Compact Claims-Based Token Standard (RFC 7519)",
    "docsUrl": "https://jwt.io",
+   "aliases": [
+    "jsonwebtokens",
+    "jwt"
+   ],
    "monogram": "JWT",
    "brandColor": "#000000",
    "svg": "icons/animated/jsonwebtokens.svg",
@@ -3244,6 +4284,10 @@
    "subcategory": "Data & Scientific",
    "role": "High-Performance Numerical & Scientific Language",
    "docsUrl": "https://julialang.org/",
+   "aliases": [
+    "julia",
+    "julialang"
+   ],
    "monogram": "JUL",
    "brandColor": "#9558B2",
    "svg": "icons/animated/julia.svg",
@@ -3258,6 +4302,10 @@
    "subcategory": "Notebooks & Workbenches",
    "role": "Interactive Computing Notebooks across 40+ Languages",
    "docsUrl": "https://jupyter.org/",
+   "aliases": [
+    "jupyter",
+    "ipynb"
+   ],
    "monogram": "JUP",
    "brandColor": "#F37626",
    "svg": "icons/animated/jupyter.svg",
@@ -3272,6 +4320,10 @@
    "subcategory": "Models & Datasets Hub",
    "role": "Data Science Competitions, Notebooks & Model Repository",
    "docsUrl": "https://www.kaggle.com/",
+   "aliases": [
+    "kaggle",
+    "kaggle-datasets"
+   ],
    "monogram": "KAG",
    "brandColor": "#20BEFF",
    "svg": "icons/animated/kaggle.svg",
@@ -3286,6 +4338,12 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Penetration Testing, Security Auditing & Forensics Linux OS",
    "docsUrl": "https://www.kali.org/docs/policy/trademark/",
+   "aliases": [
+    "kalilinux",
+    "kali linux",
+    "kali",
+    "offsec"
+   ],
    "monogram": "KAL",
    "brandColor": "#557C94",
    "svg": "icons/animated/kalilinux.svg",
@@ -3300,6 +4358,10 @@
    "subcategory": "Deep Learning Frameworks",
    "role": "Multi-Backend Deep Learning API for JAX, PyTorch & TF",
    "docsUrl": "https://keras.io",
+   "aliases": [
+    "keras",
+    "keras3"
+   ],
    "monogram": "KER",
    "brandColor": "#D00000",
    "svg": "icons/animated/keras.svg",
@@ -3314,6 +4376,11 @@
    "subcategory": "Auth & Identity",
    "role": "Open-Source Identity and Access Management (OIDC/SAML)",
    "docsUrl": "https://www.keycloak.org/",
+   "aliases": [
+    "keycloak",
+    "iam",
+    "sso"
+   ],
    "monogram": "KEY",
    "brandColor": "#4D4D4D",
    "svg": "icons/animated/keycloak.svg",
@@ -3328,6 +4395,10 @@
    "subcategory": "Observability & Security",
    "role": "Data Visualization and Exploration UI for Elasticsearch",
    "docsUrl": "https://www.elastic.co/kibana",
+   "aliases": [
+    "kibana",
+    "elastic-kibana"
+   ],
    "monogram": "KIB",
    "brandColor": "#005571",
    "svg": "icons/animated/kibana.svg",
@@ -3342,6 +4413,11 @@
    "subcategory": "EDA & PCB Design",
    "role": "Cross-Platform Open-Source Electronics Design Automation Suite",
    "docsUrl": "https://www.kicad.org/about/kicad/",
+   "aliases": [
+    "kicad",
+    "pcb",
+    "schematic"
+   ],
    "monogram": "KIC",
    "brandColor": "#314CB0",
    "svg": "icons/animated/kicad.svg",
@@ -3356,6 +4432,9 @@
    "subcategory": "Robotics & Autonomy",
    "role": "High-Precision 3D Printer Firmware Combining Linux & MCUs",
    "docsUrl": "https://www.klipper3d.org/",
+   "aliases": [
+    "klipper"
+   ],
    "monogram": "KLI",
    "brandColor": "#B12F35",
    "svg": "icons/animated/klipper.svg",
@@ -3370,6 +4449,11 @@
    "subcategory": "ORMs & Data Access",
    "role": "Batteries-Included SQL Query Builder for Node.js",
    "docsUrl": "https://knexjs.org/",
+   "aliases": [
+    "knexdotjs",
+    "knex.js",
+    "knex"
+   ],
    "monogram": "KNE",
    "brandColor": "#D26B38",
    "svg": "icons/animated/knexdotjs.svg",
@@ -3384,6 +4468,10 @@
    "subcategory": "Web Frameworks",
    "role": "Expressive Middleware Framework for Node.js",
    "docsUrl": "https://koajs.com",
+   "aliases": [
+    "koa",
+    "koajs"
+   ],
    "monogram": "KOA",
    "brandColor": "#33333D",
    "svg": "icons/animated/koa.svg",
@@ -3398,6 +4486,10 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Cloud-Native API Gateway & AI Gateway",
    "docsUrl": "https://konghq.com/",
+   "aliases": [
+    "kong",
+    "konghq"
+   ],
    "monogram": "KON",
    "brandColor": "#003459",
    "svg": "icons/animated/kong.svg",
@@ -3412,6 +4504,10 @@
    "subcategory": "JVM & Mobile",
    "role": "Concise Cross-Platform JVM & Android Language",
    "docsUrl": "https://kotlinlang.org/",
+   "aliases": [
+    "kotlin",
+    "kt"
+   ],
    "monogram": "KOT",
    "brandColor": "#7F52FF",
    "svg": "icons/animated/kotlin.svg",
@@ -3426,6 +4522,10 @@
    "subcategory": "Web Frameworks",
    "role": "Asynchronous Kotlin Framework for Connected Systems",
    "docsUrl": "https://ktor.io/",
+   "aliases": [
+    "ktor",
+    "jetbrains-ktor"
+   ],
    "monogram": "KTO",
    "brandColor": "#087CFA",
    "svg": "icons/animated/ktor.svg",
@@ -3440,6 +4540,13 @@
    "subcategory": "Containers & Orchestration",
    "role": "Production-Grade Container Orchestration Control Plane",
    "docsUrl": "https://kubernetes.io/",
+   "aliases": [
+    "kubernetes",
+    "k8s",
+    "kubectl",
+    "eks",
+    "gke"
+   ],
    "monogram": "KUB",
    "brandColor": "#326CE5",
    "svg": "icons/animated/kubernetes.svg",
@@ -3454,6 +4561,10 @@
    "subcategory": "Instrumentation",
    "role": "Graphical System Design & Test Instrumentation Language",
    "docsUrl": "https://www.ni.com/labview",
+   "aliases": [
+    "labview",
+    "ni-labview"
+   ],
    "monogram": "LAB",
    "brandColor": "#FFDB00",
    "svg": "icons/animated/labview.svg",
@@ -3468,6 +4579,9 @@
    "subcategory": "LLM & Agent Orchestration",
    "role": "Framework for Context-Aware LLM & Agent Applications",
    "docsUrl": "https://www.langchain.com/langchain",
+   "aliases": [
+    "langchain"
+   ],
    "monogram": "LAN",
    "brandColor": "#7FC8FF",
    "svg": "icons/animated/langchain.svg",
@@ -3482,6 +4596,11 @@
    "subcategory": "Web Frameworks",
    "role": "Expressive Artisan PHP Web Application Framework",
    "docsUrl": "https://laravel.com/",
+   "aliases": [
+    "laravel",
+    "livewire",
+    "eloquent"
+   ],
    "monogram": "LAR",
    "brandColor": "#FF2D20",
    "svg": "icons/animated/laravel.svg",
@@ -3496,6 +4615,11 @@
    "subcategory": "Markup & Scientific",
    "role": "Technical & Mathematical Document Typesetting",
    "docsUrl": "https://www.latex-project.org/",
+   "aliases": [
+    "latex",
+    "tex",
+    "bibtex"
+   ],
    "monogram": "LAT",
    "brandColor": "#008080",
    "svg": "icons/animated/latex.svg",
@@ -3510,6 +4634,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Backwards-Compatible CSS Preprocessor",
    "docsUrl": "https://lesscss.org/",
+   "aliases": [
+    "less",
+    "lesscss"
+   ],
    "monogram": "LES",
    "brandColor": "#1D365D",
    "svg": "icons/animated/less.svg",
@@ -3524,6 +4652,12 @@
    "subcategory": "Observability & Security",
    "role": "Free Automated Open Certificate Authority (ACME TLS)",
    "docsUrl": "https://letsencrypt.org/trademarks/",
+   "aliases": [
+    "letsencrypt",
+    "let's encrypt",
+    "certbot",
+    "tls"
+   ],
    "monogram": "LET",
    "brandColor": "#003A70",
    "svg": "icons/animated/letsencrypt.svg",
@@ -3538,6 +4672,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Purpose-Built Tool for Planning and Building Software Products",
    "docsUrl": "https://linear.app",
+   "aliases": [
+    "linear",
+    "linear-app"
+   ],
    "monogram": "LIN",
    "brandColor": "#5E6AD2",
    "svg": "icons/animated/linear.svg",
@@ -3552,6 +4690,10 @@
    "subcategory": "Containers & Orchestration",
    "role": "Ultralight Security-First Rust Service Mesh for Kubernetes",
    "docsUrl": "https://linkerd.io/",
+   "aliases": [
+    "linkerd",
+    "linkerd2"
+   ],
    "monogram": "LIN",
    "brandColor": "#2BEDA7",
    "svg": "icons/animated/linkerd.svg",
@@ -3566,6 +4708,10 @@
    "subcategory": "Schema Migrations",
    "role": "Database Schema Change Management & CI/CD Automation",
    "docsUrl": "https://www.liquibase.com/",
+   "aliases": [
+    "liquibase",
+    "liquibase-db"
+   ],
    "monogram": "LIQ",
    "brandColor": "#2962FF",
    "svg": "icons/animated/liquibase.svg",
@@ -3580,6 +4726,11 @@
    "subcategory": "Web Components",
    "role": "Simple Fast Standard Web Components Library",
    "docsUrl": "https://lit.dev/",
+   "aliases": [
+    "lit",
+    "lit-element",
+    "lit-html"
+   ],
    "monogram": "LIT",
    "brandColor": "#324FFF",
    "svg": "icons/animated/lit.svg",
@@ -3594,6 +4745,9 @@
    "subcategory": "Compilers & Toolchains",
    "role": "Modular and Reusable Compiler and Toolchain Technologies",
    "docsUrl": "https://llvm.org/",
+   "aliases": [
+    "llvm"
+   ],
    "monogram": "LLV",
    "brandColor": "#262D3A",
    "svg": "icons/animated/llvm.svg",
@@ -3608,6 +4762,10 @@
    "subcategory": "Observability & Security",
    "role": "Server-Side Data Processing Pipeline for Logs & Events",
    "docsUrl": "https://www.elastic.co/logstash",
+   "aliases": [
+    "logstash",
+    "beats"
+   ],
    "monogram": "LOG",
    "brandColor": "#005571",
    "svg": "icons/animated/logstash.svg",
@@ -3622,6 +4780,10 @@
    "subcategory": "Web Frameworks",
    "role": "Highly Extensible Node.js and TypeScript API Framework",
    "docsUrl": "https://loopback.io/resources",
+   "aliases": [
+    "loopback",
+    "loopback4"
+   ],
    "monogram": "LOO",
    "brandColor": "#3F5DFF",
    "svg": "icons/animated/loopback.svg",
@@ -3636,6 +4798,10 @@
    "subcategory": "Protocols & Connectivity",
    "role": "Long-Range Low-Power Wide-Area Network Modulation & Protocol",
    "docsUrl": "https://lora-alliance.org/",
+   "aliases": [
+    "lorawan",
+    "lora"
+   ],
    "monogram": "LOR",
    "brandColor": "#009FE3",
    "svg": "icons/animated/lorawan.svg",
@@ -3650,6 +4816,10 @@
    "subcategory": "Scripting & Embedded",
    "role": "Lightweight Embeddable Scripting Language",
    "docsUrl": "https://www.lua.org/images/",
+   "aliases": [
+    "lua",
+    "luajit"
+   ],
    "monogram": "LUA",
    "brandColor": "#000080",
    "svg": "icons/animated/lua.svg",
@@ -3664,6 +4834,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Full-Featured React Components & Hooks Library",
    "docsUrl": "https://mantine.dev/",
+   "aliases": [
+    "mantine",
+    "mantine-ui"
+   ],
    "monogram": "MAN",
    "brandColor": "#339AF0",
    "svg": "icons/animated/mantine.svg",
@@ -3678,6 +4852,10 @@
    "subcategory": "Relational SQL",
    "role": "Community-Developed Fork of MySQL Relational DBMS",
    "docsUrl": "https://mariadb.org/",
+   "aliases": [
+    "mariadb",
+    "mariadb-server"
+   ],
    "monogram": "MAR",
    "brandColor": "#003545",
    "svg": "icons/animated/mariadb.svg",
@@ -3692,6 +4870,11 @@
    "subcategory": "Markup & Docs",
    "role": "Lightweight Plain-Text Formatting Syntax",
    "docsUrl": "https://daringfireball.net/projects/markdown/",
+   "aliases": [
+    "markdown",
+    "md",
+    "commonmark"
+   ],
    "monogram": "MAR",
    "brandColor": "#000000",
    "svg": "icons/animated/markdown.svg",
@@ -3706,6 +4889,10 @@
    "subcategory": "UI Frameworks",
    "role": "Declarative HTML-Based Streaming UI Language by eBay",
    "docsUrl": "https://markojs.com/",
+   "aliases": [
+    "marko",
+    "markojs"
+   ],
    "monogram": "MAR",
    "brandColor": "#2596BE",
    "svg": "icons/animated/marko.svg",
@@ -3720,6 +4907,10 @@
    "subcategory": "Protocols & Connectivity",
    "role": "Unified IP-Based Smart Home Interoperability Standard",
    "docsUrl": "https://csa-iot.org/all-solutions/matter/",
+   "aliases": [
+    "matter",
+    "csa-matter"
+   ],
    "monogram": "MAT",
    "brandColor": "#000000",
    "svg": "icons/animated/matter.svg",
@@ -3734,6 +4925,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Markdown for the Component Era (JSX inside Markdown)",
    "docsUrl": "https://mdxjs.com/",
+   "aliases": [
+    "mdx",
+    "mdxjs"
+   ],
    "monogram": "MDX",
    "brandColor": "#1B1F24",
    "svg": "icons/animated/mdx.svg",
@@ -3748,6 +4943,10 @@
    "subcategory": "Search & Vector",
    "role": "Lightning-Fast Instant Full-Text & Hybrid Vector Search",
    "docsUrl": "https://www.meilisearch.com",
+   "aliases": [
+    "meilisearch",
+    "meili"
+   ],
    "monogram": "MEI",
    "brandColor": "#FF5CAA",
    "svg": "icons/animated/meilisearch.svg",
@@ -3762,6 +4961,10 @@
    "subcategory": "Version Control & Forges",
    "role": "Distributed Source Control Management Tool",
    "docsUrl": "https://www.mercurial-scm.org/",
+   "aliases": [
+    "mercurial",
+    "hg"
+   ],
    "monogram": "MER",
    "brandColor": "#999999",
    "svg": "icons/animated/mercurial.svg",
@@ -3776,6 +4979,10 @@
    "subcategory": "LLM & Foundation Models",
    "role": "Parent Company of Llama and React",
    "docsUrl": "https://www.meta.com",
+   "aliases": [
+    "meta",
+    "meta platforms"
+   ],
    "monogram": "MET",
    "brandColor": "#0467DF",
    "svg": "icons/animated/meta.svg",
@@ -3790,6 +4997,10 @@
    "subcategory": "Visualization & Dashboards",
    "role": "Open-Source Business Intelligence & Embedded Analytics",
    "docsUrl": "https://www.metabase.com",
+   "aliases": [
+    "metabase",
+    "bi"
+   ],
    "monogram": "MET",
    "brandColor": "#509EE3",
    "svg": "icons/animated/metabase.svg",
@@ -3804,6 +5015,10 @@
    "subcategory": "Web Frameworks",
    "role": "Full-Stack Isomorphic JavaScript App Platform",
    "docsUrl": "https://www.meteor.com/",
+   "aliases": [
+    "meteor",
+    "meteorjs"
+   ],
    "monogram": "MET",
    "brandColor": "#DE4F4F",
    "svg": "icons/animated/meteor.svg",
@@ -3818,6 +5033,12 @@
    "subcategory": "Silicon & Architectures",
    "role": "PIC, AVR, SAM Microcontrollers & MPLAB X Ecosystem",
    "docsUrl": "https://www.microchip.com/",
+   "aliases": [
+    "microchip",
+    "pic32",
+    "attiny",
+    "atmega"
+   ],
    "monogram": "MIC",
    "brandColor": "#ED2724",
    "svg": "icons/animated/microchip.svg",
@@ -3832,6 +5053,10 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Lean Efficient Python 3 Implementation for Microcontrollers",
    "docsUrl": "https://micropython.org/",
+   "aliases": [
+    "micropython",
+    "mpy"
+   ],
    "monogram": "MIC",
    "brandColor": "#2B2728",
    "svg": "icons/animated/micropython.svg",
@@ -3846,6 +5071,12 @@
    "subcategory": "Relational SQL",
    "role": "Enterprise Relational Database Management System",
    "docsUrl": "https://github.com/devicons/devicon/tree/master/icons/microsoftsqlserver",
+   "aliases": [
+    "microsoftsqlserver",
+    "microsoft sql server",
+    "sqlserver",
+    "tsql"
+   ],
    "monogram": "SQL",
    "brandColor": "#EE352C",
    "svg": "icons/animated/microsoftsqlserver.svg",
@@ -3860,6 +5091,10 @@
    "subcategory": "Graph & Vector",
    "role": "Cloud-Native Vector Database for Billion-Scale Embeddings",
    "docsUrl": "https://milvus.io/",
+   "aliases": [
+    "milvus",
+    "zilliz"
+   ],
    "monogram": "MIL",
    "brandColor": "#00A1EA",
    "svg": "icons/animated/milvus.svg",
@@ -3874,6 +5109,12 @@
    "subcategory": "LLM & Foundation Models",
    "role": "Open-Weight & Frontier European Language Models",
    "docsUrl": "https://chat.mistral.ai",
+   "aliases": [
+    "mistralai",
+    "mistral ai",
+    "mistral",
+    "mixtral"
+   ],
    "monogram": "MIS",
    "brandColor": "#FA520F",
    "svg": "icons/animated/mistralai.svg",
@@ -3888,6 +5129,11 @@
    "subcategory": "Docs & Project Management",
    "role": "Project Documentation with Markdown & Material for MkDocs",
    "docsUrl": "https://squidfunk.github.io/mkdocs-material/",
+   "aliases": [
+    "mkdocs",
+    "materialformkdocs",
+    "mkdocs-material"
+   ],
    "monogram": "MKD",
    "brandColor": "#526CFE",
    "svg": "icons/animated/mkdocs.svg",
@@ -3902,6 +5148,10 @@
    "subcategory": "MLOps & Experiment Tracking",
    "role": "Open-Source Platform for the Machine Learning Lifecycle",
    "docsUrl": "https://mlflow.org/",
+   "aliases": [
+    "mlflow",
+    "mlops"
+   ],
    "monogram": "MLF",
    "brandColor": "#0194E2",
    "svg": "icons/animated/mlflow.svg",
@@ -3916,6 +5166,10 @@
    "subcategory": "State & Data",
    "role": "Simple Scalable Reactive State Management",
    "docsUrl": "https://mobx.js.org/",
+   "aliases": [
+    "mobx",
+    "mobx-state-tree"
+   ],
    "monogram": "MOB",
    "brandColor": "#FF9955",
    "svg": "icons/animated/mobx.svg",
@@ -3930,6 +5184,10 @@
    "subcategory": "Testing & QA",
    "role": "Feature-Rich JavaScript Test Framework on Node & Browser",
    "docsUrl": "https://mochajs.org",
+   "aliases": [
+    "mocha",
+    "mochajs"
+   ],
    "monogram": "MOC",
    "brandColor": "#8D6748",
    "svg": "icons/animated/mocha.svg",
@@ -3944,6 +5202,11 @@
    "subcategory": "Document & NoSQL",
    "role": "Distributed Document-Oriented NoSQL Database",
    "docsUrl": "https://www.mongodb.com/",
+   "aliases": [
+    "mongodb",
+    "mongo",
+    "atlas"
+   ],
    "monogram": "MON",
    "brandColor": "#47A248",
    "svg": "icons/animated/mongodb.svg",
@@ -3958,6 +5221,10 @@
    "subcategory": "ORMs & Data Access",
    "role": "Elegant MongoDB Object Modeling for Node.js",
    "docsUrl": "https://mongoosejs.com/",
+   "aliases": [
+    "mongoose",
+    "mongoosejs"
+   ],
    "monogram": "MON",
    "brandColor": "#880000",
    "svg": "icons/animated/mongoose.svg",
@@ -3972,6 +5239,11 @@
    "subcategory": "Protocols & Connectivity",
    "role": "Lightweight Publish-Subscribe IoT Messaging Protocol (OASIS)",
    "docsUrl": "https://mqtt.org",
+   "aliases": [
+    "mqtt",
+    "mosquitto",
+    "emqx"
+   ],
    "monogram": "MQT",
    "brandColor": "#660066",
    "svg": "icons/animated/mqtt.svg",
@@ -3986,6 +5258,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Comprehensive React Material Design Component Suite",
    "docsUrl": "https://mui.com/",
+   "aliases": [
+    "mui",
+    "material-ui"
+   ],
    "monogram": "MUI",
    "brandColor": "#007FFF",
    "svg": "icons/animated/mui.svg",
@@ -4000,6 +5276,10 @@
    "subcategory": "Relational SQL",
    "role": "Widely Deployed Open-Source Relational Database",
    "docsUrl": "https://www.mysql.com/",
+   "aliases": [
+    "mysql",
+    "innodb"
+   ],
    "monogram": "MYS",
    "brandColor": "#4479A1",
    "svg": "icons/animated/mysql.svg",
@@ -4014,6 +5294,10 @@
    "subcategory": "Cross-Platform & Mobile",
    "role": "Empower JavaScript with Native Platform APIs",
    "docsUrl": "https://docs.nativescript.org",
+   "aliases": [
+    "nativescript",
+    "ns"
+   ],
    "monogram": "NAT",
    "brandColor": "#65ADF1",
    "svg": "icons/animated/nativescript.svg",
@@ -4028,6 +5312,11 @@
    "subcategory": "Messaging & Streaming",
    "role": "High-Performance Cloud-Native Messaging System",
    "docsUrl": "https://nats.io/",
+   "aliases": [
+    "natsdotio",
+    "nats",
+    "jetstream"
+   ],
    "monogram": "NAT",
    "brandColor": "#27AAE1",
    "svg": "icons/animated/natsdotio.svg",
@@ -4042,6 +5331,11 @@
    "subcategory": "Graph & Vector",
    "role": "Native Graph Database & Cypher Query Platform",
    "docsUrl": "https://neo4j.com/",
+   "aliases": [
+    "neo4j",
+    "cypher",
+    "graphdb"
+   ],
    "monogram": "NEO",
    "brandColor": "#4581C3",
    "svg": "icons/animated/neo4j.svg",
@@ -4056,6 +5350,11 @@
    "subcategory": "Cloud Postgres & BaaS",
    "role": "Serverless Branchable PostgreSQL with Scale-to-Zero",
    "docsUrl": "https://neon.com/",
+   "aliases": [
+    "neon",
+    "neon-tech",
+    "neondb"
+   ],
    "monogram": "NEO",
    "brandColor": "#34D59A",
    "svg": "icons/animated/neon.svg",
@@ -4070,6 +5369,11 @@
    "subcategory": "Editors & IDEs",
    "role": "Hyperextensible Lua-Configured Vim-Based Modal Text Editor",
    "docsUrl": "https://neovim.io",
+   "aliases": [
+    "neovim",
+    "nvim",
+    "lazyvim"
+   ],
    "monogram": "NEO",
    "brandColor": "#57A143",
    "svg": "icons/animated/neovim.svg",
@@ -4084,6 +5388,10 @@
    "subcategory": "Web Frameworks",
    "role": "Progressive Enterprise Node.js TypeScript Framework",
    "docsUrl": "https://nestjs.com",
+   "aliases": [
+    "nestjs",
+    "nest"
+   ],
    "monogram": "NES",
    "brandColor": "#E0234E",
    "svg": "icons/animated/nestjs.svg",
@@ -4098,6 +5406,10 @@
    "subcategory": "Cloud & Edge Network",
    "role": "Composable Web Platform & Edge Deployment Workflow",
    "docsUrl": "https://www.netlify.com/",
+   "aliases": [
+    "netlify",
+    "jamstack"
+   ],
    "monogram": "NET",
    "brandColor": "#00C7B7",
    "svg": "icons/animated/netlify.svg",
@@ -4112,6 +5424,11 @@
    "subcategory": "Observability & Security",
    "role": "Full-Stack Observability & Application Telemetry Platform",
    "docsUrl": "https://newrelic.com/",
+   "aliases": [
+    "newrelic",
+    "new relic",
+    "nrql"
+   ],
    "monogram": "NEW",
    "brandColor": "#1CE783",
    "svg": "icons/animated/newrelic.svg",
@@ -4126,6 +5443,12 @@
    "subcategory": "Meta-Frameworks",
    "role": "Full-Stack React Framework for Production",
    "docsUrl": "https://nextjs.org/",
+   "aliases": [
+    "nextdotjs",
+    "next.js",
+    "nextjs",
+    "next"
+   ],
    "monogram": "NEX",
    "brandColor": "#000000",
    "svg": "icons/animated/nextdotjs.svg",
@@ -4140,6 +5463,10 @@
    "subcategory": "Web Servers & Proxies",
    "role": "High-Performance HTTP Server & Reverse Proxy",
    "docsUrl": "https://nginx.org/",
+   "aliases": [
+    "nginx",
+    "openresty"
+   ],
    "monogram": "NGI",
    "brandColor": "#009639",
    "svg": "icons/animated/nginx.svg",
@@ -4154,6 +5481,10 @@
    "subcategory": "Systems & Compiled",
    "role": "Efficient Expressive Systems Language",
    "docsUrl": "https://nim-lang.org",
+   "aliases": [
+    "nim",
+    "nimlang"
+   ],
    "monogram": "NIM",
    "brandColor": "#FFE953",
    "svg": "icons/animated/nim.svg",
@@ -4168,6 +5499,9 @@
    "subcategory": "Infrastructure as Code",
    "role": "Reproducible Declarative Package Manager & Linux OS",
    "docsUrl": "https://nixos.org/",
+   "aliases": [
+    "nixos"
+   ],
    "monogram": "NIX",
    "brandColor": "#5277C3",
    "svg": "icons/animated/nixos.svg",
@@ -4182,6 +5516,13 @@
    "subcategory": "Runtimes & Servers",
    "role": "Asynchronous Event-Driven JavaScript Runtime",
    "docsUrl": "https://nodejs.org/",
+   "aliases": [
+    "nodedotjs",
+    "node.js",
+    "node",
+    "nodejs",
+    "v8"
+   ],
    "monogram": "NOD",
    "brandColor": "#5FA04E",
    "svg": "icons/animated/nodedotjs.svg",
@@ -4196,6 +5537,11 @@
    "subcategory": "IoT & Smart Automation",
    "role": "Low-Code Flow-Based Programming for Event-Driven IoT Hardware",
    "docsUrl": "https://nodered.org/about/resources/",
+   "aliases": [
+    "nodered",
+    "node-red",
+    "nodered-iot"
+   ],
    "monogram": "NOD",
    "brandColor": "#8F0000",
    "svg": "icons/animated/nodered.svg",
@@ -4210,6 +5556,11 @@
    "subcategory": "Containers & Orchestration",
    "role": "Simple Flexible Workload Orchestrator for Containers & Binaries",
    "docsUrl": "https://developer.hashicorp.com/nomad",
+   "aliases": [
+    "nomad",
+    "hashicorp nomad",
+    "hashicorp-nomad"
+   ],
    "monogram": "NOM",
    "brandColor": "#00CA8E",
    "svg": "icons/animated/nomad.svg",
@@ -4224,6 +5575,10 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "Ultra-Low-Power Wireless nRF52/nRF53/nRF91 BLE & Cellular SoCs",
    "docsUrl": "https://www.nordicsemi.com",
+   "aliases": [
+    "nordicsemiconductor",
+    "nordic semiconductor"
+   ],
    "monogram": "NOR",
    "brandColor": "#00A9CE",
    "svg": "icons/animated/nordicsemiconductor.svg",
@@ -4238,6 +5593,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Connected Workspace for Engineering Wikis, Specs & Projects",
    "docsUrl": "https://www.notion.so",
+   "aliases": [
+    "notion",
+    "notion-api"
+   ],
    "monogram": "NOT",
    "brandColor": "#000000",
    "svg": "icons/animated/notion.svg",
@@ -4252,6 +5611,11 @@
    "subcategory": "Package & Build Managers",
    "role": "Default Node.js Package Manager & Software Registry",
    "docsUrl": "https://www.npmjs.com",
+   "aliases": [
+    "npm",
+    "npmjs",
+    "npx"
+   ],
    "monogram": "NPM",
    "brandColor": "#CB3837",
    "svg": "icons/animated/npm.svg",
@@ -4266,6 +5630,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Essential Package Manager for .NET Development",
    "docsUrl": "https://www.nuget.org/",
+   "aliases": [
+    "nuget",
+    "nuget-org"
+   ],
    "monogram": "NUG",
    "brandColor": "#004880",
    "svg": "icons/animated/nuget.svg",
@@ -4280,6 +5648,11 @@
    "subcategory": "Data Science & Arrays",
    "role": "Fundamental N-Dimensional Array Package for Scientific Python",
    "docsUrl": "https://numpy.org/",
+   "aliases": [
+    "numpy",
+    "np",
+    "ndarray"
+   ],
    "monogram": "NUM",
    "brandColor": "#013243",
    "svg": "icons/animated/numpy.svg",
@@ -4294,6 +5667,11 @@
    "subcategory": "Meta-Frameworks",
    "role": "Intuitive Full-Stack Vue Framework",
    "docsUrl": "https://nuxt.com/",
+   "aliases": [
+    "nuxt",
+    "nuxtjs",
+    "nuxt3"
+   ],
    "monogram": "NUX",
    "brandColor": "#00DC82",
    "svg": "icons/animated/nuxt.svg",
@@ -4308,6 +5686,10 @@
    "subcategory": "GPU & AI Acceleration",
    "role": "Parallel Computing Platform & Tensor Core Acceleration",
    "docsUrl": "https://www.nvidia.com/en-us",
+   "aliases": [
+    "nvidia",
+    "cuda"
+   ],
    "monogram": "NVI",
    "brandColor": "#76B900",
    "svg": "icons/animated/nvidia.svg",
@@ -4322,6 +5704,12 @@
    "subcategory": "Silicon & Architectures",
    "role": "i.MX Application Processors, S32 Automotive & LPC MCUs",
    "docsUrl": "https://www.nxp.com/",
+   "aliases": [
+    "nxp",
+    "nxp semiconductors",
+    "imx",
+    "teensy-nxp"
+   ],
    "monogram": "NXP",
    "brandColor": "#000000",
    "svg": "icons/animated/nxp.svg",
@@ -4336,6 +5724,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Private Flexible Local-First Markdown Knowledge Base",
    "docsUrl": "https://obsidian.md",
+   "aliases": [
+    "obsidian",
+    "obsidian-md"
+   ],
    "monogram": "OBS",
    "brandColor": "#7C3AED",
    "svg": "icons/animated/obsidian.svg",
@@ -4350,6 +5742,10 @@
    "subcategory": "Functional & Systems",
    "role": "Industrial-Strength Functional Programming",
    "docsUrl": "https://ocaml.org/",
+   "aliases": [
+    "ocaml",
+    "ml"
+   ],
    "monogram": "OCA",
    "brandColor": "#EC6813",
    "svg": "icons/animated/ocaml.svg",
@@ -4364,6 +5760,10 @@
    "subcategory": "Local LLM Inference",
    "role": "Run Llama, Mistral, and DeepSeek Models Locally",
    "docsUrl": "https://ollama.com/",
+   "aliases": [
+    "ollama",
+    "local-llm"
+   ],
    "monogram": "OLL",
    "brandColor": "#000000",
    "svg": "icons/animated/ollama.svg",
@@ -4378,6 +5778,10 @@
    "subcategory": "Model Compilers & Runtime",
    "role": "Open Neural Network Exchange Interoperability Standard",
    "docsUrl": "https://onnx.ai/",
+   "aliases": [
+    "onnx",
+    "onnxruntime"
+   ],
    "monogram": "ONN",
    "brandColor": "#005CED",
    "svg": "icons/animated/onnx.svg",
@@ -4392,6 +5796,11 @@
    "subcategory": "LLM & Foundation Models",
    "role": "Frontier GPT & Reasoning Model API Platform",
    "docsUrl": "https://openai.com/",
+   "aliases": [
+    "openai",
+    "gpt4",
+    "o1"
+   ],
    "monogram": "OPE",
    "brandColor": "#10A37F",
    "svg": "icons/animated/openai.svg",
@@ -4406,6 +5815,12 @@
    "subcategory": "APIs & Protocols",
    "role": "Standard Language-Agnostic HTTP API Specification",
    "docsUrl": "https://www.openapis.org",
+   "aliases": [
+    "openapiinitiative",
+    "openapi",
+    "oas",
+    "openapi3"
+   ],
    "monogram": "OPE",
    "brandColor": "#6BA539",
    "svg": "icons/animated/openapiinitiative.svg",
@@ -4420,6 +5835,10 @@
    "subcategory": "Computer Vision",
    "role": "Open-Source Real-Time Computer Vision Library",
    "docsUrl": "https://opencv.org/",
+   "aliases": [
+    "opencv",
+    "cv2"
+   ],
    "monogram": "OPE",
    "brandColor": "#5C3EE8",
    "svg": "icons/animated/opencv.svg",
@@ -4434,6 +5853,11 @@
    "subcategory": "Graphics & Shaders",
    "role": "OpenGL Shading Language for GPU Pipelines",
    "docsUrl": "https://www.opengl.org/",
+   "aliases": [
+    "opengl",
+    "glsl",
+    "shaders"
+   ],
    "monogram": "OPE",
    "brandColor": "#5586A4",
    "svg": "icons/animated/opengl.svg",
@@ -4448,6 +5872,10 @@
    "subcategory": "Search & Analytics",
    "role": "Community-Driven Distributed Search & Analytics Suite",
    "docsUrl": "https://opensearch.org/",
+   "aliases": [
+    "opensearch",
+    "aws-opensearch"
+   ],
    "monogram": "OPE",
    "brandColor": "#005EB8",
    "svg": "icons/animated/opensearch.svg",
@@ -4462,6 +5890,12 @@
    "subcategory": "Containers & Orchestration",
    "role": "Enterprise Kubernetes Container Platform",
    "docsUrl": "https://www.openshift.com",
+   "aliases": [
+    "openshift",
+    "redhatopenshift",
+    "red hat openshift",
+    "okd"
+   ],
    "monogram": "OPE",
    "brandColor": "#EE0000",
    "svg": "icons/animated/openshift.svg",
@@ -4476,6 +5910,10 @@
    "subcategory": "Observability & Security",
    "role": "Cloud-Native Vendor-Neutral Traces, Metrics & Logs Standard",
    "docsUrl": "https://opentelemetry.io/",
+   "aliases": [
+    "opentelemetry",
+    "otel"
+   ],
    "monogram": "OPE",
    "brandColor": "#000000",
    "svg": "icons/animated/opentelemetry.svg",
@@ -4490,6 +5928,10 @@
    "subcategory": "Infrastructure as Code",
    "role": "Linux Foundation Open-Source Drop-In Terraform Alternative",
    "docsUrl": "https://opentofu.org/",
+   "aliases": [
+    "opentofu",
+    "tofu"
+   ],
    "monogram": "OPE",
    "brandColor": "#FFDA18",
    "svg": "icons/animated/opentofu.svg",
@@ -4504,6 +5946,10 @@
    "subcategory": "Model Compilers & Runtime",
    "role": "Deep Learning Inference Optimization Toolkit",
    "docsUrl": "https://github.com/openvinotoolkit/openvino",
+   "aliases": [
+    "openvino",
+    "intel-openvino"
+   ],
    "monogram": "OPE",
    "brandColor": "#6C24F0",
    "svg": "icons/animated/openvino.svg",
@@ -4518,6 +5964,10 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Linux Operating System Targeting Embedded Networking Routers",
    "docsUrl": "https://openwrt.org/",
+   "aliases": [
+    "openwrt",
+    "luci"
+   ],
    "monogram": "OPE",
    "brandColor": "#00B5E2",
    "svg": "icons/animated/openwrt.svg",
@@ -4532,6 +5982,11 @@
    "subcategory": "Relational SQL",
    "role": "Multi-Model Enterprise Relational Database Management System",
    "docsUrl": "https://www.oracle.com/database/",
+   "aliases": [
+    "oracle",
+    "oracle database",
+    "plsql"
+   ],
    "monogram": "ORA",
    "brandColor": "#C74634",
    "svg": "icons/animated/oracle.svg",
@@ -4546,6 +6001,10 @@
    "subcategory": "Cloud Providers",
    "role": "European Bare-Metal, Hosted Private Cloud & Public Cloud",
    "docsUrl": "https://www.ovhcloud.com/",
+   "aliases": [
+    "ovh",
+    "ovhcloud"
+   ],
    "monogram": "OVH",
    "brandColor": "#123F6D",
    "svg": "icons/animated/ovh.svg",
@@ -4560,6 +6019,11 @@
    "subcategory": "Observability & Security",
    "role": "Open Worldwide Application Security Project & ZAP Scanner",
    "docsUrl": "https://owasp.org/",
+   "aliases": [
+    "owasp",
+    "owasp-top-10",
+    "zap"
+   ],
    "monogram": "OWA",
    "brandColor": "#000000",
    "svg": "icons/animated/owasp.svg",
@@ -4574,6 +6038,11 @@
    "subcategory": "Creative Coding",
    "role": "Creative Coding Library for Visual Arts",
    "docsUrl": "https://p5js.org",
+   "aliases": [
+    "p5dotjs",
+    "p5.js",
+    "p5js"
+   ],
    "monogram": "P5J",
    "brandColor": "#ED225D",
    "svg": "icons/animated/p5dotjs.svg",
@@ -4588,6 +6057,11 @@
    "subcategory": "Virtualization & Cloud",
    "role": "Automated Identical Machine Image Builder Across Clouds",
    "docsUrl": "https://developer.hashicorp.com/packer",
+   "aliases": [
+    "packer",
+    "hashicorp packer",
+    "hashicorp-packer"
+   ],
    "monogram": "PAC",
    "brandColor": "#02A8EF",
    "svg": "icons/animated/packer.svg",
@@ -4602,6 +6076,10 @@
    "subcategory": "Observability & Security",
    "role": "Incident Response, On-Call Scheduling & Event Intelligence",
    "docsUrl": "https://www.pagerduty.com/",
+   "aliases": [
+    "pagerduty",
+    "oncall"
+   ],
    "monogram": "PAG",
    "brandColor": "#06AC38",
    "svg": "icons/animated/pagerduty.svg",
@@ -4616,6 +6094,11 @@
    "subcategory": "Data Science & Arrays",
    "role": "Fast Flexible Data Structures & DataFrame Analysis",
    "docsUrl": "https://pandas.pydata.org/about/citing.html",
+   "aliases": [
+    "pandas",
+    "pd",
+    "dataframe"
+   ],
    "monogram": "PAN",
    "brandColor": "#150458",
    "svg": "icons/animated/pandas.svg",
@@ -4630,6 +6113,11 @@
    "subcategory": "Auth & Identity",
    "role": "Simple Unobtrusive Authentication Middleware for Node.js",
    "docsUrl": "https://www.passportjs.org",
+   "aliases": [
+    "passport",
+    "passport.js",
+    "passportjs"
+   ],
    "monogram": "PAS",
    "brandColor": "#34E27A",
    "svg": "icons/animated/passport.svg",
@@ -4644,6 +6132,11 @@
    "subcategory": "Headless CMS & BaaS",
    "role": "Next.js Native Code-First Headless CMS & App Framework",
    "docsUrl": "https://payloadcms.com",
+   "aliases": [
+    "payloadcms",
+    "payload cms",
+    "payload"
+   ],
    "monogram": "PAY",
    "brandColor": "#000000",
    "svg": "icons/animated/payloadcms.svg",
@@ -4658,6 +6151,11 @@
    "subcategory": "Version Control & Forges",
    "role": "Version Control for Large-Scale Game Assets & Silicon Repos",
    "docsUrl": "https://www.perforce.com/products/helix-core",
+   "aliases": [
+    "perforce",
+    "perforce helix core",
+    "p4v"
+   ],
    "monogram": "HEL",
    "brandColor": "#4C00FF",
    "svg": "icons/animated/perforce.svg",
@@ -4672,6 +6170,10 @@
    "subcategory": "Scripting & Text",
    "role": "Text Processing & System Administration Language",
    "docsUrl": "https://www.perl.org/",
+   "aliases": [
+    "perl",
+    "pl"
+   ],
    "monogram": "PER",
    "brandColor": "#0073A1",
    "svg": "icons/animated/perl.svg",
@@ -4686,6 +6188,11 @@
    "subcategory": "LLM & Foundation Models",
    "role": "Real-Time Search-Grounded LLM API",
    "docsUrl": "https://www.perplexity.ai",
+   "aliases": [
+    "perplexity",
+    "pplx",
+    "sonar"
+   ],
    "monogram": "PER",
    "brandColor": "#1FB8CD",
    "svg": "icons/animated/perplexity.svg",
@@ -4700,6 +6207,11 @@
    "subcategory": "Web Frameworks",
    "role": "Real-Time Fault-Tolerant Elixir Web Framework",
    "docsUrl": "https://www.phoenixframework.org/",
+   "aliases": [
+    "phoenixframework",
+    "phoenix",
+    "liveview"
+   ],
    "monogram": "PHO",
    "brandColor": "#FD4F00",
    "svg": "icons/animated/phoenixframework.svg",
@@ -4714,6 +6226,10 @@
    "subcategory": "Web & Application",
    "role": "Server-Side Web Scripting Language",
    "docsUrl": "https://www.php.net/",
+   "aliases": [
+    "php",
+    "php8"
+   ],
    "monogram": "PHP",
    "brandColor": "#777BB4",
    "svg": "icons/animated/php.svg",
@@ -4728,6 +6244,10 @@
    "subcategory": "Editors & IDEs",
    "role": "JetBrains Lightning-Smart IDE for PHP, Laravel & Symfony",
    "docsUrl": "https://www.jetbrains.com/phpstorm/",
+   "aliases": [
+    "phpstorm",
+    "jetbrains-phpstorm"
+   ],
    "monogram": "PHP",
    "brandColor": "#000000",
    "svg": "icons/animated/phpstorm.svg",
@@ -4742,6 +6262,10 @@
    "subcategory": "State & Data",
    "role": "Intuitive Type-Safe Store for Vue.js",
    "docsUrl": "https://www.figma.com/design/0GQLuLctSsqYOVJZGEf7WR/Pinia-tests",
+   "aliases": [
+    "pinia",
+    "vuex"
+   ],
    "monogram": "PIN",
    "brandColor": "#FFD859",
    "svg": "icons/animated/pinia.svg",
@@ -4756,6 +6280,10 @@
    "subcategory": "Distributed NewSQL",
    "role": "Vitess-Powered Serverless MySQL & Postgres Platform",
    "docsUrl": "https://planetscale.com",
+   "aliases": [
+    "planetscale",
+    "vitess"
+   ],
    "monogram": "PLA",
    "brandColor": "#000000",
    "svg": "icons/animated/planetscale.svg",
@@ -4770,6 +6298,10 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Collaborative Cross-Platform Embedded Build System & IDE",
    "docsUrl": "https://piolabs.com",
+   "aliases": [
+    "platformio",
+    "pio"
+   ],
    "monogram": "PLA",
    "brandColor": "#F5822A",
    "svg": "icons/animated/platformio.svg",
@@ -4784,6 +6316,11 @@
    "subcategory": "Testing & QA",
    "role": "Reliable End-to-End Cross-Browser Automation",
    "docsUrl": "https://playwright.dev/",
+   "aliases": [
+    "playwright",
+    "pw",
+    "e2e"
+   ],
    "monogram": "PLA",
    "brandColor": "#2EAD33",
    "svg": "icons/animated/playwright.svg",
@@ -4798,6 +6335,10 @@
    "subcategory": "Visualization & Dashboards",
    "role": "Interactive Scientific Graphing & Dash Analytics",
    "docsUrl": "https://plotly.com/",
+   "aliases": [
+    "plotly",
+    "dash"
+   ],
    "monogram": "PLO",
    "brandColor": "#7A76FF",
    "svg": "icons/animated/plotly.svg",
@@ -4812,6 +6353,10 @@
    "subcategory": "Runtimes & Servers",
    "role": "Production Process Manager for Node.js with Load Balancer",
    "docsUrl": "https://pm2.keymetrics.io",
+   "aliases": [
+    "pm2",
+    "pm2-runtime"
+   ],
    "monogram": "PM2",
    "brandColor": "#2B037A",
    "svg": "icons/animated/pm2.svg",
@@ -4826,6 +6371,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Fast Disk-Space Efficient Content-Addressable Package Manager",
    "docsUrl": "https://pnpm.io/",
+   "aliases": [
+    "pnpm",
+    "pnpm-workspace"
+   ],
    "monogram": "PNP",
    "brandColor": "#F69220",
    "svg": "icons/animated/pnpm.svg",
@@ -4840,6 +6389,10 @@
    "subcategory": "Edge & Embedded SQL",
    "role": "Open-Source Go Backend in 1 File with Embedded SQLite",
    "docsUrl": "https://pocketbase.io/",
+   "aliases": [
+    "pocketbase",
+    "pb"
+   ],
    "monogram": "POC",
    "brandColor": "#B8DBE4",
    "svg": "icons/animated/pocketbase.svg",
@@ -4854,6 +6407,10 @@
    "subcategory": "Containers & Runtime",
    "role": "Daemonless Rootless OCI Container Engine",
    "docsUrl": "https://podman.io",
+   "aliases": [
+    "podman",
+    "podman-desktop"
+   ],
    "monogram": "POD",
    "brandColor": "#892CA0",
    "svg": "icons/animated/podman.svg",
@@ -4868,6 +6425,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Python Packaging and Dependency Management Made Easy",
    "docsUrl": "https://python-poetry.org",
+   "aliases": [
+    "poetry",
+    "pyproject"
+   ],
    "monogram": "POE",
    "brandColor": "#60A5FA",
    "svg": "icons/animated/poetry.svg",
@@ -4882,6 +6443,10 @@
    "subcategory": "Data Science & Arrays",
    "role": "Blazingly Fast Rust-Powered DataFrame Library",
    "docsUrl": "https://pola.rs",
+   "aliases": [
+    "polars",
+    "py-polars"
+   ],
    "monogram": "POL",
    "brandColor": "#0075FF",
    "svg": "icons/animated/polars.svg",
@@ -4896,6 +6461,10 @@
    "subcategory": "Web Components",
    "role": "Web Components Library & Standards Pioneer",
    "docsUrl": "https://www.polymer-project.org/",
+   "aliases": [
+    "polymerproject",
+    "polymer"
+   ],
    "monogram": "POL",
    "brandColor": "#FF4470",
    "svg": "icons/animated/polymerproject.svg",
@@ -4910,6 +6479,10 @@
    "subcategory": "Containers & Orchestration",
    "role": "Universal Container Management UI for Docker & Kubernetes",
    "docsUrl": "https://www.portainer.io",
+   "aliases": [
+    "portainer",
+    "portainer-io"
+   ],
    "monogram": "POR",
    "brandColor": "#13BEF9",
    "svg": "icons/animated/portainer.svg",
@@ -4924,6 +6497,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Tool for Transforming CSS with JavaScript Plugins",
    "docsUrl": "https://postcss.org",
+   "aliases": [
+    "postcss",
+    "autoprefixer"
+   ],
    "monogram": "POS",
    "brandColor": "#DD3A0A",
    "svg": "icons/animated/postcss.svg",
@@ -4938,6 +6515,12 @@
    "subcategory": "Relational SQL",
    "role": "World's Most Advanced Open-Source Relational Database",
    "docsUrl": "https://www.postgresql.org/",
+   "aliases": [
+    "postgresql",
+    "postgres",
+    "pg",
+    "pgvector"
+   ],
    "monogram": "POS",
    "brandColor": "#4169E1",
    "svg": "icons/animated/postgresql.svg",
@@ -4952,6 +6535,10 @@
    "subcategory": "API & Network Tools",
    "role": "API Platform for Building, Testing & Documenting HTTP/GraphQL",
    "docsUrl": "https://www.postman.com/",
+   "aliases": [
+    "postman",
+    "newman"
+   ],
    "monogram": "POS",
    "brandColor": "#FF6C37",
    "svg": "icons/animated/postman.svg",
@@ -4966,6 +6553,11 @@
    "subcategory": "Terminals & Shells",
    "role": "Cross-Platform Task Automation Shell & Scripting Framework",
    "docsUrl": "https://learn.microsoft.com/en-us/powershell/",
+   "aliases": [
+    "powershell",
+    "pwsh",
+    "ps1"
+   ],
    "monogram": "POW",
    "brandColor": "#5391FE",
    "svg": "icons/animated/powershell.svg",
@@ -4980,6 +6572,10 @@
    "subcategory": "UI Frameworks",
    "role": "Fast 3kB React Alternative with Same ES6 API",
    "docsUrl": "https://preactjs.com",
+   "aliases": [
+    "preact",
+    "preactjs"
+   ],
    "monogram": "PRE",
    "brandColor": "#673AB8",
    "svg": "icons/animated/preact.svg",
@@ -4994,6 +6590,10 @@
    "subcategory": "Data Engineering & Pipelines",
    "role": "Resilient Python Data Workflow & Pipeline Orchestration",
    "docsUrl": "https://www.prefect.io",
+   "aliases": [
+    "prefect",
+    "prefect-flows"
+   ],
    "monogram": "PRE",
    "brandColor": "#070E10",
    "svg": "icons/animated/prefect.svg",
@@ -5008,6 +6608,10 @@
    "subcategory": "Code Quality & Formatting",
    "role": "Opinionated Code Formatter for Web & Markdown Languages",
    "docsUrl": "https://prettier.io/",
+   "aliases": [
+    "prettier",
+    "prettierrc"
+   ],
    "monogram": "PRE",
    "brandColor": "#F7B93E",
    "svg": "icons/animated/prettier.svg",
@@ -5022,6 +6626,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Comprehensive UI Component Library for React",
    "docsUrl": "https://primereact.org/",
+   "aliases": [
+    "primereact",
+    "prime-react"
+   ],
    "monogram": "PRI",
    "brandColor": "#03C4E8",
    "svg": "icons/animated/primereact.svg",
@@ -5036,6 +6644,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Rich UI Component Suite for Vue.js",
    "docsUrl": "https://primevue.org/",
+   "aliases": [
+    "primevue",
+    "primefaces"
+   ],
    "monogram": "PRI",
    "brandColor": "#41B883",
    "svg": "icons/animated/primevue.svg",
@@ -5050,6 +6662,10 @@
    "subcategory": "ORMs & Data Access",
    "role": "Next-Generation Type-Safe Node.js and TypeScript ORM",
    "docsUrl": "https://www.prisma.io/",
+   "aliases": [
+    "prisma",
+    "prisma-orm"
+   ],
    "monogram": "PRI",
    "brandColor": "#2D3748",
    "svg": "icons/animated/prisma.svg",
@@ -5064,6 +6680,11 @@
    "subcategory": "Creative Coding",
    "role": "Flexible Software Sketchbook and Language for Visual Arts",
    "docsUrl": "https://processingfoundation.org",
+   "aliases": [
+    "processingfoundation",
+    "processing",
+    "pde"
+   ],
    "monogram": "PRO",
    "brandColor": "#006699",
    "svg": "icons/animated/processingfoundation.svg",
@@ -5078,6 +6699,10 @@
    "subcategory": "Observability & Security",
    "role": "Cloud-Native Monitoring System & Time-Series Alerting",
    "docsUrl": "https://prometheus.io",
+   "aliases": [
+    "prometheus",
+    "promql"
+   ],
    "monogram": "PRO",
    "brandColor": "#E6522C",
    "svg": "icons/animated/prometheus.svg",
@@ -5092,6 +6717,12 @@
    "subcategory": "Virtualization & Cloud",
    "role": "Open-Source Server Virtualization & LXC Container Management",
    "docsUrl": "https://www.proxmox.com/",
+   "aliases": [
+    "proxmox",
+    "proxmox ve",
+    "pve",
+    "kvm"
+   ],
    "monogram": "PRO",
    "brandColor": "#E57000",
    "svg": "icons/animated/proxmox.svg",
@@ -5106,6 +6737,10 @@
    "subcategory": "Infrastructure as Code",
    "role": "Infrastructure as Code in TypeScript, Python, Go & C#",
    "docsUrl": "https://www.pulumi.com",
+   "aliases": [
+    "pulumi",
+    "pulumi-iac"
+   ],
    "monogram": "PUL",
    "brandColor": "#8A3391",
    "svg": "icons/animated/pulumi.svg",
@@ -5120,6 +6755,10 @@
    "subcategory": "Infrastructure as Code",
    "role": "Declarative Model-Driven Configuration Management",
    "docsUrl": "https://www.puppet.com/",
+   "aliases": [
+    "puppet",
+    "puppetlabs"
+   ],
    "monogram": "PUP",
    "brandColor": "#FFAE1A",
    "svg": "icons/animated/puppet.svg",
@@ -5134,6 +6773,10 @@
    "subcategory": "Testing & QA",
    "role": "Headless Chrome / Chromium Node.js Automation API",
    "docsUrl": "https://pptr.dev",
+   "aliases": [
+    "puppeteer",
+    "pptr"
+   ],
    "monogram": "PUP",
    "brandColor": "#40B5A4",
    "svg": "icons/animated/puppeteer.svg",
@@ -5148,6 +6791,10 @@
    "subcategory": "Web & Functional",
    "role": "Strongly-Typed Functional Language Compiling to JS",
    "docsUrl": "https://www.purescript.org/",
+   "aliases": [
+    "purescript",
+    "purs"
+   ],
    "monogram": "PUR",
    "brandColor": "#14161A",
    "svg": "icons/animated/purescript.svg",
@@ -5162,6 +6809,10 @@
    "subcategory": "Robotics & Autonomy",
    "role": "Open-Source Flight Control Software for Drones & UAVs",
    "docsUrl": "https://px4.io/",
+   "aliases": [
+    "px4",
+    "px4 autopilot"
+   ],
    "monogram": "PX4",
    "brandColor": "#FFFFFF",
    "svg": "icons/animated/px4.svg",
@@ -5176,6 +6827,10 @@
    "subcategory": "Editors & IDEs",
    "role": "JetBrains IDE for Professional Python, Django & Data Science",
    "docsUrl": "https://www.jetbrains.com/pycharm/",
+   "aliases": [
+    "pycharm",
+    "jetbrains-pycharm"
+   ],
    "monogram": "PYC",
    "brandColor": "#000000",
    "svg": "icons/animated/pycharm.svg",
@@ -5190,6 +6845,10 @@
    "subcategory": "Package & Build Managers",
    "role": "The Python Package Installer and Official Package Index",
    "docsUrl": "https://pypi.org",
+   "aliases": [
+    "pypi",
+    "pypi-org"
+   ],
    "monogram": "PYP",
    "brandColor": "#3775A9",
    "svg": "icons/animated/pypi.svg",
@@ -5204,6 +6863,11 @@
    "subcategory": "General & AI/Data",
    "role": "High-Level AI, Data & Backend Language",
    "docsUrl": "https://www.python.org/",
+   "aliases": [
+    "python",
+    "py",
+    "python3"
+   ],
    "monogram": "PYT",
    "brandColor": "#3776AB",
    "svg": "icons/animated/python.svg",
@@ -5218,6 +6882,11 @@
    "subcategory": "Deep Learning Frameworks",
    "role": "Dynamic Tensor & Deep Neural Network Framework",
    "docsUrl": "https://pytorch.org/",
+   "aliases": [
+    "pytorch",
+    "torch",
+    "libtorch"
+   ],
    "monogram": "PYT",
    "brandColor": "#EE4C2C",
    "svg": "icons/animated/pytorch.svg",
@@ -5232,6 +6901,10 @@
    "subcategory": "Graph & Vector",
    "role": "High-Performance Rust Vector Similarity Search Engine",
    "docsUrl": "https://qdrant.tech/",
+   "aliases": [
+    "qdrant",
+    "qdrant-vector"
+   ],
    "monogram": "QDR",
    "brandColor": "#DC244C",
    "svg": "icons/animated/qdrant.svg",
@@ -5246,6 +6919,10 @@
    "subcategory": "Virtualization & Cloud",
    "role": "Generic and Open-Source Machine Emulator and Virtualizer",
    "docsUrl": "https://www.qemu.org/",
+   "aliases": [
+    "qemu",
+    "kvm-qemu"
+   ],
    "monogram": "QEM",
    "brandColor": "#FF6600",
    "svg": "icons/animated/qemu.svg",
@@ -5260,6 +6937,12 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Open-Source Quantum Mechanical Keyboard Firmware on AVR/ARM",
    "docsUrl": "https://docs.qmk.fm/",
+   "aliases": [
+    "qmk",
+    "qmk firmware",
+    "via",
+    "zmk"
+   ],
    "monogram": "QMK",
    "brandColor": "#333333",
    "svg": "icons/animated/qmk.svg",
@@ -5274,6 +6957,12 @@
    "subcategory": "Silicon & Architectures",
    "role": "Snapdragon Embedded IoT, Robotics & Wireless Modems",
    "docsUrl": "https://www.qualcomm.com",
+   "aliases": [
+    "qualcomm",
+    "qualcomm snapdragon",
+    "qcom",
+    "dragonboard"
+   ],
    "monogram": "SNA",
    "brandColor": "#3253DC",
    "svg": "icons/animated/qualcomm.svg",
@@ -5288,6 +6977,10 @@
    "subcategory": "Enterprise Frameworks",
    "role": "Kubernetes-Native Java Stack Tailored for GraalVM",
    "docsUrl": "https://design.jboss.org/quarkus",
+   "aliases": [
+    "quarkus",
+    "java-quarkus"
+   ],
    "monogram": "QUA",
    "brandColor": "#4695EB",
    "svg": "icons/animated/quarkus.svg",
@@ -5302,6 +6995,10 @@
    "subcategory": "Meta-Frameworks",
    "role": "High-Performance VueJS User Interfaces (SPA, SSR, PWA, Electron)",
    "docsUrl": "https://quasar.dev/",
+   "aliases": [
+    "quasar",
+    "quasar-framework"
+   ],
    "monogram": "QUA",
    "brandColor": "#050A14",
    "svg": "icons/animated/quasar.svg",
@@ -5316,6 +7013,10 @@
    "subcategory": "UI Frameworks",
    "role": "Resumable Instant-Loading Web Applications",
    "docsUrl": "https://qwik.dev/",
+   "aliases": [
+    "qwik",
+    "qwikcity"
+   ],
    "monogram": "QWI",
    "brandColor": "#AC7EF4",
    "svg": "icons/animated/qwik.svg",
@@ -5330,6 +7031,11 @@
    "subcategory": "Data & Scientific",
    "role": "Statistical Computing & Graphics Language",
    "docsUrl": "https://www.r-project.org/",
+   "aliases": [
+    "r",
+    "rlang",
+    "rstudio"
+   ],
    "monogram": "R",
    "brandColor": "#276DC3",
    "svg": "icons/animated/r.svg",
@@ -5344,6 +7050,10 @@
    "subcategory": "Messaging & Streaming",
    "role": "Reliable AMQP Message Broker & Queueing Engine",
    "docsUrl": "https://www.rabbitmq.com",
+   "aliases": [
+    "rabbitmq",
+    "amqp"
+   ],
    "monogram": "RAB",
    "brandColor": "#FF6600",
    "svg": "icons/animated/rabbitmq.svg",
@@ -5358,6 +7068,11 @@
    "subcategory": "Functional & Lisp",
    "role": "Language-Oriented Programming & Scheme Dialect",
    "docsUrl": "https://racket-lang.org",
+   "aliases": [
+    "racket",
+    "scheme",
+    "lisp"
+   ],
    "monogram": "RAC",
    "brandColor": "#9F1D20",
    "svg": "icons/animated/racket.svg",
@@ -5372,6 +7087,11 @@
    "subcategory": "Styling & Design Systems",
    "role": "Unstyled Accessible UI Primitives for React",
    "docsUrl": "https://www.radix-ui.com",
+   "aliases": [
+    "radixui",
+    "radix ui",
+    "radix"
+   ],
    "monogram": "RAD",
    "brandColor": "#161618",
    "svg": "icons/animated/radixui.svg",
@@ -5386,6 +7106,10 @@
    "subcategory": "Cloud Providers",
    "role": "Instant Infrastructure & Deployment Platform for Developers",
    "docsUrl": "https://railway.app",
+   "aliases": [
+    "railway",
+    "railway-app"
+   ],
    "monogram": "RAI",
    "brandColor": "#0B0D0E",
    "svg": "icons/animated/railway.svg",
@@ -5400,6 +7124,11 @@
    "subcategory": "Containers & Orchestration",
    "role": "Complete Multi-Cluster Kubernetes Management Platform",
    "docsUrl": "https://rancher.com/",
+   "aliases": [
+    "rancher",
+    "k3s",
+    "rke2"
+   ],
    "monogram": "RAN",
    "brandColor": "#0075A8",
    "svg": "icons/animated/rancher.svg",
@@ -5414,6 +7143,11 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "Single-Board Linux Computers & RP2040/RP2350 Silicon",
    "docsUrl": "https://www.raspberrypi.org/trademark-rules",
+   "aliases": [
+    "raspberrypi",
+    "raspberry pi",
+    "rpi"
+   ],
    "monogram": "RAS",
    "brandColor": "#A22846",
    "svg": "icons/animated/raspberrypi.svg",
@@ -5428,6 +7162,11 @@
    "subcategory": "Distributed Data & ML",
    "role": "Unified Compute Framework for Scaling AI & Python Workloads",
    "docsUrl": "https://www.ray.io/",
+   "aliases": [
+    "ray",
+    "ray-core",
+    "anyscale"
+   ],
    "monogram": "RAY",
    "brandColor": "#028CF0",
    "svg": "icons/animated/ray.svg",
@@ -5442,6 +7181,12 @@
    "subcategory": "UI Frameworks",
    "role": "Component-Based Declarative UI Library",
    "docsUrl": "https://react.dev/",
+   "aliases": [
+    "react",
+    "reactjs",
+    "react19",
+    "jsx"
+   ],
    "monogram": "REA",
    "brandColor": "#61DAFB",
    "svg": "icons/animated/react.svg",
@@ -5456,6 +7201,11 @@
    "subcategory": "State & Data",
    "role": "Reactive Extensions Library for Asynchronous Streams",
    "docsUrl": "https://rxjs.dev/",
+   "aliases": [
+    "reactivex",
+    "rxjs",
+    "observables"
+   ],
    "monogram": "RXJ",
    "brandColor": "#B7178C",
    "svg": "icons/animated/reactivex.svg",
@@ -5470,6 +7220,11 @@
    "subcategory": "Cross-Platform & Mobile",
    "role": "Build Native Mobile Apps Using React",
    "docsUrl": "https://reactnative.dev/",
+   "aliases": [
+    "reactnative",
+    "react native",
+    "rn"
+   ],
    "monogram": "REA",
    "brandColor": "#61DAFB",
    "svg": "icons/animated/reactnative.svg",
@@ -5484,6 +7239,11 @@
    "subcategory": "Web & Functional",
    "role": "Syntax Extension & Toolchain for OCaml",
    "docsUrl": "https://reasonml.github.io/",
+   "aliases": [
+    "reason",
+    "reasonml",
+    "reason-react"
+   ],
    "monogram": "REA",
    "brandColor": "#DD4B39",
    "svg": "icons/animated/reason.svg",
@@ -5498,6 +7258,10 @@
    "subcategory": "State & Data",
    "role": "Atom-Based State Management Library for React",
    "docsUrl": "https://recoiljs.org",
+   "aliases": [
+    "recoil",
+    "recoiljs"
+   ],
    "monogram": "REC",
    "brandColor": "#3578E5",
    "svg": "icons/animated/recoil.svg",
@@ -5512,6 +7276,10 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Enterprise Linux & OpenShift Hybrid Cloud Platform",
    "docsUrl": "https://www.redhat.com/",
+   "aliases": [
+    "redhat",
+    "red hat"
+   ],
    "monogram": "RED",
    "brandColor": "#EE0000",
    "svg": "icons/animated/redhat.svg",
@@ -5526,6 +7294,10 @@
    "subcategory": "In-Memory & Key-Value",
    "role": "In-Memory Data Structure Store, Cache & Message Broker",
    "docsUrl": "https://redis.io/",
+   "aliases": [
+    "redis",
+    "redis-stack"
+   ],
    "monogram": "RED",
    "brandColor": "#FF4438",
    "svg": "icons/animated/redis.svg",
@@ -5540,6 +7312,11 @@
    "subcategory": "State & Data",
    "role": "Predictable State Container & Redux Toolkit",
    "docsUrl": "https://redux.js.org/",
+   "aliases": [
+    "redux",
+    "rtk",
+    "redux-toolkit"
+   ],
    "monogram": "RED",
    "brandColor": "#764ABC",
    "svg": "icons/animated/redux.svg",
@@ -5554,6 +7331,10 @@
    "subcategory": "State & Data",
    "role": "Production GraphQL Client for React by Meta",
    "docsUrl": "https://relay.dev",
+   "aliases": [
+    "relay",
+    "react-relay"
+   ],
    "monogram": "REL",
    "brandColor": "#F26B00",
    "svg": "icons/animated/relay.svg",
@@ -5568,6 +7349,9 @@
    "subcategory": "Meta-Frameworks",
    "role": "Web Standards Full-Stack React Router Framework",
    "docsUrl": "https://drive.google.com/drive/u/0/folders/1pbHnJqg8Y1ATs0Oi8gARH7wccJGv4I2c",
+   "aliases": [
+    "remix"
+   ],
    "monogram": "REM",
    "brandColor": "#000000",
    "svg": "icons/animated/remix.svg",
@@ -5582,6 +7366,10 @@
    "subcategory": "Cloud Providers",
    "role": "Unified Cloud to Build and Run Web Apps & Postgres",
    "docsUrl": "https://render.com",
+   "aliases": [
+    "render",
+    "render-cloud"
+   ],
    "monogram": "REN",
    "brandColor": "#000000",
    "svg": "icons/animated/render.svg",
@@ -5596,6 +7384,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Automated Multi-Platform Dependency Update Tool",
    "docsUrl": "https://github.com/renovatebot/renovate",
+   "aliases": [
+    "renovate",
+    "renovatebot"
+   ],
    "monogram": "REN",
    "brandColor": "#308BE3",
    "svg": "icons/animated/renovate.svg",
@@ -5610,6 +7402,10 @@
    "subcategory": "Local & Cloud Inference",
    "role": "Run & Fine-Tune Open-Source ML Models via Cloud API",
    "docsUrl": "https://replicate.com",
+   "aliases": [
+    "replicate",
+    "cog"
+   ],
    "monogram": "REP",
    "brandColor": "#000000",
    "svg": "icons/animated/replicate.svg",
@@ -5624,6 +7420,10 @@
    "subcategory": "Web & Functional",
    "role": "Fast Soundly Typed Language for JS & React",
    "docsUrl": "https://rescript-lang.org/",
+   "aliases": [
+    "rescript",
+    "bucklescript"
+   ],
    "monogram": "RES",
    "brandColor": "#E6484F",
    "svg": "icons/animated/rescript.svg",
@@ -5638,6 +7438,11 @@
    "subcategory": "Editors & IDEs",
    "role": "Fast Cross-Platform .NET, C# and Game Dev (Unity/Unreal) IDE",
    "docsUrl": "https://www.jetbrains.com/rider/",
+   "aliases": [
+    "rider",
+    "jetbrains rider",
+    "jetbrains-rider"
+   ],
    "monogram": "RID",
    "brandColor": "#000000",
    "svg": "icons/animated/rider.svg",
@@ -5652,6 +7457,12 @@
    "subcategory": "Silicon & Architectures",
    "role": "Open Standard Instruction Set Architecture (ISA)",
    "docsUrl": "https://riscv.org/",
+   "aliases": [
+    "riscv",
+    "risc-v",
+    "riscv64",
+    "rv32i"
+   ],
    "monogram": "RIS",
    "brandColor": "#283272",
    "svg": "icons/animated/riscv.svg",
@@ -5666,6 +7477,10 @@
    "subcategory": "Web Frameworks",
    "role": "Web Framework for Rust Focused on Usability and Security",
    "docsUrl": "https://rocket.rs",
+   "aliases": [
+    "rocket",
+    "rocket-rs"
+   ],
    "monogram": "ROC",
    "brandColor": "#D33847",
    "svg": "icons/animated/rocket.svg",
@@ -5680,6 +7495,10 @@
    "subcategory": "Build & Bundlers",
    "role": "ES Module Bundler for Libraries & Applications",
    "docsUrl": "https://rollupjs.org",
+   "aliases": [
+    "rollupdotjs",
+    "rollup"
+   ],
    "monogram": "ROL",
    "brandColor": "#EC4A3F",
    "svg": "icons/animated/rollupdotjs.svg",
@@ -5694,6 +7513,10 @@
    "subcategory": "Robotics & Autonomy",
    "role": "Robot Operating System Middleware, Drivers & State Estimation",
    "docsUrl": "https://www.ros.org/",
+   "aliases": [
+    "ros",
+    "ros2"
+   ],
    "monogram": "ROS",
    "brandColor": "#22314E",
    "svg": "icons/animated/ros.svg",
@@ -5708,6 +7531,10 @@
    "subcategory": "Web & Scripting",
    "role": "Expressive Object-Oriented Scripting Language",
    "docsUrl": "https://www.ruby-lang.org/",
+   "aliases": [
+    "ruby",
+    "rb"
+   ],
    "monogram": "RUB",
    "brandColor": "#CC342D",
    "svg": "icons/animated/ruby.svg",
@@ -5722,6 +7549,10 @@
    "subcategory": "Package & Build Managers",
    "role": "Package Management Framework for the Ruby Programming Language",
    "docsUrl": "https://rubygems.org/pages/about",
+   "aliases": [
+    "rubygems",
+    "gem"
+   ],
    "monogram": "RUB",
    "brandColor": "#E9573F",
    "svg": "icons/animated/rubygems.svg",
@@ -5736,6 +7567,12 @@
    "subcategory": "Web Frameworks",
    "role": "Convention-over-Configuration Full-Stack Framework",
    "docsUrl": "https://rubyonrails.org/",
+   "aliases": [
+    "rubyonrails",
+    "ruby on rails",
+    "rails",
+    "ror"
+   ],
    "monogram": "RUB",
    "brandColor": "#D30001",
    "svg": "icons/animated/rubyonrails.svg",
@@ -5750,6 +7587,10 @@
    "subcategory": "Code Quality & Formatting",
    "role": "Extremely Fast Python Linter and Code Formatter in Rust",
    "docsUrl": "https://astral.sh/ruff",
+   "aliases": [
+    "ruff",
+    "astral-ruff"
+   ],
    "monogram": "RUF",
    "brandColor": "#D7FF64",
    "svg": "icons/animated/ruff.svg",
@@ -5764,6 +7605,11 @@
    "subcategory": "Systems & Compiled",
    "role": "Memory-Safe Systems & WebAssembly Language",
    "docsUrl": "https://www.rust-lang.org",
+   "aliases": [
+    "rust",
+    "rs",
+    "cargo-rust"
+   ],
    "monogram": "RUS",
    "brandColor": "#000000",
    "svg": "icons/animated/rust.svg",
@@ -5778,6 +7624,11 @@
    "subcategory": "Web Frameworks",
    "role": "Realtime MVC Framework for Node.js",
    "docsUrl": "https://sailsjs.com/",
+   "aliases": [
+    "sailsdotjs",
+    "sails.js",
+    "sails"
+   ],
    "monogram": "SAI",
    "brandColor": "#14ACC2",
    "svg": "icons/animated/sailsdotjs.svg",
@@ -5792,6 +7643,11 @@
    "subcategory": "Infrastructure as Code",
    "role": "Event-Driven Infrastructure Automation & Remote Execution",
    "docsUrl": "https://saltproject.io",
+   "aliases": [
+    "saltproject",
+    "salt project",
+    "salt"
+   ],
    "monogram": "SAL",
    "brandColor": "#57BCAD",
    "svg": "icons/animated/saltproject.svg",
@@ -5806,6 +7662,10 @@
    "subcategory": "Web Frameworks",
    "role": "Async Python 3.8+ Web Server and Web Framework",
    "docsUrl": "https://sanic.dev/",
+   "aliases": [
+    "sanic",
+    "sanic-python"
+   ],
    "monogram": "SAN",
    "brandColor": "#FF0D68",
    "svg": "icons/animated/sanic.svg",
@@ -5820,6 +7680,10 @@
    "subcategory": "Headless CMS & BaaS",
    "role": "Composable Content Cloud & GROQ Query Engine",
    "docsUrl": "https://www.sanity.io/",
+   "aliases": [
+    "sanity",
+    "groq-sanity"
+   ],
    "monogram": "SAN",
    "brandColor": "#0D0E12",
    "svg": "icons/animated/sanity.svg",
@@ -5834,6 +7698,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Professional Grade CSS Extension Language",
    "docsUrl": "https://sass-lang.com/",
+   "aliases": [
+    "sass",
+    "scss"
+   ],
    "monogram": "SAS",
    "brandColor": "#CC6699",
    "svg": "icons/animated/sass.svg",
@@ -5848,6 +7716,10 @@
    "subcategory": "JVM & Functional",
    "role": "Functional & Object-Oriented JVM Language",
    "docsUrl": "https://www.scala-lang.org",
+   "aliases": [
+    "scala",
+    "scalalang"
+   ],
    "monogram": "SCA",
    "brandColor": "#DC322F",
    "svg": "icons/animated/scala.svg",
@@ -5862,6 +7734,10 @@
    "subcategory": "Cloud Providers",
    "role": "European Cloud Infrastructure, GPU Instances & Managed K8s",
    "docsUrl": "https://ultraviolet.scaleway.com",
+   "aliases": [
+    "scaleway",
+    "scw"
+   ],
    "monogram": "SCA",
    "brandColor": "#4F0599",
    "svg": "icons/animated/scaleway.svg",
@@ -5876,6 +7752,11 @@
    "subcategory": "Classical ML & Data",
    "role": "Predictive Data Analysis & Machine Learning in Python",
    "docsUrl": "https://scikit-learn.org/",
+   "aliases": [
+    "scikitlearn",
+    "scikit-learn",
+    "sklearn"
+   ],
    "monogram": "SCI",
    "brandColor": "#F7931E",
    "svg": "icons/animated/scikitlearn.svg",
@@ -5890,6 +7771,10 @@
    "subcategory": "Data Science & Arrays",
    "role": "Fundamental Algorithms for Scientific Computing in Python",
    "docsUrl": "https://scipy.org/",
+   "aliases": [
+    "scipy",
+    "scipy-optimize"
+   ],
    "monogram": "SCI",
    "brandColor": "#8CAAE6",
    "svg": "icons/animated/scipy.svg",
@@ -5904,6 +7789,10 @@
    "subcategory": "Visual & Educational",
    "role": "Block-Based Visual Programming Language by MIT",
    "docsUrl": "https://scratch.mit.edu/",
+   "aliases": [
+    "scratch",
+    "mit-scratch"
+   ],
    "monogram": "SCR",
    "brandColor": "#855CD6",
    "svg": "icons/animated/scratch.svg",
@@ -5918,6 +7807,11 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "XIAO Miniature MCU Boards, Grove Sensors & Edge AI Hardware",
    "docsUrl": "https://www.seeedstudio.com/",
+   "aliases": [
+    "seeedstudio",
+    "seeed studio",
+    "xiao"
+   ],
    "monogram": "SEE",
    "brandColor": "#8DC21F",
    "svg": "icons/animated/seeedstudio.svg",
@@ -5932,6 +7826,10 @@
    "subcategory": "Testing & QA",
    "role": "Browser Automation & WebDriver Standard",
    "docsUrl": "https://www.selenium.dev/",
+   "aliases": [
+    "selenium",
+    "webdriver"
+   ],
    "monogram": "SEL",
    "brandColor": "#43B02A",
    "svg": "icons/animated/selenium.svg",
@@ -5946,6 +7844,10 @@
    "subcategory": "Observability & Security",
    "role": "Real-Time Application Error Tracking & Performance Monitoring",
    "docsUrl": "https://sentry.io/",
+   "aliases": [
+    "sentry",
+    "sentry-io"
+   ],
    "monogram": "SEN",
    "brandColor": "#362D59",
    "svg": "icons/animated/sentry.svg",
@@ -5960,6 +7862,10 @@
    "subcategory": "ORMs & Data Access",
    "role": "Promise-Based Node.js ORM for Postgres, MySQL & SQLite",
    "docsUrl": "https://sequelize.org/",
+   "aliases": [
+    "sequelize",
+    "sequelize-orm"
+   ],
    "monogram": "SEQ",
    "brandColor": "#52B0E7",
    "svg": "icons/animated/sequelize.svg",
@@ -5974,6 +7880,11 @@
    "subcategory": "Cloud & Functions",
    "role": "Zero-Friction Serverless Application Development",
    "docsUrl": "https://serverless.com",
+   "aliases": [
+    "serverless",
+    "serverless framework",
+    "sls"
+   ],
    "monogram": "SER",
    "brandColor": "#FD5750",
    "svg": "icons/animated/serverless.svg",
@@ -5988,6 +7899,11 @@
    "subcategory": "Styling & Design Systems",
    "role": "Accessible Copy-Paste Component Architecture",
    "docsUrl": "https://ui.shadcn.com",
+   "aliases": [
+    "shadcnui",
+    "shadcn/ui",
+    "shadcn"
+   ],
    "monogram": "SHA",
    "brandColor": "#000000",
    "svg": "icons/animated/shadcnui.svg",
@@ -6002,6 +7918,10 @@
    "subcategory": "Design & Prototyping",
    "role": "Vector Graphics & Digital Product Design Toolkit for macOS",
    "docsUrl": "https://www.sketch.com/",
+   "aliases": [
+    "sketch",
+    "sketchapp"
+   ],
    "monogram": "SKE",
    "brandColor": "#F7B500",
    "svg": "icons/animated/sketch.svg",
@@ -6016,6 +7936,9 @@
    "subcategory": "Docs & Project Management",
    "role": "Channel-Based Messaging & Engineering Incident Collaboration",
    "docsUrl": "https://slack.com/",
+   "aliases": [
+    "slack"
+   ],
    "monogram": "SLA",
    "brandColor": "#4A154B",
    "svg": "icons/animated/slack.svg",
@@ -6030,6 +7953,10 @@
    "subcategory": "Data Warehouses & Lakehouse",
    "role": "Cloud Data Platform & AI Data Cloud",
    "docsUrl": "https://www.snowflake.com/",
+   "aliases": [
+    "snowflake",
+    "snowpark"
+   ],
    "monogram": "SNO",
    "brandColor": "#29B5E8",
    "svg": "icons/animated/snowflake.svg",
@@ -6044,6 +7971,10 @@
    "subcategory": "Observability & Security",
    "role": "Developer-First Dependency & Container Vulnerability Scanner",
    "docsUrl": "https://snyk.io/",
+   "aliases": [
+    "snyk",
+    "snyk-security"
+   ],
    "monogram": "SNY",
    "brandColor": "#4C4A73",
    "svg": "icons/animated/snyk.svg",
@@ -6058,6 +7989,12 @@
    "subcategory": "APIs & Protocols",
    "role": "Bidirectional Low-Latency Real-Time Event Engine",
    "docsUrl": "https://socket.io",
+   "aliases": [
+    "socketdotio",
+    "socket.io",
+    "socketio",
+    "websocket"
+   ],
    "monogram": "SOC",
    "brandColor": "#010101",
    "svg": "icons/animated/socketdotio.svg",
@@ -6072,6 +8009,11 @@
    "subcategory": "UI Frameworks",
    "role": "Fine-Grained Reactive UI Library without VDOM",
    "docsUrl": "https://www.solidjs.com/",
+   "aliases": [
+    "solid",
+    "solidjs",
+    "solidstart"
+   ],
    "monogram": "SOL",
    "brandColor": "#2C4F7C",
    "svg": "icons/animated/solid.svg",
@@ -6086,6 +8028,11 @@
    "subcategory": "Smart Contracts",
    "role": "EVM Smart Contract Programming Language",
    "docsUrl": "https://soliditylang.org/",
+   "aliases": [
+    "solidity",
+    "sol",
+    "evm"
+   ],
    "monogram": "SOL",
    "brandColor": "#363636",
    "svg": "icons/animated/solidity.svg",
@@ -6100,6 +8047,10 @@
    "subcategory": "NLP & Text",
    "role": "Industrial-Strength Natural Language Processing in Python",
    "docsUrl": "https://spacy.io/",
+   "aliases": [
+    "spacy",
+    "nlp"
+   ],
    "monogram": "SPA",
    "brandColor": "#09A3D5",
    "svg": "icons/animated/spacy.svg",
@@ -6114,6 +8065,10 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "Qwiic Prototyping Boards, GNSS & Open Hardware Modules",
    "docsUrl": "https://www.sparkfun.com/",
+   "aliases": [
+    "sparkfun",
+    "qwiic"
+   ],
    "monogram": "SPA",
    "brandColor": "#E53525",
    "svg": "icons/animated/sparkfun.svg",
@@ -6128,6 +8083,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Python Documentation Generator for Technical & API Reference",
    "docsUrl": "https://www.sphinx-doc.org/",
+   "aliases": [
+    "sphinx",
+    "readthedocs"
+   ],
    "monogram": "SPH",
    "brandColor": "#000000",
    "svg": "icons/animated/sphinx.svg",
@@ -6142,6 +8101,10 @@
    "subcategory": "Observability & Security",
    "role": "Security Information Event Management (SIEM) & Observability",
    "docsUrl": "https://www.splunk.com",
+   "aliases": [
+    "splunk",
+    "splunk-enterprise"
+   ],
    "monogram": "SPL",
    "brandColor": "#000000",
    "svg": "icons/animated/splunk.svg",
@@ -6156,6 +8119,12 @@
    "subcategory": "Enterprise Frameworks",
    "role": "Comprehensive Inversion-of-Control Enterprise Java Framework",
    "docsUrl": "https://spring.io/trademarks",
+   "aliases": [
+    "spring",
+    "spring framework",
+    "spring-mvc",
+    "spring-cloud"
+   ],
    "monogram": "SPR",
    "brandColor": "#6DB33F",
    "svg": "icons/animated/spring.svg",
@@ -6170,6 +8139,11 @@
    "subcategory": "Enterprise Frameworks",
    "role": "Production-Grade Stand-Alone Spring Applications",
    "docsUrl": "https://spring.io/projects",
+   "aliases": [
+    "springboot",
+    "spring boot",
+    "java-spring"
+   ],
    "monogram": "SPR",
    "brandColor": "#6DB33F",
    "svg": "icons/animated/springboot.svg",
@@ -6184,6 +8158,11 @@
    "subcategory": "Auth & Identity",
    "role": "Authentication and Access-Control Framework for Java",
    "docsUrl": "https://spring.io/projects",
+   "aliases": [
+    "springsecurity",
+    "spring security",
+    "oauth2-spring"
+   ],
    "monogram": "SPR",
    "brandColor": "#6DB33F",
    "svg": "icons/animated/springsecurity.svg",
@@ -6198,6 +8177,10 @@
    "subcategory": "ORMs & Data Access",
    "role": "The Python SQL Toolkit and Object Relational Mapper",
    "docsUrl": "https://www.sqlalchemy.org/",
+   "aliases": [
+    "sqlalchemy",
+    "alembic"
+   ],
    "monogram": "SQL",
    "brandColor": "#D71F00",
    "svg": "icons/animated/sqlalchemy.svg",
@@ -6212,6 +8195,11 @@
    "subcategory": "Relational SQL",
    "role": "Self-Contained Serverless Transactional SQL Engine",
    "docsUrl": "https://www.sqlite.org/",
+   "aliases": [
+    "sqlite",
+    "sqlite3",
+    "libsql"
+   ],
    "monogram": "SQL",
    "brandColor": "#003B57",
    "svg": "icons/animated/sqlite.svg",
@@ -6226,6 +8214,10 @@
    "subcategory": "Terminals & Shells",
    "role": "Minimal Blazing-Fast Cross-Shell Prompt Written in Rust",
    "docsUrl": "https://starship.rs",
+   "aliases": [
+    "starship",
+    "starship-prompt"
+   ],
    "monogram": "STA",
    "brandColor": "#DD0B78",
    "svg": "icons/animated/starship.svg",
@@ -6240,6 +8232,10 @@
    "subcategory": "Web Components",
    "role": "Toolchain for Building Reusable Scalable Design Systems",
    "docsUrl": "https://ionic.io/ionicons",
+   "aliases": [
+    "stencil",
+    "stenciljs"
+   ],
    "monogram": "STE",
    "brandColor": "#5530FF",
    "svg": "icons/animated/stencil.svg",
@@ -6254,6 +8250,9 @@
    "subcategory": "Microcontrollers & Boards",
    "role": "32-Bit ARM Cortex-M Microcontrollers & STM32Cube Ecosystem",
    "docsUrl": "https://www.st.com",
+   "aliases": [
+    "stmicroelectronics"
+   ],
    "monogram": "STM",
    "brandColor": "#03234B",
    "svg": "icons/animated/stmicroelectronics.svg",
@@ -6268,6 +8267,10 @@
    "subcategory": "Component Workshop",
    "role": "Frontend Workshop for UI Component Development",
    "docsUrl": "https://storybook.js.org/",
+   "aliases": [
+    "storybook",
+    "sb"
+   ],
    "monogram": "STO",
    "brandColor": "#FF4785",
    "svg": "icons/animated/storybook.svg",
@@ -6282,6 +8285,10 @@
    "subcategory": "Headless CMS & BaaS",
    "role": "Open-Source Node.js Headless CMS",
    "docsUrl": "https://strapi.io/",
+   "aliases": [
+    "strapi",
+    "strapicms"
+   ],
    "monogram": "STR",
    "brandColor": "#4945FF",
    "svg": "icons/animated/strapi.svg",
@@ -6296,6 +8303,10 @@
    "subcategory": "AI Apps & Dashboards",
    "role": "Turn Python Data & ML Scripts into Shareable Web Apps",
    "docsUrl": "https://streamlit.io/",
+   "aliases": [
+    "streamlit",
+    "st"
+   ],
    "monogram": "STR",
    "brandColor": "#FF4B4B",
    "svg": "icons/animated/streamlit.svg",
@@ -6310,6 +8321,11 @@
    "subcategory": "Styling & Design Systems",
    "role": "Visual Primitives for the Component Age (CSS-in-JS)",
    "docsUrl": "https://www.styled-components.com",
+   "aliases": [
+    "styledcomponents",
+    "styled-components",
+    "css-in-js"
+   ],
    "monogram": "STY",
    "brandColor": "#DB7093",
    "svg": "icons/animated/styledcomponents.svg",
@@ -6324,6 +8340,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Mighty Modern CSS Linter for Stylesheets",
    "docsUrl": "https://stylelint.io/",
+   "aliases": [
+    "stylelint",
+    "css-lint"
+   ],
    "monogram": "STY",
    "brandColor": "#263238",
    "svg": "icons/animated/stylelint.svg",
@@ -6338,6 +8358,11 @@
    "subcategory": "Editors & IDEs",
    "role": "Sophisticated Text Editor for Code, Markup and Prose",
    "docsUrl": "https://www.sublimetext.com",
+   "aliases": [
+    "sublimetext",
+    "sublime text",
+    "subl"
+   ],
    "monogram": "SUB",
    "brandColor": "#FF9800",
    "svg": "icons/animated/sublimetext.svg",
@@ -6352,6 +8377,11 @@
    "subcategory": "Version Control & Forges",
    "role": "Enterprise Centralized Version Control System",
    "docsUrl": "https://subversion.apache.org/",
+   "aliases": [
+    "subversion",
+    "apache subversion",
+    "svn"
+   ],
    "monogram": "APA",
    "brandColor": "#809CC9",
    "svg": "icons/animated/subversion.svg",
@@ -6366,6 +8396,10 @@
    "subcategory": "Cloud Postgres & BaaS",
    "role": "Open-Source Firebase Alternative Built on PostgreSQL",
    "docsUrl": "https://supabase.com/",
+   "aliases": [
+    "supabase",
+    "supabase-db"
+   ],
    "monogram": "SUP",
    "brandColor": "#3FCF8E",
    "svg": "icons/animated/supabase.svg",
@@ -6380,6 +8414,10 @@
    "subcategory": "Multi-Model & Graph",
    "role": "Cloud-Native Multi-Model Graph, Document & SQL Database",
    "docsUrl": "https://surrealdb.com/",
+   "aliases": [
+    "surrealdb",
+    "surrealql"
+   ],
    "monogram": "SUR",
    "brandColor": "#FF00A0",
    "svg": "icons/animated/surrealdb.svg",
@@ -6394,6 +8432,9 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Enterprise Linux & Rancher Cloud-Native OS",
    "docsUrl": "https://www.suse.com/",
+   "aliases": [
+    "suse"
+   ],
    "monogram": "SUS",
    "brandColor": "#0C322C",
    "svg": "icons/animated/suse.svg",
@@ -6408,6 +8449,10 @@
    "subcategory": "UI Frameworks",
    "role": "Compiler-First Cybernetically Enhanced Web Apps",
    "docsUrl": "https://svelte.dev/",
+   "aliases": [
+    "svelte",
+    "svelte5"
+   ],
    "monogram": "SVE",
    "brandColor": "#FF3E00",
    "svg": "icons/animated/svelte.svg",
@@ -6422,6 +8467,10 @@
    "subcategory": "Web Standards",
    "role": "Scalable Vector Graphics W3C XML Standard",
    "docsUrl": "https://www.w3.org/TR/SVG2/",
+   "aliases": [
+    "svg",
+    "vector-graphics"
+   ],
    "monogram": "SVG",
    "brandColor": "#FFB13B",
    "svg": "icons/animated/svg.svg",
@@ -6436,6 +8485,10 @@
    "subcategory": "APIs & Protocols",
    "role": "API Design, Documentation & Interactive Testing Suite",
    "docsUrl": "https://swagger.io",
+   "aliases": [
+    "swagger",
+    "swagger-ui"
+   ],
    "monogram": "SWA",
    "brandColor": "#85EA2D",
    "svg": "icons/animated/swagger.svg",
@@ -6450,6 +8503,10 @@
    "subcategory": "Build & Bundlers",
    "role": "Rust-Based Super-Fast TypeScript/JavaScript Compiler",
    "docsUrl": "https://swc.rs/",
+   "aliases": [
+    "swc",
+    "speedy-web-compiler"
+   ],
    "monogram": "SWC",
    "brandColor": "#F8C457",
    "svg": "icons/animated/swc.svg",
@@ -6464,6 +8521,11 @@
    "subcategory": "Mobile & Systems",
    "role": "Compiled Apple & Server Systems Language",
    "docsUrl": "https://developer.apple.com/swift/resources/",
+   "aliases": [
+    "swift",
+    "swiftlang",
+    "ios"
+   ],
    "monogram": "SWI",
    "brandColor": "#F05138",
    "svg": "icons/animated/swift.svg",
@@ -6478,6 +8540,10 @@
    "subcategory": "State & Data",
    "role": "React Hooks for Stale-While-Revalidate Data Fetching",
    "docsUrl": "https://swr.vercel.app",
+   "aliases": [
+    "swr",
+    "vercel-swr"
+   ],
    "monogram": "SWR",
    "brandColor": "#000000",
    "svg": "icons/animated/swr.svg",
@@ -6492,6 +8558,10 @@
    "subcategory": "Web Frameworks",
    "role": "High-Performance PHP Framework & Reusable Components",
    "docsUrl": "https://symfony.com/",
+   "aliases": [
+    "symfony",
+    "symfony-php"
+   ],
    "monogram": "SYM",
    "brandColor": "#000000",
    "svg": "icons/animated/symfony.svg",
@@ -6506,6 +8576,10 @@
    "subcategory": "Observability & Security",
    "role": "Zero-Config WireGuard Mesh VPN & Secure Connectivity",
    "docsUrl": "https://tailscale.com/",
+   "aliases": [
+    "tailscale",
+    "tsnet"
+   ],
    "monogram": "TAI",
    "brandColor": "#242424",
    "svg": "icons/animated/tailscale.svg",
@@ -6520,6 +8594,12 @@
    "subcategory": "Styling & Design Systems",
    "role": "Utility-First CSS Framework",
    "docsUrl": "https://tailwindcss.com/",
+   "aliases": [
+    "tailwindcss",
+    "tailwind css",
+    "tailwind",
+    "tw"
+   ],
    "monogram": "TAI",
    "brandColor": "#06B6D4",
    "svg": "icons/animated/tailwindcss.svg",
@@ -6534,6 +8614,13 @@
    "subcategory": "State & Data",
    "role": "Powerful Asynchronous State & Data Fetching",
    "docsUrl": "https://tanstack.com/",
+   "aliases": [
+    "tanstack",
+    "reactquery",
+    "tanstack query",
+    "react-query",
+    "tanstack-query"
+   ],
    "monogram": "TAN",
    "brandColor": "#ECE8D1",
    "svg": "icons/animated/tanstack.svg",
@@ -6548,6 +8635,10 @@
    "subcategory": "Desktop & Cross-Platform",
    "role": "Lightweight Secure Rust-Powered Desktop & Mobile Apps",
    "docsUrl": "https://tauri.app/",
+   "aliases": [
+    "tauri",
+    "tauri-apps"
+   ],
    "monogram": "TAU",
    "brandColor": "#24C8D8",
    "svg": "icons/animated/tauri.svg",
@@ -6562,6 +8653,10 @@
    "subcategory": "CI/CD & GitOps",
    "role": "JetBrains Powerful Continuous Integration & Deployment Server",
    "docsUrl": "https://www.jetbrains.com/teamcity/",
+   "aliases": [
+    "teamcity",
+    "jetbrains-teamcity"
+   ],
    "monogram": "TEA",
    "brandColor": "#000000",
    "svg": "icons/animated/teamcity.svg",
@@ -6576,6 +8671,10 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Cloud-Native Kubernetes-Native CI/CD Pipeline Building Blocks",
    "docsUrl": "https://tekton.dev/",
+   "aliases": [
+    "tekton",
+    "tektoncd"
+   ],
    "monogram": "TEK",
    "brandColor": "#FD495C",
    "svg": "icons/animated/tekton.svg",
@@ -6590,6 +8689,10 @@
    "subcategory": "Task Queues & Workflows",
    "role": "Durable Execution Platform for Microservice Workflows",
    "docsUrl": "https://temporal.io/",
+   "aliases": [
+    "temporal",
+    "temporalio"
+   ],
    "monogram": "TEM",
    "brandColor": "#000000",
    "svg": "icons/animated/temporal.svg",
@@ -6604,6 +8707,11 @@
    "subcategory": "Deep Learning Frameworks",
    "role": "End-to-End Machine Learning & Production Serving Platform",
    "docsUrl": "https://www.tensorflow.org",
+   "aliases": [
+    "tensorflow",
+    "tf",
+    "tflite"
+   ],
    "monogram": "TEN",
    "brandColor": "#FF6F00",
    "svg": "icons/animated/tensorflow.svg",
@@ -6618,6 +8726,12 @@
    "subcategory": "Infrastructure as Code",
    "role": "Declarative Multi-Cloud Infrastructure as Code",
    "docsUrl": "https://developer.hashicorp.com/terraform",
+   "aliases": [
+    "terraform",
+    "tf-iac",
+    "hcl",
+    "hashicorp"
+   ],
    "monogram": "TER",
    "brandColor": "#844FBA",
    "svg": "icons/animated/terraform.svg",
@@ -6632,6 +8746,12 @@
    "subcategory": "Testing & QA",
    "role": "User-Centric DOM & React Testing Utilities",
    "docsUrl": "https://testing-library.com",
+   "aliases": [
+    "testinglibrary",
+    "testing library",
+    "rtl",
+    "react-testing-library"
+   ],
    "monogram": "TES",
    "brandColor": "#E33332",
    "svg": "icons/animated/testinglibrary.svg",
@@ -6646,6 +8766,11 @@
    "subcategory": "Silicon & Architectures",
    "role": "MSP430, Sitara, C2000 DSP & Analog Embedded Semiconductors",
    "docsUrl": "https://www.ti.com/",
+   "aliases": [
+    "texasinstruments",
+    "texas instruments",
+    "ti"
+   ],
    "monogram": "TEX",
    "brandColor": "#CC0000",
    "svg": "icons/animated/texasinstruments.svg",
@@ -6660,6 +8785,11 @@
    "subcategory": "Protocols & Connectivity",
    "role": "Global Collaborative Open LoRaWAN IoT Network Infrastructure",
    "docsUrl": "https://www.thethingsnetwork.org/",
+   "aliases": [
+    "thethingsnetwork",
+    "the things network",
+    "ttn"
+   ],
    "monogram": "THE",
    "brandColor": "#FFFFFF",
    "svg": "icons/animated/thethingsnetwork.svg",
@@ -6674,6 +8804,9 @@
    "subcategory": "Protocols & Connectivity",
    "role": "IPv6-Based Low-Power Mesh Networking Protocol for IoT",
    "docsUrl": "https://www.threadgroup.org/",
+   "aliases": [
+    "thread"
+   ],
    "monogram": "THR",
    "brandColor": "#464646",
    "svg": "icons/animated/thread.svg",
@@ -6688,6 +8821,13 @@
    "subcategory": "Graphics & 3D",
    "role": "JavaScript 3D WebGL & WebGPU Library",
    "docsUrl": "https://threejs.org/",
+   "aliases": [
+    "threedotjs",
+    "three.js",
+    "threejs",
+    "r3f",
+    "3d"
+   ],
    "monogram": "THR",
    "brandColor": "#000000",
    "svg": "icons/animated/threedotjs.svg",
@@ -6702,6 +8842,10 @@
    "subcategory": "Distributed NewSQL",
    "role": "Open-Source Distributed HTAP MySQL-Compatible Database",
    "docsUrl": "https://www.pingcap.com/tidb/",
+   "aliases": [
+    "tidb",
+    "pingcap"
+   ],
    "monogram": "TID",
    "brandColor": "#DC150B",
    "svg": "icons/animated/tidb.svg",
@@ -6716,6 +8860,10 @@
    "subcategory": "Time-Series",
    "role": "Time-Series & Analytics SQL Extension for PostgreSQL",
    "docsUrl": "https://www.timescale.com",
+   "aliases": [
+    "timescale",
+    "timescaledb"
+   ],
    "monogram": "TIM",
    "brandColor": "#FDB515",
    "svg": "icons/animated/timescale.svg",
@@ -6730,6 +8878,10 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Go Compiler for Microcontrollers, WebAssembly & Command-Line Tools",
    "docsUrl": "https://tinygo.org/",
+   "aliases": [
+    "tinygo",
+    "tinygo-org"
+   ],
    "monogram": "TIN",
    "brandColor": "#ABC3D6",
    "svg": "icons/animated/tinygo.svg",
@@ -6744,6 +8896,10 @@
    "subcategory": "Terminals & Shells",
    "role": "Terminal Multiplexer for Persistent Multi-Pane Sessions",
    "docsUrl": "https://github.com/tmux/tmux",
+   "aliases": [
+    "tmux",
+    "tmux-conf"
+   ],
    "monogram": "TMU",
    "brandColor": "#1BB91F",
    "svg": "icons/animated/tmux.svg",
@@ -6758,6 +8914,9 @@
    "subcategory": "Runtimes & Servers",
    "role": "Asynchronous Rust Runtime",
    "docsUrl": "https://tokio.rs/",
+   "aliases": [
+    "tokio"
+   ],
    "monogram": "TOK",
    "brandColor": "#000000",
    "svg": "icons/animated/tokio.svg",
@@ -6772,6 +8931,10 @@
    "subcategory": "Data & Config",
    "role": "Minimal Configuration File Format",
    "docsUrl": "https://toml.io/",
+   "aliases": [
+    "toml",
+    "cargo-toml"
+   ],
    "monogram": "TOM",
    "brandColor": "#9C4121",
    "svg": "icons/animated/toml.svg",
@@ -6786,6 +8949,10 @@
    "subcategory": "Web Servers & Proxies",
    "role": "Cloud-Native Application Proxy & Ingress Router",
    "docsUrl": "https://traefik.io/traefik",
+   "aliases": [
+    "traefikproxy",
+    "traefik"
+   ],
    "monogram": "TRA",
    "brandColor": "#24A1C1",
    "svg": "icons/animated/traefikproxy.svg",
@@ -6800,6 +8967,11 @@
    "subcategory": "CI/CD & GitOps",
    "role": "Hosted Continuous Integration Service for GitHub Projects",
    "docsUrl": "https://www.travis-ci.com/",
+   "aliases": [
+    "travisci",
+    "travis ci",
+    "travis"
+   ],
    "monogram": "TRA",
    "brandColor": "#3EAAAF",
    "svg": "icons/animated/travisci.svg",
@@ -6814,6 +8986,9 @@
    "subcategory": "Data Warehouses & Lakehouse",
    "role": "Fast Distributed SQL Query Engine for Big Data Lakehouses",
    "docsUrl": "https://trino.io/",
+   "aliases": [
+    "trino"
+   ],
    "monogram": "TRI",
    "brandColor": "#DD00A1",
    "svg": "icons/animated/trino.svg",
@@ -6828,6 +9003,12 @@
    "subcategory": "Observability & Security",
    "role": "Comprehensive Open-Source Container & IaC Vulnerability Scanner",
    "docsUrl": "https://trivy.dev/",
+   "aliases": [
+    "trivy",
+    "aquasecurity",
+    "aqua trivy",
+    "trivy-scanner"
+   ],
    "monogram": "TRI",
    "brandColor": "#1904DA",
    "svg": "icons/animated/trivy.svg",
@@ -6842,6 +9023,10 @@
    "subcategory": "State & Data",
    "role": "End-to-End Typesafe APIs Without Schemas",
    "docsUrl": "https://trpc.io/",
+   "aliases": [
+    "trpc",
+    "trpc-io"
+   ],
    "monogram": "TRP",
    "brandColor": "#2596BE",
    "svg": "icons/animated/trpc.svg",
@@ -6856,6 +9041,10 @@
    "subcategory": "Build & Bundlers",
    "role": "High-Performance Monorepo Build System",
    "docsUrl": "https://turbo.build/",
+   "aliases": [
+    "turborepo",
+    "turbo"
+   ],
    "monogram": "TUR",
    "brandColor": "#FF1E56",
    "svg": "icons/animated/turborepo.svg",
@@ -6870,6 +9059,9 @@
    "subcategory": "Edge & Embedded SQL",
    "role": "Edge-Hosted Distributed Database Based on libSQL",
    "docsUrl": "https://turso.tech",
+   "aliases": [
+    "turso"
+   ],
    "monogram": "TUR",
    "brandColor": "#4FF8D2",
    "svg": "icons/animated/turso.svg",
@@ -6884,6 +9076,10 @@
    "subcategory": "ORMs & Data Access",
    "role": "Data-Mapper and Active-Record ORM for TypeScript",
    "docsUrl": "https://typeorm.io/",
+   "aliases": [
+    "typeorm",
+    "typeorm-ts"
+   ],
    "monogram": "TYP",
    "brandColor": "#FE0803",
    "svg": "icons/animated/typeorm.svg",
@@ -6898,6 +9094,11 @@
    "subcategory": "Web & Application",
    "role": "Type-Safe Superset of JavaScript",
    "docsUrl": "https://www.typescriptlang.org/",
+   "aliases": [
+    "typescript",
+    "ts",
+    "tsc"
+   ],
    "monogram": "TYP",
    "brandColor": "#3178C6",
    "svg": "icons/animated/typescript.svg",
@@ -6912,6 +9113,10 @@
    "subcategory": "Markup & Scientific",
    "role": "Modern Programmable Markup-Based Typesetting",
    "docsUrl": "https://typst.app",
+   "aliases": [
+    "typst",
+    "typ"
+   ],
    "monogram": "TYP",
    "brandColor": "#239DAD",
    "svg": "icons/animated/typst.svg",
@@ -6926,6 +9131,11 @@
    "subcategory": "Operating Systems & Kernel",
    "role": "Enterprise & Cloud Linux Distribution by Canonical",
    "docsUrl": "https://design.ubuntu.com/resources",
+   "aliases": [
+    "ubuntu",
+    "canonical",
+    "apt"
+   ],
    "monogram": "UBU",
    "brandColor": "#E95420",
    "svg": "icons/animated/ubuntu.svg",
@@ -6940,6 +9150,10 @@
    "subcategory": "3D & Game Engines",
    "role": "Cross-Platform Real-Time 3D Game & XR Engine",
    "docsUrl": "https://unity.com/",
+   "aliases": [
+    "unity",
+    "unity3d"
+   ],
    "monogram": "UNI",
    "brandColor": "#FFFFFF",
    "svg": "icons/animated/unity.svg",
@@ -6954,6 +9168,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Instant On-Demand Atomic CSS Engine",
    "docsUrl": "https://unocss.dev/",
+   "aliases": [
+    "unocss",
+    "uno"
+   ],
    "monogram": "UNO",
    "brandColor": "#333333",
    "svg": "icons/animated/unocss.svg",
@@ -6968,6 +9186,11 @@
    "subcategory": "3D & Game Engines",
    "role": "High-Fidelity Real-Time 3D Creation Tool & C++ Game Engine",
    "docsUrl": "https://www.unrealengine.com/",
+   "aliases": [
+    "unrealengine",
+    "unreal engine",
+    "ue5"
+   ],
    "monogram": "UNR",
    "brandColor": "#0E1128",
    "svg": "icons/animated/unrealengine.svg",
@@ -6982,6 +9205,10 @@
    "subcategory": "In-Memory & Key-Value",
    "role": "Serverless Redis, Vector & Kafka for Edge Applications",
    "docsUrl": "https://upstash.com",
+   "aliases": [
+    "upstash",
+    "upstash-redis"
+   ],
    "monogram": "UPS",
    "brandColor": "#00E9A3",
    "svg": "icons/animated/upstash.svg",
@@ -6996,6 +9223,11 @@
    "subcategory": "Package & Build Managers",
    "role": "Extremely Fast Python Package and Project Manager in Rust",
    "docsUrl": "https://docs.astral.sh/uv/",
+   "aliases": [
+    "uv",
+    "astral",
+    "astral-uv"
+   ],
    "monogram": "UV",
    "brandColor": "#DE5FE9",
    "svg": "icons/animated/uv.svg",
@@ -7010,6 +9242,10 @@
    "subcategory": "Systems & Compiled",
    "role": "Simple Fast Compiled Systems Language",
    "docsUrl": "https://vlang.io/",
+   "aliases": [
+    "v",
+    "vlang"
+   ],
    "monogram": "V",
    "brandColor": "#5D87BF",
    "svg": "icons/animated/v.svg",
@@ -7024,6 +9260,10 @@
    "subcategory": "Virtualization & Cloud",
    "role": "Reproducible Portable Virtual Development Environments",
    "docsUrl": "https://developer.hashicorp.com/vagrant",
+   "aliases": [
+    "vagrant",
+    "vagrantfile"
+   ],
    "monogram": "VAG",
    "brandColor": "#1868F2",
    "svg": "icons/animated/vagrant.svg",
@@ -7038,6 +9278,10 @@
    "subcategory": "Web Frameworks",
    "role": "Server-Side Swift Web Framework",
    "docsUrl": "https://vapor.codes",
+   "aliases": [
+    "vapor",
+    "vapor-swift"
+   ],
    "monogram": "VAP",
    "brandColor": "#0D0D0D",
    "svg": "icons/animated/vapor.svg",
@@ -7052,6 +9296,11 @@
    "subcategory": "Observability & Security",
    "role": "Identity-Based Secrets Management & Encryption Control Plane",
    "docsUrl": "https://developer.hashicorp.com/vault",
+   "aliases": [
+    "vault",
+    "hashicorp vault",
+    "hashicorp-vault"
+   ],
    "monogram": "VAU",
    "brandColor": "#FFEC6E",
    "svg": "icons/animated/vault.svg",
@@ -7066,6 +9315,10 @@
    "subcategory": "Package & Build Managers",
    "role": "C/C++ Library Manager for Windows, Linux, and macOS",
    "docsUrl": "https://vcpkg.io/",
+   "aliases": [
+    "vcpkg",
+    "vcpkg-json"
+   ],
    "monogram": "VCP",
    "brandColor": "#FC950B",
    "svg": "icons/animated/vcpkg.svg",
@@ -7080,6 +9333,10 @@
    "subcategory": "Cloud & Edge Network",
    "role": "Frontend Cloud Platform for Next.js & Edge Functions",
    "docsUrl": "https://vercel.com/",
+   "aliases": [
+    "vercel",
+    "zeit"
+   ],
    "monogram": "VER",
    "brandColor": "#000000",
    "svg": "icons/animated/vercel.svg",
@@ -7094,6 +9351,10 @@
    "subcategory": "Editors & IDEs",
    "role": "Ubiquitous Highly Configurable Modal Text Editor",
    "docsUrl": "https://www.vim.org/",
+   "aliases": [
+    "vim",
+    "vimrc"
+   ],
    "monogram": "VIM",
    "brandColor": "#019733",
    "svg": "icons/animated/vim.svg",
@@ -7108,6 +9369,10 @@
    "subcategory": "Virtualization & Cloud",
    "role": "Cross-Platform x86 and AMD64/Intel64 Virtualization Hypervisor",
    "docsUrl": "https://www.virtualbox.org/svn/vbox/trunk/src/VBox/Artwork/OSE",
+   "aliases": [
+    "virtualbox",
+    "vbox"
+   ],
    "monogram": "VIR",
    "brandColor": "#2F61B4",
    "svg": "icons/animated/virtualbox.svg",
@@ -7122,6 +9387,12 @@
    "subcategory": "Editors & IDEs",
    "role": "Comprehensive IDE for .NET and C++ Developers on Windows",
    "docsUrl": "https://visualstudio.microsoft.com/",
+   "aliases": [
+    "visualstudio",
+    "visual studio",
+    "vs2022",
+    "msbuild"
+   ],
    "monogram": "VIS",
    "brandColor": "#5C2D91",
    "svg": "icons/animated/visualstudio.svg",
@@ -7136,6 +9407,10 @@
    "subcategory": "Build & Bundlers",
    "role": "Next-Generation Frontend Build Tool & Dev Server",
    "docsUrl": "https://vite.dev/",
+   "aliases": [
+    "vite",
+    "vitejs"
+   ],
    "monogram": "VIT",
    "brandColor": "#9135FF",
    "svg": "icons/animated/vite.svg",
@@ -7150,6 +9425,10 @@
    "subcategory": "Docs & Project Management",
    "role": "Vite & Vue Powered Static Site Generator for Technical Docs",
    "docsUrl": "https://vitepress.dev/",
+   "aliases": [
+    "vitepress",
+    "vuepress"
+   ],
    "monogram": "VIT",
    "brandColor": "#5C73E7",
    "svg": "icons/animated/vitepress.svg",
@@ -7164,6 +9443,10 @@
    "subcategory": "Testing & QA",
    "role": "Blazing Fast Vite-Native Unit Test Framework",
    "docsUrl": "https://vitest.dev/",
+   "aliases": [
+    "vitest",
+    "vite-test"
+   ],
    "monogram": "VIT",
    "brandColor": "#00FF74",
    "svg": "icons/animated/vitest.svg",
@@ -7178,6 +9461,9 @@
    "subcategory": "Virtualization & Cloud",
    "role": "Enterprise Hypervisor and Cloud Virtualization Infrastructure",
    "docsUrl": "https://www.vmware.com/",
+   "aliases": [
+    "vmware"
+   ],
    "monogram": "VMW",
    "brandColor": "#607078",
    "svg": "icons/animated/vmware.svg",
@@ -7192,6 +9478,11 @@
    "subcategory": "Editors & IDEs",
    "role": "Extensible Cross-Platform Source Code Editor",
    "docsUrl": "https://code.visualstudio.com/",
+   "aliases": [
+    "vscode",
+    "vs code",
+    "visual-studio-code"
+   ],
    "monogram": "VSC",
    "brandColor": "#007ACC",
    "svg": "icons/animated/vscode.svg",
@@ -7206,6 +9497,13 @@
    "subcategory": "UI Frameworks",
    "role": "Progressive Reactive JavaScript UI Framework",
    "docsUrl": "https://vuejs.org/",
+   "aliases": [
+    "vuedotjs",
+    "vue.js",
+    "vue",
+    "vue3",
+    "vuejs"
+   ],
    "monogram": "VUE",
    "brandColor": "#4FC08D",
    "svg": "icons/animated/vuedotjs.svg",
@@ -7220,6 +9518,10 @@
    "subcategory": "Styling & Design Systems",
    "role": "Material Design Framework for Vue.js",
    "docsUrl": "https://vuetifyjs.com/",
+   "aliases": [
+    "vuetify",
+    "vuetify3"
+   ],
    "monogram": "VUE",
    "brandColor": "#1867C0",
    "svg": "icons/animated/vuetify.svg",
@@ -7234,6 +9536,10 @@
    "subcategory": "Cloud Providers",
    "role": "High-Frequency Cloud Compute, Bare Metal & Cloud GPUs",
    "docsUrl": "https://www.vultr.com/",
+   "aliases": [
+    "vultr",
+    "vultr-cloud"
+   ],
    "monogram": "VUL",
    "brandColor": "#007BFC",
    "svg": "icons/animated/vultr.svg",
@@ -7248,6 +9554,10 @@
    "subcategory": "Terminals & Shells",
    "role": "Modern Rust-Based Terminal with AI Command Assistance",
    "docsUrl": "https://warp.dev",
+   "aliases": [
+    "warp",
+    "warp-terminal"
+   ],
    "monogram": "WAR",
    "brandColor": "#01A4FF",
    "svg": "icons/animated/warp.svg",
@@ -7262,6 +9572,11 @@
    "subcategory": "WebAssembly",
    "role": "Portable Binary Instruction Format for Web & Edge",
    "docsUrl": "https://webassembly.org",
+   "aliases": [
+    "webassembly",
+    "wasm",
+    "wasi"
+   ],
    "monogram": "WEB",
    "brandColor": "#654FF0",
    "svg": "icons/animated/webassembly.svg",
@@ -7276,6 +9591,10 @@
    "subcategory": "Testing & QA",
    "role": "Next-Gen Browser and Mobile Automation Test Framework",
    "docsUrl": "https://webdriver.io/docs/api",
+   "aliases": [
+    "webdriverio",
+    "wdio"
+   ],
    "monogram": "WEB",
    "brandColor": "#EA5906",
    "svg": "icons/animated/webdriverio.svg",
@@ -7290,6 +9609,9 @@
    "subcategory": "Graphics & 3D",
    "role": "Hardware-Accelerated 2D & 3D Graphics API",
    "docsUrl": "https://www.khronos.org/legal/trademarks",
+   "aliases": [
+    "webgl"
+   ],
    "monogram": "WEB",
    "brandColor": "#990000",
    "svg": "icons/animated/webgl.svg",
@@ -7304,6 +9626,10 @@
    "subcategory": "Graphics & Shaders",
    "role": "Next-Generation Web Graphics & Compute Shader API",
    "docsUrl": "https://www.w3.org/TR/webgpu/",
+   "aliases": [
+    "webgpu",
+    "wgsl"
+   ],
    "monogram": "WEB",
    "brandColor": "#005A9C",
    "svg": "icons/animated/webgpu.svg",
@@ -7318,6 +9644,10 @@
    "subcategory": "Build & Bundlers",
    "role": "Static Module Bundler for Modern JavaScript",
    "docsUrl": "https://webpack.js.org/",
+   "aliases": [
+    "webpack",
+    "webpack5"
+   ],
    "monogram": "WEB",
    "brandColor": "#8DD6F9",
    "svg": "icons/animated/webpack.svg",
@@ -7332,6 +9662,10 @@
    "subcategory": "Web Standards",
    "role": "Real-Time Peer-to-Peer Audio, Video & Data",
    "docsUrl": "https://webrtc.org",
+   "aliases": [
+    "webrtc",
+    "rtc"
+   ],
    "monogram": "WEB",
    "brandColor": "#333333",
    "svg": "icons/animated/webrtc.svg",
@@ -7346,6 +9680,10 @@
    "subcategory": "Editors & IDEs",
    "role": "JetBrains Smart JavaScript and TypeScript IDE",
    "docsUrl": "https://www.jetbrains.com/webstorm/",
+   "aliases": [
+    "webstorm",
+    "jetbrains-webstorm"
+   ],
    "monogram": "WEB",
    "brandColor": "#000000",
    "svg": "icons/animated/webstorm.svg",
@@ -7360,6 +9698,12 @@
    "subcategory": "MLOps & Experiment Tracking",
    "role": "AI Developer Platform for Experiment Tracking & Evals",
    "docsUrl": "https://wandb.ai",
+   "aliases": [
+    "weightsandbiases",
+    "weights & biases",
+    "wandb",
+    "w&b"
+   ],
    "monogram": "WEI",
    "brandColor": "#FFBE00",
    "svg": "icons/animated/weightsandbiases.svg",
@@ -7374,6 +9718,10 @@
    "subcategory": "Terminals & Shells",
    "role": "GPU-Accelerated Cross-Platform Terminal Emulator and Multiplexer in Lua",
    "docsUrl": "https://wezterm.org/",
+   "aliases": [
+    "wezterm",
+    "wez"
+   ],
    "monogram": "WEZ",
    "brandColor": "#4E49EE",
    "svg": "icons/animated/wezterm.svg",
@@ -7388,6 +9736,10 @@
    "subcategory": "Observability & Security",
    "role": "Extremely Simple Fast Modern Kernel VPN Tunnel",
    "docsUrl": "https://www.wireguard.com",
+   "aliases": [
+    "wireguard",
+    "wg"
+   ],
    "monogram": "WIR",
    "brandColor": "#88171A",
    "svg": "icons/animated/wireguard.svg",
@@ -7402,6 +9754,11 @@
    "subcategory": "API & Network Tools",
    "role": "World's Foremost Network Protocol & Packet Analyzer",
    "docsUrl": "https://www.wireshark.org/",
+   "aliases": [
+    "wireshark",
+    "pcap",
+    "tshark"
+   ],
    "monogram": "WIR",
    "brandColor": "#1679A7",
    "svg": "icons/animated/wireshark.svg",
@@ -7416,6 +9773,10 @@
    "subcategory": "Data & Scientific",
    "role": "Symbolic & Symbolic-Numerical Computation Language",
    "docsUrl": "https://www.wolfram.com/",
+   "aliases": [
+    "wolfram",
+    "wolframlanguage"
+   ],
    "monogram": "WOL",
    "brandColor": "#DD1100",
    "svg": "icons/animated/wolfram.svg",
@@ -7430,6 +9791,10 @@
    "subcategory": "Editors & IDEs",
    "role": "Apple Integrated Development Environment for macOS, iOS & visionOS",
    "docsUrl": "https://developer.apple.com/develop",
+   "aliases": [
+    "xcode",
+    "swiftui"
+   ],
    "monogram": "XCO",
    "brandColor": "#147EFB",
    "svg": "icons/animated/xcode.svg",
@@ -7444,6 +9809,11 @@
    "subcategory": "Markup & Data",
    "role": "Extensible Markup Language Specification",
    "docsUrl": "https://www.w3.org/Icons/XML",
+   "aliases": [
+    "xml",
+    "xsd",
+    "xslt"
+   ],
    "monogram": "XML",
    "brandColor": "#005FAD",
    "svg": "icons/animated/xml.svg",
@@ -7458,6 +9828,10 @@
    "subcategory": "State & Data",
    "role": "Actor Model State Machines & Statecharts",
    "docsUrl": "https://xstate.js.org/",
+   "aliases": [
+    "xstate",
+    "statecharts"
+   ],
    "monogram": "XST",
    "brandColor": "#2C3E50",
    "svg": "icons/animated/xstate.svg",
@@ -7472,6 +9846,10 @@
    "subcategory": "Data & Config",
    "role": "Human-Friendly Configuration Serialization Standard",
    "docsUrl": "https://yaml.org/",
+   "aliases": [
+    "yaml",
+    "yml"
+   ],
    "monogram": "YAM",
    "brandColor": "#CB171E",
    "svg": "icons/animated/yaml.svg",
@@ -7486,6 +9864,11 @@
    "subcategory": "Package & Build Managers",
    "role": "Fast Reliable Dependency Management for JavaScript",
    "docsUrl": "https://yarnpkg.com/",
+   "aliases": [
+    "yarn",
+    "yarnpkg",
+    "berry"
+   ],
    "monogram": "YAR",
    "brandColor": "#2C8EBB",
    "svg": "icons/animated/yarn.svg",
@@ -7500,6 +9883,13 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Open-Source Collaboration Creating Custom Embedded Linux Distributions",
    "docsUrl": "https://www.yoctoproject.org/",
+   "aliases": [
+    "yocto",
+    "yoctoproject",
+    "yocto project",
+    "bitbake",
+    "poky"
+   ],
    "monogram": "YOC",
    "brandColor": "#4597D9",
    "svg": "icons/animated/yocto.svg",
@@ -7514,6 +9904,11 @@
    "subcategory": "Editors & IDEs",
    "role": "High-Performance Multiplayer Code Editor Written in Rust",
    "docsUrl": "https://zed.dev/",
+   "aliases": [
+    "zedindustries",
+    "zed",
+    "zed-editor"
+   ],
    "monogram": "ZED",
    "brandColor": "#084CCF",
    "svg": "icons/animated/zedindustries.svg",
@@ -7528,6 +9923,13 @@
    "subcategory": "RTOS & Embedded Toolchains",
    "role": "Scalable Real-Time OS for Connected Resource-Constrained Devices",
    "docsUrl": "https://www.zephyrproject.org/",
+   "aliases": [
+    "zephyr",
+    "linuxfoundation",
+    "zephyr rtos",
+    "zephyrproject",
+    "west"
+   ],
    "monogram": "ZEP",
    "brandColor": "#003778",
    "svg": "icons/animated/zephyr.svg",
@@ -7542,6 +9944,10 @@
    "subcategory": "Observability & Security",
    "role": "Global Software-Defined Encrypted P2P Ethernet Overlay",
    "docsUrl": "https://www.zerotier.com",
+   "aliases": [
+    "zerotier",
+    "zt"
+   ],
    "monogram": "ZER",
    "brandColor": "#FFB441",
    "svg": "icons/animated/zerotier.svg",
@@ -7556,6 +9962,10 @@
    "subcategory": "Systems & Compiled",
    "role": "Low-Level Systems Language & C Toolchain",
    "docsUrl": "https://ziglang.org/",
+   "aliases": [
+    "zig",
+    "ziglang"
+   ],
    "monogram": "ZIG",
    "brandColor": "#F7A41D",
    "svg": "icons/animated/zig.svg",
@@ -7570,6 +9980,10 @@
    "subcategory": "Protocols & Connectivity",
    "role": "IEEE 802.15.4 Low-Power Wireless Mesh Networking Specification",
    "docsUrl": "https://csa-iot.org/all-solutions/zigbee",
+   "aliases": [
+    "zigbee",
+    "zigbee2mqtt"
+   ],
    "monogram": "ZIG",
    "brandColor": "#EB0443",
    "svg": "icons/animated/zigbee.svg",
@@ -7584,6 +9998,9 @@
    "subcategory": "Terminals & Shells",
    "role": "Extended Bourne Shell with Rich Completion & Plugins",
    "docsUrl": "https://www.zsh.org/",
+   "aliases": [
+    "zsh"
+   ],
    "monogram": "ZSH",
    "brandColor": "#F15A24",
    "svg": "icons/animated/zsh.svg",
