@@ -6,7 +6,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import {
   DEFAULT_CUSTOMIZATION_SETTINGS,
-  DEFAULT_STARTER_STACK_IDS,
   GITHUB_PAGES_URL,
   GITHUB_REPO_URL,
   STUDIO_PRESETS,
@@ -38,7 +37,7 @@ export default function App() {
     } catch {
       return {
         version: 1 as const,
-        selectedIds: [...DEFAULT_STARTER_STACK_IDS],
+        selectedIds: [] as string[],
         settings: { ...DEFAULT_CUSTOMIZATION_SETTINGS },
       };
     }
@@ -48,6 +47,12 @@ export default function App() {
   const [settings, setSettings] = useState<CustomizationSettings>(initialState.settings);
   const [activeStage, setActiveStage] = useState<StudioStage>('select');
   const [statusMessage, setStatusMessage] = useState<string>('');
+  const [history, setHistory] = useState<
+    { selectedIds: string[]; settings: CustomizationSettings }[]
+  >([]);
+
+  // Snapshot the stack before every change so the bar can step back one action.
+  const remember = () => setHistory((prev) => [...prev.slice(-49), { selectedIds, settings }]);
 
   useEffect(() => {
     try {
@@ -65,6 +70,7 @@ export default function App() {
   const selectedItems = useMemo(() => resolveSelectedItems(selectedIds), [selectedIds]);
 
   const handleToggleTech = (techId: string) => {
+    remember();
     setSelectedIds((prev) => {
       const next = toggleTechInStack(prev, techId);
       const item = TECH_CATALOG.find((t) => t.id === techId);
@@ -79,10 +85,12 @@ export default function App() {
   };
 
   const handleReorderTech = (sourceId: string, targetId: string) => {
+    remember();
     setSelectedIds((prev) => reorderTechInStack(prev, sourceId, targetId));
   };
 
   const handleRemoveTech = (techId: string) => {
+    remember();
     setSelectedIds((prev) => {
       const item = TECH_CATALOG.find((t) => t.id === techId);
       if (item) {
@@ -93,18 +101,23 @@ export default function App() {
   };
 
   const handleMoveTech = (techId: string, direction: 'left' | 'right' | 'first' | 'last') => {
+    remember();
     setSelectedIds((prev) => moveTechInStack(prev, techId, direction));
   };
 
   const handleClearStack = () => {
+    remember();
     setSelectedIds([]);
     setStatusMessage('Cleared all selected technologies.');
   };
 
-  const handleRestoreStarterStack = () => {
-    setSelectedIds([...DEFAULT_STARTER_STACK_IDS]);
-    setSettings({ ...DEFAULT_CUSTOMIZATION_SETTINGS });
-    setStatusMessage('Restored default stack and settings.');
+  const handleUndo = () => {
+    const snapshot = history[history.length - 1];
+    if (!snapshot) return;
+    setSelectedIds(snapshot.selectedIds);
+    setSettings(snapshot.settings);
+    setHistory((prev) => prev.slice(0, -1));
+    setStatusMessage('Undid the last change.');
   };
 
   const handleUpdateSettings = (partial: Partial<CustomizationSettings>) => {
@@ -114,6 +127,7 @@ export default function App() {
   const handleApplyPreset = (presetId: string) => {
     const preset = STUDIO_PRESETS.find((p) => p.id === presetId);
     if (!preset) return;
+    remember();
     setSettings((prev) => sanitizeSettings({ ...prev, ...preset.settings }));
     setStatusMessage(`Applied style: ${preset.name}`);
   };
@@ -128,7 +142,8 @@ export default function App() {
         selectedCount={selectedItems.length}
         activeStage={activeStage}
         onSelectStage={setActiveStage}
-        onResetDefault={handleRestoreStarterStack}
+        onUndo={handleUndo}
+        canUndo={history.length > 0}
         onClearAll={handleClearStack}
       />
 
@@ -176,7 +191,8 @@ export default function App() {
                       onReorderTech={handleReorderTech}
                       onRemoveTech={handleRemoveTech}
                       onClearStack={handleClearStack}
-                      onRestoreStarterStack={handleRestoreStarterStack}
+                      onUndo={handleUndo}
+                      canUndo={history.length > 0}
                     />
                   ) : undefined
                 }

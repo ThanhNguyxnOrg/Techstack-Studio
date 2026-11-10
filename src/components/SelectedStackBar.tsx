@@ -4,7 +4,7 @@ import {
   ChevronRight,
   ChevronsLeft,
   GripVertical,
-  RotateCcw,
+  Undo2,
   Trash2,
   X,
 } from 'lucide-react';
@@ -17,7 +17,8 @@ interface SelectedStackBarProps {
   onReorderTech: (sourceId: string, targetId: string) => void;
   onRemoveTech: (techId: string) => void;
   onClearStack: () => void;
-  onRestoreStarterStack: () => void;
+  onUndo: () => void;
+  canUndo: boolean;
 }
 
 export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
@@ -26,7 +27,8 @@ export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
   onReorderTech,
   onRemoveTech,
   onClearStack,
-  onRestoreStarterStack,
+  onUndo,
+  canUndo,
 }) => {
   return (
     <section
@@ -52,11 +54,13 @@ export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
         <div className="flex items-center gap-1.5 shrink-0">
           <button
             type="button"
-            onClick={onRestoreStarterStack}
-            className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[#090B10] border border-[#1E2636] text-[11px] font-medium text-[#CBD5E1] hover:text-[#F1F5F9] hover:border-[#38BDF8]/50 whitespace-nowrap shrink-0 transition-colors cursor-pointer"
+            onClick={onUndo}
+            disabled={!canUndo}
+            title="Undo the last change"
+            className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-[#090B10] border border-[#1E2636] text-[11px] font-medium text-[#CBD5E1] enabled:hover:text-[#F1F5F9] enabled:hover:border-[#38BDF8]/50 disabled:text-[#4B5563] disabled:cursor-not-allowed whitespace-nowrap shrink-0 transition-colors cursor-pointer"
           >
-            <RotateCcw className="w-3 h-3 text-[#38BDF8]" aria-hidden="true" />
-            <span>Reset default</span>
+            <Undo2 className="w-3 h-3" aria-hidden="true" />
+            <span>Undo</span>
           </button>
 
           {selectedItems.length > 0 && (
@@ -75,8 +79,7 @@ export const SelectedStackBar: React.FC<SelectedStackBarProps> = ({
       {selectedItems.length === 0 ? (
         <div className="py-3 px-4 rounded-lg bg-[#090B10] border border-dashed border-[#1E2636] text-center">
           <p className="text-xs text-[#94A3B8]">
-            No technologies selected yet. Click any technology in the catalog or restore the default
-            stack.
+            No technologies selected yet. Click any technology in the catalog to add it.
           </p>
         </div>
       ) : (

@@ -1,9 +1,4 @@
-import {
-  DEFAULT_CUSTOMIZATION_SETTINGS,
-  DEFAULT_STARTER_STACK_IDS,
-  TECH_BY_ID,
-  TECH_CATEGORIES,
-} from '../data/catalog';
+import { DEFAULT_CUSTOMIZATION_SETTINGS, TECH_BY_ID, TECH_CATEGORIES } from '../data/catalog';
 import standaloneSvgPartsJson from '../data/standaloneSvgParts.json';
 import {
   ALL_SVG_MOTION_FAMILIES,
@@ -542,7 +537,7 @@ export function sanitizeSettings(raw: unknown): CustomizationSettings {
 export function parsePersistedState(rawJson: string | null): PersistedStudioState {
   const fallback: PersistedStudioState = {
     version: 1,
-    selectedIds: [...DEFAULT_STARTER_STACK_IDS],
+    selectedIds: [],
     settings: { ...DEFAULT_CUSTOMIZATION_SETTINGS },
   };
 
@@ -557,7 +552,7 @@ export function parsePersistedState(rawJson: string | null): PersistedStudioStat
     }
 
     const settings = sanitizeSettings(parsed.settings);
-    let selectedIds: string[] = [...DEFAULT_STARTER_STACK_IDS];
+    let selectedIds: string[] = [];
 
     if (Array.isArray(parsed.selectedIds)) {
       const seen = new Set<string>();

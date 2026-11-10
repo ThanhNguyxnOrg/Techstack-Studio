@@ -2,7 +2,6 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
   DEFAULT_CUSTOMIZATION_SETTINGS,
-  DEFAULT_STARTER_STACK_IDS,
   GITHUB_PAGES_URL,
   TECH_BY_ID,
   TECH_CATALOG,
@@ -361,7 +360,7 @@ test('persistence round-trip and malformed state recovery work safely', () => {
   assert.equal(restored.settings.showInnerPlate, true);
 
   const malformed = parsePersistedState('{not-valid-json');
-  assert.deepEqual(malformed.selectedIds, DEFAULT_STARTER_STACK_IDS);
+  assert.deepEqual(malformed.selectedIds, []);
 });
 
 test('README Markdown, HTML, and Animated SVG exports reflect selected items, showLabels, showInnerPlate, and ThanhNguyxnOrg/Techstack-Studio URLs', () => {

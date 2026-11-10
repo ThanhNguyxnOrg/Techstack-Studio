@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Code2, ExternalLink, RotateCcw, Sliders, Trash2 } from 'lucide-react';
+import { CheckCircle2, Code2, ExternalLink, Sliders, Trash2, Undo2 } from 'lucide-react';
 import { GITHUB_REPO_URL } from '../data/catalog';
 import { StudioStage } from '../types/stack';
 
@@ -7,7 +7,8 @@ interface HeroSectionProps {
   selectedCount: number;
   activeStage: StudioStage;
   onSelectStage: (stage: StudioStage) => void;
-  onResetDefault: () => void;
+  onUndo: () => void;
+  canUndo: boolean;
   onClearAll: () => void;
 }
 
@@ -15,7 +16,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   selectedCount,
   activeStage,
   onSelectStage,
-  onResetDefault,
+  onUndo,
+  canUndo,
   onClearAll,
 }) => {
   return (
@@ -119,12 +121,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </a>
           <button
             type="button"
-            onClick={onResetDefault}
-            title="Restore default starter stack"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#CBD5E1] hover:text-[#F1F5F9] bg-[#0F131B] hover:bg-[#161C28] border border-[#1E2636] hover:border-[#2C374D] whitespace-nowrap shrink-0 transition-colors cursor-pointer"
+            onClick={onUndo}
+            disabled={!canUndo}
+            title="Undo the last change"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-[#CBD5E1] enabled:hover:text-[#F1F5F9] bg-[#0F131B] enabled:hover:bg-[#161C28] border border-[#1E2636] enabled:hover:border-[#2C374D] disabled:text-[#4B5563] disabled:cursor-not-allowed whitespace-nowrap shrink-0 transition-colors cursor-pointer"
           >
-            <RotateCcw className="w-3.5 h-3.5 text-[#38BDF8]" />
-            <span className="hidden sm:inline">Reset</span>
+            <Undo2 className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Undo</span>
           </button>
           <button
             type="button"
