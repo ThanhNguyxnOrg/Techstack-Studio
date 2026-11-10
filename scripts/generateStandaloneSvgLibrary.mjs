@@ -989,7 +989,7 @@ function buildSourceSvg(item) {
   }
 
   if (item.id === 'helm') {
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${USER_PORT_HELM.defs}${USER_PORT_HELM.plate}${USER_PORT_HELM.body}</svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="${label}">${USER_PORT_HELM.defs}${USER_PORT_HELM.plate}<style>.tss_helm_f0,.tss_helm_f1,.tss_helm_f2,.tss_helm_f3{opacity:0}</style>${USER_PORT_HELM.body}</svg>`;
   }
 
   if (item.id === 'netlify') {
@@ -5750,13 +5750,13 @@ function buildAnimatedSvg(item) {
       `@keyframes ${kAll}{0%{opacity:0}4%,92%{opacity:1}98%,100%{opacity:0}}` +
         `@keyframes ${kMark}{0%,30%{opacity:.25}50%,100%{opacity:1}}` +
         `@keyframes ${kWaveG}{0%{transform:translateY(18px)}40%,100%{transform:translateY(0)}}` +
-        `@keyframes ${kWave}{0%,40%{transform:translateX(0)}55%{transform:translateX(-1px)}70%{transform:translateX(1px)}85%{transform:translateX(-1px)}100%{transform:translateX(0)}}` +
+        `@keyframes ${kWave}{0%,38%{transform:translateX(0);opacity:0}44%,88%{opacity:1}55%{transform:translateX(-1px)}70%{transform:translateX(1px)}85%{transform:translateX(-1px)}96%,100%{transform:translateX(0);opacity:0}}` +
         `.${kAll}{animation:${kAll} ${dur} linear infinite}` +
         `.${kMark}{animation:${kMark} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
         `.${kWaveG}{animation:${kWaveG} ${dur} cubic-bezier(.22,1,.36,1) infinite}` +
-        `.${kWave}{animation:${kWave} ${dur} ease-in-out infinite}`,
+        `.${kWave}{opacity:0;animation:${kWave} ${dur} ease-in-out infinite}`,
       `.${kAll},.${kMark},.${kWaveG},.${kWave}{animation:none!important}` +
-        `.${kAll}{opacity:1!important}.${kMark}{opacity:1!important}.${kWaveG}{transform:translateY(0)!important}.${kWave}{transform:none!important}`,
+        `.${kAll}{opacity:1!important}.${kMark}{opacity:1!important}.${kWaveG}{transform:translateY(0)!important}.${kWave}{transform:none!important;opacity:0!important}`,
       `<g class="${kAll}"><g clip-path="url(#${cWave})"><path class="${kMark}" fill="${primary}" fill-rule="evenodd" d="${d}"/><g class="${kWaveG}"><path class="${kWave}" fill="${secondary}" d="M-4 12 C 0 8 4 8 8 12 C 12 16 16 16 20 12 C 24 8 28 8 32 12 L32 30 L-4 30 Z"/></g></g></g>`,
       'An async wave rises through the aiohttp mark and settles',
       'Clipped liquid wave rise + fill lock'
