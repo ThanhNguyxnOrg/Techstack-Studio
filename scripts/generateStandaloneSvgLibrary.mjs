@@ -1791,7 +1791,6 @@ const STORY_OVERRIDES = {
   seeedstudio: 'glide',
   texasinstruments: 'blade',
   circleci: 'blade',
-
 };
 
 const STORY_MOTIONS = {
