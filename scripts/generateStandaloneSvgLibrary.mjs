@@ -1123,7 +1123,7 @@ function buildSourceSvg(item) {
     // This replaces the invented green clock; the product's own wordmark
     // exists only as PNG/font-based files, so no verbatim vector wordmark
     // is available for the catalog.
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><defs><linearGradient id="tss_freertos_g" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#1B660F" offset="0%"/><stop stop-color="#6CAE3E" offset="100%"/></linearGradient></defs><g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path fill="${primary}" fill-rule="evenodd" d="${d}"/></g></svg>`;
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="${label}"><defs><linearGradient id="tss_freertos_g" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#1B660F" offset="0%"/><stop stop-color="#6CAE3E" offset="100%"/></linearGradient></defs><g transform="scale(1.6)"><rect x="0" y="0" width="80" height="80" fill="url(#tss_freertos_g)"/><path fill="#FFFFFF" fill-rule="evenodd" d="${d}"/></g></svg>`;
   }
   if (item.id === 'matter') {
     // Matter connectivity standard, verbatim official mark (three
@@ -2184,6 +2184,11 @@ function buildAnimatedSvg(item) {
       const pieces0 = (art.body.match(/<path[^>]*\/>/g) || []).slice();
       // Splitting drops the groups that carried paint and nested transforms, so keep them.
       const inheritedFill = (art.body.match(/<g[^>]*\sfill="([^"]+)"/) || [])[1];
+      // Multi-colour artwork paints its layers through several groups; a split
+      // would flatten them all to the first colour (Composer ships eight).
+      const inheritedFillCount = new Set(
+        [...art.body.matchAll(/<g[^>]*\sfill="([^"]+)"/g)].map((match) => match[1])
+      ).size;
       const innerTransforms = [...art.body.matchAll(/<g[^>]*\stransform="([^"]+)"/g)].map(
         (m) => m[1]
       );
@@ -2205,7 +2210,7 @@ function buildAnimatedSvg(item) {
           /\sfill="/.test(piece) ? piece : piece.replace('<path', `<path fill="${inheritedFill}"`)
         );
       }
-      if (pieces.length >= 2) {
+      if (pieces.length >= 2 && inheritedFillCount <= 1) {
         const styles = [];
         const rules = [];
         const reduce = [];
