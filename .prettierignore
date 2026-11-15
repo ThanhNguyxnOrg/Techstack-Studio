@@ -15,3 +15,7 @@ public/catalog.json
 public/icons/manifest.json
 public/llms.txt
 exports/
+
+# Organization-managed workflows are validated centrally with actionlint.
+.github/workflows/agent-pr-signal.yml
+.github/workflows/agent-pr-worker.yml
