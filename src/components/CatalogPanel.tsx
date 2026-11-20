@@ -1,7 +1,8 @@
-import React, { useMemo, useState } from 'react';
-import { ArrowUpDown, Check, Plus, Search, X } from 'lucide-react';
+import React, { useMemo, useRef, useState } from 'react';
+import { ArrowUpDown, Check, FileUp, Plus, Search, Sparkles, X } from 'lucide-react';
 import { TECH_CATALOG, TECH_CATEGORIES } from '../data/catalog';
 import { CatalogSortMode, TechCategory } from '../types/stack';
+import { detectStackFromFileContent } from '../utils/stackDetector';
 import { filterCatalog, sortCatalogItems } from '../utils/studioLogic';
 import { TechIcon } from './TechIcon';
 
@@ -10,6 +11,7 @@ interface CatalogPanelProps {
   animateSvgLogos: boolean;
   animationSpeedMultiplier: number;
   onToggleTech: (techId: string) => void;
+  onImportStack?: (ids: string[], mode: 'merge' | 'replace') => void;
 }
 
 const CATEGORY_SHORT_LABELS: Record<TechCategory, string> = {
@@ -28,12 +30,36 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
   animateSvgLogos,
   animationSpeedMultiplier,
   onToggleTech,
+  onImportStack,
 }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<TechCategory | 'all'>('all');
   const [activeSubcategory, setActiveSubcategory] = useState<string>('all');
   const [sortMode, setSortMode] = useState<CatalogSortMode>('popularity');
   const [visibleLimit, setVisibleLimit] = useState<number>(40);
+  const [showImport, setShowImport] = useState(false);
+  const [importText, setImportText] = useState('');
+  const [importFilename, setImportFilename] = useState('');
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const detectedIds = useMemo(
+    () => (showImport ? detectStackFromFileContent(importText, TECH_CATALOG, importFilename) : []),
+    [showImport, importText, importFilename]
+  );
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setImportFilename(file.name);
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === 'string') {
+        setImportText(reader.result);
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  };
 
   const selectedSet = useMemo(() => new Set(selectedIds), [selectedIds]);
 
@@ -82,10 +108,113 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
               Select logos to add them to your live animated stack.
             </p>
           </div>
-          <span className="px-2.5 py-1 rounded-lg bg-[#141923] border border-[#1E2636] text-xs font-medium text-[#94A3B8] tabular-nums shrink-0">
-            {filteredAndSorted.length} available
-          </span>
+          <div className="flex items-center gap-1.5 shrink-0">
+            {onImportStack && (
+              <button
+                type="button"
+                onClick={() => setShowImport((prev) => !prev)}
+                aria-expanded={showImport}
+                title="Auto-detect stack from package.json, Dockerfile, requirements.txt, Cargo.toml, go.mod..."
+                className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-xs font-medium transition-colors cursor-pointer ${
+                  showImport
+                    ? 'bg-[#38BDF8]/15 border-[#38BDF8]/50 text-[#38BDF8]'
+                    : 'bg-[#141923] border-[#1E2636] text-[#CBD5E1] hover:border-[#38BDF8]/60 hover:text-[#F1F5F9]'
+                }`}
+              >
+                <FileUp className="w-3.5 h-3.5" aria-hidden="true" />
+                <span>Import file</span>
+              </button>
+            )}
+            <span className="px-2.5 py-1 rounded-lg bg-[#141923] border border-[#1E2636] text-xs font-medium text-[#94A3B8] tabular-nums">
+              {filteredAndSorted.length} available
+            </span>
+          </div>
         </div>
+
+        {/* Auto-detect Stack from Project File */}
+        {showImport && onImportStack && (
+          <div className="p-3 rounded-xl bg-[#090B10] border border-[#1E2636] space-y-2.5">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 text-xs font-medium text-[#E2E8F0]">
+                <Sparkles className="w-3.5 h-3.5 text-[#38BDF8]" aria-hidden="true" />
+                <span>Auto-detect stack from project file</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".json,.txt,.toml,.mod,.yml,.yaml,Dockerfile,Gemfile"
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="px-2 py-1 rounded-md bg-[#141923] border border-[#2C374D] text-[11px] font-medium text-[#E2E8F0] hover:border-[#38BDF8] transition-colors cursor-pointer"
+                >
+                  Choose file
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowImport(false);
+                    setImportText('');
+                    setImportFilename('');
+                  }}
+                  aria-label="Close import panel"
+                  className="p-1 text-[#64748B] hover:text-[#F1F5F9] cursor-pointer"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
+            <textarea
+              value={importText}
+              onChange={(e) => setImportText(e.target.value)}
+              rows={3}
+              placeholder="Paste package.json, requirements.txt, Dockerfile, Cargo.toml, or go.mod..."
+              aria-label="Paste project manifest content"
+              className="w-full px-2.5 py-2 bg-[#0F131B] border border-[#1E2636] focus:border-[#38BDF8] rounded-lg text-[11px] font-mono text-[#E2E8F0] placeholder-[#64748B] focus:outline-none resize-y"
+            />
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[11px] text-[#94A3B8]">
+                {detectedIds.length > 0
+                  ? `Detected ${detectedIds.length} technologies${importFilename ? ` in ${importFilename}` : ''}`
+                  : importText.trim()
+                    ? 'No matching technologies detected yet.'
+                    : 'Supports package.json, requirements.txt, Dockerfile, go.mod, Cargo.toml…'}
+              </span>
+              {detectedIds.length > 0 && (
+                <div className="flex items-center gap-1.5">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onImportStack(detectedIds, 'merge');
+                      setShowImport(false);
+                      setImportText('');
+                      setImportFilename('');
+                    }}
+                    className="px-2.5 py-1 rounded-lg bg-[#38BDF8]/15 border border-[#38BDF8]/40 text-[11px] font-semibold text-[#38BDF8] hover:bg-[#38BDF8]/25 transition-colors cursor-pointer"
+                  >
+                    Add ({detectedIds.length})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onImportStack(detectedIds, 'replace');
+                      setShowImport(false);
+                      setImportText('');
+                      setImportFilename('');
+                    }}
+                    className="px-2.5 py-1 rounded-lg bg-[#38BDF8] text-[#090B10] text-[11px] font-semibold hover:bg-[#7DD3FC] transition-colors cursor-pointer"
+                  >
+                    Replace stack
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Search Input + Sort Selector */}
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-2.5">
@@ -106,7 +235,7 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
               aria-label="Search technologies"
               className="w-full pl-9 pr-8 py-2 bg-[#090B10] border border-[#1E2636] focus:border-[#38BDF8] rounded-xl text-xs text-[#F1F5F9] placeholder-[#64748B] focus:outline-none transition-colors"
             />
-            {searchQuery && (
+            {searchQuery ? (
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
@@ -115,6 +244,13 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
               >
                 <X className="w-3.5 h-3.5" />
               </button>
+            ) : (
+              <kbd
+                aria-hidden="true"
+                className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded bg-[#141923] border border-[#1E2636] text-[10px] font-mono text-[#64748B] absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              >
+                /
+              </kbd>
             )}
           </div>
 

@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Logstash" data-devicon="1"><g transform="translate(0 0) scale(0.1875)"><path fill="#00bfb3" d="M72 128h44V80H72Zm0 0"/>
-    <path fill="#fec514" d="M12 0H8v80h52V48C60 21.488 38.508 0 12 0"/>
-    <path fill="#343741" d="M8 80c0 26.508 21.492 48 48 48h4V80Zm0 0"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Logstash"><g transform="matrix(0.9167 0 0 0.9167 1.3438 1)"><g transform="translate(0 0) scale(0.1875)"><path fill="#00bfb3" d="M72 128L116 128L116 80L72 80Z"/><path fill="#00bfb3" d="M72 128"/><path fill="#fec514" d="M12 0H8v80h52V48C60 21.488 38.508 0 12 0"/><path fill="#343741" d="M8 80C8 106.508 29.492 128 56 128L60 128L60 80Z"/><path fill="#343741" d="M8 80"/></g></g></svg>

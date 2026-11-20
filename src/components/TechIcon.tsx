@@ -1,4 +1,5 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
+import storyConceptsJson from '../data/storyConcepts.json';
 import { PreviewTheme, TechItem } from '../types/stack';
 import { buildInternalSvgAnimationMarkup } from '../utils/studioLogic';
 import {
@@ -8,6 +9,8 @@ import {
   scopeStandaloneSvgParts,
 } from '../utils/svgAssetLoader';
 import { usePrefersReducedMotion } from '../utils/usePrefersReducedMotion';
+
+const STORY_CONCEPTS = storyConceptsJson as Record<string, string>;
 
 interface TechIconProps {
   item: TechItem;
@@ -39,10 +42,11 @@ export const TechIcon: React.FC<TechIconProps> = ({
   const containerRef = useRef<HTMLSpanElement | null>(null);
   const [isVisible, setIsVisible] = useState(true);
 
-  const shouldAnimate = animate && !prefersReducedMotion && isVisible;
-  const activeAssetPath = shouldAnimate
+  const wantsAnimatedAsset = animate && !prefersReducedMotion;
+  const activeAssetPath = wantsAnimatedAsset
     ? item.animatedSvgPath || `/icons/animated/${item.id}.svg`
     : item.sourceSvgPath || `/icons/source/${item.id}.svg`;
+  const isPausedOffscreen = wantsAnimatedAsset && !isVisible;
 
   const [fetchedSvg, setFetchedSvg] = useState<ParsedStandaloneSvg | undefined>(() =>
     getCachedStandaloneSvgAsset(activeAssetPath)
@@ -120,18 +124,21 @@ export const TechIcon: React.FC<TechIconProps> = ({
   }
 
   const parts = fetchedSvg
-    ? shouldAnimate
+    ? wantsAnimatedAsset
       ? scopeStandaloneSvgParts(fetchedSvg, item, uid, speedMultiplier)
       : { defs: fetchedSvg.defs, style: '', body: fetchedSvg.body }
     : buildInternalSvgAnimationMarkup(item, uid, {
         theme,
-        animate: shouldAnimate,
+        animate: wantsAnimatedAsset,
         speedMultiplier,
       });
 
   const innerSvgMarkup = `${parts.defs ? `<defs>${parts.defs}</defs>` : ''}${
     parts.style ? `<style>${parts.style}</style>` : ''
   }${parts.body}`;
+
+  const story = STORY_CONCEPTS[item.id];
+  const tooltip = story ? `${item.name} — ${story}` : item.name;
 
   const plateClasses = showPlate
     ? 'bg-[#111622] border border-[#222B3D] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] group-hover:border-[#33415C]'
@@ -142,18 +149,18 @@ export const TechIcon: React.FC<TechIconProps> = ({
       ref={containerRef}
       data-svg-asset={activeAssetPath}
       data-svg-loaded={fetchedSvg ? 'true' : 'hydrated'}
-      className={`inline-flex items-center justify-center select-none shrink-0 transition-colors duration-150 ${plateClasses} ${className}`}
+      className={`inline-flex items-center justify-center select-none shrink-0 transition-colors duration-150 ${plateClasses} ${isPausedOffscreen ? 'tss-paused' : ''} ${className}`}
       style={{
         width: size,
         height: size,
         borderRadius: showPlate ? borderRadius : 0,
         padding,
       }}
-      title={item.name}
+      title={tooltip}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox={fetchedSvg?.viewBox || item.svgViewBox || '0 0 24 24'}
+        viewBox={fetchedSvg?.viewBox || '0 0 24 24'}
         role="img"
         aria-label={item.name}
         className="w-full h-full overflow-visible block"

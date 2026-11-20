@@ -1,7 +1,8 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Check, Code2, Copy, Download, FileCode, Image } from 'lucide-react';
 import { CustomizationSettings, ExportFormat, TechItem } from '../types/stack';
 import { generateExportOutput, generateStandaloneSvg } from '../utils/studioLogic';
+import { ensureSvgPartsForItems, hasStandaloneSvgPartsFor } from '../utils/svgPartsStore';
 
 interface ExportStudioProps {
   selectedItems: TechItem[];
@@ -42,16 +43,32 @@ const FORMAT_OPTIONS: Array<{
 export const ExportStudio: React.FC<ExportStudioProps> = ({ selectedItems, settings }) => {
   const [activeFormat, setActiveFormat] = useState<ExportFormat>('markdown');
   const [copyStatus, setCopyStatus] = useState<'idle' | 'copied' | 'error'>('idle');
+  const [partsVersion, setPartsVersion] = useState(0);
+  const partsReady = hasStandaloneSvgPartsFor(selectedItems);
   const codeAreaRef = useRef<HTMLTextAreaElement>(null);
 
+  useEffect(() => {
+    if (partsReady) return;
+    let cancelled = false;
+    ensureSvgPartsForItems(selectedItems).then(() => {
+      if (!cancelled) setPartsVersion((v) => v + 1);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [selectedItems, partsReady]);
+
   const generatedCode = useMemo(
-    () => generateExportOutput(activeFormat, selectedItems, settings),
-    [activeFormat, selectedItems, settings]
+    () =>
+      partsReady || activeFormat === 'markdown'
+        ? generateExportOutput(activeFormat, selectedItems, settings)
+        : '',
+    [activeFormat, selectedItems, settings, partsReady, partsVersion]
   );
 
   const svgPreviewMarkup = useMemo(
-    () => generateStandaloneSvg(selectedItems, settings),
-    [selectedItems, settings]
+    () => (partsReady ? generateStandaloneSvg(selectedItems, settings) : ''),
+    [selectedItems, settings, partsReady, partsVersion]
   );
 
   const activeFormatMeta =

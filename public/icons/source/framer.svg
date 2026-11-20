@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Framer"><path fill="#0055FF" fill-rule="evenodd" d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="Framer"><g transform="matrix(0.9167 0 0 0.9167 1 1)"><path fill="#0055FF" fill-rule="evenodd" d="M4 0L20 0L20 8L12 8Z"/><path fill="#0055FF" fill-rule="evenodd" d="M4 8L12 8L20 16L4 16Z"/><path fill="#0055FF" fill-rule="evenodd" d="M4 16L12 16L12 24Z"/></g></svg>

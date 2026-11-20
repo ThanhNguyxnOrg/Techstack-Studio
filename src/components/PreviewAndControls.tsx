@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   AlignCenter,
   AlignLeft,
@@ -15,10 +15,12 @@ import {
   Pause,
   Play,
   Sliders,
+  Sparkles,
   Sun,
   Tag,
 } from 'lucide-react';
 import { GITHUB_PAGES_URL, GITHUB_RAW_PUBLIC_URL, STUDIO_PRESETS } from '../data/catalog';
+import storyConceptsJson from '../data/storyConcepts.json';
 import {
   CustomizationSettings,
   PresentationStyle,
@@ -27,8 +29,11 @@ import {
   WebAnimationStyle,
 } from '../types/stack';
 import { generateStandaloneSvg, groupItemsByCategory } from '../utils/studioLogic';
+import { ensureSvgPartsForItems, hasStandaloneSvgPartsFor } from '../utils/svgPartsStore';
 import { usePrefersReducedMotion } from '../utils/usePrefersReducedMotion';
 import { TechIcon } from './TechIcon';
+
+const STORY_CONCEPTS = storyConceptsJson as Record<string, string>;
 
 interface PreviewAndControlsProps {
   items: TechItem[];
@@ -110,8 +115,26 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
   const prefersReducedMotion = usePrefersReducedMotion();
   const isDark = settings.theme === 'dark';
   const [previewMode, setPreviewMode] = useState<'interactive' | 'svg-banner'>('interactive');
+  const [partsVersion, setPartsVersion] = useState(0);
+  const partsReady = hasStandaloneSvgPartsFor(items);
+  const [hoveredItem, setHoveredItem] = useState<TechItem | null>(null);
 
-  const svgBannerMarkup = useMemo(() => generateStandaloneSvg(items, settings), [items, settings]);
+  useEffect(() => {
+    if (previewMode !== 'svg-banner' || partsReady) return;
+    let cancelled = false;
+    ensureSvgPartsForItems(items).then(() => {
+      if (!cancelled) setPartsVersion((v) => v + 1);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [previewMode, items, partsReady]);
+
+  const svgBannerMarkup = useMemo(
+    () =>
+      previewMode === 'svg-banner' && partsReady ? generateStandaloneSvg(items, settings) : '',
+    [previewMode, partsReady, partsVersion, items, settings]
+  );
 
   const activePresetId = useMemo(() => {
     const match = STUDIO_PRESETS.find((preset) =>
@@ -179,6 +202,8 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
           {groupItems.map((item) => (
             <div
               key={item.id}
+              onMouseEnter={() => setHoveredItem(item)}
+              onMouseLeave={() => setHoveredItem((cur) => (cur?.id === item.id ? null : cur))}
               className={`group inline-flex flex-col items-center text-center transition-colors ${getTileStyleClasses(
                 settings.presentationStyle
               )} ${getContainerMotionClass(settings.animationStyle)}`}
@@ -211,6 +236,8 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
         {groupItems.map((item) => (
           <div
             key={item.id}
+            onMouseEnter={() => setHoveredItem(item)}
+            onMouseLeave={() => setHoveredItem((cur) => (cur?.id === item.id ? null : cur))}
             className={`group inline-flex flex-col items-center text-center transition-colors ${getTileStyleClasses(
               settings.presentationStyle
             )} ${getContainerMotionClass(settings.animationStyle)}`}
@@ -417,6 +444,23 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
             </>
           )}
         </div>
+
+        {/* Motion Story Bar — reveals the bespoke choreography story for the hovered logo */}
+        {previewMode === 'interactive' && items.length > 0 && (
+          <div className="px-4 sm:px-5 py-2 border-t border-[#1E2636] bg-[#0A0E15] flex items-center gap-2 text-[11px] min-h-[34px]">
+            <Sparkles className="w-3.5 h-3.5 text-[#38BDF8] shrink-0" aria-hidden="true" />
+            {hoveredItem ? (
+              <p className="text-[#CBD5E1] truncate">
+                <span className="font-semibold text-[#F1F5F9]">{hoveredItem.name}:</span>{' '}
+                {STORY_CONCEPTS[hoveredItem.id] || hoveredItem.role}
+              </p>
+            ) : (
+              <p className="text-[#64748B] truncate">
+                Hover any logo above to read its bespoke motion story.
+              </p>
+            )}
+          </div>
+        )}
 
         {/* One editing surface for every style control */}
         {showCustomization && (

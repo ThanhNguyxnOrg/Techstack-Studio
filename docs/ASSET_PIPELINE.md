@@ -46,63 +46,18 @@ bundled community icon set and 53 from official or verified vectors.
 
 ## Phase 2 — SVG generation
 
-`scripts/generateStandaloneSvgLibrary.mjs` reads the catalog and writes four
-outputs.
+`scripts/icons/build.mjs` reads `src/data/generatedCatalog.json`, master vector art in
+`assets/icons/art/{id}.svg`, and per-icon story specs in `scripts/icons/stories/*.mjs`,
+then writes five outputs:
 
-### `public/icons/source/{id}.svg`
-
-Static, brand-accurate SVGs normalized to `viewBox="0 0 24 24"`. Most use the
-bundled community icon path directly. Roughly 40 marks with multi-color or structural detail
-(Google Cloud, Python, TypeScript, JavaScript, AWS, Spring Boot, C/C++, C#, Docker,
-Node.js, Next.js, React, Kubernetes, Git, and others) get dedicated source
-builders so the static file stays faithful to the official logo.
-
-### `public/icons/animated/{id}.svg`
-
-Standalone animated SVGs with:
-
-- the brand mark and animation layers in one file
-- CSS `@keyframes` inside `<style>` (no JavaScript)
-- a `prefers-reduced-motion: reduce` block that freezes the logo
-- unique, prefixed IDs so multiple files can be inlined on one page
-- no external images, fonts, or scripts
-
-The generator starts from one of 18 motion families, then applies hand-tuned
-choreography for the most recognizable marks. Family assignment lives in the seed
-table and is recorded in the animation manifest.
-
-| Family                    | Motion idea                                     |
-| ------------------------- | ----------------------------------------------- |
-| `liquid-wave-fill`        | Dual-tone waves rise inside the logo silhouette |
-| `stroke-trace-fill`       | Outline draws, then fills with brand color      |
-| `orbital-spin`            | Satellite accents orbit the mark                |
-| `dual-snake-interlock`    | Two halves interlock along the logo's centroid  |
-| `container-stack-slide`   | Stacked layers slide into place                 |
-| `circuit-trace-pulse`     | Pulses travel along circuit-like paths          |
-| `node-network-signal`     | Nodes light up in sequence                      |
-| `flame-core-flicker`      | Warm core flicker with a stable silhouette      |
-| `radar-sweep-mask`        | Sweep reveals the mark through a mask           |
-| `shimmer-prism-sweep`     | Prismatic highlight crosses the logo            |
-| `segmented-assembly`      | Segments assemble from offset positions         |
-| `curtain-vertical-reveal` | Vertical curtain reveal                         |
-| `pendulum-harmonic`       | Harmonic pendulum sway                          |
-| `pixel-grid-cascade`      | Pixel cells cascade into the mark               |
-| `data-stream-flow`        | Data particles stream through the shape         |
-| `iris-aperture-bloom`     | Aperture-style bloom from the center            |
-| `beacon-ripple-rings`     | Concentric beacon rings expand                  |
-| `elastic-morph-bounce`    | Elastic scale/settle with overshoot             |
-
-### `src/data/standaloneSvgParts.json`
-
-The export runtime for the app. Each entry stores `defs`, `style`, `body`, and
-`staticBody` fragments so `generateStandaloneSvg()` can compose a banner without
-fetching 542 files. Also stores the human-readable `concept` and `technique` used
-by the animation manifest.
-
-### `docs/animation/animation-manifest.json`
-
-Provenance for every animated asset: source path, motion family, duration,
-technique, and concept. Useful when reviewing a large regeneration diff.
+- `public/icons/source/{id}.svg` — pure-vector, dark-surface-safe static SVGs normalized
+  to a unified `viewBox="0 0 24 24"`. Zero raster `<image>` embeds.
+- `public/icons/animated/{id}.svg` — self-contained animated SVGs on a synchronized
+  `4.8s` loop (`0–6%` and `72–100%` rest cleanly on the static logo; `6–72%` plays the
+  logo's unique motion story), with scoped `tss_{uid}_*` IDs and `prefers-reduced-motion: reduce`.
+- `src/data/standaloneSvgParts.json` — minified runtime fragments lazily loaded for offline exports.
+- `src/data/storyConcepts.json` — compact `id -> story` map used by tooltips and the Live Preview story bar.
+- `docs/animation/animation-manifest.json` — provenance and unique story metadata for all 542 icons.
 
 ## Output inventory
 

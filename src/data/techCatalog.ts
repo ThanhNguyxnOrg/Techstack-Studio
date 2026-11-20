@@ -1,13 +1,14 @@
 import { TechItem } from '../types/stack';
-import generatedCatalogJson from './generatedCatalog.json';
+import catalogRuntimeJson from './catalogRuntime.json';
 
 /**
  * Canonical SVG-first technology catalog (542 verified entries).
- * Every entry maps deterministically to:
+ * Uses the lightweight runtime manifest (omitting raw svgPath strings) since
+ * every entry maps deterministically to:
  * - Static source SVG: `/icons/source/{id}.svg`
  * - Standalone animated SVG: `/icons/animated/{id}.svg`
  */
-export const TECH_CATALOG: TechItem[] = (generatedCatalogJson as TechItem[]).map((item) => ({
+export const TECH_CATALOG: TechItem[] = (catalogRuntimeJson as TechItem[]).map((item) => ({
   ...item,
   sourceSvgPath: item.sourceSvgPath || `/icons/source/${item.id}.svg`,
   animatedSvgPath: item.animatedSvgPath || `/icons/animated/${item.id}.svg`,

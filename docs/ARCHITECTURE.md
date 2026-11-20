@@ -35,25 +35,27 @@ bundle, Google Fonts, and same-origin SVG files in `public/icons/`.
 
 ## Module map
 
-| Path                                       | Responsibility                                                                                        |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| `src/App.tsx`                              | Owns selection and settings state, restores persisted state, wires the page together.                 |
-| `src/components/HeroSection.tsx`           | Sticky header, stage navigation, GitHub link, reset and clear actions.                                |
-| `src/components/CatalogPanel.tsx`          | Search, category filters, sorting, and technology cards.                                              |
-| `src/components/PreviewAndControls.tsx`    | Live preview modes, themes, sizing, layout, animation, and copy/download shortcuts.                   |
-| `src/components/SelectedStackBar.tsx`      | Reorder, remove, reset, and clear the selected stack.                                                 |
-| `src/components/ExportStudio.tsx`          | Format tabs, generated code, clipboard, file download, and SVG preview.                               |
-| `src/components/TechIcon.tsx`              | Loads a standalone SVG, scopes its IDs, applies reduced motion, and renders it inline or as an image. |
-| `src/data/catalog.ts`                      | Public URLs, default settings, starter stack, and presets.                                            |
-| `src/data/techCatalog.ts`                  | Typed catalog index and legacy-ID aliases.                                                            |
-| `src/data/generatedCatalog.json`           | Generated catalog metadata for all 542 entries. Do not hand-edit.                                     |
-| `src/data/standaloneSvgParts.json`         | Generated `defs`/`style`/`body` fragments used for synchronous exports. Do not hand-edit.             |
-| `src/utils/studioLogic.ts`                 | Selection rules, search/sort, persistence sanitization, export generators, and SVG markup assembly.   |
-| `src/utils/svgAssetLoader.ts`              | Fetch cache, SVG parsing, ID scoping, and base-path resolution.                                       |
-| `src/utils/usePrefersReducedMotion.ts`     | Subscribes to the `prefers-reduced-motion` media query.                                               |
-| `src/types/stack.ts`                       | Domain types, including the 18 motion families.                                                       |
-| `scripts/buildCatalogManifest.mjs`         | Resolves the seed table into the catalog using the bundled community icon set and verified fallbacks. |
-| `scripts/generateStandaloneSvgLibrary.mjs` | Builds source SVGs, animated SVGs, runtime parts, and the animation manifest.                         |
+| Path                                    | Responsibility                                                                                          |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `src/App.tsx`                           | Owns selection and settings state, restores persisted state, wires the page together.                   |
+| `src/components/HeroSection.tsx`        | Sticky header, stage navigation, GitHub link, reset and clear actions.                                  |
+| `src/components/CatalogPanel.tsx`       | Search, category filters, sorting, and technology cards.                                                |
+| `src/components/PreviewAndControls.tsx` | Live preview modes, themes, sizing, layout, animation, and copy/download shortcuts.                     |
+| `src/components/SelectedStackBar.tsx`   | Reorder, remove, reset, and clear the selected stack.                                                   |
+| `src/components/ExportStudio.tsx`       | Format tabs, generated code, clipboard, file download, and SVG preview.                                 |
+| `src/components/TechIcon.tsx`           | Loads a standalone SVG, scopes its IDs, applies reduced motion, and renders it inline or as an image.   |
+| `src/data/catalog.ts`                   | Public URLs, default settings, starter stack, and presets.                                              |
+| `src/data/techCatalog.ts`               | Typed catalog index and legacy-ID aliases.                                                              |
+| `src/data/generatedCatalog.json`        | Generated catalog metadata for all 542 entries. Do not hand-edit.                                       |
+| `src/data/standaloneSvgParts.json`      | Generated `defs`/`style`/`body` fragments lazily loaded for offline SVG/HTML exports. Do not hand-edit. |
+| `src/data/storyConcepts.json`           | Compact `id -> story` lookup used by tooltips and the Live Preview motion story bar. Do not hand-edit.  |
+| `src/utils/svgPartsStore.ts`            | Lazy async loader (`ensureStandaloneSvgParts`) keeping the 7 MB export chunk out of the initial bundle. |
+| `src/utils/studioLogic.ts`              | Selection rules, search/sort, persistence sanitization, export generators, and SVG markup assembly.     |
+| `src/utils/svgAssetLoader.ts`           | Fetch cache, SVG parsing, ID scoping, and base-path resolution.                                         |
+| `src/utils/usePrefersReducedMotion.ts`  | Subscribes to the `prefers-reduced-motion` media query.                                                 |
+| `src/types/stack.ts`                    | Domain types, including the 18 motion families.                                                         |
+| `scripts/buildCatalogManifest.mjs`      | Resolves the seed table into the catalog using the bundled community icon set and verified fallbacks.   |
+| `scripts/icons/`                        | Modular SVG story engine (`art.mjs`, `engine.mjs`, `motifs.mjs`, `stories/*.mjs`, `build.mjs`).         |
 
 ## State and persistence
 
@@ -82,31 +84,11 @@ renders the static body instead of the animation.
 
 ## Export rendering
 
-Exports must work synchronously and offline, so they do not fetch 542 SVG files.
-Instead, `generateStandaloneSvgLibrary.mjs` compiles each logo into
-`standaloneSvgParts.json`:
-
-```json
-{
-  "docker": {
-    "defs": "<clipPath ...>",
-    "style": "@keyframes ...",
-    "body": "<g ...>",
-    "staticBody": "<g ...>",
-    "concept": "…",
-    "technique": "…"
-  }
-}
-```
-
-`generateStandaloneSvg()` composes those fragments into one `<svg>` with layout,
-tiles, labels, theme colors, and per-icon transforms. Markdown export references
-the hosted SVG files; HTML export embeds the generated vector markup.
-
-The tradeoff is bundle size. `standaloneSvgParts.json` is about 4.2 MB of source
-(roughly 1.35 MB gzipped for the whole app), which keeps exports instant and
-offline. A future improvement could move the parts behind a lazy import, at the
-cost of an extra load before the export panel is usable.
+Exports work offline without fetching 542 separate SVG files. `scripts/icons/build.mjs`
+compiles each logo into `src/data/standaloneSvgParts.json`, which is loaded lazily via
+`ensureStandaloneSvgParts()` (`src/utils/svgPartsStore.ts`) only when the user opens
+the Export panel or switches to SVG Banner preview. This keeps the initial app bundle
+lightweight while keeping exports fast and self-contained.
 
 ## Accessibility
 

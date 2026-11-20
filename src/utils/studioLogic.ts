@@ -1,5 +1,4 @@
 import { DEFAULT_CUSTOMIZATION_SETTINGS, TECH_BY_ID, TECH_CATEGORIES } from '../data/catalog';
-import standaloneSvgPartsJson from '../data/standaloneSvgParts.json';
 import {
   ALL_SVG_MOTION_FAMILIES,
   CatalogSortMode,
@@ -16,20 +15,9 @@ import {
   WebAnimationStyle,
 } from '../types/stack';
 import { scopeStandaloneSvgParts } from './svgAssetLoader';
+import { getStandaloneSvgPart } from './svgPartsStore';
 
 export const STORAGE_KEY = 'tech_stack_studio_state_v3';
-
-interface StandaloneSvgPartEntry {
-  defs: string;
-  style: string;
-  body: string;
-  staticBody: string;
-  viewBox?: string;
-  concept: string;
-  technique: string;
-}
-
-const STANDALONE_SVG_PARTS = standaloneSvgPartsJson as Record<string, StandaloneSvgPartEntry>;
 
 /**
  * Escapes HTML & XML special characters to prevent injection in generated Markdown, HTML, and SVG.
@@ -63,7 +51,7 @@ export function validateCatalogManifest(catalog: readonly TechItem[]): ManifestV
     }
     seenIds.add(item.id);
 
-    if (!item.name || !item.svgPath || item.svgPath.trim().length < 8) {
+    if (!item.name || (!item.sourceSvgPath && (!item.svgPath || item.svgPath.trim().length < 8))) {
       errors.push(`Invalid or empty SVG path for ${item.id}`);
     }
 
@@ -580,6 +568,85 @@ export function parsePersistedState(rawJson: string | null): PersistedStudioStat
 }
 
 /**
+ * Parses shareable URL query parameters (?stack=react,nodejs&theme=light&style=cards&cols=5&speed=1.5).
+ * Returns null if no ?stack= parameter is present.
+ */
+export function parseShareUrlParams(
+  search: string
+): { selectedIds: string[]; settings: CustomizationSettings } | null {
+  try {
+    const params = new URLSearchParams(search);
+    const rawStack = params.get('stack');
+    if (rawStack === null) return null;
+    const requestedIds = rawStack
+      .split(',')
+      .map((value) => value.trim())
+      .filter(Boolean);
+    const selectedIds = resolveSelectedItems(requestedIds).map((item) => item.id);
+    const partial: Partial<CustomizationSettings> = {};
+    const theme = params.get('theme');
+    if (theme === 'dark' || theme === 'light') partial.theme = theme;
+    const style = params.get('style');
+    if (style === 'tiles' || style === 'minimal' || style === 'cards' || style === 'pills') {
+      partial.presentationStyle = style;
+    }
+    const cols = Number(params.get('cols'));
+    if (Number.isFinite(cols) && cols >= 1 && cols <= 12) partial.itemsPerRow = Math.round(cols);
+    const speed = Number(params.get('speed'));
+    if ([0.5, 1, 1.5].includes(speed)) partial.animationSpeedMultiplier = speed;
+    if (params.get('anim') === '0') partial.animateSvgLogos = false;
+    if (params.get('labels') === '0') partial.showLabels = false;
+    if (params.get('plate') === '0') partial.showInnerPlate = false;
+
+    return {
+      selectedIds,
+      settings: sanitizeSettings({ ...DEFAULT_CUSTOMIZATION_SETTINGS, ...partial }),
+    };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Applies current stack & non-default style settings to a URLSearchParams object
+ * so copied browser links preserve both the selected stack and visual configuration.
+ */
+export function writeShareUrlParams(
+  params: URLSearchParams,
+  selectedIds: string[],
+  settings: CustomizationSettings
+): void {
+  if (selectedIds.length > 0) params.set('stack', selectedIds.join(','));
+  else params.delete('stack');
+
+  const setOrDel = (key: string, value: string | null) => {
+    if (value === null) params.delete(key);
+    else params.set(key, value);
+  };
+
+  setOrDel(
+    'theme',
+    settings.theme !== DEFAULT_CUSTOMIZATION_SETTINGS.theme ? settings.theme : null
+  );
+  setOrDel(
+    'style',
+    settings.presentationStyle !== DEFAULT_CUSTOMIZATION_SETTINGS.presentationStyle
+      ? settings.presentationStyle
+      : null
+  );
+  setOrDel('cols', settings.itemsPerRow > 0 ? String(settings.itemsPerRow) : null);
+  setOrDel(
+    'speed',
+    settings.animationSpeedMultiplier !== DEFAULT_CUSTOMIZATION_SETTINGS.animationSpeedMultiplier
+      ? String(settings.animationSpeedMultiplier)
+      : null
+  );
+  setOrDel('anim', !settings.animateSvgLogos ? '0' : null);
+  setOrDel('labels', !settings.showLabels ? '0' : null);
+  setOrDel('plate', !settings.showInnerPlate ? '0' : null);
+}
+
+/**
  * Serializes studio state into JSON for LocalStorage persistence.
  */
 export function serializePersistedState(state: PersistedStudioState): string {
@@ -593,26 +660,10 @@ export function serializePersistedState(state: PersistedStudioState): string {
 }
 
 /**
- * Returns the viewBox used to scale an icon in generated SVG output.
- * C++ and TypeScript ship normalized 24-unit artwork even though the catalog
- * retains their historical viewBox for source-asset compatibility.
- * Playwright is the opposite case: its artwork ships at 128 units, so the
- * banner export must use 128, not the catalog's historical 24, or the two
- * theatre masks get clipped to the top-left corner.
+ * Returns the unified 24x24 viewBox used for all normalized icon artwork.
  */
 function getIconViewBox(item: TechItem): string {
-  // The generated part knows the artwork's real frame, so 128-unit logos such as
-  // Vue or Vite are no longer drawn inside a 24-unit box and blown up.
-  const partViewBox = STANDALONE_SVG_PARTS[item.id]?.viewBox;
-  if (partViewBox) return partViewBox;
-  if (item.id === 'playwright') return '0 0 128 128';
-  if (item.id === 'echo') return '0 0 128 128';
-  if (item.id === 'openvino') return '0 0 128 128';
-  if (item.id === 'azuresqldatabase') return '0 0 18 18';
-  if (item.id === 'googledataflow') return '0 0 32 32';
-  return item.id === 'cpp' || item.id === 'typescript'
-    ? '0 0 24 24'
-    : item.svgViewBox || '0 0 24 24';
+  return getStandaloneSvgPart(item.id)?.viewBox || '0 0 24 24';
 }
 
 /**
@@ -632,12 +683,14 @@ export function buildInternalSvgAnimationMarkup(
   const speed =
     options.speedMultiplier && options.speedMultiplier > 0 ? options.speedMultiplier : 1;
 
-  const entry = STANDALONE_SVG_PARTS[item.id];
+  const entry = getStandaloneSvgPart(item.id);
   if (!entry) {
     return {
       defs: '',
       style: '',
-      body: `<path fill="${item.darkSafeColor}" fill-rule="evenodd" d="${item.svgPath}"/>`,
+      body: item.svgPath
+        ? `<path fill="${item.darkSafeColor}" fill-rule="evenodd" d="${item.svgPath}"/>`
+        : `<circle cx="12" cy="12" r="8" fill="${item.darkSafeColor}" opacity="0.25"/>`,
     };
   }
 

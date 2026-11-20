@@ -111,6 +111,11 @@
   background: #334155;
 }
 
+.tss-paused,
+.tss-paused * {
+  animation-play-state: paused !important;
+}
+
 /* Clean custom range input */
 input[type='range'] {
   height: 5px;

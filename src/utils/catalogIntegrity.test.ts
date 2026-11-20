@@ -81,47 +81,29 @@ const CUSTOM_SOURCE_LOGO_SIGNATURES: Record<string, readonly string[]> = {
   echo: ['#00AFD1', '#4AE1FF', 'M52.5,22.3'],
   openvino: ['#FFFFFF', 'M117.045'],
   freertos: ['#6CAE3E', 'M27.943'],
-  cargo: ['data:image/png'],
-  tinygo: ['data:image/png'],
-  flutter: ['data:image/png'],
-  googlegemini: ['data:image/jpeg'],
-  angular: ['data:image/png'],
-  mysql: ['data:image/png'],
-  raspberrypi: ['data:image/png'],
-  texasinstruments: ['data:image/png'],
-  vscode: ['data:image/png'],
+  cargo: ['#F4C753', '#D99B26'],
+  tinygo: ['#00ADD8', '#7DD3FC'],
+  flutter: ['#47C5FB', '#00569E'],
+  googlegemini: ['#4285F4', '#9B72CB'],
+  angular: ['#F11653', '#8514F5'],
+  mysql: ['#4479A1'],
+  raspberrypi: ['#C51A4A'],
+  texasinstruments: ['#CC0000'],
+  vscode: ['#0065A9', '#007ACC', '#1F9CF0'],
   azure: ['#0078D4'],
   lorawan: ['#FFFFFF'],
 };
 
-const RASTER_DATA_URI_ONLY_IDS = new Set([
-  'cargo',
-  'tinygo',
-  'flutter',
-  'googlegemini',
-  'angular',
-  'mysql',
-  'raspberrypi',
-  'texasinstruments',
-  'vscode',
-]);
-
 function assertSafeSvg(markup: string, id: string): void {
   assert.ok(markup.startsWith('<svg '), `${id}: SVG must start with an <svg> element`);
   assert.ok(markup.trimEnd().endsWith('</svg>'), `${id}: SVG must close`);
-  assert.ok(markup.includes('viewBox="'), `${id}: SVG must declare a viewBox`);
+  assert.ok(
+    markup.includes('viewBox="0 0 24 24"'),
+    `${id}: SVG must declare unified 24x24 viewBox`
+  );
   assert.ok(!/<script[\s>]/i.test(markup), `${id}: SVG must not contain scripts`);
   assert.ok(!/<foreignObject[\s>]/i.test(markup), `${id}: SVG must not contain foreignObject`);
-  // Cargo is the one exception to the no-raster rule: its only official
-  // mark is raster (rust-lang/cargo ships no vector logo), so its SVGs
-  // embed the official PNG as a data URI. External image URLs stay banned
-  // for every entry, cargo included (see the href/src check below).
-  assert.ok(
-    RASTER_DATA_URI_ONLY_IDS.has(id)
-      ? !/<image[^>]*\s(?:href|src)\s*=\s*["'](?!data:)/i.test(markup)
-      : !/<image[\s>]/i.test(markup),
-    `${id}: SVG must not contain raster images`
-  );
+  assert.ok(!/<image[\s>]/i.test(markup), `${id}: SVG must not contain raster images`);
   assert.ok(!/\son[a-z]+\s*=/i.test(markup), `${id}: SVG must not contain inline event handlers`);
   assert.ok(!/javascript:/i.test(markup), `${id}: SVG must not contain javascript: URLs`);
   assert.ok(
@@ -193,9 +175,7 @@ test('every catalog item exposes complete, self-contained source and animated SV
 
     assert.ok(source.includes('role="img"'), `${item.id}: source SVG needs an image role`);
 
-    const customSignatures =
-      CUSTOM_SOURCE_LOGO_SIGNATURES[item.id] ??
-      (source.includes('data-devicon="1"') ? ['data-devicon="1"'] : undefined);
+    const customSignatures = CUSTOM_SOURCE_LOGO_SIGNATURES[item.id];
     if (customSignatures) {
       for (const signature of customSignatures) {
         assert.ok(
@@ -203,30 +183,24 @@ test('every catalog item exposes complete, self-contained source and animated SV
           `${item.id}: source logo is missing expected brand signature ${signature}`
         );
       }
-    } else {
-      const canonicalGlyph = `<path fill="${item.darkSafeColor}" fill-rule="evenodd" d="${item.svgPath}"/>`;
-      assert.ok(
-        source.includes(canonicalGlyph),
-        `${item.id}: static SVG must preserve the canonical catalog glyph path`
-      );
     }
 
     if (item.id === 'typescript') {
       assert.ok(
         animated.includes('viewBox="0 0 24 24"'),
-        'TypeScript animation must use the patched 24px badge coordinate system'
+        'TypeScript animation must use the unified 24px badge coordinate system'
       );
       assert.ok(
         animated.includes('M3.375 9.938'),
-        'TypeScript animation must preserve the patched T glyph geometry'
+        'TypeScript animation must preserve the official T glyph geometry'
       );
       assert.ok(
-        animated.includes('@keyframes tss_typescript_al'),
-        'TypeScript animation must include the patched badge choreography'
+        animated.includes('@keyframes tss_typescript_'),
+        'TypeScript animation must include scoped badge choreography'
       );
       assert.ok(
-        animated.includes('translateX(38px)'),
-        'TypeScript animation must include the patched clipped sheen sweep'
+        animated.includes('clipPath'),
+        'TypeScript animation must include the clipped sheen sweep'
       );
     }
     assert.ok(animated.includes('@keyframes '), `${item.id}: animated SVG needs keyframes`);
@@ -282,22 +256,22 @@ test('every animated icon uses the same frame as its static artwork', () => {
   assert.deepEqual(mismatched, []);
 });
 
-test('artwork that ships outside the 24-unit box keeps its own frame', () => {
-  const expected: Record<string, string> = {
-    vuedotjs: '0 0 128 128',
-    matter: '0 0 128 128',
-    seeedstudio: '0 0 128 128',
-    texasinstruments: '0 0 128 128',
-    microsoftsqlserver: '0 0 128 128',
-    azuresqldatabase: '0 0 18 18',
-    googledataflow: '0 0 32 32',
-  };
-  for (const [id, box] of Object.entries(expected)) {
-    const sourceBox = (readSvg(SOURCE_DIR, id).match(/viewBox="([^"]+)"/) || [])[1];
-    const animatedBox = (readSvg(ANIMATED_DIR, id).match(/viewBox="([^"]+)"/) || [])[1];
-    assert.equal(sourceBox, box, id + ' static frame');
-    assert.equal(animatedBox, box, id + ' animated frame');
+test('every icon uses the unified 24x24 normalized frame and has a unique animation story', () => {
+  for (const item of TECH_CATALOG) {
+    const sourceBox = (readSvg(SOURCE_DIR, item.id).match(/viewBox="([^"]+)"/) || [])[1];
+    const animatedBox = (readSvg(ANIMATED_DIR, item.id).match(/viewBox="([^"]+)"/) || [])[1];
+    assert.equal(sourceBox, '0 0 24 24', item.id + ' static frame');
+    assert.equal(animatedBox, '0 0 24 24', item.id + ' animated frame');
   }
+  const manifest = JSON.parse(fs.readFileSync('docs/animation/animation-manifest.json', 'utf8'));
+  const stories = new Set(
+    manifest.entries.map((entry: { animationConcept: string }) => entry.animationConcept)
+  );
+  assert.equal(
+    stories.size,
+    TECH_CATALOG.length,
+    'Every catalog icon must have its own unique animation story'
+  );
 });
 
 test('published agent artifacts stay in sync with the catalog', () => {

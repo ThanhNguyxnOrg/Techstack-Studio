@@ -77,7 +77,7 @@ export interface TechItem {
   iconUrl: string;
   docsUrl: string;
   monogram: string;
-  svgPath: string;
+  svgPath?: string;
   svgViewBox?: string;
   referenceSvgFile?: string;
   sourceSvgPath?: string;

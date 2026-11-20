@@ -15,13 +15,15 @@ import { CustomizationSettings, StudioStage } from './types/stack';
 import {
   STORAGE_KEY,
   moveTechInStack,
-  reorderTechInStack,
   parsePersistedState,
+  parseShareUrlParams,
   removeTechFromStack,
+  reorderTechInStack,
   resolveSelectedItems,
   sanitizeSettings,
   serializePersistedState,
   toggleTechInStack,
+  writeShareUrlParams,
 } from './utils/studioLogic';
 import { CatalogPanel } from './components/CatalogPanel';
 import { ExportStudio } from './components/ExportStudio';
@@ -31,24 +33,13 @@ import { SelectedStackBar } from './components/SelectedStackBar';
 
 export default function App() {
   const initialState = useMemo(() => {
-    const sharedIds = (() => {
-      try {
-        const raw = new URLSearchParams(window.location.search).get('stack');
-        if (raw === null) return null;
-        return raw
-          .split(',')
-          .map((value) => value.trim())
-          .filter(Boolean);
-      } catch {
-        return null;
-      }
-    })();
-
-    if (sharedIds) {
+    const shared =
+      typeof window !== 'undefined' ? parseShareUrlParams(window.location.search) : null;
+    if (shared) {
       return {
         version: 1 as const,
-        selectedIds: resolveSelectedItems(sharedIds).map((item) => item.id),
-        settings: { ...DEFAULT_CUSTOMIZATION_SETTINGS },
+        selectedIds: shared.selectedIds,
+        settings: shared.settings,
       };
     }
 
@@ -88,17 +79,16 @@ export default function App() {
     }
   }, [selectedIds, settings]);
 
-  // Keep the address bar shareable: ?stack=react,nodejs
+  // Keep the address bar shareable: ?stack=react,nodejs&theme=light&style=cards...
   useEffect(() => {
     try {
       const url = new URL(window.location.href);
-      if (selectedIds.length > 0) url.searchParams.set('stack', selectedIds.join(','));
-      else url.searchParams.delete('stack');
+      writeShareUrlParams(url.searchParams, selectedIds, settings);
       window.history.replaceState(null, '', url.toString());
     } catch {
       // Ignore history failures (sandboxed iframes, file://, …)
     }
-  }, [selectedIds]);
+  }, [selectedIds, settings]);
 
   const selectedItems = useMemo(() => resolveSelectedItems(selectedIds), [selectedIds]);
 
@@ -165,6 +155,63 @@ export default function App() {
     setStatusMessage(`Applied style: ${preset.name}`);
   };
 
+  const handleImportStack = (ids: string[], mode: 'merge' | 'replace') => {
+    if (ids.length === 0) return;
+    remember();
+    setSelectedIds((prev) => {
+      if (mode === 'replace') return ids;
+      const merged = [...prev];
+      for (const id of ids) {
+        if (!merged.includes(id)) merged.push(id);
+      }
+      return merged;
+    });
+    setStatusMessage(
+      mode === 'replace'
+        ? `Replaced stack with ${ids.length} detected technologies.`
+        : `Added ${ids.length} detected technologies to stack.`
+    );
+  };
+
+  // Global keyboard shortcuts: "/" focuses search, Ctrl/Cmd+Z undoes last change.
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      const isEditable =
+        target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.tagName === 'SELECT' ||
+          target.isContentEditable);
+
+      if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey && !isEditable) {
+        e.preventDefault();
+        setActiveStage('select');
+        window.requestAnimationFrame(() => {
+          const input = document.getElementById('catalog-search-input') as HTMLInputElement | null;
+          input?.focus();
+          input?.select();
+        });
+        return;
+      }
+
+      if (
+        (e.ctrlKey || e.metaKey) &&
+        !e.shiftKey &&
+        !e.altKey &&
+        e.key.toLowerCase() === 'z' &&
+        !isEditable
+      ) {
+        if (history.length > 0) {
+          e.preventDefault();
+          handleUndo();
+        }
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [history]);
+
   return (
     <div className="min-h-screen bg-[#090B10] text-[#F1F5F9] flex flex-col selection:bg-[#38BDF8] selection:text-[#090B10] xl:h-svh xl:min-h-0 xl:overflow-hidden">
       <div role="status" aria-live="polite" className="sr-only">
@@ -198,6 +245,7 @@ export default function App() {
               animateSvgLogos={settings.animateSvgLogos}
               animationSpeedMultiplier={settings.animationSpeedMultiplier}
               onToggleTech={handleToggleTech}
+              onImportStack={handleImportStack}
             />
           </div>
 

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_CUSTOMIZATION_SETTINGS, TECH_CATALOG } from '../src/data/catalog';
 import { generateExportOutput } from '../src/utils/studioLogic';
+import { loadNodeStandaloneSvgParts } from '../src/utils/nodeSvgPartsLoader';
 import type { CustomizationSettings, ExportFormat, TechItem } from '../src/types/stack';
 
 const lookup = new Map<string, TechItem>();
@@ -78,6 +79,7 @@ const settings: CustomizationSettings = {
   animationSpeedMultiplier: Number.isFinite(speed) && speed > 0 ? speed : 1,
 };
 
+loadNodeStandaloneSvgParts();
 const output = generateExportOutput(format, selected, settings);
 fs.mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
 fs.writeFileSync(out, output, 'utf8');

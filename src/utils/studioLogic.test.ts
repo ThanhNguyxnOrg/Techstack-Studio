@@ -1,5 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { loadNodeStandaloneSvgParts } from './nodeSvgPartsLoader';
+
+loadNodeStandaloneSvgParts();
 import {
   DEFAULT_CUSTOMIZATION_SETTINGS,
   GITHUB_PAGES_URL,
@@ -20,13 +23,16 @@ import {
   resolveSelectedItems,
   sanitizeSettings,
   parsePersistedState,
+  parseShareUrlParams,
   serializePersistedState,
+  writeShareUrlParams,
   escapeHtml,
   generateReadmeMarkdown,
   generateStandaloneHtml,
   generateStandaloneSvg,
   generateAnimatedSingleIconSvg,
 } from './studioLogic';
+import { detectStackFromFileContent } from './stackDetector';
 
 const REPRESENTATIVE_BENCHMARK_IDS = [
   'javascript',
@@ -65,7 +71,7 @@ test('catalog manifest has >= 400 verified authentic technologies across all 8 c
   }
 });
 
-test('all 10 representative benchmark icons resolve with 4-color GCP clipPath choreography and synchronized 3.60s timing', () => {
+test('all 10 representative benchmark icons resolve with 4-color GCP choreography and synchronized 4.80s timing', () => {
   const resolved = resolveSelectedItems(REPRESENTATIVE_BENCHMARK_IDS);
   assert.equal(resolved.length, 10, 'Expected all 10 representative benchmark icons to resolve');
 
@@ -85,15 +91,15 @@ test('all 10 representative benchmark icons resolve with 4-color GCP clipPath ch
       gcpSvg.includes('#34A853') &&
       gcpSvg.includes('#FBBC05')
   );
-  assert.ok(gcpSvg.includes('clipPath'));
-  assert.ok(gcpSvg.includes('3.60s'));
+  assert.ok(gcpSvg.includes('@keyframes'));
+  assert.ok(gcpSvg.includes('4.80s'));
   assert.ok(
     gcpSvg.includes('#131822'),
     'Expected unified #131822 icon plate when showPlate is true'
   );
 });
 
-test('TypeScript preview and export use the patched official badge geometry and choreography', () => {
+test('TypeScript preview and export use the official badge geometry and story choreography', () => {
   const ts = TECH_BY_ID['typescript'];
   assert.ok(ts, 'Expected typescript in catalog');
 
@@ -113,19 +119,16 @@ test('TypeScript preview and export use the patched official badge geometry and 
   });
 
   assert.ok(staticSvg.includes('viewBox="0 0 24 24"'), 'Expected normalized TypeScript viewBox');
-  assert.ok(staticSvg.includes('M3.375 9.938'), 'Expected the patched official T glyph geometry');
+  assert.ok(staticSvg.includes('M3.375 9.938'), 'Expected the official T glyph geometry');
   assert.ok(staticSvg.includes('fill="#3178C6"'), 'Expected official TypeScript brand blue');
   assert.ok(staticSvg.includes('rx="1.125"'), 'Expected the official badge corner radius');
   assert.ok(!staticSvg.includes('@keyframes'), 'Static TypeScript logo must remain still');
+  assert.ok(animatedSvg.includes('M3.375 9.938'), 'Animated logo must preserve the official glyph');
   assert.ok(
-    animatedSvg.includes('M3.375 9.938'),
-    'Animated logo must preserve the patched official glyph'
+    animatedSvg.includes('@keyframes tss_typescript_'),
+    'Expected scoped badge and glyph choreography'
   );
-  assert.ok(
-    animatedSvg.includes('@keyframes tss_typescript_al'),
-    'Expected the patched badge and glyph choreography'
-  );
-  assert.ok(animatedSvg.includes('translateX(38px)'), 'Expected the patched clipped sheen sweep');
+  assert.ok(animatedSvg.includes('clipPath'), 'Expected the clipped sheen sweep');
   assert.ok(
     /prefers-reduced-motion\s*:\s*reduce/.test(animatedSvg),
     'Expected reduced-motion support'
@@ -147,7 +150,7 @@ test('TypeScript preview and export use the patched official badge geometry and 
   );
 });
 
-test('Playwright banner uses its 128-unit artwork viewBox, not the historical 24', () => {
+test('Playwright banner uses normalized 24-unit artwork viewBox preserving both masks', () => {
   const pw = TECH_BY_ID['playwright'];
   assert.ok(pw, 'Expected playwright in catalog');
 
@@ -159,14 +162,14 @@ test('Playwright banner uses its 128-unit artwork viewBox, not the historical 24
     showPlate: false,
   });
   assert.ok(
-    staticSvg.includes('viewBox="0 0 128 128"'),
-    'Expected 128-unit viewBox so the two masks are not clipped'
+    staticSvg.includes('viewBox="0 0 24 24"'),
+    'Expected unified 24-unit viewBox with normalized matrix transform'
   );
   assert.ok(staticSvg.includes('#E2574C'), 'Expected the red theatre mask');
   assert.ok(staticSvg.includes('#2EAD33'), 'Expected the green theatre mask');
 });
 
-test('Google Dataflow banner uses its 32-unit official artwork viewBox, not the historical 24', () => {
+test('Google Dataflow banner uses normalized 24-unit artwork viewBox preserving brand blues', () => {
   const df = TECH_BY_ID['googledataflow'];
   assert.ok(df, 'Expected googledataflow in catalog');
 
@@ -178,8 +181,8 @@ test('Google Dataflow banner uses its 32-unit official artwork viewBox, not the 
     showPlate: false,
   });
   assert.ok(
-    staticSvg.includes('viewBox="0 0 32 32"'),
-    'Expected 32-unit viewBox so the official Dataflow diagram is not clipped'
+    staticSvg.includes('viewBox="0 0 24 24"'),
+    'Expected unified 24-unit viewBox with normalized matrix transform'
   );
   assert.ok(staticSvg.includes('#4285F4'), 'Expected the Dataflow primary blue');
   assert.ok(staticSvg.includes('#669df6'), 'Expected the Dataflow mid blue');
@@ -484,4 +487,49 @@ test('every alias resolves to its own entry, with no exceptions left', () => {
   }
 
   assert.deepEqual(misranked, []);
+});
+
+test('shareable URL query parameters round-trip stack and non-default style settings', () => {
+  const params = new URLSearchParams();
+  writeShareUrlParams(params, ['react', 'typescript', 'postgresql'], {
+    ...DEFAULT_CUSTOMIZATION_SETTINGS,
+    theme: 'light',
+    presentationStyle: 'cards',
+    itemsPerRow: 5,
+    animationSpeedMultiplier: 1.5,
+    showLabels: false,
+  });
+
+  const parsed = parseShareUrlParams('?' + params.toString());
+  assert.ok(parsed);
+  assert.deepEqual(parsed.selectedIds, ['react', 'typescript', 'postgresql']);
+  assert.equal(parsed.settings.theme, 'light');
+  assert.equal(parsed.settings.presentationStyle, 'cards');
+  assert.equal(parsed.settings.itemsPerRow, 5);
+  assert.equal(parsed.settings.animationSpeedMultiplier, 1.5);
+  assert.equal(parsed.settings.showLabels, false);
+  assert.equal(parseShareUrlParams('?theme=light'), null);
+});
+
+test('auto-detector extracts canonical stack IDs from package.json, Dockerfile, and requirements.txt', () => {
+  const pkg = JSON.stringify({
+    dependencies: { react: '^19.0.0', next: '^15.0.0', tailwindcss: '^4.0.0', pg: '^8.0.0' },
+    devDependencies: { typescript: '^5.7.0', vitest: '^3.0.0' },
+  });
+  const fromPkg = detectStackFromFileContent(pkg, TECH_CATALOG, 'package.json');
+  for (const id of ['react', 'nextdotjs', 'tailwindcss', 'postgresql', 'typescript', 'vitest']) {
+    assert.ok(fromPkg.includes(id), `Expected ${id} from package.json`);
+  }
+
+  const dockerfile = 'FROM node:22-alpine\nFROM nginx:1.27\n';
+  const fromDocker = detectStackFromFileContent(dockerfile, TECH_CATALOG, 'Dockerfile');
+  for (const id of ['docker', 'nodedotjs', 'nginx']) {
+    assert.ok(fromDocker.includes(id), `Expected ${id} from Dockerfile`);
+  }
+
+  const reqs = 'fastapi==0.115.0\ntorch>=2.4\nredis\npsycopg2-binary\n';
+  const fromPy = detectStackFromFileContent(reqs, TECH_CATALOG, 'requirements.txt');
+  for (const id of ['python', 'fastapi', 'pytorch', 'redis', 'postgresql']) {
+    assert.ok(fromPy.includes(id), `Expected ${id} from requirements.txt`);
+  }
 });

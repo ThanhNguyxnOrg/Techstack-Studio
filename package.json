@@ -42,7 +42,7 @@
     "format:check": "prettier --check .",
     "verify": "npm run format:check && npm run typecheck && npm test && npm run build",
     "generate:catalog": "node scripts/buildCatalogManifest.mjs",
-    "generate:icons": "node scripts/generateStandaloneSvgLibrary.mjs",
+    "generate:icons": "node scripts/icons/build.mjs",
     "generate": "npm run generate:catalog && npm run generate:icons && npm run publish:agent",
     "publish:agent": "node scripts/publishAgentArtifacts.mjs",
     "stack": "tsx scripts/buildStackBanner.ts"
