@@ -4,37 +4,40 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Run npm publish with --dry-run (nothing uploaded)
+        required: false
+        default: false
+        type: boolean
+      tag:
+        description: npm dist-tag (e.g. latest, next)
+        required: false
+        default: latest
+        type: string
 
 permissions:
   contents: read
+  id-token: write
+
+concurrency:
+  group: publish-npm-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   publish:
-    name: Build & Publish techstack-studio
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version-file: .nvmrc
-          registry-url: https://registry.npmjs.org
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Verify repository
-        run: npm run verify
-
-      - name: Build CLI & MCP bundle
-        run: npm run build:cli
-
-      - name: Publish to npm
-        working-directory: packages/cli
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
+    uses: ThanhNguyxnOrg/.github/.github/workflows/publish-npm.yml@aa4ff7ec39642ca1372cf4794fdeb2c2c41f48b9
+    with:
+      job_name: Publish techstack-studio to npm
+      node_version_file: .nvmrc
+      package_manager: npm
+      cache: npm
+      install_command: npm ci
+      verify_command: npm run verify
+      build_command: npm run build:cli
+      working_directory: packages/cli
+      access: public
+      tag: ${{ inputs.tag || 'latest' }}
+      provenance: true
+      dry_run: ${{ inputs.dry_run || false }}
+    secrets: inherit
