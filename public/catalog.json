@@ -1,6 +1,6 @@
 {
  "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
- "count": 577,
+ "count": 603,
  "note": "Icon paths are relative to the site root (append to site, or to the repository path when reading from disk).",
  "icons": [
   {
@@ -97,6 +97,24 @@
    "sourceSvg": "icons/source/aframe.svg",
    "concept": "A-Frame WebXR crimson portal frames a stereoscopic A-frame that lifts forward in VR depth",
    "technique": "portal + frameA + 1 story props"
+  },
+  {
+   "id": "agora",
+   "name": "Agora",
+   "category": "Backend",
+   "subcategory": "Messaging & Realtime",
+   "role": "Real-Time Voice, Video & Interactive Live Streaming SDK",
+   "docsUrl": "https://www.agora.io/",
+   "aliases": [
+    "agora",
+    "agora-rtc"
+   ],
+   "monogram": "AGO",
+   "brandColor": "#099DFD",
+   "svg": "icons/animated/agora.svg",
+   "sourceSvg": "icons/source/agora.svg",
+   "concept": "Agora five real-time voice-and-video letter glyphs ripple left-to-right like live media frames streaming across a global RTC edge",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "aiohttp",
@@ -1192,6 +1210,25 @@
    "technique": "box + eyes + 1 story props"
   },
   {
+   "id": "betterauth",
+   "name": "Better Auth",
+   "category": "Backend",
+   "subcategory": "Authentication & Identity",
+   "role": "Comprehensive TypeScript Authentication & Authorization Framework",
+   "docsUrl": "https://www.better-auth.com/",
+   "aliases": [
+    "betterauth",
+    "better auth",
+    "better-auth"
+   ],
+   "monogram": "BET",
+   "brandColor": "#FFFFFF",
+   "svg": "icons/animated/betterauth.svg",
+   "sourceSvg": "icons/source/betterauth.svg",
+   "concept": "Better Auth twin cryptographic halves slide together and lock cleanly as a green verified session check flashes at the corner",
+   "technique": "left + right + 2 story props"
+  },
+  {
    "id": "biome",
    "name": "Biome",
    "category": "Developer tools",
@@ -1759,6 +1796,45 @@
    "technique": "main + edge + 2 story props"
   },
   {
+   "id": "cloudflarepages",
+   "name": "Cloudflare Pages",
+   "category": "Cloud and DevOps",
+   "subcategory": "Edge & Serverless",
+   "role": "JAMstack & Full-Stack Edge Deployment Platform on Cloudflare",
+   "docsUrl": "https://pages.cloudflare.com/",
+   "aliases": [
+    "cloudflarepages",
+    "cloudflare pages",
+    "cf-pages"
+   ],
+   "monogram": "CLO",
+   "brandColor": "#F38020",
+   "svg": "icons/animated/cloudflarepages.svg",
+   "sourceSvg": "icons/source/cloudflarepages.svg",
+   "concept": "Cloudflare Pages edge deployment window traces its frame while its three browser dots pop in and static-to-edge build slices lock into place",
+   "technique": "frame outline trace + dots staggered + slices staggered + 1 story props"
+  },
+  {
+   "id": "cloudflareworkers",
+   "name": "Cloudflare Workers",
+   "category": "Cloud and DevOps",
+   "subcategory": "Edge & Serverless",
+   "role": "Zero-Cold-Start V8 Isolate Serverless Compute at the Global Edge",
+   "docsUrl": "https://workers.cloudflare.com/",
+   "aliases": [
+    "cloudflareworkers",
+    "cloudflare workers",
+    "cf-workers",
+    "wrangler"
+   ],
+   "monogram": "CLO",
+   "brandColor": "#F38020",
+   "svg": "icons/animated/cloudflareworkers.svg",
+   "sourceSvg": "icons/source/cloudflareworkers.svg",
+   "concept": "Cloudflare Workers three orange V8-isolate chevron blades snap together in sequence as zero-cold-start edge packets fire across the globe",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
    "id": "cmake",
    "name": "CMake",
    "category": "Developer tools",
@@ -2032,6 +2108,24 @@
    "sourceSvg": "icons/source/contentful.svg",
    "concept": "Contentful three-node composable C-loop traces its API-first content graph and pulses with a synchronized multi-channel publish wave",
    "technique": "part outline trace + 2 story props"
+  },
+  {
+   "id": "convex",
+   "name": "Convex",
+   "category": "Backend",
+   "subcategory": "Backend-as-a-Service",
+   "role": "Reactive Full-Stack TypeScript Backend & Real-Time Sync Database",
+   "docsUrl": "https://www.convex.dev/",
+   "aliases": [
+    "convex",
+    "convex-dev"
+   ],
+   "monogram": "CON",
+   "brandColor": "#EE342F",
+   "svg": "icons/animated/convex.svg",
+   "sourceSvg": "icons/source/convex.svg",
+   "concept": "Convex three reactive orbital ribbons converge and rotate cleanly into sync as real-time database mutation packets pulse across the core",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "couchbase",
@@ -2565,6 +2659,24 @@
    "sourceSvg": "icons/source/drone.svg",
    "concept": "Drone’s container-native CI rotor lifts and stabilizes over its core lens while an automated build packet glides through",
    "technique": "rotor + core + chassis + 1 story props"
+  },
+  {
+   "id": "drupal",
+   "name": "Drupal",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Enterprise Open-Source PHP Content Management Framework",
+   "docsUrl": "https://www.drupal.org/",
+   "aliases": [
+    "drupal",
+    "drupal-cms"
+   ],
+   "monogram": "DRU",
+   "brandColor": "#0678BE",
+   "svg": "icons/animated/drupal.svg",
+   "sourceSvg": "icons/source/drupal.svg",
+   "concept": "Drupal water-drop mascot descends cleanly with a gentle splash ripple beneath it and gives a friendly nod",
+   "technique": "part + 2 story props"
   },
   {
    "id": "duckdb",
@@ -4882,6 +4994,25 @@
    "technique": "letters staggered + 1 story props"
   },
   {
+   "id": "lemonsqueezy",
+   "name": "Lemon Squeezy",
+   "category": "Backend",
+   "subcategory": "Payments & Billing",
+   "role": "Merchant-of-Record Payments, Subscriptions & Tax Platform for SaaS",
+   "docsUrl": "https://www.lemonsqueezy.com/",
+   "aliases": [
+    "lemonsqueezy",
+    "lemon squeezy",
+    "lemon-squeezy"
+   ],
+   "monogram": "LEM",
+   "brandColor": "#FFC233",
+   "svg": "icons/animated/lemonsqueezy.svg",
+   "sourceSvg": "icons/source/lemonsqueezy.svg",
+   "concept": "Lemon Squeezy four golden citrus wedges fan into place in sequence with a bright SaaS billing bounce and spark",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
    "id": "less",
    "name": "Less",
    "category": "Frontend",
@@ -4993,6 +5124,24 @@
    "technique": "parts staggered + 2 story props"
   },
   {
+   "id": "livekit",
+   "name": "LiveKit",
+   "category": "Backend",
+   "subcategory": "Messaging & Realtime",
+   "role": "Open-Source Real-Time WebRTC Video, Audio & Multimodal AI Infrastructure",
+   "docsUrl": "https://livekit.io/",
+   "aliases": [
+    "livekit",
+    "livekit-cloud"
+   ],
+   "monogram": "LIV",
+   "brandColor": "#FFFFFF",
+   "svg": "icons/animated/livekit.svg",
+   "sourceSvg": "icons/source/livekit.svg",
+   "concept": "LiveKit open-source WebRTC outer frame and inner broadcast core pulse in sync while live audio/video signal rings radiate outward",
+   "technique": "outer outline trace + inner + 2 story props"
+  },
+  {
    "id": "llvm",
    "name": "LLVM",
    "category": "Developer tools",
@@ -5080,6 +5229,24 @@
    "sourceSvg": "icons/source/lua.svg",
    "concept": "Lua satellite moon completes a full orbital revolution around the indigo planet while the dotted celestial ring shimmers in place",
    "technique": "moon + planet + crater + letters staggered + orbit"
+  },
+  {
+   "id": "lucia",
+   "name": "Lucia",
+   "category": "Backend",
+   "subcategory": "Authentication & Identity",
+   "role": "Minimalist Session-Based Authentication Guide & Patterns for TypeScript",
+   "docsUrl": "https://lucia-auth.com/",
+   "aliases": [
+    "lucia",
+    "lucia-auth"
+   ],
+   "monogram": "LUC",
+   "brandColor": "#5F57FF",
+   "svg": "icons/animated/lucia.svg",
+   "sourceSvg": "icons/source/lucia.svg",
+   "concept": "Lucia session-auth emblem traces its minimalist silhouette and blooms with a crisp violet verification ring",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "lucide",
@@ -5208,6 +5375,24 @@
    "sourceSvg": "icons/source/mdx.svg",
    "concept": "MDX wordmark pulses with a JSX-in-Markdown component pop and flashes a bright amber-and-blue syntax spark",
    "technique": "all + 2 story props"
+  },
+  {
+   "id": "medusa",
+   "name": "Medusa",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Open-Source Composable Headless Commerce Engine in TypeScript",
+   "docsUrl": "https://medusajs.com/",
+   "aliases": [
+    "medusa",
+    "medusajs"
+   ],
+   "monogram": "MED",
+   "brandColor": "#000000",
+   "svg": "icons/animated/medusa.svg",
+   "sourceSvg": "icons/source/medusa.svg",
+   "concept": "Medusa headless commerce emblem traces its sculpted vector contours and shimmers with a sleek storefront sheen",
+   "technique": "part outline trace + 1 story props"
   },
   {
    "id": "meilisearch",
@@ -6397,6 +6582,25 @@
    "technique": "letters staggered + 1 story props"
   },
   {
+   "id": "ory",
+   "name": "Ory",
+   "category": "Backend",
+   "subcategory": "Authentication & Identity",
+   "role": "Open-Source Zero-Trust Identity, OAuth2 & Permissions Infrastructure",
+   "docsUrl": "https://www.ory.sh/",
+   "aliases": [
+    "ory",
+    "ory-kratos",
+    "ory-hydra"
+   ],
+   "monogram": "ORY",
+   "brandColor": "#4F46E5",
+   "svg": "icons/animated/ory.svg",
+   "sourceSvg": "icons/source/ory.svg",
+   "concept": "Ory zero-trust identity core pulses as its upper and lower OAuth2 security brackets clamp securely into place",
+   "technique": "core + top + bottom + 1 story props"
+  },
+  {
    "id": "ovh",
    "name": "OVHcloud",
    "category": "Cloud and DevOps",
@@ -6489,6 +6693,24 @@
    "sourceSvg": "icons/source/packer.svg",
    "concept": "Packer’s machine-image core snaps cleanly into its outer multi-cloud mold with a golden-image verification check",
    "technique": "mold + core + 2 story props"
+  },
+  {
+   "id": "paddle",
+   "name": "Paddle",
+   "category": "Backend",
+   "subcategory": "Payments & Billing",
+   "role": "Complete Billing & Merchant-of-Record Payment Infrastructure for Software",
+   "docsUrl": "https://www.paddle.com/",
+   "aliases": [
+    "paddle",
+    "paddle-billing"
+   ],
+   "monogram": "PAD",
+   "brandColor": "#FDDD35",
+   "svg": "icons/animated/paddle.svg",
+   "sourceSvg": "icons/source/paddle.svg",
+   "concept": "Paddle billing mark rocks with rhythmic momentum as its circular coin pops into the blade and a golden checkout ring pulses",
+   "technique": "blade + coin + 1 story props"
   },
   {
    "id": "pagerduty",
@@ -7095,6 +7317,24 @@
    "technique": "part outline trace + 3 story props"
   },
   {
+   "id": "prismic",
+   "name": "Prismic",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Headless Page Builder & Slice-Based Content Management Platform",
+   "docsUrl": "https://prismic.io/",
+   "aliases": [
+    "prismic",
+    "prismic-io"
+   ],
+   "monogram": "PRI",
+   "brandColor": "#5163BA",
+   "svg": "icons/animated/prismic.svg",
+   "sourceSvg": "icons/source/prismic.svg",
+   "concept": "Prismic eight modular content-slice tiles assemble clockwise into a cohesive page-builder prism with a soft indigo bloom",
+   "technique": "parts staggered + 1 story props"
+  },
+  {
    "id": "processingfoundation",
    "name": "Processing",
    "category": "Programming languages",
@@ -7222,6 +7462,24 @@
    "sourceSvg": "icons/source/purescript.svg",
    "concept": "PureScript twin chevrons bracket three pure data bars that slide cleanly into horizontal alignment",
    "technique": "leftChev + rightChev + bars staggered + 1 story props"
+  },
+  {
+   "id": "pusher",
+   "name": "Pusher",
+   "category": "Backend",
+   "subcategory": "Messaging & Realtime",
+   "role": "Hosted WebSockets & Real-Time Pub/Sub Channels API",
+   "docsUrl": "https://pusher.com/",
+   "aliases": [
+    "pusher",
+    "pusher-js"
+   ],
+   "monogram": "PUS",
+   "brandColor": "#300D4F",
+   "svg": "icons/animated/pusher.svg",
+   "sourceSvg": "icons/source/pusher.svg",
+   "concept": "Pusher real-time pub/sub beacon pulses twice as concentric WebSocket broadcast rings expand outward to connected clients",
+   "technique": "part + 2 story props"
   },
   {
    "id": "px4",
@@ -7928,6 +8186,24 @@
    "technique": "part outline trace + 2 story props"
   },
   {
+   "id": "resend",
+   "name": "Resend",
+   "category": "Backend",
+   "subcategory": "Messaging & Realtime",
+   "role": "Modern Transactional Email API Built for Developers",
+   "docsUrl": "https://resend.com/",
+   "aliases": [
+    "resend",
+    "react-email"
+   ],
+   "monogram": "RES",
+   "brandColor": "#000000",
+   "svg": "icons/animated/resend.svg",
+   "sourceSvg": "icons/source/resend.svg",
+   "concept": "Resend crisp transactional email R traces swiftly as an outgoing message packet shoots across the diagonal and confirms delivery",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "rider",
    "name": "Rider",
    "category": "Developer tools",
@@ -8444,6 +8720,42 @@
    "technique": "longSlash outline trace + shortSlash outline trace + 1 story props"
   },
   {
+   "id": "shopify",
+   "name": "Shopify",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Global Commerce Platform, Storefront GraphQL API & Hydrogen Framework",
+   "docsUrl": "https://shopify.dev/",
+   "aliases": [
+    "shopify",
+    "shopify-hydrogen"
+   ],
+   "monogram": "SHO",
+   "brandColor": "#7AB55C",
+   "svg": "icons/animated/shopify.svg",
+   "sourceSvg": "icons/source/shopify.svg",
+   "concept": "Shopify shopping bag swings lightly like a freshly packed order while its side gusset locks in and a green checkout check flashes",
+   "technique": "front + side + 1 story props"
+  },
+  {
+   "id": "sidekiq",
+   "name": "Sidekiq",
+   "category": "Backend",
+   "subcategory": "Messaging & Queues",
+   "role": "Simple, Efficient Background Job Processing for Ruby & Rails",
+   "docsUrl": "https://sidekiq.org/",
+   "aliases": [
+    "sidekiq",
+    "sidekiq-rb"
+   ],
+   "monogram": "SID",
+   "brandColor": "#B1003E",
+   "svg": "icons/animated/sidekiq.svg",
+   "sourceSvg": "icons/source/sidekiq.svg",
+   "concept": "Sidekiq martial-arts silhouette delivers a snappy high-speed strike as background worker jobs drain rapidly with a crimson spark",
+   "technique": "body + kick + 2 story props"
+  },
+  {
    "id": "sketch",
    "name": "Sketch",
    "category": "Developer tools",
@@ -8740,6 +9052,43 @@
    "technique": "page outline trace + feather + 2 story props"
   },
   {
+   "id": "squarespace",
+   "name": "Squarespace",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "All-in-One Website Publishing, Design & Commerce Platform",
+   "docsUrl": "https://www.squarespace.com/",
+   "aliases": [
+    "squarespace",
+    "sqsp"
+   ],
+   "monogram": "SQU",
+   "brandColor": "#000000",
+   "svg": "icons/animated/squarespace.svg",
+   "sourceSvg": "icons/source/squarespace.svg",
+   "concept": "Squarespace four interlocking ribbon loops trace and weave together from opposing diagonals into a balanced minimalist emblem",
+   "technique": "parts outline trace staggered + 1 story props"
+  },
+  {
+   "id": "sst",
+   "name": "SST",
+   "category": "Backend",
+   "subcategory": "Serverless & Cloud Frameworks",
+   "role": "Full-Stack Infrastructure-as-Code Framework for Serverless & Cloud Apps",
+   "docsUrl": "https://sst.dev/",
+   "aliases": [
+    "sst",
+    "sst-dev",
+    "ion"
+   ],
+   "monogram": "SST",
+   "brandColor": "#E27152",
+   "svg": "icons/animated/sst.svg",
+   "sourceSvg": "icons/source/sst.svg",
+   "concept": "SST full-stack cloud emblem traces its infrastructure-as-code silhouette and fires a warm coral serverless deploy pulse",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "starship",
    "name": "Starship",
    "category": "Developer tools",
@@ -8791,6 +9140,24 @@
    "sourceSvg": "icons/source/stmicroelectronics.svg",
    "concept": "STMicroelectronics STM32 monogram locks its bus traces into place as Cortex-M clock pulses sweep cleanly across the silicon die",
    "technique": "top outline trace + mid + right + 2 story props"
+  },
+  {
+   "id": "storyblok",
+   "name": "Storyblok",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Composable Headless CMS with Real-Time Visual Block Editor",
+   "docsUrl": "https://www.storyblok.com/",
+   "aliases": [
+    "storyblok",
+    "storyblok-cms"
+   ],
+   "monogram": "STO",
+   "brandColor": "#09B3AF",
+   "svg": "icons/animated/storyblok.svg",
+   "sourceSvg": "icons/source/storyblok.svg",
+   "concept": "Storyblok speech-bubble frame pops open as its two modular content blocks slide cleanly into place inside the visual editor",
+   "technique": "frame + blocks staggered + 1 story props"
   },
   {
    "id": "storybook",
@@ -8845,6 +9212,24 @@
    "sourceSvg": "icons/source/streamlit.svg",
    "concept": "Streamlit three crown facets unfurl left-to-right like an instant reactive Python dashboard rerunning live telemetry on save",
    "technique": "leftBase + midPeak + rightPeak + 3 story props"
+  },
+  {
+   "id": "stripe",
+   "name": "Stripe",
+   "category": "Backend",
+   "subcategory": "Payments & Billing",
+   "role": "Developer-First Online Payments, Subscriptions & Financial Infrastructure API",
+   "docsUrl": "https://stripe.com/docs",
+   "aliases": [
+    "stripe",
+    "stripe-js"
+   ],
+   "monogram": "STR",
+   "brandColor": "#635BFF",
+   "svg": "icons/animated/stripe.svg",
+   "sourceSvg": "icons/source/stripe.svg",
+   "concept": "Stripe iconic S-mark traces its crisp payment contour, gleams with a diagonal checkout sheen, and confirms with a green authorization check",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "styledcomponents",
@@ -9420,6 +9805,24 @@
    "sourceSvg": "icons/source/timescale.svg",
    "concept": "TimescaleDB’s golden hypertable chunks cascade chronologically into alignment as a continuous time-series query sweeps the timeline",
    "technique": "part staggered + 2 story props"
+  },
+  {
+   "id": "tina",
+   "name": "Tina",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Git-Backed Headless CMS with Visual Markdown Editing",
+   "docsUrl": "https://tina.io/",
+   "aliases": [
+    "tina",
+    "tinacms"
+   ],
+   "monogram": "TIN",
+   "brandColor": "#EC4815",
+   "svg": "icons/animated/tina.svg",
+   "sourceSvg": "icons/source/tina.svg",
+   "concept": "TinaCMS orange llama hops cheerily as it commits visual Markdown edits to Git, flashing a warm verified spark",
+   "technique": "llama + foot + 2 story props"
   },
   {
    "id": "tinygo",
@@ -10207,6 +10610,24 @@
    "technique": "outer + inner + 1 story props"
   },
   {
+   "id": "webflow",
+   "name": "Webflow",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Visual Web Development, Hosting & Headless CMS Platform",
+   "docsUrl": "https://webflow.com/",
+   "aliases": [
+    "webflow",
+    "webflow-cms"
+   ],
+   "monogram": "WEB",
+   "brandColor": "#146EF5",
+   "svg": "icons/animated/webflow.svg",
+   "sourceSvg": "icons/source/webflow.svg",
+   "concept": "Webflow dynamic W-ribbon traces its fluid visual-layout curves while crisp blue smart-guides flash and lock it to the canvas",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "webgl",
    "name": "WebGL",
    "category": "Frontend",
@@ -10389,6 +10810,24 @@
    "technique": "all + 2 story props"
   },
   {
+   "id": "wix",
+   "name": "Wix",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Cloud Web Development Platform & Wix Studio Ecosystem",
+   "docsUrl": "https://www.wix.com/",
+   "aliases": [
+    "wix",
+    "wix-studio"
+   ],
+   "monogram": "WIX",
+   "brandColor": "#0C6EFC",
+   "svg": "icons/animated/wix.svg",
+   "sourceSvg": "icons/source/wix.svg",
+   "concept": "Wix three bold letterforms W-i-x cascade briskly left-to-right across the canvas with a clean studio gloss sweep",
+   "technique": "parts staggered + 1 story props"
+  },
+  {
    "id": "wolfram",
    "name": "Wolfram",
    "category": "Programming languages",
@@ -10405,6 +10844,42 @@
    "sourceSvg": "icons/source/wolfram.svg",
    "concept": "Wolfram crimson spikey badge pulses with symbolic-computation precision as its inner white emblem snaps into focus",
    "technique": "frame + redBadge + wolf + highlight + 2 story props"
+  },
+  {
+   "id": "woocommerce",
+   "name": "WooCommerce",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Open-Source Customizable E-Commerce Platform for WordPress",
+   "docsUrl": "https://woocommerce.com/",
+   "aliases": [
+    "woocommerce",
+    "woo"
+   ],
+   "monogram": "WOO",
+   "brandColor": "#96588A",
+   "svg": "icons/animated/woocommerce.svg",
+   "sourceSvg": "icons/source/woocommerce.svg",
+   "concept": "WooCommerce speech-bubble badge pops into place as its crisp storefront letters ripple left-to-right across the banner",
+   "technique": "bubble + letters staggered + 1 story props"
+  },
+  {
+   "id": "wordpress",
+   "name": "WordPress",
+   "category": "Backend",
+   "subcategory": "Commerce & CMS",
+   "role": "Open-Source Content Management System & Publishing Ecosystem",
+   "docsUrl": "https://wordpress.org/",
+   "aliases": [
+    "wordpress",
+    "wp"
+   ],
+   "monogram": "WOR",
+   "brandColor": "#21759B",
+   "svg": "icons/animated/wordpress.svg",
+   "sourceSvg": "icons/source/wordpress.svg",
+   "concept": "WordPress classic W-seal traces its circular publishing emblem and turns gently into alignment with a crisp editorial sheen",
+   "technique": "part outline trace + 1 story props"
   },
   {
    "id": "xcode",

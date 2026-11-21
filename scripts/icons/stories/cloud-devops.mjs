@@ -1879,4 +1879,37 @@ export default {
       packet(3.0, 12, 21.0, 12, '#38BDF8', 28, 60, 0.8),
     ],
   },
+
+  cloudflareworkers: {
+    story:
+      'Cloudflare Workers three orange V8-isolate chevron blades snap together in sequence as zero-cold-start edge packets fire across the globe',
+    tracks: [
+      {
+        on: [2, 0, 1],
+        each: true,
+        stagger: 4.8,
+        keys: slideIn(10, -2.4, 0),
+      },
+    ],
+    props: [
+      boltFlash(17.8, 4.2, '#FDE047', 26, 54),
+      packet(3.0, 12.0, 21.0, 12.0, '#FDBA74', 30, 58, 0.9),
+    ],
+  },
+
+  cloudflarepages: {
+    story:
+      'Cloudflare Pages edge deployment window traces its frame while its three browser dots pop in and static-to-edge build slices lock into place',
+    groups: {
+      frame: 0,
+      dots: [1, 2, 3],
+      slices: [5, 4, 6, 7],
+    },
+    tracks: [
+      { on: 'frame', draw: [8, 30], fill: [22, 34], width: 0.6 },
+      { on: 'dots', each: true, stagger: 3.5, keys: popIn(18, 0.25) },
+      { on: 'slices', each: true, stagger: 3.5, keys: slideIn(24, 2.0, 0) },
+    ],
+    props: [checkFlash(16.8, 5.0, '#4ADE80', 44, 66)],
+  },
 };

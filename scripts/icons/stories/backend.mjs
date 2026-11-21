@@ -1871,4 +1871,289 @@ export default {
     ],
     props: [radar(12, 12, 10.3, '#38BDF8', 22, 62, 120), checkFlash(16.6, 5.2, '#4ADE80', 42, 66)],
   },
+
+  betterauth: {
+    story:
+      'Better Auth twin cryptographic halves slide together and lock cleanly as a green verified session check flashes at the corner',
+    groups: { left: 0, right: 1 },
+    tracks: [
+      { on: 'left', keys: slideIn(10, -2.4, 0) },
+      { on: 'right', keys: slideIn(14, 2.4, 0) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.0, '#94A3B8', 24, 58, { layer: 'under', sw: 0.55 }),
+      checkFlash(16.8, 5.0, '#4ADE80', 38, 64),
+    ],
+  },
+
+  lucia: {
+    story:
+      'Lucia session-auth emblem traces its minimalist silhouette and blooms with a crisp violet verification ring',
+    tracks: [{ on: 0, draw: [8, 34], fill: [26, 38], width: 0.65, keys: popIn(12, 0.84) }],
+    props: [
+      pulseRing(12, 12, 9.8, '#A5B4FC', 22, 56, { layer: 'under', sw: 0.6 }),
+      checkFlash(16.6, 5.2, '#4ADE80', 40, 66),
+    ],
+  },
+
+  ory: {
+    story:
+      'Ory zero-trust identity core pulses as its upper and lower OAuth2 security brackets clamp securely into place',
+    groups: { core: 0, top: 1, bottom: 2 },
+    tracks: [
+      { on: 'core', keys: heartbeat(12, 0.08) },
+      { on: 'top', keys: dropIn(14, 2.4) },
+      { on: 'bottom', keys: riseIn(18, 2.4) },
+    ],
+    props: [radar(12, 12, 10.4, '#818CF8', 20, 62, 110)],
+  },
+
+  stripe: {
+    story:
+      'Stripe iconic S-mark traces its crisp payment contour, gleams with a diagonal checkout sheen, and confirms with a green authorization check',
+    tracks: [{ on: 0, draw: [8, 32], fill: [24, 36], width: 0.65, keys: breathe(12, 0.05) }],
+    props: [
+      sheen('<rect x="3" y="1" width="18" height="22" rx="2"/>', 32, 60, 0.32),
+      checkFlash(16.8, 5.0, '#4ADE80', 40, 66),
+    ],
+  },
+
+  lemonsqueezy: {
+    story:
+      'Lemon Squeezy four golden citrus wedges fan into place in sequence with a bright SaaS billing bounce and spark',
+    tracks: [{ on: [0, 1, 2, 3], order: 'y', each: true, stagger: 4.5, keys: popIn(10, 0.45) }],
+    props: [
+      pulseRing(12, 12, 10.0, '#FDE047', 26, 60, { layer: 'under', sw: 0.55 }),
+      spark(18.6, 5.2, 1.6, -1.6, '#FEF08A', 36, 60),
+    ],
+  },
+
+  paddle: {
+    story:
+      'Paddle billing mark rocks with rhythmic momentum as its circular coin pops into the blade and a golden checkout ring pulses',
+    groups: { coin: 0, blade: 1 },
+    tracks: [
+      { on: 'blade', origin: '50% 70%', keys: sway(10, 6, 0.5) },
+      { on: 'coin', keys: popIn(16, 0.4) },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#FEF08A', 26, 60, { layer: 'under', sw: 0.55 })],
+  },
+
+  resend: {
+    story:
+      'Resend crisp transactional email R traces swiftly as an outgoing message packet shoots across the diagonal and confirms delivery',
+    tracks: [{ on: 0, draw: [8, 32], fill: [24, 36], width: 0.65 }],
+    props: [
+      packet(4.5, 18.5, 19.5, 5.5, '#38BDF8', 24, 52, 0.95),
+      checkFlash(16.8, 5.0, '#4ADE80', 42, 66),
+    ],
+  },
+
+  pusher: {
+    story:
+      'Pusher real-time pub/sub beacon pulses twice as concentric WebSocket broadcast rings expand outward to connected clients',
+    tracks: [{ on: 0, origin: [12, 12], keys: heartbeat(10, 0.08) }],
+    props: [
+      pulseRing(12, 12, 8.8, '#C084FC', 16, 50, { layer: 'under', sw: 0.6 }),
+      pulseRing(12, 12, 10.4, '#38BDF8', 28, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  livekit: {
+    story:
+      'LiveKit open-source WebRTC outer frame and inner broadcast core pulse in sync while live audio/video signal rings radiate outward',
+    groups: { outer: 0, inner: 1 },
+    tracks: [
+      { on: 'outer', draw: [8, 30], fill: [22, 34], width: 0.6 },
+      { on: 'inner', keys: popIn(18, 0.45) },
+    ],
+    props: [
+      pulseRing(12, 12, 9.8, '#38BDF8', 22, 56, { layer: 'under', sw: 0.6 }),
+      pulseRing(12, 12, 10.5, '#4ADE80', 34, 66, { layer: 'under', sw: 0.45 }),
+    ],
+  },
+
+  agora: {
+    story:
+      'Agora five real-time voice-and-video letter glyphs ripple left-to-right like live media frames streaming across a global RTC edge',
+    tracks: [{ on: [2, 4, 0, 1, 3], each: true, stagger: 4.0, keys: riseIn(10, 2.2) }],
+    props: [
+      waveLine(19.6, '#38BDF8', 14, 62),
+      pulseRing(12, 11.5, 10.0, '#7DD3FC', 28, 62, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  convex: {
+    story:
+      'Convex three reactive orbital ribbons converge and rotate cleanly into sync as real-time database mutation packets pulse across the core',
+    tracks: [
+      {
+        on: [0, 1, 2],
+        origin: [12, 12],
+        stagger: 4.5,
+        keys: {
+          10: { r: -24, s: 0.86, o: 0.35, e: 'out' },
+          32: { r: 4, s: 1.04, o: 1, e: 'settle' },
+          46: { r: 0, s: 1, o: 1, e: 'out' },
+        },
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 10.0, '#FCA5A5', 26, 60, { layer: 'under', sw: 0.55 }),
+      spark(18.6, 5.4, 1.5, -1.5, '#FDE047', 36, 58),
+    ],
+  },
+
+  sidekiq: {
+    story:
+      'Sidekiq martial-arts silhouette delivers a snappy high-speed strike as background worker jobs drain rapidly with a crimson spark',
+    groups: { body: 0, kick: 1 },
+    tracks: [
+      { on: 'body', origin: '50% 60%', keys: nod(10, 6) },
+      { on: 'kick', keys: slideIn(16, 2.4, -1.2) },
+    ],
+    props: [
+      boltFlash(17.8, 4.6, '#F472B6', 24, 52),
+      pulseRing(12, 12, 10.0, '#F9A8D4', 30, 62, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  sst: {
+    story:
+      'SST full-stack cloud emblem traces its infrastructure-as-code silhouette and fires a warm coral serverless deploy pulse',
+    tracks: [{ on: 0, draw: [8, 34], fill: [26, 38], width: 0.65, keys: riseIn(10, 2.2) }],
+    props: [
+      pulseRing(12, 12, 10.2, '#FDBA74', 26, 60, { layer: 'under', sw: 0.55 }),
+      spark(18.6, 5.2, 1.6, -1.6, '#FDE047', 38, 60),
+    ],
+  },
+
+  medusa: {
+    story:
+      'Medusa headless commerce emblem traces its sculpted vector contours and shimmers with a sleek storefront sheen',
+    tracks: [{ on: 0, draw: [8, 34], fill: [26, 38], width: 0.6, keys: breathe(12, 0.05) }],
+    props: [sheen('<rect x="2" y="1" width="20" height="22" rx="3"/>', 34, 62, 0.28)],
+  },
+
+  shopify: {
+    story:
+      'Shopify shopping bag swings lightly like a freshly packed order while its side gusset locks in and a green checkout check flashes',
+    groups: { side: 0, front: 1 },
+    tracks: [
+      { on: 'front', origin: '50% 25%', keys: sway(10, 6, 0.4) },
+      { on: 'side', keys: slideIn(14, 2.0, 0) },
+    ],
+    props: [checkFlash(16.8, 4.8, '#86EFAC', 38, 64)],
+  },
+
+  woocommerce: {
+    story:
+      'WooCommerce speech-bubble badge pops into place as its crisp storefront letters ripple left-to-right across the banner',
+    groups: { bubble: 0, letters: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    tracks: [
+      { on: 'bubble', keys: popIn(10, 0.72) },
+      { on: 'letters', order: 'x', each: true, stagger: 2.2, keys: riseIn(16, 1.6) },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#C084FC', 34, 64, { layer: 'under', sw: 0.5 })],
+  },
+
+  wordpress: {
+    story:
+      'WordPress classic W-seal traces its circular publishing emblem and turns gently into alignment with a crisp editorial sheen',
+    tracks: [
+      {
+        on: 0,
+        origin: [12, 12],
+        draw: [8, 34],
+        fill: [26, 38],
+        width: 0.65,
+        keys: { 10: { r: -20, e: 'inout' }, 38: { r: 4, e: 'settle' }, 58: { r: 0, e: 'out' } },
+      },
+    ],
+    props: [sheen('<circle cx="12" cy="12" r="10.4"/>', 38, 64, 0.26)],
+  },
+
+  drupal: {
+    story:
+      'Drupal water-drop mascot descends cleanly with a gentle splash ripple beneath it and gives a friendly nod',
+    tracks: [{ on: 0, origin: '50% 65%', keys: dropIn(10, 2.8) }],
+    props: [
+      waveLine(21.2, '#38BDF8', 22, 62),
+      pulseRing(12, 14, 8.8, '#60A5FA', 26, 58, { layer: 'under', sw: 0.55 }),
+    ],
+  },
+
+  webflow: {
+    story:
+      'Webflow dynamic W-ribbon traces its fluid visual-layout curves while crisp blue smart-guides flash and lock it to the canvas',
+    tracks: [{ on: 0, draw: [8, 34], fill: [26, 38], width: 0.65, keys: slideIn(10, -2.4, 0) }],
+    props: [
+      guides(
+        [
+          [12.0, 3.0, 12.0, 21.0],
+          [1.5, 12.0, 22.5, 12.0],
+        ],
+        '#60A5FA',
+        12,
+        54
+      ),
+      sheen('<rect x="0.5" y="4.5" width="23" height="15" rx="2"/>', 36, 64, 0.3),
+    ],
+  },
+
+  wix: {
+    story:
+      'Wix three bold letterforms W-i-x cascade briskly left-to-right across the canvas with a clean studio gloss sweep',
+    tracks: [{ on: [0, 1, 2], order: 'x', each: true, stagger: 5.5, keys: riseIn(10, 2.6) }],
+    props: [sheen('<rect x="0.5" y="7" width="23" height="10" rx="1.5"/>', 36, 64, 0.3)],
+  },
+
+  squarespace: {
+    story:
+      'Squarespace four interlocking ribbon loops trace and weave together from opposing diagonals into a balanced minimalist emblem',
+    tracks: [
+      { on: [3, 2, 1, 0], each: true, stagger: 4.2, draw: [8, 28], fill: [20, 32], width: 0.55 },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#CBD5E1', 34, 64, { layer: 'under', sw: 0.5 })],
+  },
+
+  tina: {
+    story:
+      'TinaCMS orange llama hops cheerily as it commits visual Markdown edits to Git, flashing a warm verified spark',
+    groups: { llama: 0, foot: 1 },
+    tracks: [
+      { on: 'llama', origin: '50% 80%', keys: nod(12, 6) },
+      { on: 'foot', keys: riseIn(18, 1.4) },
+    ],
+    props: [
+      spark(17.8, 5.0, 1.6, -1.6, '#FDBA74', 28, 52),
+      checkFlash(16.6, 5.2, '#4ADE80', 40, 66),
+    ],
+  },
+
+  storyblok: {
+    story:
+      'Storyblok speech-bubble frame pops open as its two modular content blocks slide cleanly into place inside the visual editor',
+    groups: { frame: 2, blocks: [1, 0] },
+    tracks: [
+      { on: 'frame', keys: popIn(10, 0.78) },
+      { on: 'blocks', each: true, stagger: 5, keys: slideIn(18, -2.2, 0) },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#5EEAD4', 32, 62, { layer: 'under', sw: 0.55 })],
+  },
+
+  prismic: {
+    story:
+      'Prismic eight modular content-slice tiles assemble clockwise into a cohesive page-builder prism with a soft indigo bloom',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6, 7],
+        order: 'a',
+        each: true,
+        stagger: 2.6,
+        keys: popIn(10, 0.45),
+      },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#818CF8', 34, 64, { layer: 'under', sw: 0.55 })],
+  },
 };

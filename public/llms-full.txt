@@ -59,10 +59,10 @@ npx techstack-studio mcp
 
 ---
 
-## Catalog overview (577 icons across 8 categories)
+## Catalog overview (603 icons across 8 categories)
 - AI and machine learning: 59 icons
-- Backend: 72 icons
-- Cloud and DevOps: 85 icons
+- Backend: 96 icons
+- Cloud and DevOps: 87 icons
 - Databases: 49 icons
 - Developer tools: 98 icons
 - Embedded development: 44 icons
