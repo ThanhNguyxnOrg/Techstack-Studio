@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   publish:
-    uses: ThanhNguyxnOrg/.github/.github/workflows/publish-npm.yml@aa4ff7ec39642ca1372cf4794fdeb2c2c41f48b9
+    uses: ThanhNguyxnOrg/.github/.github/workflows/publish-npm.yml@ci-v1
     with:
       job_name: Publish techstack-studio to npm
       node_version_file: .nvmrc
