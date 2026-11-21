@@ -12,8 +12,13 @@ import { leafGeometry } from './art.mjs';
 import { boundsOfPoints } from './geometry.mjs';
 import { transformBounds, parseTransform, IDENTITY, multiply } from '../svgFrame.mjs';
 
-export const T = 4.8;
+export const T = 6.0;
+// Authoring window stays 6..72% so story specs remain compact and readable;
+// engine expands it smoothly across 4..84% of the 6.0s cycle (~4.8s active
+// story + ~1.2s crisp rest hold across the 84..100% -> 0..4% loop seam).
 export const REST = { in: 6, out: 72 };
+const PLAY = { in: 4, out: 84 };
+const mapPct = (k) => PLAY.in + ((k - REST.in) / (REST.out - REST.in)) * (PLAY.out - PLAY.in);
 export const EASE = {
   out: 'cubic-bezier(.22,1,.36,1)',
   inout: 'cubic-bezier(.65,0,.35,1)',
@@ -92,7 +97,8 @@ function buildFrames(keys, { unit = 1, kind = 'part', id, end }) {
   const restOpacity = kind === 'prop' || kind === 'trace' ? 0 : 1;
   const rest = { o: restOpacity, rest: true };
   const endRest = end ? { ...end, o: restOpacity, rest: true } : rest;
-  const list = [[0, rest], [REST.in, rest], ...entries, [REST.out, endRest], [100, endRest]];
+  const mapped = entries.map(([k, v]) => [mapPct(k), v]);
+  const list = [[0, rest], [PLAY.in, rest], ...mapped, [PLAY.out, endRest], [100, endRest]];
   // Merge duplicate anchors (author keyed exactly on a rest edge).
   const merged = [];
   for (const item of list) {

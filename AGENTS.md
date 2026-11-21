@@ -15,7 +15,7 @@ This file guides AI coding agents working **with** or **inside** Tech Stack Stud
 
 - **Icon art & motion pipeline:**
   - Master vector art lives in `assets/icons/art/{id}.svg` (pure vector only, no `<image>`).
-  - Per-icon story specs live in `scripts/icons/stories/*.mjs` (4.8s synchronized loop; clean rest at `0–6%` and `72–100%`; unique `story` per icon).
+  - Per-icon story specs live in `scripts/icons/stories/*.mjs` (6.0s synchronized loop; active story across `4–84%`, clean rest across `84–100%` and `0–4%`; unique `story` per icon).
   - Build all 542 icons + runtime parts: `npm run generate:icons` (`scripts/icons/build.mjs`).
   - Refresh agent discovery artifacts: `npm run publish:agent`.
   - Build publishable CLI & MCP package: `npm run build:cli` (`packages/cli/dist/cli.js`).

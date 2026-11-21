@@ -110,8 +110,15 @@ const PACKAGE_TO_ID: Record<string, string> = {
   openai: 'openai',
   '@anthropic-ai/sdk': 'anthropic',
   '@google/genai': 'googlegemini',
+  '@modelcontextprotocol/sdk': 'modelcontextprotocol',
   langchain: 'langchain',
   '@langchain/core': 'langchain',
+  n8n: 'n8n',
+  elevenlabs: 'elevenlabs',
+  '@elevenlabs/elevenlabs-js': 'elevenlabs',
+  vllm: 'vllm',
+  modal: 'modal',
+  dify: 'dify',
 
   // Python / AI / Data
   fastapi: 'fastapi',

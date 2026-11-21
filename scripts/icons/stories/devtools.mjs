@@ -2389,4 +2389,80 @@ export default {
       spark(18.6, 6.2, 1.6, -1.6, '#FBBF24', 36, 58),
     ],
   },
+
+  claudecode: {
+    story:
+      'Claude Code terminal agent hops briskly as it executes a tool loop while a crisp green shell caret and verified check flash beside it',
+    tracks: [
+      {
+        on: 'all',
+        origin: '50% 80%',
+        keys: {
+          10: { y: 0, sy: 0.92, e: 'in' },
+          20: { y: -2.2, sy: 1.05, e: 'out' },
+          32: { y: 0.3, sy: 0.95, e: 'settle' },
+          44: { y: -1.4, sy: 1.03, e: 'out' },
+          58: { y: 0, sy: 1, e: 'out' },
+        },
+      },
+    ],
+    props: [
+      checkFlash(17.4, 5.2, '#4ADE80', 36, 62),
+      spark(4.6, 5.4, -1.4, -1.4, '#FDBA74', 18, 42),
+    ],
+  },
+
+  windsurf: {
+    story:
+      'Windsurf ribbon banks smoothly across a cyan ocean swell like a Cascade multi-file edit wave gliding cleanly into alignment',
+    tracks: [
+      {
+        on: 'all',
+        origin: [12, 12],
+        keys: sway(10, 6, 0.8),
+      },
+    ],
+    props: [
+      waveLine(20.6, '#38BDF8', 10, 62),
+      packet(4.2, 11.2, 19.8, 11.2, '#7DD3FC', 22, 52, 0.9),
+    ],
+  },
+
+  cline: {
+    story:
+      'Cline autonomous coding robot gives an attentive nod while a cyan context radar scans around it and a green diff check confirms',
+    tracks: [
+      {
+        on: 'all',
+        origin: '50% 60%',
+        keys: nod(14, 6.5),
+      },
+    ],
+    props: [radar(12, 12, 10.4, '#38BDF8', 12, 58, 110), checkFlash(16.8, 5.2, '#4ADE80', 38, 64)],
+  },
+
+  v0: {
+    story:
+      'v0 generative UI glyphs snap cleanly onto dashed layout smart-guides as a sleek diagonal polish sheen sweeps across the mark',
+    groups: {
+      zero: 0,
+      v: 1,
+    },
+    tracks: [
+      { on: 'v', keys: slideIn(10, -2.4, 0) },
+      { on: 'zero', keys: slideIn(16, 2.4, 0) },
+    ],
+    props: [
+      guides(
+        [
+          [11.4, 3.0, 11.4, 21.0],
+          [2.0, 12.0, 22.0, 12.0],
+        ],
+        '#38BDF8',
+        10,
+        52
+      ),
+      sheen('<rect x="1" y="5" width="22" height="14" rx="2"/>', 34, 62, 0.28),
+    ],
+  },
 };

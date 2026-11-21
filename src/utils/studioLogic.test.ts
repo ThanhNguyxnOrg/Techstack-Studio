@@ -71,7 +71,7 @@ test('catalog manifest has >= 400 verified authentic technologies across all 8 c
   }
 });
 
-test('all 10 representative benchmark icons resolve with 4-color GCP choreography and synchronized 4.80s timing', () => {
+test('all 10 representative benchmark icons resolve with 4-color GCP choreography and synchronized 6.00s timing', () => {
   const resolved = resolveSelectedItems(REPRESENTATIVE_BENCHMARK_IDS);
   assert.equal(resolved.length, 10, 'Expected all 10 representative benchmark icons to resolve');
 
@@ -92,7 +92,7 @@ test('all 10 representative benchmark icons resolve with 4-color GCP choreograph
       gcpSvg.includes('#FBBC05')
   );
   assert.ok(gcpSvg.includes('@keyframes'));
-  assert.ok(gcpSvg.includes('4.80s'));
+  assert.ok(gcpSvg.includes('6.00s'));
   assert.ok(
     gcpSvg.includes('#131822'),
     'Expected unified #131822 icon plate when showPlate is true'

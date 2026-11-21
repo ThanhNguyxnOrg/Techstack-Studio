@@ -90,7 +90,7 @@ Public site: ${SITE}
 Repository: https://github.com/ThanhNguyxnOrg/Techstack-Studio
 
 ## Animated or static? Both are hosted directly
-- Animated SVG: ${SITE}/icons/animated/<id>.svg (4.8s seamless loop with prefers-reduced-motion fallback)
+- Animated SVG: ${SITE}/icons/animated/<id>.svg (6.0s seamless loop with prefers-reduced-motion fallback)
 - Static SVG:   ${SITE}/icons/source/<id>.svg (crisp non-animated vector)
 
 ## Machine-readable endpoints

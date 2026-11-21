@@ -1,6 +1,6 @@
 {
  "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
- "count": 542,
+ "count": 556,
  "note": "Icon paths are relative to the site root (append to site, or to the repository path when reading from disk).",
  "icons": [
   {
@@ -1576,6 +1576,43 @@
    "technique": "ring + hub + 2 story props"
   },
   {
+   "id": "claude",
+   "name": "Claude",
+   "category": "AI and machine learning",
+   "subcategory": "LLM & Foundation Models",
+   "role": "Anthropic Frontier AI Assistant & Reasoning Model Family",
+   "docsUrl": "https://claude.ai/",
+   "aliases": [
+    "claude",
+    "claude-ai"
+   ],
+   "monogram": "CLA",
+   "brandColor": "#D97757",
+   "svg": "icons/animated/claude.svg",
+   "sourceSvg": "icons/source/claude.svg",
+   "concept": "Claude warm terracotta sunburst blooms and rotates smoothly like a reasoning star while sending out an amber thought pulse and twin sparks",
+   "technique": "all + 3 story props"
+  },
+  {
+   "id": "claudecode",
+   "name": "Claude Code",
+   "category": "Developer tools",
+   "subcategory": "AI Coding Assistants",
+   "role": "Anthropic Agentic Terminal Coding Assistant",
+   "docsUrl": "https://docs.anthropic.com/en/docs/claude-code",
+   "aliases": [
+    "claudecode",
+    "claude code",
+    "claude-code"
+   ],
+   "monogram": "CLA",
+   "brandColor": "#D97757",
+   "svg": "icons/animated/claudecode.svg",
+   "sourceSvg": "icons/source/claudecode.svg",
+   "concept": "Claude Code terminal agent hops briskly as it executes a tool loop while a crisp green shell caret and verified check flash beside it",
+   "technique": "all + 2 story props"
+  },
+  {
    "id": "clerk",
    "name": "Clerk",
    "category": "Backend",
@@ -1610,6 +1647,24 @@
    "sourceSvg": "icons/source/clickhouse.svg",
    "concept": "ClickHouse’s five yellow columnar storage bars surge upward left-to-right like real-time OLAP telemetry ingesting millions of rows per second",
    "technique": "cols staggered + 1 story props"
+  },
+  {
+   "id": "cline",
+   "name": "Cline",
+   "category": "Developer tools",
+   "subcategory": "AI Coding Assistants",
+   "role": "Autonomous Open-Source AI Coding Agent for VS Code",
+   "docsUrl": "https://cline.bot/",
+   "aliases": [
+    "cline",
+    "cline-bot"
+   ],
+   "monogram": "CLI",
+   "brandColor": "#18181B",
+   "svg": "icons/animated/cline.svg",
+   "sourceSvg": "icons/source/cline.svg",
+   "concept": "Cline autonomous coding robot gives an attentive nod while a cyan context radar scans around it and a green diff check confirms",
+   "technique": "all + 2 story props"
   },
   {
    "id": "clion",
@@ -2217,6 +2272,24 @@
    "technique": "all + 1 story props"
   },
   {
+   "id": "deepseek",
+   "name": "DeepSeek",
+   "category": "AI and machine learning",
+   "subcategory": "LLM & Foundation Models",
+   "role": "Open-Weight Reasoning & Mixture-of-Experts Frontier Models",
+   "docsUrl": "https://www.deepseek.com/",
+   "aliases": [
+    "deepseek",
+    "deepseek-r1"
+   ],
+   "monogram": "DEE",
+   "brandColor": "#5786FE",
+   "svg": "icons/animated/deepseek.svg",
+   "sourceSvg": "icons/source/deepseek.svg",
+   "concept": "DeepSeek blue whale glides gracefully over an ocean swell while deep-reasoning sonar rings ripple outward from its silhouette",
+   "technique": "all + 2 story props"
+  },
+  {
    "id": "deno",
    "name": "Deno",
    "category": "Backend",
@@ -2269,6 +2342,24 @@
    "sourceSvg": "icons/source/dgraph.svg",
    "concept": "Dgraph’s GraphQL graph emblem traces its bold magenta contour while distributed query packets resolve across connected vertices",
    "technique": "part outline trace + 3 story props"
+  },
+  {
+   "id": "dify",
+   "name": "Dify",
+   "category": "AI and machine learning",
+   "subcategory": "LLM Orchestration & Agents",
+   "role": "Open-Source LLM App & Agentic Workflow Development Platform",
+   "docsUrl": "https://dify.ai/",
+   "aliases": [
+    "dify",
+    "dify-ai"
+   ],
+   "monogram": "DIF",
+   "brandColor": "#0033FF",
+   "svg": "icons/animated/dify.svg",
+   "sourceSvg": "icons/source/dify.svg",
+   "concept": "Dify four modular wordmark blocks cascade left-to-right into an agentic pipeline while the i-dot hops crisply onto its stem",
+   "technique": "d + mid + y + dot + 2 story props"
   },
   {
    "id": "digitalocean",
@@ -2601,6 +2692,24 @@
    "sourceSvg": "icons/source/electron.svg",
    "concept": "Electron desktop atom spins its three outer electrons around the central Chromium-Node nucleus with steady IPC rhythm",
    "technique": "nucleus + electrons + orbits + 1 story props"
+  },
+  {
+   "id": "elevenlabs",
+   "name": "ElevenLabs",
+   "category": "AI and machine learning",
+   "subcategory": "Multimodal & Generative AI",
+   "role": "AI Voice Synthesis, Cloning & Conversational Audio Platform",
+   "docsUrl": "https://elevenlabs.io/",
+   "aliases": [
+    "elevenlabs",
+    "11labs"
+   ],
+   "monogram": "ELE",
+   "brandColor": "#000000",
+   "svg": "icons/animated/elevenlabs.svg",
+   "sourceSvg": "icons/source/elevenlabs.svg",
+   "concept": "ElevenLabs twin voice bars oscillate out of phase like stereo audio equalizer levels while warm acoustic soundwave rings radiate outward",
+   "technique": "left + right + 2 story props"
   },
   {
    "id": "elixir",
@@ -5196,6 +5305,44 @@
    "technique": "badge + steam staggered + 1 story props"
   },
   {
+   "id": "modal",
+   "name": "Modal",
+   "category": "AI and machine learning",
+   "subcategory": "Local & Cloud Inference",
+   "role": "Serverless GPU & Cloud Compute Platform for AI Workloads",
+   "docsUrl": "https://modal.com/",
+   "aliases": [
+    "modal",
+    "modal-labs"
+   ],
+   "monogram": "MOD",
+   "brandColor": "#7FEE64",
+   "svg": "icons/animated/modal.svg",
+   "sourceSvg": "icons/source/modal.svg",
+   "concept": "Modal serverless GPU mark cold-starts in milliseconds with a crisp scale-up pop, neon-lime compute ring, and twin accelerator sparks",
+   "technique": "all + 3 story props"
+  },
+  {
+   "id": "modelcontextprotocol",
+   "name": "Model Context Protocol",
+   "category": "AI and machine learning",
+   "subcategory": "LLM Orchestration & Agents",
+   "role": "Open Standard Connecting AI Assistants to Tools & Data Sources",
+   "docsUrl": "https://modelcontextprotocol.io/",
+   "aliases": [
+    "modelcontextprotocol",
+    "model context protocol",
+    "mcp",
+    "mcp-server"
+   ],
+   "monogram": "MOD",
+   "brandColor": "#000000",
+   "svg": "icons/animated/modelcontextprotocol.svg",
+   "sourceSvg": "icons/source/modelcontextprotocol.svg",
+   "concept": "Model Context Protocol host arch and tool bridge trace and interlock cleanly as bidirectional JSON-RPC packets cross between assistant and tools",
+   "technique": "outer outline trace + bridge outline trace + 2 story props"
+  },
+  {
    "id": "mongodb",
    "name": "MongoDB",
    "category": "Databases",
@@ -5286,6 +5433,24 @@
    "sourceSvg": "icons/source/mysql.svg",
    "concept": "Sakila the MySQL dolphin leaps gracefully over an ocean query wave while the M-y-S-Q-L letters ripple in sequence below",
    "technique": "dolphin + wordmark staggered + 2 story props"
+  },
+  {
+   "id": "n8n",
+   "name": "n8n",
+   "category": "AI and machine learning",
+   "subcategory": "LLM Orchestration & Agents",
+   "role": "Fair-Code Workflow & AI Agent Automation Platform",
+   "docsUrl": "https://n8n.io/",
+   "aliases": [
+    "n8n",
+    "n8n-io"
+   ],
+   "monogram": "N8N",
+   "brandColor": "#EA4B71",
+   "svg": "icons/animated/n8n.svg",
+   "sourceSvg": "icons/source/n8n.svg",
+   "concept": "n8n workflow graph traces its automation edges as trigger packets flow from the left node through the hub and branch out to parallel actions",
+   "technique": "part outline trace + 3 story props"
   },
   {
    "id": "nativescript",
@@ -5864,6 +6029,24 @@
    "sourceSvg": "icons/source/opengl.svg",
    "concept": "OpenGL GPU rendering pipeline sweeps across its steel-blue wordmark as depth-buffered drop shadows lock behind the foreground glyphs",
    "technique": "shadow + foreground staggered + reg + 1 story props"
+  },
+  {
+   "id": "openrouter",
+   "name": "OpenRouter",
+   "category": "AI and machine learning",
+   "subcategory": "LLM Orchestration & Agents",
+   "role": "Unified Multi-Model API Gateway for Frontier & Open LLMs",
+   "docsUrl": "https://openrouter.ai/",
+   "aliases": [
+    "openrouter",
+    "open-router"
+   ],
+   "monogram": "OPE",
+   "brandColor": "#94A3B8",
+   "svg": "icons/animated/openrouter.svg",
+   "sourceSvg": "icons/source/openrouter.svg",
+   "concept": "OpenRouter traces its unified API gateway as incoming prompts split from the left ingress and fan out simultaneously to multiple LLM endpoints",
+   "technique": "part outline trace + 3 story props"
   },
   {
    "id": "opensearch",
@@ -8390,6 +8573,24 @@
    "technique": "top1 + top2 + bot1 + bot2 + 1 story props"
   },
   {
+   "id": "suno",
+   "name": "Suno",
+   "category": "AI and machine learning",
+   "subcategory": "Multimodal & Generative AI",
+   "role": "Generative AI Music & Audio Composition Platform",
+   "docsUrl": "https://suno.com/",
+   "aliases": [
+    "suno",
+    "suno-ai"
+   ],
+   "monogram": "SUN",
+   "brandColor": "#000000",
+   "svg": "icons/animated/suno.svg",
+   "sourceSvg": "icons/source/suno.svg",
+   "concept": "Suno split-sun vinyl emblem spins smoothly with harmonic groove momentum while golden and violet audio ripples radiate outward",
+   "technique": "all + 2 story props"
+  },
+  {
    "id": "supabase",
    "name": "Supabase",
    "category": "Databases",
@@ -9254,6 +9455,24 @@
    "technique": "leftArm + rightArm + 3 story props"
   },
   {
+   "id": "v0",
+   "name": "v0",
+   "category": "Developer tools",
+   "subcategory": "AI Coding Assistants",
+   "role": "Vercel Generative UI & Full-Stack Prototyping Assistant",
+   "docsUrl": "https://v0.dev/",
+   "aliases": [
+    "v0",
+    "v0-dev"
+   ],
+   "monogram": "V0",
+   "brandColor": "#000000",
+   "svg": "icons/animated/v0.svg",
+   "sourceSvg": "icons/source/v0.svg",
+   "concept": "v0 generative UI glyphs snap cleanly onto dashed layout smart-guides as a sleek diagonal polish sheen sweeps across the mark",
+   "technique": "v + zero + 2 story props"
+  },
+  {
    "id": "vagrant",
    "name": "Vagrant",
    "category": "Cloud and DevOps",
@@ -9453,6 +9672,24 @@
    "sourceSvg": "icons/source/vitest.svg",
    "concept": "Vitest neon-green V-bolt fires through a Vite-powered test run with instant HMR speed and a crisp pass flash",
    "technique": "all + 3 story props"
+  },
+  {
+   "id": "vllm",
+   "name": "vLLM",
+   "category": "AI and machine learning",
+   "subcategory": "Local & Cloud Inference",
+   "role": "High-Throughput PagedAttention LLM Inference & Serving Engine",
+   "docsUrl": "https://docs.vllm.ai/",
+   "aliases": [
+    "vllm",
+    "pagedattention"
+   ],
+   "monogram": "VLL",
+   "brandColor": "#30A2FF",
+   "svg": "icons/animated/vllm.svg",
+   "sourceSvg": "icons/source/vllm.svg",
+   "concept": "vLLM twin PagedAttention wings sweep in from opposite flanks to form the V-mark as high-throughput token streams rocket upward between them",
+   "technique": "leftWing + rightWing + 3 story props"
   },
   {
    "id": "vmware",
@@ -9728,6 +9965,24 @@
    "sourceSvg": "icons/source/wezterm.svg",
    "concept": "WezTerm command chevron nudges forward as the GPU-rendered W-glyph snaps in with a crisp violet multiplexer pulse",
    "technique": "prompt + wGlyph + 2 story props"
+  },
+  {
+   "id": "windsurf",
+   "name": "Windsurf",
+   "category": "Developer tools",
+   "subcategory": "AI Coding Assistants",
+   "role": "Agentic AI Code Editor with Cascade Multi-File Workflows",
+   "docsUrl": "https://windsurf.com/",
+   "aliases": [
+    "windsurf",
+    "codeium-windsurf"
+   ],
+   "monogram": "WIN",
+   "brandColor": "#0B100F",
+   "svg": "icons/animated/windsurf.svg",
+   "sourceSvg": "icons/source/windsurf.svg",
+   "concept": "Windsurf ribbon banks smoothly across a cyan ocean swell like a Cascade multi-file edit wave gliding cleanly into alignment",
+   "technique": "all + 2 story props"
   },
   {
    "id": "wireguard",

@@ -66,7 +66,7 @@ if (mode === 'inspect') {
       );
   }
 } else if (mode === 'frames') {
-  const times = [0, 0.4, 0.8, 1.2, 1.6, 2.0, 2.4, 2.8, 3.2, 3.6];
+  const times = [0, 0.6, 1.2, 1.8, 2.4, 3.0, 3.6, 4.2, 4.8, 5.4];
   const css = times
     .map(
       (t, i) => `.f${i} *{animation-delay:-${t}s!important;animation-play-state:paused!important}`
