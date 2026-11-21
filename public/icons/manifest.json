@@ -1,7 +1,7 @@
 {
  "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
- "count": 542,
- "generatedAt": "2026-11-21T08:33:18.892Z",
+ "count": 665,
+ "generatedAt": "2026-11-21T10:49:39.473Z",
  "icons": {
   "actix": {
    "concept": "Actix Web Rust actor emblem locks with crisp mechanical torque and fires concurrent worker sparks across its sharp geometry",
@@ -28,6 +28,11 @@
    "technique": "portal + frameA + 1 story props",
    "status": "visual_qa_passed"
   },
+  "agora": {
+   "concept": "Agora five real-time voice-and-video letter glyphs ripple left-to-right like live media frames streaming across a global RTC edge",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "aiohttp": {
    "concept": "AIOHTTP asyncio client-server emblem banks smoothly like a paper plane dispatching concurrent HTTP requests across an event-loop orbit",
    "technique": "part + 2 story props",
@@ -51,6 +56,11 @@
   "algolia": {
    "concept": "Algolia’s search stopwatch ticks sharply forward and locks onto a millisecond discovery result with a crisp radar sweep",
    "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "alibabacloud": {
+   "concept": "Alibaba Cloud twin orange brackets converge around the central link bar as global compute packets stream cleanly across the bridge",
+   "technique": "left + right + bridge + 1 story props",
    "status": "visual_qa_passed"
   },
   "alpinedotjs": {
@@ -213,6 +223,11 @@
    "technique": "body + leftNode + rightNode + 2 story props",
    "status": "visual_qa_passed"
   },
+  "arc": {
+   "concept": "Arc layered browser emblem rises with fluid tab-space breathing and sweeps an iridescent window sheen",
+   "technique": "part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "archlinux": {
    "concept": "Arch Linux’s sharp rolling-release peak traces cleanly upward with a minimalist cyan summit spark",
    "technique": "peak outline trace + 2 story props",
@@ -283,6 +298,11 @@
    "technique": "frame outline trace + prism + 1 story props",
    "status": "visual_qa_passed"
   },
+  "backblaze": {
+   "concept": "Backblaze three crimson flame tongues rise in staggered cadence like hot B2 cloud storage firing up with glowing sparks",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "backbonedotjs": {
    "concept": "Backbone.js interlocking structural columns and cross-braces snap into place, wiring models and views with classic stability",
    "technique": "top staggered + sides staggered + joints staggered + 1 story props",
@@ -298,6 +318,16 @@
    "technique": "cells staggered + 1 story props",
    "status": "visual_qa_passed"
   },
+  "baseui": {
+   "concept": "Base UI unstyled geometric pillars snap cleanly onto accessibility alignment smart-guides like composable React primitives locking into place",
+   "technique": "left + right + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "bat": {
+   "concept": "bat wing-shaped cat-clone emblem opens smoothly as a syntax-highlighted sheen sweeps across its lines",
+   "technique": "part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "bazel": {
    "concept": "Bazel faceted green target blocks cascade downward from the top nodes to build a hermetic diamond graph",
    "technique": "topNodes staggered + midFacets staggered + base staggered + 1 story props",
@@ -311,6 +341,21 @@
   "bentoml": {
    "concept": "BentoML packaged model mascot hops with a crisp serving bounce and blinks its twin eyes as an inference request clears",
    "technique": "box + eyes + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "betterauth": {
+   "concept": "Better Auth twin cryptographic halves slide together and lock cleanly as a green verified session check flashes at the corner",
+   "technique": "left + right + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "betterstack": {
+   "concept": "Better Stack three stacked uptime bars rise in monitoring cadence while a heartbeat status wave glides across",
+   "technique": "part + part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "bevy": {
+   "concept": "Bevy three soaring ECS birds glide in staggered flight formation as an entity-system pulse radiates beneath",
+   "technique": "part + part + part + 2 story props",
    "status": "visual_qa_passed"
   },
   "biome": {
@@ -383,6 +428,11 @@
    "technique": "lowerPlate + upperPlate + 2 story props",
    "status": "visual_qa_passed"
   },
+  "caprover": {
+   "concept": "CapRover self-hosted Docker PaaS crest turns gently like a captain compass while its inner sails lock cleanly into course",
+   "technique": "outer + sails staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "cargo": {
    "concept": "Cargo Rust shipping crate lowers its golden lid onto the side panels as structural seams trace and lock tight",
    "technique": "leftFace + rightFace + lid + seams staggered + 1 story props",
@@ -396,6 +446,11 @@
   "centos": {
    "concept": "CentOS’s four-color enterprise compass arrows converge symmetrically toward the center core",
    "technique": "top + right + bottom + left + inners staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "ceph": {
+   "concept": "Ceph octopus tentacles expand around its central storage core as replicated object packets pulse evenly across the distributed cluster",
+   "technique": "outer + inner + eye + 1 story props",
    "status": "visual_qa_passed"
   },
   "chakraui": {
@@ -413,6 +468,11 @@
    "technique": "core + ring staggered + 1 story props",
    "status": "visual_qa_passed"
   },
+  "chromatic": {
+   "concept": "Chromatic visual testing lens opens with an aperture bloom while a pixel-diff scanner sweeps cleanly across the emblem",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "cilium": {
    "concept": "Cilium’s central eBPF kernel cell pulses first, then its six honeycomb networking cells pop radially into a secure mesh",
    "technique": "core + ring staggered + 1 story props",
@@ -423,6 +483,16 @@
    "technique": "ring + hub + 2 story props",
    "status": "visual_qa_passed"
   },
+  "claude": {
+   "concept": "Claude warm terracotta sunburst blooms and rotates smoothly like a reasoning star while sending out an amber thought pulse and twin sparks",
+   "technique": "all + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "claudecode": {
+   "concept": "Claude Code terminal agent hops briskly as it executes a tool loop while a crisp green shell caret and verified check flash beside it",
+   "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "clerk": {
    "concept": "Clerk purple identity orb pops cleanly into center as its outer C-arc and base embrace it like a seamless user-session handshake",
    "technique": "arc + base + orb + 2 story props",
@@ -431,6 +501,11 @@
   "clickhouse": {
    "concept": "ClickHouse’s five yellow columnar storage bars surge upward left-to-right like real-time OLAP telemetry ingesting millions of rows per second",
    "technique": "cols staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "cline": {
+   "concept": "Cline autonomous coding robot gives an attentive nod while a cyan context radar scans around it and a green diff check confirms",
+   "technique": "all + 2 story props",
    "status": "visual_qa_passed"
   },
   "clion": {
@@ -446,6 +521,16 @@
   "cloudflare": {
    "concept": "Cloudflare’s global edge cloud swells into view as its companion cloudlet locks in and Zero-Trust edge radar sweeps the perimeter",
    "technique": "main + edge + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "cloudflarepages": {
+   "concept": "Cloudflare Pages edge deployment window traces its frame while its three browser dots pop in and static-to-edge build slices lock into place",
+   "technique": "frame outline trace + dots staggered + slices staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "cloudflareworkers": {
+   "concept": "Cloudflare Workers three orange V8-isolate chevron blades snap together in sequence as zero-cold-start edge packets fire across the globe",
+   "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "cmake": {
@@ -468,9 +553,19 @@
    "technique": "peak + shadow + 2 story props",
    "status": "visual_qa_passed"
   },
+  "codecov": {
+   "concept": "Codecov umbrella coverage mark traces its protective canopy while a live coverage telemetry bar climbs to green",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "codeigniter": {
    "concept": "CodeIgniter rapid PHP flame ignites with a crisp upward flare and throws bright orange sparks from its crest",
    "technique": "part + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "coder": {
+   "concept": "Coder cloud workspace left and right emblem halves lock cleanly together as a Terraform-provisioned environment check flashes",
+   "technique": "left + right + 2 story props",
    "status": "visual_qa_passed"
   },
   "coffeescript": {
@@ -523,9 +618,24 @@
    "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
+  "convex": {
+   "concept": "Convex three reactive orbital ribbons converge and rotate cleanly into sync as real-time database mutation packets pulse across the core",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "coolify": {
+   "concept": "Coolify seven violet self-hosting bars cascade smoothly into a stacked C-badge as a fresh container deployment confirms",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "couchbase": {
    "concept": "Couchbase’s enterprise NoSQL shield traces its perimeter and pulses with memory-first resilience while cluster sync packets converge",
    "technique": "part outline trace + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "coveralls": {
+   "concept": "Coveralls shield emblem pulses with test-coverage verification and flashes a crisp pass check",
+   "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
   "cpp": {
@@ -598,6 +708,16 @@
    "technique": "all + 1 story props",
    "status": "visual_qa_passed"
   },
+  "deepseek": {
+   "concept": "DeepSeek blue whale glides gracefully over an ocean swell while deep-reasoning sonar rings ripple outward from its silhouette",
+   "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "delta": {
+   "concept": "Delta nine-part git-diff emblem cascades through added and removed hunk segments and confirms a clean merge check",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "deno": {
    "concept": "Deno sauropod peeks out inside its secure sandbox ring, blinks knowingly, and flashes a green permission-granted checkmark",
    "technique": "dino + eye + 2 story props",
@@ -608,9 +728,19 @@
    "technique": "body + eyes + 2 story props",
    "status": "visual_qa_passed"
   },
+  "devbox": {
+   "concept": "Devbox Nix-powered workspace brackets clamp around the isolated shell core while a crisp reproducible environment check confirms",
+   "technique": "core + left + right + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "dgraph": {
    "concept": "Dgraph’s GraphQL graph emblem traces its bold magenta contour while distributed query packets resolve across connected vertices",
    "technique": "part outline trace + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "dify": {
+   "concept": "Dify four modular wordmark blocks cascade left-to-right into an agentic pipeline while the i-dot hops crisply onto its stem",
+   "technique": "d + mid + y + dot + 2 story props",
    "status": "visual_qa_passed"
   },
   "digitalocean": {
@@ -658,6 +788,11 @@
    "technique": "rotor + core + chassis + 1 story props",
    "status": "visual_qa_passed"
   },
+  "drupal": {
+   "concept": "Drupal water-drop mascot descends cleanly with a gentle splash ripple beneath it and gives a friendly nod",
+   "technique": "part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "duckdb": {
    "concept": "DuckDB’s in-process duck bobs briskly inside its yellow badge and quacks twice as vectorized OLAP analytics bars surge in",
    "technique": "badge + head + beak + 2 story props",
@@ -693,6 +828,11 @@
    "technique": "body + wheel + 1 story props",
    "status": "visual_qa_passed"
   },
+  "effect": {
+   "concept": "Effect type-safe pipeline arch traces its functional composition path while the lower return bar slides cleanly underneath as typed fibers complete",
+   "technique": "arch outline trace + base + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "elasticsearch": {
    "concept": "Elasticsearch’s three inverted-index arcs fan out and lock back into alignment while a distributed search radar sweeps for matching documents",
    "technique": "top + mid + bot + 2 story props",
@@ -701,6 +841,11 @@
   "electron": {
    "concept": "Electron desktop atom spins its three outer electrons around the central Chromium-Node nucleus with steady IPC rhythm",
    "technique": "nucleus + electrons + orbits + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "elevenlabs": {
+   "concept": "ElevenLabs twin voice bars oscillate out of phase like stereo audio equalizer levels while warm acoustic soundwave rings radiate outward",
+   "technique": "left + right + 2 story props",
    "status": "visual_qa_passed"
   },
   "elixir": {
@@ -748,6 +893,21 @@
    "technique": "beacon + waves staggered + 2 story props",
    "status": "visual_qa_passed"
   },
+  "ethereum": {
+   "concept": "Ethereum upper and lower octahedral crystal halves levitate slightly then snap into smart-contract consensus with a violet pulse ring",
+   "technique": "part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "ethers": {
+   "concept": "Ethers.js geometric wing emblem draws its lightweight provider contour and sweeps a clean JSON-RPC sheen",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "excalidraw": {
+   "concept": "Excalidraw hand-drawn sketchbook frame and strokes sketch themselves in sequentially like a live whiteboard session",
+   "technique": "part outline trace + part outline trace + part outline trace + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "expo": {
    "concept": "Expo sleek chevron lifts smoothly like an over-the-air mobile preview launch, trailing a crisp launch pulse",
    "technique": "part outline trace + 1 story props",
@@ -756,6 +916,11 @@
   "express": {
    "concept": "Express minimalist e-x mark snaps into middleware formation as incoming HTTP request and outgoing response packets zip cleanly through the pipeline",
    "technique": "frame + e + x + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "falco": {
+   "concept": "Falco six teal falcon wing feathers fan swiftly into formation as an eBPF runtime threat-detection radar sweeps cleanly across",
+   "technique": "parts staggered + 1 story props",
    "status": "visual_qa_passed"
   },
   "fastapi": {
@@ -823,6 +988,11 @@
    "technique": "shield outline trace + wing + 2 story props",
    "status": "visual_qa_passed"
   },
+  "formik": {
+   "concept": "Formik fourteen isometric honeycomb tiles cascade smoothly from top-left to bottom-right like structured form state snapping into alignment",
+   "technique": "parts staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "fortran": {
    "concept": "Fortran purple array-computing block traces its crisp serif F and sweeps a vectorized computation line across its matrix",
    "technique": "part outline trace + 2 story props",
@@ -843,9 +1013,19 @@
    "technique": "badge + ring + core + 2 story props",
    "status": "visual_qa_passed"
   },
+  "fresh": {
+   "concept": "Fresh lemon mark pops cleanly with zero-JS island energy as its inner citrus slice unfolds and a bright yellow hydration ring expands",
+   "technique": "outer + inner outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "fsharp": {
    "concept": "F# twin functional chevrons split open around the inner diamond core and pipe a value cleanly from left to right",
    "technique": "left + inner + right + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "gatling": {
+   "concept": "Gatling high-velocity turbine mark spins with torque bursts as rapid request packets fire outward",
+   "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
   "gatsby": {
@@ -856,6 +1036,11 @@
   "ghost": {
    "concept": "Ghost headless publishing grid glides gently into focus as crisp editorial lines animate like freshly published newsletter posts",
    "technique": "part + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "ghostty": {
+   "concept": "Ghostty GPU-accelerated terminal ghost floats gently upward with a crisp command-prompt bolt flash",
+   "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
   "gin": {
@@ -896,6 +1081,11 @@
   "gitlab": {
    "concept": "GitLab Tanuki fox facets interlock from left, right, and chin as a DevSecOps pipeline pulse sweeps across the badge",
    "technique": "base + leftCheek + rightCheek + chin + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "gitpod": {
+   "concept": "Gitpod golden hexagonal workspace traces its ephemeral cloud contour and gleams with a crisp ready-to-code sheen",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "gleam": {
@@ -963,6 +1153,11 @@
    "technique": "all + 4 story props",
    "status": "visual_qa_passed"
   },
+  "graphite": {
+   "concept": "Graphite stacked-PR hexagonal layers slide into review order and flash a crisp green stack-merge check",
+   "technique": "part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "graphql": {
    "concept": "GraphQL hexagon and inner schema triangle trace into place while all six vertex nodes pop alive and typed query packets hop between graph vertices",
    "technique": "hex outline trace + tri outline trace + nodes staggered + 3 story props",
@@ -973,9 +1168,24 @@
    "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
+  "grunt": {
+   "concept": "Grunt armored boar mascot lowers its head with a determined nod while its tusks and eyes glint before charging through build tasks",
+   "technique": "head + eyes + tusks staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "gulp": {
+   "concept": "gulp streaming task runner sways playfully while its twin script ribbons glide in and a red-coral build stream flows smoothly across",
+   "technique": "left + right + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "gunicorn": {
    "concept": "Gunicorn green UNIX unicorn gallops forward with a confident nod as forked Python WSGI workers spin up along its stride",
    "technique": "part + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "h3": {
+   "concept": "H3 seven composable hexagonal HTTP tiles cascade smoothly into a lightweight router grid as a fast request packet zips across",
+   "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "haproxy": {
@@ -1033,6 +1243,11 @@
    "technique": "topGold + botGold + leftSlate + rightSlate + 1 story props",
    "status": "visual_qa_passed"
   },
+  "hivemq": {
+   "concept": "HiveMQ golden honeycomb MQTT broker pulses twice as IoT telemetry rings expand outward and its twin bee antennae pop alertly",
+   "technique": "outer + eyes staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "homeassistant": {
    "concept": "Home Assistant smart house outlines its local-first roofline while three sensor nodes inside illuminate with live automation telemetry",
    "technique": "all + part outline trace + 4 story props",
@@ -1053,6 +1268,11 @@
    "technique": "frame + dot1 + dot2 + dot3 + 1 story props",
    "status": "visual_qa_passed"
   },
+  "hotjar": {
+   "concept": "Hotjar twin flame strokes flicker with heatmap intensity and radiate a warm user-session pulse ring",
+   "technique": "part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "html5": {
    "concept": "HTML5 semantic shield traces its armored contour, locks upright with a structural pulse, and flashes opening and closing tag brackets",
    "technique": "part outline trace + 2 story props",
@@ -1066,6 +1286,11 @@
   "huggingface": {
    "concept": "Hugging Face mascot beams with a friendly bounce while both open-source hands wave outward to welcome new transformer weights from the hub",
    "technique": "face + leftHand + rightHand + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "hyper": {
+   "concept": "Hyper prompt chevron and underscore cursor snap into terminal readiness with a sharp electric spark",
+   "technique": "part + part + 2 story props",
    "status": "visual_qa_passed"
   },
   "infineon": {
@@ -1138,6 +1363,11 @@
    "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
+  "jetpackcompose": {
+   "concept": "Jetpack Compose six layered declarative UI planes snap together in reactive recomposition stagger framed by layout smart-guides",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "jira": {
    "concept": "Jira three blue workflow chevrons climb diagonally in a staggered sprint cascade from backlog to done",
    "technique": "step1 + step2 + step3 + 1 story props",
@@ -1166,6 +1396,11 @@
   "jupyter": {
    "concept": "Jupyter three kernel moons orbit around the twin planetary notebook rings as interactive code cells execute in sequence",
    "technique": "arcs outline trace staggered + moons staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "k6": {
+   "concept": "k6 violet load-test glyph surges with virtual-user throughput telemetry bars and a crisp benchmark bolt",
+   "technique": "part + part + 2 story props",
    "status": "visual_qa_passed"
   },
   "kaggle": {
@@ -1253,6 +1488,11 @@
    "technique": "letters staggered + 1 story props",
    "status": "visual_qa_passed"
   },
+  "lemonsqueezy": {
+   "concept": "Lemon Squeezy four golden citrus wedges fan into place in sequence with a bright SaaS billing bounce and spark",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "less": {
    "concept": "Less curly braces open wide while the inner stylesheet letters slide into place and compile cleanly inward",
    "technique": "leftBrace + rightBrace + letters staggered + 1 story props",
@@ -1283,14 +1523,29 @@
    "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
+  "livekit": {
+   "concept": "LiveKit open-source WebRTC outer frame and inner broadcast core pulse in sync while live audio/video signal rings radiate outward",
+   "technique": "outer outline trace + inner + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "llvm": {
    "concept": "LLVM wyvern dragon rears smoothly with a metallic sheen as an IR optimization pass sweeps across its wings",
    "technique": "all + 2 story props",
    "status": "visual_qa_passed"
   },
+  "locust": {
+   "concept": "Locust four-part swarm emblem launches in staggered load-wave bursts with an active stress-test radar",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "logstash": {
    "concept": "Logstash ingests events down its golden input tower, transforms them in the dark filter core, and emits them through the teal output",
    "technique": "input + core + output + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "longhorn": {
+   "concept": "Longhorn cloud-native block storage horns tilt with steady resilience while its center core locks in and a replication ring expands",
+   "technique": "horns + core + 1 story props",
    "status": "visual_qa_passed"
   },
   "loopback": {
@@ -1303,9 +1558,24 @@
    "technique": "arcs staggered + word + 2 story props",
    "status": "visual_qa_passed"
   },
+  "lottiefiles": {
+   "concept": "LottieFiles flowing vector-curve badge traces its keyframe bezier path and pulses with lightweight JSON playback energy",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "lua": {
    "concept": "Lua satellite moon completes a full orbital revolution around the indigo planet while the dotted celestial ring shimmers in place",
    "technique": "moon + planet + crater + letters staggered + orbit",
+   "status": "visual_qa_passed"
+  },
+  "lucia": {
+   "concept": "Lucia session-auth emblem traces its minimalist silhouette and blooms with a crisp violet verification ring",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "lucide": {
+   "concept": "Lucide twin interlocking SVG rings trace crisply in sequence and counter-rotate slightly like precision open-source vector strokes locking into alignment",
+   "technique": "leftRing outline trace + rightRing outline trace + 1 story props",
    "status": "visual_qa_passed"
   },
   "mantine": {
@@ -1338,6 +1608,11 @@
    "technique": "all + 2 story props",
    "status": "visual_qa_passed"
   },
+  "medusa": {
+   "concept": "Medusa headless commerce emblem traces its sculpted vector contours and shimmers with a sleek storefront sheen",
+   "technique": "part outline trace + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "meilisearch": {
    "concept": "Meilisearch’s three slanted speed-stripes streak into frame left-to-right at instant search-as-you-type velocity with a match spark",
    "technique": "stripes staggered + 2 story props",
@@ -1346,6 +1621,11 @@
   "mercurial": {
    "concept": "Mercurial liquid-metal droplet shimmers with a fluid wobble while a distributed changeset ripple expands outward",
    "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "mermaid": {
+   "concept": "Mermaid flowchart emblem traces its diagram edges and sends a directed graph node packet from root to leaf",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "meta": {
@@ -1383,9 +1663,29 @@
    "technique": "wing + core + tip + 1 story props",
    "status": "visual_qa_passed"
   },
+  "minio": {
+   "concept": "MinIO sleek crimson bird-wing mark glides upward with high-throughput S3 object-storage momentum and sweeps a crisp highlight",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "mintlify": {
+   "concept": "Mintlify emerald leaf mark blooms gracefully with fresh documentation clarity, gleaming with a diagonal sheen and subtle mint pulse",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "miro": {
+   "concept": "Miro bold yellow M board emblem pops into workshop alignment while sticky-note collaboration sparks chime across its peaks",
+   "technique": "part + 3 story props",
+   "status": "visual_qa_passed"
+  },
   "mistralai": {
    "concept": "Mistral AI pixel-crafted M snaps forward with a crisp aerodynamic wind-gust tilt and fires fast open-weight token streaks",
    "technique": "part outline trace + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "mixpanel": {
+   "concept": "Mixpanel five event-dot nodes pop in sequential funnel cadence as an insight packet bridges them",
+   "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "mkdocs": {
@@ -1406,6 +1706,16 @@
   "mocha": {
    "concept": "Mocha warm coffee-cup test badge rises with gentle aromatic steam wisps as asynchronous specs brew and pass",
    "technique": "badge + steam staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "modal": {
+   "concept": "Modal serverless GPU mark cold-starts in milliseconds with a crisp scale-up pop, neon-lime compute ring, and twin accelerator sparks",
+   "technique": "all + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "modelcontextprotocol": {
+   "concept": "Model Context Protocol host arch and tool bridge trace and interlock cleanly as bidirectional JSON-RPC packets cross between assistant and tools",
+   "technique": "outer outline trace + bridge outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "mongodb": {
@@ -1431,6 +1741,16 @@
   "mysql": {
    "concept": "Sakila the MySQL dolphin leaps gracefully over an ocean query wave while the M-y-S-Q-L letters ripple in sequence below",
    "technique": "dolphin + wordmark staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "n8n": {
+   "concept": "n8n workflow graph traces its automation edges as trigger packets flow from the left node through the hub and branch out to parallel actions",
+   "technique": "part outline trace + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "nanostores": {
+   "concept": "Nano Stores twin lightweight state arcs glide together from opposite corners while a tiny reactive signal atom pulses between them",
+   "technique": "top + bottom + 2 story props",
    "status": "visual_qa_passed"
   },
   "nativescript": {
@@ -1478,9 +1798,19 @@
    "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
+  "nextra": {
+   "concept": "Nextra documentation emblem traces its clean Markdown-powered frame and sweeps a crisp editorial gloss across its surface",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "nginx": {
    "concept": "Nginx green hexagon anchors steady as its N routing path draws through and reverse-proxy traffic splits from one ingress into two upstream backends",
    "technique": "hex + n outline trace + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "ngrok": {
+   "concept": "ngrok five wordmark letters cascade left-to-right as a secure localhost ingress tunnel packet shoots straight across the bridge",
+   "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "nim": {
@@ -1533,6 +1863,11 @@
    "technique": "topFace staggered + rightFace staggered + leftN outline trace + 1 story props",
    "status": "visual_qa_passed"
   },
+  "nushell": {
+   "concept": "Nushell structured-data shell glyphs assemble in pipeline order while a typed table packet flows through",
+   "technique": "part + part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "nuxt": {
    "concept": "Nuxt emerald mountain peaks rise cleanly into place while a subtle universal-SSR pulse ring expands from the summit",
    "technique": "part outline trace + 2 story props",
@@ -1556,6 +1891,11 @@
   "ocaml": {
    "concept": "OCaml desert camel strides forward with confident functional poise while its warm amber silhouette catches a sunlit sheen",
    "technique": "body + accents + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "odin": {
+   "concept": "Odin sleek circular emblem rotates into compiled alignment while its inner core pulses with data-oriented clarity",
+   "technique": "part + part + 2 story props",
    "status": "visual_qa_passed"
   },
   "ollama": {
@@ -1588,6 +1928,11 @@
    "technique": "shadow + foreground staggered + reg + 1 story props",
    "status": "visual_qa_passed"
   },
+  "openrouter": {
+   "concept": "OpenRouter traces its unified API gateway as incoming prompts split from the left ingress and fan out simultaneously to multiple LLM endpoints",
+   "technique": "part outline trace + 3 story props",
+   "status": "visual_qa_passed"
+  },
   "opensearch": {
    "concept": "OpenSearch’s three modular lens arcs converge around the focal point to lock onto distributed log analytics and fire a discovery sweep",
    "technique": "leftArc + topArc + handle + 1 story props",
@@ -1618,9 +1963,24 @@
    "technique": "chassis + dot + arcs staggered + 2 story props",
    "status": "visual_qa_passed"
   },
+  "opsgenie": {
+   "concept": "Opsgenie alert responder emblem sweeps an incident radar arc and locks onto an acknowledged green check",
+   "technique": "part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "optimism": {
+   "concept": "Optimism bold red OP emblem pops into optimistic-rollup readiness while its letterforms settle with a verification check flash",
+   "technique": "part + part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "oracle": {
    "concept": "Oracle’s six crimson letterforms ripple left-to-right in a coordinated enterprise transaction wave before locking solidly under a metallic sheen",
    "technique": "letters staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "ory": {
+   "concept": "Ory zero-trust identity core pulses as its upper and lower OAuth2 security brackets clamp securely into place",
+   "technique": "core + top + bottom + 1 story props",
    "status": "visual_qa_passed"
   },
   "ovh": {
@@ -1633,6 +1993,11 @@
    "technique": "outer + inner + 2 story props",
    "status": "visual_qa_passed"
   },
+  "oxc": {
+   "concept": "Oxc Rust oxidation compiler spins up with high-torque velocity, firing an electric cyan parser bolt and twin AST compile sparks",
+   "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "p5dotjs": {
    "concept": "p5.js creative-coding characters dance playfully in a staggered generative wave with magenta canvas sparks",
    "technique": "parts staggered + 2 story props",
@@ -1641,6 +2006,11 @@
   "packer": {
    "concept": "Packer’s machine-image core snaps cleanly into its outer multi-cloud mold with a golden-image verification check",
    "technique": "mold + core + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "paddle": {
+   "concept": "Paddle billing mark rocks with rhythmic momentum as its circular coin pops into the blade and a golden checkout ring pulses",
+   "technique": "blade + coin + 1 story props",
    "status": "visual_qa_passed"
   },
   "pagerduty": {
@@ -1653,6 +2023,16 @@
    "technique": "rails staggered + cells staggered + 1 story props",
    "status": "visual_qa_passed"
   },
+  "pandoc": {
+   "concept": "Pandoc universal document-converter mark flips cleanly across formats like Markdown-to-PDF transformation with a conversion packet",
+   "technique": "part + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "pangolin": {
+   "concept": "Pangolin armored proxy mascot curls into a protective zero-trust stance while a tunnel radar ring sweeps cleanly around it",
+   "technique": "part outline trace + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "passport": {
    "concept": "Passport.js four color-coded OAuth strategy arcs snap clockwise around the central credential post and flash an authenticated session check",
    "technique": "yellow + green + blue + stem + 2 story props",
@@ -1661,6 +2041,11 @@
   "payloadcms": {
    "concept": "Payload CMS twin interlocking isometric cube faces slide cleanly into a code-first Next.js schema block with a crisp edge sheen",
    "technique": "lowerFace + upperFace + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "penpot": {
+   "concept": "Penpot open-source pen-nib emblem draws its SVG vector silhouette while precision design guides lock around it",
+   "technique": "part outline trace + 1 story props",
    "status": "visual_qa_passed"
   },
   "perforce": {
@@ -1708,6 +2093,11 @@
    "technique": "leftHalf + rightHalf + eyes + 2 story props",
    "status": "visual_qa_passed"
   },
+  "playcanvas": {
+   "concept": "PlayCanvas 3D WebGL play prism pivots smoothly along its axis while a viewport render spark flashes at its apex",
+   "technique": "part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "playwright": {
    "concept": "Playwright crimson tragedy and emerald comedy theatre masks sway in playful cross-browser dialogue as an E2E pass check flashes",
    "technique": "redMask + greenMask + 1 story props",
@@ -1748,6 +2138,11 @@
    "technique": "part staggered + 2 story props",
    "status": "visual_qa_passed"
   },
+  "polygon": {
+   "concept": "Polygon interlocking infinity hexagon traces its L2 zk-rollup perimeter and fires dual cross-chain bridge packets",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "polymerproject": {
    "concept": "Polymer faceted P-ribbon traces its custom-element geometry and gleams with a crisp web-components sheen",
    "technique": "part outline trace + 1 story props",
@@ -1766,6 +2161,11 @@
   "postgresql": {
    "concept": "Slonik the PostgreSQL elephant traces its relational contour, gives a confident nod, and blinks as a query pulse confirms",
    "technique": "body outline trace + eyes + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "posthog": {
+   "concept": "PostHog six-part hedgehog analytics emblem pops its playful silhouette into focus while product-funnel telemetry bars rise",
+   "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "postman": {
@@ -1808,6 +2208,11 @@
    "technique": "part outline trace + 3 story props",
    "status": "visual_qa_passed"
   },
+  "prismic": {
+   "concept": "Prismic eight modular content-slice tiles assemble clockwise into a cohesive page-builder prism with a soft indigo bloom",
+   "technique": "parts staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "processingfoundation": {
    "concept": "Processing three creative-coding strokes sketch their intersecting cobalt arcs and diagonal slash onto the generative canvas",
    "technique": "leftStroke outline trace + slash outline trace + rightArc outline trace + 1 story props",
@@ -1841,6 +2246,11 @@
   "purescript": {
    "concept": "PureScript twin chevrons bracket three pure data bars that slide cleanly into horizontal alignment",
    "technique": "leftChev + rightChev + bars staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "pusher": {
+   "concept": "Pusher real-time pub/sub beacon pulses twice as concentric WebSocket broadcast rings expand outward to connected clients",
+   "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
   "px4": {
@@ -1893,6 +2303,11 @@
    "technique": "shards staggered + 2 story props",
    "status": "visual_qa_passed"
   },
+  "quarto": {
+   "concept": "Quarto four publishing quadrants lock neatly into a unified scientific document grid with layout smart-guides",
+   "technique": "part + part + part + part + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "quasar": {
    "concept": "Quasar cosmic turbine blades spin around the central core, radiating cross-platform build waves to web, mobile, and desktop",
    "technique": "ring + darkBlades + cyanBlades + core + 1 story props",
@@ -1943,9 +2358,24 @@
    "technique": "part outline trace + 3 story props",
    "status": "visual_qa_passed"
   },
+  "raycast": {
+   "concept": "Raycast seven crimson launcher rays fan out in rapid command-palette stagger with an instant spotlight spark",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "raylib": {
+   "concept": "raylib classic framed game-dev badge snaps its outer border and pixel-crisp letter tiles into place in arcade stagger",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "react": {
    "concept": "React nucleus pulses with a state update as its three electron orbits trace into place and spin smoothly in unison",
    "technique": "nucleus + orbits outline trace staggered + orbits + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "reacthookform": {
+   "concept": "React Hook Form clipboard badge traces its frame as four form field lines slide in left-to-right and a crisp green validation check confirms",
+   "technique": "frame outline trace + fields staggered + 1 story props",
    "status": "visual_qa_passed"
   },
   "reactivex": {
@@ -1956,6 +2386,16 @@
   "reactnative": {
    "concept": "React Native nucleus pulses with a native-bridge update as its three cyan electron orbits trace and spin in fluid mobile unison",
    "technique": "nucleus + orbits outline trace staggered + orbits + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "reactrouter": {
+   "concept": "React Router chevron unfolds as three route nodes pop into place sequentially and a navigation packet hops from root across the active route",
+   "technique": "chevron outline trace + nodes staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "readme": {
+   "concept": "ReadMe open-book owl hub flips open smoothly like interactive API docs while live request packets glide across its pages",
+   "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
   "reason": {
@@ -1981,6 +2421,11 @@
   "redux": {
    "concept": "Redux three interlocking state loops trace into place and rotate in predictable unison as a dispatched action packet cycles the store",
    "technique": "parts outline trace staggered + parts + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "redwoodjs": {
+   "concept": "RedwoodJS nine pine-cone scales stack upward from trunk to crown like full-stack React, GraphQL, and Prisma layers growing in harmony",
+   "technique": "parts staggered + 1 story props",
    "status": "visual_qa_passed"
   },
   "relay": {
@@ -2013,6 +2458,11 @@
    "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
+  "resend": {
+   "concept": "Resend crisp transactional email R traces swiftly as an outgoing message packet shoots across the diagonal and confirms delivery",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "rider": {
    "concept": "Rider crimson-and-blue backdrop sweeps in as R and D snap into the frame for a fast .NET and game-engine hot reload",
    "technique": "backdrop + rChar + dChar + caret + 1 story props",
@@ -2023,14 +2473,29 @@
    "technique": "left + main outline trace + ext + 2 story props",
    "status": "visual_qa_passed"
   },
+  "rive": {
+   "concept": "Rive expressive state-machine R emblem bends with elastic spring motion and emits a live interaction trigger spark",
+   "technique": "part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "rocket": {
    "concept": "Rocket Rust web framework ignites its thruster with a crisp vertical liftoff tremor and leaves a bright exhaust flash beneath its crimson emblem",
    "technique": "part + 3 story props",
    "status": "visual_qa_passed"
   },
+  "rolldown": {
+   "concept": "Rolldown Rust-powered bundler rolls forward with kinetic momentum, compressing module chunks with a fiery orange shockwave and build spark",
+   "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "rollupdotjs": {
    "concept": "Rollup twin crimson spiral ribbons unfurl and tighten together like tree-shaken ES modules rolling into one lean bundle",
    "technique": "upper + lower + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "rook": {
+   "concept": "Rook storage orchestrator chess crown lowers onto its fortified base as the inner Kubernetes volume core snaps into lock",
+   "technique": "base + crown + core + 1 story props",
    "status": "visual_qa_passed"
   },
   "ros": {
@@ -2093,6 +2558,11 @@
    "technique": "back + bottom + mid + top + 1 story props",
    "status": "visual_qa_passed"
   },
+  "scalar": {
+   "concept": "Scalar twin OpenAPI crescent arcs trace and converge around the center while an interactive API radar sweeps and confirms live endpoints",
+   "technique": "leftArc outline trace + rightArc outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "scaleway": {
    "concept": "Scaleway’s interlocking cloud-GPU coils wind together around dual compute cores with violet acceleration sparks",
    "technique": "outer + cores staggered + 2 story props",
@@ -2111,6 +2581,11 @@
   "scratch": {
    "concept": "Scratch playful purple S ribbon bounces energetically like a snapped visual code block and pops a creative spark",
    "technique": "ribbon + highlight + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "scylladb": {
+   "concept": "ScyllaDB sea-monster emblem surges with shard-per-core C++ velocity while its glowing eye locks on and a low-latency cyan pulse radiates outward",
+   "technique": "body + eye + 2 story props",
    "status": "visual_qa_passed"
   },
   "seeedstudio": {
@@ -2143,6 +2618,21 @@
    "technique": "longSlash outline trace + shortSlash outline trace + 1 story props",
    "status": "visual_qa_passed"
   },
+  "shopify": {
+   "concept": "Shopify shopping bag swings lightly like a freshly packed order while its side gusset locks in and a green checkout check flashes",
+   "technique": "front + side + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "sidekiq": {
+   "concept": "Sidekiq martial-arts silhouette delivers a snappy high-speed strike as background worker jobs drain rapidly with a crimson spark",
+   "technique": "body + kick + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "skaffold": {
+   "concept": "Skaffold four blue continuous-dev scaffolding tiers slide into alignment in alternating directions as a Kubernetes rebuild completes",
+   "technique": "parts staggered + parts staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "sketch": {
    "concept": "Sketch golden vector diamond fans its faceted planes into crisp geometry and catches a specular sheen across the crown",
    "technique": "base + lowerFacets staggered + upperFacets staggered + 2 story props",
@@ -2166,6 +2656,11 @@
   "socketdotio": {
    "concept": "Socket.IO outer channel ring pulses while its opposing upper and lower lightning bolts exchange low-latency bidirectional real-time events",
    "technique": "ring + upperBolt + lowerBolt + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "solana": {
+   "concept": "Solana three slanted ledger bars slide in from alternating sides in parallel consensus as a proof-of-history packet streaks across",
+   "technique": "part + part + part + 2 story props",
    "status": "visual_qa_passed"
   },
   "solid": {
@@ -2223,6 +2718,16 @@
    "technique": "page outline trace + feather + 2 story props",
    "status": "visual_qa_passed"
   },
+  "squarespace": {
+   "concept": "Squarespace four interlocking ribbon loops trace and weave together from opposing diagonals into a balanced minimalist emblem",
+   "technique": "parts outline trace staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "sst": {
+   "concept": "SST full-stack cloud emblem traces its infrastructure-as-code silhouette and fires a warm coral serverless deploy pulse",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "starship": {
    "concept": "Starship rocket lifts inside its magenta crest as exhaust plumes flare beneath and a prompt star twinkles overhead",
    "technique": "crest + rocket + exhaust + star + 1 story props",
@@ -2238,6 +2743,11 @@
    "technique": "top outline trace + mid + right + 2 story props",
    "status": "visual_qa_passed"
   },
+  "storyblok": {
+   "concept": "Storyblok speech-bubble frame pops open as its two modular content blocks slide cleanly into place inside the visual editor",
+   "technique": "frame + blocks staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "storybook": {
    "concept": "Storybook magenta workshop book tilts open like an interactive component story card while a bright bookmark spark and UI sheen sweep across",
    "technique": "part outline trace + 2 story props",
@@ -2251,6 +2761,11 @@
   "streamlit": {
    "concept": "Streamlit three crown facets unfurl left-to-right like an instant reactive Python dashboard rerunning live telemetry on save",
    "technique": "leftBase + midPeak + rightPeak + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "stripe": {
+   "concept": "Stripe iconic S-mark traces its crisp payment contour, gleams with a diagonal checkout sheen, and confirms with a green authorization check",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "styledcomponents": {
@@ -2271,6 +2786,11 @@
   "subversion": {
    "concept": "Apache Subversion layered revision ribbons slide into chronological alignment like centralized trunk commits locking in",
    "technique": "top1 + top2 + bot1 + bot2 + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "suno": {
+   "concept": "Suno split-sun vinyl emblem spins smoothly with harmonic groove momentum while golden and violet audio ripples radiate outward",
+   "technique": "all + 2 story props",
    "status": "visual_qa_passed"
   },
   "supabase": {
@@ -2331,6 +2851,11 @@
   "tailwindcss": {
    "concept": "Tailwind CSS twin cyan wind ribbons undulate in smooth counter-phase while subtle breeze streams sweep across the canvas",
    "technique": "upper + lower + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "talos": {
+   "concept": "Talos five symmetric immutable-OS ribs rise outward from the central spine into a hardened API-driven Kubernetes shield",
+   "technique": "parts staggered + 1 story props",
    "status": "visual_qa_passed"
   },
   "tanstack": {
@@ -2403,9 +2928,19 @@
    "technique": "part staggered + 2 story props",
    "status": "visual_qa_passed"
   },
+  "tina": {
+   "concept": "TinaCMS orange llama hops cheerily as it commits visual Markdown edits to Git, flashing a warm verified spark",
+   "technique": "llama + foot + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "tinygo": {
    "concept": "TinyGo microcontroller gopher blinks inside its cyan QFN silicon package as all sixteen IC pins fire compiled Go goroutine pulses",
    "technique": "pkg + die + eyes + pins staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "tldraw": {
+   "concept": "tldraw infinite-canvas mark tilts playfully as multiplayer cursor packets dart across the board",
+   "technique": "part + 2 story props",
    "status": "visual_qa_passed"
   },
   "tmux": {
@@ -2478,9 +3013,19 @@
    "technique": "badge + friends + 1 story props",
    "status": "visual_qa_passed"
   },
+  "umami": {
+   "concept": "Umami privacy-first crescent analytics mark breathes softly as a clean pageview wave ripples across",
+   "technique": "part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "unity": {
    "concept": "Unity three isometric cube faces expand slightly outward along their 3D axes and snap tightly back into a solid mesh",
    "technique": "topFace + leftFace + rightFace + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "unjs": {
+   "concept": "UnJS universal JavaScript badge traces its runtime-agnostic frame and radiates a golden ecosystem pulse with twin utility sparks",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "unocss": {
@@ -2498,6 +3043,11 @@
    "technique": "upper + lower + 2 story props",
    "status": "visual_qa_passed"
   },
+  "uptimekuma": {
+   "concept": "Uptime Kuma friendly status heart beats with a steady hundred-percent uptime rhythm and flashes a green health check",
+   "technique": "part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "uv": {
    "concept": "uv magenta badge fires a Rust-speed Python dependency resolution burst with twin lightning sparks",
    "technique": "all + 2 story props",
@@ -2506,6 +3056,11 @@
   "v": {
    "concept": "V dual-tone steel-blue arms converge from opposite diagonals and snap into a razor-sharp compiled chevron",
    "technique": "leftArm + rightArm + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "v0": {
+   "concept": "v0 generative UI glyphs snap cleanly onto dashed layout smart-guides as a sleek diagonal polish sheen sweeps across the mark",
+   "technique": "v + zero + 2 story props",
    "status": "visual_qa_passed"
   },
   "vagrant": {
@@ -2531,6 +3086,11 @@
   "vercel": {
    "concept": "Vercel’s iconic delta triangle launches upward with a crisp edge-deployment sheen and velocity sparks",
    "technique": "all + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "victoriametrics": {
+   "concept": "VictoriaMetrics three stacked time-series V-chevrons drop into tight telemetry alignment while live metric bars pulse beside them",
+   "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "vim": {
@@ -2563,6 +3123,11 @@
    "technique": "all + 3 story props",
    "status": "visual_qa_passed"
   },
+  "vllm": {
+   "concept": "vLLM twin PagedAttention wings sweep in from opposite flanks to form the V-mark as high-throughput token streams rocket upward between them",
+   "technique": "leftWing + rightWing + 3 story props",
+   "status": "visual_qa_passed"
+  },
   "vmware": {
    "concept": "VMware’s five enterprise hypervisor segments cascade left-to-right into alignment over a virtualized cluster pulse",
    "technique": "segments staggered + 2 story props",
@@ -2583,14 +3148,29 @@
    "technique": "leftOuter + rightOuter + leftInner + rightInner + 1 story props",
    "status": "visual_qa_passed"
   },
+  "vulkan": {
+   "concept": "Vulkan multi-facet GPU wordmark and arc ignite in crisp shader-pipeline stagger, crowned by a crimson compute sheen",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "vultr": {
    "concept": "Vultr’s razor-sharp V-wings swoop into high-frequency compute formation as a lightning spark ignites at the apex",
    "technique": "left + right + 2 story props",
    "status": "visual_qa_passed"
   },
+  "wagmi": {
+   "concept": "wagmi twin React-Web3 chevrons sync with wallet-connect packets and a crisp hook-ready spark",
+   "technique": "part + part + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "warp": {
    "concept": "Warp twin velocity wings shear past each other in a Rust-powered terminal warp jump with an electric cyan trail",
    "technique": "rightWing + leftWing + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "wasabi": {
+   "concept": "Wasabi emerald hot-cloud emblem blooms cleanly from its center with a crisp zero-egress pulse ring and diagonal sheen",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "webassembly": {
@@ -2601,6 +3181,11 @@
   "webdriverio": {
    "concept": "WebdriverIO orange automation ring locks around its inner robot lens, rotating with a mechanical test-suite calibration",
    "technique": "outer + inner + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "webflow": {
+   "concept": "Webflow dynamic W-ribbon traces its fluid visual-layout curves while crisp blue smart-guides flash and lock it to the canvas",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "webgl": {
@@ -2638,6 +3223,11 @@
    "technique": "prompt + wGlyph + 2 story props",
    "status": "visual_qa_passed"
   },
+  "windsurf": {
+   "concept": "Windsurf ribbon banks smoothly across a cyan ocean swell like a Cascade multi-file edit wave gliding cleanly into alignment",
+   "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "wireguard": {
    "concept": "WireGuard’s crimson kernel-VPN dragon coils taut inside its encrypted tunnel as a zero-overhead pulse radiates outward",
    "technique": "coil + crest + 1 story props",
@@ -2648,9 +3238,24 @@
    "technique": "all + 2 story props",
    "status": "visual_qa_passed"
   },
+  "wix": {
+   "concept": "Wix three bold letterforms W-i-x cascade briskly left-to-right across the canvas with a clean studio gloss sweep",
+   "technique": "parts staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "wolfram": {
    "concept": "Wolfram crimson spikey badge pulses with symbolic-computation precision as its inner white emblem snaps into focus",
    "technique": "frame + redBadge + wolf + highlight + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "woocommerce": {
+   "concept": "WooCommerce speech-bubble badge pops into place as its crisp storefront letters ripple left-to-right across the banner",
+   "technique": "bubble + letters staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "wordpress": {
+   "concept": "WordPress classic W-seal traces its circular publishing emblem and turns gently into alignment with a crisp editorial sheen",
+   "technique": "part outline trace + 1 story props",
    "status": "visual_qa_passed"
   },
   "xcode": {
@@ -2688,6 +3293,11 @@
    "technique": "all + 3 story props",
    "status": "visual_qa_passed"
   },
+  "zenbrowser": {
+   "concept": "Zen Browser three concentric calm rings expand in meditative harmonic ripples",
+   "technique": "part + part + part + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "zephyr": {
    "concept": "Zephyr RTOS aerodynamic kite lifts on a brisk wind current while its inner kernel core glides forward and emits a low-power telemetry pulse",
    "technique": "outer outline trace + inner + 2 story props",
@@ -2706,6 +3316,11 @@
   "zigbee": {
    "concept": "Zigbee interlocking mesh halves snap into a self-healing 802.15.4 ring while a low-power hop packet zips across the Z bridge",
    "technique": "top outline trace + bot outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "zod": {
+   "concept": "Zod faceted diamond schema traces its type-safe outline, gleams with a diagonal prism sheen, and flashes a green runtime validation check",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "zsh": {

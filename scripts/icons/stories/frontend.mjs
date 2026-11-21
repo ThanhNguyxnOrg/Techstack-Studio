@@ -2443,4 +2443,525 @@ export default {
       spark(18.6, 5.4, 1.8, -1.8, '#FDE047', 34, 58),
     ],
   },
+
+  zod: {
+    story:
+      'Zod faceted diamond schema traces its type-safe outline, gleams with a diagonal prism sheen, and flashes a green runtime validation check',
+    tracks: [
+      {
+        on: 0,
+        draw: [8, 34],
+        fill: [26, 38],
+        width: 0.65,
+        keys: breathe(14, 0.05),
+      },
+    ],
+    props: [
+      sheen('<rect x="0.7" y="2.7" width="22.6" height="18.6" rx="2"/>', 34, 60, 0.3),
+      checkFlash(16.8, 5.2, '#4ADE80', 40, 66),
+    ],
+  },
+
+  lucide: {
+    story:
+      'Lucide twin interlocking SVG rings trace crisply in sequence and counter-rotate slightly like precision open-source vector strokes locking into alignment',
+    groups: {
+      rightRing: 0,
+      leftRing: 1,
+    },
+    tracks: [
+      {
+        on: 'leftRing',
+        draw: [8, 30],
+        fill: [22, 34],
+        width: 0.6,
+        keys: slideIn(10, -1.8, 0.8),
+      },
+      {
+        on: 'rightRing',
+        draw: [14, 36],
+        fill: [28, 40],
+        width: 0.6,
+        keys: slideIn(16, 1.8, -0.8),
+      },
+    ],
+    props: [spark(18.5, 5.2, 1.6, -1.6, '#FCA5A5', 38, 60)],
+  },
+
+  baseui: {
+    story:
+      'Base UI unstyled geometric pillars snap cleanly onto accessibility alignment smart-guides like composable React primitives locking into place',
+    groups: {
+      right: 0,
+      left: 1,
+    },
+    tracks: [
+      { on: 'left', keys: riseIn(10, 2.8) },
+      { on: 'right', keys: dropIn(18, 2.8) },
+    ],
+    props: [
+      guides(
+        [
+          [12.0, 1.5, 12.0, 22.5],
+          [3.5, 12.0, 20.5, 12.0],
+        ],
+        '#94A3B8',
+        10,
+        54
+      ),
+      checkFlash(16.8, 4.4, '#86EFAC', 42, 66),
+    ],
+  },
+
+  effect: {
+    story:
+      'Effect type-safe pipeline arch traces its functional composition path while the lower return bar slides cleanly underneath as typed fibers complete',
+    groups: {
+      arch: 0,
+      base: 1,
+    },
+    tracks: [
+      {
+        on: 'arch',
+        draw: [8, 34],
+        fill: [26, 38],
+        width: 0.65,
+      },
+      {
+        on: 'base',
+        keys: slideIn(22, -2.6, 0),
+      },
+    ],
+    props: [
+      packet(4.0, 19.2, 20.0, 19.2, '#38BDF8', 28, 56, 0.9),
+      pulseRing(12, 11, 9.8, '#A5B4FC', 36, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  nanostores: {
+    story:
+      'Nano Stores twin lightweight state arcs glide together from opposite corners while a tiny reactive signal atom pulses between them',
+    groups: {
+      bottom: 0,
+      top: 1,
+    },
+    tracks: [
+      { on: 'top', keys: slideIn(10, 2.2, -1.8) },
+      { on: 'bottom', keys: slideIn(14, -2.2, 1.8) },
+    ],
+    props: [
+      pulseRing(12, 12, 7.6, '#38BDF8', 26, 56, { layer: 'under', sw: 0.55 }),
+      packet(6.5, 16.5, 17.5, 7.5, '#FDE047', 30, 58, 0.85),
+    ],
+  },
+
+  reactrouter: {
+    story:
+      'React Router chevron unfolds as three route nodes pop into place sequentially and a navigation packet hops from root across the active route',
+    groups: {
+      chevron: 0,
+      nodes: [2, 1, 3],
+    },
+    tracks: [
+      {
+        on: 'chevron',
+        draw: [8, 28],
+        fill: [22, 32],
+        width: 0.65,
+      },
+      {
+        on: 'nodes',
+        each: true,
+        stagger: 5,
+        keys: popIn(16, 0.3),
+      },
+    ],
+    props: [
+      packet(2.6, 16.2, 7.5, 12.0, '#FCA5A5', 28, 46, 0.9),
+      packet(7.5, 12.0, 21.4, 16.2, '#FDE047', 44, 64, 0.9),
+    ],
+  },
+
+  reacthookform: {
+    story:
+      'React Hook Form clipboard badge traces its frame as four form field lines slide in left-to-right and a crisp green validation check confirms',
+    groups: {
+      frame: 4,
+      fields: [2, 3, 0, 1],
+    },
+    tracks: [
+      {
+        on: 'frame',
+        draw: [8, 30],
+        fill: [22, 34],
+        width: 0.6,
+      },
+      {
+        on: 'fields',
+        each: true,
+        stagger: 4.5,
+        keys: slideIn(18, -2.0, 0),
+      },
+    ],
+    props: [checkFlash(16.6, 5.2, '#4ADE80', 42, 66)],
+  },
+
+  formik: {
+    story:
+      'Formik fourteen isometric honeycomb tiles cascade smoothly from top-left to bottom-right like structured form state snapping into alignment',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        order: 'y',
+        each: true,
+        stagger: 1.8,
+        keys: popIn(10, 0.45),
+      },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#60A5FA', 36, 66, { layer: 'under', sw: 0.55 })],
+  },
+
+  chromatic: {
+    story:
+      'Chromatic visual testing lens opens with an aperture bloom while a pixel-diff scanner sweeps cleanly across the emblem',
+    tracks: [
+      {
+        on: 0,
+        origin: [12, 12],
+        draw: [8, 32],
+        fill: [24, 36],
+        width: 0.65,
+        keys: popIn(12, 0.8),
+      },
+    ],
+    props: [radar(12, 12, 10.4, '#FDBA74', 18, 62, 120), checkFlash(16.8, 5.2, '#4ADE80', 42, 66)],
+  },
+
+  oxc: {
+    story:
+      'Oxc Rust oxidation compiler spins up with high-torque velocity, firing an electric cyan parser bolt and twin AST compile sparks',
+    tracks: [
+      {
+        on: 'all',
+        origin: [12, 12],
+        keys: torque(10, 24, 52),
+      },
+    ],
+    props: [
+      boltFlash(17.8, 4.2, '#67E8F9', 24, 52),
+      spark(5.0, 19.0, -1.6, 1.6, '#22D3EE', 36, 58),
+    ],
+  },
+
+  rolldown: {
+    story:
+      'Rolldown Rust-powered bundler rolls forward with kinetic momentum, compressing module chunks with a fiery orange shockwave and build spark',
+    tracks: [
+      {
+        on: 'all',
+        origin: [12, 12],
+        keys: {
+          10: { r: -28, s: 0.9, e: 'inout' },
+          36: { r: 24, s: 1.06, e: 'settle' },
+          54: { r: -5, s: 1.01, e: 'settle' },
+          66: { r: 0, s: 1, e: 'out' },
+        },
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 9.8, '#FB923C', 22, 56, { layer: 'under', sw: 0.6 }),
+      spark(18.8, 5.4, 1.8, -1.6, '#FDE047', 34, 58),
+    ],
+  },
+
+  gulp: {
+    story:
+      'gulp streaming task runner sways playfully while its twin script ribbons glide in and a red-coral build stream flows smoothly across',
+    groups: {
+      left: 0,
+      right: 1,
+    },
+    tracks: [
+      { on: 'left', keys: slideIn(10, -2.2, 0.8) },
+      { on: 'right', keys: slideIn(16, 2.2, -0.8) },
+    ],
+    props: [waveLine(20.6, '#F87171', 12, 62)],
+  },
+
+  grunt: {
+    story:
+      'Grunt armored boar mascot lowers its head with a determined nod while its tusks and eyes glint before charging through build tasks',
+    groups: {
+      head: 0,
+      snout: 1,
+      eyes: [2, 3],
+      tusks: [4, 5],
+    },
+    tracks: [
+      { on: 'head', origin: '50% 60%', keys: nod(12, 6.5) },
+      { on: 'eyes', each: true, keys: popIn(22, 0.5) },
+      { on: 'tusks', each: true, stagger: 4, keys: riseIn(26, 1.6) },
+    ],
+    props: [spark(18.4, 5.8, 1.6, -1.4, '#FDE047', 34, 58)],
+  },
+
+  fresh: {
+    story:
+      'Fresh lemon mark pops cleanly with zero-JS island energy as its inner citrus slice unfolds and a bright yellow hydration ring expands',
+    groups: {
+      outer: 0,
+      inner: 1,
+    },
+    tracks: [
+      { on: 'outer', keys: popIn(10, 0.78) },
+      { on: 'inner', draw: [16, 38], fill: [30, 42], width: 0.6 },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#FEF08A', 24, 58, { layer: 'under', sw: 0.55 }),
+      spark(18.6, 5.4, 1.6, -1.6, '#4ADE80', 36, 60),
+    ],
+  },
+
+  redwoodjs: {
+    story:
+      'RedwoodJS nine pine-cone scales stack upward from trunk to crown like full-stack React, GraphQL, and Prisma layers growing in harmony',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+        order: '-y',
+        each: true,
+        stagger: 2.8,
+        keys: riseIn(10, 2.0),
+      },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#FDBA74', 36, 66, { layer: 'under', sw: 0.5 })],
+  },
+
+  nextra: {
+    story:
+      'Nextra documentation emblem traces its clean Markdown-powered frame and sweeps a crisp editorial gloss across its surface',
+    tracks: [
+      {
+        on: 0,
+        draw: [8, 34],
+        fill: [26, 38],
+        width: 0.65,
+      },
+    ],
+    props: [
+      sheen('<rect x="1.5" y="1.5" width="21" height="21" rx="2"/>', 34, 62, 0.28),
+      spark(18.6, 5.2, 1.5, -1.5, '#38BDF8', 40, 62),
+    ],
+  },
+
+  mintlify: {
+    story:
+      'Mintlify emerald leaf mark blooms gracefully with fresh documentation clarity, gleaming with a diagonal sheen and subtle mint pulse',
+    tracks: [
+      {
+        on: 0,
+        origin: '40% 70%',
+        draw: [8, 32],
+        fill: [24, 36],
+        width: 0.65,
+        keys: sway(14, 5, 0.6),
+      },
+    ],
+    props: [
+      sheen('<rect x="1.5" y="1.5" width="21" height="21" rx="3"/>', 34, 60, 0.3),
+      pulseRing(12, 12, 10.0, '#6EE7B7', 26, 60, { layer: 'under', sw: 0.55 }),
+    ],
+  },
+
+  readme: {
+    story:
+      'ReadMe open-book owl hub flips open smoothly like interactive API docs while live request packets glide across its pages',
+    tracks: [
+      {
+        on: 0,
+        origin: [12, 12],
+        keys: flipX(12),
+      },
+    ],
+    props: [
+      packet(4.5, 12.0, 19.5, 12.0, '#7DD3FC', 28, 56, 0.9),
+      pulseRing(12, 12, 10.2, '#38BDF8', 32, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  jetpackcompose: {
+    story:
+      'Jetpack Compose six layered declarative UI planes snap together in reactive recomposition stagger framed by layout smart-guides',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5],
+        stagger: 4,
+        keys: popIn(10, 0.7),
+      },
+    ],
+    props: [
+      guides(
+        [
+          [12.0, 2.0, 12.0, 22.0],
+          [2.0, 12.0, 22.0, 12.0],
+        ],
+        '#4285F4',
+        12,
+        52
+      ),
+      pulseRing(12, 12, 10.4, '#3DDB85', 34, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  bevy: {
+    story:
+      'Bevy three soaring ECS birds glide in staggered flight formation as an entity-system pulse radiates beneath',
+    tracks: [
+      { on: 0, keys: slideIn(10, -2.4, 1.2) },
+      { on: 1, keys: slideIn(17, -2.0, 1.0) },
+      { on: 2, keys: slideIn(24, -1.6, 0.8) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.4, '#94A3B8', 28, 62, { layer: 'under', sw: 0.5 }),
+      spark(18.8, 5.4, 1.4, -1.4, '#E2E8F0', 36, 60),
+    ],
+  },
+
+  playcanvas: {
+    story:
+      'PlayCanvas 3D WebGL play prism pivots smoothly along its axis while a viewport render spark flashes at its apex',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: torque(10, 12, 12) },
+      { on: 1, origin: [12, 12], keys: popIn(20, 0.72) },
+    ],
+    props: [
+      spark(18.5, 5.5, 1.5, -1.5, '#F97316', 32, 58),
+      pulseRing(12, 12, 10.2, '#FB923C', 28, 62, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  raylib: {
+    story:
+      'raylib classic framed game-dev badge snaps its outer border and pixel-crisp letter tiles into place in arcade stagger',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6, 7],
+        stagger: 3,
+        keys: popIn(10, 0.75),
+      },
+    ],
+    props: [
+      sheen('<rect x="2" y="2" width="20" height="20" rx="1"/>', 38, 64, 0.28),
+      spark(19.0, 5.0, 1.2, -1.2, '#F8FAFC', 42, 64),
+    ],
+  },
+
+  rive: {
+    story:
+      'Rive expressive state-machine R emblem bends with elastic spring motion and emits a live interaction trigger spark',
+    tracks: [
+      {
+        on: 0,
+        origin: [12, 12],
+        keys: sway(10, 7, 0.8),
+      },
+    ],
+    props: [
+      spark(18.4, 5.6, 1.5, -1.5, '#F472B6', 28, 54),
+      pulseRing(12, 12, 10.3, '#E879F9', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  lottiefiles: {
+    story:
+      'LottieFiles flowing vector-curve badge traces its keyframe bezier path and pulses with lightweight JSON playback energy',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: breathe(18, 1.05),
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#00DDB3', 28, 62, { layer: 'under', sw: 0.55 }),
+      spark(18.5, 5.5, 1.4, -1.4, '#5EEAD4', 36, 60),
+    ],
+  },
+
+  penpot: {
+    story:
+      'Penpot open-source pen-nib emblem draws its SVG vector silhouette while precision design guides lock around it',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: nod(16, -6),
+      },
+    ],
+    props: [
+      guides(
+        [
+          [12.0, 2.0, 12.0, 22.0],
+          [2.0, 12.0, 22.0, 12.0],
+        ],
+        '#31EFB8',
+        14,
+        54
+      ),
+    ],
+  },
+
+  excalidraw: {
+    story:
+      'Excalidraw hand-drawn sketchbook frame and strokes sketch themselves in sequentially like a live whiteboard session',
+    tracks: [
+      { on: 0, draw: [10, 28], fill: [24, 34], width: 0.65 },
+      { on: 1, draw: [18, 36], fill: [32, 42], width: 0.65 },
+      { on: 2, draw: [26, 44], fill: [40, 50], width: 0.65 },
+    ],
+    props: [spark(18.6, 5.4, 1.3, -1.3, '#A5B4FC', 42, 64)],
+  },
+
+  tldraw: {
+    story:
+      'tldraw infinite-canvas mark tilts playfully as multiplayer cursor packets dart across the board',
+    tracks: [{ on: 0, origin: [12, 12], keys: sway(12, 6, 0.7) }],
+    props: [
+      packet(4.0, 8.0, 19.5, 16.0, '#60A5FA', 22, 50, 0.85),
+      packet(19.5, 8.0, 4.0, 16.0, '#F472B6', 32, 60, 0.85),
+    ],
+  },
+
+  miro: {
+    story:
+      'Miro bold yellow M board emblem pops into workshop alignment while sticky-note collaboration sparks chime across its peaks',
+    tracks: [{ on: 0, origin: [12, 12], keys: popIn(10, 0.82) }],
+    props: [
+      spark(6.0, 5.0, -1.2, -1.2, '#FDE047', 26, 50),
+      spark(18.0, 5.0, 1.2, -1.2, '#FACC15', 34, 58),
+      pulseRing(12, 12, 10.4, '#FFD02F', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  mermaid: {
+    story:
+      'Mermaid flowchart emblem traces its diagram edges and sends a directed graph node packet from root to leaf',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: breathe(18, 1.04),
+      },
+    ],
+    props: [
+      packet(4.5, 7.5, 19.5, 16.5, '#FF3670', 32, 60, 0.9),
+      pulseRing(12, 12, 10.3, '#FB7185', 34, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
 };

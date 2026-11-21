@@ -1351,4 +1351,230 @@ export default {
       telemetryBar(12.2, 3.2, 1.8, 4.0, '#38BDF8', 34, 62),
     ],
   },
+
+  claude: {
+    story:
+      'Claude warm terracotta sunburst blooms and rotates smoothly like a reasoning star while sending out an amber thought pulse and twin sparks',
+    tracks: [
+      {
+        on: 'all',
+        origin: [12, 12],
+        keys: {
+          10: { r: -18, s: 0.92, e: 'inout' },
+          36: { r: 24, s: 1.06, e: 'inout' },
+          54: { r: -4, s: 1.01, e: 'settle' },
+          66: { r: 0, s: 1, e: 'out' },
+        },
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 9.6, '#FDBA74', 20, 58, { layer: 'under', sw: 0.6 }),
+      spark(18.6, 5.4, 1.6, -1.6, '#FDE68A', 28, 50),
+      spark(5.4, 18.6, -1.6, 1.6, '#FDBA74', 34, 56),
+    ],
+  },
+
+  deepseek: {
+    story:
+      'DeepSeek blue whale glides gracefully over an ocean swell while deep-reasoning sonar rings ripple outward from its silhouette',
+    tracks: [
+      {
+        on: 'all',
+        origin: '50% 60%',
+        keys: sway(10, 5.5, 0.9),
+      },
+    ],
+    props: [
+      waveLine(21.0, '#60A5FA', 10, 64),
+      pulseRing(12, 11.5, 9.2, '#93C5FD', 22, 58, { layer: 'under', sw: 0.55 }),
+    ],
+  },
+
+  modelcontextprotocol: {
+    story:
+      'Model Context Protocol host arch and tool bridge trace and interlock cleanly as bidirectional JSON-RPC packets cross between assistant and tools',
+    groups: {
+      outer: 0,
+      bridge: 1,
+    },
+    tracks: [
+      {
+        on: 'outer',
+        draw: [8, 32],
+        fill: [24, 34],
+        width: 0.6,
+      },
+      {
+        on: 'bridge',
+        draw: [14, 38],
+        fill: [30, 40],
+        width: 0.6,
+        keys: {
+          14: { s: 0.9, e: 'inout' },
+          40: { s: 1.05, e: 'settle' },
+          56: { s: 1, e: 'out' },
+        },
+      },
+    ],
+    props: [
+      packet(5.5, 16.5, 18.5, 7.5, '#38BDF8', 24, 52, 0.95),
+      packet(18.5, 7.5, 5.5, 16.5, '#FDE047', 36, 64, 0.95),
+    ],
+  },
+
+  vllm: {
+    story:
+      'vLLM twin PagedAttention wings sweep in from opposite flanks to form the V-mark as high-throughput token streams rocket upward between them',
+    groups: {
+      rightWing: 0,
+      leftWing: 1,
+    },
+    tracks: [
+      {
+        on: 'leftWing',
+        keys: slideIn(10, -2.6, -1.2),
+      },
+      {
+        on: 'rightWing',
+        keys: slideIn(14, 2.6, -1.2),
+      },
+    ],
+    props: [
+      packet(11.6, 19.5, 11.6, 4.2, '#7DD3FC', 22, 48, 0.95),
+      packet(13.2, 18.5, 13.2, 3.8, '#FDE047', 30, 56, 0.9),
+      boltFlash(19.0, 3.8, '#FDE047', 34, 60),
+    ],
+  },
+
+  n8n: {
+    story:
+      'n8n workflow graph traces its automation edges as trigger packets flow from the left node through the hub and branch out to parallel actions',
+    tracks: [
+      {
+        on: 0,
+        draw: [8, 32],
+        fill: [24, 34],
+        width: 0.6,
+      },
+    ],
+    props: [
+      packet(3.2, 12.0, 12.2, 12.0, '#FDA4AF', 22, 42, 1.0),
+      packet(12.2, 12.0, 20.4, 8.6, '#FDE047', 38, 60, 0.95),
+      packet(12.2, 12.0, 20.4, 15.4, '#4ADE80', 42, 64, 0.95),
+    ],
+  },
+
+  dify: {
+    story:
+      'Dify four modular wordmark blocks cascade left-to-right into an agentic pipeline while the i-dot hops crisply onto its stem',
+    groups: {
+      d: 1,
+      mid: 2,
+      dot: 3,
+      y: 0,
+    },
+    tracks: [
+      { on: 'd', keys: riseIn(10, 2.4) },
+      { on: 'mid', keys: riseIn(16, 2.4) },
+      { on: 'y', keys: riseIn(22, 2.4) },
+      { on: 'dot', keys: dropIn(26, 3.0) },
+    ],
+    props: [
+      packet(4.5, 16.5, 20.0, 16.5, '#93C5FD', 32, 58, 0.85),
+      pulseRing(12, 12, 10.2, '#818CF8', 38, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  modal: {
+    story:
+      'Modal serverless GPU mark cold-starts in milliseconds with a crisp scale-up pop, neon-lime compute ring, and twin accelerator sparks',
+    tracks: [
+      {
+        on: 'all',
+        origin: [12, 12],
+        keys: popIn(10, 0.62),
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 9.8, '#86EFAC', 18, 52, { layer: 'under', sw: 0.65 }),
+      spark(19.2, 5.2, 1.6, -1.6, '#BEF264', 26, 48),
+      spark(4.8, 18.8, -1.6, 1.6, '#4ADE80', 32, 54),
+    ],
+  },
+
+  openrouter: {
+    story:
+      'OpenRouter traces its unified API gateway as incoming prompts split from the left ingress and fan out simultaneously to multiple LLM endpoints',
+    tracks: [
+      {
+        on: 0,
+        draw: [8, 32],
+        fill: [24, 34],
+        width: 0.6,
+      },
+    ],
+    props: [
+      packet(3.0, 12.0, 11.2, 12.0, '#38BDF8', 22, 40, 0.95),
+      packet(11.2, 12.0, 20.2, 6.2, '#A78BFA', 36, 58, 0.95),
+      packet(11.2, 12.0, 20.2, 17.8, '#4ADE80', 40, 62, 0.95),
+    ],
+  },
+
+  elevenlabs: {
+    story:
+      'ElevenLabs twin voice bars oscillate out of phase like stereo audio equalizer levels while warm acoustic soundwave rings radiate outward',
+    groups: {
+      left: 0,
+      right: 1,
+    },
+    tracks: [
+      {
+        on: 'left',
+        origin: '50% 50%',
+        keys: {
+          10: { sy: 0.62, e: 'inout' },
+          24: { sy: 1.08, e: 'inout' },
+          38: { sy: 0.74, e: 'inout' },
+          52: { sy: 1.04, e: 'settle' },
+          64: { sy: 1, e: 'out' },
+        },
+      },
+      {
+        on: 'right',
+        origin: '50% 50%',
+        keys: {
+          14: { sy: 1.06, e: 'inout' },
+          28: { sy: 0.64, e: 'inout' },
+          42: { sy: 1.08, e: 'inout' },
+          56: { sy: 0.96, e: 'settle' },
+          66: { sy: 1, e: 'out' },
+        },
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 9.4, '#CBD5E1', 20, 54, { layer: 'under', sw: 0.55 }),
+      pulseRing(12, 12, 10.4, '#38BDF8', 32, 64, { layer: 'under', sw: 0.45 }),
+    ],
+  },
+
+  suno: {
+    story:
+      'Suno split-sun vinyl emblem spins smoothly with harmonic groove momentum while golden and violet audio ripples radiate outward',
+    tracks: [
+      {
+        on: 'all',
+        origin: [12, 12],
+        keys: {
+          10: { r: -14, s: 0.94, e: 'inout' },
+          36: { r: 22, s: 1.04, e: 'inout' },
+          56: { r: -3, s: 1.01, e: 'settle' },
+          66: { r: 0, s: 1, e: 'out' },
+        },
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 9.5, '#FDE047', 18, 52, { layer: 'under', sw: 0.6 }),
+      pulseRing(12, 12, 10.4, '#C084FC', 30, 62, { layer: 'under', sw: 0.5 }),
+    ],
+  },
 };

@@ -5,7 +5,7 @@ Public site: https://thanhnguyxnorg.github.io/Techstack-Studio
 Repository: https://github.com/ThanhNguyxnOrg/Techstack-Studio
 
 ## Animated or static? Both are hosted directly
-- Animated SVG: https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/<id>.svg (4.8s seamless loop with prefers-reduced-motion fallback)
+- Animated SVG: https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/<id>.svg (6.0s seamless loop with prefers-reduced-motion fallback)
 - Static SVG:   https://thanhnguyxnorg.github.io/Techstack-Studio/icons/source/<id>.svg (crisp non-animated vector)
 
 ## Machine-readable endpoints

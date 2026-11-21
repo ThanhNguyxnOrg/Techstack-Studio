@@ -53,7 +53,7 @@ then writes five outputs:
 - `public/icons/source/{id}.svg` — pure-vector, dark-surface-safe static SVGs normalized
   to a unified `viewBox="0 0 24 24"`. Zero raster `<image>` embeds.
 - `public/icons/animated/{id}.svg` — self-contained animated SVGs on a synchronized
-  `4.8s` loop (`0–6%` and `72–100%` rest cleanly on the static logo; `6–72%` plays the
+  `6.0s` loop (`0–4%` and `84–100%` rest cleanly on the static logo; `4–84%` plays the
   logo's unique motion story), with scoped `tss_{uid}_*` IDs and `prefers-reduced-motion: reduce`.
 - `src/data/standaloneSvgParts.json` — minified runtime fragments lazily loaded for offline exports.
 - `src/data/storyConcepts.json` — compact `id -> story` map used by tooltips and the Live Preview story bar.

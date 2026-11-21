@@ -5,7 +5,7 @@ Public site: https://thanhnguyxnorg.github.io/Techstack-Studio
 Repository: https://github.com/ThanhNguyxnOrg/Techstack-Studio
 
 ## Animated or static? Both are hosted directly
-- Animated SVG: https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/<id>.svg (4.8s seamless loop with prefers-reduced-motion fallback)
+- Animated SVG: https://thanhnguyxnorg.github.io/Techstack-Studio/icons/animated/<id>.svg (6.0s seamless loop with prefers-reduced-motion fallback)
 - Static SVG:   https://thanhnguyxnorg.github.io/Techstack-Studio/icons/source/<id>.svg (crisp non-animated vector)
 
 ## Machine-readable endpoints
@@ -59,15 +59,15 @@ npx techstack-studio mcp
 
 ---
 
-## Catalog overview (542 icons across 8 categories)
-- AI and machine learning: 49 icons
-- Backend: 69 icons
-- Cloud and DevOps: 85 icons
-- Databases: 49 icons
-- Developer tools: 94 icons
+## Catalog overview (665 icons across 8 categories)
+- AI and machine learning: 59 icons
+- Backend: 96 icons
+- Cloud and DevOps: 100 icons
+- Databases: 56 icons
+- Developer tools: 121 icons
 - Embedded development: 44 icons
-- Frontend: 91 icons
-- Programming languages: 61 icons
+- Frontend: 120 icons
+- Programming languages: 69 icons
 
 ## MCP Server Configuration
 Add to Claude Desktop, Cursor, Antigravity, Windsurf, or VS Code MCP settings:

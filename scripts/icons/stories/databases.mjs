@@ -19,6 +19,7 @@ import {
   popIn,
   sway,
   heartbeat,
+  nod,
   breathe,
 } from '../motifs.mjs';
 
@@ -1242,5 +1243,88 @@ export default {
       packet(12.0, 12.0, 19.6, 12.0, '#FED7AA', 32, 56, 0.9),
       checkFlash(16.8, 5.0, '#FDBA74', 42, 66),
     ],
+  },
+
+  scylladb: {
+    story:
+      'ScyllaDB sea-monster emblem surges with shard-per-core C++ velocity while its glowing eye locks on and a low-latency cyan pulse radiates outward',
+    groups: { body: 0, accent: 1, head: 2, eye: 3 },
+    tracks: [
+      { on: 'body', origin: '50% 60%', keys: sway(10, 5, 0.6) },
+      { on: 'eye', keys: popIn(22, 0.4) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#67E8F9', 20, 56, { layer: 'under', sw: 0.6 }),
+      boltFlash(17.8, 4.4, '#FDE047', 30, 58),
+    ],
+  },
+
+  victoriametrics: {
+    story:
+      'VictoriaMetrics three stacked time-series V-chevrons drop into tight telemetry alignment while live metric bars pulse beside them',
+    tracks: [{ on: [0, 1, 2], order: 'y', each: true, stagger: 5, keys: dropIn(10, 2.4) }],
+    props: [
+      pulseRing(12, 12, 10.2, '#D8B4FE', 30, 62, { layer: 'under', sw: 0.55 }),
+      packet(4.0, 12.0, 20.0, 12.0, '#38BDF8', 28, 56, 0.9),
+    ],
+  },
+
+  hivemq: {
+    story:
+      'HiveMQ golden honeycomb MQTT broker pulses twice as IoT telemetry rings expand outward and its twin bee antennae pop alertly',
+    groups: { outer: 0, inner: 1, eyes: [2, 3] },
+    tracks: [
+      { on: 'outer', keys: heartbeat(10, 0.06) },
+      { on: 'eyes', each: true, stagger: 3, keys: popIn(22, 0.4) },
+    ],
+    props: [
+      pulseRing(12, 12, 9.6, '#FDE047', 18, 52, { layer: 'under', sw: 0.6 }),
+      pulseRing(12, 12, 10.5, '#FDBA74', 30, 64, { layer: 'under', sw: 0.45 }),
+    ],
+  },
+
+  minio: {
+    story:
+      'MinIO sleek crimson bird-wing mark glides upward with high-throughput S3 object-storage momentum and sweeps a crisp highlight',
+    tracks: [{ on: 0, draw: [8, 32], fill: [24, 36], width: 0.65, keys: riseIn(10, 2.4) }],
+    props: [
+      sheen('<rect x="5" y="1" width="14" height="22" rx="2"/>', 34, 62, 0.3),
+      spark(17.4, 5.0, 1.6, -1.6, '#FCA5A5', 38, 60),
+    ],
+  },
+
+  ceph: {
+    story:
+      'Ceph octopus tentacles expand around its central storage core as replicated object packets pulse evenly across the distributed cluster',
+    groups: { outer: 0, inner: 1, eye: 2 },
+    tracks: [
+      { on: 'outer', origin: [12, 12], keys: breathe(10, 0.07) },
+      { on: 'inner', keys: popIn(16, 0.72) },
+      { on: 'eye', keys: heartbeat(24, 0.14) },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#FCA5A5', 22, 58, { layer: 'under', sw: 0.55 })],
+  },
+
+  longhorn: {
+    story:
+      'Longhorn cloud-native block storage horns tilt with steady resilience while its center core locks in and a replication ring expands',
+    groups: { horns: 0, core: 1 },
+    tracks: [
+      { on: 'horns', origin: '50% 60%', keys: nod(10, 5.5) },
+      { on: 'core', keys: popIn(20, 0.4) },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#F0ABFC', 26, 60, { layer: 'under', sw: 0.55 })],
+  },
+
+  rook: {
+    story:
+      'Rook storage orchestrator chess crown lowers onto its fortified base as the inner Kubernetes volume core snaps into lock',
+    groups: { crown: 0, base: 1, core: 2 },
+    tracks: [
+      { on: 'base', keys: riseIn(10, 2.0) },
+      { on: 'crown', keys: dropIn(16, 2.6) },
+      { on: 'core', keys: popIn(24, 0.4) },
+    ],
+    props: [checkFlash(16.8, 5.0, '#7DD3FC', 40, 66)],
   },
 };

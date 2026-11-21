@@ -1879,4 +1879,177 @@ export default {
       packet(3.0, 12, 21.0, 12, '#38BDF8', 28, 60, 0.8),
     ],
   },
+
+  cloudflareworkers: {
+    story:
+      'Cloudflare Workers three orange V8-isolate chevron blades snap together in sequence as zero-cold-start edge packets fire across the globe',
+    tracks: [
+      {
+        on: [2, 0, 1],
+        each: true,
+        stagger: 4.8,
+        keys: slideIn(10, -2.4, 0),
+      },
+    ],
+    props: [
+      boltFlash(17.8, 4.2, '#FDE047', 26, 54),
+      packet(3.0, 12.0, 21.0, 12.0, '#FDBA74', 30, 58, 0.9),
+    ],
+  },
+
+  cloudflarepages: {
+    story:
+      'Cloudflare Pages edge deployment window traces its frame while its three browser dots pop in and static-to-edge build slices lock into place',
+    groups: {
+      frame: 0,
+      dots: [1, 2, 3],
+      slices: [5, 4, 6, 7],
+    },
+    tracks: [
+      { on: 'frame', draw: [8, 30], fill: [22, 34], width: 0.6 },
+      { on: 'dots', each: true, stagger: 3.5, keys: popIn(18, 0.25) },
+      { on: 'slices', each: true, stagger: 3.5, keys: slideIn(24, 2.0, 0) },
+    ],
+    props: [checkFlash(16.8, 5.0, '#4ADE80', 44, 66)],
+  },
+
+  coolify: {
+    story:
+      'Coolify seven violet self-hosting bars cascade smoothly into a stacked C-badge as a fresh container deployment confirms',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6],
+        order: 'y',
+        each: true,
+        stagger: 3.0,
+        keys: slideIn(10, -2.2, 0),
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#C084FC', 30, 62, { layer: 'under', sw: 0.55 }),
+      checkFlash(16.8, 5.0, '#4ADE80', 42, 66),
+    ],
+  },
+
+  caprover: {
+    story:
+      'CapRover self-hosted Docker PaaS crest turns gently like a captain compass while its inner sails lock cleanly into course',
+    groups: { outer: 0, sails: [1, 2, 3] },
+    tracks: [
+      { on: 'outer', origin: [12, 12], keys: sway(10, 5, 0.4) },
+      { on: 'sails', each: true, stagger: 4, keys: slideIn(16, -2.0, 0) },
+    ],
+    props: [pulseRing(12, 12, 10.2, '#FDBA74', 28, 60, { layer: 'under', sw: 0.55 })],
+  },
+
+  alibabacloud: {
+    story:
+      'Alibaba Cloud twin orange brackets converge around the central link bar as global compute packets stream cleanly across the bridge',
+    groups: { left: 0, right: 1, bridge: 2 },
+    tracks: [
+      { on: 'left', keys: slideIn(10, -2.4, 0) },
+      { on: 'right', keys: slideIn(14, 2.4, 0) },
+      { on: 'bridge', keys: popIn(20, 0.35) },
+    ],
+    props: [packet(5.0, 12.0, 19.0, 12.0, '#FDE047', 28, 56, 0.9)],
+  },
+
+  backblaze: {
+    story:
+      'Backblaze three crimson flame tongues rise in staggered cadence like hot B2 cloud storage firing up with glowing sparks',
+    tracks: [{ on: [2, 1, 0], each: true, stagger: 4.8, keys: riseIn(10, 2.4) }],
+    props: [
+      spark(17.8, 5.2, 1.6, -1.8, '#FDBA74', 28, 52),
+      pulseRing(12, 12, 10.2, '#FCA5A5', 30, 62, { layer: 'under', sw: 0.55 }),
+    ],
+  },
+
+  wasabi: {
+    story:
+      'Wasabi emerald hot-cloud emblem blooms cleanly from its center with a crisp zero-egress pulse ring and diagonal sheen',
+    tracks: [{ on: 0, draw: [8, 32], fill: [24, 36], width: 0.65, keys: popIn(10, 0.8) }],
+    props: [
+      pulseRing(12, 12, 10.2, '#86EFAC', 22, 58, { layer: 'under', sw: 0.6 }),
+      sheen('<circle cx="12" cy="12" r="10.4"/>', 36, 64, 0.28),
+    ],
+  },
+
+  talos: {
+    story:
+      'Talos five symmetric immutable-OS ribs rise outward from the central spine into a hardened API-driven Kubernetes shield',
+    tracks: [{ on: [4, 0, 1, 3, 2], each: true, stagger: 3.6, keys: riseIn(10, 2.4) }],
+    props: [pulseRing(12, 12, 10.2, '#FDBA74', 32, 62, { layer: 'under', sw: 0.55 })],
+  },
+
+  skaffold: {
+    story:
+      'Skaffold four blue continuous-dev scaffolding tiers slide into alignment in alternating directions as a Kubernetes rebuild completes',
+    tracks: [
+      { on: [2, 1], each: true, stagger: 4.5, keys: slideIn(10, -2.4, 0) },
+      { on: [3, 0], each: true, stagger: 4.5, keys: slideIn(14, 2.4, 0) },
+    ],
+    props: [checkFlash(16.8, 5.0, '#7DD3FC', 40, 66)],
+  },
+
+  devbox: {
+    story:
+      'Devbox Nix-powered workspace brackets clamp around the isolated shell core while a crisp reproducible environment check confirms',
+    groups: { right: 0, left: 1, core: 2 },
+    tracks: [
+      { on: 'core', keys: popIn(10, 0.6) },
+      { on: 'left', keys: slideIn(16, -2.4, 0) },
+      { on: 'right', keys: slideIn(20, 2.4, 0) },
+    ],
+    props: [checkFlash(16.8, 4.8, '#C084FC', 40, 66)],
+  },
+
+  gitpod: {
+    story:
+      'Gitpod golden hexagonal workspace traces its ephemeral cloud contour and gleams with a crisp ready-to-code sheen',
+    tracks: [{ on: 0, draw: [8, 34], fill: [26, 38], width: 0.65, keys: breathe(12, 0.05) }],
+    props: [
+      sheen('<rect x="2" y="1" width="20" height="22" rx="3"/>', 34, 62, 0.3),
+      spark(18.6, 5.2, 1.6, -1.6, '#FEF08A', 38, 60),
+    ],
+  },
+
+  coder: {
+    story:
+      'Coder cloud workspace left and right emblem halves lock cleanly together as a Terraform-provisioned environment check flashes',
+    groups: { right: 0, left: 1 },
+    tracks: [
+      { on: 'left', keys: slideIn(10, -2.4, 0) },
+      { on: 'right', keys: slideIn(16, 2.4, 0) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#94A3B8', 26, 58, { layer: 'under', sw: 0.55 }),
+      checkFlash(16.8, 5.2, '#4ADE80', 40, 66),
+    ],
+  },
+
+  pangolin: {
+    story:
+      'Pangolin armored proxy mascot curls into a protective zero-trust stance while a tunnel radar ring sweeps cleanly around it',
+    tracks: [
+      { on: 0, origin: [12, 12], draw: [8, 32], fill: [24, 36], width: 0.6, keys: nod(14, 5.5) },
+    ],
+    props: [radar(12, 12, 10.4, '#FDBA74', 18, 62, 120)],
+  },
+
+  ngrok: {
+    story:
+      'ngrok five wordmark letters cascade left-to-right as a secure localhost ingress tunnel packet shoots straight across the bridge',
+    tracks: [{ on: [3, 2, 4, 1, 0], each: true, stagger: 3.6, keys: riseIn(10, 2.0) }],
+    props: [
+      packet(2.5, 17.2, 21.5, 17.2, '#38BDF8', 26, 56, 0.9),
+      checkFlash(16.8, 5.0, '#4ADE80', 42, 66),
+    ],
+  },
+
+  falco: {
+    story:
+      'Falco six teal falcon wing feathers fan swiftly into formation as an eBPF runtime threat-detection radar sweeps cleanly across',
+    tracks: [{ on: [0, 1, 3, 2, 4, 5], each: true, stagger: 3.0, keys: slideIn(10, -2.0, -1.2) }],
+    props: [radar(12, 12, 10.4, '#67E8F9', 22, 62, 120)],
+  },
 };
