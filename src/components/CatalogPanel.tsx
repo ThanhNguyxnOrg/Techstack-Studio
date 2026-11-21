@@ -112,6 +112,7 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
             {onImportStack && (
               <button
                 type="button"
+                data-testid="catalog-import-btn"
                 onClick={() => setShowImport((prev) => !prev)}
                 aria-expanded={showImport}
                 title="Auto-detect stack from package.json, Dockerfile, requirements.txt, Cargo.toml, go.mod..."
@@ -225,6 +226,7 @@ export const CatalogPanel: React.FC<CatalogPanelProps> = ({
             />
             <input
               id="catalog-search-input"
+              data-testid="catalog-search"
               type="text"
               value={searchQuery}
               onChange={(e) => {

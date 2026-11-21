@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   DEFAULT_CUSTOMIZATION_SETTINGS,
   GITHUB_PAGES_URL,
@@ -11,9 +11,15 @@ import {
   STUDIO_PRESETS,
   TECH_CATALOG,
 } from './data/catalog';
-import { CustomizationSettings, StudioStage } from './types/stack';
+import storyConceptsJson from './data/storyConcepts.json';
+import { CustomizationSettings, ExportFormat, StudioStage, TechCategory } from './types/stack';
+import './types/browserApi';
+import { detectStackFromFileContent } from './utils/stackDetector';
+import { ensureSvgPartsForItems } from './utils/svgPartsStore';
 import {
   STORAGE_KEY,
+  filterCatalog,
+  generateExportOutput,
   moveTechInStack,
   parsePersistedState,
   parseShareUrlParams,
@@ -25,6 +31,8 @@ import {
   toggleTechInStack,
   writeShareUrlParams,
 } from './utils/studioLogic';
+
+const STORY_CONCEPTS = storyConceptsJson as Record<string, string>;
 import { CatalogPanel } from './components/CatalogPanel';
 import { ExportStudio } from './components/ExportStudio';
 import { HeroSection } from './components/HeroSection';
@@ -211,6 +219,136 @@ export default function App() {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [history]);
+
+  // Programmatic browser control API for AI browser agents and automation.
+  const latestRef = useRef({ selectedIds, settings, activeStage, history });
+  latestRef.current = { selectedIds, settings, activeStage, history };
+
+  useEffect(() => {
+    const buildCurrentShareUrl = (ids: string[], cfg: CustomizationSettings) => {
+      const url = new URL(
+        typeof window !== 'undefined' && window.location.origin !== 'null'
+          ? window.location.origin + window.location.pathname
+          : GITHUB_PAGES_URL
+      );
+      writeShareUrlParams(url.searchParams, ids, cfg);
+      return url.toString();
+    };
+
+    window.techStackStudio = {
+      version: '1.0.0',
+      getState: () => {
+        const cur = latestRef.current;
+        return {
+          selectedIds: [...cur.selectedIds],
+          settings: { ...cur.settings },
+          activeStage: cur.activeStage,
+          shareUrl: buildCurrentShareUrl(cur.selectedIds, cur.settings),
+          catalogCount: TECH_CATALOG.length,
+        };
+      },
+      search: (query: string, opts?: { category?: TechCategory | 'all'; limit?: number }) => {
+        const limit = Math.max(1, Math.min(100, opts?.limit ?? 15));
+        return filterCatalog(TECH_CATALOG, query, opts?.category ?? 'all')
+          .slice(0, limit)
+          .map((item) => ({
+            id: item.id,
+            name: item.name,
+            category: item.category,
+            aliases: item.aliases,
+            animatedSvgPath: item.animatedSvgPath || `/icons/animated/${item.id}.svg`,
+            sourceSvgPath: item.sourceSvgPath || `/icons/source/${item.id}.svg`,
+            docsUrl: item.docsUrl,
+            story: STORY_CONCEPTS[item.id] || item.role,
+          }));
+      },
+      setStack: (ids: string[]) => {
+        const resolved = resolveSelectedItems(ids).map((item) => item.id);
+        setHistory((prev) => [
+          ...prev.slice(-49),
+          { selectedIds: latestRef.current.selectedIds, settings: latestRef.current.settings },
+        ]);
+        setSelectedIds(resolved);
+        return resolved;
+      },
+      add: (ids: string[]) => {
+        const toAdd = resolveSelectedItems(ids).map((item) => item.id);
+        const next = [...latestRef.current.selectedIds];
+        for (const id of toAdd) {
+          if (!next.includes(id)) next.push(id);
+        }
+        setHistory((prev) => [
+          ...prev.slice(-49),
+          { selectedIds: latestRef.current.selectedIds, settings: latestRef.current.settings },
+        ]);
+        setSelectedIds(next);
+        return next;
+      },
+      remove: (ids: string[]) => {
+        const drop = new Set(resolveSelectedItems(ids).map((item) => item.id));
+        const next = latestRef.current.selectedIds.filter((id) => !drop.has(id));
+        setHistory((prev) => [
+          ...prev.slice(-49),
+          { selectedIds: latestRef.current.selectedIds, settings: latestRef.current.settings },
+        ]);
+        setSelectedIds(next);
+        return next;
+      },
+      reorder: (sourceId: string, targetId: string) => {
+        setHistory((prev) => [
+          ...prev.slice(-49),
+          { selectedIds: latestRef.current.selectedIds, settings: latestRef.current.settings },
+        ]);
+        setSelectedIds((prev) => reorderTechInStack(prev, sourceId, targetId));
+      },
+      clear: () => {
+        setHistory((prev) => [
+          ...prev.slice(-49),
+          { selectedIds: latestRef.current.selectedIds, settings: latestRef.current.settings },
+        ]);
+        setSelectedIds([]);
+      },
+      undo: () => {
+        const snap = latestRef.current.history[latestRef.current.history.length - 1];
+        if (!snap) return false;
+        setSelectedIds(snap.selectedIds);
+        setSettings(snap.settings);
+        setHistory((prev) => prev.slice(0, -1));
+        return true;
+      },
+      setSettings: (partial: Partial<CustomizationSettings>) => {
+        const next = sanitizeSettings({ ...latestRef.current.settings, ...partial });
+        setSettings(next);
+        return next;
+      },
+      applyPreset: (presetId: string) => {
+        const preset = STUDIO_PRESETS.find((p) => p.id === presetId);
+        if (!preset) return false;
+        setHistory((prev) => [
+          ...prev.slice(-49),
+          { selectedIds: latestRef.current.selectedIds, settings: latestRef.current.settings },
+        ]);
+        setSettings((prev) => sanitizeSettings({ ...prev, ...preset.settings }));
+        return true;
+      },
+      setStage: (stage: StudioStage) => setActiveStage(stage),
+      detectFromText: (content: string, filename?: string) =>
+        detectStackFromFileContent(content, TECH_CATALOG, filename),
+      getShareUrl: () =>
+        buildCurrentShareUrl(latestRef.current.selectedIds, latestRef.current.settings),
+      exportOutput: async (format: ExportFormat) => {
+        const items = resolveSelectedItems(latestRef.current.selectedIds);
+        if (format !== 'markdown') {
+          await ensureSvgPartsForItems(items);
+        }
+        return generateExportOutput(format, items, latestRef.current.settings);
+      },
+    };
+
+    return () => {
+      delete window.techStackStudio;
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#090B10] text-[#F1F5F9] flex flex-col selection:bg-[#38BDF8] selection:text-[#090B10] xl:h-svh xl:min-h-0 xl:overflow-hidden">

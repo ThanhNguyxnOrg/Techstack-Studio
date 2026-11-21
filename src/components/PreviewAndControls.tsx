@@ -269,6 +269,7 @@ export const PreviewAndControls: React.FC<PreviewAndControlsProps> = ({
     <div id="customize-section" className="scroll-mt-20">
       <section
         aria-labelledby="live-preview-heading"
+        data-testid="preview-stage"
         className="bg-[#0F131B] border border-[#1E2636] rounded-2xl overflow-hidden shadow-sm"
       >
         {/* Header: preview mode, motion, speed, theme */}

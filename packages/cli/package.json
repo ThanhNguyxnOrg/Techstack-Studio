@@ -1,0 +1,38 @@
+{
+  "name": "techstack-studio",
+  "version": "1.0.0",
+  "description": "CLI and MCP server for Tech Stack Studio — 542 animated & static pure-vector SVG tech logos for GitHub READMEs, portfolios, and AI agents.",
+  "type": "module",
+  "license": "MIT",
+  "author": "ThanhNguyxnOrg",
+  "homepage": "https://thanhnguyxnorg.github.io/Techstack-Studio/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThanhNguyxnOrg/Techstack-Studio.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/ThanhNguyxnOrg/Techstack-Studio/issues"
+  },
+  "keywords": [
+    "tech-stack",
+    "animated-svg",
+    "github-readme",
+    "mcp",
+    "mcp-server",
+    "ai-agent",
+    "cli",
+    "svg"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "bin": {
+    "techstack-studio": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md"
+  ]
+}

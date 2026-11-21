@@ -127,6 +127,7 @@ export const ExportStudio: React.FC<ExportStudioProps> = ({ selectedItems, setti
         <div className="flex items-center gap-2">
           <button
             type="button"
+            data-testid="export-download-btn"
             onClick={handleDownloadFile}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#090B10] border border-[#1E2636] text-xs font-medium text-[#E2E8F0] hover:border-[#38BDF8] whitespace-nowrap shrink-0 transition-colors cursor-pointer"
           >

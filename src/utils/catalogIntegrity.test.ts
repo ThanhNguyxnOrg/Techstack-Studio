@@ -296,5 +296,13 @@ test('published agent artifacts stay in sync with the catalog', () => {
   const llms = fs.readFileSync('public/llms.txt', 'utf8');
   assert.ok(llms.includes('/catalog.json'));
   assert.ok(llms.includes('?stack='));
-  assert.ok(llms.includes('npm run stack') || llms.includes('buildStackBanner'));
+  assert.ok(llms.includes('techstack-studio'));
+  assert.ok(llms.includes('/icons/source/'));
+
+  const llmsFull = fs.readFileSync('public/llms-full.txt', 'utf8');
+  assert.ok(llmsFull.includes('mcpServers'));
+  assert.ok(llmsFull.includes('patch_readme'));
+  assert.ok(fs.existsSync('SKILL.md'), 'SKILL.md must exist at repo root');
+  assert.ok(fs.existsSync('AGENTS.md'), 'AGENTS.md must exist at repo root');
+  assert.ok(indexHtml.includes('application/ld+json'), 'index.html must include JSON-LD metadata');
 });
