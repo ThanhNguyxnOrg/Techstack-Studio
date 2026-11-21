@@ -1809,4 +1809,66 @@ export default {
     ],
     props: [pulseRing(12, 12, 10.2, '#94A3B8', 24, 58), checkFlash(16.8, 5.0, '#4ADE80', 42, 66)],
   },
+
+  h3: {
+    story:
+      'H3 seven composable hexagonal HTTP tiles cascade smoothly into a lightweight router grid as a fast request packet zips across',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6],
+        order: 'x',
+        each: true,
+        stagger: 3.2,
+        keys: popIn(10, 0.45),
+      },
+    ],
+    props: [
+      packet(4.0, 12.0, 20.0, 12.0, '#60A5FA', 32, 58, 0.95),
+      pulseRing(12, 12, 10.2, '#93C5FD', 38, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  unjs: {
+    story:
+      'UnJS universal JavaScript badge traces its runtime-agnostic frame and radiates a golden ecosystem pulse with twin utility sparks',
+    tracks: [
+      {
+        on: 0,
+        draw: [8, 32],
+        fill: [24, 36],
+        width: 0.65,
+        keys: heartbeat(14, 0.06),
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#FEF08A', 24, 58, { layer: 'under', sw: 0.55 }),
+      spark(18.6, 5.2, 1.6, -1.6, '#FDE047', 34, 58),
+    ],
+  },
+
+  scalar: {
+    story:
+      'Scalar twin OpenAPI crescent arcs trace and converge around the center while an interactive API radar sweeps and confirms live endpoints',
+    groups: {
+      rightArc: 0,
+      leftArc: 1,
+    },
+    tracks: [
+      {
+        on: 'leftArc',
+        draw: [8, 30],
+        fill: [22, 34],
+        width: 0.6,
+        keys: slideIn(10, -2.0, 0),
+      },
+      {
+        on: 'rightArc',
+        draw: [14, 36],
+        fill: [28, 40],
+        width: 0.6,
+        keys: slideIn(16, 2.0, 0),
+      },
+    ],
+    props: [radar(12, 12, 10.3, '#38BDF8', 22, 62, 120), checkFlash(16.6, 5.2, '#4ADE80', 42, 66)],
+  },
 };

@@ -1,6 +1,6 @@
 {
  "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
- "count": 556,
+ "count": 577,
  "note": "Icon paths are relative to the site root (append to site, or to the repository path when reading from disk).",
  "icons": [
   {
@@ -1118,6 +1118,25 @@
    "technique": "cells staggered + 1 story props"
   },
   {
+   "id": "baseui",
+   "name": "Base UI",
+   "category": "Frontend",
+   "subcategory": "UI Systems & Styling",
+   "role": "Unstyled Accessible React UI Component Primitives",
+   "docsUrl": "https://base-ui.com/",
+   "aliases": [
+    "baseui",
+    "base ui",
+    "base-ui"
+   ],
+   "monogram": "BAS",
+   "brandColor": "#EDEDED",
+   "svg": "icons/animated/baseui.svg",
+   "sourceSvg": "icons/source/baseui.svg",
+   "concept": "Base UI unstyled geometric pillars snap cleanly onto accessibility alignment smart-guides like composable React primitives locking into place",
+   "technique": "left + right + 2 story props"
+  },
+  {
    "id": "bazel",
    "name": "Bazel",
    "category": "Developer tools",
@@ -1538,6 +1557,24 @@
    "sourceSvg": "icons/source/chef.svg",
    "concept": "Progress Chef’s policy-ring segments pop radially into alignment around the core as infrastructure recipes converge",
    "technique": "core + ring staggered + 1 story props"
+  },
+  {
+   "id": "chromatic",
+   "name": "Chromatic",
+   "category": "Frontend",
+   "subcategory": "Testing & QA",
+   "role": "Automated Visual Regression Testing & Storybook Review Platform",
+   "docsUrl": "https://www.chromatic.com/",
+   "aliases": [
+    "chromatic",
+    "chromatic-ui"
+   ],
+   "monogram": "CHR",
+   "brandColor": "#FC521F",
+   "svg": "icons/animated/chromatic.svg",
+   "sourceSvg": "icons/source/chromatic.svg",
+   "concept": "Chromatic visual testing lens opens with an aperture bloom while a pixel-diff scanner sweeps cleanly across the emblem",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "cilium",
@@ -2657,6 +2694,24 @@
    "technique": "body + wheel + 1 story props"
   },
   {
+   "id": "effect",
+   "name": "Effect",
+   "category": "Frontend",
+   "subcategory": "Data & State",
+   "role": "Type-Safe Functional Effect System & Concurrency Library for TypeScript",
+   "docsUrl": "https://effect.website/",
+   "aliases": [
+    "effect",
+    "effect-ts"
+   ],
+   "monogram": "EFF",
+   "brandColor": "#FFFFFF",
+   "svg": "icons/animated/effect.svg",
+   "sourceSvg": "icons/source/effect.svg",
+   "concept": "Effect type-safe pipeline arch traces its functional composition path while the lower return bar slides cleanly underneath as typed fibers complete",
+   "technique": "arch outline trace + base + 2 story props"
+  },
+  {
    "id": "elasticsearch",
    "name": "Elasticsearch",
    "category": "Databases",
@@ -3148,6 +3203,24 @@
    "technique": "shield outline trace + wing + 2 story props"
   },
   {
+   "id": "formik",
+   "name": "Formik",
+   "category": "Frontend",
+   "subcategory": "Data & State",
+   "role": "Declarative Form State & Validation Library for React",
+   "docsUrl": "https://formik.org/",
+   "aliases": [
+    "formik",
+    "formik-js"
+   ],
+   "monogram": "FOR",
+   "brandColor": "#2563EB",
+   "svg": "icons/animated/formik.svg",
+   "sourceSvg": "icons/source/formik.svg",
+   "concept": "Formik fourteen isometric honeycomb tiles cascade smoothly from top-left to bottom-right like structured form state snapping into alignment",
+   "technique": "parts staggered + 1 story props"
+  },
+  {
    "id": "fortran",
    "name": "Fortran",
    "category": "Programming languages",
@@ -3220,6 +3293,24 @@
    "sourceSvg": "icons/source/freertos.svg",
    "concept": "FreeRTOS deterministic scheduler ticks around its green kernel badge as real-time tasks preempt and context-switch cleanly in the core",
    "technique": "badge + ring + core + 2 story props"
+  },
+  {
+   "id": "fresh",
+   "name": "Fresh",
+   "category": "Frontend",
+   "subcategory": "Frameworks & Meta-Frameworks",
+   "role": "Deno Islands-Architecture Zero-JS-by-Default Web Framework",
+   "docsUrl": "https://fresh.deno.dev/",
+   "aliases": [
+    "fresh",
+    "deno-fresh"
+   ],
+   "monogram": "FRE",
+   "brandColor": "#FFDB1E",
+   "svg": "icons/animated/fresh.svg",
+   "sourceSvg": "icons/source/fresh.svg",
+   "concept": "Fresh lemon mark pops cleanly with zero-JS island energy as its inner citrus slice unfolds and a bright yellow hydration ring expands",
+   "technique": "outer + inner outline trace + 2 story props"
   },
   {
    "id": "fsharp",
@@ -3705,6 +3796,42 @@
    "technique": "part + 2 story props"
   },
   {
+   "id": "grunt",
+   "name": "Grunt",
+   "category": "Frontend",
+   "subcategory": "Build & Bundlers",
+   "role": "JavaScript Task Runner & Plugin Automation Ecosystem",
+   "docsUrl": "https://gruntjs.com/",
+   "aliases": [
+    "grunt",
+    "gruntjs"
+   ],
+   "monogram": "GRU",
+   "brandColor": "#FAA918",
+   "svg": "icons/animated/grunt.svg",
+   "sourceSvg": "icons/source/grunt.svg",
+   "concept": "Grunt armored boar mascot lowers its head with a determined nod while its tusks and eyes glint before charging through build tasks",
+   "technique": "head + eyes + tusks staggered + 1 story props"
+  },
+  {
+   "id": "gulp",
+   "name": "gulp",
+   "category": "Frontend",
+   "subcategory": "Build & Bundlers",
+   "role": "Streaming Build System & Frontend Task Automation Toolkit",
+   "docsUrl": "https://gulpjs.com/",
+   "aliases": [
+    "gulp",
+    "gulpjs"
+   ],
+   "monogram": "GUL",
+   "brandColor": "#CF4647",
+   "svg": "icons/animated/gulp.svg",
+   "sourceSvg": "icons/source/gulp.svg",
+   "concept": "gulp streaming task runner sways playfully while its twin script ribbons glide in and a red-coral build stream flows smoothly across",
+   "technique": "left + right + 1 story props"
+  },
+  {
    "id": "gunicorn",
    "name": "Gunicorn",
    "category": "Backend",
@@ -3721,6 +3848,24 @@
    "sourceSvg": "icons/source/gunicorn.svg",
    "concept": "Gunicorn green UNIX unicorn gallops forward with a confident nod as forked Python WSGI workers spin up along its stride",
    "technique": "part + 2 story props"
+  },
+  {
+   "id": "h3",
+   "name": "H3",
+   "category": "Backend",
+   "subcategory": "Web Frameworks",
+   "role": "Minimal High-Performance Composable HTTP Framework by UnJS",
+   "docsUrl": "https://h3.unjs.io/",
+   "aliases": [
+    "h3",
+    "h3-js"
+   ],
+   "monogram": "H3",
+   "brandColor": "#1E54B7",
+   "svg": "icons/animated/h3.svg",
+   "sourceSvg": "icons/source/h3.svg",
+   "concept": "H3 seven composable hexagonal HTTP tiles cascade smoothly into a lightweight router grid as a fast request packet zips across",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "haproxy",
@@ -4937,6 +5082,25 @@
    "technique": "moon + planet + crater + letters staggered + orbit"
   },
   {
+   "id": "lucide",
+   "name": "Lucide",
+   "category": "Frontend",
+   "subcategory": "UI Systems & Styling",
+   "role": "Beautiful Consistent Open-Source SVG Icon Toolkit",
+   "docsUrl": "https://lucide.dev/",
+   "aliases": [
+    "lucide",
+    "lucide-react",
+    "lucide-icons"
+   ],
+   "monogram": "LUC",
+   "brandColor": "#F56565",
+   "svg": "icons/animated/lucide.svg",
+   "sourceSvg": "icons/source/lucide.svg",
+   "concept": "Lucide twin interlocking SVG rings trace crisply in sequence and counter-rotate slightly like precision open-source vector strokes locking into alignment",
+   "technique": "leftRing outline trace + rightRing outline trace + 1 story props"
+  },
+  {
    "id": "mantine",
    "name": "Mantine",
    "category": "Frontend",
@@ -5212,6 +5376,24 @@
    "technique": "wing + core + tip + 1 story props"
   },
   {
+   "id": "mintlify",
+   "name": "Mintlify",
+   "category": "Frontend",
+   "subcategory": "Docs & Static Sites",
+   "role": "Modern Developer Documentation Platform with Interactive API Playgrounds",
+   "docsUrl": "https://mintlify.com/",
+   "aliases": [
+    "mintlify",
+    "mintlify-docs"
+   ],
+   "monogram": "MIN",
+   "brandColor": "#18E299",
+   "svg": "icons/animated/mintlify.svg",
+   "sourceSvg": "icons/source/mintlify.svg",
+   "concept": "Mintlify emerald leaf mark blooms gracefully with fresh documentation clarity, gleaming with a diagonal sheen and subtle mint pulse",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "mistralai",
    "name": "Mistral AI",
    "category": "AI and machine learning",
@@ -5453,6 +5635,25 @@
    "technique": "part outline trace + 3 story props"
   },
   {
+   "id": "nanostores",
+   "name": "Nano Stores",
+   "category": "Frontend",
+   "subcategory": "Data & State",
+   "role": "Tiny Tree-Shakable Framework-Agnostic State Manager",
+   "docsUrl": "https://github.com/nanostores/nanostores",
+   "aliases": [
+    "nanostores",
+    "nano stores",
+    "nano-stores"
+   ],
+   "monogram": "NAN",
+   "brandColor": "#000000",
+   "svg": "icons/animated/nanostores.svg",
+   "sourceSvg": "icons/source/nanostores.svg",
+   "concept": "Nano Stores twin lightweight state arcs glide together from opposite corners while a tiny reactive signal atom pulses between them",
+   "technique": "top + bottom + 2 story props"
+  },
+  {
    "id": "nativescript",
    "name": "NativeScript",
    "category": "Frontend",
@@ -5619,6 +5820,24 @@
    "svg": "icons/animated/nextdotjs.svg",
    "sourceSvg": "icons/source/nextdotjs.svg",
    "concept": "Next.js monochrome emblem traces its circular route boundary, sweeps a crisp edge-render sheen, and flashes a server-ready spark",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
+   "id": "nextra",
+   "name": "Nextra",
+   "category": "Frontend",
+   "subcategory": "Docs & Static Sites",
+   "role": "Next.js Static Documentation & Content Site Framework",
+   "docsUrl": "https://nextra.site/",
+   "aliases": [
+    "nextra",
+    "nextra-docs"
+   ],
+   "monogram": "NEX",
+   "brandColor": "#000000",
+   "svg": "icons/animated/nextra.svg",
+   "sourceSvg": "icons/source/nextra.svg",
+   "concept": "Nextra documentation emblem traces its clean Markdown-powered frame and sweeps a crisp editorial gloss across its surface",
    "technique": "part outline trace + 2 story props"
   },
   {
@@ -6213,6 +6432,25 @@
    "sourceSvg": "icons/source/owasp.svg",
    "concept": "OWASP’s application security wasp-shield locks solidly inside its outer frame while a ZAP vulnerability scanner sweeps the perimeter",
    "technique": "outer + inner + 2 story props"
+  },
+  {
+   "id": "oxc",
+   "name": "Oxc",
+   "category": "Frontend",
+   "subcategory": "Build & Bundlers",
+   "role": "High-Performance Rust JavaScript & TypeScript Compiler Toolchain",
+   "docsUrl": "https://oxc.rs/",
+   "aliases": [
+    "oxc",
+    "oxlint",
+    "oxidation-compiler"
+   ],
+   "monogram": "OXC",
+   "brandColor": "#00F7F1",
+   "svg": "icons/animated/oxc.svg",
+   "sourceSvg": "icons/source/oxc.svg",
+   "concept": "Oxc Rust oxidation compiler spins up with high-torque velocity, firing an electric cyan parser bolt and twin AST compile sparks",
+   "technique": "all + 2 story props"
   },
   {
    "id": "p5dotjs",
@@ -7378,6 +7616,26 @@
    "technique": "nucleus + orbits outline trace staggered + orbits + 1 story props"
   },
   {
+   "id": "reacthookform",
+   "name": "React Hook Form",
+   "category": "Frontend",
+   "subcategory": "Data & State",
+   "role": "Performant Flexible Zero-Dependency Form Validation for React",
+   "docsUrl": "https://react-hook-form.com/",
+   "aliases": [
+    "reacthookform",
+    "react hook form",
+    "rhf",
+    "react-hook-form"
+   ],
+   "monogram": "REA",
+   "brandColor": "#EC5990",
+   "svg": "icons/animated/reacthookform.svg",
+   "sourceSvg": "icons/source/reacthookform.svg",
+   "concept": "React Hook Form clipboard badge traces its frame as four form field lines slide in left-to-right and a crisp green validation check confirms",
+   "technique": "frame outline trace + fields staggered + 1 story props"
+  },
+  {
    "id": "reactivex",
    "name": "RxJS",
    "category": "Frontend",
@@ -7414,6 +7672,43 @@
    "sourceSvg": "icons/source/reactnative.svg",
    "concept": "React Native nucleus pulses with a native-bridge update as its three cyan electron orbits trace and spin in fluid mobile unison",
    "technique": "nucleus + orbits outline trace staggered + orbits + 1 story props"
+  },
+  {
+   "id": "reactrouter",
+   "name": "React Router",
+   "category": "Frontend",
+   "subcategory": "Frameworks & Meta-Frameworks",
+   "role": "Multi-Strategy Declarative Router & Full-Stack Framework for React",
+   "docsUrl": "https://reactrouter.com/",
+   "aliases": [
+    "reactrouter",
+    "react router",
+    "react-router"
+   ],
+   "monogram": "REA",
+   "brandColor": "#CA4245",
+   "svg": "icons/animated/reactrouter.svg",
+   "sourceSvg": "icons/source/reactrouter.svg",
+   "concept": "React Router chevron unfolds as three route nodes pop into place sequentially and a navigation packet hops from root across the active route",
+   "technique": "chevron outline trace + nodes staggered + 2 story props"
+  },
+  {
+   "id": "readme",
+   "name": "ReadMe",
+   "category": "Frontend",
+   "subcategory": "Docs & Static Sites",
+   "role": "Interactive Developer Hubs & API Documentation Platform",
+   "docsUrl": "https://readme.com/",
+   "aliases": [
+    "readme",
+    "readme-io"
+   ],
+   "monogram": "REA",
+   "brandColor": "#018EF5",
+   "svg": "icons/animated/readme.svg",
+   "sourceSvg": "icons/source/readme.svg",
+   "concept": "ReadMe open-book owl hub flips open smoothly like interactive API docs while live request packets glide across its pages",
+   "technique": "part + 2 story props"
   },
   {
    "id": "reason",
@@ -7506,6 +7801,24 @@
    "sourceSvg": "icons/source/redux.svg",
    "concept": "Redux three interlocking state loops trace into place and rotate in predictable unison as a dispatched action packet cycles the store",
    "technique": "parts outline trace staggered + parts + 1 story props"
+  },
+  {
+   "id": "redwoodjs",
+   "name": "RedwoodJS",
+   "category": "Frontend",
+   "subcategory": "Frameworks & Meta-Frameworks",
+   "role": "Full-Stack React, GraphQL & Prisma Web Application Framework",
+   "docsUrl": "https://redwoodjs.com/",
+   "aliases": [
+    "redwoodjs",
+    "redwood"
+   ],
+   "monogram": "RED",
+   "brandColor": "#BF4722",
+   "svg": "icons/animated/redwoodjs.svg",
+   "sourceSvg": "icons/source/redwoodjs.svg",
+   "concept": "RedwoodJS nine pine-cone scales stack upward from trunk to crown like full-stack React, GraphQL, and Prisma layers growing in harmony",
+   "technique": "parts staggered + 1 story props"
   },
   {
    "id": "relay",
@@ -7670,6 +7983,24 @@
    "sourceSvg": "icons/source/rocket.svg",
    "concept": "Rocket Rust web framework ignites its thruster with a crisp vertical liftoff tremor and leaves a bright exhaust flash beneath its crimson emblem",
    "technique": "part + 3 story props"
+  },
+  {
+   "id": "rolldown",
+   "name": "Rolldown",
+   "category": "Frontend",
+   "subcategory": "Build & Bundlers",
+   "role": "Fast Rust-Based Rollup-Compatible JavaScript Bundler Powering Vite",
+   "docsUrl": "https://rolldown.rs/",
+   "aliases": [
+    "rolldown",
+    "rolldown-rs"
+   ],
+   "monogram": "ROL",
+   "brandColor": "#FF4100",
+   "svg": "icons/animated/rolldown.svg",
+   "sourceSvg": "icons/source/rolldown.svg",
+   "concept": "Rolldown Rust-powered bundler rolls forward with kinetic momentum, compressing module chunks with a fiery orange shockwave and build spark",
+   "technique": "all + 2 story props"
   },
   {
    "id": "rollupdotjs",
@@ -7909,6 +8240,24 @@
    "sourceSvg": "icons/source/scala.svg",
    "concept": "Scala three crimson spiral ribbons climb upward like a functional staircase, each tier sliding into alignment over its dark backbone",
    "technique": "back + bottom + mid + top + 1 story props"
+  },
+  {
+   "id": "scalar",
+   "name": "Scalar",
+   "category": "Backend",
+   "subcategory": "APIs & Documentation",
+   "role": "Open-Source OpenAPI Documentation & Interactive API Reference Client",
+   "docsUrl": "https://scalar.com/",
+   "aliases": [
+    "scalar",
+    "scalar-api"
+   ],
+   "monogram": "SCA",
+   "brandColor": "#1A1A1A",
+   "svg": "icons/animated/scalar.svg",
+   "sourceSvg": "icons/source/scalar.svg",
+   "concept": "Scalar twin OpenAPI crescent arcs trace and converge around the center while an interactive API radar sweeps and confirms live endpoints",
+   "technique": "leftArc outline trace + rightArc outline trace + 2 story props"
   },
   {
    "id": "scaleway",
@@ -9363,6 +9712,24 @@
    "technique": "topFace + leftFace + rightFace + 1 story props"
   },
   {
+   "id": "unjs",
+   "name": "UnJS",
+   "category": "Backend",
+   "subcategory": "Runtimes & Servers",
+   "role": "Universal JavaScript Ecosystem & Runtime-Agnostic Server Utilities",
+   "docsUrl": "https://unjs.io/",
+   "aliases": [
+    "unjs",
+    "unjs-io"
+   ],
+   "monogram": "UNJ",
+   "brandColor": "#ECDC5A",
+   "svg": "icons/animated/unjs.svg",
+   "sourceSvg": "icons/source/unjs.svg",
+   "concept": "UnJS universal JavaScript badge traces its runtime-agnostic frame and radiates a golden ecosystem pulse with twin utility sparks",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "unocss",
    "name": "UnoCSS",
    "category": "Frontend",
@@ -10245,6 +10612,24 @@
    "sourceSvg": "icons/source/zigbee.svg",
    "concept": "Zigbee interlocking mesh halves snap into a self-healing 802.15.4 ring while a low-power hop packet zips across the Z bridge",
    "technique": "top outline trace + bot outline trace + 2 story props"
+  },
+  {
+   "id": "zod",
+   "name": "Zod",
+   "category": "Frontend",
+   "subcategory": "Data & State",
+   "role": "TypeScript-First Schema Declaration & Static Validation Library",
+   "docsUrl": "https://zod.dev/",
+   "aliases": [
+    "zod",
+    "zod-schema"
+   ],
+   "monogram": "ZOD",
+   "brandColor": "#408AFF",
+   "svg": "icons/animated/zod.svg",
+   "sourceSvg": "icons/source/zod.svg",
+   "concept": "Zod faceted diamond schema traces its type-safe outline, gleams with a diagonal prism sheen, and flashes a green runtime validation check",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "zsh",
