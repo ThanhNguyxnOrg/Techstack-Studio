@@ -1,7 +1,7 @@
 {
  "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
- "count": 603,
- "generatedAt": "2026-11-21T10:26:46.440Z",
+ "count": 623,
+ "generatedAt": "2026-11-21T10:41:54.232Z",
  "icons": {
   "actix": {
    "concept": "Actix Web Rust actor emblem locks with crisp mechanical torque and fires concurrent worker sparks across its sharp geometry",
@@ -56,6 +56,11 @@
   "algolia": {
    "concept": "Algolia’s search stopwatch ticks sharply forward and locks onto a millisecond discovery result with a crisp radar sweep",
    "technique": "all + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "alibabacloud": {
+   "concept": "Alibaba Cloud twin orange brackets converge around the central link bar as global compute packets stream cleanly across the bridge",
+   "technique": "left + right + bridge + 1 story props",
    "status": "visual_qa_passed"
   },
   "alpinedotjs": {
@@ -288,6 +293,11 @@
    "technique": "frame outline trace + prism + 1 story props",
    "status": "visual_qa_passed"
   },
+  "backblaze": {
+   "concept": "Backblaze three crimson flame tongues rise in staggered cadence like hot B2 cloud storage firing up with glowing sparks",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "backbonedotjs": {
    "concept": "Backbone.js interlocking structural columns and cross-braces snap into place, wiring models and views with classic stability",
    "technique": "top staggered + sides staggered + joints staggered + 1 story props",
@@ -398,6 +408,11 @@
    "technique": "lowerPlate + upperPlate + 2 story props",
    "status": "visual_qa_passed"
   },
+  "caprover": {
+   "concept": "CapRover self-hosted Docker PaaS crest turns gently like a captain compass while its inner sails lock cleanly into course",
+   "technique": "outer + sails staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "cargo": {
    "concept": "Cargo Rust shipping crate lowers its golden lid onto the side panels as structural seams trace and lock tight",
    "technique": "leftFace + rightFace + lid + seams staggered + 1 story props",
@@ -411,6 +426,11 @@
   "centos": {
    "concept": "CentOS’s four-color enterprise compass arrows converge symmetrically toward the center core",
    "technique": "top + right + bottom + left + inners staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "ceph": {
+   "concept": "Ceph octopus tentacles expand around its central storage core as replicated object packets pulse evenly across the distributed cluster",
+   "technique": "outer + inner + eye + 1 story props",
    "status": "visual_qa_passed"
   },
   "chakraui": {
@@ -518,6 +538,11 @@
    "technique": "part + 3 story props",
    "status": "visual_qa_passed"
   },
+  "coder": {
+   "concept": "Coder cloud workspace left and right emblem halves lock cleanly together as a Terraform-provisioned environment check flashes",
+   "technique": "left + right + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "coffeescript": {
    "concept": "CoffeeScript warm espresso cup sets down gently while its rim settles and aromatic curls drift above",
    "technique": "cup + rim + lid + 2 story props",
@@ -570,6 +595,11 @@
   },
   "convex": {
    "concept": "Convex three reactive orbital ribbons converge and rotate cleanly into sync as real-time database mutation packets pulse across the core",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "coolify": {
+   "concept": "Coolify seven violet self-hosting bars cascade smoothly into a stacked C-badge as a fresh container deployment confirms",
    "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
@@ -661,6 +691,11 @@
   "dependabot": {
    "concept": "Dependabot robot scans dependency manifests with a synchronized double-eye blink and pops a green security-patch check",
    "technique": "body + eyes + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "devbox": {
+   "concept": "Devbox Nix-powered workspace brackets clamp around the isolated shell core while a crisp reproducible environment check confirms",
+   "technique": "core + left + right + 1 story props",
    "status": "visual_qa_passed"
   },
   "dgraph": {
@@ -833,6 +868,11 @@
    "technique": "frame + e + x + 2 story props",
    "status": "visual_qa_passed"
   },
+  "falco": {
+   "concept": "Falco six teal falcon wing feathers fan swiftly into formation as an eBPF runtime threat-detection radar sweeps cleanly across",
+   "technique": "parts staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "fastapi": {
    "concept": "FastAPI teal badge discharges an async lightning surge as non-blocking coroutine packets race out and an OpenAPI schema check flashes green",
    "technique": "part outline trace + 3 story props",
@@ -983,6 +1023,11 @@
    "technique": "base + leftCheek + rightCheek + chin + 2 story props",
    "status": "visual_qa_passed"
   },
+  "gitpod": {
+   "concept": "Gitpod golden hexagonal workspace traces its ephemeral cloud contour and gleams with a crisp ready-to-code sheen",
+   "technique": "part outline trace + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "gleam": {
    "concept": "Gleam friendly pink star wiggles happily, blinks both eyes in sync, and radiates cheerful type-safe BEAM sparkles",
    "technique": "star + eyes + smile + 2 story props",
@@ -1131,6 +1176,11 @@
   "hibernate": {
    "concept": "Hibernate’s four folded gold-and-slate JPA ribbon facets unfold briefly and snap back into a unified object-relational mapping diamond",
    "technique": "topGold + botGold + leftSlate + rightSlate + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "hivemq": {
+   "concept": "HiveMQ golden honeycomb MQTT broker pulses twice as IoT telemetry rings expand outward and its twin bee antennae pop alertly",
+   "technique": "outer + eyes staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "homeassistant": {
@@ -1403,6 +1453,11 @@
    "technique": "input + core + output + 2 story props",
    "status": "visual_qa_passed"
   },
+  "longhorn": {
+   "concept": "Longhorn cloud-native block storage horns tilt with steady resilience while its center core locks in and a replication ring expands",
+   "technique": "horns + core + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "loopback": {
    "concept": "LoopBack five interlocking API ribbon segments weave into continuous alignment as an extensible REST/OpenAPI packet orbits the loop",
    "technique": "ribbons staggered + 1 story props",
@@ -1506,6 +1561,11 @@
   "milvus": {
    "concept": "Milvus’s sleek vector-search bird banks smoothly in flight while its core embedding ring locks onto nearest neighbors and fires a vector tip",
    "technique": "wing + core + tip + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "minio": {
+   "concept": "MinIO sleek crimson bird-wing mark glides upward with high-throughput S3 object-storage momentum and sweeps a crisp highlight",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "mintlify": {
@@ -1636,6 +1696,11 @@
   "nginx": {
    "concept": "Nginx green hexagon anchors steady as its N routing path draws through and reverse-proxy traffic splits from one ingress into two upstream backends",
    "technique": "hex + n outline trace + 3 story props",
+   "status": "visual_qa_passed"
+  },
+  "ngrok": {
+   "concept": "ngrok five wordmark letters cascade left-to-right as a secure localhost ingress tunnel packet shoots straight across the bridge",
+   "technique": "parts staggered + 2 story props",
    "status": "visual_qa_passed"
   },
   "nim": {
@@ -1826,6 +1891,11 @@
   "pandas": {
    "concept": "Pandas DataFrame columns cascade vertically into aligned tabular series while index cells highlight with a fast vectorized sort",
    "technique": "rails staggered + cells staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
+  "pangolin": {
+   "concept": "Pangolin armored proxy mascot curls into a protective zero-trust stance while a tunnel radar ring sweeps cleanly around it",
+   "technique": "part outline trace + 1 story props",
    "status": "visual_qa_passed"
   },
   "passport": {
@@ -2248,6 +2318,11 @@
    "technique": "upper + lower + 1 story props",
    "status": "visual_qa_passed"
   },
+  "rook": {
+   "concept": "Rook storage orchestrator chess crown lowers onto its fortified base as the inner Kubernetes volume core snaps into lock",
+   "technique": "base + crown + core + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "ros": {
    "concept": "ROS 3x3 node matrix awakens radially from its central master node as pub-sub sensor messages route across the robotic computation graph",
    "technique": "center + ring staggered + 3 story props",
@@ -2333,6 +2408,11 @@
    "technique": "ribbon + highlight + 2 story props",
    "status": "visual_qa_passed"
   },
+  "scylladb": {
+   "concept": "ScyllaDB sea-monster emblem surges with shard-per-core C++ velocity while its glowing eye locks on and a low-latency cyan pulse radiates outward",
+   "technique": "body + eye + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "seeedstudio": {
    "concept": "Seeed Studio XIAO and Grove ecosystem sprouts across the mark with a fresh green edge-AI pulse and I2C sensor packet",
    "technique": "left + right + 2 story props",
@@ -2371,6 +2451,11 @@
   "sidekiq": {
    "concept": "Sidekiq martial-arts silhouette delivers a snappy high-speed strike as background worker jobs drain rapidly with a crimson spark",
    "technique": "body + kick + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "skaffold": {
+   "concept": "Skaffold four blue continuous-dev scaffolding tiers slide into alignment in alternating directions as a Kubernetes rebuild completes",
+   "technique": "parts staggered + parts staggered + 1 story props",
    "status": "visual_qa_passed"
   },
   "sketch": {
@@ -2588,6 +2673,11 @@
    "technique": "upper + lower + 2 story props",
    "status": "visual_qa_passed"
   },
+  "talos": {
+   "concept": "Talos five symmetric immutable-OS ribs rise outward from the central spine into a hardened API-driven Kubernetes shield",
+   "technique": "parts staggered + 1 story props",
+   "status": "visual_qa_passed"
+  },
   "tanstack": {
    "concept": "TanStack Query palm-island emblem sways gently as background cache revalidation packets sync fresh server state",
    "technique": "part + 2 story props",
@@ -2803,6 +2893,11 @@
    "technique": "all + 3 story props",
    "status": "visual_qa_passed"
   },
+  "victoriametrics": {
+   "concept": "VictoriaMetrics three stacked time-series V-chevrons drop into tight telemetry alignment while live metric bars pulse beside them",
+   "technique": "parts staggered + 2 story props",
+   "status": "visual_qa_passed"
+  },
   "vim": {
    "concept": "Vim faceted green diamond snaps cleanly into command mode with a crisp block cursor blink and modal status pulse",
    "technique": "all + 2 story props",
@@ -2866,6 +2961,11 @@
   "warp": {
    "concept": "Warp twin velocity wings shear past each other in a Rust-powered terminal warp jump with an electric cyan trail",
    "technique": "rightWing + leftWing + 2 story props",
+   "status": "visual_qa_passed"
+  },
+  "wasabi": {
+   "concept": "Wasabi emerald hot-cloud emblem blooms cleanly from its center with a crisp zero-egress pulse ring and diagonal sheen",
+   "technique": "part outline trace + 2 story props",
    "status": "visual_qa_passed"
   },
   "webassembly": {

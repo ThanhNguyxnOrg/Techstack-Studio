@@ -1,6 +1,6 @@
 {
  "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
- "count": 603,
+ "count": 623,
  "note": "Icon paths are relative to the site root (append to site, or to the repository path when reading from disk).",
  "icons": [
   {
@@ -204,6 +204,25 @@
    "sourceSvg": "icons/source/algolia.svg",
    "concept": "Algolia’s search stopwatch ticks sharply forward and locks onto a millisecond discovery result with a crisp radar sweep",
    "technique": "all + 2 story props"
+  },
+  {
+   "id": "alibabacloud",
+   "name": "Alibaba Cloud",
+   "category": "Cloud and DevOps",
+   "subcategory": "Cloud Providers",
+   "role": "Global Enterprise Cloud Computing, Elastic Compute & AI Platform",
+   "docsUrl": "https://www.alibabacloud.com/",
+   "aliases": [
+    "alibabacloud",
+    "alibaba cloud",
+    "aliyun"
+   ],
+   "monogram": "ALI",
+   "brandColor": "#FF6A00",
+   "svg": "icons/animated/alibabacloud.svg",
+   "sourceSvg": "icons/source/alibabacloud.svg",
+   "concept": "Alibaba Cloud twin orange brackets converge around the central link bar as global compute packets stream cleanly across the bridge",
+   "technique": "left + right + bridge + 1 story props"
   },
   {
    "id": "alpinedotjs",
@@ -1082,6 +1101,24 @@
    "technique": "frame outline trace + prism + 1 story props"
   },
   {
+   "id": "backblaze",
+   "name": "Backblaze",
+   "category": "Cloud and DevOps",
+   "subcategory": "Cloud Providers",
+   "role": "S3-Compatible B2 Cloud Object Storage & Backup Infrastructure",
+   "docsUrl": "https://www.backblaze.com/",
+   "aliases": [
+    "backblaze",
+    "backblaze-b2"
+   ],
+   "monogram": "BAC",
+   "brandColor": "#E21E29",
+   "svg": "icons/animated/backblaze.svg",
+   "sourceSvg": "icons/source/backblaze.svg",
+   "concept": "Backblaze three crimson flame tongues rise in staggered cadence like hot B2 cloud storage firing up with glowing sparks",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
    "id": "backbonedotjs",
    "name": "Backbone.js",
    "category": "Frontend",
@@ -1485,6 +1522,24 @@
    "technique": "lowerPlate + upperPlate + 2 story props"
   },
   {
+   "id": "caprover",
+   "name": "CapRover",
+   "category": "Cloud and DevOps",
+   "subcategory": "Self-Hosting & PaaS",
+   "role": "Automated Docker-Based Self-Hosted PaaS & App Deployment Server",
+   "docsUrl": "https://caprover.com/",
+   "aliases": [
+    "caprover",
+    "caprover-paas"
+   ],
+   "monogram": "CAP",
+   "brandColor": "#ED5B26",
+   "svg": "icons/animated/caprover.svg",
+   "sourceSvg": "icons/source/caprover.svg",
+   "concept": "CapRover self-hosted Docker PaaS crest turns gently like a captain compass while its inner sails lock cleanly into course",
+   "technique": "outer + sails staggered + 1 story props"
+  },
+  {
    "id": "cargo",
    "name": "Cargo",
    "category": "Developer tools",
@@ -1537,6 +1592,24 @@
    "sourceSvg": "icons/source/centos.svg",
    "concept": "CentOS’s four-color enterprise compass arrows converge symmetrically toward the center core",
    "technique": "top + right + bottom + left + inners staggered + 1 story props"
+  },
+  {
+   "id": "ceph",
+   "name": "Ceph",
+   "category": "Databases",
+   "subcategory": "Object & Block Storage",
+   "role": "Unified Distributed Object, Block & File Storage Cluster",
+   "docsUrl": "https://ceph.io/",
+   "aliases": [
+    "ceph",
+    "ceph-storage"
+   ],
+   "monogram": "CEP",
+   "brandColor": "#EF5C55",
+   "svg": "icons/animated/ceph.svg",
+   "sourceSvg": "icons/source/ceph.svg",
+   "concept": "Ceph octopus tentacles expand around its central storage core as replicated object packets pulse evenly across the distributed cluster",
+   "technique": "outer + inner + eye + 1 story props"
   },
   {
    "id": "chakraui",
@@ -1926,6 +1999,24 @@
    "technique": "part + 3 story props"
   },
   {
+   "id": "coder",
+   "name": "Coder",
+   "category": "Cloud and DevOps",
+   "subcategory": "Dev Environments",
+   "role": "Self-Hosted Cloud Development Environments Provisioned via Terraform",
+   "docsUrl": "https://coder.com/",
+   "aliases": [
+    "coder",
+    "coder-com"
+   ],
+   "monogram": "COD",
+   "brandColor": "#090B0B",
+   "svg": "icons/animated/coder.svg",
+   "sourceSvg": "icons/source/coder.svg",
+   "concept": "Coder cloud workspace left and right emblem halves lock cleanly together as a Terraform-provisioned environment check flashes",
+   "technique": "left + right + 2 story props"
+  },
+  {
    "id": "coffeescript",
    "name": "CoffeeScript",
    "category": "Programming languages",
@@ -2125,6 +2216,24 @@
    "svg": "icons/animated/convex.svg",
    "sourceSvg": "icons/source/convex.svg",
    "concept": "Convex three reactive orbital ribbons converge and rotate cleanly into sync as real-time database mutation packets pulse across the core",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
+   "id": "coolify",
+   "name": "Coolify",
+   "category": "Cloud and DevOps",
+   "subcategory": "Self-Hosting & PaaS",
+   "role": "Open-Source Self-Hostable Heroku, Netlify & Vercel Alternative",
+   "docsUrl": "https://coolify.io/",
+   "aliases": [
+    "coolify",
+    "coolify-io"
+   ],
+   "monogram": "COO",
+   "brandColor": "#6B16ED",
+   "svg": "icons/animated/coolify.svg",
+   "sourceSvg": "icons/source/coolify.svg",
+   "concept": "Coolify seven violet self-hosting bars cascade smoothly into a stacked C-badge as a fresh container deployment confirms",
    "technique": "parts staggered + 2 story props"
   },
   {
@@ -2455,6 +2564,24 @@
    "sourceSvg": "icons/source/dependabot.svg",
    "concept": "Dependabot robot scans dependency manifests with a synchronized double-eye blink and pops a green security-patch check",
    "technique": "body + eyes + 2 story props"
+  },
+  {
+   "id": "devbox",
+   "name": "Devbox",
+   "category": "Cloud and DevOps",
+   "subcategory": "Dev Environments",
+   "role": "Instant Isolated Reproducible Development Shells Powered by Nix",
+   "docsUrl": "https://www.jetify.com/devbox",
+   "aliases": [
+    "devbox",
+    "jetify-devbox"
+   ],
+   "monogram": "DEV",
+   "brandColor": "#280459",
+   "svg": "icons/animated/devbox.svg",
+   "sourceSvg": "icons/source/devbox.svg",
+   "concept": "Devbox Nix-powered workspace brackets clamp around the isolated shell core while a crisp reproducible environment check confirms",
+   "technique": "core + left + right + 1 story props"
   },
   {
    "id": "dgraph",
@@ -3079,6 +3206,24 @@
    "technique": "frame + e + x + 2 story props"
   },
   {
+   "id": "falco",
+   "name": "Falco",
+   "category": "Cloud and DevOps",
+   "subcategory": "Networking & Security",
+   "role": "CNCF Cloud-Native Runtime Threat Detection & eBPF Security Engine",
+   "docsUrl": "https://falco.org/",
+   "aliases": [
+    "falco",
+    "falco-security"
+   ],
+   "monogram": "FAL",
+   "brandColor": "#00AEC7",
+   "svg": "icons/animated/falco.svg",
+   "sourceSvg": "icons/source/falco.svg",
+   "concept": "Falco six teal falcon wing feathers fan swiftly into formation as an eBPF runtime threat-detection radar sweeps cleanly across",
+   "technique": "parts staggered + 1 story props"
+  },
+  {
    "id": "fastapi",
    "name": "FastAPI",
    "category": "Backend",
@@ -3626,6 +3771,24 @@
    "sourceSvg": "icons/source/gitlab.svg",
    "concept": "GitLab Tanuki fox facets interlock from left, right, and chin as a DevSecOps pipeline pulse sweeps across the badge",
    "technique": "base + leftCheek + rightCheek + chin + 2 story props"
+  },
+  {
+   "id": "gitpod",
+   "name": "Gitpod",
+   "category": "Cloud and DevOps",
+   "subcategory": "Dev Environments",
+   "role": "Cloud Development Environments & Ephemeral Automated Workspaces",
+   "docsUrl": "https://www.gitpod.io/",
+   "aliases": [
+    "gitpod",
+    "gitpod-io"
+   ],
+   "monogram": "GIT",
+   "brandColor": "#FFAE33",
+   "svg": "icons/animated/gitpod.svg",
+   "sourceSvg": "icons/source/gitpod.svg",
+   "concept": "Gitpod golden hexagonal workspace traces its ephemeral cloud contour and gleams with a crisp ready-to-code sheen",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "gleam",
@@ -4179,6 +4342,24 @@
    "sourceSvg": "icons/source/hibernate.svg",
    "concept": "Hibernate’s four folded gold-and-slate JPA ribbon facets unfold briefly and snap back into a unified object-relational mapping diamond",
    "technique": "topGold + botGold + leftSlate + rightSlate + 1 story props"
+  },
+  {
+   "id": "hivemq",
+   "name": "HiveMQ",
+   "category": "Databases",
+   "subcategory": "Messaging & Telemetry",
+   "role": "Enterprise MQTT Broker & IoT Data Streaming Platform",
+   "docsUrl": "https://www.hivemq.com/",
+   "aliases": [
+    "hivemq",
+    "hivemq-mqtt"
+   ],
+   "monogram": "HIV",
+   "brandColor": "#FFC000",
+   "svg": "icons/animated/hivemq.svg",
+   "sourceSvg": "icons/source/hivemq.svg",
+   "concept": "HiveMQ golden honeycomb MQTT broker pulses twice as IoT telemetry rings expand outward and its twin bee antennae pop alertly",
+   "technique": "outer + eyes staggered + 2 story props"
   },
   {
    "id": "homeassistant",
@@ -5177,6 +5358,24 @@
    "technique": "input + core + output + 2 story props"
   },
   {
+   "id": "longhorn",
+   "name": "Longhorn",
+   "category": "Databases",
+   "subcategory": "Object & Block Storage",
+   "role": "Cloud-Native Distributed Block Storage for Kubernetes",
+   "docsUrl": "https://longhorn.io/",
+   "aliases": [
+    "longhorn",
+    "longhorn-k8s"
+   ],
+   "monogram": "LON",
+   "brandColor": "#5F224B",
+   "svg": "icons/animated/longhorn.svg",
+   "sourceSvg": "icons/source/longhorn.svg",
+   "concept": "Longhorn cloud-native block storage horns tilt with steady resilience while its center core locks in and a replication ring expands",
+   "technique": "horns + core + 1 story props"
+  },
+  {
    "id": "loopback",
    "name": "LoopBack",
    "category": "Backend",
@@ -5559,6 +5758,24 @@
    "sourceSvg": "icons/source/milvus.svg",
    "concept": "Milvus’s sleek vector-search bird banks smoothly in flight while its core embedding ring locks onto nearest neighbors and fires a vector tip",
    "technique": "wing + core + tip + 1 story props"
+  },
+  {
+   "id": "minio",
+   "name": "MinIO",
+   "category": "Databases",
+   "subcategory": "Object & Block Storage",
+   "role": "High-Performance Kubernetes-Native S3-Compatible Object Storage",
+   "docsUrl": "https://min.io/",
+   "aliases": [
+    "minio",
+    "minio-s3"
+   ],
+   "monogram": "MIN",
+   "brandColor": "#C72E49",
+   "svg": "icons/animated/minio.svg",
+   "sourceSvg": "icons/source/minio.svg",
+   "concept": "MinIO sleek crimson bird-wing mark glides upward with high-throughput S3 object-storage momentum and sweeps a crisp highlight",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "mintlify",
@@ -6042,6 +6259,24 @@
    "sourceSvg": "icons/source/nginx.svg",
    "concept": "Nginx green hexagon anchors steady as its N routing path draws through and reverse-proxy traffic splits from one ingress into two upstream backends",
    "technique": "hex + n outline trace + 3 story props"
+  },
+  {
+   "id": "ngrok",
+   "name": "ngrok",
+   "category": "Cloud and DevOps",
+   "subcategory": "Networking & Security",
+   "role": "Unified Ingress Platform & Instant Secure Localhost Tunneling",
+   "docsUrl": "https://ngrok.com/",
+   "aliases": [
+    "ngrok",
+    "ngrok-tunnel"
+   ],
+   "monogram": "NGR",
+   "brandColor": "#1F1E37",
+   "svg": "icons/animated/ngrok.svg",
+   "sourceSvg": "icons/source/ngrok.svg",
+   "concept": "ngrok five wordmark letters cascade left-to-right as a secure localhost ingress tunnel packet shoots straight across the bridge",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "nim",
@@ -6748,6 +6983,24 @@
    "sourceSvg": "icons/source/pandas.svg",
    "concept": "Pandas DataFrame columns cascade vertically into aligned tabular series while index cells highlight with a fast vectorized sort",
    "technique": "rails staggered + cells staggered + 1 story props"
+  },
+  {
+   "id": "pangolin",
+   "name": "Pangolin",
+   "category": "Cloud and DevOps",
+   "subcategory": "Networking & Security",
+   "role": "Self-Hosted Tunneled Reverse Proxy & Zero-Trust Access Gateway",
+   "docsUrl": "https://digpangolin.com/",
+   "aliases": [
+    "pangolin",
+    "digpangolin"
+   ],
+   "monogram": "PAN",
+   "brandColor": "#F36118",
+   "svg": "icons/animated/pangolin.svg",
+   "sourceSvg": "icons/source/pangolin.svg",
+   "concept": "Pangolin armored proxy mascot curls into a protective zero-trust stance while a tunnel radar ring sweeps cleanly around it",
+   "technique": "part outline trace + 1 story props"
   },
   {
    "id": "passport",
@@ -8297,6 +8550,24 @@
    "technique": "upper + lower + 1 story props"
   },
   {
+   "id": "rook",
+   "name": "Rook",
+   "category": "Databases",
+   "subcategory": "Object & Block Storage",
+   "role": "Open-Source Cloud-Native Storage Orchestrator for Kubernetes",
+   "docsUrl": "https://rook.io/",
+   "aliases": [
+    "rook",
+    "rook-ceph"
+   ],
+   "monogram": "ROO",
+   "brandColor": "#2AC6EA",
+   "svg": "icons/animated/rook.svg",
+   "sourceSvg": "icons/source/rook.svg",
+   "concept": "Rook storage orchestrator chess crown lowers onto its fortified base as the inner Kubernetes volume core snaps into lock",
+   "technique": "base + crown + core + 1 story props"
+  },
+  {
    "id": "ros",
    "name": "ROS",
    "category": "Embedded development",
@@ -8609,6 +8880,24 @@
    "technique": "ribbon + highlight + 2 story props"
   },
   {
+   "id": "scylladb",
+   "name": "ScyllaDB",
+   "category": "Databases",
+   "subcategory": "NoSQL & Distributed",
+   "role": "Monstrously Fast Low-Latency C++ Wide-Column NoSQL Database",
+   "docsUrl": "https://www.scylladb.com/",
+   "aliases": [
+    "scylladb",
+    "scylla"
+   ],
+   "monogram": "SCY",
+   "brandColor": "#6CD5E7",
+   "svg": "icons/animated/scylladb.svg",
+   "sourceSvg": "icons/source/scylladb.svg",
+   "concept": "ScyllaDB sea-monster emblem surges with shard-per-core C++ velocity while its glowing eye locks on and a low-latency cyan pulse radiates outward",
+   "technique": "body + eye + 2 story props"
+  },
+  {
    "id": "seeedstudio",
    "name": "Seeed",
    "category": "Embedded development",
@@ -8754,6 +9043,24 @@
    "sourceSvg": "icons/source/sidekiq.svg",
    "concept": "Sidekiq martial-arts silhouette delivers a snappy high-speed strike as background worker jobs drain rapidly with a crimson spark",
    "technique": "body + kick + 2 story props"
+  },
+  {
+   "id": "skaffold",
+   "name": "Skaffold",
+   "category": "Cloud and DevOps",
+   "subcategory": "CI/CD & GitOps",
+   "role": "Continuous Local & Cloud Kubernetes Development Workflow CLI",
+   "docsUrl": "https://skaffold.dev/",
+   "aliases": [
+    "skaffold",
+    "skaffold-dev"
+   ],
+   "monogram": "SKA",
+   "brandColor": "#2AA2D6",
+   "svg": "icons/animated/skaffold.svg",
+   "sourceSvg": "icons/source/skaffold.svg",
+   "concept": "Skaffold four blue continuous-dev scaffolding tiers slide into alignment in alternating directions as a Kubernetes rebuild completes",
+   "technique": "parts staggered + parts staggered + 1 story props"
   },
   {
    "id": "sketch",
@@ -9541,6 +9848,24 @@
    "sourceSvg": "icons/source/tailwindcss.svg",
    "concept": "Tailwind CSS twin cyan wind ribbons undulate in smooth counter-phase while subtle breeze streams sweep across the canvas",
    "technique": "upper + lower + 2 story props"
+  },
+  {
+   "id": "talos",
+   "name": "Talos",
+   "category": "Cloud and DevOps",
+   "subcategory": "Containers & Runtime",
+   "role": "Immutable API-Driven Minimal Linux OS Purpose-Built for Kubernetes",
+   "docsUrl": "https://www.talos.dev/",
+   "aliases": [
+    "talos",
+    "talos-linux"
+   ],
+   "monogram": "TAL",
+   "brandColor": "#FF7300",
+   "svg": "icons/animated/talos.svg",
+   "sourceSvg": "icons/source/talos.svg",
+   "concept": "Talos five symmetric immutable-OS ribs rise outward from the central spine into a hardened API-driven Kubernetes shield",
+   "technique": "parts staggered + 1 story props"
   },
   {
    "id": "tanstack",
@@ -10334,6 +10659,24 @@
    "technique": "all + 3 story props"
   },
   {
+   "id": "victoriametrics",
+   "name": "VictoriaMetrics",
+   "category": "Databases",
+   "subcategory": "Time-Series & Analytics",
+   "role": "Fast Cost-Effective Open-Source Time-Series Database & Monitoring",
+   "docsUrl": "https://victoriametrics.com/",
+   "aliases": [
+    "victoriametrics",
+    "vmmetrics"
+   ],
+   "monogram": "VIC",
+   "brandColor": "#621773",
+   "svg": "icons/animated/victoriametrics.svg",
+   "sourceSvg": "icons/source/victoriametrics.svg",
+   "concept": "VictoriaMetrics three stacked time-series V-chevrons drop into tight telemetry alignment while live metric bars pulse beside them",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
    "id": "vim",
    "name": "Vim",
    "category": "Developer tools",
@@ -10571,6 +10914,24 @@
    "sourceSvg": "icons/source/warp.svg",
    "concept": "Warp twin velocity wings shear past each other in a Rust-powered terminal warp jump with an electric cyan trail",
    "technique": "rightWing + leftWing + 2 story props"
+  },
+  {
+   "id": "wasabi",
+   "name": "Wasabi",
+   "category": "Cloud and DevOps",
+   "subcategory": "Cloud Providers",
+   "role": "Hot Cloud Object Storage with Predictable Zero-Egress Pricing",
+   "docsUrl": "https://wasabi.com/",
+   "aliases": [
+    "wasabi",
+    "wasabi-s3"
+   ],
+   "monogram": "WAS",
+   "brandColor": "#01CD3E",
+   "svg": "icons/animated/wasabi.svg",
+   "sourceSvg": "icons/source/wasabi.svg",
+   "concept": "Wasabi emerald hot-cloud emblem blooms cleanly from its center with a crisp zero-egress pulse ring and diagonal sheen",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "webassembly",
