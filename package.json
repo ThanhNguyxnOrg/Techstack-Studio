@@ -49,7 +49,7 @@
     "stack": "tsx scripts/buildStackBanner.ts"
   },
   "dependencies": {
-    "lucide-react": "^1.72.0",
+    "lucide-react": "^1.75.0",
     "react": "^19.0.1",
     "react-dom": "^19.0.1"
   },
@@ -60,7 +60,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.3.0",
     "prettier": "^3.10.1",
-    "simple-icons": "^16.37.0",
+    "simple-icons": "^16.38.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2",
