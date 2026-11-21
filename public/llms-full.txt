@@ -59,15 +59,15 @@ npx techstack-studio mcp
 
 ---
 
-## Catalog overview (623 icons across 8 categories)
+## Catalog overview (665 icons across 8 categories)
 - AI and machine learning: 59 icons
 - Backend: 96 icons
 - Cloud and DevOps: 100 icons
 - Databases: 56 icons
-- Developer tools: 98 icons
+- Developer tools: 121 icons
 - Embedded development: 44 icons
-- Frontend: 109 icons
-- Programming languages: 61 icons
+- Frontend: 120 icons
+- Programming languages: 69 icons
 
 ## MCP Server Configuration
 Add to Claude Desktop, Cursor, Antigravity, Windsurf, or VS Code MCP settings:

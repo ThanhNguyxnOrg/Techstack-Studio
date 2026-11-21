@@ -1898,4 +1898,123 @@ export default {
       pulseRing(12, 12, 10.6, '#F87171', 34, 66, { sw: 0.5 }),
     ],
   },
+
+  odin: {
+    story:
+      'Odin sleek circular emblem rotates into compiled alignment while its inner core pulses with data-oriented clarity',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: torque(10, 14, 14) },
+      { on: 1, origin: [12, 12], keys: heartbeat(24, 1.07) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.4, '#60A5FA', 26, 62, { layer: 'under', sw: 0.55 }),
+      spark(18.5, 5.5, 1.4, -1.4, '#93C5FD', 34, 58),
+    ],
+  },
+
+  vulkan: {
+    story:
+      'Vulkan multi-facet GPU wordmark and arc ignite in crisp shader-pipeline stagger, crowned by a crimson compute sheen',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        stagger: 2,
+        keys: popIn(10, 0.74),
+      },
+    ],
+    props: [
+      sheen('<rect x="1" y="4" width="22" height="16" rx="2"/>', 36, 62, 0.3),
+      boltFlash(19.2, 6.0, '#F87171', 42, 66),
+    ],
+  },
+
+  solana: {
+    story:
+      'Solana three slanted ledger bars slide in from alternating sides in parallel consensus as a proof-of-history packet streaks across',
+    tracks: [
+      { on: 0, keys: slideIn(10, -2.6, 0) },
+      { on: 1, keys: slideIn(16, 2.6, 0) },
+      { on: 2, keys: slideIn(22, -2.6, 0) },
+    ],
+    props: [
+      packet(3.0, 12.0, 21.0, 12.0, '#9945FF', 28, 56, 0.9),
+      pulseRing(12, 12, 10.4, '#14F195', 34, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  ethereum: {
+    story:
+      'Ethereum upper and lower octahedral crystal halves levitate slightly then snap into smart-contract consensus with a violet pulse ring',
+    tracks: [
+      { on: 0, keys: dropIn(10, -2.0) },
+      { on: 1, keys: riseIn(16, 2.0) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#A78BFA', 28, 62, { layer: 'under', sw: 0.55 }),
+      spark(12.0, 3.0, 0, -1.5, '#C4B5FD', 34, 58),
+    ],
+  },
+
+  polygon: {
+    story:
+      'Polygon interlocking infinity hexagon traces its L2 zk-rollup perimeter and fires dual cross-chain bridge packets',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: breathe(18, 1.04),
+      },
+    ],
+    props: [
+      packet(4.5, 12.0, 19.5, 12.0, '#A855F7', 34, 58, 0.85),
+      pulseRing(12, 12, 10.4, '#C084FC', 36, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  optimism: {
+    story:
+      'Optimism bold red OP emblem pops into optimistic-rollup readiness while its letterforms settle with a verification check flash',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: popIn(10, 0.84) },
+      { on: 1, origin: [12, 12], keys: slideIn(18, -1.8, 0) },
+      { on: 2, origin: [12, 12], keys: slideIn(22, 1.8, 0) },
+    ],
+    props: [
+      checkFlash(18.0, 5.5, '#FCA5A5', 36, 62),
+      pulseRing(12, 12, 10.5, '#FF0420', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  wagmi: {
+    story:
+      'wagmi twin React-Web3 chevrons sync with wallet-connect packets and a crisp hook-ready spark',
+    tracks: [
+      { on: 0, keys: slideIn(10, -2.2, 0) },
+      { on: 1, keys: slideIn(18, 2.2, 0) },
+    ],
+    props: [
+      packet(4.5, 12.0, 19.5, 12.0, '#38BDF8', 28, 54, 0.85),
+      spark(18.6, 5.4, 1.4, -1.4, '#E2E8F0', 36, 60),
+    ],
+  },
+
+  ethers: {
+    story:
+      'Ethers.js geometric wing emblem draws its lightweight provider contour and sweeps a clean JSON-RPC sheen',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: sway(16, 4, 0.5),
+      },
+    ],
+    props: [
+      sheen('<rect x="2" y="2" width="20" height="20" rx="3"/>', 34, 62, 0.3),
+      pulseRing(12, 12, 10.2, '#60A5FA', 28, 62, { layer: 'under', sw: 0.5 }),
+    ],
+  },
 };

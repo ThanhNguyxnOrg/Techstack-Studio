@@ -12,6 +12,7 @@ import {
   boltFlash,
   sheen,
   guides,
+  telemetryBar,
   dropIn,
   riseIn,
   slideIn,
@@ -2463,6 +2464,309 @@ export default {
         52
       ),
       sheen('<rect x="1" y="5" width="22" height="14" rx="2"/>', 34, 62, 0.28),
+    ],
+  },
+
+  raycast: {
+    story:
+      'Raycast seven crimson launcher rays fan out in rapid command-palette stagger with an instant spotlight spark',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6],
+        stagger: 3,
+        keys: popIn(10, 0.68),
+      },
+    ],
+    props: [
+      spark(18.6, 5.4, 1.5, -1.5, '#FF6363', 34, 58),
+      pulseRing(12, 12, 10.4, '#FF6363', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  arc: {
+    story:
+      'Arc layered browser emblem rises with fluid tab-space breathing and sweeps an iridescent window sheen',
+    tracks: [{ on: 0, origin: [12, 12], keys: riseIn(10, 1.8) }],
+    props: [
+      sheen('<rect x="2" y="2" width="20" height="20" rx="4"/>', 30, 58, 0.32),
+      pulseRing(12, 12, 10.3, '#818CF8', 28, 62, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  zenbrowser: {
+    story: 'Zen Browser three concentric calm rings expand in meditative harmonic ripples',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: breathe(10, 1.07) },
+      { on: 1, origin: [12, 12], keys: breathe(18, 1.07) },
+      { on: 2, origin: [12, 12], keys: breathe(26, 1.07) },
+    ],
+    props: [pulseRing(12, 12, 10.6, '#F76F53', 30, 64, { layer: 'under', sw: 0.5 })],
+  },
+
+  ghostty: {
+    story:
+      'Ghostty GPU-accelerated terminal ghost floats gently upward with a crisp command-prompt bolt flash',
+    tracks: [{ on: 0, origin: [12, 12], keys: riseIn(10, 2.0) }],
+    props: [
+      boltFlash(18.5, 5.5, '#60A5FA', 32, 58),
+      pulseRing(12, 12, 10.2, '#93C5FD', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  hyper: {
+    story:
+      'Hyper prompt chevron and underscore cursor snap into terminal readiness with a sharp electric spark',
+    tracks: [
+      { on: 0, keys: slideIn(10, -2.2, 0) },
+      { on: 1, keys: popIn(20, 0.6) },
+    ],
+    props: [
+      spark(18.5, 6.0, 1.4, -1.4, '#E2E8F0', 34, 58),
+      sheen('<rect x="2" y="4" width="20" height="16" rx="2"/>', 36, 64, 0.28),
+    ],
+  },
+
+  nushell: {
+    story:
+      'Nushell structured-data shell glyphs assemble in pipeline order while a typed table packet flows through',
+    tracks: [
+      { on: 0, keys: slideIn(10, -2.0, 0) },
+      { on: 1, keys: popIn(17, 0.72) },
+      { on: 2, keys: slideIn(24, 2.0, 0) },
+    ],
+    props: [
+      packet(4.0, 12.0, 20.0, 12.0, '#4E9A06', 30, 58, 0.9),
+      pulseRing(12, 12, 10.4, '#86EFAC', 32, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  bat: {
+    story:
+      'bat wing-shaped cat-clone emblem opens smoothly as a syntax-highlighted sheen sweeps across its lines',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: sway(10, 6, 0.7) },
+      { on: 1, origin: [12, 12], keys: popIn(18, 0.72) },
+    ],
+    props: [
+      sheen('<rect x="2" y="4" width="20" height="16" rx="2"/>', 32, 60, 0.3),
+      spark(18.4, 5.6, 1.4, -1.4, '#A855F7', 36, 60),
+    ],
+  },
+
+  delta: {
+    story:
+      'Delta nine-part git-diff emblem cascades through added and removed hunk segments and confirms a clean merge check',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+        stagger: 2,
+        keys: popIn(10, 0.74),
+      },
+    ],
+    props: [
+      checkFlash(18.2, 5.4, '#4ADE80', 38, 64),
+      pulseRing(12, 12, 10.4, '#60A5FA', 32, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  graphite: {
+    story:
+      'Graphite stacked-PR hexagonal layers slide into review order and flash a crisp green stack-merge check',
+    tracks: [
+      { on: 0, keys: dropIn(10, -2.0) },
+      { on: 1, keys: riseIn(18, 2.0) },
+    ],
+    props: [
+      checkFlash(18.2, 5.4, '#4ADE80', 34, 62),
+      pulseRing(12, 12, 10.2, '#94A3B8', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  codecov: {
+    story:
+      'Codecov umbrella coverage mark traces its protective canopy while a live coverage telemetry bar climbs to green',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: breathe(18, 1.04),
+      },
+    ],
+    props: [
+      telemetryBar(4.0, 20.5, 16.0, '#F01F7A', 30, 62, 1.4),
+      checkFlash(18.4, 5.6, '#4ADE80', 38, 64),
+    ],
+  },
+
+  coveralls: {
+    story:
+      'Coveralls shield emblem pulses with test-coverage verification and flashes a crisp pass check',
+    tracks: [{ on: 0, origin: [12, 12], keys: heartbeat(12, 1.07) }],
+    props: [
+      checkFlash(18.0, 5.5, '#4ADE80', 30, 58),
+      pulseRing(12, 12, 10.4, '#3F5767', 26, 62, { layer: 'under', sw: 0.55 }),
+    ],
+  },
+
+  posthog: {
+    story:
+      'PostHog six-part hedgehog analytics emblem pops its playful silhouette into focus while product-funnel telemetry bars rise',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5],
+        stagger: 3,
+        keys: popIn(10, 0.72),
+      },
+    ],
+    props: [
+      telemetryBar(4.0, 20.8, 16.0, '#F54E00', 32, 62, 1.4),
+      spark(18.6, 5.2, 1.4, -1.4, '#F9BD2B', 38, 62),
+    ],
+  },
+
+  umami: {
+    story:
+      'Umami privacy-first crescent analytics mark breathes softly as a clean pageview wave ripples across',
+    tracks: [{ on: 0, origin: [12, 12], keys: breathe(10, 1.06) }],
+    props: [
+      waveLine(4.0, 19.8, 16.0, 1.4, '#38BDF8', 24, 58, 0.9),
+      pulseRing(12, 12, 10.2, '#94A3B8', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  mixpanel: {
+    story:
+      'Mixpanel five event-dot nodes pop in sequential funnel cadence as an insight packet bridges them',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4],
+        stagger: 4,
+        keys: popIn(10, 0.55),
+      },
+    ],
+    props: [
+      packet(4.5, 12.0, 19.5, 12.0, '#A78BFA', 32, 60, 0.9),
+      pulseRing(12, 12, 10.4, '#7856FF', 34, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  hotjar: {
+    story:
+      'Hotjar twin flame strokes flicker with heatmap intensity and radiate a warm user-session pulse ring',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: riseIn(10, 1.8) },
+      { on: 1, origin: [12, 12], keys: riseIn(18, 1.8) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.4, '#FD3A5C', 26, 62, { layer: 'under', sw: 0.55 }),
+      spark(18.4, 5.4, 1.4, -1.4, '#FB7185', 34, 58),
+    ],
+  },
+
+  opsgenie: {
+    story:
+      'Opsgenie alert responder emblem sweeps an incident radar arc and locks onto an acknowledged green check',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: popIn(10, 0.82) },
+      { on: 1, origin: [12, 12], keys: nod(20, -6) },
+    ],
+    props: [radar(12, 12, 10.4, '#2684FF', 14, 56, 110), checkFlash(18.2, 5.4, '#4ADE80', 38, 64)],
+  },
+
+  betterstack: {
+    story:
+      'Better Stack three stacked uptime bars rise in monitoring cadence while a heartbeat status wave glides across',
+    tracks: [
+      { on: 0, keys: riseIn(10, 1.6) },
+      { on: 1, keys: riseIn(17, 1.6) },
+      { on: 2, keys: riseIn(24, 1.6) },
+    ],
+    props: [
+      waveLine(4.0, 20.2, 16.0, 1.3, '#4ADE80', 28, 60, 0.9),
+      pulseRing(12, 12, 10.4, '#818CF8', 32, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  uptimekuma: {
+    story:
+      'Uptime Kuma friendly status heart beats with a steady hundred-percent uptime rhythm and flashes a green health check',
+    tracks: [{ on: 0, origin: [12, 12], keys: heartbeat(10, 1.08) }],
+    props: [
+      pulseRing(12, 12, 10.4, '#5CDD8B', 24, 60, { layer: 'under', sw: 0.55 }),
+      checkFlash(18.2, 5.4, '#5CDD8B', 36, 62),
+    ],
+  },
+
+  k6: {
+    story:
+      'k6 violet load-test glyph surges with virtual-user throughput telemetry bars and a crisp benchmark bolt',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: popIn(10, 0.82) },
+      { on: 1, origin: [12, 12], keys: slideIn(18, 1.8, 0) },
+    ],
+    props: [
+      telemetryBar(4.0, 20.6, 16.0, '#7D64FF', 26, 58, 1.4),
+      boltFlash(18.4, 5.4, '#A78BFA', 36, 62),
+    ],
+  },
+
+  locust: {
+    story:
+      'Locust four-part swarm emblem launches in staggered load-wave bursts with an active stress-test radar',
+    tracks: [
+      {
+        on: [0, 1, 2, 3],
+        stagger: 4,
+        keys: popIn(10, 0.7),
+      },
+    ],
+    props: [
+      radar(12, 12, 10.4, '#4ADE80', 18, 60, 105),
+      spark(18.5, 5.5, 1.4, -1.4, '#86EFAC', 38, 62),
+    ],
+  },
+
+  gatling: {
+    story:
+      'Gatling high-velocity turbine mark spins with torque bursts as rapid request packets fire outward',
+    tracks: [{ on: 0, origin: [12, 12], keys: torque(10, 14, 16) }],
+    props: [
+      packet(4.0, 12.0, 20.0, 12.0, '#FF9E2A', 26, 52, 0.9),
+      pulseRing(12, 12, 10.4, '#F97316', 32, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  quarto: {
+    story:
+      'Quarto four publishing quadrants lock neatly into a unified scientific document grid with layout smart-guides',
+    tracks: [
+      { on: 0, keys: slideIn(10, -1.6, -1.6) },
+      { on: 1, keys: slideIn(15, 1.6, -1.6) },
+      { on: 2, keys: slideIn(20, -1.6, 1.6) },
+      { on: 3, keys: slideIn(25, 1.6, 1.6) },
+    ],
+    props: [
+      guides(
+        [
+          [12.0, 2.0, 12.0, 22.0],
+          [2.0, 12.0, 22.0, 12.0],
+        ],
+        '#75AADB',
+        14,
+        56
+      ),
+    ],
+  },
+
+  pandoc: {
+    story:
+      'Pandoc universal document-converter mark flips cleanly across formats like Markdown-to-PDF transformation with a conversion packet',
+    tracks: [{ on: 0, origin: [12, 12], keys: flipX(12) }],
+    props: [
+      packet(4.5, 12.0, 19.5, 12.0, '#60A5FA', 28, 56, 0.9),
+      pulseRing(12, 12, 10.2, '#93C5FD', 34, 66, { layer: 'under', sw: 0.5 }),
     ],
   },
 };

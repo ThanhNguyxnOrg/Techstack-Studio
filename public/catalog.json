@@ -1,6 +1,6 @@
 {
  "site": "https://thanhnguyxnorg.github.io/Techstack-Studio",
- "count": 623,
+ "count": 665,
  "note": "Icon paths are relative to the site root (append to site, or to the repository path when reading from disk).",
  "icons": [
   {
@@ -836,6 +836,24 @@
    "technique": "body + leftNode + rightNode + 2 story props"
   },
   {
+   "id": "arc",
+   "name": "Arc",
+   "category": "Developer tools",
+   "subcategory": "Browsers & Dev Clients",
+   "role": "Workspace-Centric Modern Browser Built for Productivity",
+   "docsUrl": "https://arc.net/",
+   "aliases": [
+    "arc",
+    "arc-browser"
+   ],
+   "monogram": "ARC",
+   "brandColor": "#FCBFBD",
+   "svg": "icons/animated/arc.svg",
+   "sourceSvg": "icons/source/arc.svg",
+   "concept": "Arc layered browser emblem rises with fluid tab-space breathing and sweeps an iridescent window sheen",
+   "technique": "part + 2 story props"
+  },
+  {
    "id": "archlinux",
    "name": "Arch Linux",
    "category": "Cloud and DevOps",
@@ -1192,6 +1210,24 @@
    "technique": "left + right + 2 story props"
   },
   {
+   "id": "bat",
+   "name": "bat",
+   "category": "Developer tools",
+   "subcategory": "CLI Utilities",
+   "role": "Syntax-Highlighting Cat Clone with Git Integration in Rust",
+   "docsUrl": "https://github.com/sharkdp/bat",
+   "aliases": [
+    "bat",
+    "bat-cli"
+   ],
+   "monogram": "BAT",
+   "brandColor": "#31369E",
+   "svg": "icons/animated/bat.svg",
+   "sourceSvg": "icons/source/bat.svg",
+   "concept": "bat wing-shaped cat-clone emblem opens smoothly as a syntax-highlighted sheen sweeps across its lines",
+   "technique": "part + part + 2 story props"
+  },
+  {
    "id": "bazel",
    "name": "Bazel",
    "category": "Developer tools",
@@ -1264,6 +1300,43 @@
    "sourceSvg": "icons/source/betterauth.svg",
    "concept": "Better Auth twin cryptographic halves slide together and lock cleanly as a green verified session check flashes at the corner",
    "technique": "left + right + 2 story props"
+  },
+  {
+   "id": "betterstack",
+   "name": "Better Stack",
+   "category": "Developer tools",
+   "subcategory": "Analytics & Observability",
+   "role": "Unified Log Management, Uptime Monitoring & Incident Status Pages",
+   "docsUrl": "https://betterstack.com/",
+   "aliases": [
+    "betterstack",
+    "better stack",
+    "better-stack"
+   ],
+   "monogram": "BET",
+   "brandColor": "#000000",
+   "svg": "icons/animated/betterstack.svg",
+   "sourceSvg": "icons/source/betterstack.svg",
+   "concept": "Better Stack three stacked uptime bars rise in monitoring cadence while a heartbeat status wave glides across",
+   "technique": "part + part + part + 2 story props"
+  },
+  {
+   "id": "bevy",
+   "name": "Bevy",
+   "category": "Frontend",
+   "subcategory": "Graphics & 3D",
+   "role": "Data-Driven Open-Source ECS Game Engine Built in Rust",
+   "docsUrl": "https://bevyengine.org/",
+   "aliases": [
+    "bevy",
+    "bevy-engine"
+   ],
+   "monogram": "BEV",
+   "brandColor": "#232326",
+   "svg": "icons/animated/bevy.svg",
+   "sourceSvg": "icons/source/bevy.svg",
+   "concept": "Bevy three soaring ECS birds glide in staggered flight formation as an entity-system pulse radiates beneath",
+   "technique": "part + part + part + 2 story props"
   },
   {
    "id": "biome",
@@ -1981,6 +2054,24 @@
    "technique": "peak + shadow + 2 story props"
   },
   {
+   "id": "codecov",
+   "name": "Codecov",
+   "category": "Developer tools",
+   "subcategory": "Testing & Quality",
+   "role": "Automated Code Coverage Reporting & Pull Request Quality Gates",
+   "docsUrl": "https://about.codecov.io/",
+   "aliases": [
+    "codecov",
+    "codecov-io"
+   ],
+   "monogram": "COD",
+   "brandColor": "#F01F7A",
+   "svg": "icons/animated/codecov.svg",
+   "sourceSvg": "icons/source/codecov.svg",
+   "concept": "Codecov umbrella coverage mark traces its protective canopy while a live coverage telemetry bar climbs to green",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "codeigniter",
    "name": "CodeIgniter",
    "category": "Backend",
@@ -2253,6 +2344,24 @@
    "sourceSvg": "icons/source/couchbase.svg",
    "concept": "Couchbase’s enterprise NoSQL shield traces its perimeter and pulses with memory-first resilience while cluster sync packets converge",
    "technique": "part outline trace + 3 story props"
+  },
+  {
+   "id": "coveralls",
+   "name": "Coveralls",
+   "category": "Developer tools",
+   "subcategory": "Testing & Quality",
+   "role": "Test Coverage History & CI Analytics Tracking Service",
+   "docsUrl": "https://coveralls.io/",
+   "aliases": [
+    "coveralls",
+    "coveralls-io"
+   ],
+   "monogram": "COV",
+   "brandColor": "#3F5767",
+   "svg": "icons/animated/coveralls.svg",
+   "sourceSvg": "icons/source/coveralls.svg",
+   "concept": "Coveralls shield emblem pulses with test-coverage verification and flashes a crisp pass check",
+   "technique": "part + 2 story props"
   },
   {
    "id": "cpp",
@@ -2528,6 +2637,24 @@
    "sourceSvg": "icons/source/deepseek.svg",
    "concept": "DeepSeek blue whale glides gracefully over an ocean swell while deep-reasoning sonar rings ripple outward from its silhouette",
    "technique": "all + 2 story props"
+  },
+  {
+   "id": "delta",
+   "name": "Delta",
+   "category": "Developer tools",
+   "subcategory": "CLI Utilities",
+   "role": "Syntax-Highlighting Pager for Git, Diff & Grep Output",
+   "docsUrl": "https://dandavison.github.io/delta/",
+   "aliases": [
+    "delta",
+    "git-delta"
+   ],
+   "monogram": "DEL",
+   "brandColor": "#003366",
+   "svg": "icons/animated/delta.svg",
+   "sourceSvg": "icons/source/delta.svg",
+   "concept": "Delta nine-part git-diff emblem cascades through added and removed hunk segments and confirms a clean merge check",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "deno",
@@ -3170,6 +3297,61 @@
    "technique": "beacon + waves staggered + 2 story props"
   },
   {
+   "id": "ethereum",
+   "name": "Ethereum",
+   "category": "Programming languages",
+   "subcategory": "Web3 & Smart Contracts",
+   "role": "Decentralized Smart Contract Blockchain & Developer Ecosystem",
+   "docsUrl": "https://ethereum.org/",
+   "aliases": [
+    "ethereum",
+    "eth",
+    "ether"
+   ],
+   "monogram": "ETH",
+   "brandColor": "#3C3C3D",
+   "svg": "icons/animated/ethereum.svg",
+   "sourceSvg": "icons/source/ethereum.svg",
+   "concept": "Ethereum upper and lower octahedral crystal halves levitate slightly then snap into smart-contract consensus with a violet pulse ring",
+   "technique": "part + part + 2 story props"
+  },
+  {
+   "id": "ethers",
+   "name": "Ethers",
+   "category": "Programming languages",
+   "subcategory": "Web3 & Smart Contracts",
+   "role": "Complete Compact JavaScript & TypeScript Ethereum Wallet Library",
+   "docsUrl": "https://docs.ethers.org/",
+   "aliases": [
+    "ethers",
+    "ethersjs"
+   ],
+   "monogram": "ETH",
+   "brandColor": "#2535A0",
+   "svg": "icons/animated/ethers.svg",
+   "sourceSvg": "icons/source/ethers.svg",
+   "concept": "Ethers.js geometric wing emblem draws its lightweight provider contour and sweeps a clean JSON-RPC sheen",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
+   "id": "excalidraw",
+   "name": "Excalidraw",
+   "category": "Frontend",
+   "subcategory": "Motion & Design",
+   "role": "Open-Source Hand-Drawn Virtual Whiteboard for Architecture Diagrams",
+   "docsUrl": "https://excalidraw.com/",
+   "aliases": [
+    "excalidraw",
+    "excalidraw-board"
+   ],
+   "monogram": "EXC",
+   "brandColor": "#6965DB",
+   "svg": "icons/animated/excalidraw.svg",
+   "sourceSvg": "icons/source/excalidraw.svg",
+   "concept": "Excalidraw hand-drawn sketchbook frame and strokes sketch themselves in sequentially like a live whiteboard session",
+   "technique": "part outline trace + part outline trace + part outline trace + 1 story props"
+  },
+  {
    "id": "expo",
    "name": "Expo",
    "category": "Frontend",
@@ -3589,6 +3771,24 @@
    "technique": "left + inner + right + 1 story props"
   },
   {
+   "id": "gatling",
+   "name": "Gatling",
+   "category": "Developer tools",
+   "subcategory": "Testing & Quality",
+   "role": "High-Performance Developer-First Load Testing Platform",
+   "docsUrl": "https://gatling.io/",
+   "aliases": [
+    "gatling",
+    "gatling-io"
+   ],
+   "monogram": "GAT",
+   "brandColor": "#FF9E2A",
+   "svg": "icons/animated/gatling.svg",
+   "sourceSvg": "icons/source/gatling.svg",
+   "concept": "Gatling high-velocity turbine mark spins with torque bursts as rapid request packets fire outward",
+   "technique": "part + 2 story props"
+  },
+  {
    "id": "gatsby",
    "name": "Gatsby",
    "category": "Frontend",
@@ -3623,6 +3823,24 @@
    "sourceSvg": "icons/source/ghost.svg",
    "concept": "Ghost headless publishing grid glides gently into focus as crisp editorial lines animate like freshly published newsletter posts",
    "technique": "part + 3 story props"
+  },
+  {
+   "id": "ghostty",
+   "name": "Ghostty",
+   "category": "Developer tools",
+   "subcategory": "Terminals & Shells",
+   "role": "Fast Native GPU-Accelerated Cross-Platform Terminal Emulator in Zig",
+   "docsUrl": "https://ghostty.org/",
+   "aliases": [
+    "ghostty",
+    "ghostty-term"
+   ],
+   "monogram": "GHO",
+   "brandColor": "#3551F3",
+   "svg": "icons/animated/ghostty.svg",
+   "sourceSvg": "icons/source/ghostty.svg",
+   "concept": "Ghostty GPU-accelerated terminal ghost floats gently upward with a crisp command-prompt bolt flash",
+   "technique": "part + 2 story props"
   },
   {
    "id": "gin",
@@ -4034,6 +4252,24 @@
    "technique": "all + 4 story props"
   },
   {
+   "id": "graphite",
+   "name": "Graphite",
+   "category": "Developer tools",
+   "subcategory": "Version Control & Forges",
+   "role": "Stacked Pull Requests & Fast Code Review Platform for GitHub",
+   "docsUrl": "https://graphite.dev/",
+   "aliases": [
+    "graphite",
+    "graphite-dev"
+   ],
+   "monogram": "GRA",
+   "brandColor": "#000000",
+   "svg": "icons/animated/graphite.svg",
+   "sourceSvg": "icons/source/graphite.svg",
+   "concept": "Graphite stacked-PR hexagonal layers slide into review order and flash a crisp green stack-merge check",
+   "technique": "part + part + 2 story props"
+  },
+  {
    "id": "graphql",
    "name": "GraphQL",
    "category": "Backend",
@@ -4436,6 +4672,24 @@
    "technique": "frame + dot1 + dot2 + dot3 + 1 story props"
   },
   {
+   "id": "hotjar",
+   "name": "Hotjar",
+   "category": "Developer tools",
+   "subcategory": "Analytics & Observability",
+   "role": "Product Experience Insights, Heatmaps & User Behavior Analytics",
+   "docsUrl": "https://www.hotjar.com/",
+   "aliases": [
+    "hotjar",
+    "hotjar-insights"
+   ],
+   "monogram": "HOT",
+   "brandColor": "#FF3C00",
+   "svg": "icons/animated/hotjar.svg",
+   "sourceSvg": "icons/source/hotjar.svg",
+   "concept": "Hotjar twin flame strokes flicker with heatmap intensity and radiate a warm user-session pulse ring",
+   "technique": "part + part + 2 story props"
+  },
+  {
    "id": "html5",
    "name": "HTML5",
    "category": "Programming languages",
@@ -4491,6 +4745,24 @@
    "sourceSvg": "icons/source/huggingface.svg",
    "concept": "Hugging Face mascot beams with a friendly bounce while both open-source hands wave outward to welcome new transformer weights from the hub",
    "technique": "face + leftHand + rightHand + 3 story props"
+  },
+  {
+   "id": "hyper",
+   "name": "Hyper",
+   "category": "Developer tools",
+   "subcategory": "Terminals & Shells",
+   "role": "Extensible Electron-Based Terminal Built on Web Technologies",
+   "docsUrl": "https://hyper.is/",
+   "aliases": [
+    "hyper",
+    "hyper-term"
+   ],
+   "monogram": "HYP",
+   "brandColor": "#000000",
+   "svg": "icons/animated/hyper.svg",
+   "sourceSvg": "icons/source/hyper.svg",
+   "concept": "Hyper prompt chevron and underscore cursor snap into terminal readiness with a sharp electric spark",
+   "technique": "part + part + 2 story props"
   },
   {
    "id": "infineon",
@@ -4752,6 +5024,25 @@
    "technique": "part + 2 story props"
   },
   {
+   "id": "jetpackcompose",
+   "name": "Jetpack Compose",
+   "category": "Frontend",
+   "subcategory": "Mobile & Cross-Platform",
+   "role": "Android Modern Declarative Kotlin UI Toolkit",
+   "docsUrl": "https://developer.android.com/compose",
+   "aliases": [
+    "jetpackcompose",
+    "jetpack compose",
+    "compose-android"
+   ],
+   "monogram": "JET",
+   "brandColor": "#4285F4",
+   "svg": "icons/animated/jetpackcompose.svg",
+   "sourceSvg": "icons/source/jetpackcompose.svg",
+   "concept": "Jetpack Compose six layered declarative UI planes snap together in reactive recomposition stagger framed by layout smart-guides",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
    "id": "jira",
    "name": "Jira",
    "category": "Developer tools",
@@ -4859,6 +5150,24 @@
    "sourceSvg": "icons/source/jupyter.svg",
    "concept": "Jupyter three kernel moons orbit around the twin planetary notebook rings as interactive code cells execute in sequence",
    "technique": "arcs outline trace staggered + moons staggered + 1 story props"
+  },
+  {
+   "id": "k6",
+   "name": "k6",
+   "category": "Developer tools",
+   "subcategory": "Testing & Quality",
+   "role": "Modern Open-Source Load & Performance Testing Tool by Grafana",
+   "docsUrl": "https://k6.io/",
+   "aliases": [
+    "k6",
+    "grafana-k6"
+   ],
+   "monogram": "K6",
+   "brandColor": "#7D64FF",
+   "svg": "icons/animated/k6.svg",
+   "sourceSvg": "icons/source/k6.svg",
+   "concept": "k6 violet load-test glyph surges with virtual-user throughput telemetry bars and a crisp benchmark bolt",
+   "technique": "part + part + 2 story props"
   },
   {
    "id": "kaggle",
@@ -5340,6 +5649,24 @@
    "technique": "all + 2 story props"
   },
   {
+   "id": "locust",
+   "name": "Locust",
+   "category": "Developer tools",
+   "subcategory": "Testing & Quality",
+   "role": "Scalable Python-Scripted Distributed Load Testing Framework",
+   "docsUrl": "https://locust.io/",
+   "aliases": [
+    "locust",
+    "locust-io"
+   ],
+   "monogram": "LOC",
+   "brandColor": "#B8EE4B",
+   "svg": "icons/animated/locust.svg",
+   "sourceSvg": "icons/source/locust.svg",
+   "concept": "Locust four-part swarm emblem launches in staggered load-wave bursts with an active stress-test radar",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
    "id": "logstash",
    "name": "Logstash",
    "category": "Cloud and DevOps",
@@ -5410,6 +5737,24 @@
    "sourceSvg": "icons/source/lorawan.svg",
    "concept": "LoRaWAN chirp-spread-spectrum arcs radiate vertically from the radio emblem as a long-range LPWAN beacon propagates across the wordmark",
    "technique": "arcs staggered + word + 2 story props"
+  },
+  {
+   "id": "lottiefiles",
+   "name": "LottieFiles",
+   "category": "Frontend",
+   "subcategory": "Motion & Design",
+   "role": "Lightweight JSON Vector Animation Ecosystem for Web & Mobile",
+   "docsUrl": "https://lottiefiles.com/",
+   "aliases": [
+    "lottiefiles",
+    "lottie"
+   ],
+   "monogram": "LOT",
+   "brandColor": "#00DDB3",
+   "svg": "icons/animated/lottiefiles.svg",
+   "sourceSvg": "icons/source/lottiefiles.svg",
+   "concept": "LottieFiles flowing vector-curve badge traces its keyframe bezier path and pulses with lightweight JSON playback energy",
+   "technique": "part outline trace + 2 story props"
   },
   {
    "id": "lua",
@@ -5630,6 +5975,24 @@
    "technique": "all + 2 story props"
   },
   {
+   "id": "mermaid",
+   "name": "Mermaid",
+   "category": "Frontend",
+   "subcategory": "Docs & Static Sites",
+   "role": "JavaScript-Based Diagramming & Flowcharting Tool Using Markdown Syntax",
+   "docsUrl": "https://mermaid.js.org/",
+   "aliases": [
+    "mermaid",
+    "mermaidjs"
+   ],
+   "monogram": "MER",
+   "brandColor": "#FF3670",
+   "svg": "icons/animated/mermaid.svg",
+   "sourceSvg": "icons/source/mermaid.svg",
+   "concept": "Mermaid flowchart emblem traces its diagram edges and sends a directed graph node packet from root to leaf",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "meta",
    "name": "Meta",
    "category": "AI and machine learning",
@@ -5796,6 +6159,24 @@
    "technique": "part outline trace + 2 story props"
   },
   {
+   "id": "miro",
+   "name": "Miro",
+   "category": "Frontend",
+   "subcategory": "Motion & Design",
+   "role": "Collaborative Online Whiteboard & Visual Product Planning Workspace",
+   "docsUrl": "https://miro.com/",
+   "aliases": [
+    "miro",
+    "miro-board"
+   ],
+   "monogram": "MIR",
+   "brandColor": "#050038",
+   "svg": "icons/animated/miro.svg",
+   "sourceSvg": "icons/source/miro.svg",
+   "concept": "Miro bold yellow M board emblem pops into workshop alignment while sticky-note collaboration sparks chime across its peaks",
+   "technique": "part + 3 story props"
+  },
+  {
    "id": "mistralai",
    "name": "Mistral AI",
    "category": "AI and machine learning",
@@ -5814,6 +6195,24 @@
    "sourceSvg": "icons/source/mistralai.svg",
    "concept": "Mistral AI pixel-crafted M snaps forward with a crisp aerodynamic wind-gust tilt and fires fast open-weight token streaks",
    "technique": "part outline trace + 3 story props"
+  },
+  {
+   "id": "mixpanel",
+   "name": "Mixpanel",
+   "category": "Developer tools",
+   "subcategory": "Analytics & Observability",
+   "role": "Event-Based Product & Funnel Analytics Platform",
+   "docsUrl": "https://mixpanel.com/",
+   "aliases": [
+    "mixpanel",
+    "mixpanel-js"
+   ],
+   "monogram": "MIX",
+   "brandColor": "#7856FF",
+   "svg": "icons/animated/mixpanel.svg",
+   "sourceSvg": "icons/source/mixpanel.svg",
+   "concept": "Mixpanel five event-dot nodes pop in sequential funnel cadence as an insight packet bridges them",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "mkdocs",
@@ -6465,6 +6864,24 @@
    "technique": "topFace staggered + rightFace staggered + leftN outline trace + 1 story props"
   },
   {
+   "id": "nushell",
+   "name": "Nushell",
+   "category": "Developer tools",
+   "subcategory": "Terminals & Shells",
+   "role": "Modern Structured-Data Cross-Platform Shell Written in Rust",
+   "docsUrl": "https://www.nushell.sh/",
+   "aliases": [
+    "nushell",
+    "nu-shell"
+   ],
+   "monogram": "NUS",
+   "brandColor": "#4E9A06",
+   "svg": "icons/animated/nushell.svg",
+   "sourceSvg": "icons/source/nushell.svg",
+   "concept": "Nushell structured-data shell glyphs assemble in pipeline order while a typed table packet flows through",
+   "technique": "part + part + part + 2 story props"
+  },
+  {
    "id": "nuxt",
    "name": "Nuxt",
    "category": "Frontend",
@@ -6556,6 +6973,24 @@
    "sourceSvg": "icons/source/ocaml.svg",
    "concept": "OCaml desert camel strides forward with confident functional poise while its warm amber silhouette catches a sunlit sheen",
    "technique": "body + accents + 1 story props"
+  },
+  {
+   "id": "odin",
+   "name": "Odin",
+   "category": "Programming languages",
+   "subcategory": "Systems & Performance",
+   "role": "Data-Oriented Systems Programming Language for Modern Software",
+   "docsUrl": "https://odin-lang.org/",
+   "aliases": [
+    "odin",
+    "odin-lang"
+   ],
+   "monogram": "ODI",
+   "brandColor": "#3882D2",
+   "svg": "icons/animated/odin.svg",
+   "sourceSvg": "icons/source/odin.svg",
+   "concept": "Odin sleek circular emblem rotates into compiled alignment while its inner core pulses with data-oriented clarity",
+   "technique": "part + part + 2 story props"
   },
   {
    "id": "ollama",
@@ -6798,6 +7233,42 @@
    "technique": "chassis + dot + arcs staggered + 2 story props"
   },
   {
+   "id": "opsgenie",
+   "name": "Opsgenie",
+   "category": "Developer tools",
+   "subcategory": "Analytics & Observability",
+   "role": "On-Call Alerting, Incident Response & Escalation Management",
+   "docsUrl": "https://www.atlassian.com/software/opsgenie",
+   "aliases": [
+    "opsgenie",
+    "atlassian-opsgenie"
+   ],
+   "monogram": "OPS",
+   "brandColor": "#172B4D",
+   "svg": "icons/animated/opsgenie.svg",
+   "sourceSvg": "icons/source/opsgenie.svg",
+   "concept": "Opsgenie alert responder emblem sweeps an incident radar arc and locks onto an acknowledged green check",
+   "technique": "part + part + 2 story props"
+  },
+  {
+   "id": "optimism",
+   "name": "Optimism",
+   "category": "Programming languages",
+   "subcategory": "Web3 & Smart Contracts",
+   "role": "OP Stack Ethereum Layer-2 Optimistic Rollup Superchain",
+   "docsUrl": "https://www.optimism.io/",
+   "aliases": [
+    "optimism",
+    "op-stack"
+   ],
+   "monogram": "OPT",
+   "brandColor": "#FF0420",
+   "svg": "icons/animated/optimism.svg",
+   "sourceSvg": "icons/source/optimism.svg",
+   "concept": "Optimism bold red OP emblem pops into optimistic-rollup readiness while its letterforms settle with a verification check flash",
+   "technique": "part + part + part + 2 story props"
+  },
+  {
    "id": "oracle",
    "name": "Oracle",
    "category": "Databases",
@@ -6985,6 +7456,24 @@
    "technique": "rails staggered + cells staggered + 1 story props"
   },
   {
+   "id": "pandoc",
+   "name": "Pandoc",
+   "category": "Developer tools",
+   "subcategory": "Docs & Publishing",
+   "role": "Universal Document Converter Between Markdown, LaTeX, HTML & PDF",
+   "docsUrl": "https://pandoc.org/",
+   "aliases": [
+    "pandoc",
+    "pandoc-cli"
+   ],
+   "monogram": "PAN",
+   "brandColor": "#4093DA",
+   "svg": "icons/animated/pandoc.svg",
+   "sourceSvg": "icons/source/pandoc.svg",
+   "concept": "Pandoc universal document-converter mark flips cleanly across formats like Markdown-to-PDF transformation with a conversion packet",
+   "technique": "part + 2 story props"
+  },
+  {
    "id": "pangolin",
    "name": "Pangolin",
    "category": "Cloud and DevOps",
@@ -7039,6 +7528,24 @@
    "sourceSvg": "icons/source/payloadcms.svg",
    "concept": "Payload CMS twin interlocking isometric cube faces slide cleanly into a code-first Next.js schema block with a crisp edge sheen",
    "technique": "lowerFace + upperFace + 2 story props"
+  },
+  {
+   "id": "penpot",
+   "name": "Penpot",
+   "category": "Frontend",
+   "subcategory": "Motion & Design",
+   "role": "Open-Source Web-Based Design & Prototyping Tool Built on SVG",
+   "docsUrl": "https://penpot.app/",
+   "aliases": [
+    "penpot",
+    "penpot-design"
+   ],
+   "monogram": "PEN",
+   "brandColor": "#000000",
+   "svg": "icons/animated/penpot.svg",
+   "sourceSvg": "icons/source/penpot.svg",
+   "concept": "Penpot open-source pen-nib emblem draws its SVG vector silhouette while precision design guides lock around it",
+   "technique": "part outline trace + 1 story props"
   },
   {
    "id": "perforce",
@@ -7206,6 +7713,24 @@
    "technique": "leftHalf + rightHalf + eyes + 2 story props"
   },
   {
+   "id": "playcanvas",
+   "name": "PlayCanvas",
+   "category": "Frontend",
+   "subcategory": "Graphics & 3D",
+   "role": "WebGL & WebGPU Cloud-Hosted Interactive 3D & Game Engine",
+   "docsUrl": "https://playcanvas.com/",
+   "aliases": [
+    "playcanvas",
+    "playcanvas-3d"
+   ],
+   "monogram": "PLA",
+   "brandColor": "#E05F2C",
+   "svg": "icons/animated/playcanvas.svg",
+   "sourceSvg": "icons/source/playcanvas.svg",
+   "concept": "PlayCanvas 3D WebGL play prism pivots smoothly along its axis while a viewport render spark flashes at its apex",
+   "technique": "part + part + 2 story props"
+  },
+  {
    "id": "playwright",
    "name": "Playwright",
    "category": "Frontend",
@@ -7351,6 +7876,25 @@
    "technique": "part staggered + 2 story props"
   },
   {
+   "id": "polygon",
+   "name": "Polygon",
+   "category": "Programming languages",
+   "subcategory": "Web3 & Smart Contracts",
+   "role": "Ethereum Scaling, zkEVM & Aggregated Blockchain Protocol",
+   "docsUrl": "https://polygon.technology/",
+   "aliases": [
+    "polygon",
+    "matic",
+    "polygon-pos"
+   ],
+   "monogram": "POL",
+   "brandColor": "#7B3FE4",
+   "svg": "icons/animated/polygon.svg",
+   "sourceSvg": "icons/source/polygon.svg",
+   "concept": "Polygon interlocking infinity hexagon traces its L2 zk-rollup perimeter and fires dual cross-chain bridge packets",
+   "technique": "part outline trace + 2 story props"
+  },
+  {
    "id": "polymerproject",
    "name": "Polymer",
    "category": "Frontend",
@@ -7423,6 +7967,24 @@
    "sourceSvg": "icons/source/postgresql.svg",
    "concept": "Slonik the PostgreSQL elephant traces its relational contour, gives a confident nod, and blinks as a query pulse confirms",
    "technique": "body outline trace + eyes + 1 story props"
+  },
+  {
+   "id": "posthog",
+   "name": "PostHog",
+   "category": "Developer tools",
+   "subcategory": "Analytics & Observability",
+   "role": "Open-Source Product Analytics, Session Replay, Feature Flags & A/B Testing",
+   "docsUrl": "https://posthog.com/",
+   "aliases": [
+    "posthog",
+    "posthog-js"
+   ],
+   "monogram": "POS",
+   "brandColor": "#000000",
+   "svg": "icons/animated/posthog.svg",
+   "sourceSvg": "icons/source/posthog.svg",
+   "concept": "PostHog six-part hedgehog analytics emblem pops its playful silhouette into focus while product-funnel telemetry bars rise",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "postman",
@@ -7921,6 +8483,24 @@
    "technique": "shards staggered + 2 story props"
   },
   {
+   "id": "quarto",
+   "name": "Quarto",
+   "category": "Developer tools",
+   "subcategory": "Docs & Publishing",
+   "role": "Open-Source Scientific & Technical Publishing System Built on Pandoc",
+   "docsUrl": "https://quarto.org/",
+   "aliases": [
+    "quarto",
+    "quarto-pub"
+   ],
+   "monogram": "QUA",
+   "brandColor": "#39729E",
+   "svg": "icons/animated/quarto.svg",
+   "sourceSvg": "icons/source/quarto.svg",
+   "concept": "Quarto four publishing quadrants lock neatly into a unified scientific document grid with layout smart-guides",
+   "technique": "part + part + part + part + 1 story props"
+  },
+  {
    "id": "quasar",
    "name": "Quasar",
    "category": "Frontend",
@@ -8105,6 +8685,42 @@
    "sourceSvg": "icons/source/ray.svg",
    "concept": "Ray dispatches parallel task beams outward from its unified compute core to scale distributed Python actors across the cluster",
    "technique": "part outline trace + 3 story props"
+  },
+  {
+   "id": "raycast",
+   "name": "Raycast",
+   "category": "Developer tools",
+   "subcategory": "Productivity & Launchers",
+   "role": "Blazingly Fast Extensible Command Launcher & Workflow Toolkit",
+   "docsUrl": "https://www.raycast.com/",
+   "aliases": [
+    "raycast",
+    "raycast-app"
+   ],
+   "monogram": "RAY",
+   "brandColor": "#FF6363",
+   "svg": "icons/animated/raycast.svg",
+   "sourceSvg": "icons/source/raycast.svg",
+   "concept": "Raycast seven crimson launcher rays fan out in rapid command-palette stagger with an instant spotlight spark",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
+   "id": "raylib",
+   "name": "Raylib",
+   "category": "Frontend",
+   "subcategory": "Graphics & 3D",
+   "role": "Simple Zero-Dependency C Library for Video Game Programming",
+   "docsUrl": "https://www.raylib.com/",
+   "aliases": [
+    "raylib",
+    "raylib-c"
+   ],
+   "monogram": "RAY",
+   "brandColor": "#000000",
+   "svg": "icons/animated/raylib.svg",
+   "sourceSvg": "icons/source/raylib.svg",
+   "concept": "raylib classic framed game-dev badge snaps its outer border and pixel-crisp letter tiles into place in arcade stagger",
+   "technique": "parts staggered + 2 story props"
   },
   {
    "id": "react",
@@ -8494,6 +9110,24 @@
    "sourceSvg": "icons/source/riscv.svg",
    "concept": "RISC-V open ISA modules assemble from base and extension blocks as a clean vector instruction sweeps across the silicon die",
    "technique": "left + main outline trace + ext + 2 story props"
+  },
+  {
+   "id": "rive",
+   "name": "Rive",
+   "category": "Frontend",
+   "subcategory": "Motion & Design",
+   "role": "Interactive Real-Time Vector Animation & State Machine Runtime",
+   "docsUrl": "https://rive.app/",
+   "aliases": [
+    "rive",
+    "rive-app"
+   ],
+   "monogram": "RIV",
+   "brandColor": "#1D1D1D",
+   "svg": "icons/animated/rive.svg",
+   "sourceSvg": "icons/source/rive.svg",
+   "concept": "Rive expressive state-machine R emblem bends with elastic spring motion and emits a live interaction trigger spark",
+   "technique": "part + 2 story props"
   },
   {
    "id": "rocket",
@@ -9152,6 +9786,24 @@
    "sourceSvg": "icons/source/socketdotio.svg",
    "concept": "Socket.IO outer channel ring pulses while its opposing upper and lower lightning bolts exchange low-latency bidirectional real-time events",
    "technique": "ring + upperBolt + lowerBolt + 3 story props"
+  },
+  {
+   "id": "solana",
+   "name": "Solana",
+   "category": "Programming languages",
+   "subcategory": "Web3 & Smart Contracts",
+   "role": "High-Throughput Proof-of-History Blockchain & Smart Contract Platform",
+   "docsUrl": "https://solana.com/",
+   "aliases": [
+    "solana",
+    "solana-web3"
+   ],
+   "monogram": "SOL",
+   "brandColor": "#9945FF",
+   "svg": "icons/animated/solana.svg",
+   "sourceSvg": "icons/source/solana.svg",
+   "concept": "Solana three slanted ledger bars slide in from alternating sides in parallel consensus as a proof-of-history packet streaks across",
+   "technique": "part + part + part + 2 story props"
   },
   {
    "id": "solid",
@@ -10168,6 +10820,24 @@
    "technique": "pkg + die + eyes + pins staggered + 2 story props"
   },
   {
+   "id": "tldraw",
+   "name": "tldraw",
+   "category": "Frontend",
+   "subcategory": "Motion & Design",
+   "role": "Infinite Canvas SDK & Collaborative Vector Whiteboard for React",
+   "docsUrl": "https://tldraw.dev/",
+   "aliases": [
+    "tldraw",
+    "tldraw-canvas"
+   ],
+   "monogram": "TLD",
+   "brandColor": "#FAFAFA",
+   "svg": "icons/animated/tldraw.svg",
+   "sourceSvg": "icons/source/tldraw.svg",
+   "concept": "tldraw infinite-canvas mark tilts playfully as multiplayer cursor packets dart across the board",
+   "technique": "part + 2 story props"
+  },
+  {
    "id": "tmux",
    "name": "tmux",
    "category": "Developer tools",
@@ -10422,6 +11092,24 @@
    "technique": "badge + friends + 1 story props"
   },
   {
+   "id": "umami",
+   "name": "Umami",
+   "category": "Developer tools",
+   "subcategory": "Analytics & Observability",
+   "role": "Simple Fast Privacy-Focused Open-Source Web Analytics",
+   "docsUrl": "https://umami.is/",
+   "aliases": [
+    "umami",
+    "umami-analytics"
+   ],
+   "monogram": "UMA",
+   "brandColor": "#000000",
+   "svg": "icons/animated/umami.svg",
+   "sourceSvg": "icons/source/umami.svg",
+   "concept": "Umami privacy-first crescent analytics mark breathes softly as a clean pageview wave ripples across",
+   "technique": "part + 2 story props"
+  },
+  {
    "id": "unity",
    "name": "Unity",
    "category": "Developer tools",
@@ -10511,6 +11199,25 @@
    "sourceSvg": "icons/source/upstash.svg",
    "concept": "Upstash’s twin serverless edge arcs separate briefly to route an HTTP Redis cache burst, then snap back into a tight low-latency loop",
    "technique": "upper + lower + 2 story props"
+  },
+  {
+   "id": "uptimekuma",
+   "name": "Uptime Kuma",
+   "category": "Developer tools",
+   "subcategory": "Analytics & Observability",
+   "role": "Fancy Self-Hosted Real-Time Uptime & Status Monitoring Tool",
+   "docsUrl": "https://uptime.kuma.pet/",
+   "aliases": [
+    "uptimekuma",
+    "uptime kuma",
+    "uptime-kuma"
+   ],
+   "monogram": "UPT",
+   "brandColor": "#5CDD8B",
+   "svg": "icons/animated/uptimekuma.svg",
+   "sourceSvg": "icons/source/uptimekuma.svg",
+   "concept": "Uptime Kuma friendly status heart beats with a steady hundred-percent uptime rhythm and flashes a green health check",
+   "technique": "part + 2 story props"
   },
   {
    "id": "uv",
@@ -10880,6 +11587,24 @@
    "technique": "leftOuter + rightOuter + leftInner + rightInner + 1 story props"
   },
   {
+   "id": "vulkan",
+   "name": "Vulkan",
+   "category": "Programming languages",
+   "subcategory": "Graphics & Shaders",
+   "role": "Low-Overhead Cross-Platform 3D Graphics & Compute GPU API",
+   "docsUrl": "https://www.vulkan.org/",
+   "aliases": [
+    "vulkan",
+    "vulkan-api"
+   ],
+   "monogram": "VUL",
+   "brandColor": "#A41E22",
+   "svg": "icons/animated/vulkan.svg",
+   "sourceSvg": "icons/source/vulkan.svg",
+   "concept": "Vulkan multi-facet GPU wordmark and arc ignite in crisp shader-pipeline stagger, crowned by a crimson compute sheen",
+   "technique": "parts staggered + 2 story props"
+  },
+  {
    "id": "vultr",
    "name": "Vultr",
    "category": "Cloud and DevOps",
@@ -10896,6 +11621,24 @@
    "sourceSvg": "icons/source/vultr.svg",
    "concept": "Vultr’s razor-sharp V-wings swoop into high-frequency compute formation as a lightning spark ignites at the apex",
    "technique": "left + right + 2 story props"
+  },
+  {
+   "id": "wagmi",
+   "name": "Wagmi",
+   "category": "Programming languages",
+   "subcategory": "Web3 & Smart Contracts",
+   "role": "Type-Safe React Hooks & Core Primitives for Ethereum",
+   "docsUrl": "https://wagmi.sh/",
+   "aliases": [
+    "wagmi",
+    "wagmi-sh"
+   ],
+   "monogram": "WAG",
+   "brandColor": "#000000",
+   "svg": "icons/animated/wagmi.svg",
+   "sourceSvg": "icons/source/wagmi.svg",
+   "concept": "wagmi twin React-Web3 chevrons sync with wallet-connect packets and a crisp hook-ready spark",
+   "technique": "part + part + 2 story props"
   },
   {
    "id": "warp",
@@ -11373,6 +12116,25 @@
    "sourceSvg": "icons/source/zedindustries.svg",
    "concept": "Zed Rust-powered multiplayer editor flashes a high-framerate sheen across its Z-frame while a collaborator cursor pings",
    "technique": "all + 3 story props"
+  },
+  {
+   "id": "zenbrowser",
+   "name": "Zen Browser",
+   "category": "Developer tools",
+   "subcategory": "Browsers & Dev Clients",
+   "role": "Privacy-Focused Open-Source Firefox-Based Workspace Browser",
+   "docsUrl": "https://zen-browser.app/",
+   "aliases": [
+    "zenbrowser",
+    "zen browser",
+    "zen-browser"
+   ],
+   "monogram": "ZEN",
+   "brandColor": "#F76F53",
+   "svg": "icons/animated/zenbrowser.svg",
+   "sourceSvg": "icons/source/zenbrowser.svg",
+   "concept": "Zen Browser three concentric calm rings expand in meditative harmonic ripples",
+   "technique": "part + part + part + 1 story props"
   },
   {
    "id": "zephyr",

@@ -88,6 +88,16 @@ const PACKAGE_TO_ID: Record<string, string> = {
   nextra: 'nextra',
   h3: 'h3',
   '@scalar/api-reference': 'scalar',
+  wagmi: 'wagmi',
+  ethers: 'ethers',
+  'posthog-js': 'posthog',
+  'mixpanel-browser': 'mixpanel',
+  mermaid: 'mermaid',
+  '@excalidraw/excalidraw': 'excalidraw',
+  tldraw: 'tldraw',
+  '@rive-app/react-canvas': 'rive',
+  'lottie-web': 'lottiefiles',
+  k6: 'k6',
 
   // Backend & Databases (JS/TS)
   express: 'express',

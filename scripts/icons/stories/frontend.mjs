@@ -2788,4 +2788,180 @@ export default {
       pulseRing(12, 12, 10.2, '#38BDF8', 32, 64, { layer: 'under', sw: 0.5 }),
     ],
   },
+
+  jetpackcompose: {
+    story:
+      'Jetpack Compose six layered declarative UI planes snap together in reactive recomposition stagger framed by layout smart-guides',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5],
+        stagger: 4,
+        keys: popIn(10, 0.7),
+      },
+    ],
+    props: [
+      guides(
+        [
+          [12.0, 2.0, 12.0, 22.0],
+          [2.0, 12.0, 22.0, 12.0],
+        ],
+        '#4285F4',
+        12,
+        52
+      ),
+      pulseRing(12, 12, 10.4, '#3DDB85', 34, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  bevy: {
+    story:
+      'Bevy three soaring ECS birds glide in staggered flight formation as an entity-system pulse radiates beneath',
+    tracks: [
+      { on: 0, keys: slideIn(10, -2.4, 1.2) },
+      { on: 1, keys: slideIn(17, -2.0, 1.0) },
+      { on: 2, keys: slideIn(24, -1.6, 0.8) },
+    ],
+    props: [
+      pulseRing(12, 12, 10.4, '#94A3B8', 28, 62, { layer: 'under', sw: 0.5 }),
+      spark(18.8, 5.4, 1.4, -1.4, '#E2E8F0', 36, 60),
+    ],
+  },
+
+  playcanvas: {
+    story:
+      'PlayCanvas 3D WebGL play prism pivots smoothly along its axis while a viewport render spark flashes at its apex',
+    tracks: [
+      { on: 0, origin: [12, 12], keys: torque(10, 12, 12) },
+      { on: 1, origin: [12, 12], keys: popIn(20, 0.72) },
+    ],
+    props: [
+      spark(18.5, 5.5, 1.5, -1.5, '#F97316', 32, 58),
+      pulseRing(12, 12, 10.2, '#FB923C', 28, 62, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  raylib: {
+    story:
+      'raylib classic framed game-dev badge snaps its outer border and pixel-crisp letter tiles into place in arcade stagger',
+    tracks: [
+      {
+        on: [0, 1, 2, 3, 4, 5, 6, 7],
+        stagger: 3,
+        keys: popIn(10, 0.75),
+      },
+    ],
+    props: [
+      sheen('<rect x="2" y="2" width="20" height="20" rx="1"/>', 38, 64, 0.28),
+      spark(19.0, 5.0, 1.2, -1.2, '#F8FAFC', 42, 64),
+    ],
+  },
+
+  rive: {
+    story:
+      'Rive expressive state-machine R emblem bends with elastic spring motion and emits a live interaction trigger spark',
+    tracks: [
+      {
+        on: 0,
+        origin: [12, 12],
+        keys: sway(10, 7, 0.8),
+      },
+    ],
+    props: [
+      spark(18.4, 5.6, 1.5, -1.5, '#F472B6', 28, 54),
+      pulseRing(12, 12, 10.3, '#E879F9', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  lottiefiles: {
+    story:
+      'LottieFiles flowing vector-curve badge traces its keyframe bezier path and pulses with lightweight JSON playback energy',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: breathe(18, 1.05),
+      },
+    ],
+    props: [
+      pulseRing(12, 12, 10.2, '#00DDB3', 28, 62, { layer: 'under', sw: 0.55 }),
+      spark(18.5, 5.5, 1.4, -1.4, '#5EEAD4', 36, 60),
+    ],
+  },
+
+  penpot: {
+    story:
+      'Penpot open-source pen-nib emblem draws its SVG vector silhouette while precision design guides lock around it',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: nod(16, -6),
+      },
+    ],
+    props: [
+      guides(
+        [
+          [12.0, 2.0, 12.0, 22.0],
+          [2.0, 12.0, 22.0, 12.0],
+        ],
+        '#31EFB8',
+        14,
+        54
+      ),
+    ],
+  },
+
+  excalidraw: {
+    story:
+      'Excalidraw hand-drawn sketchbook frame and strokes sketch themselves in sequentially like a live whiteboard session',
+    tracks: [
+      { on: 0, draw: [10, 28], fill: [24, 34], width: 0.65 },
+      { on: 1, draw: [18, 36], fill: [32, 42], width: 0.65 },
+      { on: 2, draw: [26, 44], fill: [40, 50], width: 0.65 },
+    ],
+    props: [spark(18.6, 5.4, 1.3, -1.3, '#A5B4FC', 42, 64)],
+  },
+
+  tldraw: {
+    story:
+      'tldraw infinite-canvas mark tilts playfully as multiplayer cursor packets dart across the board',
+    tracks: [{ on: 0, origin: [12, 12], keys: sway(12, 6, 0.7) }],
+    props: [
+      packet(4.0, 8.0, 19.5, 16.0, '#60A5FA', 22, 50, 0.85),
+      packet(19.5, 8.0, 4.0, 16.0, '#F472B6', 32, 60, 0.85),
+    ],
+  },
+
+  miro: {
+    story:
+      'Miro bold yellow M board emblem pops into workshop alignment while sticky-note collaboration sparks chime across its peaks',
+    tracks: [{ on: 0, origin: [12, 12], keys: popIn(10, 0.82) }],
+    props: [
+      spark(6.0, 5.0, -1.2, -1.2, '#FDE047', 26, 50),
+      spark(18.0, 5.0, 1.2, -1.2, '#FACC15', 34, 58),
+      pulseRing(12, 12, 10.4, '#FFD02F', 30, 64, { layer: 'under', sw: 0.5 }),
+    ],
+  },
+
+  mermaid: {
+    story:
+      'Mermaid flowchart emblem traces its diagram edges and sends a directed graph node packet from root to leaf',
+    tracks: [
+      {
+        on: 0,
+        draw: [10, 34],
+        fill: [28, 40],
+        width: 0.65,
+        keys: breathe(18, 1.04),
+      },
+    ],
+    props: [
+      packet(4.5, 7.5, 19.5, 16.5, '#FF3670', 32, 60, 0.9),
+      pulseRing(12, 12, 10.3, '#FB7185', 34, 66, { layer: 'under', sw: 0.5 }),
+    ],
+  },
 };
